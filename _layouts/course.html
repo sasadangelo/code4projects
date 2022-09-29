@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+    {% feed_meta %}
+    {% seo %}
+    {% if jekyll.environment == "production" %}
+      <script src="my-analytics-script.js"></script>
+    {% endif %}
+  </head>
+  <body>
+    <div id="menu">
+        {% include navigation.html %}
+    </div>
+    <div id="content">
+        {{ content }}
+    </div>
+    <div id="course_sidebar">
+        {% include course_sidebar.html %}
+    </div>
+  </body>
+</html>
