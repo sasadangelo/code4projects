@@ -10,7 +10,7 @@ This is the first article of the **Getting Started with Kubernetes** article ser
 
 According to the official website:
 
-> Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications. It groups containers that make up an application into logical units for easy management and discovery.
+> _Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications. It groups containers that make up an application into logical units for easy management and discovery._
 
 Kubernetes helps you to deploy a containerized application on a cluster and manage its life cycle.
 
