@@ -10,7 +10,7 @@ This is the first article of the **Getting Started with Kubernetes** article ser
 
 According to the official website:
 
-> Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications. It groups containers that make up an application into logical units for easy management and discovery.
+> *Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications. It groups containers that make up an application into logical units for easy management and discovery.*
 
 Kubernetes helps you to deploy a containerized application on a cluster and manage its life cycle.
 
@@ -53,10 +53,10 @@ The main goal of the Master node is maintaining the application in the **desired
 
 The **Controller Manager** runs multiple controllers. These controllers include:
 
-* **Node Controller**: responsible for detecting and responding when nodes go down.
-* **Replication Controller**: responsible for maintaining the correct number of pods for each application in the system.
-* **Endpoints Controller**: populates the Endpoints object (that is, joins Services & Pods).
-* **Service Account & Token Controllers**: create default accounts and API access tokens for new namespaces.
+* *Node Controller*: responsible for detecting and responding when nodes go down.
+* *Replication Controller*: responsible for maintaining the correct number of pods for each application in the system.
+* *Endpoints Controller*: populates the Endpoints object (that is, joins Services & Pods).
+* *Service Account & Token Controllers*: create default accounts and API access tokens for new namespaces.
 
 When you deploy applications on Kubernetes, you tell the master to start the application containers. The master schedules them to run on the cluster’s nodes. The Scheduler manages the scheduling operations.
 
