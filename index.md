@@ -2,7 +2,7 @@
 layout: course
 title: Home
 ---
-# ppppGetting Started with Kubernetes
+# Getting Started with Kubernetes
 
 This is the first article of the **Getting Started with Kubernetes** article series. In this article, I would like to give you a brief introduction to Kubernetes. This will be the first step to show you how to deploy applications on it.
 
@@ -77,7 +77,7 @@ Every Kubernetes Node runs at least:
 
 In Kubernetes everything is a resource identified by a URL like this:
 
-```/api/v1/namespaces/NAMESPACE/RESOURCE_TYPE/RESOURCE_NAME```
+`/api/v1/namespaces/NAMESPACE/RESOURCE_TYPE/RESOURCE_NAME`
 
 where RESOURCE_TYPE can be:
 
