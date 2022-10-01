@@ -1,6 +1,6 @@
 - name: Getting started with Kubernetes
   link: /
-- name: Come diversificare i tuoi investimenti?
-  link: /asset-allocation.html
+- name: Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress
+  link: /kubernetes-services.html
 - name: I Tipi di Asset su cui Investire
   link: /assets.html
