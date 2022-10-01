@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress</title>
+    <link rel="stylesheet" href="/code4projects/assets/css/styles.css">
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/code4projects/feed.xml" title="Code4Projects" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress | Code4Projects</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="What I have learned after 30 years of programming" />
+<meta property="og:description" content="What I have learned after 30 years of programming" />
+<link rel="canonical" href="http://localhost:4000/code4projects/kubernetes-services-cluster-ip-vs-nodeport-vs-loadbalancer-vs-ingress.html" />
+<meta property="og:url" content="http://localhost:4000/code4projects/kubernetes-services-cluster-ip-vs-nodeport-vs-loadbalancer-vs-ingress.html" />
+<meta property="og:site_name" content="Code4Projects" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"What I have learned after 30 years of programming","headline":"Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress","url":"http://localhost:4000/code4projects/kubernetes-services-cluster-ip-vs-nodeport-vs-loadbalancer-vs-ingress.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+  </head>
+  <body>
+    <header>
+  <div id="logo"></div>
+  <div id="empty-header"></div>
+  <div id="social-area"></div>
+</header>
+
+    <div id="menu">
+        <nav>
+  
+    <a href="/code4projects/" >Home</a>
+  
+    <a href="/code4projects/about.html" >About</a>
+  
+    <a href="/code4projects/blog.html" >Blog</a>
+  
+    <a href="/code4projects/staff.html" >Staff</a>
+  
+</nav>
+
+    </div>
+    <div id="content">
+        <h1 id="kubernetes-cluster-ip-vs-nodeport-vs-loadbalancer-vs-ingress">Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress</h1>
+
+<p>This is the second article of the <a href="/code4projects/">Getting Started with Kubernetes</a> article series. In this article, I want to explain a concept that confused me when I started working with Kubernetes: <strong>Cluster IP vs NodePort vs LoadBalancer vs Ingress</strong>.</p>
+
+<h2 id="kubernetes-service-types">Kubernetes Service types</h2>
+
+<p>In the first article of this series, we said that a <strong>Service</strong> is an abstraction level that Kubernetes uses to make a deployed application accessible from the internal and external of the cluster. Kubernetes supports three different types of services:</p>
+
+<ul>
+  <li>Cluster IP;</li>
+  <li>NodePort;</li>
+  <li>Load Balancer.</li>
+</ul>
+
+<p>It is extremely important to understand the difference between them to correctly design your applications. It’s also important to understand the difference between these concepts and the Ingress.</p>
+
+<h2 id="cluster-ip-vs-nodeport-vs-loadbalancer">Cluster IP vs NodePort vs LoadBalancer</h2>
+
+<h3 id="cluster-ip-service">Cluster IP Service</h3>
+
+<p>A ClusterIP service is the default Kubernetes service. It gives you a service inside your cluster that other apps inside your cluster can access. <strong>There is no external access</strong>. The YAML for a ClusterIP service looks like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apiVersion: v1
+kind: Service
+metadata:
+    name: my-internal-service
+spec:
+    selector:
+        app: my-app
+    type: ClusterIP
+    ports:
+    - name: http
+      port: 80
+      targetPort: 80 
+      protocol: TCP
+</code></pre></div></div>
+
+<p>It’s possible to access, for debugging purposes, from the external to the Cluster IP using the Kubernetes proxy as the following figure shows. As you can notice, an application App2 can internally communicate with the application App1 via the Cluster IP.</p>
+
+<p>IMAGE</p>
+
+<p>Start the Kubernetes Proxy:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`kubectl proxy --port=8080`
+</code></pre></div></div>
+
+<p>Now, you can navigate through the Kubernetes API to access this service using this scheme:</p>
+
+<p>**http://localhost:8080/api/v1/proxy/namespaces/<NAMESPACE>/services/<SERVICE-NAME>:<PORT-NAME>/**</PORT-NAME></SERVICE-NAME></NAMESPACE></p>
+
+<p>So to access the service we defined above, you could use the following address:</p>
+
+<p><strong>http://localhost:8080/api/v1/proxy/namespaces/default/services/my-internal-service:http/</strong></p>
+
+<p>In the YAML file, the service map the HTTP port 80 to the container port 80 (targetPort).</p>
+
+<h3 id="nodeport">NodePort</h3>
+
+<p>A NodePort service is the easiest way to get external traffic directly to your service. I use it also for debugging purposes when I want easily test my service from the external. A NodePort service, as the name implies, opens a specific port on all the Worker Nodes (the VMs), and any traffic that is sent to this port is forwarded to the service.</p>
+
+<p>The range of the ports available for this kind of service is 30000-32767, in the YAML you can specify it or let Kubernetes assign a value to it. Usually, I prefer the second option to avoid conflicts and let Kubernetes do the right choice. You can know the value assigned with the command:</p>
+
+<p><code class="language-plaintext highlighter-rouge">kubectl get services --all-namespaces</code></p>
+
+<p>IMAGE</p>
+
+<p>As you can notice from the image above the external traffic can arrive on the IP of one of the three nodes on port 30036, it will arrive to the NodePort service that will forward the traffic to a specific Pod.</p>
+
+<p>The YAML for a NodePort service looks like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apiVersion: v1
+kind: Service
+metadata:
+    name: my-nodeport-service
+spec:
+    selector:
+        app: my-app
+    type: NodePort
+    ports:
+    - name: http
+      port: 80
+      targetPort: 80
+      nodePort: 30036
+      protocol: TCP
+</code></pre></div></div>
+
+<p>In the YAML file, the service map the HTTP port 80 to the container port 80 (targetPort), but it is accessible from the external using IP:PORT, where IP is one of the Worker Node (VMs) IP and PORT is the nodePort. As said above, if you don’t specify the nodePort field Kubernetes will assign a value to it.</p>
+
+<p>I think NodePort is really convenient when you want to test immediately your service but you don’t have the possibility to create a Load Balancer service (i.e. on a local Kubernetes used for tests purpose). The main issue is that you have to deal with the Worker Node IP changes and use a port number in the range 30000-32767 not really convenient for production systems.</p>
+
+<h3 id="load-balancer">Load Balancer</h3>
+
+<p>A LoadBalancer service is the standard way to expose a service to the internet. On the Cloud of most vendors, this will create a Network Load Balancer that will give you a single IP address that will forward all traffic to your service.</p>
+
+<p>IMAGE</p>
+
+<p>The problem with this type of service is that it is only available on the Cloud platform of some vendors and you should pay for it. If you are using a local Kubernetes cluster (i.e. using Kubespray or my ad-hoc solution) on your laptop there is no chance you can use this type of service. In this case, the only way to go is via NodePort.</p>
+
+<h3 id="kubernetes-ingress">Kubernetes Ingress</h3>
+
+<p>Unlike all the above examples, Ingress is NOT a type of service. Instead, it sits in front of multiple services and acts as a “reverse proxy” for them. You can do a lot of different things with an Ingress, and there are many types of Ingress controllers that have different capabilities.</p>
+
+<p>The most important thing you can do with an Ingress is to do both path-based and subdomain based routing to backend services as shown by the following figure.</p>
+
+<h3 id="kubernetes-ingress-1">Kubernetes Ingress</h3>
+
+<p>The YAML for an Ingress looks like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+name: my-ingress
+spec:
+    backend:
+        serviceName: other
+        servicePort: 8080
+    rules:
+    - host: foo.mydomain.com
+      http:
+          paths:
+          - backend:
+                serviceName: foo
+                servicePort: 8080&amp;nbsp;
+    - host: mydomain.com
+      http:
+          paths:
+          - path: /bar/*
+            backend:
+                serviceName: bar
+                servicePort: 8080
+</code></pre></div></div>
+
+<p>The following YAML file specifies that all the traffic to foo.mydomain.com is redirected to the foo service on the 8080 port. All the traffic to *mydomain.com/bar/** path will be redirected to the bar service on 8080 port.</p>
+
+<h2 id="when-should-i-use-what">When should I use what?</h2>
+
+<p>Once we understand the differences between the three types of services and the Ingress, we need to understand when should I use what? The following sections summarize this for you.</p>
+
+<h3 id="cluster-ip">Cluster IP:</h3>
+
+<p>Here my thoughts about this service type:</p>
+
+<ol>
+  <li>Debugging your services, or connecting to them directly from your laptop for some reason using Kubernetes proxy.</li>
+  <li>Allowing internal traffic so that other applications in the same cluster can contact the service.</li>
+  <li>Designed to be NOT accessible from the external of the cluster.</li>
+</ol>
+
+<p>###NodePort:</p>
+
+<p>Here my thoughts about this service type:</p>
+
+<ol>
+  <li>Very convenient to create a service easily contactable from the external on your laptop during the tests.</li>
+  <li>You can only have one service per port.</li>
+  <li>You can only use ports 30000–32767.</li>
+  <li>If your Node/VM IP address change, you need to deal with that.</li>
+</ol>
+
+<p>For reasons 3 and 4, don’t use this method in production. If you are running a service for demo purpose or temporary that doesn’t have to be always available, this method will work for you.</p>
+
+<h3 id="load-balancer-1">Load Balancer</h3>
+
+<p>Here my thoughts about this service type:</p>
+
+<ol>
+  <li>If you have the possibility to use this type of service, go fo it.</li>
+  <li>All traffic on the port you specify will be forwarded to the service. There is no filtering, no routing, etc.</li>
+  <li>The big downside of it is that it is usually only available on a Cloud environment where you have to pay to allocate a Load Balancer for your service.</li>
+  <li>You have an IP for each service.</li>
+  <li>It’s expensive.</li>
+</ol>
+
+<h3 id="ingress">Ingress</h3>
+
+<p>Here my thoughts about the Ingress:</p>
+
+<ol>
+  <li>Ingress is the most useful if you want to expose multiple services under the same IP address using path-based or subdomains routing.</li>
+  <li>On the local Kubernetes cluster, it is useful to bypass some NodePort limitation like the port number (you can use 80 port), use a hostname to bypass the VM IP change.</li>
+  <li>On a production system, where Load Balancer is not available, you can bypass the problem exposing one or more services via NodePort and then use an Ingress in front of them to manage the traffic.</li>
+</ol>
+
+<h2 id="final-thoughts">Final Thoughts</h2>
+
+<p>This article contains a lot of useful information that for me are very important to understand how Kubernetes works. There are other important concepts to explain. In the next article, I will explain how to separate configuration from code and data using <strong>Kubernetes ConfigMaps</strong>.</p>
+
+    </div>
+    <div id="course_sidebar">
+        <nav>
+  <ul>
+  
+    <li><a href="/code4projects/" >Getting started with Kubernetes</a></li>
+  
+    <li><a href="/code4projects/kubernetes-services-cluster-ip-vs-nodeport-vs-loadbalancer-vs-ingress.html" class="current">Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress</a></li>
+  
+    <li><a href="/code4projects/how-to-use-kubernetes-configmaps.html" >How I use Kubernetes ConfigMaps to manage configurations</a></li>
+  
+    <li><a href="/code4projects/how-to-create-your-own-kubernetes-cluster.html" >How to create your own Kubernetes cluster</a></li>
+  
+  </ul>
+</nav>
+
+    </div>
+  </body>
+</html>

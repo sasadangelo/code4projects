@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sources": [
+		"styles.scss",
+		"_sass/main.scss"
+	],
+	"sourcesContent": [
+		"@import \"main\";",
+		"@import \"friendly.css\";\n\nbody {\n  font-family: '{{ site.fonts.family }}';\n  font-size: '{{ site.fonts.size }}';\n  margin: 10 10 10 10;\n}\n\nheader {\n  border-style: solid;\n  border-width: 1px;\n  border-color: black;\n  width: 100%;\n  height: 150px;\n}\n\n\n.current {\n  color: green;\n}\n\n#menu {\n  border-style: solid;\n  border-width: 1px;\n  border-color: black;\n  height: 100%;\n  /*width: 100%;*/\n  padding: 5px 5px 5px 5px;\n  margin: 5px 0px 5px 0px;\n}\n\n#course_sidebar {\n  border-style: solid;\n  border-width: 1px;\n  border-color: black;\n  height: 100%;\n  width: 27%;\n  float: right;\n  padding: 5px 5px 5px 5px;\n  margin: 5px 0px 5px 2px;\n}\n\n#content {\n  border-style: solid;\n  border-width: 1px;\n  border-color: black;\n  height: 100%;\n  width: 70%;\n  float: left;\n  padding: 5px 5px 5px 5px;\n  margin: 5px 2px 5px 0px;\n}\n"
+	],
+	"names": [],
+	"mappings": "ACAA,OAAO,CAAP,iBAAO;AAEP,AAAA,IAAI,CAAC,EACH,WAAW,EAAE,yBAAyB,EACtC,SAAS,EAAE,uBAAuB,EAClC,MAAM,EAAE,WAAW,GACpB;;AAED,AAAA,MAAM,CAAC,EACL,YAAY,EAAE,KAAK,EACnB,YAAY,EAAE,GAAG,EACjB,YAAY,EAAE,KAAK,EACnB,KAAK,EAAE,IAAI,EACX,MAAM,EAAE,KAAK,GACd;;AAGD,AAAA,QAAQ,CAAC,EACP,KAAK,EAAE,KAAK,GACb;;AAED,AAAA,KAAK,CAAC,EACJ,YAAY,EAAE,KAAK,EACnB,YAAY,EAAE,GAAG,EACjB,YAAY,EAAE,KAAK,EACnB,MAAM,EAAE,IAAI,EACZ,gBAAgB,CAChB,OAAO,EAAE,eAAe,EACxB,MAAM,EAAE,eAAe,GACxB;;AAED,AAAA,eAAe,CAAC,EACd,YAAY,EAAE,KAAK,EACnB,YAAY,EAAE,GAAG,EACjB,YAAY,EAAE,KAAK,EACnB,MAAM,EAAE,IAAI,EACZ,KAAK,EAAE,GAAG,EACV,KAAK,EAAE,KAAK,EACZ,OAAO,EAAE,eAAe,EACxB,MAAM,EAAE,eAAe,GACxB;;AAED,AAAA,QAAQ,CAAC,EACP,YAAY,EAAE,KAAK,EACnB,YAAY,EAAE,GAAG,EACjB,YAAY,EAAE,KAAK,EACnB,MAAM,EAAE,IAAI,EACZ,KAAK,EAAE,GAAG,EACV,KAAK,EAAE,IAAI,EACX,OAAO,EAAE,eAAe,EACxB,MAAM,EAAE,eAAe,GACxB"
+}

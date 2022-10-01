@@ -1,6 +1,8 @@
 - name: Getting started with Kubernetes
   link: /
 - name: Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress
-  link: /kubernetes-services.html
-- name: I Tipi di Asset su cui Investire
-  link: /assets.html
+  link: /kubernetes-services-cluster-ip-vs-nodeport-vs-loadbalancer-vs-ingress.html
+- name: How I use Kubernetes ConfigMaps to manage configurations
+  link: /how-to-use-kubernetes-configmaps.html
+- name: How to create your own Kubernetes cluster
+  link: /how-to-create-your-own-kubernetes-cluster.html

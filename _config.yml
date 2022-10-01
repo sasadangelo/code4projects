@@ -4,9 +4,20 @@ description: What I have learned after 30 years of programming
 baseurl: "/code4projects"
 url: ""
 
+# Typography configuration
+fonts:
+    size: 30px
+    family: Roboto Slab
+
 collections:
   authors:
     output: true
+
+# Code Highlighter
+## 'pygments' is unsupported on GitHub Pages now.
+highlighter: rouge
+highlight:
+  line_number: true
 
 defaults:
   - scope:
