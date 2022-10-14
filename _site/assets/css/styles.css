@@ -1,14 +1,90 @@
 @import url(friendly.css);
-body { font-family: '{{ site.fonts.family }}'; font-size: '{{ site.fonts.size }}'; margin: 10 10 10 10; }
+/* ################################################################################ # Global definitions ################################################################################ */
+body { margin: 0 0 0 0; font-family: 'Helvetica Neue'; font-size: 13px; }
 
-header { border-style: solid; border-width: 1px; border-color: black; width: 100%; height: 150px; }
+h1, h2, h3, h4, h5, h6 { color: #3b3b3b; }
 
+h1 { font-size: 28px; }
+
+h2 { font-size: 24px; }
+
+h3 { font-size: 20px; }
+
+h4 { font-size: 18px; }
+
+h5 { font-size: 16px; }
+
+h6 { font-size: 14px; }
+
+/* ################################################################################ # Header definitions ################################################################################ */
+header { background-color: #FCFCFC; width: 100%; }
+
+#header-area { padding: 0px 35px 0px 35px; }
+
+#header-group { /*border-style: solid;*/ /*border-width: 1px;*/ /*border-color: black;*/ max-width: 1080px; margin-left: auto; margin-right: auto; }
+
+#header-group a { text-decoration: none; }
+
+/* Social Button area */
+#social-media-group { box-sizing: border-box; padding-top: 43.75px; padding-bottom: 43.75px; position: relative; float: right; }
+
+.social-media-title { color: #1d67b1; font-weight: 700; /* bold*/ margin-bottom: 5px; }
+
+.social-media-icon { width: 36px; height: 36px; float: left; margin-right: 4px; position: relative; border-radius: 3px; display: block; }
+
+.social-media-icon-facebook { background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #597ac7), color-stop(1, #6483cb)); border: 1px solid #466bc1; }
+
+.social-media-icon-twitter { background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #5bbcec), color-stop(1, #69c2ee)); border: 1px solid #44b3e9; }
+
+.social-media-icon-linkedin { background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #0070b4), color-stop(1, #007ac3)); border: 1px solid #00609b; }
+
+.social-media-icon-youtube { background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ff3635), color-stop(1, #ff4544)); border: 1px solid #ff1d1b; }
+
+.social-media-icon-github { background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #333333), color-stop(1, #3b3b3b)); border: 1px solid #262626; }
+
+.fa-facebook { width: 1em; height: 1em; text-align: center; display: block; position: absolute; line-height: 1em; color: #fff; top: 50%; left: 50%; margin-top: -0.45em; margin-left: -0.5em; font-size: 18px; }
+
+.fa-twitter { width: 1em; height: 1em; text-align: center; display: block; position: absolute; line-height: 1em; color: #fff; top: 50%; left: 50%; margin-top: -0.45em; margin-left: -0.5em; font-size: 18px; }
+
+.fa-linkedin { width: 1em; height: 1em; text-align: center; display: block; position: absolute; line-height: 1em; color: #fff; top: 50%; left: 50%; margin-top: -0.45em; margin-left: -0.5em; font-size: 18px; }
+
+.fa-youtube { width: 1em; height: 1em; text-align: center; display: block; position: absolute; line-height: 1em; color: #fff; top: 50%; left: 50%; margin-top: -0.45em; margin-left: -0.5em; font-size: 18px; }
+
+.fa-github { width: 1em; height: 1em; text-align: center; display: block; position: absolute; line-height: 1em; color: #fff; top: 50%; left: 50%; margin-top: -0.45em; margin-left: -0.5em; font-size: 18px; }
+
+.fa { font: normal normal normal 14px/1 FontAwesome; text-rendering: auto; -webkit-font-smoothing: antialiased; }
+
+/* Menu area */
 .current { color: green; }
 
-#menu { border-style: solid; border-width: 1px; border-color: black; height: 100%; /*width: 100%;*/ padding: 5px 5px 5px 5px; margin: 5px 0px 5px 0px; }
+#navigation { background-color: #1D67B2; }
 
-#course_sidebar { border-style: solid; border-width: 1px; border-color: black; height: 100%; width: 27%; float: right; padding: 5px 5px 5px 5px; margin: 5px 0px 5px 2px; }
+#menu { background-color: #1D67B2; /*border-style: solid;*/ /*border-width: 1px;*/ /*border-color: black;*/ padding: 5px 5px 5px 5px; max-width: 1080px; margin-left: auto; margin-right: auto; height: 40px; }
 
-#content { border-style: solid; border-width: 1px; border-color: black; height: 100%; width: 70%; float: left; padding: 5px 5px 5px 5px; margin: 5px 2px 5px 0px; }
+#menu ul { margin: 0px 0px 0px 0px; position: relative; }
+
+#menu ul li { padding: 0px 0px 0px 0px; /*position: relative;*/ padding: 11px 35px; display: inline-block; }
+
+#menu ul li a { color: #e2e2e2; text-decoration: none; font-weight: 700; /*position: relative;*/ }
+
+/* ################################################################################ # Sidebar definitions ################################################################################ */
+#course_sidebar { /*border-style: solid; border-width: 1px; border-color: black;*/ height: 100%; width: 27%; float: right; padding: 5px 5px 5px 5px; margin: 5px 0px 5px 2px; }
+
+#course_sidebar a { color: #248cc8; transition: all 0.2s ease; text-decoration: underline; }
+
+#course_sidebar a:hover { color: #f47e3c; }
+
+#course_sidebar ul li { list-style: none; padding-bottom: 7px; }
+
+/* ################################################################################ # Content definitions ################################################################################ */
+#main { background: #fcfcfc; padding: 35px; }
+
+#container { max-width: 1080px; margin-left: auto; margin-right: auto; }
+
+#content { float: left; width: 66.287%; /*border-style: solid; border-width: 1px; border-color: black;*/ height: 100%; padding: 5px 5px 5px 5px; margin: 5px 2px 5px 0px; color: #666666; }
+
+#content a { color: #248cc8; transition: all 0.2s ease; text-decoration: underline; }
+
+#content a:hover { color: #f47e3c; }
 
 /*# sourceMappingURL=styles.css.map */

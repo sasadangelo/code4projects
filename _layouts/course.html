@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     {% feed_meta %}
     {% seo %}
     {% if jekyll.environment == "production" %}
@@ -12,14 +13,16 @@
   </head>
   <body>
     {% include header.html %}
-    <div id="menu">
-        {% include navigation.html %}
-    </div>
-    <div id="content">
-        {{ content }}
-    </div>
-    <div id="course_sidebar">
-        {% include course_sidebar.html %}
+    {% include navigation.html %}
+    <div id="main">
+      <div id="container">
+        <div id="content">
+          {{ content }}
+        </div>
+        <div id="course_sidebar">
+          {% include course_sidebar.html %}
+        </div>
+      </div>
     </div>
   </body>
 </html>
