@@ -1,14 +1,23 @@
 @import "friendly.css";
 
+/* Mobile devices              @media screen and (max-width: 479px)                         */
+/* Tablets or iPad             @media screen and (min-width: 480px) and (max-width: 767px)  */
+/* Laptop or small-size screen @media screen and (min-width: 768px) and (max-width: 1023px) */
+/* Desktop                     @media screen and (min-width: 1024px)                        */
+
 /*
  * ################################################################################
  * # Global definitions
  * ################################################################################
 */
- body {
+body {
   margin: 0 0 0 0;
   font-family: 'Helvetica Neue';
   font-size: 13px;
+}
+
+#page {
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,7 +52,7 @@ h6 {
  * ################################################################################
  * # Header definitions
  * ################################################################################
-*/
+ */
 header {
   background-color: #FCFCFC;
   width: 100%;
@@ -53,17 +62,65 @@ header {
   padding: 0px 35px 0px 35px; 
 }
 
+/* For Desktop */
+@media screen and (min-width: 1024px) {
 #header-group {
-  /*border-style: solid;*/
-  /*border-width: 1px;*/
-  /*border-color: black;*/
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+}
+
+/* For Tablets or iPad */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+#header-group {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+}
+
+/* For Laptop or small-size screen */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+#header-group {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+}
+
+/* For Mobile Phones */
+@media screen and (max-width: 479px) {
+#header-group {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 }
 
 #header-group a {
   text-decoration: none;
+}
+
+/*
+ * Logo area
+ */
+#logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 /*
@@ -73,16 +130,70 @@ header {
   box-sizing: border-box;
   padding-top: 43.75px;
   padding-bottom: 43.75px;
-  position: relative;
-  float: right;
+  /*position: relative;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
 }
 
+.social-media-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+
+
+
+/* For Desktop */
+@media screen and (min-width: 1024px) {
 .social-media-title {
   color: #1d67b1;
   font-weight: 700; /* bold*/
   margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
 }
-
+}
+  
+/* For Tablets or iPad */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+.social-media-title {
+  color: #1d67b1;
+  font-weight: 700; /* bold*/
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+}
+  
+/* For Laptop or small-size screen */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+.social-media-title {
+  color: #1d67b1;
+  font-weight: 700; /* bold*/
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+}
+  
+/* For Mobile Phones */
+@media screen and (max-width: 479px) {
+.social-media-title {
+  color: #1d67b1;
+  font-weight: 700; /* bold*/
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+}
+  
 .social-media-icon {
   width: 36px;
   height: 36px;
@@ -200,28 +311,30 @@ header {
 }
 
 /*
- * Menu area
+ * ################################################################################
+ * # Menu area
+ * ################################################################################
  */
-.current {
+/*
+ .current {
   color: green;
 }
-
+*/
 #navigation {
   background-color: #1D67B2;
 }
 
 #menu {
   background-color: #1D67B2;
-  /*border-style: solid;*/
-  /*border-width: 1px;*/
-  /*border-color: black;*/
   padding: 5px 5px 5px 5px;
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
-  height: 40px
+  min-height: 40px;
 }
 
+/* For Desktop */
+@media screen and (min-width: 1024px) {
 #menu ul {
   margin: 0px 0px 0px 0px;
   position: relative;
@@ -229,76 +342,275 @@ header {
 
 #menu ul li {
   padding: 0px 0px 0px 0px;
-  /*position: relative;*/
   padding: 11px 35px;
   display: inline-block;
+}
+
+.hamburger {
+  display: none;
+}
+}
+  
+/* For Tablets or iPad */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+#menu ul {
+  margin: 0px 0px 0px 0px;
+  position: relative;
+}
+
+#menu ul li {
+  padding: 0px 0px 0px 0px;
+  padding: 11px 35px;
+  display: inline-block;
+}
+
+.hamburger {
+  display: none;
+}
+}
+  
+/* For Laptop or small-size screen */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+#menu ul {
+  margin: 0px 0px 0px 0px;
+  position: relative;
+}
+
+#menu ul li {
+  padding: 0px 0px 0px 0px;
+  padding: 11px 35px;
+  display: inline-block;
+}
+
+.hamburger {
+  display: none;
+}
+}
+  
+/* For Mobile Phones */
+@media screen and (max-width: 479px) {
+#menu ul {
+  border-color:#155493;
+  border-width: 1px;
+  border-style: solid;
+  margin: 10px 10px 10px 50px;
+  padding: 10px 30px;
+  background-color: #1D67B2;
+  border-radius: 6px;
+  display: none;
+  overflow: scroll;
+  position: absolute;
+  max-height: 100%;
+}
+
+#menu ul li {
+  border-color:#155493;
+  border-bottom: 1px solid rgba(0,0,0,.25);
+  border-top: 1px solid rgba(255,255,255,.05);
+  padding: 10px 0px;
+  display: block;
+}
 }
 
 #menu ul li a {
   color: #e2e2e2;
   text-decoration: none;
   font-weight: 700;
-  /*position: relative;*/
 }
 
 /*
- * ################################################################################
- * # Sidebar definitions
- * ################################################################################
-*/
-#course_sidebar {
-  /*border-style: solid;
-  border-width: 1px;
-  border-color: black;*/
-  height: 100%;
-  width: 27%;
-  float: right;
-  padding: 5px 5px 5px 5px;
-  margin: 5px 0px 5px 2px;
+ * Hamburger Mobile Menu
+ */
+
+/* Three lines for hamburger mobile menu */
+.hamburger {
+  cursor: pointer;
+  float: left;
+  padding: 20px 20px;
 }
 
-#course_sidebar a {
-  color: #248cc8;
-  transition: all 0.2s ease;
-  text-decoration: underline;
+/* The central hamburger line */
+.hamburger-line {
+  background: #ffffff;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
 }
 
-#course_sidebar a:hover {
-  color: #f47e3c;
+/* The top and bottom hamburger lines */
+.hamburger-line::before,
+.hamburger-line::after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
 }
 
-#course_sidebar ul li {
-  list-style: none;
-  padding-bottom: 7px;
+/* The top hamburger line is 5px above the central one */
+.hamburger-line::before {
+    top: 5px;
 }
+
+/* The bottom hamburger line is 5px below the central one */
+.hamburger-line::after {
+    top: -5px;
+}
+
+/* Don't show the checkbox */
+.drop-menu-checkbox {
+    display: none;
+}
+
+.drop-menu-checkbox:checked ~ menu {
+  max-height: 100%;
+}
+
+.drop-menu-checkbox:checked ~ #menu ul {
+  display: block;
+}
+
+.drop-menu-checkbox:not:checked ~ #menu ul {
+  display: none;
+}
+
+/* When the checkbox is checked the central hamburger line disappear */
+.drop-menu-checkbox:checked ~ .hamburger .hamburger-line {
+  background: transparent;
+}
+
+/* When the checkbox is checked the top hamburger is rotated of 45° */
+.drop-menu-checkbox:checked ~ .hamburger .hamburger-line::before {
+  transform: rotate(-45deg);
+  top:0;
+}
+
+/* When the checkbox is checked the bottom hamburger is rotated of 45° */
+.drop-menu-checkbox:checked ~ .hamburger .hamburger-line::after {
+  transform: rotate(45deg);
+  top:0;
+}
+
+/* Responsiveness */
+/*@media (min-width: 768px) {
+.hamburger {
+  display: none;
+}
+}*/
 
 /*
  * ################################################################################
- * # Content definitions
+ * # Main area
  * ################################################################################
 */
+
 #main {
   background: #fcfcfc;
   padding: 35px;
 }
 
+/* For Desktop */
+@media screen and (min-width: 1024px) {
 #container {
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
 }
 
+/* For Tablets or iPad */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+#container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+}
+  
+/* For Laptop or small-size screen */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+#container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+}
+}
+    
+/* For Mobile Phones */
+@media screen and (max-width: 479px) {
+#container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+}
+} 
+  
+/*
+ * ################################################################################
+ * # Content definitions
+ * ################################################################################
+*/
+/* For Desktop */
+@media screen and (min-width: 1024px) {
 #content {
   float: left;
   width: 66.287%;
-  /*border-style: solid;
-  border-width: 1px;
-  border-color: black;*/
   height: 100%;
   padding: 5px 5px 5px 5px;
   margin: 5px 2px 5px 0px;
   color: #666666;
 }
+}
+
+/* For Tablets or iPad */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+#content {
+  float: left;
+  width: 66.287%;
+  height: 100%;
+  padding: 5px 5px 5px 5px;
+  margin: 5px 2px 5px 0px;
+  color: #666666;
+}
+}
+
+/* For Laptop or small-size screen */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+#course_sidebar {
+  height: 100%;
+  width: 100%;
+  float: left;
+  padding: 5px 5px 5px 5px;
+  margin: 5px 0px 5px 2px;
+}
+}
+  
+/* For Mobile Phones */
+@media screen and (max-width: 479px) {
+#content {
+  float: left;
+  width: 100%;
+  height: 100%;
+  padding: 5px 5px 5px 5px;
+  margin: 5px 2px 5px 0px;
+  color: #666666;
+}
+} 
 
 #content a {
   color: #248cc8;
@@ -309,3 +621,68 @@ header {
 #content a:hover {
   color: #f47e3c;
 }
+
+/*
+ * ################################################################################
+ * # Sidebar definitions
+ * ################################################################################
+*/
+/* For Desktop */
+@media screen and (min-width: 1024px) {
+  #course_sidebar {
+    height: 100%;
+    width: 27%;
+    /*float: right;*/
+    padding: 5px 5px 5px 5px;
+    margin: 5px 0px 5px 2px;
+  }
+  }
+  
+  /* For Tablets or iPad */
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+  #course_sidebar {
+    height: 100%;
+    width: 27%;
+    /*float: right;*/
+    padding: 5px 5px 5px 5px;
+    margin: 5px 0px 5px 2px;
+  }
+  }
+  
+  /* For Laptop or small-size screen */
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+  #course_sidebar {
+    height: 100%;
+    width: 100%;
+    /*float: left;*/
+    padding: 5px 5px 5px 5px;
+    margin: 5px 0px 5px 2px;
+  }
+  }
+    
+  /* For Mobile Phones */
+  @media screen and (max-width: 479px) {
+  #course_sidebar {
+    height: 100%;
+    width: 100%;
+    /*float: left;*/
+    padding: 5px 5px 5px 5px;
+    margin: 5px 0px 5px 2px;
+  }
+  } 
+  
+  #course_sidebar a {
+    color: #248cc8;
+    transition: all 0.2s ease;
+    text-decoration: underline;
+  }
+  
+  #course_sidebar a:hover {
+    color: #f47e3c;
+  }
+  
+  #course_sidebar ul li {
+    list-style: none;
+    padding-bottom: 7px;
+  }
+  

@@ -17,8 +17,10 @@
     -->
   </head>
   <body>
-    {% include header.html %}
-    {% include navigation.html %}
-    {{ content }}
+    <div id="page">
+      {% include header.html %}
+      {% include navigation.html %}
+      {{ content }}
+    </div>
   </body>
 </html>

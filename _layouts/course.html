@@ -17,15 +17,17 @@
     -->
   </head>
   <body>
-    {% include header.html %}
-    {% include navigation.html %}
-    <div id="main">
-      <div id="container">
-        <div id="content">
-          {{ content }}
-        </div>
-        <div id="course_sidebar">
-          {% include course_sidebar.html %}
+    <div id="page">
+      {% include header.html %}
+      {% include navigation.html %}
+      <div id="main">
+        <div id="container">
+          <div id="content">
+            {{ content }}
+          </div>
+          <div id="course_sidebar">
+            {% include course_sidebar.html %}
+          </div>
         </div>
       </div>
     </div>
