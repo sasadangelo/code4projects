@@ -1,6 +1,7 @@
 ---
 layout: course
 title: How I use Kubernetes ConfigMaps to manage configurations
+course_id: getting-started-with-kubernetes
 ---
 
 # How I use Kubernetes ConfigMaps to manage configurations

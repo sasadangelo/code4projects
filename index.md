@@ -1,6 +1,7 @@
 ---
 layout: course
 title: Home
+course_id: getting-started-with-kubernetes
 ---
 # Getting Started with Kubernetes
 

@@ -1,7 +1,12 @@
 <nav>
   <ul>
-  {% for item in site.data.course_sidebar %}
-    <li><a href="{{ site.baseurl }}{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></li>
+  {% for course in site.data.course_sidebar %}
+    {% if page.course_id == course.course_id %}
+      <h5>{{ course.course_title }}</h5>
+      {% for lesson in course.course_lessons %}
+        <li><a href="{{ site.baseurl }}{{ lesson.link }}" {% if page.url == lesson.link %}class="current"{% endif %}>{{ lesson.name }}</a></li>
+      {% endfor %}
+    {% endif %}
   {% endfor %}
   </ul>
 </nav>

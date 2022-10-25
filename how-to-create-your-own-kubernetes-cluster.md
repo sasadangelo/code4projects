@@ -1,6 +1,7 @@
 ---
 layout: course
 title: How to create your own Kubernetes cluster
+course_id: getting-started-with-kubernetes
 ---
 
 # How to create your own Kubernetes cluster

@@ -1,6 +1,7 @@
 ---
 layout: course
 title: Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress
+course_id: getting-started-with-kubernetes
 ---
 # Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress
 
