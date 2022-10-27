@@ -3,6 +3,8 @@ layout: course
 title: Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress
 course_id: getting-started-with-kubernetes
 ---
+![Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress](assets/img/kubernetes-cluster-ip-services-mini.png){:width="231" height="200" }
+
 # Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress
 
 This is the second article of the [Getting Started with Kubernetes](/code4projects/) article series. In this article, I want to explain a concept that confused me when I started working with Kubernetes: **Cluster IP vs NodePort vs LoadBalancer vs Ingress**.
@@ -41,7 +43,8 @@ spec:
 
 It’s possible to access, for debugging purposes, from the external to the Cluster IP using the Kubernetes proxy as the following figure shows. As you can notice, an application App2 can internally communicate with the application App1 via the Cluster IP.
 
-IMAGE
+
+![Kubernetes Cluster IP Service](assets/img/kubernetes-cluster-ip-services.png){:width="450" height="389" }
 
 Start the Kubernetes Proxy:
 
@@ -49,7 +52,7 @@ Start the Kubernetes Proxy:
 
 Now, you can navigate through the Kubernetes API to access this service using this scheme:
 
-**http://localhost:8080/api/v1/proxy/namespaces/<NAMESPACE>/services/<SERVICE-NAME>:<PORT-NAME>/**
+**http://localhost:8080/api/v1/proxy/namespaces/&lt;NAMESPACE&gt;/services/&lt;SERVICE-NAME&gt;:&lt;PORT-NAME&gt;/**
 
 So to access the service we defined above, you could use the following address:
 
@@ -65,7 +68,7 @@ The range of the ports available for this kind of service is 30000-32767, in the
 
 `kubectl get services --all-namespaces`
 
-IMAGE
+![Kubernetes Node Port Service](assets/img/kubernetes-nodeport-service.png){:width="450" height="365" }
 
 As you can notice from the image above the external traffic can arrive on the IP of one of the three nodes on port 30036, it will arrive to the NodePort service that will forward the traffic to a specific Pod.
 
@@ -96,15 +99,17 @@ I think NodePort is really convenient when you want to test immediately your ser
 
 A LoadBalancer service is the standard way to expose a service to the internet. On the Cloud of most vendors, this will create a Network Load Balancer that will give you a single IP address that will forward all traffic to your service.
 
-IMAGE
+![Kubernetes Load Balancer Service](assets/img/kubernetes-loadbalancer-services.png){:width="450" height="317" }
 
-The problem with this type of service is that it is only available on the Cloud platform of some vendors and you should pay for it. If you are using a local Kubernetes cluster (i.e. using Kubespray or my ad-hoc solution) on your laptop there is no chance you can use this type of service. In this case, the only way to go is via NodePort.
+The problem with this type of service is that it is only available on the Cloud platform of some vendors and you should pay for it. If you are using a local Kubernetes cluster (i.e. using [Kubespray](https://github.com/kubernetes-sigs/kubespray) or [my ad-hoc solution](https://github.com/sasadangelo/k8s-cluster)) on your laptop there is no chance you can use this type of service. In this case, the only way to go is via NodePort.
 
 ### Kubernetes Ingress
 
 Unlike all the above examples, Ingress is NOT a type of service. Instead, it sits in front of multiple services and acts as a “reverse proxy” for them. You can do a lot of different things with an Ingress, and there are many types of Ingress controllers that have different capabilities.
 
 The most important thing you can do with an Ingress is to do both path-based and subdomain based routing to backend services as shown by the following figure.
+
+![Kubernetes Ingress](assets/img/kubernetes-ingress.png){:width="450" height="382" }
 
 ### Kubernetes Ingress
 
@@ -135,7 +140,7 @@ spec:
                 servicePort: 8080
 ```
 
-The following YAML file specifies that all the traffic to foo.mydomain.com is redirected to the foo service on the 8080 port. All the traffic to *mydomain.com/bar/** path will be redirected to the bar service on 8080 port.
+The following YAML file specifies that all the traffic to foo.mydomain.com is redirected to the foo service on the 8080 port. All the traffic to _mydomain.com/bar/*_ path will be redirected to the bar service on 8080 port.
 
 ## When should I use what?
 
@@ -149,7 +154,7 @@ Here my thoughts about this service type:
 2. Allowing internal traffic so that other applications in the same cluster can contact the service.
 3. Designed to be NOT accessible from the external of the cluster. 
 
-###NodePort:
+### NodePort:
 
 Here my thoughts about this service type:
 
@@ -180,4 +185,4 @@ Here my thoughts about the Ingress:
 
 ## Final Thoughts
 
-This article contains a lot of useful information that for me are very important to understand how Kubernetes works. There are other important concepts to explain. In the next article, I will explain how to separate configuration from code and data using **Kubernetes ConfigMaps**.
+This article contains a lot of useful information that for me are very important to understand how Kubernetes works. There are other important concepts to explain. In the [next article](https://www.code4projects.net/how-to-use-kubernetes-configmaps/), I will explain how to separate configuration from code and data using **Kubernetes ConfigMaps**.

@@ -4,6 +4,8 @@ title: How to create your own Kubernetes cluster
 course_id: getting-started-with-kubernetes
 ---
 
+![Kubernetes Cluster](assets/img/kubernetes-cluster.jpeg){:width="247" height="200" }
+
 # How to create your own Kubernetes cluster
 
 This is the fourth article of the [Getting Started with Kubernetes](/code4projects/) article series. In this article, I want to explain how I run my applications on a Kubernetes cluster using a simple project based on [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/). In order to test the cluster, we will create a “Hello K8s” application for Kubernetes.
@@ -146,7 +148,7 @@ The script installs kubectl, kubeadm, and kubelet using the following code:
 This script performs the following actions:
 
 * initialize the cluster;
-* configure vagrant user to use kubectl commands;
+* configure *vagrant* user to use kubectl commands;
 * install the Calico network plugin;
 * generate the join script to run on the worker nodes;
 * configure ssh to allow password authentication.
@@ -159,7 +161,7 @@ This is the code to initialize the cluster:
     kubeadm init --apiserver-advertise-address=$IP_ADDR --apiserver-cert-extra-sans=$IP_ADDR  --node-name $HOST_NAME --pod-network-cidr=172.16.0.0/16
     {% endhighlight %}
 
-The second step configures the vagrant user to use kubectl commands:
+The second step configures the vagrant user to use **kubectl** commands:
 
     {% highlight shell %}
     sudo --user=vagrant mkdir -p /home/vagrant/.kube
@@ -204,7 +206,7 @@ On the worker node, the only step performed is a copy of the joining script from
 
 Currently to manage the cluster you need to access your Vagrant machines via ssh to use kubectl commands. You can avoid this installing kubectl on your local machine and use it to control your cluster.
 
-To do that you need to install kubectl on your machine following this guide. Then you need to copy the Kubernetes credentials from your remote host:
+To do that you need to install kubectl on your machine [following this guide](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Then you need to copy the Kubernetes credentials from your remote host:
 
     {% highlight shell %}
     cd ~
@@ -233,7 +235,7 @@ In the [following article](/code4projects/), I created a Hello World application
 
 As you can notice, in this Dockerfile we install PHP in addition to Nginx to run the **index.php** file in the **www-data** folder. The reason why we use a PHP file instead of an HTML one is that we want to print the version of the application and the hostname in order to know which version of the application we are running and on which Pod.
 
-The **ENTRYPOINT** of the Docker container is the **entrypoint.sh** script that set the right permission for the **/var/log/nginx** folder and it will start the **php7.0-fpm** and the nginx services. You can check out the source code here.
+The **ENTRYPOINT** of the Docker container is the **entrypoint.sh** script that set the right permission for the **/var/log/nginx** folder and it will start the **php7.0-fpm** and the nginx services. You can check out the [source code here](https://github.com/sasadangelo/k8s-tutorials/tree/master/hello-k8s).
 
 The docker image of this application is now on my Docker Hub account [sasadangelo/hello-k8s](https://hub.docker.com/repository/docker/sasadangelo/hello-k8s).
 
@@ -241,7 +243,7 @@ The docker image of this application is now on my Docker Hub account [sasadangel
 
 Kubernetes allows running a containerized application in three approaches: generators, imperative, and declarative. The first two methods are achieved via **kubectl** CLI while the third method is achieved declaring the desired state in a YAML configuration file. In all the cases, the result is this.
 
-IMAGE
+![Kubernetes Hello World](assets/img/kubernetes-hello-world.png){:width="450" height="132" }
 
 Let’s analyze all these methods in detail.
 
@@ -292,7 +294,7 @@ In order to connect with the browser from your host machine you need to expose t
     kubectl expose deployment hello-k8s --type=NodePort --port=80
     {% endhighlight %}
 
-You can type now in your browser the URL ÌP:PORT, where IP is the 192.168.x.x address of one of the two worker nodes ( k8s-node-1 or k8s-node-2 ) and PORT is the one you get typing the command:
+You can type now in your browser the URL ÌP:PORT, where IP is the 192.168.x.x address of one of the two worker nodes ( **k8s-node-1** or **k8s-node-2** ) and PORT is the one you get typing the command:
 
     {% highlight shell %}
     kubectl describe service hello-k8s | grep NodePort
@@ -304,7 +306,7 @@ Scale the application to 5 pods with the following commands:
     kubectl scale --replicas=5 deployment.apps/hello-k8s
     {% endhighlight %}
 
-See the 5 pods running using the kubectl get pods command. If you type your browser Reload button continuously you can notice sometimes the hostname change because different pods will respond. Attention!!! It could be possible you have to type the Reload button a lot of time before see the hostname change due to Pod affinity.
+See the 5 pods running using the kubectl get pods command. If you type your browser Reload button continuously you can notice sometimes the hostname change because different pods will respond. **Attention!!!** It could be possible you have to type the Reload button a lot of time before see the hostname change due to Pod affinity.
 
 Clean up the configuration using the commands:
 
@@ -315,7 +317,7 @@ Clean up the configuration using the commands:
 
 ### Declarative
 
-This method is achieved using the commands kubect apply. This command uses a deployment file where is defined as the deployment and the service resource objects.
+This method is achieved using the commands **kubectl apply**. This command uses a deployment file where is defined as the deployment and the service resource objects.
 
 The command to deploy and run the application is:
 
@@ -323,7 +325,7 @@ The command to deploy and run the application is:
     kubectl apply -f https://raw.githubusercontent.com/sasadangelo/k8s-tutorials/master/hello-k8s/deployment.yml
     {% endhighlight %}
 
-You can see 5 pods running using the kubectl get pods command. You can type now in your browser the URL ÌP:PORT, where IP is the 192.168.x.x address of one of the two worker nodes ( k8s-node-1 or k8s-node-2 ) and PORT is the one you get typing the command:
+You can see 5 pods running using the kubectl get pods command. You can type now in your browser the URL ÌP:PORT, where IP is the 192.168.x.x address of one of the two worker nodes ( **k8s-node-1** or **k8s-node-2** ) and PORT is the one you get typing the command:
 
     {% highlight shell %}
     kubectl describe service hello-k8s-service -n hello-k8s-ns | grep NodePort

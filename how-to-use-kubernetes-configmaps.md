@@ -4,6 +4,8 @@ title: How I use Kubernetes ConfigMaps to manage configurations
 course_id: getting-started-with-kubernetes
 ---
 
+![Kubernetes ConfigMap](assets/img/kubernetes-configmap.jpeg){:width="231" height="200" }
+
 # How I use Kubernetes ConfigMaps to manage configurations
 
 This is the third article of the [Getting Started with Kubernetes](/code4projects/) series. Here I would like to explain how to manage application configuration with Kubernetes **ConfigMaps**.
@@ -18,15 +20,15 @@ Whatever application has usually three layers:
 
 Presentation and Logic usually are in the binary code that should never change from one deployment to another. What usually changes is the data. With the term data, we essentially mean the data itself and the configuration. For an application that follows the [12-Factor guidelines](https://12factor.net/), it is essentials that configuration is separated by binary code and data.
 
-IMAGE
+![The Anatomy of an Application](assets/img/application-layers.png){:width="450" height="289" }
 
-Photo from https://www.wots.mobi/
+Photo from [https://www.wots.mobi](https://www.wots.mobi)
 
-Kubernetes manages configuration with ConfigMaps. In the next sections, I will explain what a ConfigMap is, how to create and use it in your applications, how to mount it in volumes, or use them as environment variables.
+Kubernetes manages configuration with **ConfigMaps**. In the next sections, I will explain what a ConfigMap is, how to create and use it in your applications, how to mount it in volumes, or use them as environment variables.
 
-##What is a ConfigMap in Kubernetes?
+## What is a ConfigMap in Kubernetes?
 
-In this article, I defined a **ConfigMap** as a key-value dictionary you can create and add to a Kubernetes cluster whose Pods can reference later.
+In [this article](https://www.code4projects.net/getting-started-with-kubernetes/), I defined a ConfigMap as a key-value dictionary you can create and add to a Kubernetes cluster whose Pods can reference later.
 
 ## Why would you use a ConfigMap in Kubernetes?
 
@@ -42,9 +44,9 @@ The following steps summarize how ConfigMap works in Kubernetes and the figure b
 * Add a ConfigMap to the Kubernetes cluster.
 * Containers in the Pod reference the ConfigMap and use its values.
 
-IMAGE
+![How does ConfigMap work?](assets/img/configmap-diagram.gif){:width="450" height="378" }
 
-Photo from https://matthewpalmer.net/
+Photo from [https://matthewpalmer.net](https://matthewpalmer.net)
 
 ## How to create and add ConfigMaps to clusters?
 
@@ -84,13 +86,13 @@ If you have a folder DIR with one or more configuration file or a single file *F
 
 On both the examples, if you don’t specify a namespace (–namespace is an optional parameter) the ConfigMap is associated with the default one.
 
-There is another way to create ConfigMaps using the `kubectl create configmap` command. Use literal key-value pairs defined on the command line with
+There is another way to create ConfigMaps using the **kubectl create configmap** command. Use literal key-value pairs defined on the command line with
 
     {% highlight shell %}
     kubectl create configmap db-config --from-literal=key1=value1 --from-literal=key2=value2
     {% endhighlight %}
 
-You can get more information about this command using kubectl create configmap --help.
+You can get more information about this command using **kubectl create configmap --help**.
 
 ## How Pods reference ConfigMaps?
 
@@ -167,4 +169,4 @@ In this example, you can see that the *db-config* ConfigMap is defined as a volu
 
 ## What’s next?
 
-In this article, we learned how to manage application configuration using Kubernetes ConfigMap. However, in the connection.properties file we have a password that is sensitive data (db.password). Kubernetes manages them with Secrets, a new concept that we will analyze in the next article.
+In this article, we learned how to manage application configuration using Kubernetes ConfigMap. However, in the connection.properties file we have a password that is sensitive data (db.password). Kubernetes manages them with **Secrets**, a new concept that we will analyze in the next article.

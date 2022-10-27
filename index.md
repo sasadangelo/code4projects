@@ -3,6 +3,9 @@ layout: course
 title: Home
 course_id: getting-started-with-kubernetes
 ---
+
+![Kubernetes](assets/img/kubernetes.png){:width="206" height="200" }
+
 # Getting Started with Kubernetes
 
 This is the first article of the **Getting Started with Kubernetes** article series. In this article, I would like to give you a brief introduction to Kubernetes. This will be the first step to show you how to deploy applications on it.
@@ -45,8 +48,9 @@ A Kubernetes cluster consists of two types of nodes (minions):
 
 The following figure shows an example of Kubernetes topology and where its components are deployed. API Server, Etcd, Controllers, and Scheduler are on the Master node, while Kubelet, Kube-Proxy, and Container runtime are on the Worker nodes. It is possible to configure the Master node as a Worker node, in this case, Kubelet, Kube-Proxy, and Container runtime must be installed on it too.
 
-IMAGE
-Photo from https://blog.newrelic.com
+![Kubernetes Architecture](assets/img/kubernetes_architecture.jpeg){:width="450" height="285" }
+
+*Photo from [https://blog.newrelic.com](https://blog.newrelic.com)*
 
 ### The Master Node
 
@@ -99,7 +103,7 @@ For each Resource, the file contains a YAML code block that has essentially thre
 * **spec**, the desired state for the resource;
 * **status**, the current status of the resource;
 
-IMAGE
+![Kubernetes YAML Structure](assets/img/kubernetes-yaml-structure.png){:width="300" height="410" }
 
 In every moment the goal of Kubernetes is to check the resource status, understand the differences from the desired state, in the case apply these differences. We will talk more about the desired state in the next sections.
 
@@ -119,8 +123,9 @@ Those resources include:
 
 A Pod is a “logical host” that contains different application containers that are relatively tightly coupled. For example, a Pod might include a container with the application as well as a helper container that feeds the data to be published by the application. The containers in a Pod share an IP Address, network,  port space, volumes, IPC and are always co-located and co-scheduled, and run in a shared context on the same Node.
 
-IMAGE
-Photo from https://dzone.com
+![Kubernetes Pods](assets/img/kubernetes-pods.png){:width="450" height="191" }
+
+*Photo from [https://dzone.com](https://dzone.com)*
 
 ### Why Pods?
 
@@ -176,15 +181,15 @@ kubect describe pod my-app-pod
 
 Replication Controller in Kubernetes is responsible for mantaining the correct number of Pods for each application. By default, the number of Pod of an application is 1. If for some reason the Pod fails, the Replication Controller replaces it with a new one. However, there will be a small downtime.
 
-IMAGE
+![Replication Controller](assets/img/replication-controller.png){:width="450" height="314" }
 
 To avoid the downtime and increase the availability of an application, user can replicates its code in multiple Pods managed by the Replication Controller. In this case, if a Pod goes down, its traffic is redirected to another one.
 
-IMAGE
+![Replication Controller Failover](assets/img/replication-controller-failover.png){:width="450" height="347" }
 
 The number of Pods on a Node can increase until it reaches the node capacity. In this case, the Kubernetes administrator must add a new node to the cluster so that the Replication Controller can create other Pods on it.
 
-IMAGE
+![Replication Controller on Multiple Workers](assets/img/replication-controller-multi-node.png){:width="450" height="361" }
 
 The Replication Controller, in this case, will take care of the Pods on all the cluster nodes taking care of failover, scalability, and load balancing.
 
@@ -208,17 +213,19 @@ In a pre-orchestration world, installation scripts would often be used to deploy
 
 On a Kubernetes cluster, you can deploy your containerized applications specifying the desired state in a deployment YAML file. This file instructs Kubernetes on how to create and update instances of your application. With a deployment, it is as if you told Kubernetes that you want N instances of your Node.js app.
 
-IMAGE
-Photo from https://matthewpalmer.net
+![Kubernetes Deployment](assets/img/kubernetes-deployment.png){:width="450" height="463" }
+
+*Photo from [https://matthewpalmer.net](https://matthewpalmer.net)*
 
 After the application instances creation, a Kubernetes Deployment Controller continuously monitors those instances. If the Node hosting an instance goes down, the Deployment Controller with a self-healing mechanism replaces it.
 
-IMAGE
-Photo from https://matthewpalmer.net
+![Kubernetes Update](assets/img/kubernetes-update.gif){:width="450" height="334" }
+
+*Photo from [https://matthewpalmer.net](https://matthewpalmer.net)*
 
 You can create and manage a Deployment by using the Kubernetes command-line interface, Kubectl. Kubectl uses the Kubernetes API to interact with the cluster.
 
-### Deployment File sructure
+### Deployment File Structure
 
 A deployment YAML file has three sections:
 
@@ -228,14 +235,15 @@ A deployment YAML file has three sections:
 
 The **header** section reports information like the API version, the kind of YAML file (Deployment in our case) and the deployment name. The spec section that the number of replicas and the name and version of the application. The **spec.template** section, internally to the spec section, reports info about the Docker image to use, ports and other stuff.
 
-IMAAGE
-Photo from https://matthewpalmer.net
+![Kubernetes Deployment File](assets/img/kubernetes-deployment-file.gif){:width="450" height="254" }
+
+*Photo from [https://matthewpalmer.net](https://matthewpalmer.net)*
 
 ### Behind the scenes
 
 Here what happens behind the scene when you start a deployment.
 
-Kubernetes Deployment
+![Kubernetes Behind the scenes](assets/img/kubernetes-behind-scenes.png){:width="450" height="453" }
 
 1. Deployment starts
 2. The desired state is stored in the Etcd component.
@@ -251,7 +259,7 @@ Suppose you decide to create an HTTP server cluster to manage request coming fro
 
 To make Pods accessible from external, Kubernetes uses a Service as a level of abstraction. A Service, basically, lives between clients and Pods and when an HTTP request arrives, it forwards the request to the right Pod.
 
-IMAGE
+![Kubernetes Service vs Deployment](assets/img/kubernetes-service-vs-deployment.png){:width="450" height="184" }
 
 This approach is useful for canary deployment as well, where you can deploy a new application version on separate Pods and make them accessible through a different Service only to a subset of users for test purposes.
 
@@ -259,7 +267,7 @@ This approach is useful for canary deployment as well, where you can deploy a ne
 
 To create 12-Factor applications it is essential that the application is separate from the configuration and data. It is possible to associate a configuration to a Pod using ConfigMap which is nothing more than a dictionary key value. If desired, you can create multiple configurations for development, test, and production environments.
 
-IMAGE
+![Kubernetes ConfigMap](assets/img/kubernetes-configmap.png){:width="450" height="276" }
 
 The figure shows an application that uses a database as a service. The connection data to this database can change between development, test, and production environments. For this reason, it is possible to store this information externally in a ConfigMap.
 
@@ -296,7 +304,7 @@ metadata:
 
 In the beginning, digest all the Kubernetes concepts is not an easy task because it’s not clear the relationship between all of them. The following diagram shows the relationship between the resource types described so far.
 
-IMAGE
+![Kubernetes Resources](assets/img/kubernetes-resources.png){:width="450" height="505" }
 
 The diagram shows a deployment composed of two versions of the same application both replicated in two Pods running each one on different nodes. Application configuration is outside the Pods in the ConfigMap and it is different for each version. Each Pod has its internal 172.16 IP not accessible outside the nodes and that could change over time. The Pods are accessible from external traffic via two Services, one for each version, that expose an external IP. In the diagram, the virtual cluster lives in its own namespace that separates it from other virtual clusters.
 
