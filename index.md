@@ -48,7 +48,7 @@ A Kubernetes cluster consists of two types of nodes (minions):
 
 The following figure shows an example of Kubernetes topology and where its components are deployed. API Server, Etcd, Controllers, and Scheduler are on the Master node, while Kubelet, Kube-Proxy, and Container runtime are on the Worker nodes. It is possible to configure the Master node as a Worker node, in this case, Kubelet, Kube-Proxy, and Container runtime must be installed on it too.
 
-![Kubernetes Architecture](assets/img/kubernetes_architecture.jpeg){:width="450" height="285" }
+![Kubernetes Architecture](assets/img/kubernetes_architecture.webp){:width="450" height="285" }
 
 *Photo from [https://blog.newrelic.com](https://blog.newrelic.com)*
 
@@ -181,7 +181,7 @@ kubect describe pod my-app-pod
 
 Replication Controller in Kubernetes is responsible for mantaining the correct number of Pods for each application. By default, the number of Pod of an application is 1. If for some reason the Pod fails, the Replication Controller replaces it with a new one. However, there will be a small downtime.
 
-![Replication Controller](assets/img/replication-controller.png){:width="450" height="314" }
+![Replication Controller](assets/img/replication-controller.webp){:width="450" height="314" }
 
 To avoid the downtime and increase the availability of an application, user can replicates its code in multiple Pods managed by the Replication Controller. In this case, if a Pod goes down, its traffic is redirected to another one.
 
@@ -213,7 +213,7 @@ In a pre-orchestration world, installation scripts would often be used to deploy
 
 On a Kubernetes cluster, you can deploy your containerized applications specifying the desired state in a deployment YAML file. This file instructs Kubernetes on how to create and update instances of your application. With a deployment, it is as if you told Kubernetes that you want N instances of your Node.js app.
 
-![Kubernetes Deployment](assets/img/kubernetes-deployment.png){:width="450" height="463" }
+![Kubernetes Deployment](assets/img/kubernetes-deployment.webp){:width="450" height="463" }
 
 *Photo from [https://matthewpalmer.net](https://matthewpalmer.net)*
 
