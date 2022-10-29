@@ -608,7 +608,8 @@ header {
 } 
 
 #content a {
-  color: #248cc8;
+  /*color: #248cc8;*/
+  color: #1D67B2;
   transition: all 0.2s ease;
   text-decoration: underline;
 }
@@ -667,7 +668,8 @@ header {
   } 
   
   #course_sidebar a {
-    color: #248cc8;
+    /*color: #248cc8;*/
+    color: #1D67B2;
     transition: all 0.2s ease;
     text-decoration: underline;
   }
@@ -678,7 +680,8 @@ header {
   
   #course_sidebar ul li {
     list-style: none;
-    padding-bottom: 7px;
+    /*padding-bottom: 7px;*/
+    padding: 12px 0px 12px 0px;
   }
   
   .course_sidebar_title {
