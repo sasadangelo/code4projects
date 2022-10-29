@@ -4,11 +4,7 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
  
-    {% if page.url == "/" %}
-    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}" />
-    {% else %}
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
-    {% endif %}
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/fontawesome/css/fontawesome.css">
