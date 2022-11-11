@@ -498,18 +498,24 @@ header {
 
 /*
  * ################################################################################
- * # Main area
+ * # Course Main area
  * ################################################################################
 */
 
-#main {
+#course-main {
   background: #fcfcfc;
   padding: 35px;
 }
 
+/*
+ * ################################################################################
+ * # Course Container definitions
+ * ################################################################################
+*/
+
 /* For Desktop */
 @media screen and (min-width: 1024px) {
-#container {
+#course-container {
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
@@ -521,7 +527,7 @@ header {
 
 /* For Tablets or iPad */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-#container {
+#course-container {
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
@@ -533,7 +539,7 @@ header {
   
 /* For Laptop or small-size screen */
 @media screen and (min-width: 480px) and (max-width: 767px) {
-#container {
+#course-container {
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
@@ -545,7 +551,7 @@ header {
     
 /* For Mobile Phones */
 @media screen and (max-width: 479px) {
-#container {
+#course-container {
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
@@ -557,12 +563,12 @@ header {
   
 /*
  * ################################################################################
- * # Content definitions
+ * # Course Content definitions
  * ################################################################################
 */
 /* For Desktop */
 @media screen and (min-width: 1024px) {
-#content {
+#course-content {
   float: left;
   width: 66.287%;
   height: 100%;
@@ -574,7 +580,7 @@ header {
 
 /* For Tablets or iPad */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-#content {
+#course-content {
   float: left;
   width: 66.287%;
   height: 100%;
@@ -586,18 +592,19 @@ header {
 
 /* For Laptop or small-size screen */
 @media screen and (min-width: 480px) and (max-width: 767px) {
-#course_sidebar {
-  height: 100%;
-  width: 100%;
+#course-content {
   float: left;
+  width: 66.287%;
+  height: 100%;
   padding: 5px 5px 5px 5px;
-  margin: 5px 0px 5px 2px;
+  margin: 5px 2px 5px 0px;
+  color: #666666;
 }
 }
   
 /* For Mobile Phones */
 @media screen and (max-width: 479px) {
-#content {
+#course-content {
   float: left;
   width: 100%;
   height: 100%;
@@ -607,14 +614,14 @@ header {
 }
 } 
 
-#content a {
+#course-content a {
   /*color: #248cc8;*/
   color: #1D67B2;
   transition: all 0.2s ease;
   text-decoration: underline;
 }
 
-#content a:hover {
+#course-content a:hover {
   color: #f47e3c;
 }
 
@@ -625,69 +632,260 @@ header {
 */
 /* For Desktop */
 @media screen and (min-width: 1024px) {
-  #course_sidebar {
-    height: 100%;
-    width: 27%;
-    /*float: right;*/
-    padding: 5px 5px 5px 5px;
-    margin: 5px 0px 5px 2px;
-  }
-  }
+#course-sidebar {
+  height: 100%;
+  width: 27%;
+  /*float: right;*/
+  padding: 5px 5px 5px 5px;
+  margin: 5px 0px 5px 2px;
+}
+}
   
-  /* For Tablets or iPad */
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-  #course_sidebar {
-    height: 100%;
-    width: 27%;
-    /*float: right;*/
-    padding: 5px 5px 5px 5px;
-    margin: 5px 0px 5px 2px;
-  }
-  }
+/* For Tablets or iPad */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+#course-sidebar {
+  height: 100%;
+  width: 27%;
+  /*float: right;*/
+  padding: 5px 5px 5px 5px;
+  margin: 5px 0px 5px 2px;
+}
+}
   
-  /* For Laptop or small-size screen */
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-  #course_sidebar {
-    height: 100%;
-    width: 100%;
-    /*float: left;*/
-    padding: 5px 5px 5px 5px;
-    margin: 5px 0px 5px 2px;
-  }
-  }
-    
-  /* For Mobile Phones */
-  @media screen and (max-width: 479px) {
-  #course_sidebar {
-    height: 100%;
-    width: 100%;
-    /*float: left;*/
-    padding: 5px 5px 5px 5px;
-    margin: 5px 0px 5px 2px;
-  }
-  } 
+/* For Laptop or small-size screen */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+#course-sidebar {
+  height: 100%;
+  width: 100%;
+  /*float: left;*/
+  padding: 5px 5px 5px 5px;
+  margin: 5px 0px 5px 2px;
+}
+}
   
-  #course_sidebar a {
-    /*color: #248cc8;*/
-    color: #1D67B2;
-    transition: all 0.2s ease;
-    text-decoration: underline;
-  }
-  
-  #course_sidebar a:hover {
-    color: #f47e3c;
-  }
-  
-  #course_sidebar ul li {
-    list-style: none;
-    /*padding-bottom: 7px;*/
-    padding: 12px 0px 12px 0px;
-  }
-  
-  .course_sidebar_title {
-    color: #3b3b3b;
-    font-size: 16px;
-    font-weight: 700; /* bold*/
-    padding: 0px 0px 0px 40px;
-    margin: 25px 0px 25px 0px;
-  }
+/* For Mobile Phones */
+@media screen and (max-width: 479px) {
+#course-sidebar {
+  height: 100%;
+  width: 100%;
+  /*float: left;*/
+  padding: 5px 5px 5px 5px;
+  margin: 5px 0px 5px 2px;
+}
+} 
+
+#course-sidebar a {
+  /*color: #248cc8;*/
+  color: #1D67B2;
+  transition: all 0.2s ease;
+  text-decoration: underline;
+}
+
+#course-sidebar a:hover {
+  color: #f47e3c;
+}
+
+#course-sidebar ul li {
+  list-style: none;
+  /*padding-bottom: 7px;*/
+  padding: 12px 0px 12px 0px;
+}
+
+.course-sidebar-title {
+  color: #3b3b3b;
+  font-size: 16px;
+  font-weight: 700; /* bold*/
+  padding: 0px 0px 0px 40px;
+  margin: 25px 0px 25px 0px;
+}
+
+/*
+ * ################################################################################
+ * # Course Main area
+ * ################################################################################
+*/
+
+#home-main {
+  background: #fcfcfc;
+}
+
+/*
+ * ################################################################################
+ * # Home Container definitions
+ * ################################################################################
+ */
+
+#home-container {
+  /*
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/*
+ * ################################################################################
+ * # Home Content definitions
+ * ################################################################################
+ */
+#home-content {
+  float: left;
+  color: #666666;
+}
+
+/*
+ * ################################################################################
+ * # Hero Area
+ * ################################################################################
+ */
+
+.hero-background {
+  background-image: url("../img/code4projects-image-hero.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-area {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 45px 60px;
+}
+
+.hero-content {
+  padding: 10px;
+}
+
+.hero-box {
+  padding: 50px 40px 50px 40px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+.hero-messagebox {
+  padding: 50px 40px 50px 40px;
+  max-width: 400px;
+  background-color: RGBA(139,139,139,0.5);
+  border-radius: 20px;
+  box-shadow: 10px 10px 0px 0px RGBA(0,0,0,0.5);
+  box-sizing: border-box;
+}
+
+.hero-messagebox h1 {
+  margin: 0px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 800;
+  font-size: 25px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero-messagebox p {
+  color: #ffffff;
+  text-align: left;
+  line-height: 1.5;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+ * ################################################################################
+ * # Circle Icon Area
+ * ################################################################################
+ */
+
+.circle-icon-area {
+  padding: 30px 200px 40px 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.circle-icon-box {
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.circle-icon-box h4 {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.circle-icon-box h4 a {
+  text-decoration: none;
+  color: #3b3b3b;
+  text-align: center;
+}
+
+.circle-icon-box a {
+  text-decoration: none;
+  color: #3b3b3b;
+  text-align: center;
+  font-weight: 700;
+}
+
+.circle-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0px 50px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*
+ * ################################################################################
+ * # Feature Content Area
+ * ################################################################################
+ */
+
+.feature-content-area {
+  background-color: #efefef;
+  padding: 60px 230px 60px 230px;
+}
+
+.feature-content-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.feature-content-text-title {
+  color: #444444;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 30px 0px 30px 0px;
+} 
+
+.feature-content-text {
+  color: #666666;
+  font-size: 15px;
+  text-align: justify;
+  line-height: 1.6em;
+}
+
+.feature-content-text a {
+  color: #1d67b2;
+}
+
+/*
+ * ################################################################################
+ * # Footer
+ * ################################################################################
+ */
+footer {
+  background-color: #1d67b2;
+  color: #e2e2e2;
+  width: 100%;
+  padding: 30px 0px;
+  text-align: center;
+}

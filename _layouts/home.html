@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+ 
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/fontawesome/css/brands.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% feed_meta %}
+    {% seo %}
+    <!--
+    {% if jekyll.environment == "production" %}
+      <script async src="my-analytics-script.js"></script>
+    {% endif %}
+    -->
+  </head>
+  <body>
+    <div id="page">
+      {% include header.html %}
+      {% include navigation.html %}
+      <div id="home-main">
+        <div id="home-container">
+          <div id="home-content">
+            <div class="hero-background">
+              <div class="hero-area">
+                <div class="hero-content">
+                  <div class="hero-box">
+                    <div class="hero-messagebox">
+                      <h1>Welcome to Code4Projects!</h1>
+                      <p>My name is Salvatore and I am a professional Software Engineer with over 30 years of experience. Code4Projects is the website where I write everything I learn on software programming. For more details, read more <a href="{{ site.baseurl }}/about.html">about me</a>.</p>
+                    </div>  
+                  </div>  
+                </div>  
+              </div>
+            </div>
+            <div class="circle-icon-area">
+              <div class="circle-icon-box">
+                <a title="Start Here" href="start-here.html">
+                  <div class="circle-icon" style="background-image: url({{ site.baseurl }}/assets/img/starthere-icon.png)" >
+                  </div>
+                </a>
+                <h4><a title="Start Here" href="start-here.html">New User?</a></h4>
+                <a title="Start Here" href="start-here.html">Start Here</a>
+              </div>
+              <div class="circle-icon-box">
+                <a title="Projects" href="projects.html">
+                  <div class="circle-icon" style="background-image: url({{ site.baseurl }}/assets/img/projects-icon.png)">
+                  </div>
+                </a>
+                <h4><a title="Projects" href="projects.html">Projects</a></h4>
+                <a title="Check out my side Projects" href="projects.html">Check out my side Projects</a>
+              </div>
+              <div class="circle-icon-box">
+                <a title="Resources for Developers" href="resources-developers.html">
+                  <div class="circle-icon" style="background-image: url({{ site.baseurl }}/assets/img/resources-icon.png)">
+                  </div>
+                </a>
+                <h4><a title="Resources for Developers" href="resources-developers.html">Resources</a></h4>
+                <a title="Check out my favorite Resources" href="resources-developers.html">Check out my favorite Resources</a>
+              </div>
+            </div>
+            <div class="feature-content-area">
+              <div class="feature-content-box">
+                <div class="feature-content-image">
+                  <a href="{{ site.baseurl }}/getting-started-with-kubernetes.html">
+                    <img src="{{ site.baseurl }}/assets/img/kubernetes-logo.png" />
+                  </a>
+                </div>
+                <div class="feature-content-text">
+                  <div class="feature-content-text-title">Getting Started with Kubernetes</div>
+                  This is the <b>Getting started with Kubernetes</b> article series. In it I would like to give you a brief introduction to Kubernetes. 
+                  I will explain What Kubernetes is, its architecture, the concepts of Pod, Replication Controller, ReplicaSets, Deployment,
+                  ConfigMaps, SecretMaps, etc. I will show you how to setup a Kubernetes cluster using Virtual Box and Vagrant and how to deploy
+                  an "Hello K8s!" dockerized application in it. <a href="{{ site.baseurl }}/getting-started-with-kubernetes.html">Check out the article series here</a>.
+                </div>
+            </div>
+        </div>
+      </div>
+      {% include footer.html %}
+    </div>
+  </body>
+</html>

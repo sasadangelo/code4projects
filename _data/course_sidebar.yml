@@ -2,7 +2,7 @@
   course_title: Getting started with Kubernetes
   course_lessons:
   - name: Getting started with Kubernetes
-    link: /
+    link: /getting-started-with-kubernetes.html
   - name: Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress
     link: /kubernetes-services-cluster-ip-vs-nodeport-vs-loadbalancer-vs-ingress.html
   - name: How I use Kubernetes ConfigMaps to manage configurations

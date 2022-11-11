@@ -5,7 +5,6 @@
     <title>{{ page.title }}</title>
  
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
-    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/fontawesome/css/fontawesome.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/fontawesome/css/brands.css">
@@ -22,16 +21,17 @@
     <div id="page">
       {% include header.html %}
       {% include navigation.html %}
-      <div id="main">
-        <div id="container">
-          <div id="content">
+      <div id="course-main">
+        <div id="course-container">
+          <div id="course-content">
             {{ content }}
           </div>
-          <div id="course_sidebar">
+          <div id="course-sidebar">
             {% include course_sidebar.html %}
           </div>
         </div>
       </div>
+      {% include footer.html %}
     </div>
   </body>
 </html>
