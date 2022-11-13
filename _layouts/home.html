@@ -29,54 +29,41 @@
                 <div class="hero-content">
                   <div class="hero-box">
                     <div class="hero-messagebox">
-                      <h1>Welcome to Code4Projects!</h1>
-                      <p>My name is Salvatore and I am a professional Software Engineer with over 30 years of experience. Code4Projects is the website where I write everything I learn on software programming. For more details, read more <a href="{{ site.baseurl }}/about.html">about me</a>.</p>
+                      <h1>{{ site.data.home.hero-area.hero-message-title }}</h1>
+                      <p>{{ site.data.home.hero-area.hero-message-text }}</p>
                     </div>  
                   </div>  
                 </div>  
               </div>
             </div>
             <div class="circle-icon-area">
-              <div class="circle-icon-box">
-                <a title="Start Here" href="start-here.html">
-                  <div class="circle-icon" style="background-image: url({{ site.baseurl }}/assets/img/starthere-icon.png)" >
-                  </div>
-                </a>
-                <h4><a title="Start Here" href="start-here.html">New User?</a></h4>
-                <a title="Start Here" href="start-here.html">Start Here</a>
-              </div>
-              <div class="circle-icon-box">
-                <a title="Projects" href="projects.html">
-                  <div class="circle-icon" style="background-image: url({{ site.baseurl }}/assets/img/projects-icon.png)">
-                  </div>
-                </a>
-                <h4><a title="Projects" href="projects.html">Projects</a></h4>
-                <a title="Check out my side Projects" href="projects.html">Check out my side Projects</a>
-              </div>
-              <div class="circle-icon-box">
-                <a title="Resources for Developers" href="resources-developers.html">
-                  <div class="circle-icon" style="background-image: url({{ site.baseurl }}/assets/img/resources-icon.png)">
-                  </div>
-                </a>
-                <h4><a title="Resources for Developers" href="resources-developers.html">Resources</a></h4>
-                <a title="Check out my favorite Resources" href="resources-developers.html">Check out my favorite Resources</a>
-              </div>
+              {% for item in site.data.home.icon-area %}
+                <div class="circle-icon-box">
+                  <a title="{{ item.icon-title }}" href="{{ item.icon-link }}">
+                    <div class="circle-icon" style="background-image: url({{ item.icon-image }})" >
+                    </div>
+                  </a>
+                  <h4><a title="{{ item.icon-title }}" href="{{ item.icon-link }}">{{ item.icon-title }}</a></h4>
+                  <a title="{{ item.icon-title }}" href="{{ item.icon-link }}">{{ item.icon-subtitle }}</a>
+                </div>
+              {% endfor %}
             </div>
             <div class="feature-content-area">
-              <div class="feature-content-box">
-                <div class="feature-content-image">
-                  <a href="{{ site.baseurl }}/getting-started-with-kubernetes.html">
-                    <img src="{{ site.baseurl }}/assets/img/kubernetes-logo.png" />
-                  </a>
+              {% for item in site.data.home.feature-area %}
+                <div class="feature-content-box">
+                  <div class="feature-content-image">
+                    <a href="{{ item.feature-link }}">
+                      <img src="{{ item.feature-image }}" />
+                    </a>
+                  </div>
+                  <div class="feature-content-text">
+                    <div class="feature-content-text-title">{{ item.feature-title }}</div>
+                    {{ item.feature-text }}
+                  </div>
                 </div>
-                <div class="feature-content-text">
-                  <div class="feature-content-text-title">Getting Started with Kubernetes</div>
-                  This is the <b>Getting started with Kubernetes</b> article series. In it I would like to give you a brief introduction to Kubernetes. 
-                  I will explain What Kubernetes is, its architecture, the concepts of Pod, Replication Controller, ReplicaSets, Deployment,
-                  ConfigMaps, SecretMaps, etc. I will show you how to setup a Kubernetes cluster using Virtual Box and Vagrant and how to deploy
-                  an "Hello K8s!" dockerized application in it. <a href="{{ site.baseurl }}/getting-started-with-kubernetes.html">Check out the article series here</a>.
-                </div>
+              {% endfor %}
             </div>
+          </div>
         </div>
       </div>
       {% include footer.html %}
