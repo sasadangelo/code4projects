@@ -1,72 +1,48 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
- 
-    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/fontawesome/css/fontawesome.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/fontawesome/css/brands.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {% feed_meta %}
-    {% seo %}
-    <!--
-    {% if jekyll.environment == "production" %}
-      <script async src="my-analytics-script.js"></script>
-    {% endif %}
-    -->
-  </head>
-  <body>
-    <div id="page">
-      {% include header.html %}
-      {% include navigation.html %}
-      <div id="home-main">
-        <div id="home-container">
-          <div id="home-content">
-            <div class="hero-background">
-              <div class="hero-area">
-                <div class="hero-content">
-                  <div class="hero-box">
-                    <div class="hero-messagebox">
-                      <h1>{{ site.data.home.hero-area.hero-message-title }}</h1>
-                      <p>{{ site.data.home.hero-area.hero-message-text }}</p>
-                    </div>  
-                  </div>  
-                </div>  
-              </div>
-            </div>
-            <div class="circle-icon-area">
-              {% for item in site.data.home.icon-area %}
-                <div class="circle-icon-box">
-                  <a title="{{ item.icon-title }}" href="{{ item.icon-link }}">
-                    <div class="circle-icon" style="background-image: url({{ item.icon-image }})" >
-                    </div>
-                  </a>
-                  <h4><a title="{{ item.icon-title }}" href="{{ item.icon-link }}">{{ item.icon-title }}</a></h4>
-                  <a title="{{ item.icon-title }}" href="{{ item.icon-link }}">{{ item.icon-subtitle }}</a>
-                </div>
-              {% endfor %}
-            </div>
-            <div class="feature-content-area">
-              {% for item in site.data.home.feature-area %}
-                <div class="feature-content-box">
-                  <div class="feature-content-image">
-                    <a href="{{ item.feature-link }}">
-                      <img src="{{ item.feature-image }}" />
-                    </a>
-                  </div>
-                  <div class="feature-content-text">
-                    <div class="feature-content-text-title">{{ item.feature-title }}</div>
-                    {{ item.feature-text }}
-                  </div>
-                </div>
-              {% endfor %}
-            </div>
-          </div>
+---
+layout: default
+---
+<div id="home-main">
+  <div id="home-container">
+    <div id="home-content">
+      <div class="hero-background">
+        <div class="hero-area">
+          <div class="hero-content">
+            <div class="hero-box">
+              <div class="hero-messagebox">
+                <h1>{{ site.data.home.hero-area.hero-message-title }}</h1>
+                <p>{{ site.data.home.hero-area.hero-message-text }}</p>
+              </div>  
+            </div>  
+          </div>  
         </div>
       </div>
-      {% include footer.html %}
+      <div class="circle-icon-area">
+        {% for item in site.data.home.icon-area %}
+          <div class="circle-icon-box">
+            <a title="{{ item.icon-title }}" href="{{ item.icon-link }}">
+              <div class="circle-icon" style="background-image: url({{ item.icon-image }})" >
+              </div>
+            </a>
+            <h4><a title="{{ item.icon-title }}" href="{{ item.icon-link }}">{{ item.icon-title }}</a></h4>
+            <a title="{{ item.icon-title }}" href="{{ item.icon-link }}">{{ item.icon-subtitle }}</a>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="feature-content-area">
+        {% for item in site.data.home.feature-area %}
+          <div class="feature-content-box">
+            <div class="feature-content-image">
+              <a href="{{ item.feature-link }}">
+                <img src="{{ item.feature-image }}" />
+              </a>
+            </div>
+            <div class="feature-content-text">
+              <div class="feature-content-text-title">{{ item.feature-title }}</div>
+              {{ item.feature-text }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
     </div>
-  </body>
-</html>
+  </div>
+</div>

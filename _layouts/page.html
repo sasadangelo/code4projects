@@ -1,34 +1,10 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
- 
-    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/fontawesome/css/fontawesome.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/fontawesome/css/brands.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {% feed_meta %}
-    {% seo %}
-    <!--
-    {% if jekyll.environment == "production" %}
-      <script async src="my-analytics-script.js"></script>
-    {% endif %}
-    -->
-  </head>
-  <body>
-    <div id="page">
-      {% include header.html %}
-      {% include navigation.html %}
-      <div id="page-main">
-        <div id="page-container">
-          <div id="page-content">
-            {{ content }}
-          </div>
-        </div>
-      </div>
-      {% include footer.html %}
+---
+layout: default
+---
+<div id="page-main">
+  <div id="page-container">
+    <div id="page-content">
+      {{ content }}
     </div>
-  </body>
-</html>
+  </div>
+</div>
