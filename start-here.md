@@ -1,6 +1,7 @@
 ---
 layout: page
 title: New User? Start Here
+slug: /start-here
 ---
 # New User? Start Here
 
@@ -10,7 +11,7 @@ If this is the first time you land on this website probably you are wondering ho
 
 ![Salvatore D'Angelo](assets/img/salvatore_d_angelo.jpeg){:width="100" height="100" }
 
-My name is Salvatore D’Angelo and I am a professional software engineer that works for a well-known American software company. You can read my story [here](about.html).
+My name is Salvatore D’Angelo and I am a professional software engineer that works for a well-known American software company. You can read my story [here](about-me).
 
 ## What is my experience?
 
@@ -38,7 +39,7 @@ This philosophy and my perspective on the software development world is a good m
 
 ## How to Start?
 
-This website contains a set of projects where I explain, step by step, how to use a specific technology. I suggest you visit the [Project page](projects.html) and search for a project that is of interest to you.
+This website contains a set of projects where I explain, step by step, how to use a specific technology. I suggest you visit the [Project page](projects) and search for a project that is of interest to you.
 
 In all these years of experience, I learned that people learn faster when they study something that interests them.
 
@@ -50,4 +51,4 @@ Once you selected a project, read the articles and try to understand its basic c
 
 When you are able to run the software, you can go deep in detail analyzing how it works. In this phase, you can fork the projects and try to fix some bugs or add new features. Feel free to do it and make a pull request. I will be happy to merge your contribution in the original code.
 
-In my blog, there are some standalone articles that are not included in any projects. You can find them starting from the [Blog page](blog.html) and clicking the page links in the bottom.
+In my blog, there are some standalone articles that are not included in any projects. You can find them starting from the [Blog page](blog) and clicking the page links in the bottom.

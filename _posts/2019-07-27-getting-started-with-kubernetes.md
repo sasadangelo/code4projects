@@ -1,12 +1,13 @@
 ---
-layout: course
-title: Home
-course_id: getting-started-with-kubernetes
+title: Getting Started with Kubernetes
+post_series_id: getting-started-with-kubernetes
+slug: getting-started-with-kubernetes
 ---
 
 ![Kubernetes](assets/img/kubernetes.png){:width="206" height="200" }
 
 # Getting Started with Kubernetes
+_Posted on **{{ page.date | date_to_string }}**_
 
 This is the first article of the **Getting Started with Kubernetes** article series. In this article, I would like to give you a brief introduction to Kubernetes. This will be the first step to show you how to deploy applications on it.
 

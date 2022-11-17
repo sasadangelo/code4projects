@@ -1,14 +1,15 @@
 ---
-layout: course
 title: How I use Kubernetes ConfigMaps to manage configurations
-course_id: getting-started-with-kubernetes
+post_series_id: getting-started-with-kubernetes
+slug: how-to-use-kubernetes-configmaps
 ---
 
 ![Kubernetes ConfigMap](assets/img/kubernetes-configmap.jpeg){:width="231" height="200" }
 
 # How I use Kubernetes ConfigMaps to manage configurations
+_Posted on **{{ page.date | date_to_string }}**_
 
-This is the third article of the [Getting Started with Kubernetes](/code4projects/) series. Here I would like to explain how to manage application configuration with Kubernetes **ConfigMaps**.
+This is the third article of the [Getting Started with Kubernetes](getting-started-with-kubernetes) series. Here I would like to explain how to manage application configuration with Kubernetes **ConfigMaps**.
 
 ##  The “Anatomy” of an Application
 
@@ -28,7 +29,7 @@ Kubernetes manages configuration with **ConfigMaps**. In the next sections, I wi
 
 ## What is a ConfigMap in Kubernetes?
 
-In [this article](https://www.code4projects.net/getting-started-with-kubernetes/), I defined a ConfigMap as a key-value dictionary you can create and add to a Kubernetes cluster whose Pods can reference later.
+In [this article](getting-started-with-kubernetes), I defined a ConfigMap as a key-value dictionary you can create and add to a Kubernetes cluster whose Pods can reference later.
 
 ## Why would you use a ConfigMap in Kubernetes?
 
@@ -52,7 +53,7 @@ Photo from [https://matthewpalmer.net](https://matthewpalmer.net)
 
 ### Using YAML file
 
-In [this article]((/code4projects/)), I showed how to define a ConfigMap for an application that contains database connection parameters for database services. Here the example:
+In [this article](getting-started-with-kubernetes), I showed how to define a ConfigMap for an application that contains database connection parameters for database services. Here the example:
 
     {% highlight yaml %}
     apiVersion: v1
@@ -74,7 +75,7 @@ You can use the following command to create the ConfigMap from the YAML file in 
     kubectl apply -f YAML
     {% endhighlight %}
 
-As we know from the [first article](/code4projects/), namespaces are the way Kubernetes manages multiple virtual clusters on a single physical cluster. In our example, we add the ConfigMap to the default namespace.
+As we know from the [first article](getting-started-with-kubernetes), namespaces are the way Kubernetes manages multiple virtual clusters on a single physical cluster. In our example, we add the ConfigMap to the default namespace.
 
 ### Using command line
 

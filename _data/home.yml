@@ -23,7 +23,7 @@ feature-area:
       This is the <b>Getting started with Kubernetes</b> article series. In it I would like to give you a brief introduction to Kubernetes.
       I will explain What Kubernetes is, its architecture, the concepts of Pod, Replication Controller, ReplicaSets, Deployment, ConfigMaps,
       SecretMaps, etc. I will show you how to setup a Kubernetes cluster using Virtual Box and Vagrant and how to deploy an "Hello K8s!" dockerized
-      application in it. <a href="getting-started-with-kubernetes.html">Check out the article series here</a>.
+      application in it. <a href="getting-started-with-kubernetes">Check out the article series here</a>.
     feature-image: assets/img/kubernetes-logo.png
     feature-link: getting-started-with-kubernetes.html
   

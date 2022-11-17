@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Resources for Developers
+slug: resources-for-developers
 ---
 # Resources for Developers
 

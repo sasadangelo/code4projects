@@ -1,13 +1,15 @@
 ---
-layout: course
 title: Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress
-course_id: getting-started-with-kubernetes
+post_series_id: getting-started-with-kubernetes
+slug: kubernetes-services-cluster-ip-vs-nodeport-vs-loadbalancer-vs-ingress
 ---
+
 ![Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress](assets/img/kubernetes-cluster-ip-services-mini.png){:width="231" height="200" }
 
 # Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress
+_Posted on **{{ page.date | date_to_string }}**_
 
-This is the second article of the [Getting Started with Kubernetes](/code4projects/) article series. In this article, I want to explain a concept that confused me when I started working with Kubernetes: **Cluster IP vs NodePort vs LoadBalancer vs Ingress**.
+This is the second article of the [Getting Started with Kubernetes](getting-started-with-kubernetes) article series. In this article, I want to explain a concept that confused me when I started working with Kubernetes: **Cluster IP vs NodePort vs LoadBalancer vs Ingress**.
 
 ## Kubernetes Service types
 
@@ -185,4 +187,4 @@ Here my thoughts about the Ingress:
 
 ## Final Thoughts
 
-This article contains a lot of useful information that for me are very important to understand how Kubernetes works. There are other important concepts to explain. In the [next article](https://www.code4projects.net/how-to-use-kubernetes-configmaps/), I will explain how to separate configuration from code and data using **Kubernetes ConfigMaps**.
+This article contains a lot of useful information that for me are very important to understand how Kubernetes works. There are other important concepts to explain. In the [next article](how-to-use-kubernetes-configmaps), I will explain how to separate configuration from code and data using **Kubernetes ConfigMaps**.

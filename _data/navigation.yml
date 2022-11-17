@@ -1,12 +1,12 @@
 - name: Home
   link: /
 - name: About me
-  link: /about.html
+  link: /about-me
 - name: New User? Start Here
-  link: /start-here.html
+  link: /start-here
 - name: Blog
-  link: /blog.html
+  link: /blog
 - name: Projects
-  link: /projects.html
+  link: /projects
 - name: Resources for Developers
-  link: /resources-developers.html
+  link: /resources-for-developers
