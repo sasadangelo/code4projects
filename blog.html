@@ -3,13 +3,39 @@ layout: default
 title: Blog
 slug: blog
 ---
-<h1>Latest Posts</h1>
+<div id="blog-main">
+  <div id="blog-container">
+    <div id="blog-content">
+      <h1>Blog Archives</h1>
+      {% for post in site.posts %}
+        <div class="blog-entry">
+          <div class="blog-entry-thumbnail">
+            <a href="{{ site.baseurl }}{{ post.url }}">
+              <img src="{{ post.thumbnail }}" alt="{{ post.title }}" width="100%" heigh="auto"/>
+            </a>
+          </div>
+          <div class="blog-entry-content">
+            <div class="blog-entry-header">
+              <div class="blog-entry-title">
+                <h2>
+                  <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                </h2>
+              </div>
+              <div class="blog-entry-meta">
+                Posted on <b>{{ post.date | date_to_string }}</b>
+              </div>
+            </div>
+            <div class="blog-entry-excerpt">
+              <p>{{ post.excerpt }}</p>
+              <a href="{{ site.baseurl }}{{ post.url }}">Continue Reading</a>
+            </div>
+        </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div id="blog-sidebar">
+      {% include blog_sidebar.html %}
+    </div>
+  </div>
+</div>
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-      {{ post.excerpt }}
-    </li>
-  {% endfor %}
-</ul>
