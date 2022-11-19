@@ -962,6 +962,15 @@ footer {
   text-align: left;
 }
 
+.featured-projects-title a {
+  text-decoration: none !important;
+  color: #3b3b3b !important;
+}
+
+.featured-projects-title a:hover {
+  color: #f47e3c !important;
+}
+
 .featured-projects-box img {
   margin: auto;
 }  
@@ -1103,6 +1112,10 @@ footer {
   color: #f47e3c;
 }
 
+#blog-content h1 {
+  margin-bottom: 25px;
+}
+
 /*
   * ################################################################################
   * # Blog Sidebar definitions
@@ -1182,7 +1195,6 @@ footer {
   * # Blog Entry definitions
   * ################################################################################
 */
-
 .blog-entry {
   margin-bottom: 40px;
   padding-bottom: 40px;
@@ -1228,6 +1240,10 @@ footer {
   color: #3b3b3b !important;
 }
 
+.blog-entry-title a:hover {
+  color: #f47e3c !important;
+}
+
 .blog-entry-excerpt p {
   color: #666666;
   margin: 0px 0px 13px 0px;
@@ -1241,4 +1257,22 @@ footer {
   color: #6b6b6b !important;
   font-weight: 700;
   text-decoration: none !important;
+}
+
+/*
+  * ################################################################################
+  * # Pagination definitions
+  * ################################################################################
+*/
+
+.pagination {
+  float: right;
+}
+
+.previous-page {
+  margin-right: 20px;
+}
+
+.next-page {
+  margin-left: 20px;
 }

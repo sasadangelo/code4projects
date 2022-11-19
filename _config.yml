@@ -36,6 +36,18 @@ defaults:
     values:
       layout: "default"
 
+paginate_path: "/blog/page:num/"
+pagination:
+  enabled: true
+  per_page: 3
+  sort_reverse: true
+  sort_field: 'date'
+  title: ':title (page :num)'
+  indexpage: 'index'
+  trail:
+    before: 2
+    after: 2
+
 sidebars:
   post_sidebar
 
@@ -43,5 +55,6 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate-v2
 
 exclude: [utility]
