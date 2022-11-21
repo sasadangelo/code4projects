@@ -1,3 +1,3 @@
-# Come investire i tuoi risparmi?
+# Code4Project website
 
-Questo è un sito web statico creato con Jeckyll dove raccolgo le informazioni che uso per i miei investimenti. Visita il [sito qui](https://sasadangelo.github.io/investire/).
+Code4Projects is my technological personal blog where I write everything I learned in over 30 years of programming. This is a static website created with Jeckyll and you can see its live version [here](https://sasadangelo.github.io/code4projects/).
