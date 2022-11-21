@@ -1,1 +1,9 @@
 <div class="blog-sidebar-title">Categories</div>
+{% for category in site.categories %}
+  <nav>
+    <ul>
+      {% capture category_name %}{{ category | first }}{% endcapture %}
+      <li><a href="{{ site.baseurl }}/category/{{ category_name | downcase }}">{{ category_name }}</a></li>
+    </ul>
+  </nav>
+{% endfor %}

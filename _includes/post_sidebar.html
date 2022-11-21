@@ -1,12 +1,12 @@
 {% for post in site.data.post_sidebar %}
-<div class="post-sidebar-title">{{ post.post_series_title }}</div>
-{% if page.post_series_id == post.post_series_id %}
-<nav>
-  <ul>
-    {% for lesson in post.post_series %}
-      <li><a href="{{ site.baseurl }}{{ lesson.link }}" {% if page.url == lesson.link %}class="current"{% endif %}>{{ lesson.name }}</a></li>
-    {% endfor %}
-  </ul>
-</nav>
-{% endif %}
+  <div class="post-sidebar-title">{{ post.post_series_title }}</div>
+  {% if page.post_series_id == post.post_series_id %}
+  <nav>
+    <ul>
+      {% for lesson in post.post_series %}
+        <li><a href="{{ site.baseurl }}{{ lesson.link }}" {% if page.url == lesson.link %}class="current"{% endif %}>{{ lesson.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+  {% endif %}
 {% endfor %}

@@ -888,9 +888,44 @@ header {
  */
 footer {
   background-color: #1d67b2;
-  color: #e2e2e2;
   width: 100%;
-  padding: 30px 0px;
+  padding: 30px;
+  text-align: left;
+}
+
+#footer-container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.footer-widget {
+  padding: 0px 40px;
+  text-align: left;
+}
+
+.footer-widget-title {
+  color: #e2e2e2;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.footer-widget a {
+  color: #b9b9b9;
+  text-decoration: none !important;
+}
+
+.footer-widget ul {
+  list-style-type: none !important;
+  padding: 0px;
+}
+
+#site-info {
+  color: #e2e2e2;
+  margin: 25px 0px 0px 0px;
   text-align: center;
 }
 

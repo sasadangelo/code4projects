@@ -1,3 +1,30 @@
 <footer>
-  Code4Projects, Copyright Salvatore D'Angelo © 2022. 
+  <div id="footer-container">
+    <aside class="footer-widget" aria-label="Latest Posts">
+      <div class="footer-widget-title">Latest Posts</div>
+      {% for post in site.posts limit site.latest_posts %}
+        <ul>
+          <li><a href="{{ site.baseurl }}/{{ post.slug }}">{{ post.title }}</a></li>
+        </ul>
+      {% endfor %}
+    </aside>
+    <aside class="footer-widget" aria-label="Categories">
+      <div class="footer-widget-title">Categories</div>
+      {% for category in site.categories %}
+        <ul>
+          {% capture category_name %}{{ category | first }}{% endcapture %}
+          <li><a href="{{ site.baseurl }}/category/{{ category_name | downcase }}">{{ category_name }}</a></li>
+        </ul>
+      {% endfor %}
+    </aside>
+    <aside class="footer-widget" aria-label="Connect">
+      <div class="footer-widget-title">Connect</div>
+      <ul>
+        <li><a href="{{ site.baseurl }}/about-me">About me</a></li>
+      </ul>
+    </div>
+    <div id="site-info">
+      Code4Projects, Copyright Salvatore D'Angelo © 2022.
+    </div>
+  </div>
 </footer>

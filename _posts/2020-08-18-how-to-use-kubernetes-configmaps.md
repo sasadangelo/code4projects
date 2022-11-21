@@ -1,9 +1,11 @@
 ---
+layout: post
 title: How I use Kubernetes ConfigMaps to manage configurations
 post_series_id: getting-started-with-kubernetes
 slug: how-to-use-kubernetes-configmaps
 thumbnail: assets/img/kubernetes-configmap.jpeg
 excerpt: In this article, I would like to explain how to manage application configuration in Kubernetes with ConfigMaps.
+categories: Virtualization
 ---
 
 ![Kubernetes ConfigMap](assets/img/kubernetes-configmap.jpeg){:width="231" height="200" }
