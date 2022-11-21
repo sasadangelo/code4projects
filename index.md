@@ -1,5 +1,5 @@
 ---
 layout: home
-title: Home
+title: Code4Projects
 ---
 
