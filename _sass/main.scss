@@ -396,6 +396,7 @@ header {
   overflow: scroll;
   position: absolute;
   max-height: 100%;
+  z-index: 1;
 }
 
 #menu ul li {
@@ -501,7 +502,6 @@ header {
  * # Post Main area
  * ################################################################################
 */
-
 #post-main {
   background: #fcfcfc;
   padding: 35px;
@@ -512,7 +512,6 @@ header {
  * # Post Container definitions
  * ################################################################################
 */
-
 /* For Desktop */
 @media screen and (min-width: 1024px) {
 #post-container {
@@ -619,7 +618,6 @@ header {
 } 
 
 #post-content a {
-  /*color: #248cc8;*/
   color: #1D67B2;
   transition: all 0.2s ease;
   text-decoration: underline;
@@ -639,7 +637,6 @@ header {
 #post-sidebar {
   height: 100%;
   width: 27%;
-  /*float: right;*/
   padding: 5px 5px 5px 5px;
   margin: 5px 0px 5px 2px;
 }
@@ -708,7 +705,6 @@ header {
  * # Home Main area
  * ################################################################################
 */
-
 #home-main {
   background: #fcfcfc;
 }
@@ -745,7 +741,6 @@ header {
  * # Hero Area
  * ################################################################################
  */
-
 .hero-background {
   background-image: url("../img/code4projects-image-hero.jpeg");
   background-position: center;
@@ -765,15 +760,48 @@ header {
   padding: 10px;
 }
 
+/* For Desktop */
+@media screen and (min-width: 1024px) {
 .hero-box {
-  padding: 50px 40px 50px 40px;
+  padding: 50px 40px;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: flex-end;
 }
+}
+    
+/* For Tablets or iPad */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+.hero-box {
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+}
+    
+/* For Laptop or small-size screen */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+.hero-box {
+  /*padding: 50px 40px;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+}
+    
+/* For Mobile Phones */
+@media screen and (max-width: 479px) {
+.hero-box {
+  /*padding: 50px 40px;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+} 
 
 .hero-messagebox {
-  padding: 50px 40px 50px 40px;
+  padding: 50px 40px;
   max-width: 400px;
   background-color: RGBA(139,139,139,0.5);
   border-radius: 20px;
@@ -804,18 +832,52 @@ header {
  * ################################################################################
  */
 
+/* For Desktop */
+@media screen and (min-width: 1024px) {
 .circle-icon-area {
-  padding: 30px 200px 40px 200px;
+  padding: 40px 200px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+}
+      
+/* For Tablets or iPad */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+.circle-icon-area {
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+}
+      
+/* For Laptop or small-size screen */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+.circle-icon-area {
+  padding: 20px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+}
+      
+/* For Mobile Phones */
+@media screen and (max-width: 479px) {
+.circle-icon-area {
+  padding: 20px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+} 
 
 .circle-icon-box {
-  padding: 0px 0px 0px 0px;
+  padding: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 .circle-icon-box h4 {
@@ -839,7 +901,8 @@ header {
 .circle-icon {
   width: 100px;
   height: 100px;
-  margin: 0px 50px;
+  margin-left: auto;
+  margin-right: auto;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -850,24 +913,68 @@ header {
  * # Feature Content Area
  * ################################################################################
  */
-
+/* For Desktop */
+@media screen and (min-width: 1024px) {
 .feature-content-area {
   background-color: #efefef;
-  padding: 60px 230px 60px 230px;
+  padding: 60px 230px;
 }
 
 .feature-content-box {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 50px;
 }
+}
+
+/* For Tablets or iPad */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+.feature-content-area {
+  background-color: #efefef;
+  padding: 60px 35px;
+}
+
+.feature-content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+}
+
+/* For Laptop or small-size screen */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+.feature-content-area {
+  background-color: #efefef;
+  padding: 60px 35px;
+}
+
+.feature-content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+}
+
+/* For Mobile Phones */
+@media screen and (max-width: 479px) {
+.feature-content-area {
+  background-color: #efefef;
+  padding: 60px 35px;
+}
+
+.feature-content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+} 
 
 .feature-content-text-title {
   color: #444444;
   font-size: 20px;
   font-weight: 500;
   margin: 30px 0px 30px 0px;
+  text-align: left;
 } 
 
 .feature-content-text {
@@ -877,10 +984,15 @@ header {
   line-height: 1.6em;
 }
 
+.feature-content-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .feature-content-text a {
   color: #1d67b2;
 }
-
 /*
  * ################################################################################
  * # Footer
@@ -888,11 +1000,25 @@ header {
  */
 footer {
   background-color: #1d67b2;
-  width: 100%;
-  padding: 30px;
+  padding: 30px 30px 30px 30px;
   text-align: left;
 }
 
+/* For Desktop */
+@media screen and (min-width: 1024px) {
+#footer-container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 50px;
+}
+}
+
+/* For Tablets or iPad */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 #footer-container {
   max-width: 1080px;
   margin-left: auto;
@@ -901,8 +1027,35 @@ footer {
   flex-direction: row;
   justify-content: flex-start;
 }
+}
+
+/* For Laptop or small-size screen */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+#footer-container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+}
+
+/* For Mobile Phones */
+@media screen and (max-width: 479px) {
+#footer-container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+} 
+
 
 .footer-widget {
+  margin-bottom: 25px;
   padding: 0px 40px;
   text-align: left;
 }
@@ -923,6 +1076,10 @@ footer {
   padding: 0px;
 }
 
+.footer-widget ul li {
+  padding: 10px 0px;
+}
+
 #site-info {
   color: #e2e2e2;
   margin: 25px 0px 0px 0px;
@@ -931,13 +1088,22 @@ footer {
 
 /*
  * ################################################################################
- * # Page definitions
+ * # Page Main area
  * ################################################################################
 */
 #page-main {
   background: #fcfcfc;
+  padding: 35px;
 }
 
+/*
+ * ################################################################################
+ * # Page Container definitions
+ * ################################################################################
+*/
+
+/* For Desktop */
+@media screen and (min-width: 1024px) {
 #page-container {
   max-width: 1080px;
   margin-left: auto;
@@ -946,7 +1112,49 @@ footer {
   flex-direction: row;
   justify-content: flex-start;
 }
+}
 
+/* For Tablets or iPad */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+#page-container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+}
+    
+/* For Laptop or small-size screen */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+#page-container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+}
+}
+
+/* For Mobile Phones */
+@media screen and (max-width: 479px) {
+#page-container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+}
+} 
+
+/*
+ * ################################################################################
+ * # Page Content definitions
+ * ################################################################################
+*/
 #page-content {
   float: left;
   width: 100%;
@@ -958,7 +1166,6 @@ footer {
 }
 
 #page-content a {
-  /*color: #248cc8;*/
   color: #1D67B2;
   transition: all 0.2s ease;
   text-decoration: underline;
@@ -1172,7 +1379,6 @@ footer {
 #blog-sidebar {
   height: 100%;
   width: 27%;
-  /*float: right;*/
   padding: 5px 5px 5px 5px;
   margin: 5px 0px 5px 2px;
 }
@@ -1183,9 +1389,9 @@ footer {
 #blog-sidebar {
   height: 100%;
   width: 100%;
-  /*float: left;*/
   padding: 5px 5px 5px 5px;
   margin: 5px 0px 5px 2px;
+  display: none;
 }
 }
   
@@ -1194,9 +1400,9 @@ footer {
 #blog-sidebar {
   height: 100%;
   width: 100%;
-  /*float: left;*/
   padding: 5px 5px 5px 5px;
   margin: 5px 0px 5px 2px;
+  display: none;
 }
 } 
 
@@ -1257,6 +1463,7 @@ footer {
 .blog-entry-title {
   margin: 0px 0px 0px 0px;
   padding: 0px;
+  text-align: left;
 }
 
 .blog-entry-meta {

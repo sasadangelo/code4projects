@@ -2,12 +2,12 @@
   <div id="footer-container">
     <aside class="footer-widget" aria-label="Latest Posts">
       <div class="footer-widget-title">Latest Posts</div>
-      {% for post in site.posts limit site.latest_posts %}
-        <ul>
+      <ul>
+        {% for post in site.posts limit site.latest_posts %}
           <li><a href="{{ site.baseurl }}/{{ post.slug }}">{{ post.title }}</a></li>
-        </ul>
-      {% endfor %}
-    </aside>
+        {% endfor %}
+      </ul>
+  </aside>
     <aside class="footer-widget" aria-label="Categories">
       <div class="footer-widget-title">Categories</div>
       {% for category in site.categories %}
