@@ -1,8 +1,17 @@
-- title: Getting started with Kubernetes
-  image: assets/img/kubernetes-logo.png
-  link: getting-started-with-kubernetes/
+- title: Getting started with Docker
+  image: assets/img/docker-logo.png
+  link: getting-started-with-docker
   description: >
     This is the <b>Getting started with Kubernetes</b> article series. In it I would like to give you a brief introduction to Kubernetes.
     I will explain What Kubernetes is, its architecture, the concepts of Pod, Replication Controller, ReplicaSets, Deployment, ConfigMaps,
     SecretMaps, etc. I will show you how to setup a Kubernetes cluster using Virtual Box and Vagrant and how to deploy an "Hello K8s!" dockerized
     application in it. <a href="getting-started-with-kubernetes">Check out the article series here</a>.
+- title: Getting started with Kubernetes
+  image: assets/img/kubernetes-logo.png
+  link: getting-started-with-kubernetes
+  description: >
+    This is the <b>Getting started with Docker</b> article series. In it I would like to explain what Docker is and how I use it in my 
+    day by day job. To make this series more practical, I will show you how to write your first “Hello World!” containerized application. 
+    Then, I will show you how to install PostgreSQL in a container and use it as a service. I will discuss about how the networking 
+    layer works in Docker and we will configure three PostgreSQL containers to work in cluster. Finally, we will use Docker Compose to 
+    simplify the deployment and complete our journey. <a href="getting-started-with-kubernetes">Check out the article series here</a>.

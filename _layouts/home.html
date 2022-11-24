@@ -28,8 +28,8 @@ layout: default
           </div>
         {% endfor %}
       </div>
-      <div class="feature-content-area">
-        {% for item in site.data.home.feature-area %}
+      {% for item in site.data.home.feature-area %}
+        <div class="{% cycle 'feature-content-row-grey', 'feature-content-row-white' %}">
           <div class="feature-content-box">
             <div class="feature-content-image">
               <a href="{{ item.feature-link }}">
@@ -41,8 +41,8 @@ layout: default
               {{ item.feature-text }}
             </div>
           </div>
-        {% endfor %}
-      </div>
+        </div>
+      {% endfor %}
     </div>
   </div>
 </div>

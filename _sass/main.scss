@@ -915,8 +915,13 @@ header {
  */
 /* For Desktop */
 @media screen and (min-width: 1024px) {
-.feature-content-area {
+.feature-content-row-grey {
   background-color: #efefef;
+  padding: 60px 230px;
+}
+
+.feature-content-row-white {
+  background-color: #fcfcfc;
   padding: 60px 230px;
 }
 
@@ -929,8 +934,13 @@ header {
 
 /* For Tablets or iPad */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-.feature-content-area {
+.feature-content-row-grey {
   background-color: #efefef;
+  padding: 60px 35px;
+}
+
+.feature-content-row-white {
+  background-color: #fcfcfc;
   padding: 60px 35px;
 }
 
@@ -943,8 +953,13 @@ header {
 
 /* For Laptop or small-size screen */
 @media screen and (min-width: 480px) and (max-width: 767px) {
-.feature-content-area {
+.feature-content-row-grey {
   background-color: #efefef;
+  padding: 60px 35px;
+}
+
+.feature-content-row-white {
+  background-color: #fcfcfc;
   padding: 60px 35px;
 }
 
@@ -957,8 +972,13 @@ header {
 
 /* For Mobile Phones */
 @media screen and (max-width: 479px) {
-.feature-content-area {
+.feature-content-row-grey {
   background-color: #efefef;
+  padding: 60px 35px;
+}
+
+.feature-content-row-white {
+  background-color: #fcfcfc;
   padding: 60px 35px;
 }
 
@@ -1101,7 +1121,6 @@ footer {
  * # Page Container definitions
  * ################################################################################
 */
-
 /* For Desktop */
 @media screen and (min-width: 1024px) {
 #page-container {
@@ -1180,25 +1199,93 @@ footer {
  * # Featured Projects definitions
  * ################################################################################
 */
-
+/* For Desktop */
+@media screen and (min-width: 1024px) {
 .featured-projects-area {
   box-sizing: border-box;
-  padding: 10px 30px;
+  padding: 10px 0px;
   display: flex;
-  flex-direction: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .featured-projects-box {
   width: 320px;
   height: auto;
   padding: 10px;
-  margin-right: 30px;
+  margin-right: 20px;
   border-radius: 4px;
   box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+}
+  
+/* For Tablets or iPad */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+.featured-projects-area {
+  box-sizing: border-box;
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.featured-projects-box {
+  width: 320px;
+  height: auto;
+  padding: 10px;
+  margin-right: 20px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+}
+      
+/* For Laptop or small-size screen */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+.featured-projects-area {
+  box-sizing: border-box;
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-projects-box {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+}
+  
+/* For Mobile Phones */
+@media screen and (max-width: 479px) {
+.featured-projects-area {
+  box-sizing: border-box;
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-projects-box {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+} 
 
 .featured-projects-title {
   text-align: left;

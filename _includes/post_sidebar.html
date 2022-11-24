@@ -1,6 +1,6 @@
 {% for post in site.data.post_sidebar %}
-  <div class="post-sidebar-title">{{ post.post_series_title }}</div>
   {% if page.post_series_id == post.post_series_id %}
+  <div class="post-sidebar-title">{{ post.post_series_title }}</div>
   <nav>
     <ul>
       {% for lesson in post.post_series %}
