@@ -30,14 +30,14 @@ layout: default
       </div>
       {% for item in site.data.home.feature-area %}
         <div class="{% cycle 'feature-content-row-grey', 'feature-content-row-white' %}">
-          <div class="feature-content-box">
+          <div class="{% cycle 'feature-content-box-grey', 'feature-content-box-white' %}">
             <div class="feature-content-image">
               <a href="{{ item.feature-link }}">
                 <img src="{{ item.feature-image }}" />
               </a>
             </div>
             <div class="feature-content-text">
-              <div class="feature-content-text-title">{{ item.feature-title }}</div>
+              <div class="feature-content-text-title"><a href="{{ item.feature-link }}">{{ item.feature-title }}</a></div>
               {{ item.feature-text }}
             </div>
           </div>
