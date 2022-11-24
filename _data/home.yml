@@ -8,15 +8,15 @@ icon-area:
   - icon-image: assets/img/starthere-icon.png
     icon-title: New User?
     icon-subtitle: Start Here
-    icon-link: start-here.html
+    icon-link: start-here
   - icon-image: assets/img/projects-icon.png
     icon-title: Projects
     icon-subtitle: Check out my side Projects
-    icon-link: projects.html
+    icon-link: projects
   - icon-image: assets/img/resources-icon.png
     icon-title: Resources
     icon-subtitle: Check out my favorite Resources
-    icon-link: resources-developers.html
+    icon-link: resources-for-developers
 feature-area:
   - feature-title: Getting Started with Docker
     feature-text: >
