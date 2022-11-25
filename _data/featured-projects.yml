@@ -15,3 +15,11 @@
     Then, I will show you how to install PostgreSQL in a container and use it as a service. I will discuss about how the networking 
     layer works in Docker and we will configure three PostgreSQL containers to work in cluster. Finally, we will use Docker Compose to 
     simplify the deployment and complete our journey. <a href="getting-started-with-kubernetes">Check out the article series here</a>.
+- title: How to build a Raspberry Media Center
+  image: assets/img/Hector_TV_Box-min.jpeg
+  link: raspberry-media-center
+  description: >
+    This is the <b>How to build a Raspberry Media Center</b> article series. Here I would like to show you how to build a Raspberry 
+    Media Center with an HDD and enclosure. The series will show you the required hardaware to buy to build the Media Center and how 
+    to configure it properly to watch Movie and TV Series, to play Retrogames, to use it as a Torrent machine, and to share files in 
+    your network like a NAS. <a href="raspberry-media-center">Check out the article series here</a>.

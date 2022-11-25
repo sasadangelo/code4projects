@@ -627,6 +627,10 @@ header {
   color: #f47e3c;
 }
 
+#post-content h1 {
+  text-align: left;
+}
+
 /*
   * ################################################################################
   * # Sidebar definitions
@@ -928,13 +932,15 @@ header {
 .feature-content-box-grey {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 20px
 }
 
 .feature-content-box-white {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 20px
 }
 }
 
@@ -1109,7 +1115,6 @@ footer {
   justify-content: flex-start;
 }
 } 
-
 
 .footer-widget {
   margin-bottom: 25px;

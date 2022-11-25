@@ -26,3 +26,22 @@
     link: /how-docker-volumes-works
   - name: How Docker Compose works
     link: /how-docker-compose-works
+- post_series_id: raspberry-media-center
+  post_series_title: How to build a Raspberry Media Center
+  post_series:
+  - name: How to build a Raspberry Media Center
+    link: /raspberry-media-center
+  - name: How to Configure Kodi Media Center
+    link: /how-to-configure-kodi-media-center
+  - name: How to transform your Kodi Box in a Netflix-like platform
+    link: /kodi-box-media-library
+  - name: How to turn your Kodi Media Center in a Torrent machine
+    link: /how-to-turn-your-kodi-media-center-torrent-machine
+  - name: How to install Youtube Add-on on your Kodi Media Center
+    link: /how-to-install-youtube-kodi
+  - name: How to transform your Kodi Media Center in a Game Platform
+    link: /how-to-transform-kodi-media-center-retro-game-platform
+  - name: How to play Nintendo DS games with Retropie on Kodi Media Center
+    link: /how-to-play-nintendo-ds-games-kodi-media-center
+  - name: How to transform your Raspberry Media Center in a NAS
+    link: /how-to-transform-your-raspberry-media-center-nas
