@@ -18,6 +18,16 @@ icon-area:
     icon-subtitle: Check out my favorite Resources
     icon-link: resources-for-developers
 feature-area:
+  - feature-title: Android Game Programming
+    feature-text: >
+      This is the <b>Android Game Programming</b> article series. Here I will show you, step by step, how to write your first Android 
+      game: Droids a Tetris clone. The series starts showing how to write your first Android application using Java and Android Studio. 
+      Then I will explain the basic concepts of Game Programming. From this point forward, we will add to our application more features 
+      like: file, resources, input, music, and graphics management. The result will be a Game Framework whose code you can reuse for 
+      other games. Finally, we will use the Framework as base code to write Droids, a Tertris clone. 
+      <a href="android-game-programming">Checkout the article series here</a>.
+    feature-image: assets/img/android-game-programming.png
+    feature-link: android-game-programming
   - feature-title: Getting Started with Docker
     feature-text: >
       This is the <b>Getting started with Docker</b> article series. In it I would like to explain what Docker is and how I use it in my day by 

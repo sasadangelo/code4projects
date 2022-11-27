@@ -45,3 +45,30 @@
     link: /how-to-play-nintendo-ds-games-kodi-media-center
   - name: How to transform your Raspberry Media Center in a NAS
     link: /how-to-transform-your-raspberry-media-center-nas
+- post_series_id: android-game-programming
+  post_series_title: Android Game Programming
+  post_series:
+  - name: Android Game Programming
+    link: /android-game-programming
+  - name: How to install Android Studio
+    link: /how-to-install-android-studio
+  - name: How to create an Android application
+    link: /how-to-create-an-android-application
+  - name: How to speed up Android Virtual Device
+    link: /how-to-speed-up-android-virtual-device
+  - name: Video game programming principles
+    link: /video-game-programming-principles
+  - name: Design Patterns in Game Programming
+    link: /design-patterns-in-game-programming
+  - name: Android Programming for Games (Activity Lifecycle)
+    link: /android-programming-for-games-activity-lifecycle
+  - name: Android Files Management
+    link: /android-files-management
+  - name: Android Resources Management
+    link: /android-resources-management
+  - name: Android Graphics Programming for Games
+    link: /android-graphics-programming-for-games
+  - name: Let’s start building the Game Framework
+    link: /lets-start-building-the-game-framework
+  - name: Android Input Management for Games
+    link: /android-input-management-for-games
