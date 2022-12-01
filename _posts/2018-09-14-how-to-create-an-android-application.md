@@ -5,7 +5,9 @@ post_series_id: android-game-programming
 slug: how-to-create-an-android-application
 thumbnail: assets/img/android-app-feature-picture.png
 excerpt: This is the third article of Android Game Development series. Here I would like to explain, step by step, how to create an Android application.
-categories: Android
+categories:
+- Android
+- Game Programming
 ---
 
 ![How to create an Android application](assets/img/android-app-feature-picture.png){:width="267" height="200" }

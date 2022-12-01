@@ -10,13 +10,13 @@
   </aside>
     <aside class="footer-widget" aria-label="Categories">
       <div class="footer-widget-title">Categories</div>
-      {% for category in site.categories %}
-        <ul>
+      <ul>
+        {% for category in site.categories %}
           {% capture category_name %}{{ category | first }}{% endcapture %}
           <li><a href="{{ site.baseurl }}/category/{{ category_name | downcase }}">{{ category_name }}</a></li>
-        </ul>
-      {% endfor %}
-    </aside>
+        {% endfor %}
+      </ul>
+  </aside>
     <aside class="footer-widget" aria-label="Connect">
       <div class="footer-widget-title">Connect</div>
       <ul>

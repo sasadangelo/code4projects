@@ -5,7 +5,9 @@ post_series_id: android-game-programming
 slug: android-files-management
 thumbnail: assets/img/android-file.jpeg
 excerpt: This is the eighth article of the Android Game Programming series. In this article, I will discuss how to manage files
-categories: Android
+categories:
+- Android
+- Game Programming
 ---
 
 ![Android Files Management](assets/img/android-file.jpeg){:width="280" height="197" }

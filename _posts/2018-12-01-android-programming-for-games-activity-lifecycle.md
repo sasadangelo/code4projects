@@ -5,7 +5,9 @@ post_series_id: android-game-programming
 slug: android-programming-for-games-activity-lifecycle
 thumbnail: assets/img/ActivityState-mini.png
 excerpt: In this article, I will introduce a basic android programming concept, the activity lifecycle.
-categories: Android
+categories:
+- Android
+- Game Programming
 ---
 
 ![Android Programming for Games (Activity Lifecycle)](assets/img/ActivityState-mini.png){:width="200" height="91" }

@@ -5,7 +5,9 @@ post_series_id: android-game-programming
 slug: android-game-programming
 thumbnail: assets/img/Android-Game-Programming-mini.jpeg
 excerpt: This is the first article of the Android Game Programming series where I will show you how to write your first Android game, Droids a Tetris clone.
-categories: Android
+categories:
+- Android
+- Game Programming
 ---
 
 ![Android Game Programming](assets/img/Android-Game-Programming-mini.jpeg){:width="356" height="200" }

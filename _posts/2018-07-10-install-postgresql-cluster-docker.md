@@ -5,7 +5,9 @@ post_series_id: getting-started-with-docker
 slug: install-postgresql-cluster-docker
 thumbnail: assets/img/database-cluster.png
 excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
-categories: Virtualization
+categories: 
+- Virtualization
+- Database
 ---
 
 ![How to install PostgreSQL cluster on Docker](assets/img/database-cluster.png){:width="385" height="200" }

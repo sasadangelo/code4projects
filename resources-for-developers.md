@@ -17,8 +17,6 @@ This is a list of websites, blogs, and resources that I read frequently and that
 
 [Free Programming Books](http://www.e-booksdirectory.com/programming.php)
 
-[Google Cloud Platform Blog](https://cloudplatform.googleblog.com/)
-
 [Level Up](https://www.level-up.one/)
 
 [Tania Rascia](https://www.taniarascia.com/)
@@ -46,3 +44,21 @@ In this section, I will collect the most important web resources for game progra
 ## Resources for Software Architect
 
 [High Scalability](http://highscalability.com/)
+
+## News and Communities
+
+[Hacker News](https://news.ycombinator.com/)
+
+[DEV](https://dev.to/)
+
+[Hacker.io](https://hackr.io/blog)
+
+[Free Code Camp](https://www.freecodecamp.org/news)
+
+[Sitepoint](https://www.sitepoint.com/)
+
+## Companies Tech Blogs
+
+[Netflix Tech Blog](https://www.sitepoint.com/)
+
+[Google Cloud Platform Blog](https://cloudplatform.googleblog.com/)

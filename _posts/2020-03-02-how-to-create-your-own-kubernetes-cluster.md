@@ -5,7 +5,10 @@ post_series_id: getting-started-with-kubernetes
 slug: how-to-create-your-own-kubernetes-cluster
 thumbnail: assets/img/kubernetes-cluster.jpeg
 excerpt: In this article, I want to explain how I run my applications on a Kubernetes cluster using a simple project I created based on Vagrant and VirtualBox.
-categories: Virtualization
+categories:
+- Cloud
+- DevOps
+- Virtualization
 ---
 
 ![Kubernetes Cluster](assets/img/kubernetes-cluster.jpeg){:width="247" height="200" }

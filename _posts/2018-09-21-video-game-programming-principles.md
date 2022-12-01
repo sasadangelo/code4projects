@@ -5,7 +5,8 @@ post_series_id: android-game-programming
 slug: video-game-programming-principles
 thumbnail: assets/img/Background-Sprite-Walking-mini.jpeg
 excerpt: In this article I want to explain basic video game programming principles in order to help you to write your first Android video game.
-categories: Android
+categories:
+- Game Programming
 ---
 
 ![Video game programming principles](assets/img/Background-Sprite-Walking-mini.jpeg){:width="320" height="200" }

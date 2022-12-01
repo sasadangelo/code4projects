@@ -1,12 +1,28 @@
-{% for post in site.data.post_sidebar %}
-  {% if page.post_series_id == post.post_series_id %}
-  <div class="post-sidebar-title">{{ post.post_series_title }}</div>
-  <nav>
-    <ul>
-      {% for lesson in post.post_series %}
-        <li><a href="{{ site.baseurl }}{{ lesson.link }}" {% if page.url == lesson.link %}class="current"{% endif %}>{{ lesson.name }}</a></li>
-      {% endfor %}
-    </ul>
-  </nav>
-  {% endif %}
-{% endfor %}
+{% if page.post_series_id != null %}
+  {% for post_series in site.data.post_sidebar %}
+    {% for page_post_series_id in page.post_series_id %}
+      {% if page_post_series_id == post_series.post_series_id %}
+      <div class="post-sidebar-title">{{ post_series.post_series_title }}</div>
+      <nav>
+        <ul>
+          {% for lesson in post_series.post_series %}
+            <li><a href="{{ site.baseurl }}{{ lesson.link }}" {% if page.url == lesson.link %}class="current"{% endif %}>{{ lesson.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% else %}
+  <div class="blog-sidebar-title">Categories</div>
+  {% for category in site.categories %}
+    <nav>
+      <ul>
+        {% capture category_name %}{{ category | first }}{% endcapture %}
+        <li><a href="{{ site.baseurl }}/category/{{ category_name | | slugify }}">{{ category_name }}</a></li>
+      </ul>
+    </nav>
+  {% endfor %}
+{% endif %}
+
+

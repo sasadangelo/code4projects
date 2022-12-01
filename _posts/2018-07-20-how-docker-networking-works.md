@@ -5,7 +5,9 @@ post_series_id: getting-started-with-docker
 slug: how-docker-networking-works
 thumbnail: assets/img/docker-bridge-network-mini.png
 excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
-categories: Virtualization
+categories:
+- Networking
+- Virtualization
 ---
 
 ![How docker networking works](assets/img/docker-bridge-network-mini.png){:width="214" height="200" }

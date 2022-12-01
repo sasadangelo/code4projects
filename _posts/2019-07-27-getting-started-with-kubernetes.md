@@ -5,7 +5,10 @@ post_series_id: getting-started-with-kubernetes
 slug: getting-started-with-kubernetes
 thumbnail: assets/img/kubernetes.png
 excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
-categories: Virtualization
+categories:
+- Cloud
+- DevOps
+- Virtualization
 ---
 
 ![Kubernetes](assets/img/kubernetes.png){:width="206" height="200" }
