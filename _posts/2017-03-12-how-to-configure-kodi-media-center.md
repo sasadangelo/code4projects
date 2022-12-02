@@ -4,7 +4,7 @@ title: How to Configure Kodi Media Center
 post_series_id: raspberry-media-center
 slug: how-to-configure-kodi-media-center
 thumbnail: assets/img/remote-control-mini.jpeg
-excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
+excerpt: In this article I would like to show you, step by step, how to configure your Kodi Media Center.
 categories: Multimedia
 ---
 

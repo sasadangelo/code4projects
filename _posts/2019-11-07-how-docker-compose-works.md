@@ -4,7 +4,7 @@ title: How Docker Compose works
 post_series_id: getting-started-with-docker
 slug: how-docker-compose-works
 thumbnail: assets/img/docker-compose.png
-excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
+excerpt: This is the seventh article of the Getting started with Docker series. Here I will discuss Docker Compose and how to use it to improve the container orchestration.
 categories: Virtualization
 ---
 

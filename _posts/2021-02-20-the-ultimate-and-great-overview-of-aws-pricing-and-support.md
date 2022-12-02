@@ -8,7 +8,7 @@ excerpt: In this article, I would like to give you a brief introduction to Kuber
 categories: Cloud
 ---
 
-![The Ultimate and Great Overview of AWS Pricing and Support](assets/img/AWS-Pricing.jpeg){:width="393" height="200" }
+![The Ultimate and Great Overview of AWS Pricing and Support](assets/img/AWS-Pricing.jpeg){:width="316" height="200" }
 
 # The Ultimate and Great Overview of AWS Pricing and Support
 _Posted on **{{ page.date | date_to_string }}**_
@@ -27,7 +27,7 @@ In AWS you only pay for three types of resources:
 
 Moreover, **the more you consume the greater is the discounts you get**. In the Cloud world, you can start small and grow as your business grow. In fact, add new capacity or resources to your ecosystem is easy.
 
-![AWS Pricing](assets/img/AWS-Pricing-2.jpeg)
+![AWS Pricing](assets/img/AWS-Pricing-2.jpeg){:width="450" height="285" }
 
 ### On-Demand vs Reserved resources
 
@@ -77,8 +77,9 @@ AWS pricing for Amazon CloudFront varies across geographic regions and it is mai
 
 ### The Problem
 
-As your business grows your infrastructure grows as well and with a large number of resources in your environment, it’s hard to keep track of costs and optimize them over time.  
-![AWS Large Infrastructure](assets/img/AWS-Large-Infrastructure.png)
+As your business grows your infrastructure grows as well and with a large number of resources in your environment, it’s hard to keep track of costs and optimize them over time.
+
+![AWS Large Infrastructure](assets/img/AWS-Large-Infrastructure.png){:width="450" height="239" }
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -97,7 +98,7 @@ In fact, AWS Trusted Advisor has a dashboard where it immediately shows you:
 -   the suggestion to investigate;
 -   the urgent problem to address.
 
-![AWS Trusted Advisory Dashboard](assets/img/AWS-Trusted-Advisory-Dashboard.png)
+![AWS Trusted Advisory Dashboard](assets/img/AWS-Trusted-Advisory-Dashboard.png){:width="450" height="130" }
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -107,7 +108,7 @@ According to Amazon data, this tool helped customers to have 500 million suggest
 
 The tools scan your infrastructure and analyze all your resources and their usage. In addition, it compares this analysis with a set of best practices from which it determines if the resource is correctly used, there are possible optimization to investigate, or there are issues to solve.
 
-![AWS Trusted Advisor](assets/img/AWS-Trusted-Advisor.png)
+![AWS Trusted Advisor](assets/img/AWS-Trusted-Advisor.png){:width="450" height="190" }
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -131,7 +132,7 @@ Moreover, there is also the **Basic plan** that is the default when you subscrib
 
 The following tables summarize the difference among the above support plans.
 
-![AWS Support Plans](assets/img/AWS-Support-Plans.png)
+![AWS Support Plans](assets/img/AWS-Support-Plans.png){:width="450" height="266" }
 
 _Photo from [https://tutorialsdojo.com](https://tutorialsdojo.com/aws-support-plans/)_
 

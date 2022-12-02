@@ -4,7 +4,7 @@ title: How to transform your Kodi Media Center in a Game Platform
 post_series_id: raspberry-media-center
 slug: how-to-transform-kodi-media-center-retro-game-platform
 thumbnail: assets/img/mortal_kombat.png
-excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
+excerpt: In this article, I would like to show you how to transform your Raspberry Kodi Media Center in a Retro Game platform.
 categories: Multimedia
 ---
 

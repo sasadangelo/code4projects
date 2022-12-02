@@ -4,7 +4,7 @@ title: How to transform your Kodi Box in a Netflix-like platform
 post_series_id: raspberry-media-center
 slug: kodi-box-media-library
 thumbnail: assets/img/kodi-movies-library-mini.png
-excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
+excerpt: In this article I would like to show you, step by step, how to transform your Kodi Box in a Netflix-like platform.
 categories: Multimedia
 ---
 

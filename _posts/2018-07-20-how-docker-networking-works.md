@@ -4,7 +4,7 @@ title: How Docker Networking works
 post_series_id: getting-started-with-docker
 slug: how-docker-networking-works
 thumbnail: assets/img/docker-bridge-network-mini.png
-excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
+excerpt: In this article, I&#039;ll talk about how Docker networking. You&#039;ll learn how to let two containers communicate when they are on the same or different host.
 categories:
 - Networking
 - Virtualization

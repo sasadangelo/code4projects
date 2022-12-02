@@ -4,7 +4,7 @@ title: How to transform your Raspberry Media Center in a NAS
 post_series_id: raspberry-media-center
 slug: how-to-transform-your-raspberry-media-center-nas
 thumbnail: assets/img/raspberry_samba.jpeg
-excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
+excerpt: In this article, I would like to show you how to transform your Raspberry Media Center in a Network Attached Server (NAS) and share your media files
 categories: Multimedia
 ---
 

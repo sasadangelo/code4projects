@@ -4,7 +4,7 @@ title: How to play Nintendo DS games with Retropie on Kodi Media Center
 post_series_id: raspberry-media-center
 slug: how-to-play-nintendo-ds-games-kodi-media-center
 thumbnail: assets/img/nintendo-ds.jpeg
-excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
+excerpt: In this article, I would like to show you how to play Nintendo DS games with Retropie on your Raspberry Kodi Media Center.
 categories: Multimedia
 ---
 

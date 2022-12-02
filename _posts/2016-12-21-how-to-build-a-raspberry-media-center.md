@@ -4,7 +4,7 @@ title: How to build a Raspberry Media Center
 post_series_id: raspberry-media-center
 slug: raspberry-media-center
 thumbnail: assets/img/Hector_TV_Box-min.jpeg
-excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
+excerpt: In this article, I would like to show you how to build your own Raspberry Media Center using Raspberry, an HDD and an enclosure.
 categories: Multimedia
 ---
 

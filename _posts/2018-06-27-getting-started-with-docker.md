@@ -4,7 +4,7 @@ title: Getting Started with Docker
 post_series_id: getting-started-with-docker
 slug: getting-started-with-docker
 thumbnail: assets/img/docker-logo-mini.png
-excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
+excerpt: In this article, you will learn what Docker is, its main concepts, how to create images and containers and the commands to play with it.
 categories: Virtualization
 ---
 

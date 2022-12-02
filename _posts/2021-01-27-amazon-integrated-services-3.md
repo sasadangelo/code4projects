@@ -8,7 +8,7 @@ excerpt: In this article, I would like to give you a brief introduction to Kuber
 categories: Cloud
 ---
 
-![Amazon Integrated Services (part 2)](assets/img/CloudWatch-CloudFront-SNS-CloudFormation.png){:width="393" height="200" }
+![Amazon Integrated Services (part 2)](assets/img/CloudWatch-CloudFront-SNS-CloudFormation.png){:width="200" height="200" }
 
 # Amazon Integrated Services (part 2)
 _Posted on **{{ page.date | date_to_string }}**_
@@ -33,7 +33,8 @@ The Simple Notification Service (SNS) is a notification system that allows decou
 
 The following figure shows the two typical usages of Amazon SNS: **Amazon SNS Pub/Sub Messaging** and **Amazon SNS Mobile Notifications**. In the former, the publisher sends notifications to subscribers that could be Lambda, SQS, or HTTP/S services. In the latter, Publisher sends a notification to the mobile subscribers via ADM, Baidu, and others.
 
-![Amazon SNS](assets/img/Amazon-SNS.png)  
+![Amazon SNS](assets/img/Amazon-SNS.png){:width="450" height="252" }
+
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
 ## CloudWatch
@@ -48,7 +49,7 @@ Amazon CoudWatch is a real-time monitoring system for Amazon Web Services (AWS) 
 
 For each AWS resource, CloudWatch monitors a set of metrics. For example, for EC2 instances it monitors CPU, Status, Memory, etc. These statistics are visible to customers via the management console. When a metric reaches a threshold an alarming turn on and an action (SNS, Autoscaling, etc.) starts.
 
-![Amazon CloudWatch](assets/img/Amazon-CloudWatch.png)
+![Amazon CloudWatch](assets/img/Amazon-CloudWatch.png){:width="450" height="195" }
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -123,7 +124,7 @@ AWS CloudFormation simplifies the task of repeatedly and predictably creating gr
 
 You can use the management console, AWS CLI, or SDK to provision AWS resources in your account environment. For example, you can create a pipeline that creates a VPC in your account with a Public subnet and an EC2 instance that runs a web server. You can create an S3 bucket where, periodically, you can store the application logs, and so on. Users can access the web server via an Internet GAteway (IGW) The scenarios you can create are endless.
 
-![Amazon CloudFormation Stack](assets/img/Amazon-CloudFormation-Stack.png)
+![Amazon CloudFormation Stack](assets/img/Amazon-CloudFormation-Stack.png){:width="450" height="200" }
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -131,7 +132,7 @@ _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazo
 
 In order to deploy, update, or remove AWS resources in a customer account, CloudFormation uses a Template file that contains a description of the resources that compose the customer environment. This template represents the customer’s “desired state” and CloudFormation takes care that the environment keeps it. It is in JSON or YAML format and it is self-explanatory.
 
-![Amazon CloudFormation Template and Stack](assets/img/Amazon-CloudFormation-Template-Stack.png)
+![Amazon CloudFormation Template and Stack](assets/img/Amazon-CloudFormation-Template-Stack.png){:width="450" height="200" }
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 

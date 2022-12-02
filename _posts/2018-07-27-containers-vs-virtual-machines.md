@@ -4,7 +4,7 @@ title: Containers vs Virtual Machines
 post_series_id: getting-started-with-docker
 slug: containers-vs-virtual-machines
 thumbnail: assets/img/virtual-machine-architecture-mini.jpeg
-excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
+excerpt: If you&#039;re in trouble getting the differences between Containers vs Virtual Machines, this article will explain the pros and cons of both.
 categories: Virtualization
 ---
 

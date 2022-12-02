@@ -3,7 +3,7 @@ layout: post
 title: BOSH for Beginners
 slug: bosh-for-beginners
 thumbnail: assets/img/bosh_logo.png
-excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
+excerpt: In this article, I want to explain what Bosh is, its main concepts, and how to use it practically to deploy software. What is BOSH? According to Bosh
 categories:
 - Cloud
 - DevOps

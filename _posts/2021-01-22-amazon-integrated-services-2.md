@@ -4,11 +4,11 @@ title: Amazon Integrated Services (part 1)
 post_series_id: getting-started-with-amazon-web-services
 slug: amazon-integrated-services-2
 thumbnail: assets/img/Amazon-RDS-Lambda-Beanstalk.png
-excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
+excerpt: "In this article, I am going to start my overview of the Amazon Integrated Services trying to explain my understanding of the following services: Lambda"
 categories: Cloud
 ---
 
-![Amazon Integrated Services (part 1)](assets/img/Amazon-RDS-Lambda-Beanstalk.png){:width="393" height="200" }
+![Amazon Integrated Services (part 1)](assets/img/Amazon-RDS-Lambda-Beanstalk.png){:width="200" height="200" }
 
 # Amazon Integrated Services (part 1)
 _Posted on **{{ page.date | date_to_string }}**_
@@ -34,7 +34,7 @@ Deploy a Lambda application is very easy because you only need to deploy the cod
 
 Let’s consider the following scenario. We have a mobile application that takes a photo and automatically upload them on S3 bucket and they need to be cropped. Whenever the application uploads a photo on the S3 bucket we create an event that will run the Lambda code that takes the photo and crop it storing it again on the same bucket.
 
-![AWS Lambda Scenario](assets/img/AWS-Lambda-Scenario.png)
+![AWS Lambda Scenario](assets/img/AWS-Lambda-Scenario.png){:width="450" height="115" }
 
 The customer only needs to create the crop code and upload it on the AWS Lambda service, then he needs to create a CloudWatch event to generate an event every time a photo is uploaded on a given bucket and associate with our Lambda code.
 
@@ -50,13 +50,13 @@ Elastic Beanstalk is the Amazon **Platform as a Service (PaaS)** solution. [PaaS
 
 In the figure below, the **Application Service** layer is basically the framework (the runtime environment) where the application runs. For example, if your code is Java the application service is the Java Virtual Machine (JVM) that runs the compiled version of that code. The green box has the label “Your code” but this includes the data and configuration too, which must be managed by the customer.
 
-![Amazon Beanstalk Stack](assets/img/Amazon-Beanstalk-Stack.png)
+![Amazon Beanstalk Stack](assets/img/Amazon-Beanstalk-Stack.png){:width="450" height="235" }
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
 The basic idea is that the developer develops the code and uploads it on a repository in the platform. This one will automatically compile and deploy the code on the server in a way completely transparent to the developer. The application will be accessible via web or API to the end-user. All the complexity to manage the infrastructure is removed.
 
-![Amazon Elastic Beanstalk](assets/img/Amazon-Beanstalk.png)
+![Amazon Elastic Beanstalk](assets/img/Amazon-Beanstalk.png){:width="450" height="410" }
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -75,7 +75,7 @@ You can choose the following options:
 
 The following figure summarizes the application lifecycle. The developer develops the code and uploads it on a repository, then it creates the application instance in Elastic Beanstalk and associates that repository to it. Elastic Beanstalk prepares the environment for the code, depending on the programming language it instantiates a server with the OS and runtime framework to deploy the code in it. The developer manages the environments via monitoring to check that everything is ok. The developer can update the application at whatever moment by simply uploading the code changes into the repository.
 
-![Elastic Beanstalk Application Lifecycle](assets/img/Amazon-Beanstalk-application-lifecycle.png)
+![Elastic Beanstalk Application Lifecycle](assets/img/Amazon-Beanstalk-application-lifecycle.png){:width="450" height="160" }
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
