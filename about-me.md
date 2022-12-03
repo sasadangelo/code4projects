@@ -2,6 +2,7 @@
 layout: page
 title: About me
 slug: about-me
+excerpt: This page contains some information about Salvatore D'Angelo the owner of the Code4Project website. 
 ---
 # About me
 

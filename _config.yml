@@ -36,6 +36,8 @@ defaults:
     values:
       layout: "default"
 
+page_excerpts: "true"
+
 paginate_path: "/blog/page:num/"
 pagination:
   enabled: true

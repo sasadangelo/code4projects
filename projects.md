@@ -2,6 +2,7 @@
 layout: page
 title: Projects
 slug: projects
+excerpt: In this page, I will collect all the projects that I have made using my technological and programming skills.
 ---
 # Projects
 
