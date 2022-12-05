@@ -18,7 +18,7 @@ My name is Salvatore D’Angelo and I am a professional software engineer that w
 
 In over 30 years of experience as a professional software developer, I have had the opportunity to work on numerous projects. You can read my full career history on my [Linkedin page](https://www.linkedin.com/in/salvatore-d-angelo-0321851/). I was fortunate enough to be involved in all phases of a software development cycle.
 
-![Software Developer](assets/img/software-developer.jpeg){:width="450" height="auto" .responsive_img}
+![Software Developer](assets/img/software-developer.jpeg){:width="450" height="450" .responsive_img}
 
 _Photo from [https://clipartstation.com](https://clipartstation.com/software-developer-clipart-5/)_
 
