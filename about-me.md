@@ -6,7 +6,7 @@ excerpt: This page contains some information about Salvatore D'Angelo the owner 
 ---
 # About me
 
-![Salvatore D'Angelo](assets/img/salvatore_d_angelo.jpeg){:width="100" height="100" }
+![Salvatore D'Angelo](assets/img/salvatore_d_angelo.jpeg){:width="100" height="100" .responsive_img}
 
 My name is Salvatore D’Angelo and I am a professional software programmer since 1999.
 

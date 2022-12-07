@@ -8,7 +8,7 @@ excerpt: In this article, I would like to show you how to transform your Raspber
 categories: Multimedia
 ---
 
-![How to transform your Kodi Media Center in a Game Platform](assets/img/mortal_kombat.png){:width="200" height="127" }
+![How to transform your Kodi Media Center in a Game Platform](assets/img/mortal_kombat.png){:width="200" height="127" .responsive_img}
 
 # How to transform your Kodi Media Center in a Game Platform
 _Posted on **{{ page.date | date_to_string }}**_
@@ -42,7 +42,7 @@ A text menu will appear in the terminal, choose the option _Install Retrosmc_. S
 
 Now the RetroPie Launcher will be visible in the Add-Ons menu of Kodi. To launch it select _Add-Ons -> RetroPie Launcher_.
 
-![Retrosmc Launcher](assets/img/Retrosmc-Launcher.png){:width="450" height="253" }
+![Retrosmc Launcher](assets/img/Retrosmc-Launcher.png){:width="450" height="253" .responsive_img}
 
 For more details on the RetroPie installation on OSMC look at the [official guide](https://discourse.osmc.tv/t/howto-retropie-and-osmc-retrosmc-retrogaming-on-osmc/6671).
 
@@ -52,7 +52,7 @@ To play Retro Game on Kodi and Raspberry it is required to buy at least a game c
 
 Here a photo of my two Game Controllers attached to my Kodi Media Center. As you can see I use also [two USB extenders](https://www.amazon.it/gp/product/B000E5CYW8/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1) to avoid opening the enclosure every time I want to attach the Game Controllers to the Media Center.
 
-![Kodi Media Center Gamepad](assets/img/Kodi-Media-Center-Gamepad.jpeg){:width="450" height="337" }
+![Kodi Media Center Gamepad](assets/img/Kodi-Media-Center-Gamepad.jpeg){:width="450" height="337" .responsive_img}
 
 I tried to find these controllers on the Internet but I haven’t found them, however, I think whatever Xbox 360 Gamepad compatible works fine with Kodi and Raspberry.
 
@@ -60,13 +60,13 @@ I tried to find these controllers on the Internet but I haven’t found them, ho
 
 You have installed RetroPie and attached one or two Game Controllers, go on _Add-Ons -> Retrosmc_ to start RetroPie. The Emulation station starts and a Welcome panel appears with the number of Gamepads detected. Hold a button on your gamepad to configure it.
 
-![Retropie Welcome](assets/img/Retropie_Welcome.jpeg){:width="450" height="240" }
+![Retropie Welcome](assets/img/Retropie_Welcome.jpeg){:width="450" height="240" .responsive_img}
 
 _Photo from [http://bitfixgaming.boards.net](http://bitfixgaming.boards.net/)_
 
 [At the following page](https://github.com/RetroPie/RetroPie-Setup/wiki/first-installation) in the section _Configure Controllers_, you can find the instructions to configure your Gamepad. The following figure shows you how I assigned the buttons to my controller.
 
-![Gamepad Buttons](assets/img/Gamepad_Buttons.jpeg){:width="450" height="337" }
+![Gamepad Buttons](assets/img/Gamepad_Buttons.jpeg){:width="450" height="337" .responsive_img}
 
 **5 Important Things!!!**
 
@@ -96,11 +96,11 @@ Retropie, by default, is installed with a set of emulators included two for Mame
 
 From Emulation Station’s main menu click on _RetroPie_.
 
-![Retropie Configuration](assets/img/Retropie_Configuration.png){:width="450" height="253" }
+![Retropie Configuration](assets/img/Retropie_Configuration.png){:width="450" height="253" .responsive_img}
 
 Select the menu _RetroPie Setup_, a text menu will appear.
 
-![Retropie Setup](assets/img/Retropie_Setup.png){:width="450" height="253" }
+![Retropie Setup](assets/img/Retropie_Setup.png){:width="450" height="253" .responsive_img}
 
 Select the _Manage packages -> Manage optional packages -> LR-Mame2010_ to install the emulator. The operation will take some time and even if you have the impression that nothing is happening, be patient. Once the installation completes exit from the text menu. Then go back to the Emulation station main menu pressing the X button (button 1 on my controller). Select Start to have the Main menu appear on the screen and select _Quit -> Quit Emulation station -> Yes_ to exit from Emulation station.
 

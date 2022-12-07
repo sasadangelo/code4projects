@@ -8,7 +8,7 @@ excerpt: In this article, I would like to give you a brief introduction to Kuber
 categories: Cloud
 ---
 
-![A Step by step Amazon Relational Database Service tutorial](assets/img/rds-logo.png){:width="393" height="200" }
+![A Step by step Amazon Relational Database Service tutorial](assets/img/rds-logo.png){:width="393" height="200" .responsive_img}
 
 # A Step by step Amazon Relational Database Service tutorial
 _Posted on **{{ page.date | date_to_string }}**_

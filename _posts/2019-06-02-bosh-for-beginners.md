@@ -9,7 +9,7 @@ categories:
 - DevOps
 ---
 
-![BOSH for Beginners](assets/img/bosh_logo.png){:width="393" height="200" }
+![BOSH for Beginners](assets/img/bosh_logo.png){:width="393" height="200" .responsive_img}
 
 # BOSH for Beginners
 _Posted on **{{ page.date | date_to_string }}**_
@@ -39,6 +39,7 @@ Many tools like Chef, Puppet, Docker exist that address one or more of these ite
 The following figure shows the Bosh main components. An administrator can manage Bosh environments using a Bosh Cli that sends commands to the Bosh Director that is a server that keeps track of all the deployment aspects.
 
 ![Bosh Architecture](assets/img/bosh-architecture.png)  
+
 _Figure from [https://bosh.io](https://bosh.io/docs/bosh-components/)_
 
 Internally, there is a CPI that is an API that the Director uses to manage IaaS components like VM, storage, network, and so on. Bosh support different IaaS systems (i.e. Softlayer, AWS, Virtual Box, Google Cloud Platform, and so on) and to interact with them he needs the CPI specific for each Cloud provider.
@@ -46,6 +47,7 @@ Internally, there is a CPI that is an API that the Director uses to manage IaaS 
 VM that lives in the IaaS environment includes a Bosh Agent that interacts with the Director to manage the software deployment on it. They communicate through a message system based on a publisher-subscriber approach (NATS).
 
 ![Bosh Internals](assets/img/bosh-internals-e1594368084446.png)  
+
 _Figure from [http://www.think-foundry.com](http://www.think-foundry.com/cloud-foundry-bosh-introduction/)_
 
 When an administrator sends commands to the Director via Bosh CLI a task is created that is inserted in the Task Queue managed by the Director. Other tasks can be scheduled by the Director itself to manage the infrastructure. These tasks are managed by a pool of workers.

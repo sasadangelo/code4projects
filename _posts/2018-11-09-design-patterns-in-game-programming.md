@@ -10,7 +10,7 @@ categories:
   - Game Programming
 ---
 
-![Design Patterns in Game Programming](assets/img/design-patterns.jpeg){:width="200" height="252" }
+![Design Patterns in Game Programming](assets/img/design-patterns.jpeg){:width="200" height="252" .responsive_img}
 
 # Design Patterns in Game Programming
 _Posted on **{{ page.date | date_to_string }}**_
@@ -35,7 +35,7 @@ In your first video game, Droids a Tetris clone, you will use this pattern for t
 
 This is a pattern I use when the behavior of an object must change based on its state. It applies when an application or part of it behaves like a finite-state machine. In our case, for example, our video game when it is running can be paused, resumed or terminated. While the game is paused, you can resume it or exit.
 
-![Droids States](assets/img/Droids-State.png){:width="450" height="417" }
+![Droids States](assets/img/Droids-State.png){:width="450" height="417" .responsive_img}
 
 Usually, in the normal procedural programming, to manage states you have to use conditional statements that examine the state of the objects in order to take some decisions. Very often these decisions are very complex and depend on many values, all this leads to the generation of large IFELSE / SWITCH blocks. This involves serious problems of understanding, maintenance, and evolution of the code.
 
@@ -108,7 +108,7 @@ The Observer pattern is a behavioral pattern that is used when the change of sta
 
 The typical example I use to explain how this pattern works is through an Excel spreadsheet. Suppose we have the cell A1 that contains the number 2 and A2 and A3 cells that contain, respectively, the double and the triple (A2 = A1 \* 2, A3 = A1 \* 3). Now if A1 = 3, then A2 = 6 and A3 = 9. If A1 (Subject) changes from 3 to 4, A2 and A3 (Observers) will be notified about the change and update their values accordingly (A2 = 8 and A3 = 12).
 
-![Observer Spreadsheet](assets/img/Observer-Spreadsheet.png){:width="450" height="334" }
+![Observer Spreadsheet](assets/img/Observer-Spreadsheet.png){:width="450" height="334" .responsive_img}
 
 With this mechanism, the A2 and A3 cells will change only when A1 change, without any time-consuming polling.
 

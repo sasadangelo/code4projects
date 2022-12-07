@@ -8,7 +8,7 @@ excerpt: This is the second article of Android Game Development series. Here I e
 categories: Android
 ---
 
-![How to install Android Studio](assets/img/android-studio.png){:width="400" height="200" }
+![How to install Android Studio](assets/img/android-studio.png){:width="400" height="200" .responsive_img}
 
 # How to install Android Studio
 _Posted on **{{ page.date | date_to_string }}**_
@@ -21,31 +21,31 @@ The procedure to install it is really simple because you need to launch the down
 
 When the installation program starts, the **Welcome to Android Studio Setup** panel will appear, click on the **Next** button.
 
-![Android Studio Welcome Panel](assets/img/AndroidStudioWelcome.png){:width="400" height="310" }
+![Android Studio Welcome Panel](assets/img/AndroidStudioWelcome.png){:width="400" height="310" .responsive_img}
 
 In the **Choose Components** panel, leave the default and click on the **Next** button.
 
-![Android Studio Choose Components Panel](assets/img/AndroidStudioChooseComponents.png){:width="400" height="311" }
+![Android Studio Choose Components Panel](assets/img/AndroidStudioChooseComponents.png){:width="400" height="311" .responsive_img}
 
 Click on the **I Agree** button in the **License Agreement** panel.
 
-![Android Studio License Agreement Panel](assets/img/AndroidStudioLicenseAgreement.png){:width="400" height="311" }
+![Android Studio License Agreement Panel](assets/img/AndroidStudioLicenseAgreement.png){:width="400" height="311" .responsive_img}
 
 In the **Configuration Settings** panel, choose the installation directories of Android Studio and Android SDK and click **Next**.
 
-![Android Studio Configuration Settings](assets/img/AndroidStudioConfigurationSettings.png){:width="400" height="311" }
+![Android Studio Configuration Settings](assets/img/AndroidStudioConfigurationSettings.png){:width="400" height="311" .responsive_img}
 
 In the **Choose Start Menu Folder** panel leave the default and click on the **Install** button.
 
-![Android Studio Choose Start Menu Folder Panel](assets/img/AndroidStudioChooseStartMenuFolder.png){:width="400" height="312" }
+![Android Studio Choose Start Menu Folder Panel](assets/img/AndroidStudioChooseStartMenuFolder.png){:width="400" height="312" .responsive_img}
 
 When the installation finishes, press the **Next** button.
 
-![Android Studio Installation Complete Panel](assets/img/AndroidStudioInstallationComplete.png){:width="400" height="314" }
+![Android Studio Installation Complete Panel](assets/img/AndroidStudioInstallationComplete.png){:width="400" height="314" .responsive_img}
 
 In the **Completing Android Studio Setup** panel click the **Finish** button.
 
-![Android Studio Completing Setup Panel](assets/img/AndroidStudioCompletingSetup.png){:width="400" height="314" }
+![Android Studio Completing Setup Panel](assets/img/AndroidStudioCompletingSetup.png){:width="400" height="314" .responsive_img}
 
 Android Studio is installed and ready to run.
 

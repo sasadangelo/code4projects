@@ -8,7 +8,7 @@ excerpt: In this article, I want to show how to deploy your first application on
 categories: Cloud
 ---
 
-![How to deploy your first application on IBM Cloud](assets/img/Tetris_mini.png){:width="282" height="200" }
+![How to deploy your first application on IBM Cloud](assets/img/Tetris_mini.png){:width="282" height="200" .responsive_img}
 
 # How to deploy your first application on IBM Cloud
 _Posted on **{{ page.date | date_to_string }}**_
@@ -19,7 +19,7 @@ How explained in the [previous article](introduction-to-the-ibm-cloud-platform),
 
 For this experiment, [I forked a Node.js project](https://github.com/zhongdeliu/multiplayer-tetris) on the Internet and modified it to make it IBM Cloud-ready. To make things funnier I chose a Tetris clone as an example. Here you can download [my version of the game](https://github.com/sasadangelo/multiplayer-tetris).
 
-![Tetris](assets/img/Tetris.png){:width="450" height="395" }
+![Tetris](assets/img/Tetris.png){:width="450" height="395" .responsive_img}
 
 ## Introduction to your IBM Cloud workspace
 
@@ -29,7 +29,7 @@ Before you start you need to understand some basic Cloud Foundry concepts that w
 
 From your account, you can manage one or more **Organization** that represents your company or the business unit of your company. For each organization, you can have one or more **Space**. You can see a space like development, test, or production environment.
 
-![Organizations and Spaces](assets/img/Org-Spaces.png){:width="450" height="304" }
+![Organizations and Spaces](assets/img/Org-Spaces.png){:width="450" height="304" .responsive_img}
 
 When you create an account, a default organization will be created with your email address as the name. You can change it if you want. By default, a default space is created called **dev**. You can change it too. In a Space, you can manage resources (i.e. the application) and services.
 
@@ -107,53 +107,53 @@ You can develop your applications with Eclipse and deploy them directly from it.
 
 When you download the Eclipse Oxygen tar.gz file, extract it and open the Editor. As the first step, you need to install the **nodeclipse** plugin from the Eclipse Marketplace in order to develop the Node.js application. Go on **Help** -> **Eclipse Marketplace**, Search for **nodeclipse,** and install the plugin.
 
-![Nodeclipse](assets/img/Nodeclipse.png){:width="450" height="286" }
+![Nodeclipse](assets/img/Nodeclipse.png){:width="450" height="286" .responsive_img}
 
 Import the project directly from github.com with the following procedure. Right-click on **Project Explorer** and select **File -> Import …**
 
-![Import Project](assets/img/Import-Project-1.png){:width="450" height="644" }
+![Import Project](assets/img/Import-Project-1.png){:width="450" height="644" .responsive_img}
 
 Select **Git -> Project from Git** and click the **Next** button.
 
-![Select Git](assets/img/Select-Git.png){:width="450" height="472" }
+![Select Git](assets/img/Select-Git.png){:width="450" height="472" .responsive_img}
 
 Select **Clone URI** and click the **Next** button.
 
-![Select Repository Source](assets/img/Select-Repository-Source.png){:width="450" height="471" }
+![Select Repository Source](assets/img/Select-Repository-Source.png){:width="450" height="471" .responsive_img}
 
 On the next page, insert the URL **https://github.com/sasadangelo/multiplayer-tetris** and click **Next**.
 
-![Source Git Repository](assets/img/Source-Git-Repository.png){:width="450" height="470" }
+![Source Git Repository](assets/img/Source-Git-Repository.png){:width="450" height="470" .responsive_img}
 
 Select the **master** branch and click **Next** again.
 
-![Master Branch Selection](assets/img/Branch-Selection.png){:width="450" height="471" }
+![Master Branch Selection](assets/img/Branch-Selection.png){:width="450" height="471" .responsive_img}
 
 Insert the folder of your workspace and click **Next**. Select the option **Import using the New Project wizard** and then **Finish**, in this way you can create a Node.js project.
 
-![Import NodeJS Project](assets/img/Import-NodeJS-Project.png){:width="450" height="471" }
+![Import NodeJS Project](assets/img/Import-NodeJS-Project.png){:width="450" height="471" .responsive_img}
 
 Select **Node -> Node.js Project** and click **Next**.
 
-![Select Node Project](assets/img/Select-Wizard.png){:width="450" height="429" }
+![Select Node Project](assets/img/Select-Wizard.png){:width="450" height="429" .responsive_img}
 
 Insert the project name and click **Finish**.
 
-![Create Node.js Project](assets/img/Create-NodeJS-Project.png){:width="450" height="426" }
+![Create Node.js Project](assets/img/Create-NodeJS-Project.png){:width="450" height="426" .responsive_img}
 
 ### How to run the application locally with Eclipse
 
 Right-click on the multiplayer-tetris project and select **Run as -> npm install** to install locally all the dependencies.
 
-![Install Dependencies](assets/img/Install_Dependencies.png){:width="450" height="410" }
+![Install Dependencies](assets/img/Install_Dependencies.png){:width="450" height="410" .responsive_img}
 
 Right-click again on the multiplayer-tetris project and select **Run as ->** **Run Configuration …**
 
-![Run Configurations](assets/img/Run_Configuration.png){:width="450" height="325" }
+![Run Configurations](assets/img/Run_Configuration.png){:width="450" height="325" .responsive_img}
 
 Select the **Node.js application** and press on the New button to create a new configuration for this application.
 
-![Node.js Application](assets/img/Node.js_Application.png){:width="450" height="361" }
+![Node.js Application](assets/img/Node.js_Application.png){:width="450" height="361" .responsive_img}
 
 Select the project and its main file (app.js) and click Run. Open your browser and insert in the address bar the address **http://localhost:6003**.
 
@@ -161,23 +161,23 @@ Select the project and its main file (app.js) and click Run. Open your browser a
 
 Right-click on the multiplayer-tetris project and select **Run as -> Run on Server**.
 
-![Run on Server](assets/img/Run_on_Server.png){:width="450" height="258" }
+![Run on Server](assets/img/Run_on_Server.png){:width="450" height="258" .responsive_img}
 
 Select **IBM -> IBM Bluemix** and click the **Next** button.
 
-![Run on Bluemix](assets/img/Run_on_Bluemix.png){:width="450" height="448" }
+![Run on Bluemix](assets/img/Run_on_Bluemix.png){:width="450" height="448" .responsive_img}
 
 Insert the email address and password of your account and select the region where your workspace is deployed and click on the **Next** button.
 
-![Insert Cloud Credentials](assets/img/Insert_Cloud_Credentials.png){:width="450" height="364" }
+![Insert Cloud Credentials](assets/img/Insert_Cloud_Credentials.png){:width="450" height="364" .responsive_img}
 
 Select your Space and click on the **Next** button.
 
-![Select Organization and Space](assets/img/Select_Organization_Space.png){:width="450" height="200" }
+![Select Organization and Space](assets/img/Select_Organization_Space.png){:width="450" height="200" .responsive_img}
 
 Move the **mutiplayer-tetris** project on the right and click the **Finish** button.
 
-![Add to Workspace](assets/img/Add_to_Workspace.png){:width="450" height="226" }
+![Add to Workspace](assets/img/Add_to_Workspace.png){:width="450" height="226" .responsive_img}
 
 At the end of the deploy, you can access the application via URL **https://multiplayer-tetris.<region>.bluemix.net**.
 
@@ -185,6 +185,6 @@ At the end of the deploy, you can access the application via URL **https://multi
 
 When we deploy our application via CLI or Eclipse, **what happens behind the scene?** An answer to this question is really important because it allows us to understand internals on how Cloud Foundry works. When we deploy an application on IBM Cloud Foundry executes a push operation and internally the following steps occur.
 
-![Cloud Foundry App Push](assets/img/app_push_flow_diagram_diego.png){:width="450" height="259" }
+![Cloud Foundry App Push](assets/img/app_push_flow_diagram_diego.png){:width="450" height="259" .responsive_img}
 
 In the [previous article](introduction-to-the-ibm-cloud-platform), I showed the Cloud Foundry architecture and in this diagram, we can see how the different components interact during a CF PUSH command. When the developer deploys an application via cf push command, the request arrives at the go router that routes it to the Cloud Controller (CC), the brain of Cloud Foundry. Application metadata are stored in the Cloud Controller Database (CCDB). Application files are uploaded on a blob store. A Diego cell is staged where will be the runtime framework (i.e. java, node.js, ruby, ecc.) to run the application. The developer can visualize the staging output to check the result. Once the staging phase is completed, the application is started.

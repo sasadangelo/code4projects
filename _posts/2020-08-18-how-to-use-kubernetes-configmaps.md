@@ -8,7 +8,7 @@ excerpt: In this article, I would like to explain how to manage application conf
 categories: Virtualization
 ---
 
-![Kubernetes ConfigMap](assets/img/kubernetes-configmap.jpeg){:width="231" height="200" }
+![Kubernetes ConfigMap](assets/img/kubernetes-configmap.jpeg){:width="231" height="200" .responsive_img}
 
 # How I use Kubernetes ConfigMaps to manage configurations
 _Posted on **{{ page.date | date_to_string }}**_
@@ -25,7 +25,7 @@ Whatever application has usually three layers:
 
 Presentation and Logic usually are in the binary code that should never change from one deployment to another. What usually changes is the data. With the term data, we essentially mean the data itself and the configuration. For an application that follows the [12-Factor guidelines](https://12factor.net/), it is essentials that configuration is separated by binary code and data.
 
-![The Anatomy of an Application](assets/img/application-layers.png){:width="450" height="289" }
+![The Anatomy of an Application](assets/img/application-layers.png){:width="450" height="289" .responsive_img}
 
 Photo from [https://www.wots.mobi](https://www.wots.mobi)
 
@@ -49,7 +49,7 @@ The following steps summarize how ConfigMap works in Kubernetes and the figure b
 * Add a ConfigMap to the Kubernetes cluster.
 * Containers in the Pod reference the ConfigMap and use its values.
 
-![How does ConfigMap work?](assets/img/configmap-diagram.gif){:width="450" height="378" }
+![How does ConfigMap work?](assets/img/configmap-diagram.gif){:width="450" height="378" .responsive_img}
 
 Photo from [https://matthewpalmer.net](https://matthewpalmer.net)
 

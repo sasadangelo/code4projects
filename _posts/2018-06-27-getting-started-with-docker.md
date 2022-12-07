@@ -8,7 +8,7 @@ excerpt: In this article, you will learn what Docker is, its main concepts, how 
 categories: Virtualization
 ---
 
-![Docker](assets/img/docker-logo-mini.png){:width="258" height="200" }
+![Docker](assets/img/docker-logo-mini.png){:width="258" height="200" .responsive_img}
 
 # Getting Started with Docker
 _Posted on **{{ page.date | date_to_string }}**_
@@ -19,11 +19,11 @@ This is the first article of **Getting started with Docker** series. Here I woul
 
 Docker is a hot technology adopted by the most important companies in the world. The following picture shows the adoption growth in recent years.
 
-![Docker adoption](assets/img/docker-adoption.png){:width="450" height="241" }
+![Docker adoption](assets/img/docker-adoption.png){:width="450" height="241" .responsive_img}
 
 This other picture shows some numbers relative to Docker. It’s clear that in recent five years the technology acquired a good momentum and its adoption has grown very fast.
 
-![Docker statistics](assets/img/docker-numbers.png){:width="450" height="165" }
+![Docker statistics](assets/img/docker-numbers.png){:width="450" height="165" .responsive_img}
 
 _Photo from [www.slideshare.net](https://www.slideshare.net/Docker/introduction-to-docker-2017)_
 
@@ -59,7 +59,7 @@ In recent years, application designers started to consider convenient divide the
 
 Today hundreds of microservices compose applications like Netflix and manage their deployment lifecycle (install, configure, and upgrade) and dependencies is not an easy task. **Here where Docker comes into play**.
 
-![Netflix Ecosystem](assets/img/netflix_ecosystem.png){:width="450" height="323" }
+![Netflix Ecosystem](assets/img/netflix_ecosystem.png){:width="450" height="323" .responsive_img}
 
 _Photo from [medium.com](https://medium.com/refraction-tech-everything/how-netflix-works-the-hugely-simplified-complex-stuff-that-happens-every-time-you-hit-play-3a40c9be254b)_
 
@@ -75,7 +75,7 @@ When I started working with Docker, the first thing I needed to learn was what D
 
 From this definition, it’s clear that Docker is an isolated environment on your target system where your application runs with its own dependencies that are completely unrelated to the other software deployed on the system. This isolated environment is called **Container**.
 
-![Container](assets/img/container.png){:width="289" height="258" }
+![Container](assets/img/container.png){:width="289" height="258" .responsive_img}
 
 More details about the differences between Containers and Virtual Machines will be discussed [here](containers-vs-virtual-machines).
 
@@ -97,7 +97,7 @@ A container is the runnable instance of a docker image. You can have multiple co
 
 A container, however, is more efficient than a virtual machine because it does not add any layer between kernel and application but it only uses its isolation mechanism that does not degrade performance. This is the reason why modern architectures deploy a containerized version of applications in order to avoid classical dependencies problems of a normal on-premise application.
 
-![Container vs VM](assets/img/container-vs-vm.png){:width="450" height="201" }
+![Container vs VM](assets/img/container-vs-vm.png){:width="450" height="201" .responsive_img}
 
 ## How to install Docker
 
@@ -190,7 +190,7 @@ The -d option will start the container in detach mode so that the shell doesn’
 
 Open your browser and type localhost in the address bar. You’ll see the “Hello World!” message appear.
 
-![Docker Hello World application](assets/img/docker-hello-world.jpeg){:width="450" height="194" }
+![Docker Hello World application](assets/img/docker-hello-world.jpeg){:width="450" height="194" .responsive_img}
 
 If you want, you can access the container using the command:
 

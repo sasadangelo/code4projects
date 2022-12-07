@@ -10,7 +10,7 @@ categories:
 - Game Programming
 ---
 
-![Android Input Management for Games](assets/img/Android-Input-Management2.jpeg){:width="200" height="200" }
+![Android Input Management for Games](assets/img/Android-Input-Management2.jpeg){:width="200" height="200" .responsive_img}
 
 # Android Input Management for Games
 _Posted on **{{ page.date | date_to_string }}**_
@@ -49,7 +49,7 @@ However, we will create such a flexible interface that adding other input modes 
 
 Clicking on the button, the icon will change making a speaker appear in mute mode. As we have seen we cannot use the Android _Button_ class but we’ll have to draw the button ourselves, capture the touch event, understand that the button has been clicked and execute the corresponding action.
 
-![Button Disable Audio](assets/img/Disattiva-audio.png){:width="450" height="316" }
+![Button Disable Audio](assets/img/Disattiva-audio.png){:width="450" height="316" .responsive_img}
 
 Luckily the _View_ interface (hence also our _AndroidFastRenderView_ class) allows you to register touch events with the _setOnTouchListener_ method and create listeners that implement the _OnTouchListener_ interface just to intercept these events. This interface has only one method to implement:
 
@@ -235,7 +235,7 @@ public List getTouchEvents() {
 
 Now that we’ve added the infrastructure to manage user input let’s see how to add a button to our screen and how to change its appearance by clicking repeatedly. First, let’s copy the **buttons.png** image into the assets folder. You can take this image with the source code [here](https://github.com/sasadangelo/HelloWorldApp/archive/0.0.7.zip). In the _Assets_ class we add a new bitmap:
 
-![Buttons](assets/img/buttons.png){:width="100" height="250" }
+![Buttons](assets/img/buttons.png){:width="100" height="250" .responsive_img}
 
 {% highlight java %}
 public class Assets {

@@ -10,7 +10,7 @@ categories:
 - Database
 ---
 
-![How to install PostgreSQL on Docker](assets/img/postgres_and_docker.png){:width="422" height="200" }
+![How to install PostgreSQL on Docker](assets/img/postgres_and_docker.png){:width="422" height="200" .responsive_img}
 
 # How to install PostgreSQL on Docker
 _Posted on **{{ page.date | date_to_string }}**_

@@ -10,7 +10,7 @@ categories:
 - Game Programming
 ---
 
-![How to create an Android application](assets/img/android-app-feature-picture.png){:width="267" height="200" }
+![How to create an Android application](assets/img/android-app-feature-picture.png){:width="267" height="200" .responsive_img}
 
 # How to create an Android application
 _Posted on **{{ page.date | date_to_string }}**_
@@ -31,7 +31,7 @@ If you will use the values, it will be easier for you to follow this article.
 -   **Company domain** is a qualifier that will be the beginning part of the package name. The term “package name”, if you already know Java, should be self-explanatory. Enter the value androidforfun.org.
 -   **Project location** will be the folder that will contain your project (<workspace>\\HelloWorldApp).
 
-![Android Studio New Project Form](assets/img/AndroidStudioNewProjectForm.png){:width="400" height="278" }
+![Android Studio New Project Form](assets/img/AndroidStudioNewProjectForm.png){:width="400" height="278" .responsive_img}
 
 Under **Select the form factors your app will run on**, select the **Phone and Tablet** check box. In Minimum SDK, select **API 8: Android 2.2 (Froyo)**. The reason why I let you choose this SDK is that with it your application will work on many devices.
 
@@ -41,11 +41,11 @@ Leave all other checkboxes (TV, Wear, and Glass) unchecked, and press **Next**.
 
 On the **Add an activity to Mobile** panel, select **Empty Activity** and click **Next**.
 
-![Android Studio Add Activity](assets/img/AndroidStudioAddActivity.png){:width="300" height="277" }
+![Android Studio Add Activity](assets/img/AndroidStudioAddActivity.png){:width="300" height="277" .responsive_img}
 
 In the **Customize the Activity** panel, change the _Activity Name_ in _MyActivity_. Automatically _Layout Name_ will be changed in _activity\_my_, the field _Title_ in _MyActivity_ and the menu _Resource Name_ will be _menu\_my_. Click on **Finish** to create the project.
 
-![Android Studio Customize the Activity](assets/img/AndroidStudioCustomizeTheActivity.png){:width="400" height="276" }
+![Android Studio Customize the Activity](assets/img/AndroidStudioCustomizeTheActivity.png){:width="400" height="276" .responsive_img}
 
 You have finally created the project for your first “Hello World” application.
 
@@ -92,23 +92,23 @@ Regardless of the method you choose, you can launch your application directly fr
 
 Now let’s see how to create an AVD and then run our application on it. In Android Studio, select _Tools>Android>AVD Manager_, or click the AVD Manager icon in the toolbar.
 
-![Android Studio AVD Manager](assets/img/AndroidStudioAVDManager.png){:width="400" height="182" }
+![Android Studio AVD Manager](assets/img/AndroidStudioAVDManager.png){:width="400" height="182" .responsive_img}
 
 The **AVD Manager** panel will appear. On the AVD Manager main screen, click **Create Virtual Device**.
 
-![Android Studio AVD Your Virtual Device](assets/img/AndroidStudioAVDYourVirtualDevice.png){:width="400" height="195" }
+![Android Studio AVD Your Virtual Device](assets/img/AndroidStudioAVDYourVirtualDevice.png){:width="400" height="195" .responsive_img}
 
 In the Select Hardware window, select a device configuration, such as Nexus 5, then click **Next**.
 
-![Android Studio AVD Select Hardware](assets/img/AndroidStudioAVDSelectHardware.png){:width="400" height="385" }
+![Android Studio AVD Select Hardware](assets/img/AndroidStudioAVDSelectHardware.png){:width="400" height="385".responsive_img}
 
 Select the desired Android version for AVD and click **Next**.
 
-![Android Studio AVD System Image](assets/img/AndroidStudioAVDSystemImage.png){:width="400" height="386" }
+![Android Studio AVD System Image](assets/img/AndroidStudioAVDSystemImage.png){:width="400" height="386" .responsive_img}
 
 Check the configuration and click **Finish**.
 
-![Android Studio AVD](assets/img/AndroidStudioAVD.png){:width="400" height="386" }
+![Android Studio AVD](assets/img/AndroidStudioAVD.png){:width="400" height="386" .responsive_img}
 
 ## Run your Android application
 
@@ -118,7 +118,7 @@ At this point, regardless if you have chosen to run your application on a physic
 
 The **Choose Device** window will appear, choose if you want a physical or virtual device and click **OK**. Android Studio will install the application and run it.
 
-![Android Studio Run Select Deployment Target](assets/img/AndroidStudioRunSelectDeploymentTarget.png){:width="400" height="311" }
+![Android Studio Run Select Deployment Target](assets/img/AndroidStudioRunSelectDeploymentTarget.png){:width="400" height="311" .responsive_img}
 
 You have finally created and run your first Android application from this moment you will begin to add features to it until you create your first video game.
 

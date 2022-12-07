@@ -8,7 +8,7 @@ excerpt: This is the seventh article of the Getting started with Docker series. 
 categories: Virtualization
 ---
 
-![How Docker Compose works](assets/img/docker-compose.png){:width="200" height="200" }
+![How Docker Compose works](assets/img/docker-compose.png){:width="200" height="200" .responsive_img}
 
 # How Docker Compose works
 _Posted on **{{ page.date | date_to_string }}**_

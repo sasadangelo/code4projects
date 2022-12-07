@@ -8,7 +8,7 @@ excerpt: In this article, I would like to give you a brief introduction to Kuber
 categories: Cloud
 ---
 
-![Relational Database Service (RDS): What Is It and How Does It Work?](assets/img/Amazon-RDS.png){:width="200" height="200" }
+![Relational Database Service (RDS): What Is It and How Does It Work?](assets/img/Amazon-RDS.png){:width="200" height="200" .responsive_img}
 
 # Relational Database Service (RDS): What Is It and How Does It Work?
 _Posted on **{{ page.date | date_to_string }}**_
@@ -31,7 +31,7 @@ You can install your own database service on an EC2 instance, however, you save 
 
 The basic idea of the Amazon RDS is to let the customer choose the database to create its engine (i.e. PostgreSQL, MySQL, MariaDB, etc), configure it for disaster recovery, and high availability with a few mouse clicks. The application can live inside Amazon Cloud or outside it, it depends on the customer’s choice. The goal here is that customers focus on their own applications letting Amazon manage the whole database infrastructure.
 
-![Amazon Relational Database Service](assets/img/Screenshot-2021-01-21-at-09.46.47.png){:width="450" height="193" }
+![Amazon Relational Database Service](assets/img/Screenshot-2021-01-21-at-09.46.47.png){:width="450" height="193" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -50,7 +50,7 @@ The only limit is that you cannot SSH on the EC2 instance where the service is d
 
 In order to create a database in Amazon RDS, you need to create a database instance. Basically, you need to define the **DB Instance Class** where you choose the number of CPUs, the memory, and the network performance of the EC2 machine hosting the instance. Then, you need to define the DB Instance Storage, for example, the disk type (SSD gp1 or io1). Amazon RDS supports six Db engines: MySQL, Amazon Aurora, SQL Server, PostgreSQL, MariaDB, and Oracle. Depending on how you configure the DB Instance class and storage and the DB Engine the price change.
 
-![Amazon Relational Database Service Instance](assets/img/Amazon-RDS-Instance.png){:width="450" height="224" }
+![Amazon Relational Database Service Instance](assets/img/Amazon-RDS-Instance.png){:width="450" height="224" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -58,7 +58,7 @@ _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon
 
 In a typical scenario, you should deploy your application and the database service on the same VPC, in a single AZ, on different subnets. Traffic from the Internet only reaches the application subnet that must be public, while the database subnet is private. Usually, you have to configure the private subnet to only accept connections from the public subnet.
 
-![Amazon Relational Database Service in a VPC](assets/img/Amazon-RDS-VPC.png){:width="450" height="256" }
+![Amazon Relational Database Service in a VPC](assets/img/Amazon-RDS-VPC.png){:width="450" height="256" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -68,13 +68,13 @@ _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon
 
 You can configure Amazon RDS to work in HA, in this case, you will have a DB Replica on a different AZ connected in Synchronous mode to the master database. In this way, you will not have any data loss because a transaction is closed only if it is present on both the DB Instance.
 
-![Amazon RDS HA](assets/img/Amazon-RDS-HA.png){:width="450" height="288" }
+![Amazon RDS HA](assets/img/Amazon-RDS-HA.png){:width="450" height="288" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
 If for some reason the Amazon RDS master copy is unavailable, the application automatically connects to the Synchronous instance.
 
-![Amazon RDS Failover](assets/img/Amazon-RDS-Failover.png){:width="450" height="286" }
+![Amazon RDS Failover](assets/img/Amazon-RDS-Failover.png){:width="450" height="286" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -86,7 +86,7 @@ It is possible to move the RDS Database instance from a Single-AZ to a Multi-AZ 
 2.  the snapshot is restored in another AZ of the same Region.
 3.  the Master starts to replicate itself on the Replica node.
 
-![Move RDS Cross AZ](assets/img/Move-RDS-Cross-AZ.png){:width="450" height="462" }
+![Move RDS Cross AZ](assets/img/Move-RDS-Cross-AZ.png){:width="450" height="462" .responsive_img}
 
 ## Relational Database Service in Scalability scenario
 
@@ -94,7 +94,7 @@ Amazon RDS supports also Read Replica for MySQL, PostgreSQL, MariaDB, Amazon Aur
 
 You can configure up to 5 Read Replicas, within the same AZ, cross AZ, or cross Region.
 
-![Amazon RDS Read Replica](assets/img/Amazon-RDS-Read-Replica.png){:width="450" height="409" }
+![Amazon RDS Read Replica](assets/img/Amazon-RDS-Read-Replica.png){:width="450" height="409" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -151,7 +151,7 @@ With these elements in mind, it’s easy to figure out the procedure to encrypt 
 -   eventually start replica nodes;
 -   move the application to the new database instance.
 
-![RDS Encrypt Database](assets/img/RDS-Encrypt-Database.png){:width="450" height="462" }
+![RDS Encrypt Database](assets/img/RDS-Encrypt-Database.png){:width="450" height="462" .responsive_img}
 
 ### Network Security
 
@@ -159,7 +159,7 @@ At the beginning of this article, I showed a typical scenario of an application 
 
 The second level of protection of your database instance is through the use of **Security Groups**. You can use Security Group with RDS instance in the same way you use them with EC2 instance. For example, you can specify the IP or Security Group that can access your database instance.
 
-![Amazon RDS in a VPC](assets/img/Amazon-RDS-VPC.png){:width="450" height="256" }
+![Amazon RDS in a VPC](assets/img/Amazon-RDS-VPC.png){:width="450" height="256" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -169,7 +169,7 @@ Another level of security is to control who can access the RDS instance. In the 
 
 Database engines like MySQL and PostgreSQL support IAM-based authentication. You can do this simply using a Role and a token retrieved from RDS API calls. This token will have a lifetime of 15 seconds. The benefits of this approach are to leverage IAM and Roles for user management.
 
-![RDS IAM Authentication](assets/img/RDS-IAM-Authentication.png){:width="450" height="513" }
+![RDS IAM Authentication](assets/img/RDS-IAM-Authentication.png){:width="450" height="513" .responsive_img}
 
 ## Amazon Aurora
 
@@ -179,11 +179,11 @@ It is a Cloud-optimized database engine and claims a 5x performance improvement 
 
 This database engine is HA native and automatic failover is instantaneous, it supports up to 15 replicas with a lag of less than 10 ms. In the figure below you can see that each data (i.e. block blue) is replicated 6 times across 3 AZs. Self-healing is achieved with peer-to-peer replication.
 
-![Amazon Aurora Architecture](assets/img/Amazon-Aurora-Architecture.png){:width="450" height="341" }
+![Amazon Aurora Architecture](assets/img/Amazon-Aurora-Architecture.png){:width="450" height="341" .responsive_img}
 
 As a Database Cluster Amazon Aurora has only one master that writes the data and multiple replicas that read them. In order to establish connections with these databases, there are two endpoints: one for the master and another one to load balance all the replicas. You can imagine these Writer/Reader endpoints like DNS names to use to write/read data into/from the databases. Adding and removing replicas is as easy as click a button.
 
-![Amazon Aurora DB Cluster](assets/img/Amazon-Aurora-DB-Cluster.png){:width="450" height="224" }
+![Amazon Aurora DB Cluster](assets/img/Amazon-Aurora-DB-Cluster.png){:width="450" height="224" .responsive_img}
 
 Moreover, there are other features like backup and restore, isolation and security, industry compliance, automatic patching with zero downtime, advanced monitoring, backtrack (restore data at any point in time without using backups).
 

@@ -10,7 +10,7 @@ categories:
 - Game Programming
 ---
 
-![Let’s start building the Game Framework](assets/img/game-framework.jpeg){:width="312" height="200" }
+![Let’s start building the Game Framework](assets/img/game-framework.jpeg){:width="312" height="200" .responsive_img}
 
 # Let’s start building the Game Framework
 _Posted on **{{ page.date | date_to_string }}**_
@@ -54,7 +54,7 @@ Creating a video game is a bit like making a movie. First, there is the storylin
 
 The following image shows, for example, the screens that we will implement in this article.
 
-![Start and Loading Screen](assets/img/StartAndLoadingScreen.png){:width="450" height="327" }
+![Start and Loading Screen](assets/img/StartAndLoadingScreen.png){:width="450" height="327" .responsive_img}
 
 As you can see the first screen is Loading Screen which is a dummy screen in which we only worry about loading all the video game assets into memory. In this case, there is just the bitmap **startscreen.png**. In the future, this screen could be made visible showing a progress bar that will report the loading progress. As this processing is very fast today we will avoid complicating unnecessarily our interface. Once all the assets have been loaded, the control will switch to the Start Screen on which we will show the bitmap already discussed [here](android-graphics-programming-for-games).
 

@@ -10,7 +10,7 @@ excerpt: In this article, I would like to explore the essence of Cloud Computing
 categories: Cloud
 ---
 
-![Getting started with Cloud Computing](assets/img/Cloud-Computing-mini.png){:width="221" height="200" }
+![Getting started with Cloud Computing](assets/img/Cloud-Computing-mini.png){:width="221" height="200" .responsive_img}
 
 # Getting started with Cloud Computing
 _Posted on **{{ page.date | date_to_string }}**_
@@ -25,7 +25,7 @@ Before to start let’s explain how a web application works in the traditional I
 
 A server is a computer with its own CPU and Memory (its Brain) and a long-term storage system (i.e. files or database) where there is the index.html file.
 
-![Traditional IT Overview](assets/img/Traditional-IT-Overview.png){:width="450" height="248" }
+![Traditional IT Overview](assets/img/Traditional-IT-Overview.png){:width="450" height="248" .responsive_img}
 
 ### The Problem with the Traditional IT
 
@@ -47,7 +47,7 @@ This is the [definition of Cloud Computing](http://faculty.winthrop.edu/domanm/
 
 > Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction. This cloud model is composed of five essential characteristics, three service models, and four deployment models.
 
-![Cloud Computing](assets/img/Cloud-Computing.png){:width="450" height="407" }
+![Cloud Computing](assets/img/Cloud-Computing.png){:width="450" height="407" .responsive_img}
 
 Cloud computing provides a simple way to access servers, storage, databases, and a broad set of application services over the Internet with a pay-as-you-go pricing model. With cloud computing, you don’t need to make large up-front investments in hardware and spend a lot of time managing it. Instead, you can provision exactly the right type and size of computing resources you need to power your newest bright idea.
 
@@ -63,7 +63,7 @@ A system to comply with the Cloud Computing model needs to meet five essential c
 4.  **Rapid elasticity**. All the resources or services made available to the user in a multi-tenant model can be assigned according to requests or automatically and released just as easily when they are no longer needed.
 5.  **Measured service**. The resources and services allocated to the user are constantly monitored to understand their use and, possibly, to scale them automatically or on-demand.
 
-![Five essential characteristics](assets/img/cloud-computing-characteristics.png){:width="450" height="276" }
+![Five essential characteristics](assets/img/cloud-computing-characteristics.png){:width="450" height="276" .responsive_img}
 
 _Photo from [http://moderncloudcomputing.blogspot.com](https://moderncloudcomputing.blogspot.com/2016/03/the-five-essential-characteristics-of.html)_
 
@@ -79,7 +79,7 @@ The Cloud Computing service models are essentially five:
 
 Traditionally, the first models on the market were IaaS, PaaS, and SaaS. To understand the difference between these three models, it is important to take a look at the following figure.
 
-![Service Models](assets/img/Cloud-Service-Models.png){:width="450" height="287" }
+![Service Models](assets/img/Cloud-Service-Models.png){:width="450" height="287" .responsive_img}
 
 It helps us to understand the real problem that we are trying to address with Cloud Computing. Basically, before the Cloud a business owner to turn his idea into reality needed to manage an infrastructure that distracted him from his real goal. **Cloud Computing’s** **goal** is precisely to turn ideas into products or services in the shortest time possible.
 
@@ -109,7 +109,7 @@ In the CaaS model, a new **Containers** layer exists that manages containers usi
 
 In the FaaS model, the platform is responsible to manage the data and the customer will be responsible only to write application functions that will run specific tasks.
 
-![CaaS and FaaS](assets/img/caas-faas.png){:width="450" height="603" }
+![CaaS and FaaS](assets/img/caas-faas.png){:width="450" height="603" .responsive_img}
 
 ## The Shared Responsibility Model
 
@@ -121,7 +121,7 @@ In a PaaS service model, the Cloud Provider will be responsible for the middlewa
 
 Therefore, whenever you have doubts about the responsibility of actions, consider the service model you are adopting, consider the separation of duty above in order to find an answer to your doubts.
 
-![IaaS Shared Responsibility Model](assets/img/Shared-Responsibility-IaaS.png){:width="450" height="288" }
+![IaaS Shared Responsibility Model](assets/img/Shared-Responsibility-IaaS.png){:width="450" height="288" .responsive_img}
 
 _Photo from [https://www.percona.com](https://www.percona.com/blog/2019/12/18/shared-responsibility-model-of-security-in-the-cloud/)_
 
@@ -134,7 +134,7 @@ Cloud Computing systems can be deployed according to four deployment models:
 3.  **Community cloud**. In this deployment model, a community, consisting of one or more organizations or one or more companies, makes available the Cloud system. Typically, these communities have a specific mission and rules to which all members adhere.
 4.  **Hybrid cloud**. It can be the combination of two or more cloud systems (public, private, community) that are seen as a single entity but which, in reality, are held together by standard or proprietary technologies.
 
-![Deployment Models](assets/img/Cloud-Deployment-Models.png){:width="450" height="374" }
+![Deployment Models](assets/img/Cloud-Deployment-Models.png){:width="450" height="374" .responsive_img}
 
 ## Global Infrastructure
 
@@ -142,11 +142,11 @@ One of the advantages of the Cloud platform is to go global in minutes and creat
 
 The following figure shows an example of the Amazon Web Services (AWS) Global Infrastructure.
 
-![AWS Global Infrastructure](assets/img/aws-global-infrastructure.png){:width="450" height="244" }
+![AWS Global Infrastructure](assets/img/aws-global-infrastructure.png){:width="450" height="244" .responsive_img}
 
 The basic idea is that applications, services, and data should live as close as possible to customers in order to reduce latency. However, not necessarily all applications, services, and data are replicated over multiple regions. Each region can have one or multiple Availabilities Zone (AZ). An Availability Zone has one or more data centers connected to each other with a low latency network.
 
-![Availability Zone](assets/img/availability-zone.png){:width="450" height="305" }
+![Availability Zone](assets/img/availability-zone.png){:width="450" height="305" .responsive_img}
 
 The basic idea is that a service can be replicated over multiple data centers so that it will be resilient even to unexpected data center shutdown.
 
@@ -189,7 +189,7 @@ Cloud Providers provide a lot of services in their ecosystems you can use to bui
 -   **Artificial Intelligence services**. These services allow you to bring artificial intelligence into your applications.
 -   **Mobile services**. This category of services allows you to build mobile applications.
 
-![AWS Services](assets/img/AWS-Services.png){:width="450" height="268" }
+![AWS Services](assets/img/AWS-Services.png){:width="450" height="268" .responsive_img}
 
 ## What’s Next?
 

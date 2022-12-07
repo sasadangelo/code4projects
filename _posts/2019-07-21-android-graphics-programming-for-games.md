@@ -10,7 +10,7 @@ categories:
 - Game Programming
 ---
 
-![Android Graphics Programming for Games](assets/img/Blue-bot-paint.jpeg){:width="355" height="200" }
+![Android Graphics Programming for Games](assets/img/Blue-bot-paint.jpeg){:width="355" height="200" .responsive_img}
 
 # Android Graphics Programming for Games
 _Posted on **{{ page.date | date_to_string }}**_
@@ -38,7 +38,7 @@ The _View_ class represents the basic element of any user interface in Android. 
 
 The following image shows the relationship between the _View_, _ViewGroup_, and _Layout_ classes. The first two classes form the so-called **Composite Pattern**, a mechanism to organize different objects (ex. buttons, text field, etc.) in complex user interfaces.
 
-![View, ViewGroup, and Layouts](assets/img/ViewViewGroupLayouts.png){:width="400" height="460" }
+![View, ViewGroup, and Layouts](assets/img/ViewViewGroupLayouts.png){:width="400" height="460" .responsive_img}
 
 In the implementation of our video game, we will not use the Android standard interface, so we won’t use _ViewGroup_ and the _Layout_ classes, but we’ll draw it by ourself through the mechanisms of the _View_ and _SurfaceView_ classes.
 

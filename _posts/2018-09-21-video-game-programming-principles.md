@@ -9,7 +9,7 @@ categories:
 - Game Programming
 ---
 
-![Video game programming principles](assets/img/Background-Sprite-Walking-mini.jpeg){:width="320" height="200" }
+![Video game programming principles](assets/img/Background-Sprite-Walking-mini.jpeg){:width="320" height="200" .responsive_img}
 
 # Video game programming principles
 _Posted on **{{ page.date | date_to_string }}**_
@@ -26,7 +26,7 @@ Typically, the video game interface is not based on the normal platform framewor
 
 Furthermore, a video game also requires handling physics and artificial intelligence as well as various input devices.
 
-![Game](assets/img/Game.png){:width="300" height="296" }
+![Game](assets/img/Game.png){:width="300" height="296" .responsive_img}
 
 In this article, we will talk about **Game Loop**, **Frame Rate**, **Color Vision**, **Frame buffer**, **Sprite**, **Alpha Blending**, and **Collision detection**.
 
@@ -108,7 +108,7 @@ It is clear that since the frame rate and time step are not deterministic the d
 
 A monitor projects a point on the screen called **pixel** whose color is given by the combination of three lights: red (R), green (G) and blue (B). As we have seen so far the combination of these three lights reach the human eye and its three photoreceptors (S, M, and L) break it down creating the sensation of that specific color in the brain.
 
-![Fotoreceptors](assets/img/Fotoreceptors.png){:width="450" height="259" }
+![Fotoreceptors](assets/img/Fotoreceptors.png){:width="450" height="259" .responsive_img}
 
 Typically modern computers use one byte (8 bits) for each RGB component for a total of 6 million (2^24=16 million) different colors. Sometimes, a single pixel is added to a fourth byte called Alpha, which we’ll discuss later.
 
@@ -116,7 +116,7 @@ These pixels are organized into an NxM matrix called video resolution.
 
 The greater these values are the better will be the “image definition”. To better understand what “image definition” term means see the following photo. The first image has a 10×10 resolution, the second one has an 18×18 resolution and the third one has a 30×30 resolution. As you can notice as you go on the right the image looks better.
 
-![Image resolution](assets/img/Image-resolution.png){:width="300" height="77" }
+![Image resolution](assets/img/Image-resolution.png){:width="300" height="77" .responsive_img}
 
 Considering that 4 bytes are needed to represent a pixel, in an HD video image (1920×1080) 8 Mb are required.
 
@@ -130,7 +130,7 @@ Many computers reserve a portion of memory for displaying video images. However,
 
 To eliminate this problem, many computers reserve a memory area 2, 4, or 8 times larger than the one needed to view the video image. Each of these areas is said **memory page** and, in a given instant, only one of it will be visible. This area will have a special pointer that will tell the computer which pages to display on the screen.
 
-![Video Memory](assets/img/Video-Memory.png){:width="450" height="334" }
+![Video Memory](assets/img/Video-Memory.png){:width="450" height="334" .responsive_img}
 
 Usually, a video screen is drawn on a not visible memory page (called frame buffer) and as soon as it will be complete a “page swap” occurs that typically is instantaneous. The result is a fluid visualization without flickering where the animation will be perfect. In our game, we will adopt a similar procedure. We will draw the screen first in a not visible area and then we will activate it.
 
@@ -138,7 +138,7 @@ Usually, a video screen is drawn on a not visible memory page (called frame buff
 
 A video game in addition to drawing the background bitmap often requires to draw some smaller bitmaps called **sprite** representing the characters of the video game. Typically to a character is associated with one or more sprites. For example, if the character has to walk you have to create a number of sprites that, displayed in sequence, create the illusion of a walk.
 
-![Sprite Walking](assets/img/Sprites-Walking.png){:width="300" height="117" }
+![Sprite Walking](assets/img/Sprites-Walking.png){:width="300" height="117".responsive_img}
 
 The animation is a sequence of N sprites drawn at a certain speed that creates the illusion of movement. Typically a sprite is a rectangle with its own background, let’s say white. If we overlap the sprite against the background of the game we will get an unpleasant result, because the white of its background overlays the background of the game creating an unpleasant result.
 
@@ -150,7 +150,7 @@ How do you make sure that the white part becomes transparent and you see the bac
 
 In computer graphics, **Alpha Blending** is the process of combining an image with the background to create the appearance of partial or full transparency. The concept of Alpha Blending was introduced in 1970 by Alvy Smith and then developed by Thomas Porter and Tom Duff. A 2D image we have seen that it is basically a matrix in which each pixel requires 3 bytes to describe the color. One byte for each RGB component. Besides these 3 bytes, there can be a fourth one indicating, via a value that varies from 0 to 1 (or 0 to 255), the opacity of the sprite background. 0 indicates absolute opacity, while 1 transparency.
 
-![Alpha Blending](assets/img/Background-Sprite-Walking.jpeg){:width="450" height="281" }
+![Alpha Blending](assets/img/Background-Sprite-Walking.jpeg){:width="450" height="281" .responsive_img}
 
 ## Collision Detection
 
@@ -164,7 +164,7 @@ This is the simplest and easiest to implement the technique and its computationa
 
 The idea is to delimit the object inside a rectangle. Two objects will collide when the relative rectangles containing them intersect.
 
-![Collisions Detection](assets/img/Collision-Detection.png){:width="300" height="141" }
+![Collisions Detection](assets/img/Collision-Detection.png){:width="300" height="141" .responsive_img}
 
 To easily determine if two rectangles intersect verify that the rectangle R1 does not contain one of the vertices of R2.
 

@@ -8,7 +8,7 @@ excerpt: In this article, I am going to talk about Amazon Elastic Block Storage 
 categories: Cloud
 ---
 
-![Amazon Elastic Block Storage (EBS) vs Elastic File Storage (EFS)](assets/img/HDD-SDD-mini.png){:width="356" height="200" }
+![Amazon Elastic Block Storage (EBS) vs Elastic File Storage (EFS)](assets/img/HDD-SDD-mini.png){:width="356" height="200" .responsive_img}
 
 # Amazon Elastic Block Storage (EBS) vs Elastic File Storage (EFS)
 _Posted on **{{ page.date | date_to_string }}**_
@@ -21,7 +21,7 @@ The AWS EBS service allows you to create **network-attached volumes** for your E
 
 However,  you can attach more EBS volumes to an EC2 instance depending on your needs. For example, if you are running a database service on your EC2 instance you can choose to create a volume for your data. The service allows you to choose the **Block Storage type** between **Hard Disk Drive** (**HDD**) or **State-Solid Drive** (**SSD**). For your storage data, for example, choose an SSD is better because it provides better performance, while for logs you can decide to use HDD because cheaper.
 
-![Amazon Elastic Block Storage](assets/img/HDD-SDD.png){:width="450" height="253" }
+![Amazon Elastic Block Storage](assets/img/HDD-SDD.png){:width="450" height="253" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -33,7 +33,7 @@ When you create an EBS Volume it is in an unattached state. In order to use it i
 
 When you attach the EBS volume to an EC2 instance you can decide to connect its lifecycle with the EC2 one using the **delete on termination** attribute mentioned above. In this case, if you terminate the EC2 instance the volume will terminate as well.
 
-![Amazon Elastic Block Storage Lifecycle](assets/img/Amazon-EBS-Lifecycle.png){:width="450" height="450" }
+![Amazon Elastic Block Storage Lifecycle](assets/img/Amazon-EBS-Lifecycle.png){:width="450" height="450" .responsive_img}
 
 ### Amazon EBS is AZ locked
 
@@ -41,7 +41,7 @@ You **must create EBS volumes on the same AZ** of the EC2 instance.
 
 The following figure shows the US-EAST Region with two AZs US-EAST-1A and US-EAST-1B. In these AZs there are 3 EC2 instances. Two instances have a single EBS volume attached, the third EC2 has two volumes attached. Finally, there is an EBS volume in US-EAST-1B unattached.
 
-![Elastic Block Storage is AZ locked](assets/img/AWS-EBS-Topology.png){:width="450" height="206" }
+![Elastic Block Storage is AZ locked](assets/img/AWS-EBS-Topology.png){:width="450" height="206" .responsive_img}
 
 ### Amazon EBS Pricing
 
@@ -60,19 +60,19 @@ Amazon EBS Snapshots are a point-in-time copy of your block data. For the first 
 
 If you want to move an EBS volume from one AZ to another you need to create a **snapshot** and create a volume from it in the new AZ because they are visible in the whole region. You can copy a snapshot in another region so you can easily create a volume from it in this new region.
 
-![AWS EBS Snapshots](assets/img/AWS-EBS-Snapshots.png){:width="450" height="154" }
+![AWS EBS Snapshots](assets/img/AWS-EBS-Snapshots.png){:width="450" height="154" .responsive_img}
 
 ### Move EC2 instance cross AZs
 
 You can use EBS snapshot also to move an EC2 instance from one Az to another. In this case, you create a snapshot for EC2 instance EBS volume, then create a custom Amazon Image (AMI) from it. The AMIs like Snapshots have a regional scope and you can use it in another AZ to recreate the EC2 instance. Copying the AMI in another region you can even move the EC2 instance volume to another region.
 
-![Move EC2 instance cross AZs](assets/img/EC2-instance-cross-AZ.png){:width="450" height="175" }
+![Move EC2 instance cross AZs](assets/img/EC2-instance-cross-AZ.png){:width="450" height="175" .responsive_img}
 
 ## AWS Elastic File Storage
 
 It is a Network Filesystem that you can use when you need to share the same filesystem over multiple EC2 instances. You can attach an EFS up to 100s EC2 instances. The word Elastic means that you don’t need capacity planning since you can increase or decrease the filesystem size based on your needs. This filesystem works only with Linux EC2 instances and it is accessible to EC2 instances in multiple AZs in the same region.  
 
-![Amazon EFS](assets/img/Amazon-EFS.png){:width="450" height="533" }
+![Amazon EFS](assets/img/Amazon-EFS.png){:width="450" height="533" .responsive_img}
 
 It is possible to associate a Security Group with an EFS service so that you can control its inbound and outbound traffic. EFS service is more expensive than EBS (almost three times more) but you only pay for the capacity in use.
 

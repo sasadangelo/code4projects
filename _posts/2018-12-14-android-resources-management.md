@@ -8,7 +8,7 @@ excerpt: This is the ninth article of the Android Game Programming series. In th
 categories: Android
 ---
 
-![Android Resources Management](assets/img/Resource_Management_mini.png){:width="200" height="112" }
+![Android Resources Management](assets/img/Resource_Management_mini.png){:width="200" height="112" .responsive_img}
 
 # Android Resources Management
 _Posted on **{{ page.date | date_to_string }}**_
@@ -23,7 +23,7 @@ In [this article](how-to-create-an-android-application), we have seen what the s
 
 Resources are compiled in a binary format and indexed using a unique ID. These IDs are stored in a Java class, named R, auto-generated at each modification and visible in the folder of the Android project. The code:
 
-![Resources](assets/img/Resources.png){:width="450" height="209" }
+![Resources](assets/img/Resources.png){:width="450" height="209" .responsive_img}
 
 {% highlight java %}
     setContentView(R.layout.activity_main);
@@ -44,7 +44,7 @@ For example, the resource of type string and name appname can be retrieved, in 
 
 The hardware fragmentation in the Android world remains one of the most difficult obstacles to overcome for the programmer. In this, resources play a very important role. Observing a typical Android project we can see that among the internal folders to **res** some appear with “canonical” names (menu, values, layout) and others with “modified” names (drawable-hdpi, drawable-mdpi but also values v14, values-v11, etc.).
 
-![Resource Management](assets/img/Resource_Management.png){:width="450" height="253" }
+![Resource Management](assets/img/Resource_Management.png){:width="450" height="253" .responsive_img}
 
 _Photo from [medium.com](https://medium.com/@rafael_toledo/layouts-resources-android-tutorials-pt-4-2aa3ef7485d2)_
 
@@ -62,7 +62,7 @@ An asset is nothing more than a file (i.e. image or sound) loaded into memory an
 
 In our case, in the assets folder, we will put all the images and sounds of our video game that will be loaded at its startup. To do this you will need to add a new method to the _FileIO_ interface called _readAsset_. The implementation of this method will be based on the _AssetManager_ class of Android that will find the files directly from the **assets** folder.
 
-![Droids Start Screen](assets/img/startscreen.png){:width="150" height="225" }
+![Droids Start Screen](assets/img/startscreen.png){:width="150" height="225" .responsive_img}
 
 When Android Studio will create the videogame APK file it will automatically include this folder in the final package. It is important that the file names are all lowercase. First, create the **assets** folder under the main folder and copy the **startscreen.png** file you can get by downloading the code of this [example here](https://github.com/sasadangelo/HelloWorldApp/archive/0.0.3.zip). Modify the _FileIO_ interface by adding the _readAssets_ method mentioned above.
 

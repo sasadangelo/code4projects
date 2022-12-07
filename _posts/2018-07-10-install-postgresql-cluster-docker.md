@@ -10,7 +10,7 @@ categories:
 - Database
 ---
 
-![How to install PostgreSQL cluster on Docker](assets/img/database-cluster.png){:width="385" height="200" }
+![How to install PostgreSQL cluster on Docker](assets/img/database-cluster.png){:width="385" height="200" .responsive_img}
 
 # How to install PostgreSQL cluster on Docker
 _Posted on **{{ page.date | date_to_string }}**_

@@ -8,7 +8,7 @@ excerpt: In this article, I want to discuss how docker volumes works and how to 
 categories: Virtualization
 ---
 
-![How Docker volumes works](assets/img/types-of-mounts-volume-mini.png){:width="393" height="200" }
+![How Docker volumes works](assets/img/types-of-mounts-volume-mini.png){:width="393" height="200" .responsive_img}
 
 # How Docker volumes works
 _Posted on **{{ page.date | date_to_string }}**_

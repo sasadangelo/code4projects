@@ -8,7 +8,7 @@ excerpt: Do you want to understand the difference between Cluster IP vs NodePort
 categories: Virtualization
 ---
 
-![Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress](assets/img/kubernetes-cluster-ip-services-mini.png){:width="231" height="200" }
+![Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress](assets/img/kubernetes-cluster-ip-services-mini.png){:width="231" height="200" .responsive_img}
 
 # Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress
 _Posted on **{{ page.date | date_to_string }}**_
@@ -31,7 +31,7 @@ It is extremely important to understand the difference between them to correctly
 
 A ClusterIP service is the default Kubernetes service. It gives you a service inside your cluster that other apps inside your cluster can access. **There is no external access**. The YAML for a ClusterIP service looks like this:
 
-```
+{% highlight yaml %}
 apiVersion: v1
 kind: Service
 metadata:
@@ -45,16 +45,19 @@ spec:
       port: 80
       targetPort: 80 
       protocol: TCP
-```
+{% endhighlight %}
 
 It’s possible to access, for debugging purposes, from the external to the Cluster IP using the Kubernetes proxy as the following figure shows. As you can notice, an application App2 can internally communicate with the application App1 via the Cluster IP.
 
 
-![Kubernetes Cluster IP Service](assets/img/kubernetes-cluster-ip-services.png){:width="450" height="389" }
+![Kubernetes Cluster IP Service](assets/img/kubernetes-cluster-ip-services.png){:width="450" height="389" .responsive_img}
 
 Start the Kubernetes Proxy:
 
-    `kubectl proxy --port=8080`
+{% highlight shell %}
+    kubectl proxy --port=8080`
+{% endhighlight %}
+
 
 Now, you can navigate through the Kubernetes API to access this service using this scheme:
 
@@ -72,15 +75,18 @@ A NodePort service is the easiest way to get external traffic directly to your s
 
 The range of the ports available for this kind of service is 30000-32767, in the YAML you can specify it or let Kubernetes assign a value to it. Usually, I prefer the second option to avoid conflicts and let Kubernetes do the right choice. You can know the value assigned with the command:
 
-`kubectl get services --all-namespaces`
+{% highlight shell %}
+    kubectl get services --all-namespaces
+{% endhighlight %}
 
-![Kubernetes Node Port Service](assets/img/kubernetes-nodeport-service.png){:width="450" height="365" }
+
+![Kubernetes Node Port Service](assets/img/kubernetes-nodeport-service.png){:width="450" height="365" .responsive_img}
 
 As you can notice from the image above the external traffic can arrive on the IP of one of the three nodes on port 30036, it will arrive to the NodePort service that will forward the traffic to a specific Pod.
 
 The YAML for a NodePort service looks like this:
 
-```
+{% highlight yaml %}
 apiVersion: v1
 kind: Service
 metadata:
@@ -95,7 +101,7 @@ spec:
       targetPort: 80
       nodePort: 30036
       protocol: TCP
-```
+{% endhighlight %}
 
 In the YAML file, the service map the HTTP port 80 to the container port 80 (targetPort), but it is accessible from the external using IP:PORT, where IP is one of the Worker Node (VMs) IP and PORT is the nodePort. As said above, if you don’t specify the nodePort field Kubernetes will assign a value to it.
 
@@ -105,7 +111,7 @@ I think NodePort is really convenient when you want to test immediately your ser
 
 A LoadBalancer service is the standard way to expose a service to the internet. On the Cloud of most vendors, this will create a Network Load Balancer that will give you a single IP address that will forward all traffic to your service.
 
-![Kubernetes Load Balancer Service](assets/img/kubernetes-loadbalancer-services.png){:width="450" height="317" }
+![Kubernetes Load Balancer Service](assets/img/kubernetes-loadbalancer-services.png){:width="450" height="317" .responsive_img}
 
 The problem with this type of service is that it is only available on the Cloud platform of some vendors and you should pay for it. If you are using a local Kubernetes cluster (i.e. using [Kubespray](https://github.com/kubernetes-sigs/kubespray) or [my ad-hoc solution](https://github.com/sasadangelo/k8s-cluster)) on your laptop there is no chance you can use this type of service. In this case, the only way to go is via NodePort.
 
@@ -115,13 +121,13 @@ Unlike all the above examples, Ingress is NOT a type of service. Instead, it sit
 
 The most important thing you can do with an Ingress is to do both path-based and subdomain based routing to backend services as shown by the following figure.
 
-![Kubernetes Ingress](assets/img/kubernetes-ingress.png){:width="450" height="382" }
+![Kubernetes Ingress](assets/img/kubernetes-ingress.png){:width="450" height="382" .responsive_img}
 
 ### Kubernetes Ingress
 
 The YAML for an Ingress looks like this:
 
-```
+{% highlight yaml %}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -144,7 +150,7 @@ spec:
             backend:
                 serviceName: bar
                 servicePort: 8080
-```
+{% endhighlight %}
 
 The following YAML file specifies that all the traffic to foo.mydomain.com is redirected to the foo service on the 8080 port. All the traffic to _mydomain.com/bar/*_ path will be redirected to the bar service on 8080 port.
 

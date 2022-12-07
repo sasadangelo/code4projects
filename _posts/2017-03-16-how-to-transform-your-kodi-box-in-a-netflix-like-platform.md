@@ -8,7 +8,7 @@ excerpt: In this article I would like to show you, step by step, how to transfor
 categories: Multimedia
 ---
 
-![How to transform your Kodi Box in a Netflix-like platform](assets/img/kodi-movies-library-mini.png){:width="200" height="112" }
+![How to transform your Kodi Box in a Netflix-like platform](assets/img/kodi-movies-library-mini.png){:width="200" height="112" .responsive_img}
 
 # How to transform your Kodi Box in a Netflix-like platform
 _Posted on **{{ page.date | date_to_string }}**_

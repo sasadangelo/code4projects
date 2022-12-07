@@ -8,7 +8,7 @@ excerpt: In this article, I would like to show you how to turn your Kodi Media C
 categories: Multimedia
 ---
 
-![How to turn your Kodi Media Center in a Torrent machine](assets/img/downloading-torrent.jpeg){:width="200" height="133" }
+![How to turn your Kodi Media Center in a Torrent machine](assets/img/downloading-torrent.jpeg){:width="200" height="133" .responsive_img}
 
 # How to turn your Kodi Media Center in a Torrent machine
 _Posted on **{{ page.date | date_to_string }}**_
@@ -27,11 +27,11 @@ In order to download torrents from your Kodi Box, you’ll need a software calle
 
 In order to install Transmission on your Kodi Box go on MyOSMC -> App Store.
 
-![OSMC App Store](assets/img//Kodi_App_Store.png){:width="450" height="253" }
+![OSMC App Store](assets/img//Kodi_App_Store.png){:width="450" height="253" .responsive_img}
 
 Select Transmission Torrent Client and install it. That’s it.
 
-![OSMC Transmission Install](assets/img/Kodi_Transmission_Install.png){:width="450" height="253" }
+![OSMC Transmission Install](assets/img/Kodi_Transmission_Install.png){:width="450" height="253" .responsive_img}
 
 ## Install Torrnado app on your Android phone
 
@@ -41,7 +41,7 @@ Install the [Torrnado app](https://play.google.com/store/apps/details?id=com.gab
 
 Configure in your Torrnado app the server to connect to. Enter the server IP address and leave the default port 9091.
 
-![Torrnado Configuration](assets/img/Torrnardo-Configuration-270x480.png){:width="270" height="480" }
+![Torrnado Configuration](assets/img/Torrnardo-Configuration-270x480.png){:width="270" height="480" .responsive_img}
 
 ## Install apps for Torrent Search on your Android phone
 
@@ -55,27 +55,27 @@ In order to know exactly how to configure your Torrent machine to avoid congesti
 
 Convert the upload speed from Mbps to KBS multiplying the value by 1000. In my case, my speed is 0.78 Mbs so I have 780 KBS. Put this value on [this page](http://infinite-source.de/az/az-calc.html) as shown in the following picture.
 
-![Torrent Client Configuration Tool](assets/img/Torrent-Client-Configuration-Tool.png){:width="450" height="264" }
+![Torrent Client Configuration Tool](assets/img/Torrent-Client-Configuration-Tool.png){:width="450" height="264" .responsive_img}
 
 The online tool will provide you the values you have to use in your configuration for the best results. Access to the web interface using this URL in your browser:
 
 **http://<your IP address>:9091/transmission/web/**
 
-![Transmission Web Interface](assets/img/Transmission-Web-Interface.png){:width="450" height="249" }
+![Transmission Web Interface](assets/img/Transmission-Web-Interface.png){:width="450" height="249" .responsive_img}
 
 Click on Settings to configure the Max upload and download speed.
 
-![Transmission Upload Speed](assets/img/Transmission-Upload-Speed.png){:width="200" height="133" }
+![Transmission Upload Speed](assets/img/Transmission-Upload-Speed.png){:width="200" height="133" .responsive_img}
 
-![Transmission - Configure Download Speed](assets/img/Transmission-Configure-Download-Speed.png){:width="200" height="133" }
+![Transmission - Configure Download Speed](assets/img/Transmission-Configure-Download-Speed.png){:width="200" height="133" .responsive_img}
 
 Add the Maximum number of connections per torrent and the Maximum number of connections globally in the tab Peers on the field: Max peers per torrent and Max peers globally.
 
-![Transmission Configure Speed](assets/img/Transmission-Configure-Speed.png){:width="450" height="281" }
+![Transmission Configure Speed](assets/img/Transmission-Configure-Speed.png){:width="450" height="281" .responsive_img}
 
 Then open the file _/home/osmc/.config/transmission-daemon/settings.json_ and set the value “upload-slots-per-torrent” with the value of Max upload slots per torrent.
 
-![Transmission Upload Slots per Torrent](assets/img/Transmission-Upload-Slots-per-Torrent.png){:width="450" height="279" }
+![Transmission Upload Slots per Torrent](assets/img/Transmission-Upload-Slots-per-Torrent.png){:width="450" height="279" .responsive_img}
 
 To configure _Max simultaneous downloads_ set the following values:
 
@@ -84,7 +84,7 @@ To configure _Max simultaneous downloads_ set the following values:
 "download-queue-size": 2,
 {% endhighlight %}
 
-![Transmission - Download Queue](assets/img/Transmission-Download-Queue.png){:width="450" height="283" }
+![Transmission - Download Queue](assets/img/Transmission-Download-Queue.png){:width="450" height="283" .responsive_img}
 
 Finally, configure the download directory for complete and incomplete files:
 

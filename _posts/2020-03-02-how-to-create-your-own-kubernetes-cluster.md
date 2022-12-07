@@ -11,7 +11,7 @@ categories:
 - Virtualization
 ---
 
-![Kubernetes Cluster](assets/img/kubernetes-cluster.jpeg){:width="247" height="200" }
+![Kubernetes Cluster](assets/img/kubernetes-cluster.jpeg){:width="247" height="200" .responsive_img}
 
 # How to create your own Kubernetes cluster
 _Posted on **{{ page.date | date_to_string }}**_
@@ -251,7 +251,7 @@ The docker image of this application is now on my Docker Hub account [sasadangel
 
 Kubernetes allows running a containerized application in three approaches: generators, imperative, and declarative. The first two methods are achieved via **kubectl** CLI while the third method is achieved declaring the desired state in a YAML configuration file. In all the cases, the result is this.
 
-![Kubernetes Hello World]({{ 'assets/img/kubernetes-hello-world.png' | relative_url }}){:width="450" height="132" }
+![Kubernetes Hello World]('assets/img/kubernetes-hello-world.png'){:width="450" height="132" .responsive_img}
 
 Let’s analyze all these methods in detail.
 

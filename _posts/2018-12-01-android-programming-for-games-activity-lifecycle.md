@@ -10,7 +10,7 @@ categories:
 - Game Programming
 ---
 
-![Android Programming for Games (Activity Lifecycle)](assets/img/ActivityState-mini.png){:width="200" height="91" }
+![Android Programming for Games (Activity Lifecycle)](assets/img/ActivityState-mini.png){:width="200" height="91" .responsive_img}
 
 # Android Programming for Games (Activity Lifecycle)
 _Posted on **{{ page.date | date_to_string }}**_
@@ -41,7 +41,7 @@ For each state change (creation, pause, ready, destroy, etc.), Android provides 
 
 The easiest way to understand an activity’s life cycle is to look at its state diagram and what methods are invoked passing from one state to another.
 
-![Activity States](assets/img/ActivityState.png){:width="450" height="204" }
+![Activity States](assets/img/ActivityState.png){:width="450" height="204" .responsive_img}
 
 _Photo from [https://developer.android.com](https://developer.android.com/guide/components/activities/activity-lifecycle)_
 

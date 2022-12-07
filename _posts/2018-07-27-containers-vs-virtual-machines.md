@@ -8,7 +8,7 @@ excerpt: If you&#039;re in trouble getting the differences between Containers vs
 categories: Virtualization
 ---
 
-![Containers vs Virtual Maachines](assets/img/virtual-machine-architecture-mini.jpeg){:width="200" height="211" }
+![Containers vs Virtual Maachines](assets/img/virtual-machine-architecture-mini.jpeg){:width="200" height="211" .responsive_img}
 
 # Containers vs Virtual Machines
 _Posted on **{{ page.date | date_to_string }}**_
@@ -30,7 +30,7 @@ Historically, as server processing power and capacity increased, applications ru
 
 A hypervisor, or a virtual machine monitor, is software, firmware, or hardware that creates and runs VMs. It’s what sits between the hardware and the virtual machine and is necessary to virtualize the server. History of virtual machines goes back to ’60, you can [find more details here](https://en.wikipedia.org/wiki/Virtual_machine).
 
-![Virtual Machine Architecture](assets/img/virtual-machine-architecture.jpeg){:width="450" height="475" }
+![Virtual Machine Architecture](assets/img/virtual-machine-architecture.jpeg){:width="450" height="475" .responsive_img}
 
 _Photo from [http://vitolavecchia.altervista.org](http://vitolavecchia.altervista.org/come-funziona-caratteristiche-del-virtual-machine-monitor-vmm/)_
 
@@ -64,7 +64,7 @@ The **Infrastructure as a Service** (IaaS) market was born and companies like Am
 
 Today a startup does not need to buy a machine, attach it to the power, configure disks, network cables, operating systems, and middleware. It simply connects to an IaaS provider, registers an account, orders a machine with the required specification (i.e. 4Gb RAM, 1 disk of 250 Gb, 4 core CPUs), pays the bill and it is ready to run his business.
 
-![IaaS](assets/img/iaas.png){:width="450" height="399" }
+![IaaS](assets/img/iaas.png){:width="450" height="399" .responsive_img}
 
 ## Containers
 
@@ -74,7 +74,7 @@ A Docker **Container** is an isolated environment created on top of the operati
 
 This container is saved in a template called **Image** that allows replicating this environment on whatever host system where Docker runs. For more details about the container definition, read the [first article of this series](getting-started-with-docker).
 
-![Container](assets/img/Container.png){:width="289" height="258" }
+![Container](assets/img/Container.png){:width="289" height="258" .responsive_img}
 
 But a question still persists on container basics, namely: **how do they differ from virtual machines?** A good starting point to answer this question is to list the pros and cons of the technology, the reason why it was born and use case scenarios where it can be used.
 
@@ -100,7 +100,7 @@ Sometimes on the web, we read that containers are a lightweight virtual machine 
 
 Containers leverage on isolation Linux facilities like Namespaces and Cgroups, which give us the illusion of an isolated environment while it shares the kernel with other containers. Docker to run on Windows and Mac system needs to run a Linux virtual machine where the containers live.
 
-![cgroups and namespaces in docker](assets/img/cgroups-namespaces-docker.png){:width="450" height="107" }
+![cgroups and namespaces in docker](assets/img/cgroups-namespaces-docker.png){:width="450" height="107" .responsive_img}
 
 These isolation mechanisms make the containers lightweight and do not add too much overhead to the application execution, the boot is faster than VMs and the environment configuration is replicable. These features opened to new forms of applications, the **containerized applications**.
 

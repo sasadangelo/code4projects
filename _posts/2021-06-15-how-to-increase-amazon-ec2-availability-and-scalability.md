@@ -159,7 +159,7 @@ Then you can associate to the Hosted Zone one or more RecordSet, in our example,
 -   **value**: 54.85.178.219
 -   **Routing policy**: Simple
 
-![Route 53 Hosted Zone](assets/img/Route-53-Hosted-Zone.png){:width="450" height="203" }
+![Route 53 Hosted Zone](assets/img/Route-53-Hosted-Zone.png){:width="450" height="203" .responsive_img}
 
 Route 53 supports several routing policy:
 

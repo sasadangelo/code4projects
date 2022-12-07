@@ -8,7 +8,7 @@ excerpt: In this article, I would like to show you how to build your own Raspber
 categories: Multimedia
 ---
 
-![How to build a Raspberry Media Center](assets/img/Hector_TV_Box-min.jpeg){:width="267" height="200" }
+![How to build a Raspberry Media Center](assets/img/Hector_TV_Box-min.jpeg){:width="267" height="200" .responsive_img}
 
 # How to build a Raspberry Media Center
 _Posted on **{{ page.date | date_to_string }}**_
@@ -50,11 +50,11 @@ Hector includes also other components like a DVB-T USB and two Gamepads. I haven
 
 ## The Solution: Hector a Raspberry Media Center
 
-![Raspberry Media Center with TV](assets/img/hector-next-tv.jpeg){:width="400" height="300" }
+![Raspberry Media Center with TV](assets/img/hector-next-tv.jpeg){:width="400" height="300" .responsive_img}
 
 The first issue I needed to solve was the power supply. In the beginning, I used a normal charger for the Samsung phone. Immediately I learned that it does not suit a TV box. The main problem is that it should provide 2A current to power the system. Samsung power supplies usually declare a current from 0.5 A to 2A, but those numbers are not reliable.
 
-![Raspberry Pi Power Supply](assets/img/raspberry-pi-power-supply.jpeg)
+![Raspberry Pi Power Supply](assets/img/raspberry-pi-power-supply.jpeg){:width="400" height="315" .responsive_img}
 
 I solved the problem using the official Raspberry Power Supply. Once [OSMC](https://osmc.tv/) installation completes, set the max\_current option to 1 in the /boot/config.txt file. OSMC is a Raspberry Linux distribution for Media Centers with a built-in KODI.
 
@@ -62,21 +62,21 @@ Connect the HDD to a Raspberry USB port. To cut the mess of cable the best solut
 
 The first step is to remove the HDD from its enclosure. You can use a small precision screwdriver. You have to remove also the screws it has on the side used to fit it into its enclosure.
 
-![HDD enclosure](assets/img/hdd-enclosure.jpeg)  
+![HDD enclosure](assets/img/hdd-enclosure.jpeg){:width="300" height="400" .responsive_img}
 
-![HD out enclosure](assets/img/hd-out-enclosure.jpeg)
+![HD out enclosure](assets/img/hd-out-enclosure.jpeg){:width="300" height="400" .responsive_img}
 
-![HDD back](assets/img/hdd-back.jpeg)
+![HDD back](assets/img/hdd-back.jpeg){:width="300" height="400" .responsive_img}
 
 At this point, you can put Raspberry and HDD in the enclosure using few screws available in the enclosure package. With HDD cable connects Raspberry with HDD.
 
-![HDD Raspberry Enclosure Cables DVB](assets/img/hdd-raspberry-enclosure-cables-dvb.jpg)
+![HDD Raspberry Enclosure Cables DVB](assets/img/hdd-raspberry-enclosure-cables-dvb.jpg){:width="400" height="300" .responsive_img}
 
 As you can see I have also a WI-FI dongle in the enclosure that works fine without any connection issues.
 
 I have a [TV Antenna stick](https://www.amazon.it/TrekStor-59900-Trekstor-DVBT-Stick-Terres/dp/B007Y6GA6Q) that I use to watch TV on KODI. Since it does not fit inside the box I bought two USB extensors. I use them also to attach two gamepads that my kids use to play video games. In this way, without open the box I disconnect the TV stick and connect the Gamepads.
 
-![Raspberry Media Center](assets/img/Hector_TV_Box-min.jpeg)
+![Raspberry Media Center](assets/img/Hector_TV_Box-min.jpeg){:width="267" height="200" .responsive_img}
 
 The enclosure is easy to open. There are no screws but magnets so you can open it and attach USB cables whenever you want. To be honest I do not like this option and this is the reason I bought the two USB extensors.
 

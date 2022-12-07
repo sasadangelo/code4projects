@@ -10,7 +10,7 @@ categories:
 - Game Programming
 ---
 
-![Android Game Programming](assets/img/Android-Game-Programming-mini.jpeg){:width="356" height="200" }
+![Android Game Programming](assets/img/Android-Game-Programming-mini.jpeg){:width="356" height="200" .responsive_img}
 
 # Android Game Programming
 _Posted on **{{ page.date | date_to_string }}**_
@@ -45,7 +45,7 @@ In the seventh article, I will introduce Android basic concepts and, step by ste
 
 In the tenth article, I will present the video game that we will implement in this series: Droids, a Tetris clone. I chose a video game so famous because I do not want you to spend a lot of time learning the rules of a new game. Tetris is so famous that there is no need for presentations.
 
-![Droids Screen](assets/img/Droids-Main-Screen.png){:width="200" height="355" } ![Droids Game Screen](assets/img/Droids-Game-Screen.png){:width="200" height="355" }
+![Droids Screen](assets/img/Droids-Main-Screen.png){:width="200" height="355" } ![Droids Game Screen](assets/img/Droids-Game-Screen.png){:width="200" height="355" .responsive_img}
 
 ## Source code structure
 

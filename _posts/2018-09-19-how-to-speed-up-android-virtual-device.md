@@ -8,7 +8,7 @@ excerpt: In this article, I will show you how to speed up Android Virtual Device
 categories: Android
 ---
 
-![How to speed up Android Virtual Device](assets/img/android_virtual_device-mini.jpeg){:width="216" height="200" }
+![How to speed up Android Virtual Device](assets/img/android_virtual_device-mini.jpeg){:width="216" height="200" .responsive_img}
 
 # How to speed up Android Virtual Device
 _Posted on **{{ page.date | date_to_string }}**_
@@ -31,11 +31,11 @@ Once entered, depending on the type of BIOS installed, you will need to enable t
 
 After restarting Windows and Android Studio, you will need to download the HAXM Installer which will install the hardware acceleration drivers. To do this, select _Tools → Android → SDK Manager_ to start the SDK Manager.
 
-![Android Studio HAXM SDK Manager](assets/img/AndroidStudioHAXMSDKManager.png){:width="400" height="142" }
+![Android Studio HAXM SDK Manager](assets/img/AndroidStudioHAXMSDKManager.png){:width="400" height="142" .responsive_img}
 
 The SDK Manager panel will start, in which you have to select, on the left, _Appearance & Behavior → System Settings → Android SDK_ and on the right the SDK Tools tab. You must then scroll through the list and select Intel x86 Emulator Accelerator (HAXM Installer) and proceed with the installation.
 
-![Android Studio HAXMhaxm](assets/img/AndroidStudioHAXM.png){:width="400" height="189" }
+![Android Studio HAXMhaxm](assets/img/AndroidStudioHAXM.png){:width="400" height="189" .responsive_img}
 
 **Warning**: this procedure does not install the HAXM drivers but only downloads the driver installer.
 

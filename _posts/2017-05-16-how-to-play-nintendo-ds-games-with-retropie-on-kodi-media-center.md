@@ -8,7 +8,7 @@ excerpt: In this article, I would like to show you how to play Nintendo DS games
 categories: Multimedia
 ---
 
-![How to play Nintendo DS games with Retropie on Kodi Media Center](assets/img/nintendo-ds.jpeg){:width="200" height="157" }
+![How to play Nintendo DS games with Retropie on Kodi Media Center](assets/img/nintendo-ds.jpeg){:width="200" height="157" .responsive_img}
 
 # How to play Nintendo DS games with Retropie on Kodi Media Center
 _Posted on **{{ page.date | date_to_string }}**_
@@ -40,9 +40,9 @@ Before we start with the installation I suggest you read the official [FAQ](http
 
 Select _Retropie_ menu item and next _Retropie Setup_.
 
-![Retropie Configuration](assets/img/Retropie_Configuration.png){:width="450" height="253" }
+![Retropie Configuration](assets/img/Retropie_Configuration.png){:width="450" height="253" .responsive_img}
 
-![Retropie Setup](assets/img/Retropie_Setup.png){:width="450" height="253" }
+![Retropie Setup](assets/img/Retropie_Setup.png){:width="450" height="253" .responsive_img}
 
 A text menu will appear, select the _Manage packages -> Manage experimental packages -> drastic_. You can exit from Emulation Station going back with button B, then open the menu pressing the button SELECT and selecting the QUIT menu item and confirming the exit selecting YES.
 
@@ -52,8 +52,8 @@ Nintendo DS games are simple “.NDS” file you have to copy under _/home/osmc/
 
 Starting from Kodi you can start Retropie again as explained above. You’ll notice that a new _Nintendo DS_ menu item has been added to the Retropie menu. If you select it you’ll see all the games installed.
 
-![NintendoDS Menu](assets/img/NintendoDS_Menu.png){:width="450" height="253" }
+![NintendoDS Menu](assets/img/NintendoDS_Menu.png){:width="450" height="253" .responsive_img}
 
-![NintendoDS Games](assets/img/NintendoDS_Games.png){:width="450" height="253" }
+![NintendoDS Games](assets/img/NintendoDS_Games.png){:width="450" height="253" .responsive_img}
 
 Here a list of my favorite games that I have already tested with DraStic: [Fifa 2007](https://www.youtube.com/watch?v=-rU_1K0Gdfc), [Mario Kart](https://www.youtube.com/watch?v=F2hltWsF_IE), [Pirates of the Caribbean Pirates](https://www.youtube.com/watch?v=GPkU1wPPb7Q), [Tomb Raider Legend](https://www.youtube.com/watch?v=8gI3dlXWOec), and [Madagascar](https://www.youtube.com/watch?v=7MpaTn0VgVY).

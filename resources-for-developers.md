@@ -5,7 +5,7 @@ slug: resources-for-developers
 ---
 # Resources for Developers
 
-![Resources for Developers](assets/img/resources-developers.jpeg)
+![Resources for Developers](assets/img/resources-developers.jpeg){:width="218" height="200" .responsive_img}
 
 In this page, I am going to collect all the websites, free ebooks, books, and other resources I think are helpful for software developers. If you think there are other resources that worth to be listed on this page feel free to contact me and put them at my attention.
 

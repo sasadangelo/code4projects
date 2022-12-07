@@ -8,7 +8,7 @@ excerpt: This article is an introduction to the Amazon Web Services (AWS) platfo
 categories: Cloud
 ---
 
-![Amazon Web Services (AWS) Introduction](assets/img/Amazon-Web-Services.png){:width="200" height="200" }
+![Amazon Web Services (AWS) Introduction](assets/img/Amazon-Web-Services.png){:width="200" height="200" .responsive_img}
 
 # Amazon Web Services (AWS) Introduction
 _Posted on **{{ page.date | date_to_string }}**_
@@ -23,19 +23,19 @@ AWS is the Cloud platform developed by Amazon and [available at the following ad
 
 There are a lot of [myths about of AWS was born](https://www.networkworld.com/article/2891297/the-myth-about-how-amazon-s-web-service-started-just-won-t-die.html), however, if you want to read the full story you can read [this blog post on Tech Crunch](https://techcrunch.com/2016/07/02/andy-jassys-brief-history-of-the-genesis-of-aws/). Basically, the platform was launched internally in 2002. In 2003 the Amazon Infrastructure was one of the company’s core strengths and from here the idea to sell it to other companies to drive their businesses. One year later, in 2004, the company launched publicly the AWS SQS service. Two years after, in 2006, the platform was officially launched with SQS, Ec2, and S3 services. In 2007 the platform was launched in Europe too. A lot of companies like Dropbox, Netflix, Airbnb, and NASA started to create their SaaS business on the AWS platform. The rest is history.
 
-![AWS History](assets/img/AWS-History.png){:width="450" height="176" }
+![AWS History](assets/img/AWS-History.png){:width="450" height="176" .responsive_img}
 
 ## AWS Global Infrastructure
 
 Today Amazon has a Global Infrastructure of 24 **Regions** and other 5 Regions that will be available soon. Each Region has a name like **us-east-1**, **eu-west-3**, etc. In these regions, there are 77 **Availability Zones** (AZ) and 216 **Points of Presence** (205 **Edge Locations** and 11 **Regional Caches**). Edge locations are part of the AWS Content Delivery Network (CDN) necessary to bring content (eg video, music, etc.) close to the end-users. For more details, [see this page](https://aws.amazon.com/it/about-aws/global-infrastructure/).
 
-![Amazon Web Services Global Infrastructure](assets/img/aws-global-infrastructure.png){:width="450" height="244" }
+![Amazon Web Services Global Infrastructure](assets/img/aws-global-infrastructure.png){:width="450" height="244" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
 In AWS a Region **has two or more Availability Zones (AZ)** (usually 3, min 2, max 6) that allow replicating services in such a way that they can be up and running even if a data center is down. AZs have high-speed and low latency network connections. In each AZ we can **have one or more datacenter**. All traffic between AZ’s is encrypted.
 
-![Amazon Web Services Region](assets/img/AWS-Region.png){:width="450" height="356" }
+![Amazon Web Services Region](assets/img/AWS-Region.png){:width="450" height="356" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -63,7 +63,7 @@ You can access AWS via three interface types:
 -   **AWS Command Line Interface.** It is an open-source tool for interacting with AWS services via discrete command. It runs on operating systems like macOS, Linux, and Windows. This is an alternative access method to the AWS Management console. It is programming language agnostic and particularly useful when you want to create automation via scripts. The access to the resources is protected by **access key id** (like user name but less mnemonic) and **secret access key** (like a password).
 -   **AWS Software Developer Kit (SDK)**. It incorporates the connectivity and functionality of the wide range of AWS Cloud services into your code. You can embed into your code administrative tasks to manage AWS resources. Lots of programming languages are supported like Java, C++, Go, Node.js, Ruby, PHP,  .NET, Python, and Javascript. The access to the resources is protected by **access key id** (like user name but less mnemonic) and **secret access key** (like a password).
 
-![AWS Management Console](assets/img/AWS-Management-Console.png){:width="450" height="224" }
+![AWS Management Console](assets/img/AWS-Management-Console.png){:width="450" height="224" .responsive_img}
 
 In AWS, services are divided into two big categories:
 
@@ -102,7 +102,7 @@ In this section, we will start to go more in-depth in the overview of the AWS Co
 
 The word **Compute** in the AWS EC2 name refers to a virtual or physical computer that can be used as a server for multiple purposes: application server, web server, mail server, etc. **Cloud** means that this computer is available in the Cloud, so it is accessible via the Internet with an IP address. Finally, the word **Elastic** means that this computer can be replicated on multiple instances to scale the server horizontally up and down depending on the workload. For more details [read the following article](amazon-ec2-for-beginners).
 
-![Amazon EC2](assets/img/Amazon-EC2.png){:width="450" height="188" }
+![Amazon EC2](assets/img/Amazon-EC2.png){:width="450" height="188" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -110,7 +110,7 @@ _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazo
 
 The AWS EBS service allows you to create network-attached volumes for your Ec2 instance. By default, the Ec2 instance has its own root filesystem but you can mount more volumes depending on your needs. The service allows you to choose the **Block Storage type** between **Hard Disk Drive** (**HDD**) or **State-Solid Drive** (**SSD**). For more details [read the following article](amazon-ec2-for-beginners).
 
-![HDD and SDD](assets/img/HDD-SDD.png){:width="450" height="253" }
+![HDD and SDD](assets/img/HDD-SDD.png){:width="450" height="253" .responsive_img}
 
 ### AWS Simple Storage Service (S3)
 
@@ -128,19 +128,19 @@ In order to use the AWS S3 service with your account, you need to create one or 
 
 For example, I can define the bucket **my-bucket-name** and store a file in it with key **media/welcome.mp4** (that is the folder and filename).
 
-![AWS S3 Bucket](assets/img/AWS-S3-Bucket.png){:width="450" height="215" }
+![AWS S3 Bucket](assets/img/AWS-S3-Bucket.png){:width="450" height="215" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
 The service itself takes care of replicate this information on other AZ to create redundancy and implement high availability.
 
-![AWS S3 bucket replication](assets/img/AWS-S3-bucket-replication.png){:width="450" height="237" }
+![AWS S3 bucket replication](assets/img/AWS-S3-bucket-replication.png){:width="450" height="237" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
 AWS supports scalability for the system allowing to access this object from a large number of users using a URI that contains the bucket name, the object storage service domain, and the object key.
 
-![AWS S3 URI](assets/img/AWS-S3-URI.jpeg){:width="450" height="106" }
+![AWS S3 URI](assets/img/AWS-S3-URI.jpeg){:width="450" height="106" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -154,7 +154,7 @@ You can deploy EC2 instances in a VPC with an IP address associated with them. T
 
 The following figure shows a VPC example.
 
-![AWS VPC](assets/img/AWS-VPC.png){:width="450" height="345" }
+![AWS VPC](assets/img/AWS-VPC.png){:width="450" height="345" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 

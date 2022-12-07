@@ -8,7 +8,7 @@ excerpt: "In this article, I would like to go into the details of Cloud Computin
 categories: Cloud
 ---
 
-![Introduction to the IBM Cloud platform](assets/img/IBM-Cloud.png){:width="327" height="200" }
+![Introduction to the IBM Cloud platform](assets/img/IBM-Cloud.png){:width="327" height="200" .responsive_img}
 
 # Introduction to the IBM Cloud platform
 _Posted on **{{ page.date | date_to_string }}**_
@@ -29,7 +29,7 @@ The IBM Cloud offering provides five ways to use its platform.
 4.  Cloud Foundry (PaaS).
 5.  Open Whisk (FaaS).
 
-![IBM Cloud Service Models](assets/img/IBM-Cloud-Service-Models.png){:width="450" height="186" }
+![IBM Cloud Service Models](assets/img/IBM-Cloud-Service-Models.png){:width="450" height="186" .responsive_img}
 
 ### Bare metal and virtual servers (IaaS)
 
@@ -51,13 +51,13 @@ Container infrastructure allows you to easily integrate your application with co
 
 [Cloud Foundry](https://www.cloudfoundry.org/) is an open source PaaS that allows you to build your own application easily thanks to a wide range of available services (i.e. SQL and NoSQL databases, cognitive, blockchain, and others) and framework (i.e. Node.js, Java, PHP, Python, and others). It interfaces easily with a wide range of Cloud systems in different deployment models.
 
-![CloudFoundry Services, Runtimes, and Clouds](assets/img/Cloud-Foundry-Services-Runtime-Cloud.png){:width="450" height="323" }
+![CloudFoundry Services, Runtimes, and Clouds](assets/img/Cloud-Foundry-Services-Runtime-Cloud.png){:width="450" height="323" .responsive_img}
 
 IBM formerly built its Public Cloud around Cloud Foundry adding software like a web UI console, a billing system, an extended command line, services (i.e cognitive, blockchain, and other).
 
 The following figure shows the Cloud Foundry architecture.
 
-![CloudFoundry Architecture](assets/imgCloudFoundry-Architecture.png){:width="450" height="299" }
+![CloudFoundry Architecture](assets/imgCloudFoundry-Architecture.png){:width="450" height="299" .responsive_img}
 
 Whenever a request comes from IBM Cloud web UI or command line the Router routes it to a Cloud Controller that is the Cloud Foundry brain.
 

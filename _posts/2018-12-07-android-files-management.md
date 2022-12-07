@@ -10,7 +10,7 @@ categories:
 - Game Programming
 ---
 
-![Android Files Management](assets/img/android-file.jpeg){:width="280" height="197" }
+![Android Files Management](assets/img/android-file.jpeg){:width="280" height="197" .responsive_img}
 
 # Android Files Management
 _Posted on **{{ page.date | date_to_string }}**_
@@ -41,7 +41,7 @@ Using internal memory is convenient when you want data to be inaccessible to the
 
 External memory is the ideal place for files that do not require special restrictions and can be shared by multiple applications. By default the applications are installed in the internal memory, you can specify the android: installLocation attribute in the manifest to install the application on the external memory. Users typically appreciate this option especially when the APK file size is large.
 
-![SD Card External Storage](assets/img/sd-card-external-storage.jpeg){:width="450" height="253" }
+![SD Card External Storage](assets/img/sd-card-external-storage.jpeg){:width="450" height="253" .responsive_img}
 
 ### External Memory Permissions
 

@@ -10,7 +10,7 @@ categories:
 - Virtualization
 ---
 
-![How docker networking works](assets/img/docker-bridge-network-mini.png){:width="214" height="200" }
+![How docker networking works](assets/img/docker-bridge-network-mini.png){:width="214" height="200" .responsive_img}
 
 # How docker networking works
 _Posted on **{{ page.date | date_to_string }}**_
@@ -35,7 +35,7 @@ The **bridge** driver is the default one and it creates a private network that a
 
 External access is granted by exposing ports to containers. In the following photo, you can see the containers _web_ and _db_ attached to the same bridge driver on the same host that allow them to communicate.
 
-![Docker Bridge Network](assets/img/docker-bridge-network.png){:width="450" height="420" }
+![Docker Bridge Network](assets/img/docker-bridge-network.png){:width="450" height="420" .responsive_img}
 
 _Photo from [https://blog.docker.com](https://blog.docker.com/2016/12/understanding-docker-networking-drivers-use-cases/)_
 
@@ -43,7 +43,7 @@ _Photo from [https://blog.docker.com](https://blog.docker.com/2016/12/understand
 
 The **host** driver allows the container to use directly the host network facility without any mapping. This driver is particularly useful in scenarios where networking sharing between containers is not necessary. In the following image, you can see the containers _C1_ and _nginx_ share the same host network interface.
 
-![Docker Host Networking](assets/img/docker-host-networking.png){:width="450" height="329" }
+![Docker Host Networking](assets/img/docker-host-networking.png){:width="450" height="329" .responsive_img}
 
 _Photo from [https://success.docker.com](https://success.docker.com/article/networking)_
 
@@ -51,13 +51,13 @@ _Photo from [https://success.docker.com](https://success.docker.com/article/netw
 
 The **overlay** driver allows the communication between containers running on different hosts.
 
-![Docker Overlay Networking](assets/img/docker-overlay-networking.png){:width="450" height="235" }
+![Docker Overlay Networking](assets/img/docker-overlay-networking.png){:width="450" height="235" .responsive_img}
 
 ### The macvlan networking
 
 The **macvlan** driver allows assigning a Mac address to a container. Using this driver is sometimes the best choice when dealing with legacy applications that expect to be directly connected to the physical network, rather than routed through the Docker host’s network stack.
 
-![Docker macvlan driver](assets/img/docker-macvlan.png){:width="450" height="516" }
+![Docker macvlan driver](assets/img/docker-macvlan.png){:width="450" height="516" .responsive_img}
 
 In this article series, I want to focus mainly on the bridge driver because we will use it to allow our cluster containers to communicate. If you want more details on Docker network driver you can read the [official documentation](https://docs.docker.com/network/).
 

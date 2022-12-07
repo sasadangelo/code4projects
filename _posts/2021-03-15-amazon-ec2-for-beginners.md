@@ -8,7 +8,7 @@ excerpt: The following article is an introduction to the Amazon Elastic Cloud Co
 categories: Cloud
 ---
 
-![Amazon Elastic Cloud Computing (EC2) for Beginners](assets/img/Amazon-EC2-1.png){:width="200" height="200" }
+![Amazon Elastic Cloud Computing (EC2) for Beginners](assets/img/Amazon-EC2-1.png){:width="200" height="200" .responsive_img}
 
 # Amazon Elastic Cloud Computing (EC2) for Beginners
 _Posted on **{{ page.date | date_to_string }}**_
@@ -19,7 +19,7 @@ In the [previous article](beginners-guide-identity-access-management), we create
 
 The word **Compute** in the AWS EC2 name refers to a virtual or physical computer that can be used as a server for multiple purposes: application server, web server, mail server, etc. The word **Cloud** refers to that this computer is available in the Cloud. This means that this computer is accessible via the Internet with an IP address. The word **Elastic** means that this computer can be replicated on multiple instances to scale the server horizontally in and out depending on the workload.
 
-![Amazon EC2](assets/img/Amazon-EC2.png){:width="450" height="188" } 
+![Amazon EC2](assets/img/Amazon-EC2.png){:width="450" height="188" .responsive_img} 
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -43,7 +43,7 @@ where:
 -   **2** is the **generation**. Amazon improves its instances over time.
 -   **micro** is the **capacity** of the machine.
 
-![Amazon EC2 Instance Types](assets/img/Amazon-EC2-Instance-Types.png){:width="450" height="136" }
+![Amazon EC2 Instance Types](assets/img/Amazon-EC2-Instance-Types.png){:width="450" height="136" .responsive_img}
 
 When you select an instance you can choose:
 
@@ -63,7 +63,7 @@ At the end of the configuration, you will have a remote computer up and running 
 
 The following figure shows some examples of Ec2 Instances. For more details, see [here](https://aws.amazon.com/it/ec2/instance-types/).
 
-![Amazon EC2 Instances Examples](assets/img/Amazon-Ec2-Instances-Examples.png){:width="450" height="153" }
+![Amazon EC2 Instances Examples](assets/img/Amazon-Ec2-Instances-Examples.png){:width="450" height="153" .responsive_img}
 
 ### Amazon EC2 Optimized Instances
 
@@ -126,19 +126,19 @@ If you want to use the Auto-Scaling service to manage the scale-in and scale-out
 
 The lifecycle of Amazon EC2 is quite easy and you can see the state diagram in the following image. When you create an EC2 instance, you select the instance type and the OS to run on it. Initially, the machine goes directly in Running state. You can stop and start it again. Finally, when you don’t need it anymore you can terminate it. A terminated instance cannot go into the Running state again, usually, in few minutes the machine disappears from your instances list in the dashboard.  
 
-![Amazon EC2 Lifecycle](assets/img/Amazon-EC2-Lifecycle-2.png){:width="450" height="332" }
+![Amazon EC2 Lifecycle](assets/img/Amazon-EC2-Lifecycle-2.png){:width="450" height="332" .responsive_img}
 
 ### Amazon EC2 Shared Responsibility Model
 
 The following figure summarizes the Shared Responsibility Model for Amazon EC2.
 
-![AWS EC2 Shared Responsibility Model](assets/img/AWS-EC2-Shared-Responsibility-Model.png){:width="450" height="189" }
+![AWS EC2 Shared Responsibility Model](assets/img/AWS-EC2-Shared-Responsibility-Model.png){:width="450" height="189" .responsive_img}
 
 ## Security Groups
 
 A Security Group is like a built-in firewall for your virtual servers to give you full control over how accessible your instances are. You have to imagine it like a filter that acts in front of the EC2 instance to analyze and filter all the incoming and outgoing traffic. You can define which service to expose via a port, from which machine receives incoming traffic, or to which machine sends outgoing traffic.
 
-![AWS Security Group Example](assets/img/AWS-Security-Group-Example.png){:width="450" height="99" }
+![AWS Security Group Example](assets/img/AWS-Security-Group-Example.png){:width="450" height="99" .responsive_img}
 
 _Photo from [http://progressivecoder.com](http://progressivecoder.com/understanding-aws-security-groups-and-best-practices-to-use-them/)_
 
@@ -156,7 +156,7 @@ For more details, [check out the following page](https://docs.aws.amazon.com/vpc
 
 The following figure shows an example of how to configure security groups in a typical multi-tier web application deployed on AWS.
 
-![AWS Security Groups](assets/img/AWS-Security-Groups.png){:width="450" height="226" }
+![AWS Security Groups](assets/img/AWS-Security-Groups.png){:width="450" height="226" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
