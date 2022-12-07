@@ -29,7 +29,7 @@ _Photo from [www.slideshare.net](https://www.slideshare.net/Docker/introduction-
 
 However, containerization is not a new concept and as you can see in the following figure it goes back to 2004. The question now is **why the containerization has become so important only in recent years?**
 
-![Docker History](assets/img/history-of-docker.png)
+![Docker History](assets/img/history-of-docker.png){:width="450" height="252" .responsive_img}
 
 _Photo from [www.slideshare.net](https://www.slideshare.net/Docker/introduction-to-docker-2017)_
 
