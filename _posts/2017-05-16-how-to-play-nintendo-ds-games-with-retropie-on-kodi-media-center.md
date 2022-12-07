@@ -36,7 +36,7 @@ Before we start with the installation I suggest you read the official [FAQ](http
 
 [Download the following file](https://raw.githubusercontent.com/RetroPie/RetroPie-Setup/master/scriptmodules/emulators/drastic.sh) and copy it under _/home/osmc/Retropie-Setup/scriptmodules/emulators_ using [FileZilla](https://filezilla-project.org/). Start Emulation Station going on Add-ons -> Retrosmc_._
 
-![Retrosmc Launcher](assets/img/Retrosmc-Launcher.png){:width="450" height="253" }
+![Retrosmc Launcher](assets/img/Retrosmc-Launcher.png){:width="450" height="253" .responsive_img}
 
 Select _Retropie_ menu item and next _Retropie Setup_.
 

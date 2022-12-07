@@ -41,7 +41,7 @@ As a first step, select the operating system to install on your instance. Amazon
 
 The one I use in this tutorial is an image with Ubuntu 20 for 64-bit x86 architecture. Click on the **Select** button.
 
-![Amazon EC2 Select Operating System](assets/img/4-Amazon-EC2-Select-Operating-System.png){:width="450" height="54" }
+![Amazon EC2 Select Operating System](assets/img/4-Amazon-EC2-Select-Operating-System.png){:width="450" height="54" .responsive_img}
 
 Select the **t2.micro** instance type because it is the only one eligible for Free Tier. This instance has 1 CPU, 1 Gb RAM, and up to 30 Gb of storage you can attach to it. This is enough for our tests. Click on the **Next: Configure Instance Details** button.
 
@@ -68,7 +68,7 @@ Now you can create volumes to attach to your EC2 instances. By default, EC2 has 
 
 Tags are a useful way to classify your AWS resources. It is really important when you have a lot of resources to manage. For example, in this test, we associate a “department” tag with the value “engineers”. Click the **Next: Configure Security Group** button.
 
-![Amazon EC2 Add Tags](assets/img/8-Amazon-EC2-Add-Tags.png){:width="450" height="184" }
+![Amazon EC2 Add Tags](assets/img/8-Amazon-EC2-Add-Tags.png){:width="450" height="184" .responsive_img}
 
 In this step, you can configure the EC2 Security Groups. By default, port 22 is open in order to allow you to access the machine remotely via SSH. In the next steps, you have to generate Keys to access the instance because they are more secure than passwords. Click the **Next** button. I opened also port 80 that is accessible only from my IP. In order to know which is my public IP, [I use this website](https://www.whatismyip.com/ip-whois-lookup/). This is required to access the website running on the EC2 instance. Click the **Review and Launch** button.
 
@@ -134,11 +134,11 @@ Click on the tabs **Inbound** or **Outbound rules** depending on which rules you
 
 In the previous article, I talked about the EC2 launch template and why it is important. Let’s see how to create a launch template and use it to create Ec2 instances. From the console search bar, looks for **EC2** and select the link **launch templates**. Click on the **Create launch template** button.
 
-![EC2 LaunchTemplate Home Page](assets/img/EC2-LaunchTemplate-1.png){:width="450" height="297" }
+![EC2 LaunchTemplate Home Page](assets/img/EC2-LaunchTemplate-1.png){:width="450" height="297" .responsive_img}
 
 Insert the name of the template and the version.
 
-![EC2 Launch Template Form](assets/img/EC2-LaunchTemplate-2.png){:width="450" height="375" }
+![EC2 Launch Template Form](assets/img/EC2-LaunchTemplate-2.png){:width="450" height="375" .responsive_img}
 
 Select the Amazon Machine Image (AMI) to use, the instance type (t2.micro for Free Tier), and the key pairs. In this example, we use the Ubuntu Server 20.04 LTS as AMI.
 

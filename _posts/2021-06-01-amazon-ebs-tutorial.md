@@ -89,7 +89,7 @@ Choose a name for your snapshot and one or more tags to classify it (this is opt
 
 Your snapshot is created. You can see it by selecting the link **Snapshot** in the same menu section above. The snapshot will be visible in all the AZs of the Region.
 
-![EBS Snapshot Created](assets/img/3-Snapshot-Created.png){:width="450" height="124" }
+![EBS Snapshot Created](assets/img/3-Snapshot-Created.png){:width="450" height="124" .responsive_img}
 
 Now you can create a volume in another AZ using this snapshot. Select the snapshot and click **Actions**\->**Create Volume** button.
 

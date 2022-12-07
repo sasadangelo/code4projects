@@ -138,11 +138,11 @@ Usually, a video screen is drawn on a not visible memory page (called frame buff
 
 A video game in addition to drawing the background bitmap often requires to draw some smaller bitmaps called **sprite** representing the characters of the video game. Typically to a character is associated with one or more sprites. For example, if the character has to walk you have to create a number of sprites that, displayed in sequence, create the illusion of a walk.
 
-![Sprite Walking](assets/img/Sprites-Walking.png){:width="300" height="117".responsive_img}
+![Sprite Walking](assets/img/Sprites-Walking.png){:width="300" height="117" .responsive_img}
 
 The animation is a sequence of N sprites drawn at a certain speed that creates the illusion of movement. Typically a sprite is a rectangle with its own background, let’s say white. If we overlap the sprite against the background of the game we will get an unpleasant result, because the white of its background overlays the background of the game creating an unpleasant result.
 
-![No Alpha Blending](assets/img/Background-Sprite-Bad.png){:width="450" height="281" }
+![No Alpha Blending](assets/img/Background-Sprite-Bad.png){:width="450" height="281" .responsive_img}
 
 How do you make sure that the white part becomes transparent and you see the background below? The answer is using **Alpha Blending**.
 

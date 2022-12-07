@@ -25,7 +25,7 @@ On one side smartphone owners had the opportunity to use their own mobile phon
 
 This article series was written to enable you to write, in a few days, your first Android video game and learn the rudiments of this platform by creating projects that are fun and non-trivial at the same time.
 
-![Android Game Programming](assets/img/Android-Game-Programming.jpeg){:width="450" height="253" }
+![Android Game Programming](assets/img/Android-Game-Programming.jpeg){:width="450" height="253" .responsive_img}
 
 Writing a video game is not an easy task, it requires different skills such as: know how to program and understand the video games related problems. It is required the knowledge of a programming language and the platform on which the video game should work.
 
@@ -45,7 +45,7 @@ In the seventh article, I will introduce Android basic concepts and, step by ste
 
 In the tenth article, I will present the video game that we will implement in this series: Droids, a Tetris clone. I chose a video game so famous because I do not want you to spend a lot of time learning the rules of a new game. Tetris is so famous that there is no need for presentations.
 
-![Droids Screen](assets/img/Droids-Main-Screen.png){:width="200" height="355" } ![Droids Game Screen](assets/img/Droids-Game-Screen.png){:width="200" height="355" .responsive_img}
+![Droids Screen](assets/img/Droids-Main-Screen.png){:width="200" height="355" .responsive_img} ![Droids Game Screen](assets/img/Droids-Game-Screen.png){:width="200" height="355" .responsive_img}
 
 ## Source code structure
 

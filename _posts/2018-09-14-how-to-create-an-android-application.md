@@ -37,7 +37,7 @@ Under **Select the form factors your app will run on**, select the **Phone and 
 
 Leave all other checkboxes (TV, Wear, and Glass) unchecked, and press **Next**.
 
-![Android Studio Target Android Device](assets/img/AndroidStudioTargetAndroidDevice.png){:width="400" height="277" }
+![Android Studio Target Android Device](assets/img/AndroidStudioTargetAndroidDevice.png){:width="400" height="277" .responsive_img}
 
 On the **Add an activity to Mobile** panel, select **Empty Activity** and click **Next**.
 
@@ -114,7 +114,7 @@ Check the configuration and click **Finish**.
 
 At this point, regardless if you have chosen to run your application on a physical or virtual device, you will be ready to run your application from Android Studio. To do this, select a project file and click on **Run** in the menu.
 
-![Android Studio Run](assets/img/AndroidStudioRun.png){:width="400" height="161" }
+![Android Studio Run](assets/img/AndroidStudioRun.png){:width="400" height="161" .responsive_img}
 
 The **Choose Device** window will appear, choose if you want a physical or virtual device and click **OK**. Android Studio will install the application and run it.
 

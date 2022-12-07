@@ -124,7 +124,7 @@ Enter the **User name** and the **Console password**, then click **Next**.
 
 Select **Add user to group** and click the button **Create group**, then click the **Next** button.
 
-![IAM Add Group](assets/img/3-IAM-Add-Group.png){:width="450" height="271" }
+![IAM Add Group](assets/img/3-IAM-Add-Group.png){:width="450" height="271" .responsive_img}
 
 Enter **Admins** as Group name and select the predefined policy **AdministratorAccess**.
 

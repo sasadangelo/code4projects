@@ -124,7 +124,7 @@ Suppose you want to play Bubble Bobble and you have installed the three emulator
 
 Go on _Add-Ons -> Retrosmc_ to start RetroPie again. When the Emulation Station menu appears to select the Arcade option.
 
-![Retropie Main Menu](assets/img/Retropie_Main_Menu.png){:width="450" height="253" }
+![Retropie Main Menu](assets/img/Retropie_Main_Menu.png){:width="450" height="253" .responsive_img}
 
 Select the game you want to play pressing the button A (button 2 on my controller). Before the game starts to play immediately the button X (button 1 on my controller), a text menu will appear where you can select the emulator you want to use to play the game.
 
