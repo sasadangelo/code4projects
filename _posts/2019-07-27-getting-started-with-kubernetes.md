@@ -227,7 +227,7 @@ On a Kubernetes cluster, you can deploy your containerized applications specifyi
 
 After the application instances creation, a Kubernetes Deployment Controller continuously monitors those instances. If the Node hosting an instance goes down, the Deployment Controller with a self-healing mechanism replaces it.
 
-<video autoplay loop muted playsinline>
+<video class="responsive_video" autoplay loop muted playsinline>
   <source src="assets/img/kubernetes-update.mp4" type="video/mp4">
 </video>
 

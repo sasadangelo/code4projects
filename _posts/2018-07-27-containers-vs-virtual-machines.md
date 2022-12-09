@@ -44,19 +44,39 @@ As a software developer, I experienced a lot of benefits to having a virtualized
 
 Here a complete list of pros and cons of the new technology introduced in the computer world.
 
-Pros
+<div class="pros-cons-table">
+  <div class="pros-cons-table-boxes">
+    <div class="pros-cons-table-pros-box">
+      <div class="pros-cons-table-header">
+        <div class="pros-cons-table-pros-symbol">
+          <img src="https://www.code4projects.net/wp-content/plugins/joomdev-wp-pros-cons/assets/icons/thumbs-up-regular.svg">
+        </div>
+        <h4>Pros</h4>
+      </div>
+      <ul>
+        <li>Use the system resources in a more efficient way by applications.</li>
+        <li>Run multiple different OS on the same host system.</li>
+        <li>Possibility to create and destroy virtual machines on-demand in a few minutes.</li>
+        <li>Make a snapshot of a virtual environment at any point in time.</li>
+        <li>Faster system boot compared to bare metal.</li>
+      </ul>
+    </div>  
+    <div class="pros-cons-table-cons-box cons-content">
+      <div class="pros-cons-table-header">
+        <div class="pros-cons-table-cons-symbol">
+          <img src="https://www.code4projects.net/wp-content/plugins/joomdev-wp-pros-cons/assets/icons/thumbs-down-regular.svg">
+        </div>
+        <h4>Cons</h4>
+      </div>
+      <ul>
+        <li>Add overhead in application execution due to the hypervisor.</li>
+        <li>Manage an additional software layer (the Hypervisor).</li>
+        <li>Slower system boot compared to containers.</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
--   Use the system resources in a more efficient way by applications.
--   Run multiple different OS on the same host system.
--   Possibility to create and destroy virtual machines on-demand in a few minutes.
--   Make a snapshot of a virtual environment at any point in time.
--   Faster system boot compared to bare metal.
-
-Cons
-
--   Add overhead in application execution due to the hypervisor.
--   Manage an additional software layer (the Hypervisor).
--   Slower system boot compared to containers.
 
 As Hypervisor technologies improved over time new companies started to appear on the market providing the possibilities to rent one or more machines in the Cloud with specific resources like RAM, disk space, CPU core and so on.
 

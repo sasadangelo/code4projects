@@ -35,7 +35,7 @@ Docker has three options for containers to store files in the host machine so th
 
 **Bind mounts** are the folder on the host system shared with the container. Non-Docker processes on the Docker host or a Docker container can modify them at any time.
 
-![types of mounts volume](https://code4projects.altervista.org/wp-content/uploads/2018/12/types-of-mounts-volume.png)
+![types of mounts volume](assets/img/types-of-mounts-volume.png){:width="450" height="229" .responsive_img}
 
 _Photo from [https://docs.docker.com](https://docs.docker.com/storage/volumes/)_
 

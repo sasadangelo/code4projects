@@ -22,6 +22,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: #3b3b3b;
+  text-align: left;
 }
 
 h1 {
@@ -49,6 +50,11 @@ h6 {
 }
 
 .responsive_img {
+  height: auto;
+  max-width: 100%;
+}
+
+.responsive_video {
   height: auto;
   max-width: 100%;
 }
@@ -1048,10 +1054,6 @@ header {
   line-height: 1.6em;
 }
 
-.feature-content-text a:hover {
-  color: #f47e3c !important;
-}
-
 .feature-content-image {
   display: flex;
   flex-direction: row;
@@ -1060,6 +1062,10 @@ header {
 
 .feature-content-text a {
   color: #1d67b2;
+}
+
+.feature-content-text a:hover {
+  color: #f47e3c !important;
 }
 /*
  * ################################################################################
@@ -1660,4 +1666,123 @@ footer {
 /* This is to fix the source code x scroll */
 pre {
   overflow-x: scroll;
+}
+
+.pros-cons-table {
+  background: #F9F9F9;
+  border: dashed 2px #27C110;
+  margin: 30px auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.pros-cons-table-boxes {
+  margin-top: calc(100px / 2);
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px;
+}
+
+.pros-cons-table .pros-cons-table-boxes>div {
+  -ms-flex: 1 0 0%;
+  flex: 1 0 0%;
+}
+
+.pros-cons-table-pros-box {
+  background: #fff;
+  margin: 0 15px;
+  border: 1px solid #eee;
+}
+
+.pros-cons-table-pros-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.pros-cons-table-pros-box ul li {
+  list-style-type: none;
+  position: relative;
+  margin: 10px 0;
+  margin-left: 1.5em;
+}
+
+.pros-cons-table-pros-box ul li::before {
+  content: url(../img/check-solid.svg);
+  padding-right: 10px;
+  background-size: 16px;
+  background-position: 1px;
+  background-repeat: no-repeat;
+}
+
+.pros-cons-table-cons-box {
+  background: #fff;
+  margin: 0 15px;
+  border: 1px solid #eee;
+}
+
+.pros-cons-table-cons-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.pros-cons-table-cons-box ul li {
+  list-style-type: none;
+  position: relative;
+  margin: 10px 0;
+  margin-left: 1.5em;
+}
+
+.pros-cons-table-cons-box ul li:before {
+  content: url(../img/times-solid.svg);
+  padding-right: 10px;
+  background-size: 16px;
+  background-position: 1px;
+  background-repeat: no-repeat;
+}
+
+.pros-cons-table-header {
+  margin-bottom: 20px;
+  margin-top: calc(-100px / 2);
+  text-align: center;
+}
+
+.pros-cons-table-header h4 {
+  text-align: center;
+  margin-top: 10px;
+} 
+
+.pros-cons-table-pros-symbol {
+  color: #fff;
+  background: #27C110;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border-radius: 100%;
+  margin: 0 auto;
+  text-align: center;  
+}
+
+.pros-cons-table-pros-symbol img {
+  width: 30px;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.pros-cons-table-cons-symbol {
+  color: #fff;
+  background: red;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border-radius: 100%;
+  margin: 0 auto;
+  text-align: center;  
+}
+
+.pros-cons-table-cons-symbol img {
+  width: 30px;
+  height: 100%;
+  vertical-align: middle;
 }
