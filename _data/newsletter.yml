@@ -1,0 +1,40 @@
+tag: >
+    <!-- MailerLite Universal -->
+    <script>
+      (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
+      var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
+      f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
+      var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
+      _.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+      var ml_account = ml('accounts', '630507', 'v7c1f1b7e1', 'load');
+    </script>
+    <!-- End MailerLite Universal -->
+home:
+  newsletter-title: Join our Newsletter and Download a Free eBook
+  newsletter-image: assets/img/3D-DockerCover-large.png
+  newsletter-text: >
+    Fill the form below to subscribe to the Code4Projects Newsletter. It's free. You'll receive the eBook
+    <b>Getting Started with Docker</b> for free. We hate spam, we use this Newsletter to send updates to our 
+    readers from time to time. You can cancel your subscription at any time. If you're interested insert 
+    your name and email and click the download button.
+  newsletter-code: >
+    <div class="ml-form-embed"
+      data-account="630507:v7c1f1b7e1"
+      data-form="3516805:i5h4l5">
+    </div>
+sidebar:
+  newsletter-title: Download Free eBook
+  newsletter-image: assets/img/3D-DockerCover-medium.png
+  newsletter-code: >
+    <div class="ml-form-embed"
+      data-account="630507:v7c1f1b7e1"
+      data-form="3518464:d0h1v2">
+    </div>
+post:
+  newsletter-title: Download Free eBook
+  newsletter-image: assets/img/3D-DockerCover-medium.png
+  newsletter-code: >
+    <div class="ml-form-embed"
+      data-account="630507:v7c1f1b7e1"
+      data-form="3534595:f8z8t9">
+    </div>

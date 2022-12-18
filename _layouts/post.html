@@ -5,6 +5,16 @@ layout: default
   <div id="post-container">
     <div id="post-content">
       {{ content }}
+      <div class="newsletter-post">
+        <div class="newsletter-post-box">
+          <div class="newsletter-post-image">
+            <img src="{{ site.data.newsletter.post.newsletter-image }}" alt="{{ site.data.newsletter.post.newsletter-title }}"/>
+          </div>
+          <div class="newsletter-post-form">
+            {{ site.data.newsletter.post.newsletter-code }}
+          </div>
+        </div>  
+      </div>
     </div>
     <div id="post-sidebar">
       {% include post_sidebar.html %}

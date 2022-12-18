@@ -554,7 +554,7 @@ header {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: flex-start;
 }
 }
@@ -566,7 +566,7 @@ header {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: flex-start;
 }
 } 
@@ -606,7 +606,7 @@ header {
 @media screen and (min-width: 480px) and (max-width: 767px) {
 #post-content {
   float: left;
-  width: 66.287%;
+  width: 100%;
   height: 100%;
   padding: 5px 5px 5px 5px;
   margin: 5px 2px 5px 0px;
@@ -651,7 +651,7 @@ header {
 @media screen and (min-width: 1024px) {
 #post-sidebar {
   height: 100%;
-  width: 27%;
+  width: 28.762%;
   padding: 5px 5px 5px 5px;
   margin: 5px 0px 5px 2px;
 }
@@ -661,7 +661,7 @@ header {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 #post-sidebar {
   height: 100%;
-  width: 27%;
+  width: 28.762%;
   /*float: right;*/
   padding: 5px 5px 5px 5px;
   margin: 5px 0px 5px 2px;
@@ -1067,6 +1067,7 @@ header {
 .feature-content-text a:hover {
   color: #f47e3c !important;
 }
+
 /*
  * ################################################################################
  * # Footer
@@ -1660,14 +1661,9 @@ footer {
 
 /*
   * ################################################################################
-  * # Custom code
+  * # Pros and Cons table
   * ################################################################################
-*/
-/* This is to fix the source code x scroll */
-pre {
-  overflow-x: scroll;
-}
-
+  */
 .pros-cons-table {
   background: #F9F9F9;
   border: dashed 2px #27C110;
@@ -1785,4 +1781,260 @@ pre {
   width: 30px;
   height: 100%;
   vertical-align: middle;
+}
+
+/*
+ * ################################################################################
+ * # Newsletter in the Home Page
+ * ################################################################################
+ */
+/* For Desktop */
+@media screen and (min-width: 1024px) {
+.newsletter-home {
+  background-color: #efefef;
+  padding: 60px 230px;
+}
+
+.newsletter-home-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px
+}
+}
+    
+/* For Tablets or iPad */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+.newsletter-home {
+  background-color: #efefef;
+  padding: 60px 35px;
+}
+
+.newsletter-home-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+}
+  
+/* For Laptop or small-size screen */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+.newsletter-home {
+  background-color: #efefef;
+  padding: 60px 35px;
+}
+
+.newsletter-home-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+}
+  
+/* For Mobile Phones */
+@media screen and (max-width: 479px) {
+.newsletter-home {
+  background-color: #efefef;
+  padding: 60px 35px;
+}
+
+.newsletter-home-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+} 
+
+.newsletter-home-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.newsletter-home-form {
+  float: clear;
+}
+.newsletter-home-text-title {
+  color: #444444;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 30px 0px 30px 0px;
+  text-align: left;
+} 
+
+.newsletter-home-text {
+  color: #666666;
+  font-size: 15px;
+  text-align: justify;
+  line-height: 1.6em;
+}
+
+
+/*
+ * ################################################################################
+ * # Newsletter in the Post Sidebar
+ * ################################################################################
+ */
+/* For Desktop */
+@media screen and (min-width: 1024px) {
+.newsletter-sidebar {
+  background-color: #efefef;
+  border-radius: 10px;
+  margin: 0 0 1.5em 0;
+  /*padding: 20px 10px;*/
+}
+
+.newsletter-sidebar-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+}
+        
+/* For Tablets or iPad */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+.newsletter-sidebar {
+  background-color: #efefef;
+  border-radius: 10px;
+  margin: 0 0 1.5em 0;
+  /*padding: 20px 10px;*/
+}
+
+.newsletter-sidebar-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+}
+      
+/* For Laptop or small-size screen */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .newsletter-sidebar {
+    display: none;
+  }
+  
+  .newsletter-sidebar-box {
+    display: none;
+  }
+  }
+      
+/* For Mobile Phones */
+@media screen and (max-width: 479px) {
+.newsletter-sidebar {
+  display: none;
+}
+
+.newsletter-sidebar-box {
+  display: none;
+}
+} 
+
+.newsletter-sidebar-form {
+  color: #666666;
+  font-size: 10px;
+  text-align: justify;
+  line-height: 16px;;
+  font-weight: 400;
+}
+
+.newsletter-sidebar-image {
+  margin: auto auto;
+}
+
+/*
+ * ################################################################################
+ * # Newsletter Below the Post
+ * ################################################################################
+ */
+/* For Desktop */
+@media screen and (min-width: 1024px) {
+.newsletter-post {
+  background-color: #efefef;
+  border-radius: 10px;
+  margin: 0 0 1.5em 0;
+}
+
+.newsletter-post-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.newsletter-post-form {
+  padding: 20px;
+  line-height: 16px;;
+}
+}
+      
+/* For Tablets or iPad */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+.newsletter-post {
+  background-color: #efefef;
+  border-radius: 10px;
+  margin: 0 0 1.5em 0;
+}
+
+.newsletter-post-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.newsletter-post-form {
+  padding: 20px;
+  line-height: 16px;;
+}
+}
+    
+/* For Laptop or small-size screen */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+.newsletter-post {
+  background-color: #efefef;
+  border-radius: 10px;
+  margin: 0 0 1.5em 0;
+}
+
+.newsletter-post-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.newsletter-post-form {
+  line-height: 16px;;
+}
+}
+    
+/* For Mobile Phones */
+@media screen and (max-width: 479px) {
+.newsletter-post {
+  background-color: #efefef;
+  border-radius: 10px;
+  margin: 0 0 1.5em 0;
+}
+
+.newsletter-post-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.newsletter-post-form {
+  line-height: 16px;;
+}
+} 
+
+.newsletter-post-image {
+  padding: 20px;
+  margin: auto auto;
+}
+
+/*
+  * ################################################################################
+  * # Custom code
+  * ################################################################################
+  */
+/* This is to fix the source code x scroll */
+pre {
+  overflow-x: scroll;
 }

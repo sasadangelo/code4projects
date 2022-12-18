@@ -28,16 +28,28 @@ layout: default
           </div>
         {% endfor %}
       </div>
+      <div class="newsletter-home">
+        <div class="newsletter-home-box">
+          <div class="newsletter-home-image">
+            <img src="{{ site.data.newsletter.home.newsletter-image }}" alt="{{ site.data.newsletter.home.newsletter-title }}"/>
+          </div>
+          <div class="newsletter-home-form">
+            {{ site.data.newsletter.post.newsletter-code }}
+          </div>
+        </div>
+      </div>
       {% for item in site.data.home.feature-area %}
-        <div class="{% cycle 'feature-content-row-grey', 'feature-content-row-white' %}">
-          <div class="{% cycle 'feature-content-box-grey', 'feature-content-box-white' %}">
+        <div class="{% cycle 'feature-content-row-white', 'feature-content-row-grey' %}">
+          <div class="{% cycle 'feature-content-box-white', 'feature-content-box-grey' %}">
             <div class="feature-content-image">
               <a href="{{ item.feature-link }}">
                 <img src="{{ item.feature-image }}" />
               </a>
             </div>
             <div class="feature-content-text">
-              <div class="feature-content-text-title"><a href="{{ item.feature-link }}">{{ item.feature-title }}</a></div>
+              <div class="feature-content-text-title">
+                <a href="{{ item.feature-link }}">{{ item.feature-title }}</a>
+              </div>
               {{ item.feature-text }}
             </div>
           </div>

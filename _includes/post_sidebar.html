@@ -1,3 +1,13 @@
+<div class="newsletter-sidebar">
+  <div class="newsletter-sidebar-box">
+    <div class="newsletter-sidebar-image">
+      <img src="{{ site.data.newsletter.sidebar.newsletter-image }}" alt="{{ site.data.newsletter.sidebar.newsletter-title }}"/>
+    </div>
+    <div class="newsletter-sidebar-form">
+      {{ site.data.newsletter.sidebar.newsletter-code }}
+    </div>
+  </div>  
+</div>
 {% if page.post_series_id != null %}
   {% for post_series in site.data.post_sidebar %}
     {% for page_post_series_id in page.post_series_id %}
