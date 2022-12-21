@@ -3,6 +3,8 @@ email: sasadangelo@gmail.com
 description: What I have learned after 30 years of programming
 baseurl: "/code4projects"
 url: "https://sasadangelo.github.io"
+copyright: Code4Projects, Copyright Salvatore D'Angelo © 2016-2022.
+logo: /assets/img/code4projects-logo-mini.webp
 
 # Typography configuration
 fonts:
