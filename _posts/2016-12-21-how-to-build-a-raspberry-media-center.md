@@ -6,6 +6,10 @@ slug: raspberry-media-center
 thumbnail: assets/img/Hector_TV_Box-min.jpeg
 excerpt: In this article, I would like to show you how to build your own Raspberry Media Center using Raspberry, an HDD and an enclosure.
 categories: Multimedia
+sitemap:
+  lastmod: 2016-12-21
+  priority: 0.7
+  changefreq: 'weekly'
 ---
 
 ![How to build a Raspberry Media Center](assets/img/Hector_TV_Box-min.jpeg){:width="267" height="200" .responsive_img}

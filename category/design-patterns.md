@@ -6,4 +6,6 @@ permalink: /category/design-patterns/
 pagination:
   enabled: true
   category: Design Patterns
+sitemap:
+  exclude: 'yes'
 ---

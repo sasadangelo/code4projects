@@ -6,4 +6,6 @@ permalink: /category/database/
 pagination:
   enabled: true
   category: Database
+sitemap:
+  exclude: 'yes'
 ---

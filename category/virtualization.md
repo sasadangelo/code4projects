@@ -6,4 +6,6 @@ permalink: /category/virtualization/
 pagination:
   enabled: true
   category: Virtualization
+sitemap:
+  exclude: 'yes'
 ---

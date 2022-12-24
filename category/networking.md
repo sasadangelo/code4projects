@@ -6,4 +6,6 @@ permalink: /category/networking/
 pagination:
   enabled: true
   category: Networking
+sitemap:
+  exclude: 'yes'
 ---

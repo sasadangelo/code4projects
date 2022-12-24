@@ -1,7 +1,7 @@
 ---
 layout: page
 title: New User? Start Here
-slug: /start-here
+slug: start-here
 excerpt: If this is the first time you land on this website, start reading from this web page. 
 ---
 # New User? Start Here

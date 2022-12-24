@@ -6,4 +6,6 @@ permalink: /category/game-programming/
 pagination:
   enabled: true
   category: Game Programming
+sitemap:
+  exclude: 'yes'
 ---

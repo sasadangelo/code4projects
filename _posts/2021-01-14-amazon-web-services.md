@@ -6,6 +6,10 @@ slug: amazon-web-services
 thumbnail: assets/img/Amazon-Web-Services.png
 excerpt: This article is an introduction to the Amazon Web Services (AWS) platform. Read it to have a platform and its core services overview.
 categories: Cloud
+sitemap:
+  lastmod: 2021-01-14
+  priority: 0.7
+  changefreq: 'weekly'
 ---
 
 ![Amazon Web Services (AWS) Introduction](assets/img/Amazon-Web-Services.png){:width="200" height="200" .responsive_img}

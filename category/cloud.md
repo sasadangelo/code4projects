@@ -6,4 +6,6 @@ permalink: /category/cloud/
 pagination:
   enabled: true
   category: Cloud
+sitemap:
+  exclude: 'yes'
 ---

@@ -8,6 +8,10 @@ slug: getting-started-with-cloud-computing
 thumbnail: assets/img/Cloud-Computing-mini.png
 excerpt: In this article, I would like to explore the essence of Cloud Computing, what it really is, and why the IT industry started to adopt it.
 categories: Cloud
+sitemap:
+  lastmod: 2019-01-01
+  priority: 0.7
+  changefreq: 'weekly'
 ---
 
 ![Getting started with Cloud Computing](assets/img/Cloud-Computing-mini.png){:width="221" height="200" .responsive_img}

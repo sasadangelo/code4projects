@@ -6,4 +6,6 @@ permalink: /category/multimedia/
 pagination:
   enabled: true
   category: Multimedia
+sitemap:
+  exclude: 'yes'
 ---

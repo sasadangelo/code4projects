@@ -6,4 +6,6 @@ permalink: /category/android/
 pagination:
   enabled: true
   category: Android
+sitemap:
+  exclude: 'yes'
 ---

@@ -6,6 +6,10 @@ slug: getting-started-with-docker
 thumbnail: assets/img/docker-logo-mini.png
 excerpt: In this article, you will learn what Docker is, its main concepts, how to create images and containers and the commands to play with it.
 categories: Virtualization
+sitemap:
+  lastmod: 2018-06-27
+  priority: 0.7
+  changefreq: 'weekly'
 ---
 
 ![Docker](assets/img/docker-logo-mini.png){:width="258" height="200" .responsive_img}

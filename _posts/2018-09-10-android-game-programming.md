@@ -8,6 +8,10 @@ excerpt: "This is the first article of the Android Game Programming series where
 categories:
 - Android
 - Game Programming
+sitemap:
+  lastmod: 2018-09-10
+  priority: 0.7
+  changefreq: 'weekly'
 ---
 
 ![Android Game Programming](assets/img/Android-Game-Programming-mini.jpeg){:width="356" height="200" .responsive_img}

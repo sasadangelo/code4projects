@@ -9,6 +9,10 @@ categories:
 - Cloud
 - DevOps
 - Virtualization
+sitemap:
+  lastmod: 2019-07-27
+  priority: 0.7
+  changefreq: 'weekly'
 ---
 
 ![Kubernetes](assets/img/kubernetes.png){:width="206" height="200" .responsive_img}
