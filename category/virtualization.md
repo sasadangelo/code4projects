@@ -8,4 +8,5 @@ pagination:
   category: Virtualization
 sitemap:
   exclude: 'yes'
+robots: noindex, follow
 ---

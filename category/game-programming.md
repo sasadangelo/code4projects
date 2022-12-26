@@ -8,4 +8,5 @@ pagination:
   category: Game Programming
 sitemap:
   exclude: 'yes'
+robots: noindex, follow
 ---

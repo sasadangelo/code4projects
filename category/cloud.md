@@ -8,4 +8,5 @@ pagination:
   category: Cloud
 sitemap:
   exclude: 'yes'
+robots: noindex, follow
 ---

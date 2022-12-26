@@ -8,4 +8,5 @@ pagination:
   category: Android
 sitemap:
   exclude: 'yes'
+robots: noindex, follow
 ---

@@ -8,4 +8,5 @@ pagination:
   category: Database
 sitemap:
   exclude: 'yes'
+robots: noindex, follow
 ---

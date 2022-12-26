@@ -8,4 +8,5 @@ pagination:
   category: DevOps
 sitemap:
   exclude: 'yes'
+robots: noindex, follow
 ---

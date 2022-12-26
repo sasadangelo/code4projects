@@ -8,4 +8,5 @@ pagination:
   category: Networking
 sitemap:
   exclude: 'yes'
+robots: noindex, follow
 ---

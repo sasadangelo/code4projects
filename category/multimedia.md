@@ -8,4 +8,5 @@ pagination:
   category: Multimedia
 sitemap:
   exclude: 'yes'
+robots: noindex, follow
 ---

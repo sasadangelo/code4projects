@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/fontawesome/css/fontawesome.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/fontawesome/css/brands.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% if page.robots  %}
+    <meta name='robots' content='{{ page.robots }}' />
+    {% else %}
+    <meta name='robots' content='index, follow' />
+    {% endif %}
+    
     {% feed_meta %}
     {% seo %}
     <!--
