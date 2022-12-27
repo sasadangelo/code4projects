@@ -1,0 +1,24 @@
+---
+layout: page
+---
+<h1>That page can't be found.</h1>
+<p>
+  It looks like nothing was found at this location. Maybe try one of the links below?
+</p>
+<aside class="page-404-widget" aria-label="Recent Posts">
+  <h2>Recent Posts</h2>
+  <ul>
+    {% for post in site.posts limit: site.latest_posts %}
+      <li><a href="{{ site.baseurl }}/{{ post.slug }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</aside>
+<aside class="page-404-widget" aria-label="Categories">
+  <h2>Categories</h2>
+  <ul>
+    {% for category in site.categories %}
+      {% capture category_name %}{{ category | first }}{% endcapture %}
+      <li><a href="{{ site.baseurl }}/category/{{ category_name | downcase }}">{{ category_name }}</a></li>
+    {% endfor %}
+  </ul>
+</aside>
