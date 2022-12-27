@@ -115,10 +115,10 @@ To watch MPEG-2 and VC1 encoded files you can use transcoding software like Plex
 
 The file _/boot/config.txt_ is one of the most important files in OSMC. Default values usually should work for the majority of the hardware, however, my suggestion is to try some changes. If you see Linux shutdown messages out of the screen try to remove the _disable\_overscan=1_ option and add the _overscan\_scale=1_.
 
-{% highlight properties %}
+    {% highlight properties %}
 disable_overscan=1
 overscan_scale=1
-{% endhighlight %}
+    {% endhighlight %}
 
 This configuration will be useful also for the [Retro Game platform](how-to-transform-kodi-media-center-retro-game-platform) in order to have the Emulation station screen correctly visualized on the TV video.
 
@@ -130,9 +130,9 @@ Access to the Raspberry via SSH.
 
 Give the fdisk command to get the device name of your HD:
 
-{% highlight shell %}
+    {% highlight shell %}
 fdisk -l
-{% endhighlight %}
+    {% endhighlight %}
 
 in my case, this name is /dev/sda1.
 
@@ -140,9 +140,9 @@ in my case, this name is /dev/sda1.
 
 Format the HDD with an EXT4 filesystem using the following command:
 
-{% highlight shell %}
+    {% highlight shell %}
 sudo mkfs.ext4 /dev/sda1 -L <label_volume>
-{% endhighlight %}
+    {% endhighlight %}
 
 where <label\_volume> is whatever string you prefer.
 

@@ -72,22 +72,22 @@ Once the message “Operations successfully completed” appear you’ve done an
 
 Our goal now is to share our /media/KODI folder with all our devices in our domestic network because here is where we have all our media files (movies, TV Series, music, photos, ebooks, and so on). To do that you have to add the following lines to the _/etc/samba/smb.conf_ file:
 
-{% highlight plaintext %}
+    {% highlight plaintext %}
 [kodi]
 browsable = yes
 read only = no
 valid users = osmc
 path = /media/KODI
 comment = KODI Media
-{% endhighlight %}
+    {% endhighlight %}
 
 To modify the file you can access the media center using ssh protocol as described in the section _Access to your Raspberry via SSH with Putty and Filezilla_ [of this article](how-to-configure-kodi-media-center)_._
 
 Restart the samba service to make the changes effective using the following command.
 
-{% highlight shell %}
+    {% highlight shell %}
 sudo service samba restart
-{% endhighlight %}
+    {% endhighlight %}
 
 ## How to view your files from Windows
 

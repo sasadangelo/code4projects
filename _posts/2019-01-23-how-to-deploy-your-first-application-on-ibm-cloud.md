@@ -46,17 +46,17 @@ The system automatically will fill the fields Domain, Region, Organization, and 
 
 In this section, I will show you how I changed the forked application to make it deployable on IBM Cloud. First of all, I forked the application on my account and clone on my machine with the following commands:
 
-{% highlight shell %}
+    {% highlight shell %}
 cd <work_directory>
 git clone https://github.com/sasadangelo/multiplayer-tetris
 cd multiplayer-tetris
-{% endhighlight %}
+    {% endhighlight %}
 
 As a second step, I created a **public** folder and moved all the sources code in it except the package.json file. Then I removed some useless files like **public/bower.json**, **public/db.js**, and **public/Procfile**. The reason I removed these dependencies is to avoid problems with extra dependencies I noticed were not required to play the game.
 
 In the root folder, I added a license and README file and the most important file to deploy the application on IBM Cloud: the **manifest.yml** file. Here the content:
 
-{% highlight yaml %}
+    {% highlight yaml %}
 applications:
 - memory: 64M
   instances: 1
@@ -64,7 +64,7 @@ applications:
   name: MultiplayerTetris
   host: multiplayertetris
   disk_quota: 1024M
-{% endhighlight %}
+    {% endhighlight %}
 
 As you can notice I declared the memory to allocate for the application (64Mb), the number of instances (1), the domain, the application name, disk quota, and the hostname. It’s important that application and host names contain the same value inserted in the previous step.
 
@@ -72,10 +72,10 @@ As you can notice I declared the memory to allocate for the application (64Mb), 
 
 To test the application on your machine you need to install Node.js from [here](https://nodejs.org/). Then you can do the following steps:
 
-{% highlight shell %}
+    {% highlight shell %}
 npm install
 npm start
-{% endhighlight %}
+    {% endhighlight %}
 
 You can access the application from the browser inserting the following URL in your browser **http://localhost:6003**.
 
@@ -85,7 +85,7 @@ If everything works fine you are ready to deploy the code on IBM Cloud. Before t
 
 To deploy the application on IBM Cloud using the following commands:
 
-{% highlight plaintext %}
+    {% highlight plaintext %}
 1. bluemix api https://api.<region>.bluemix.net
    where region can be:
        eu-gb, for London datacenter;
@@ -95,7 +95,7 @@ To deploy the application on IBM Cloud using the following commands:
        us-east, for Washington datacenter;
 2. bluemix login -u <your email> -o <organization> -s <space>
 3. bluemix app push MultiplayerTetris
-{% endhighlight %}
+    {% endhighlight %}
 
 You can see your application at the URL **https://multiplayertetris.<region>.mybluemix.net**. [Here](https://multiplayertetris.eu-gb.mybluemix.net/) a working demo.
 

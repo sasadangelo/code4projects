@@ -47,12 +47,12 @@ If you want to avoid this issue create your own API key, API id, and API secret 
 
 To type these strange numbers in Kodi you have two alternatives. The first one is to use the graphical interface above and type the data with [Yatse](https://play.google.com/store/apps/details?id=org.leetzone.android.yatsewidgetfree&hl=it). An alternative approach is to access the Raspberry terminal with Putty via SSH and edit the file _~/.kodi/userdata/addon\_data/plugin.video.youtube/settings.xml_ inserting the information in the following way.
 
-{% highlight properties %}
+    {% highlight properties %}
 youtube.api.enable=true
 youtube.api.id=111111111111-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 youtube.api.key=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 youtube.api.secret=XX-YYYYYYYYYYYYYYYYYYYYYY
-{% endhighlight %}
+    {% endhighlight %}
 
 After the keys configuration, you have to log in with your [Google Account](https://myaccount.google.com/).  Access the Youtube Add On following the path _Add-On -> Youtube_ and select _Login_. Kodi will ask you to access the web page [youtube.com/activate](https://www.youtube.com/activate) and insert the code that appears on the TV screen. The Youtube Add-On will require to repeat this procedure twice, it is not a bug, this is how the addon works. Repeat the procedure twice and restart Kodi.
 

@@ -50,43 +50,43 @@ In this section, we will see how to draw a bitmap on the screen. We will modify 
 
 The idea is to use a _View_ object that occupies the size of the whole screen on which to draw our bitmap. In the constructor of this class, we will put the code to load the bitmap that we have already seen [in the previous article](android-resources-management). In the _onDraw_ method, instead, we will implement the bitmap rendering code.
 
-{% highlight java %}
-    public class MyActivity extends Activity {
-        class AndroidFastRenderView extends View {
-            Bitmap startscreenBitmap;
-            Rect dst = new Rect();
-            
-            public AndroidFastRenderView(Context context) {
-                super(context);
-                InputStream inputStream = null;
-                try {
-                    FileIO fileIO = new AndroidFileIO(getAssets());
-                    inputStream = fileIO.readAsset("startscreen.png");
-                    startscreenBitmap = BitmapFactory.decodeStream(inputStream);
-                } catch (IOException e) {
-                } finally {
-                     if (inputStream != null) try { inputStream.close(); } catch (IOException e) {}
-                }
-            }
-
-            protected void onDraw(Canvas canvas) {
-                width=540; // metti qui l'ampiezza dello schermo del tuo telefonino
-                height=960; // metti qui l'altezza dello schermo del tuo telefonino
-                dst.set(0, 0, width, height);
-                canvas.drawBitmap(startscreenBitmap, null, dst, null);
-                invalidate();
+    {% highlight java %}
+public class MyActivity extends Activity {
+    class AndroidFastRenderView extends View {
+        Bitmap startscreenBitmap;
+        Rect dst = new Rect();
+        
+        public AndroidFastRenderView(Context context) {
+            super(context);
+            InputStream inputStream = null;
+            try {
+                FileIO fileIO = new AndroidFileIO(getAssets());
+                inputStream = fileIO.readAsset("startscreen.png");
+                startscreenBitmap = BitmapFactory.decodeStream(inputStream);
+            } catch (IOException e) {
+            } finally {
+                    if (inputStream != null) try { inputStream.close(); } catch (IOException e) {}
             }
         }
 
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            requestWindowFeature(Window.FEATURE_NO_TITLE);
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN);
-            setContentView(new AndroidFastRenderView(this));
+        protected void onDraw(Canvas canvas) {
+            width=540; // metti qui l'ampiezza dello schermo del tuo telefonino
+            height=960; // metti qui l'altezza dello schermo del tuo telefonino
+            dst.set(0, 0, width, height);
+            canvas.drawBitmap(startscreenBitmap, null, dst, null);
+            invalidate();
         }
     }
-{% endhighlight %}
+
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+        WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(new AndroidFastRenderView(this));
+    }
+}
+    {% endhighlight %}
 
 As you can see from the code, the bitmap is drawn on the video using the _drawBitmap_ method of the _Canvas_ class. The size of my screen mobile phone is 540×960, you can change the values based on the size of your screen. Later in the book, we will see how to adapt the bitmap to any screen. The invocation of _invalidate()_ method will force the drawing of the bitmap. In the _onCreate()_ method of _MyActivity,_ we set a full-screen window without a title and on this will set our view as content.
 
@@ -108,14 +108,14 @@ We will call Main Thread the main thread of our application and UI Thread the on
 
 Also, before to be able to draw on the surface, to avoid race conditions, it will be necessary to control it in exclusive by invoking the _SurfaceHolder_ _lockCanvas()_ and _unlockCanvas()_ methods. This is an example of a code that should be used to draw on the surface:
 
-{% highlight java %}
-    if(!holder.getSurface().isValid())
-        continue;
-    Canvas canvas = holder.lockCanvas();
-    canvas.getClipBounds(dstRect);
-    // draw something
-    holder.unlockCanvasAndPost(canvas);
-{% endhighlight %}
+    {% highlight java %}
+if(!holder.getSurface().isValid())
+    continue;
+Canvas canvas = holder.lockCanvas();
+canvas.getClipBounds(dstRect);
+// draw something
+holder.unlockCanvasAndPost(canvas);
+    {% endhighlight %}
 
 ### How to draw a bitmap on the screen using the UI Thread
 
@@ -125,7 +125,7 @@ The constructor loads the bitmap **startscreen.png** as already seen above. The 
 
 This cycle that we see in the run method is very important because, as we will see in the following exercises, it will become our Game Loop.
 
-{% highlight java %}
+    {% highlight java %}
 public class AndroidFastRenderView extends SurfaceView implements Runnable {
     Bitmap startscreenBitmap;
     Rect dst = new Rect();
@@ -178,13 +178,13 @@ public class AndroidFastRenderView extends SurfaceView implements Runnable {
         }
     }
 }
-{% endhighlight %}
+    {% endhighlight %}
 
 The _MyActivity_ class will not be very different from the code above, the only difference is the framebuffer allocation and the management of screens of any size.
 
 We have already explained the [idea of the framebuffer](video-game-programming-principles), here I just want to emphasize that its size is fixed for a resolution of 320×480 and will depend from the orientation of the device (landscape or portrait). The reason why we set the 320×480 resolution is that it will be a reference resolution. Knowing the real resolution of the device we will be able to calculate the scale factors for the coordinates X, Y that we will then apply each time we are going to draw objects on the framebuffer. We’ll see better this aspect later.
 
-{% highlight java %}
+    {% highlight java %}
 public class MyActivity extends Activity {
     AndroidFastRenderView renderView;
 
@@ -227,7 +227,7 @@ public class MyActivity extends Activity {
         renderView.pause();
     }
 }
-{% endhighlight %}
+    {% endhighlight %}
 
 To execute the code you can use [this procedure](how-to-create-an-android-application). The code of this exercise can be found [here](https://github.com/sasadangelo/HelloWorldApp/archive/0.0.5.zip).
 
@@ -247,28 +247,28 @@ ARGB\_8888 mode favors quality over memory allocation, vice versa for RBG\_565. 
 
 You will need to access the _MyActivity_ class in different parts of the code in order to get references to the various subsystems of the framework such as the graphic, file management, and so on. In our application, we will need only one _MyActivity_ instance so it would make sense to manage it as a Singleton. This would also allow us to avoid having to pass this class as a parameter at different points in the code. Unfortunately Android does not allow us to create Activity-type objects on our own so the Singleton solution is not practicable. For this reason, we introduce the static class Gdx:
 
-{% highlight java %}
-    public class Gdx {
-        public static MyActivity game;
-        public static Graphics graphics;
-        public static FileIO fileIO;
-    }
-{% endhighlight %}
+    {% highlight java %}
+public class Gdx {
+    public static MyActivity game;
+    public static Graphics graphics;
+    public static FileIO fileIO;
+}
+    {% endhighlight %}
 
 which will have a static reference to the main activity of the game and a reference for each subsystem. Software design purists will turn up their noses, but among the possible alternatives, this is certainly the least bad. In the _onCreate()_ method of the _MyActivity_ class we will add the following 3 lines of code:
 
-{% highlight java %}
-    public void onCreate(Bundle savedInstanceState) {
-            ...
-        Gdx.graphics = graphics;
-        Gdx.fileIO = fileIO;
-        Gdx.game = this;
-    }
-{% endhighlight %}
+    {% highlight java %}
+public void onCreate(Bundle savedInstanceState) {
+        ...
+    Gdx.graphics = graphics;
+    Gdx.fileIO = fileIO;
+    Gdx.game = this;
+}
+    {% endhighlight %}
 
 At any point in the code to access the graphics subsystem or files just write:
 
-{% highlight java %}
-    Gdx.graphics
-    Gdx.fileIO
-{% endhighlight %}
+    {% highlight java %}
+Gdx.graphics
+Gdx.fileIO
+    {% endhighlight %}

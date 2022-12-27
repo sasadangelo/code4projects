@@ -93,14 +93,14 @@ At the [following link](https://github.com/sasadangelo/designpatterns/blob/maste
 
 If you want to use the Object Pool for TouchEvent objects a code like this is required.
 
-{% highlight java %}
+    {% highlight java %}
 PoolObjectFactory<TouchEvent> factory = new PoolObjectFactory<TouchEvent>() {
     public TouchEvent createObject() {
         return new TouchEvent();
     }
 };
 touchEventPool = new Pool<TouchEvent>(factory, 100);
-{% endhighlight %}
+    {% endhighlight %}
 
 ## Observer Pattern
 

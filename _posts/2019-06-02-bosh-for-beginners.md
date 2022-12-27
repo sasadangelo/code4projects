@@ -88,95 +88,95 @@ When I start to play with a technology I try to find the minimum set of commands
 
 Once you installed Bosh Lite you can see that it has a single environment called _vbox_ with the following command:
 
-{% highlight shell %}
+    {% highlight shell %}
 bosh envs
-{% endhighlight %}
+    {% endhighlight %}
 
 To see all the deployments in the vbox environment you can use the following command:
 
-{% highlight shell %}
+    {% highlight shell %}
 bosh -e vbox deployments
-{% endhighlight %}
+    {% endhighlight %}
 
 To avoid to specify every time the environment you can set the BOSH\_ENVIRONMENT variable in  
 you _.bash\_profile_:
 
-{% highlight shell %}
+    {% highlight shell %}
 export BOSH_ENVIRONMENT=vbox
-{% endhighlight %}
+    {% endhighlight %}
 
 From this moment on I assume you did it so I don’t specify the -e option anymore. When you list your deployment you can notice that initially, it is empty.
 
 As a first step, we can upload on the Director the stem cell to use for our deployment. BOSH produces official [stemcells](https://bosh.io/stemcells/) for popular operating systems and infrastructures. For example, for Ubuntu 16 Xenial we can use the latest version of the [following one](https://bosh.io/stemcells/bosh-warden-boshlite-ubuntu-xenial-go_agent). Here the command to upload it on the Director:
 
-{% highlight shell %}
+    {% highlight shell %}
 bosh upload-stemcell --sha1 632b2fd291daa6f597ff6697139db22fb554204c https://bosh.io/d/stemcells/bosh-warden-boshlite-ubuntu-xenial-go_agent?v=315.13
-{% endhighlight %}
+    {% endhighlight %}
 
 List the uploaded stemcell with the command:
 
-{% highlight shell %}
+    {% highlight shell %}
 bosh stemcells
-{% endhighlight %}
+    {% endhighlight %}
 
 The next step is to upload the release we want to deploy. For this tutorial, I created a simple Release containing an HTTP server that when contacted by a browser returns the “Hello World” message. You can [download the package from here](https://github.com/sasadangelo/simple-bosh-release/archive/master.zip). Uncompress it in the folder _<workdir>._
 
 Here the commands to create and upload the release:
 
-{% highlight shell %}
+    {% highlight shell %}
 cd <workdir>/simple-bosh-release
 bosh create-release --force
 bosh upload-release
-{% endhighlight %}
+    {% endhighlight %}
 
 You can list the uploaded release with the command:
 
-{% highlight shell %}
+    {% highlight shell %}
 bosh releases
-{% endhighlight %}
+    {% endhighlight %}
 
 The last step is to create a VM instance starting from the uploaded stemcell and deploy the release on it. You can do it with the following command:
 
-{% highlight shell %}
+    {% highlight shell %}
 bosh -d simple-bosh-release deploy deployments/manifest.yml
-{% endhighlight %}
+    {% endhighlight %}
 
 To list the VMs created by Bosh during the deployment you can use the following command:
 
-{% highlight shell %}
+    {% highlight shell %}
 bosh vms
-{% endhighlight %}
+    {% endhighlight %}
 
 Your HTTP server is now running on 10.243.1.2 address, however, you cannot access to it from your machine unless you do not redirect all the traffic to this IP to the Virtual Machine containing the Director 192.168.50.6.
 
 You can do it with the following commands:
 
-{% highlight shell %}
+    {% highlight shell %}
 sudo route add -net 10.244.0.0/16     192.168.50.6 # Mac OS X
 sudo ip route add   10.244.0.0/16 via 192.168.50.6 # Linux (using iproute2 suite)
 sudo route add -net 10.244.0.0/16 gw  192.168.50.6 # Linux (using DEPRECATED route command)
 route add           10.244.0.0/16     192.168.50.6 # Windows
-{% endhighlight %}
+    {% endhighlight %}
 
 Open your browser and insert the following IP 10.243.1.2 in the address bar. The “**Hello World!**” message will appear.
 
 To clean up the artifact you uploaded on Bosh you first need to delete the deployment with the command:
 
-{% highlight shell %}
+    {% highlight shell %}
 bosh -d simple-bosh-release delete-deployment
-{% endhighlight %}
+    {% endhighlight %}
 
 Now you can delete the release with the command:
 
-{% highlight shell %}
+    {% highlight shell %}
 bosh delete-release simple-bosh-release
-{% endhighlight %}
+    {% endhighlight %}
 
 Finally, you can delete the stem cell with the command:
 
-{% highlight shell %}
+    {% highlight shell %}
 bosh delete-stemcell <stemcell name>/<stemcell version>
-{% endhighlight %}
+    {% endhighlight %}
 
 Obviously, this is the first set of commands you will use with Bosh, however, there are other useful commands to manage tasks, blob, disk, networking, and much more. You can see a complete list [here](https://gist.github.com/bgandon/6b0826189b8513624e98475bc2f9a538).
 

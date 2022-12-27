@@ -24,27 +24,27 @@ In order to make your media file recognizable from your Library rename the title
 
 For Movies use the Title and Year of Publication separated by “\_” and with the media extension:
 
-{% highlight plaintext %}
+    {% highlight plaintext %}
 <Title>_<Year>.<ext>
-{% endhighlight %}
+    {% endhighlight %}
 
 Here an example:
 
-{% highlight plaintext %}
+    {% highlight plaintext %}
 Alladin_1992.mkv
-{% endhighlight %}
+    {% endhighlight %}
 
 For TV Shows use the following format:
 
-{% highlight plaintext %}
+    {% highlight plaintext %}
 <Title>/<Title>_<Season>_<Season Number>/<Title>_<Episode Number>x<Season Number>.<ext>
-{% endhighlight %}
+    {% endhighlight %}
 
 Here an example:
 
-{% highlight plaintext %}
+    {% highlight plaintext %}
 Arrow/Arrow_Season_01/Arrow_01x01.avi 
-{% endhighlight %}
+    {% endhighlight %}
 
 ## Create your Movies Library
 

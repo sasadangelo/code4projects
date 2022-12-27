@@ -65,9 +65,9 @@ In this article series, I want to focus mainly on the bridge driver because we w
 
 The command to create a network using a bridge driver is:
 
-{% highlight shell %}
+    {% highlight shell %}
 docker network create -d bridge --gateway=GATEWAY --subnet=SUBNET/NETWORK_PREFIX_BITS NETWORK_NAME
-{% endhighlight %}
+    {% endhighlight %}
 
 for example, suppose we want to create the subnet 10.1.1.0 we can have the following values:
 
@@ -79,9 +79,9 @@ The same command can be used to create other network type specifying the driver 
 
 After the creation of a network, we can create a container attached to it with its own hostname and IP address using the following command.
 
-{% highlight shell %}
+    {% highlight shell %}
 docker create -it --net NETWORK_NAME --ip IP --hostname HOSTNAME--name CONTAINER_NAME --publish HOST_SSH_PORT:22 TAG /bin/bash
-{% endhighlight %}
+    {% endhighlight %}
 
 The TAG is the name of the image used to create the container. CONTAINER\_NAME is the name of the container. NETWORK\_NAME is the name of the network and HOSTNAME and IP are, respectively, the hostname and the IP assigned to the container.
 
@@ -91,7 +91,7 @@ Other containers on the same network can reference the container using the IP ad
 
 In this section, we can modify the [start\_containers.sh](https://github.com/sasadangelo/docker-tutorials/blob/master/postgresql-network/start_containers.sh) script to create three PostgreSQL containers that communicate with each other via TCP/IP. Each container has a hostname and IP assigned.
 
-{% highlight shell %}
+    {% highlight shell %}
 NODE1_NAME=node1
 NODE2_NAME=node2
 NODE3_NAME=node3
@@ -114,13 +114,13 @@ docker create -it --net ${PRIVATE_NETWORK_NAME} --ip ${NODE3_PRIVATE_IP} --hostn
 docker start ${NODE1_NAME}
 docker start ${NODE2_NAME}
 docker start ${NODE3_NAME}
-{% endhighlight %}
+    {% endhighlight %}
 
 We created the _node\_private\_bridge_ bridge network with subnet _10.0.2.1/24_ and gateway _10.0.2.1_. Then we assigned to each container a hostname and an IP.
 
 We modified the [stop\_containers.sh](https://github.com/sasadangelo/docker-tutorials/blob/master/postgresql-network/stop_containers.sh) script to clean up the three containers and the network driver.
 
-{% highlight shell %}
+    {% highlight shell %}
 NODE1_NAME=node1
 NODE2_NAME=node2
 NODE3_NAME=node3
@@ -143,13 +143,13 @@ docker create -it --net ${PRIVATE_NETWORK_NAME} --ip ${NODE3_PRIVATE_IP} --hostn
 docker start ${NODE1_NAME}
 docker start ${NODE2_NAME}
 docker start ${NODE3_NAME}
-{% endhighlight %}
+    {% endhighlight %}
 
 You can now access to whatever container with the command:
 
-{% highlight shell %}
+    {% highlight shell %}
 docker exec -it nodeX /bin/bash
-{% endhighlight %}
+    {% endhighlight %}
 
 where X could be 1, 2, or 3, and ping the other two containers using the node name or the IP.
 

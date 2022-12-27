@@ -21,14 +21,14 @@ In an Android application, graphic elements such as buttons, text fields, radio 
 
 For example, the _Button_ class extends the _View_ class which allows you to set up a listener to respond to click commands. If you want to execute some code when you click a button, you need to write a code like this:
 
-{% highlight java %}
-    Button button = (Button) findViewById(R.id.button_id);     
-    button.setOnClickListener(new View.OnClickListener() {
-        public void onClick(View v) {
-            // put here the code to run        
-        }     
-    })
-{% endhighlight %}
+    {% highlight java %}
+Button button = (Button) findViewById(R.id.button_id);     
+button.setOnClickListener(new View.OnClickListener() {
+    public void onClick(View v) {
+        // put here the code to run        
+    }     
+})
+    {% endhighlight %}
 
 Unfortunately, writing a video game is very different from writing a normal Android application. Having to draw game objects by ourselves we cannot leverage the Android APIs to manage buttons.
 
@@ -53,30 +53,30 @@ Clicking on the button, the icon will change making a speaker appear in mute mod
 
 Luckily the _View_ interface (hence also our _AndroidFastRenderView_ class) allows you to register touch events with the _setOnTouchListener_ method and create listeners that implement the _OnTouchListener_ interface just to intercept these events. This interface has only one method to implement:
 
-{% highlight java %}
-    abstract boolean onTouch(View v, MotionEvent event);
-{% endhighlight %}
+    {% highlight java %}
+abstract boolean onTouch(View v, MotionEvent event);
+    {% endhighlight %}
 
 The idea is to collect all the events that arrive in a buffer and when the user requests them, we supply them in output. To do this we need to extend the interface _OnTouchListener_ so in the package _org.androidforfun.framework.impl_ we add the _TouchHandler_ interface defined as follows:
 
-{% highlight java %}
-    public interface TouchHandler extends OnTouchListener {
-        ...
-        List<TouchEvent> getTouchEvents();
-    }
-{% endhighlight %}
+    {% highlight java %}
+public interface TouchHandler extends OnTouchListener {
+    ...
+    List<TouchEvent> getTouchEvents();
+}
+    {% endhighlight %}
 
 _TouchEvent_ static class will represent touch-type events in our framework, it will have the following public fields:
 
-{% highlight java %}
-    class TouchEvent {
-        public static final int TOUCH_DOWN = 0;
-        public static final int TOUCH_UP = 1;
-        public static final int TOUCH_DRAGGED = 2;
-        public int type;
-        public int x, y;
-        public int pointer;
-{% endhighlight %}
+    {% highlight java %}
+class TouchEvent {
+    public static final int TOUCH_DOWN = 0;
+    public static final int TOUCH_UP = 1;
+    public static final int TOUCH_DRAGGED = 2;
+    public int type;
+    public int x, y;
+    public int pointer;
+    {% endhighlight %}
 
 As you can see there is the need to know what kind of touch event is, for example, if there was a touch (TOUCH\_DOWN) or a release (TOUCH\_UP) or if the finger was dragged along the video (TOUCH\_DRAGGED), the x, y coordinates of the video you touch and a pointer we’ll see better later.
 
@@ -86,12 +86,12 @@ With version 1.6 and earlier, Android was only able to detect individual touch e
 
 Have you ever wanted to zoom in on one web page and used two fingers spreading them outwards? This is an example of a multi-touch. To avoid having to handle exceptions on older versions of Android will be necessary to implement the _TouchHandler_ interface in two ways depending on whether the Android version is higher or lower than version 1.6. We introduce two classes _SingleThouchHandler_ and _MultiTouchHandler_ which will implement the _TouchHandler_ interface depending on the Android version:
 
-{% highlight java %}
-    if(Integer.parseInt(VERSION.SDK) 
-        touchHandler = new SingleTouchHandler(view, scaleX, scaleY);
-    else
-        touchHandler = new MultiTouchHandler(view, scaleX, scaleY);
-{% endhighlight %}
+    {% highlight java %}
+if(Integer.parseInt(VERSION.SDK) 
+    touchHandler = new SingleTouchHandler(view, scaleX, scaleY);
+else
+    touchHandler = new MultiTouchHandler(view, scaleX, scaleY);
+    {% endhighlight %}
 
 SDK 5 corresponds to Android 2.0 which is the version after 1.6. Because today is really difficult to find phones with Android below 2.0 we can safely say that in 99% of cases we will use the _MultiTouchHandler_ class which is the one that we will analyze in this article, the other is similar. The implementation of the _MultiTouchHandler_ class must take into account some very important technical requirements so that input management is done correctly and without degrading performance.
 
@@ -108,7 +108,7 @@ Every time the user touches the screen, Android generates a _MotionEvent_ event 
 
 Now let’s see how to implement the MultiTouchHandler class.
 
-{% highlight java %}
+    {% highlight java %}
 public class MultiTouchHandler implements TouchHandler {
     boolean[] isTouched = new boolean[20];
     int[] touchX = new int[20];
@@ -118,11 +118,11 @@ public class MultiTouchHandler implements TouchHandler {
     List<TouchEvent> touchEventsBuffer = new ArrayList<>();
     float scaleX;
     float scaleY;
-{% endhighlight %}
+    {% endhighlight %}
 
 The class manages a maximum of 20 pointers (typically 2 or 3 are enough), a pool of 100 events (_touchEventPool_), a buffer (_touchEventsBuffer_) and _scaleX_ and _scaleY_ factors. The constructor is quite simple and requires no comment.
 
-{% highlight java %}
+    {% highlight java %}
 public MultiTouchHandler(View view, float scaleX, float scaleY) {
     PoolObjectFactory<TouchEvent> factory=new PoolObjectFactory<TouchEvent>() {
         public TouchEvent createObject() {
@@ -134,11 +134,11 @@ public MultiTouchHandler(View view, float scaleX, float scaleY) {
     this.scaleX = scaleX;
     this.scaleY = scaleY;
 }
-{% endhighlight %}
+    {% endhighlight %}
 
 The most important method of the class is _onTouch_ which will convert Android events into events understandable by our framework. How easy it is to observe events ACTION\_DOWN and ACTION\_POINTER\_DOWN will be converted to TOUCH\_DOWN events. The x, y coordinates of the event and the pointer will be taken. The same thing for ACTION\_UP events, ACTION\_POINTER\_UP and ACTION\_CANCEL converted to TOUCH\_UP. Finally, the ACTION\_MOVE event converted to TOUCH\_DRAGGED. You can see that every event arriving is stored in the _touchEventsBuffer_ buffer.
 
-{% highlight java %}
+    {% highlight java %}
 public boolean onTouch(View v, MotionEvent event) {
     synchronized (this) {
         int action = event.getAction() &amp; MotionEvent.ACTION_MASK;
@@ -193,11 +193,11 @@ public boolean onTouch(View v, MotionEvent event) {
         return true;
     }
 }
-{% endhighlight %}
+    {% endhighlight %}
 
 The video game, as we have seen, is a game loop that updates and draws itself N times per second, with N corresponding to the FRAME RATE. At each update, the code must get all user input and do it with a code like this:
 
-{% highlight java %}
+    {% highlight java %}
 List touchEvents = game.getInput().getTouchEvents();
 int len = touchEvents.size();
 for(int i = 0; i < len; i++) {
@@ -213,11 +213,11 @@ for(int i = 0; i < len; i++) {
             ...
             break;
 }
-{% endhighlight %}
+    {% endhighlight %}
 
 The video game, as we have seen, is a game loop that updates and draws itself N times per second, with N corresponding to the FRAME RATE. At each update the code must get all user input and do it with a code like this:
 
-{% highlight java %}
+    {% highlight java %}
 public List getTouchEvents() {
     synchronized (this) {
         int len = touchEvents.size();
@@ -229,7 +229,7 @@ public List getTouchEvents() {
             return touchEvents;
          }
 }
-{% endhighlight %}
+    {% endhighlight %}
 
 ### Buttons Management
 
@@ -237,16 +237,16 @@ Now that we’ve added the infrastructure to manage user input let’s see how t
 
 ![Buttons](assets/img/buttons.png){:width="100" height="250" .responsive_img}
 
-{% highlight java %}
+    {% highlight java %}
 public class Assets {
     ...
     public static Pixmap buttons;
 }
-{% endhighlight %}
+    {% endhighlight %}
 
 and in the _LoadingScreen_ class we provide to load it in memory:
 
-{% highlight java %}
+    {% highlight java %}
 public class LoadingScreen implements Screen {
     ...
     public void update() {
@@ -257,11 +257,11 @@ public class LoadingScreen implements Screen {
         Settings.load(Gdx.fileIO);
         game.setScreen(new StartScreen());
 }
-{% endhighlight %}
+    {% endhighlight %}
 
 At this point, in the _StartScreen_ class we define a _soundEnabled_ attribute that indicates whether the sound is active or not. By default, it is activated. In the _update_ method, we take the user inputs and check whether the button has been pressed or not, setting the relative _soundEnabled_ attribute. In the draw method, we will draw the button with the loudspeaker or mute depending on the value of the _soundEnabled_ attribute.
 
-{% highlight java %}
+    {% highlight java %}
 public class StartScreen implements Screen {
     private boolean soundEnabled;
     ...
@@ -294,11 +294,11 @@ public class StartScreen implements Screen {
     }
     ...
 }
-{% endhighlight %}
+    {% endhighlight %}
 
 _Gdx.input_ is the reference to the input subsystem of the framework. It must be initialized in _onCreate_ method of the class _MyActivity_ as we have already done for the file subsystems and graphics.
 
-{% highlight java %}
+    {% highlight java %}
 public void onCreate(Bundle savedInstanceState) {
     ...
     input = new AndroidInput(this, renderView, scaleX, scaleY);
@@ -308,6 +308,6 @@ public void onCreate(Bundle savedInstanceState) {
     Gdx.input = input;
     Gdx.game = this;
 }
-{% endhighlight %}
+    {% endhighlight %}
 
 To execute the code you can perform the procedure seen in paragraph 1.4. The source code the exercise can be found [here](https://github.com/sasadangelo/HelloWorldApp/archive/0.0.7.zip).

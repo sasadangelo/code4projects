@@ -23,7 +23,7 @@ The cluster will be configured in master/slave mode with one master and two slav
 
 The first step to create a PostgreSQL cluster is to modify the [start\_containers.sh](https://github.com/sasadangelo/docker-tutorials/blob/master/postgresql-cluster/start_containers.sh) script to create two environment variables that we pass to the _docker create_ command.
 
-{% highlight shell %}
+    {% highlight shell %}
 ...
 MASTER_NAME=${NODE1_NAME}
 ...
@@ -31,7 +31,7 @@ docker create -it --net ${PRIVATE_NETWORK_NAME} --ip ${NODE1_PRIVATE_IP} --hostn
 docker create -it --net ${PRIVATE_NETWORK_NAME} --ip ${NODE2_PRIVATE_IP} --hostname ${NODE2_NAME} --name ${NODE2_NAME} --env NODE_NAME=${NODE2_NAME} --env MASTER_NAME=${MASTER_NAME} -p ${NODE2_PORT}:5432 postgresql /bin/bash
 docker create -it --net ${PRIVATE_NETWORK_NAME} --ip ${NODE3_PRIVATE_IP} --hostname ${NODE3_NAME} --name ${NODE3_NAME} --env NODE_NAME=${NODE3_NAME} --env MASTER_NAME=${MASTER_NAME} -p ${NODE3_PORT}:5432 postgresql /bin/bash
 ...
-{% endhighlight %}
+    {% endhighlight %}
 
 These variables will be used by the startup scripts to start the master and the two slaves.
 
@@ -41,18 +41,18 @@ The two environment variables defined in the previous section will be used by th
 
 Here the code of the _src/postgresql/entrypoint.sh_ script. We added a sleep command for slave nodes.
 
-{% highlight shell %}
+    {% highlight shell %}
 #!/bin/bash
 ...
 while [ -f /var/run/recovery.lock ]; do
     sleep 1;
 done;
 ...
-{% endhighlight %}
+    {% endhighlight %}
 
 Here the code of the _src/postgresql/bin/entrypoint.sh_ script.
 
-{% highlight shell %}
+    {% highlight shell %}
 #!/bin/bash
 DATA_DIRECTORY="/home/postgres/data/postgres"
 LOGS_DIRECTORY="/home/postgres/data/logs"
@@ -81,7 +81,7 @@ if [ -z "$(ls -A $DATA_DIRECTORY)" ]; then
 fi
 echo ">>> START POSTGRESQL ON NODE $NODE_NAME"
 /usr/lib/postgresql/9.5/bin/postgres -D $DATA_DIRECTORY > $LOGS_DIRECTORY/postgres.log 2>&1
-{% endhighlight %}
+    {% endhighlight %}
 
 The code checks whether the data directory is empty or not. In the latter case, the code assumes the data directory already exists and then we only startup PostgreSQL. In the former case, the code is different for the master and slaves.
 
@@ -93,40 +93,40 @@ For the slaves, the code will wait for the master is up and running and then the
 
 To configure the PostgreSQL cluster as hot standby we need to uncomment the following lines in the [_postgresql.conf_](https://github.com/sasadangelo/docker-tutorials/blob/master/postgresql-cluster/src/postgresql/config/postgresql.conf) file.
 
-{% highlight properties %}
+    {% highlight properties %}
 hba_file = '/home/postgres/data/postgres/pg_hba.conf'
 wal_level = hot_standby
 listen_addresses = '*'
 max_wal_senders = 5
 hot_standby = on
-{% endhighlight %}
+    {% endhighlight %}
 
 In the [_pg\_hba.conf_](https://github.com/sasadangelo/docker-tutorials/blob/master/postgresql-cluster/src/postgresql/config/pg_hba.conf) we will specify the host from which the replication is allowed.
 
-{% highlight plaintext %}
+    {% highlight plaintext %}
 host     replication     postgres        node1                   trust
 host     replication     postgres        node2                   trust
 host     replication     postgres        node3                   trust
-{% endhighlight %}
+    {% endhighlight %}
 
 ## How to verify if the cluster is working?
 
 An easy way to verify if the cluster is working is to create a database on the master node and verify its replication on slaves. Run the following commands on the master node.
 
-{% highlight sql %}
+    {% highlight shell %}
 psql -h localhost -p 5432 -U postgres
 CREATE DATABASE mydb;
 \list
 \quit
-{% endhighlight %}
+    {% endhighlight %}
 
 Verify on slave nodes if the database has been replicated using the following commands. To verify the database is replicated on node3 use the same commands and replace 5433 port with 5434.
 
-{% highlight shell %}
+    {% highlight shell %}
 psql -h localhost -p 5433 -U postgres 
 \list
 \q
-{% endhighlight %}
+    {% endhighlight %}
 
 ## What’s next?
 

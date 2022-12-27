@@ -25,9 +25,9 @@ Resources are compiled in a binary format and indexed using a unique ID. These I
 
 ![Resources](assets/img/Resources.png){:width="450" height="209" .responsive_img}
 
-{% highlight java %}
-    setContentView(R.layout.activity_main);
-{% endhighlight %}
+    {% highlight java %}
+setContentView(R.layout.activity_main);
+    {% endhighlight %}
 
 indicates that the layout of the activity is placed among the resources. In particular, each path inside the R class reflects a placement of resources in the **res** subfolders as illustrated in the photo below. Through their identifiers, the resources are accessible both from Java code and from other resources defined in XML.
 
@@ -36,9 +36,9 @@ in XML: _@resource\_type/resource\_name_.
 
 For example, the resource of type string and name appname can be retrieved, in Java, through _R.string.appname_ or from other XML resources with _@string/appname._
 
-{% highlight xml %}
-    <string android:name="appname">Hello world!</string>
-{% endhighlight %}
+    {% highlight xml %}
+<string android:name="appname">Hello world!</string>
+    {% endhighlight %}
 
 ### Make game multi-devices using the Resources
 
@@ -66,9 +66,9 @@ In our case, in the assets folder, we will put all the images and sounds of our 
 
 When Android Studio will create the videogame APK file it will automatically include this folder in the final package. It is important that the file names are all lowercase. First, create the **assets** folder under the main folder and copy the **startscreen.png** file you can get by downloading the code of this [example here](https://github.com/sasadangelo/HelloWorldApp/archive/0.0.3.zip). Modify the _FileIO_ interface by adding the _readAssets_ method mentioned above.
 
-{% highlight java %}
-    public InputStream readAsset(String fileName) throws IOException;
-{% endhighlight %}
+    {% highlight java %}
+public InputStream readAsset(String fileName) throws IOException;
+    {% endhighlight %}
 
 Check out the implementation of this method in the [_AndroidFileIO_ class on github.com](https://github.com/sasadangelo/HelloWorldApp/blob/0.0.3/app/src/main/java/org/androidforfun/framework/impl/AndroidFileIO.java).
 

@@ -38,13 +38,13 @@ The Game Loop is a piece of code that, generally, represents 1% of the entire ga
 
 The code of a Game Loop looks like this:
 
-{% highlight java %}
+    {% highlight java %}
 while (true) {
     processInput();
     update();
     draw();
 }
-{% endhighlight %}
+    {% endhighlight %}
 
 The problem with this code, however, is that on a very fast device it will produce a very fast game impossible to play.
 
@@ -60,7 +60,7 @@ A large Frame Rate value allows a greater game fluidity and a lower latency of u
 
 Here is an example of code to manage the frame rate:
 
-{% highlight java %}
+    {% highlight java %}
 MS_PER_FRAME =1000/FPS // 1s=1000ms
 
 while (true) {
@@ -70,7 +70,7 @@ while (true) {
     draw();
     sleep(start + MS_PER_FRAME - getCurrentTime());
 }
-{% endhighlight %}
+    {% endhighlight %}
 
 The sleep command ensures that the game does not advance too quickly in case the hardware performs the three methods quickly. Unfortunately, though, if the 3 methods require more than 16 ms for their execution (I’m assuming an FPS = 60) then the game will slow down and the only one way to solve this problem is to make the 3 methods do less work.
 
@@ -83,7 +83,7 @@ If step 2 is faster than step 1 the game will slow down. It is therefore clear t
 
 The idea could, therefore, be to choose a time step that is equal to the time elapsed to perform the last iteration. The bigger the time step the more the progress of the game will be great. Thus we will have a variable frame rate which, however, preserves the fluidity of the game. The code will be something like this:
 
-{% highlight java %}
+    {% highlight java %}
 double lastTime = getCurrentTime();
 while (true) {
     double current = getCurrentTime();
@@ -93,7 +93,7 @@ while (true) {
     render();
     lastTime = current;
 }
-{% endhighlight %}
+    {% endhighlight %}
 
 As you can see from the code, the elapsed variable contains the elapsed time to process the previous iteration and it is passed to the update method to update the game for that exact time.
 
@@ -168,19 +168,19 @@ The idea is to delimit the object inside a rectangle. Two objects will collide w
 
 To easily determine if two rectangles intersect verify that the rectangle R1 does not contain one of the vertices of R2.
 
-{% highlight java %}
+    {% highlight java %}
 R1.contains(R2.x, R2.y) || R1.contains(R2.x+R2.width-1, R2.y) ||
 R1.contains(R2.x, R2.y+R2.height-1) ||
 R1.contains(R2.x+R2.width-1, R2.y+R2.height-1)
-{% endhighlight %}
+    {% endhighlight %}
 
 With this approach, we have converted the problem of verification if two rectangles intersect in the problem if a rectangle contains a point, which is much simpler.
 
 A rectangle R1 contains a point x, y if and only if:
 
-{% highlight java %}
+    {% highlight java %}
 x>=R1.x && x < R1.x + R1.width && y >= R1.y && y < R1.y + this.height;
-{% endhighlight %}
+    {% endhighlight %}
 
 This technique is the one we will use for all the video games shown in this blog. There are other techniques for collision detection such as the **Circle Technique** in which the object rather than being delimited by a rectangle is delimited by a circle having a given center and radius. With this technique, two objects collide when their circles intersect. It is a more suitable technique for objects very close to the circular shape and which performs many rotations.
 

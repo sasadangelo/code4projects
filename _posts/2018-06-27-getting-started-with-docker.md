@@ -115,15 +115,15 @@ For this reason, I created this cheat sheet with the most important commands tha
 
 To list all the available images you can use the following command:
 
-{% highlight shell %}
+    {% highlight shell %}
 docker image ls
-{% endhighlight %}
+    {% endhighlight %}
 
 At the very beginning, the list is empty. Now suppose you want to download an Ubuntu 16.04 (Xenial) image and store it on your system. On the Docker HUB, you’ll [find a lot of images](https://hub.docker.com/explore/) you can start to play with. The command to run is the following:
 
-{% highlight shell %}
+    {% highlight shell %}
 docker pull ubuntu:16.04
-{% endhighlight %}
+    {% endhighlight %}
 
 Now if you run the “_docker image ls_” command the following will appear:
 
@@ -131,21 +131,21 @@ _ubuntu              16.04               a35e70164dfb        1
 
 You have installed the image on your system. Start an instance of this image (the container) using the following command:
 
-{% highlight shell %}
+    {% highlight shell %}
 docker run -it ubuntu /bin/bash
-{% endhighlight %}
+    {% endhighlight %}
 
 You created a container called “ubuntu” with a bash shell you can use to run whatever Ubuntu command. In another host shell you can run the command to list all docker containers running on your system:
 
-{% highlight shell %}
+    {% highlight shell %}
 docker container ls
-{% endhighlight %}
+    {% endhighlight %}
 
 **Whenever you close a container you lost all the changes you applied to it**. In order to avoid this, you can create a snapshot of the current container state so you can recover it whenever you need it. The command to do that is:
 
-{% highlight shell %}
+    {% highlight shell %}
 docker commit CONTAINER_ID TAG
-{% endhighlight %}
+    {% endhighlight %}
 
 It creates a new image TAG with the status the container had when you committed it. The CONTAINER\_ID is the number that identifies the container and that you can retrieve it with the “_docker container ls_” command.
 
@@ -159,14 +159,14 @@ To make things more interesting let’s create a Docker container with a web ser
 
 Here the _Dockerfile_ code to build the Docker image from which we will create our container.
 
-{% highlight docker %}
+    {% highlight docker %}
 FROM ubuntu:16.04
 RUN apt-get update; apt-get install -y nginx
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY ./www-data /home/www/www-data
 EXPOSE 80
 CMD ["nginx"]
-{% endhighlight %}
+    {% endhighlight %}
 
 **_FROM_** is the keyword used by Docker to specify the docker image to use as a starting point. In our example, we start with Ubuntu 16.04. In order to download software packages, you need to run the Ubuntu _apt-get update_ command. **_RUN_** is the keyword used by Docker to run a command on the target image. We will use it to install the Nginx package.
 
@@ -180,15 +180,15 @@ Finally, the **CMD** command tells Docker which command to start when the contai
 
 To build this image you can run the following shell command:
 
-{% highlight shell %}
+    {% highlight shell %}
 docker build -t TAG .
-{% endhighlight %}
+    {% endhighlight %}
 
 Docker will build the Dockerfile in the current folder. If you issue the “_docker image ls_” command, you’ll notice the new image TAG appeared on the list. To run the docker image just created give the following command:
 
-{% highlight shell %}
+    {% highlight shell %}
 docker run -d -p 80:80 TAG
-{% endhighlight %}
+    {% endhighlight %}
 
 The -d option will start the container in detach mode so that the shell doesn’t hang.
 
@@ -198,9 +198,9 @@ Open your browser and type localhost in the address bar. You’ll see the “Hel
 
 If you want, you can access the container using the command:
 
-{% highlight shell %}
+    {% highlight shell %}
 docker exec -it CONTAINER_ID /bin/bash
-{% endhighlight %}
+    {% endhighlight %}
 
 where you can retrieve the  CONTAINER\_ID with the “_docker container ls_” command.
 

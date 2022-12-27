@@ -82,11 +82,11 @@ Unlike the _onPause_ method, the _onStop_ method should be used to perform shutd
 
 To specify the main activity of an app, you must modify the **AndroidManifest.xml** manifest file this way.
 
-{% highlight xml %}
+    {% highlight xml %}
 <activity android:name=".MainActivity" android:label="@string/app_name">
     <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
     </intent-filter>
 </activity>
-{% endhighlight %}
+    {% endhighlight %}

@@ -58,33 +58,33 @@ However, if we need to have a storage space of a specific filesystem we cannot u
 
 The docker commands that we need to learn to manage volumes are few. To create a Docker volume you can use the command:
 
-{% highlight shell %}
+    {% highlight shell %}
 docker volume create <volume name>
-{% endhighlight %}
+    {% endhighlight %}
 
 You can check the volume created with the command:
 
-{% highlight shell %}
+    {% highlight shell %}
 docker volume ls
-{% endhighlight %}
+    {% endhighlight %}
 
 Once created the volume and container lifecycles are unrelated. If the volume is not required any more you can remove it with the command:
 
-{% highlight shell %}
+    {% highlight shell %}
 docker volume rm <volume name>
-{% endhighlight %}
+    {% endhighlight %}
 
 If you want to bind mounts a host folder or a volume to a container use the following command:
 
-{% highlight shell %}
+    {% highlight shell %}
 docker run -it -v <host folder or volume name>:<container folder> <image name> /bin/bash
-{% endhighlight %}
+    {% endhighlight %}
 
 The same -v option can be used with the “docker create” command:
 
-{% highlight shell %}
+    {% highlight shell %}
 docker create -it -v <host folder or volume name>:<container folder> <image name> /bin/bash
-{% endhighlight %}
+    {% endhighlight %}
 
 ## How to change PostgreSQL cluster code
 
@@ -94,7 +94,7 @@ In the [fifth article](install-postgresql-cluster-docker), we discussed how to c
 
 As a first step, we need the script [_build\_volumes.sh_](https://github.com/sasadangelo/docker-tutorials/blob/master/postgresql-cluster-volume/build_volumes.sh) to create the three volumes.
 
-{% highlight shell %}
+    {% highlight shell %}
 NODE1_VOLUME=volume1
 NODE2_VOLUME=volume2
 NODE3_VOLUME=volume3
@@ -102,11 +102,11 @@ NODE3_VOLUME=volume3
 docker volume create ${NODE1_VOLUME}
 docker volume create ${NODE2_VOLUME}
 docker volume create ${NODE3_VOLUME}
-{% endhighlight %}
+    {% endhighlight %}
 
 Here the code of the relative [_clean\_volumes.sh_](https://github.com/sasadangelo/docker-tutorials/blob/master/postgresql-cluster-volume/clean_volumes.sh) script.
 
-{% highlight shell %}
+    {% highlight shell %}
 NODE1_VOLUME=volume1
 NODE2_VOLUME=volume2
 NODE3_VOLUME=volume3
@@ -114,14 +114,14 @@ NODE3_VOLUME=volume3
 docker volume rm ${NODE1_VOLUME}
 docker volume rm ${NODE2_VOLUME}
 docker volume rm ${NODE3_VOLUME}
-{% endhighlight %}
+    {% endhighlight %}
 
 ### Modify the start\_containers.sh script
 
 We need to modify the [_start\_containers.sh_](https://github.com/sasadangelo/docker-tutorials/blob/master/postgresql-cluster-volume/start_containers.sh) to bind mount the volumes to the three containers.
 
 
-{% highlight shell %}
+    {% highlight shell %}
 ...
 NODE1_VOLUME=volume1
 NODE2_VOLUME=volume2
@@ -153,7 +153,7 @@ docker create -it --net ${PRIVATE_NETWORK_NAME} --ip ${NODE2_PRIVATE_IP} --hostn
 docker create -it --net ${PRIVATE_NETWORK_NAME} --ip ${NODE3_PRIVATE_IP} --hostname ${NODE3_NAME} --name ${NODE3_NAME} --env NODE_NAME=${NODE3_NAME} --env MASTER_NAME=${MASTER_NAME} -p ${NODE3_PORT}:5432 -v ${NODE3_VOLUME}:/home/postgres/data postgresql /bin/bash
 
 ...
-{% endhighlight %}
+    {% endhighlight %}
 
 The code first checks that volume exists and then binds mounts them to the containers.
 

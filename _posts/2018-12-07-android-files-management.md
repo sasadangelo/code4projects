@@ -47,13 +47,13 @@ External memory is the ideal place for files that do not require special restric
 
 In order for your application to write to external memory, it must request the WRITE\_EXTERNAL\_STORAGE permissions in the manifest file:
 
-{% highlight xml %}
-<manifest ...>
+    {% highlight xml %}
+<manifest >
     ...
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     ...
 </manifest>
-{% endhighlight %}
+    {% endhighlight %}
 
 ### Read and Write on External Memory
 
@@ -76,22 +76,22 @@ We now create a [_Settings_ class](https://github.com/sasadangelo/HelloWorldApp/
 
 We modify the file _[AndroidManifest.xml](https://github.com/sasadangelo/HelloWorldApp/blob/0.0.2/app/src/main/AndroidManifest.xml)_ adding the permissions to write on the card External SD card.
 
-{% highlight xml %}
+    {% highlight xml %}
     ...
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 </manifest>
-{% endhighlight %}
+    {% endhighlight %}
 
 We also change the layout file [_activity\_my.xml_](https://github.com/sasadangelo/HelloWorldApp/blob/0.0.2/app/src/main/res/layout/activity_my.xml) in order to associate an id with the _TextView_, so that we can then modify it from Java code.
 
-{% highlight xml %}
+    {% highlight xml %}
 <TextView android:id="@+id/TextView" android:text="@string/hello_world" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-{% endhighlight %}
+    {% endhighlight %}
 
 Finally, we modify the _onCreate_ method of the [MyActivity class](https://github.com/sasadangelo/HelloWorldApp/blob/0.0.2/app/src/main/java/org/androidforfun/helloworldapp/MyActivity.java) by adding the following code after the call to _setContentView_.
 
-{% highlight java %}
+    {% highlight java %}
 FileIO fileIO = new AndroidFileIO();
 Settings.addScore(5000);
 Settings.addScore(4000);
@@ -112,7 +112,7 @@ for (int i: Settings.highscores) {
 }
 TextView textView = (TextView) this.findViewById(R.id.TextView);
 textView.setText(s);
-{% endhighlight %}
+    {% endhighlight %}
 
 The purpose of this code is to add 5 scores to the rankings: 5000, 4000, 3000, 2000 and 1000; and save them to disk. Then change the rankings by adding 5 higher scores. In the end, we reload the previously saved values to show them on video. On the video, the saved scores should be visible and not those added after even higher.
 

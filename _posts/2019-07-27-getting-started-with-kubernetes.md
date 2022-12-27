@@ -151,7 +151,7 @@ Because you’re not supposed to group multiple processes into a single containe
 
 The following is an example of a YAML code block for Pod:
 
-{% highlight yaml %}
+    {% highlight yaml %}
 apiVersion: v1
 kind: Pod
 metadata:
@@ -165,27 +165,27 @@ spec:
       image: myapp
       containerPort: 80
       protocol: TCP
-{% endhighlight %}
+    {% endhighlight %}
 
 Pod is available in Kubernetes API version v1, the kind is Pod and the metadata section contains its name. The spec section describes the Pod as a combination of two containers, one running nginx and another the app myapp.
 
 Using the command:
 
-{% highlight shell %}
+    {% highlight shell %}
 kubect create -f pod.yml
-{% endhighlight %}
+    {% endhighlight %}
 
 you can create the Pod. To list the Pods in Kubernetes you can use the command:
 
-{% highlight shell %}
+    {% highlight shell %}
 kubect get pods
-{% endhighlight %}
+    {% endhighlight %}
 
 finally, to list information about the Pod you can use the command:
 
-{% highlight shell %}
+    {% highlight shell %}
 kubect describe pod my-app-pod
-{% endhighlight %}
+    {% endhighlight %}
 
 ## Kubernetes Replication Controller vs ReplicaSet
 
@@ -287,7 +287,7 @@ The figure shows an application that uses a database as a service. The connectio
 
 The following is an example of a YAML code block for ConfigMap:
 
-{% highlight yaml %}
+    {% highlight yaml %}
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -299,7 +299,7 @@ data:
     db.port=5432
     db.user=myuser
     db.password=mypassword
-{% endhighlight %}
+    {% endhighlight %}
 
 ## Namespace
 
@@ -307,12 +307,12 @@ Kubernetes gives the possibility of having multiple virtual clusters that run on
 
 The following is the YAML code to define a namespace:
 
-{% highlight yaml %}
+    {% highlight yaml %}
 apiVersion: v1
 kind: Namespace
 metadata:
     name: hello-k8s-ns
-{% endhighlight %}
+    {% endhighlight %}
 
 ## Mix Everything together
 

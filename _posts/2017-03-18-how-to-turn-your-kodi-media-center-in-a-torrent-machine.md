@@ -79,19 +79,19 @@ Then open the file _/home/osmc/.config/transmission-daemon/settings.json_ and se
 
 To configure _Max simultaneous downloads_ set the following values:
 
-{% highlight json %}
+    {% highlight plaintext %}
 "download-queue-enabled": true,
 "download-queue-size": 2,
-{% endhighlight %}
+    {% endhighlight %}
 
 ![Transmission - Download Queue](assets/img/Transmission-Download-Queue.png){:width="450" height="283" .responsive_img}
 
 Finally, configure the download directory for complete and incomplete files:
 
-{% highlight json %}
+    {% highlight plaintext %}
 "download-dir": "/media/KODI/Movies",
 "incomplete-dir": "/home/osmc/Downloads",
-{% endhighlight %}
+    {% endhighlight %}
 
 ## Torrent files and Legal issues
 

@@ -31,7 +31,7 @@ It is extremely important to understand the difference between them to correctly
 
 A ClusterIP service is the default Kubernetes service. It gives you a service inside your cluster that other apps inside your cluster can access. **There is no external access**. The YAML for a ClusterIP service looks like this:
 
-{% highlight yaml %}
+    {% highlight yaml %}
 apiVersion: v1
 kind: Service
 metadata:
@@ -45,7 +45,7 @@ spec:
       port: 80
       targetPort: 80 
       protocol: TCP
-{% endhighlight %}
+    {% endhighlight %}
 
 It’s possible to access, for debugging purposes, from the external to the Cluster IP using the Kubernetes proxy as the following figure shows. As you can notice, an application App2 can internally communicate with the application App1 via the Cluster IP.
 
@@ -54,9 +54,9 @@ It’s possible to access, for debugging purposes, from the external to the Clus
 
 Start the Kubernetes Proxy:
 
-{% highlight shell %}
-    kubectl proxy --port=8080`
-{% endhighlight %}
+    {% highlight shell %}
+kubectl proxy --port=8080
+    {% endhighlight %}
 
 
 Now, you can navigate through the Kubernetes API to access this service using this scheme:
@@ -75,9 +75,9 @@ A NodePort service is the easiest way to get external traffic directly to your s
 
 The range of the ports available for this kind of service is 30000-32767, in the YAML you can specify it or let Kubernetes assign a value to it. Usually, I prefer the second option to avoid conflicts and let Kubernetes do the right choice. You can know the value assigned with the command:
 
-{% highlight shell %}
-    kubectl get services --all-namespaces
-{% endhighlight %}
+    {% highlight shell %}
+kubectl get services --all-namespaces
+    {% endhighlight %}
 
 
 ![Kubernetes Node Port Service](assets/img/kubernetes-nodeport-service.png){:width="450" height="365" .responsive_img}
@@ -86,7 +86,7 @@ As you can notice from the image above the external traffic can arrive on the IP
 
 The YAML for a NodePort service looks like this:
 
-{% highlight yaml %}
+    {% highlight yaml %}
 apiVersion: v1
 kind: Service
 metadata:
@@ -101,7 +101,7 @@ spec:
       targetPort: 80
       nodePort: 30036
       protocol: TCP
-{% endhighlight %}
+    {% endhighlight %}
 
 In the YAML file, the service map the HTTP port 80 to the container port 80 (targetPort), but it is accessible from the external using IP:PORT, where IP is one of the Worker Node (VMs) IP and PORT is the nodePort. As said above, if you don’t specify the nodePort field Kubernetes will assign a value to it.
 
@@ -127,7 +127,7 @@ The most important thing you can do with an Ingress is to do both path-based and
 
 The YAML for an Ingress looks like this:
 
-{% highlight yaml %}
+    {% highlight yaml %}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -150,7 +150,7 @@ spec:
             backend:
                 serviceName: bar
                 servicePort: 8080
-{% endhighlight %}
+    {% endhighlight %}
 
 The following YAML file specifies that all the traffic to foo.mydomain.com is redirected to the foo service on the 8080 port. All the traffic to _mydomain.com/bar/*_ path will be redirected to the bar service on 8080 port.
 

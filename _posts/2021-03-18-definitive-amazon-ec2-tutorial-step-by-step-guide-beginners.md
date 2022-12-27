@@ -49,7 +49,7 @@ Select the **t2.micro** instance type because it is the only one eligible for Fr
 
 In the next panel, you can configure your EC2 instance. For example, if you select a subnet in your VPC you can force your EC2 instance in a specific AZ. However, for our test leave all the defaults and enter the following code in the **User Data** text field at the end of the page. Click the **Next: Add Storage** button.
 
-{% highlight shell %}
+    {% highlight shell %}
 #!/bin/bash
 # Use this for your user data (script from top to bottom)
 # install httpd (Linux 2 version)
@@ -58,7 +58,7 @@ sudo apt-get install -y apache2
 sudo systemctl start apache2
 sudo systemctl enable apache2
 echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
-{% endhighlight %}
+    {% endhighlight %}
 
 ![Amazon EC2 Configure Instance](assets/img/6-Amazon-EC2-Configure-Instance.png){:width="450" height="184" .responsive_img}
 

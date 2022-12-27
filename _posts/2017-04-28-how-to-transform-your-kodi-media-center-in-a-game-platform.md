@@ -26,13 +26,13 @@ In order to create a Retro Game platform on your Raspberry Kodi Media Center, it
 
 Access to your Raspberry [via ssh as described in this article](how-to-configure-kodi-media-center) and give the following commands to start the installation procedure:
 
-{% highlight shell %}
+    {% highlight shell %}
 mkdir /media/KODI/Programs/RetroPie
 cd /media/KODI/Programs/RetroPie
 wget https://raw.githubusercontent.com/mcobit/retrosmc/master/install-retrosmc.sh
 chmod +x install-retrosmc.sh
 ./install-retrosmc.sh
-{% endhighlight %}
+    {% endhighlight %}
 
 A text menu will appear in the terminal, choose the option _Install Retrosmc_. Several packages will be downloaded and it will require some time to complete, be patient. Once the download is completed choose _Basic Install_ from the text menu. The installation procedure will require some time, be patient. When this operation terminates the text menu will appear again, install the _RetroPie Launcher Add-On_, in this way you can launch the emulation station easily from your Kodi menu using the remote control. By default, this add-on will be deactivated after the installation because it is not an add-on provided in the official Kodi Repository. To enable it to do the following steps:
 

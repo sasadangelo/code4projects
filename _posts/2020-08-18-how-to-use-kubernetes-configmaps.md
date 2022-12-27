@@ -60,23 +60,23 @@ Photo from [https://matthewpalmer.net](https://matthewpalmer.net)
 In [this article](getting-started-with-kubernetes), I showed how to define a ConfigMap for an application that contains database connection parameters for database services. Here the example:
 
     {% highlight yaml %}
-    apiVersion: v1
-    kind: ConfigMap
-    metadata:
-        name: db-config
-        namespace: default
-    data:
-        connection.properties: |
-            db.name=mydb
-            db.port=5432
-            db.user=myuser
-            db.password=mypassword
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-config
+  namespace: default
+data:
+  connection.properties: |
+    db.name=mydb
+    db.port=5432
+    db.user=myuser
+    db.password=mypassword
     {% endhighlight %}
 
 You can use the following command to create the ConfigMap from the YAML file in the default namespace:
  
     {% highlight shell %}
-    kubectl apply -f YAML
+kubectl apply -f YAML
     {% endhighlight %}
 
 As we know from the [first article](getting-started-with-kubernetes), namespaces are the way Kubernetes manages multiple virtual clusters on a single physical cluster. In our example, we add the ConfigMap to the default namespace.
@@ -86,7 +86,7 @@ As we know from the [first article](getting-started-with-kubernetes), namespaces
 If you have a folder DIR with one or more configuration file or a single file *FILE*, you can create a ConfigMap from them with kubectl command line:
 
     {% highlight shell %}
-    kubectl create configmap NAME --from-file=DIR or FILE --namespace=default
+kubectl create configmap NAME --from-file=DIR or FILE --namespace=default
     {% endhighlight %}
 
 On both the examples, if you don’t specify a namespace (–namespace is an optional parameter) the ConfigMap is associated with the default one.
@@ -94,7 +94,7 @@ On both the examples, if you don’t specify a namespace (–namespace is an opt
 There is another way to create ConfigMaps using the **kubectl create configmap** command. Use literal key-value pairs defined on the command line with
 
     {% highlight shell %}
-    kubectl create configmap db-config --from-literal=key1=value1 --from-literal=key2=value2
+kubectl create configmap db-config --from-literal=key1=value1 --from-literal=key2=value2
     {% endhighlight %}
 
 You can get more information about this command using **kubectl create configmap --help**.
@@ -115,36 +115,36 @@ Load all the key-value pairs from the ConfigMap and use them as environment vari
 The following is a YAML example for the first method, where the value of *db.user* property in the *db-config* ConfigMap is assigned to the DB_USER_ENV environment variable:
 
     {% highlight yaml %}
-    apiVersion: v1
-    kind: Pod
-    metadata:
-    name: my-pod
-    spec:
-    containers:
-    - name: my-container
-        image: my-image:x.y.z
-        env:
-        - name: DB_USER_ENV
-            valueFrom:
-            configMapKeyRef:
-                name: db-config
-                key: db.user
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+containers:
+- name: my-container
+  image: my-image:x.y.z
+  env:
+  - name: DB_USER_ENV
+    valueFrom:
+      configMapKeyRef:
+        name: db-config
+        key: db.user
     {% endhighlight %}
 
 This is an example of the second method, where all the properties of the db-config ConfigMap are read and used as environment variables:
 
     {% highlight yaml %}
-    kind: Pod 
-    apiVersion: v1 
-    metadata:
-        name: my-pod
-    spec:
-        containers:
-        - name: my-container
-        image: my-image:x.y.z 
-        envFrom:
-        - configMapRef:
-                name: db-config
+apiVersion: v1 
+kind: Pod 
+metadata:
+  name: my-pod
+spec:
+  containers:
+  - name: my-container
+    image: my-image:x.y.z 
+    envFrom:
+    - configMapRef:
+        name: db-config
     {% endhighlight %}
 
 ### How Pods reference ConfigMaps with mount volumes?
@@ -152,22 +152,21 @@ This is an example of the second method, where all the properties of the db-conf
 Defining the ConfigMap in YAML and mounting it as a volume is the easiest way to use ConfigMaps.
 
     {% highlight yaml %}
-    kind: Pod 
-    apiVersion: v1 
-    metadata:
-    name: my-pod 
-    spec:
-    volumes:
-        - name: my-volume
-        configMap:
-            name: db-config
-
-    containers:
-        - name: my-container
-        image: my-image:x.y.z
-        volumeMounts:
-            - name: my-volume
-            mountPath: /etc/config
+apiVersion: v1 
+kind: Pod 
+metadata:
+  name: my-pod 
+spec:
+volumes:
+  - name: my-volume
+    configMap:
+      name: db-config
+containers:
+  - name: my-container
+    image: my-image:x.y.z
+    volumeMounts:
+      - name: my-volume
+        mountPath: /etc/config
     {% endhighlight %}
 
 In this example, you can see that the *db-config* ConfigMap is defined as a volume (*my-volume*). Then this volume is mounted under the /etc/config folder creating the connection.properties file in it. Create and add this Pod to the cluster using the kubectl apply command (see above). Attach to the created Pod using `kubectl exec -it my-pod sh`. Then run `ls /etc/config/` and you can see the *c*onnection.properties* file. Use the cat command to look at the contents of each file and you’ll see the values from the ConfigMap.
