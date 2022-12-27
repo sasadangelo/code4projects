@@ -16,12 +16,14 @@
     
     {% feed_meta %}
     {% seo %}
-    <!--
-    {% if jekyll.environment == "production" %}
-      <script async src="my-analytics-script.js"></script>
+
+    {% if site.google_analytics and jekyll.environment == 'production' %}
+    {% include analytics.html %}
     {% endif %}
-    -->
+
+    {% if site.data.newsletter.tag %}
     {{ site.data.newsletter.tag }}
+    {% endif %}
   </head>
   <body>
     <div id="page">

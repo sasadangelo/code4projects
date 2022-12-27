@@ -6,6 +6,9 @@ url: "https://sasadangelo.github.io"
 copyright: Code4Projects, Copyright Salvatore D'Angelo © 2016-2022.
 logo: /assets/img/code4projects-logo-mini.webp
 
+# Google Analytics
+google_analytics: G-62DF79P0NY
+
 # Typography configuration
 fonts:
     size: 30px
