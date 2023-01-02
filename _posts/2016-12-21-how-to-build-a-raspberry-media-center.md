@@ -12,7 +12,7 @@ sitemap:
   changefreq: 'weekly'
 ---
 
-![How to build a Raspberry Media Center](assets/img/Hector_TV_Box-min.jpeg){:width="267" height="200" .responsive_img}
+![How to build a Raspberry Media Center]({{ site.baseurl }}/wp-content/uploads/2020/07/Hector_TV_Box-min-e1596192046917.jpg){:width="267" height="200" .responsive_img}
 
 # How to build a Raspberry Media Center
 _Posted on **{{ page.date | date_to_string }}**_
@@ -23,10 +23,10 @@ In this article series, I would like to show you how to build a Raspberry Media 
 
 Classic Raspberry Media Centers use 8GB or 16 GB SD cards. Once you start using them soon you realize that the space available is not enough to store all media files. The first and cheaper option is to buy an HDD to connect to your Raspberry but immediately some issues raise:
 
-1.  How can I power it?
-2.  Can I use a single power cable for Raspberry and HDD?
-3.  What about the mess of cables next to the TV?
-4.  What enclosure can I buy to keep all devices and cables?
+1. How can I power it?
+2. Can I use a single power cable for Raspberry and HDD?
+3. What about the mess of cables next to the TV?
+4. What enclosure can I buy to keep all devices and cables?
 
 I am writing this article because it is not easy to find an answer to these questions on the web. The most difficult part was to find a good enclosure that makes the solution elegant for a living room. Lots of articles on the web focus on Raspberry and KODI without taking into consideration the use of an HDD. Moreover, there are few enclosures available for Raspberry + HDD. The few available have some cons that make them unusable in my specific case. I will list all the possible alternatives at the end of this article with the reason why I discarded them.
 
@@ -34,13 +34,13 @@ I am writing this article because it is not easy to find an answer to these ques
 
 To build your own Raspberry Media Center it’s necessary to buy the right components like:
 
--   \* Raspberry PI 2 Model B – [Amazon](https://www.amazon.it/Raspberry-Pi-Modello-Quad-Core/dp/B00T2U7R7I/ref=sr_1_3?ie=UTF8&qid=1482318028&sr=8-3&keywords=raspberry+pi+2+model+b)
--   \*\* Kingston Micro SDHC/SDXC Class 10 UHS-I, 16 GB – [Amazon](https://www.amazon.it/gp/product/B0036V9AGU?redirect=true&ref_=oh_aui_detailpage_o01_s00&th=1)
--   Official Raspberry Power Supply 2 A – [Amazon](https://www.amazon.it/gp/product/B00MBH6XNS?psc=1&redirect=true&ref_=oh_aui_detailpage_o01_s00)
--   Western Digital Elements HDD 1Tb + USB cable – [Amazon](https://www.amazon.it/WD-Elements-Hard-Esterno-Portatile/dp/B00CRZ2PRM)
--   \*\*\* ~~WDLabs PiDrive Enclosure Square 6″x6″ – WSDLabs~~
--   2 x Startech.com USB 15 cm Cable Extension –  [Amazon](https://www.amazon.it/gp/product/B000E5CYW8/ref=oh_aui_detailpage_o05_s00?ie=UTF8&psc=1)
--   \*\*\*\* Tontec Dongle USB WI-FI Adapter – [Amazon](https://www.amazon.it/gp/product/B010AKMF3Y?psc=1&redirect=true&ref_=oh_aui_detailpage_o04_s00) (OPTIONAL)
+- \* Raspberry PI 2 Model B – [Amazon](https://www.amazon.it/Raspberry-Pi-Modello-Quad-Core/dp/B00T2U7R7I/ref=sr_1_3?ie=UTF8&qid=1482318028&sr=8-3&keywords=raspberry+pi+2+model+b)
+- \*\* Kingston Micro SDHC/SDXC Class 10 UHS-I, 16 GB – [Amazon](https://www.amazon.it/gp/product/B0036V9AGU?redirect=true&ref_=oh_aui_detailpage_o01_s00&th=1)
+- Official Raspberry Power Supply 2 A – [Raspberrypi.com](https://www.raspberrypi.com/products/raspberry-pi-universal-power-supply/)
+- Western Digital Elements HDD 1Tb + USB cable – [Amazon](https://www.amazon.it/WD-Elements-Hard-Esterno-Portatile/dp/B00CRZ2PRM)
+- \*\*\* <del>WDLabs PiDrive Enclosure Square 6″x6″ – WSDLabs</del>
+- 2 x Startech.com USB 15 cm Cable Extension – [Amazon](https://www.amazon.it/gp/product/B000E5CYW8/ref=oh_aui_detailpage_o05_s00?ie=UTF8&psc=1)
+- \*\*\*\* Tontec Dongle USB WI-FI Adapter – [Amazon](https://www.amazon.it/gp/product/B010AKMF3Y?psc=1&redirect=true&ref_=oh_aui_detailpage_o04_s00) (OPTIONAL)
 
 > \* When I started the project Raspberry Pi 3 Model B haven’t released yet. If I started the project today I would opt for Raspberry Pi 3 Model B which already has a WIFI receiver built in and a Bluetooth as well.
 > 
@@ -54,11 +54,11 @@ Hector includes also other components like a DVB-T USB and two Gamepads. I haven
 
 ## The Solution: Hector a Raspberry Media Center
 
-![Raspberry Media Center with TV](assets/img/hector-next-tv.jpeg){:width="400" height="300" .responsive_img}
+![Raspberry Media Center with TV]({{ site.baseurl }}/wp-content/uploads/2016/12/Hector_next_TV.jpg){:width="400" height="300" .responsive_img}
 
 The first issue I needed to solve was the power supply. In the beginning, I used a normal charger for the Samsung phone. Immediately I learned that it does not suit a TV box. The main problem is that it should provide 2A current to power the system. Samsung power supplies usually declare a current from 0.5 A to 2A, but those numbers are not reliable.
 
-![Raspberry Pi Power Supply](assets/img/raspberry-pi-power-supply.jpeg){:width="400" height="315" .responsive_img}
+![Raspberry Pi Power Supply]({{ site.baseurl }}/wp-content/uploads/2016/12/Raspberry_Pi_Power_Supply.jpg){:width="400" height="315" .responsive_img}
 
 I solved the problem using the official Raspberry Power Supply. Once [OSMC](https://osmc.tv/) installation completes, set the max\_current option to 1 in the /boot/config.txt file. OSMC is a Raspberry Linux distribution for Media Centers with a built-in KODI.
 
@@ -66,21 +66,20 @@ Connect the HDD to a Raspberry USB port. To cut the mess of cable the best solut
 
 The first step is to remove the HDD from its enclosure. You can use a small precision screwdriver. You have to remove also the screws it has on the side used to fit it into its enclosure.
 
-![HDD enclosure](assets/img/hdd-enclosure.jpeg){:width="300" height="400" .responsive_img}
+![HDD enclosure]({{ site.baseurl }}/wp-content/uploads/2016/12/HDD_enclosure.jpg){:width="300" height="400" .responsive_img}
+![HD out enclosure]({{ site.baseurl }}/wp-content/uploads/2016/12/HD_out_enclosure.jpg){:width="300" height="400" .responsive_img}
 
-![HD out enclosure](assets/img/hd-out-enclosure.jpeg){:width="300" height="400" .responsive_img}
-
-![HDD back](assets/img/hdd-back.jpeg){:width="300" height="400" .responsive_img}
+![HDD back]({{ site.baseurl }}/wp-content/uploads/2016/12/HDD_back.jpg){:width="300" height="400" .responsive_img}
 
 At this point, you can put Raspberry and HDD in the enclosure using few screws available in the enclosure package. With HDD cable connects Raspberry with HDD.
 
-![HDD Raspberry Enclosure Cables DVB](assets/img/hdd-raspberry-enclosure-cables-dvb.jpg){:width="400" height="300" .responsive_img}
+![HDD Raspberry Enclosure Cables DVB]({{ site.baseurl }}/wp-content/uploads/2016/12/HDD_RAspberry_Enclosure_Cables_DVB.jpg){:width="400" height="300" .responsive_img}
 
 As you can see I have also a WI-FI dongle in the enclosure that works fine without any connection issues.
 
 I have a [TV Antenna stick](https://www.amazon.it/TrekStor-59900-Trekstor-DVBT-Stick-Terres/dp/B007Y6GA6Q) that I use to watch TV on KODI. Since it does not fit inside the box I bought two USB extensors. I use them also to attach two gamepads that my kids use to play video games. In this way, without open the box I disconnect the TV stick and connect the Gamepads.
 
-![Raspberry Media Center](assets/img/Hector_TV_Box-min.jpeg){:width="267" height="200" .responsive_img}
+![Raspberry Media Center]({{ site.baseurl }}/wp-content/uploads/2016/12/Hector_TV_Box.jpg){:width="267" height="200" .responsive_img}
 
 The enclosure is easy to open. There are no screws but magnets so you can open it and attach USB cables whenever you want. To be honest I do not like this option and this is the reason I bought the two USB extensors.
 
@@ -92,13 +91,13 @@ As I said above the most difficult part was to find the right enclosure for the 
 
 ### OSMC Pi Drive:
 
-~~OSMC Pi Drive is a complete solution to build a Media Center with Raspberry. It provides the enclosure, a 384 Gb HDD, and cables. I discarded it because I already had the HDD. Moreover, 384 Gb is too low for a Media Center in my opinion. Today, for example, my media files go over this dimension. I think the best part of this solution is the enclosure but it is exactly the same you can buy on WDLabs. If you do not have an external HDD already and 384 GB are enough for you, then this solution could be right for you.~~
+<del>OSMC Pi Drive is a complete solution to build a Media Center with Raspberry. It provides the enclosure, a 384 Gb HDD, and cables. I discarded it because I already had the HDD. Moreover, 384 Gb is too low for a Media Center in my opinion. Today, for example, my media files go over this dimension. I think the best part of this solution is the enclosure but it is exactly the same you can buy on WDLabs. If you do not have an external HDD already and 384 GB are enough for you, then this solution could be right for you.</del>
 
 This option is not available anymore because the OSMC team discontinued its production.
 
 ### Plusberry:
 
-~~[Plusberry](https://www.indiegogo.com/projects/plusberry-pi-media-box-running-on-raspberry-pi#/) is the best option today available on the web. The solution provides 3A power supply with a Power HUB so you can connect several peripherals. There are two important drawbacks: it is expensive and there are shipping issues. In fact, there are a lot of negative comments on the Comment page. The cost would worth it, but I do not think it is wise to spend 64$ with the risk to not receive the enclosure. I am sure the solution is not a scam and the author will solve soon all the issues, in the meanwhile, I suggest to not buy it.~~
+<del>[Plusberry](https://www.indiegogo.com/projects/plusberry-pi-media-box-running-on-raspberry-pi#/) is the best option today available on the web. The solution provides 3A power supply with a Power HUB so you can connect several peripherals. There are two important drawbacks: it is expensive and there are shipping issues. In fact, there are a lot of negative comments on the Comment page. The cost would worth it, but I do not think it is wise to spend 64$ with the risk to not receive the enclosure. I am sure the solution is not a scam and the author will solve soon all the issues, in the meanwhile, I suggest to not buy it.</del>
 
 Starting from May 1st Plusberry is not an option anymore. On April 30th the project was definitively shut down, here the announcement of the author:
 
@@ -110,13 +109,13 @@ Starting from May 1st Plusberry is not an option anymore. On April 30th the proj
 
 ### WDLabs WD PiDrive Enclosure:
 
-~~WD PiDrive Enclosure is the first enclosure I bought and I put it immediately into the trash. The reason is that on the top there is no cover so from an aesthetic point of view I do not like to see circuits in my living room. The plastic separator in the box is small and there is the risk that circuits are touching each other. There are no screws. It’s the worst enclosure I saw in my life.~~
+<del>WD PiDrive Enclosure is the first enclosure I bought and I put it immediately into the trash. The reason is that on the top there is no cover so from an aesthetic point of view I do not like to see circuits in my living room. The plastic separator in the box is small and there is the risk that circuits are touching each other. There are no screws. It’s the worst enclosure I saw in my life.</del>
 
 Western Digital closed its WDLabs and the production of this enclosure is discontinued. There are other options on the web like [this one](https://www.amazon.it/Case-QUATTRO-Raspberry-Tinkerboard-incl/dp/B077S5G7ZT/ref=sr_1_4?adgrpid=101514356357&dchild=1&gclid=CjwKCAjwydP5BRBREiwA-qrCGsn6dVfLxoflQdxnos1xbCOICkxh9xMUKv9-iYjBVERQMqSF9aWyXRoCiCwQAvD_BwE&hvadid=437171236301&hvdev=c&hvlocphy=1008729&hvnetw=g&hvqmt=e&hvrand=15360306011341169533&hvtargid=kwd-296167067660&hydadcr=15885_1838983&keywords=raspberry+pi+3+hdd+case&qid=1597387621&sr=8-4&tag=slhyin-21) that I haven’t tried. If someone finds a different solution can notify me with a comment on this article. This option is not available anymore
 
 ### **OSMC Pi Drive Case:**
 
-~~The OSMC Team recently added the possibility to buy the Pi Drive case alone. There are two versions of the case: standard and bamboo. These cases are produced by Western Digital for OSMC so they are similar to the one I am using.~~
+<del>The OSMC Team recently added the possibility to buy the Pi Drive case alone. There are two versions of the case: standard and bamboo. These cases are produced by Western Digital for OSMC so they are similar to the one I am using.</del>
 
 OSMC Pi Drive Case was a resell of the WD PiDrive Enclosure. Since Western Digital discontinued its production the OSMC removed it from its store.
 
@@ -134,9 +133,9 @@ It’s possible that there are other alternatives on the web. In this case, feel
 
 In my opinion, a good Media Center needs 4 elements to make it great:
 
--   An elegant enclosure. Because if you have it in the living room you cannot use noises computers or a solution with a mess of cable. The solution proposed in this article solves all these issues and your wife or mother will thank you.
--   Good storage, an HDD with enough space is fundamental. If you have a NAS it is even better.
--   Raspberry, the brain of your system.
--   Good software. In this case, OSMC with KODI is the optimal solution you can find. You can watch TV, Movies and TV Series. Moreover, you can store your photos and share them on social media. Finally, you can listen to your favorite Music, Play Games and much more.
+- An elegant enclosure. Because if you have it in the living room you cannot use noises computers or a solution with a mess of cable. The solution proposed in this article solves all these issues and your wife or mother will thank you.
+- Good storage, an HDD with enough space is fundamental. If you have a NAS it is even better.
+- Raspberry, the brain of your system.
+- Good software. In this case, OSMC with KODI is the optimal solution you can find. You can watch TV, Movies and TV Series. Moreover, you can store your photos and share them on social media. Finally, you can listen to your favorite Music, Play Games and much more.
 
-In the [next article](how-to-configure-kodi-media-center), I will show you how to configure your Raspberry Media Center.
+In the [next article]({{ site.baseurl }}/how-to-configure-kodi-media-center/), I will show you how to configure your Raspberry Media Center.

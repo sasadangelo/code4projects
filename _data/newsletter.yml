@@ -24,7 +24,7 @@ home:
     </div>
 sidebar:
   newsletter-title: Download Free eBook
-  newsletter-image: assets/img/3D-DockerCover-medium.png
+  newsletter-image: wp-content/uploads/2021/02/3D-DockerCover-mini.png
   newsletter-code: >
     <div class="ml-form-embed"
       data-account="630507:v7c1f1b7e1"
@@ -32,7 +32,7 @@ sidebar:
     </div>
 post:
   newsletter-title: Download Free eBook
-  newsletter-image: assets/img/3D-DockerCover-medium.png
+  newsletter-image: wp-content/uploads/2021/02/3D-DockerCover-medium.png
   newsletter-code: >
     <div class="ml-form-embed"
       data-account="630507:v7c1f1b7e1"

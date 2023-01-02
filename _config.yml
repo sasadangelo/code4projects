@@ -4,7 +4,7 @@ description: What I have learned after 30 years of programming
 baseurl: "/code4projects"
 url: "https://sasadangelo.github.io"
 copyright: Code4Projects, Copyright Salvatore D'Angelo © 2016-2022.
-logo: /assets/img/code4projects-logo-mini.webp
+logo: wp-content/uploads/2020/06/code4projects-logo-mini.png
 
 # Google Analytics
 google_analytics: G-62DF79P0NY
@@ -36,12 +36,13 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      permalink: /:slug
+      permalink: /:slug/
   - scope:
       path: ""
     values:
       layout: "default"
 
+permalink: /:slug/
 page_excerpts: "true"
 
 paginate_path: "/blog/page:num/"
