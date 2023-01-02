@@ -45,8 +45,8 @@ defaults:
 permalink: /:slug/
 page_excerpts: "true"
 
-paginate_path: "/blog/page:num/"
 pagination:
+  permalink: '/page/:num/'
   enabled: true
   per_page: 7
   sort_reverse: true

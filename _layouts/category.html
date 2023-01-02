@@ -40,7 +40,7 @@ pagination:
               Previous
             </a>
           {% else %}
-            <a href="{{ site.baseurl }}/category/{{ page.slug }}/page{{ paginator.previous_page }}" class="previous-page">
+            <a href="{{ site.baseurl }}/category/{{ page.slug }}/page/{{ paginator.previous_page }}/" class="previous-page">
               Previous
             </a>
           {% endif %}
@@ -49,7 +49,7 @@ pagination:
         {% endif %}
         <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
         {% if paginator.next_page %}
-          <a href="{{ site.baseurl }}/category/{{ page.slug }}//page{{ paginator.next_page }}" class="next-page">Next</a>
+          <a href="{{ site.baseurl }}/category/{{ page.slug }}/page/{{ paginator.next_page }}/" class="next-page">Next</a>
         {% else %}
           <span class="next-page">Next</span>
         {% endif %}

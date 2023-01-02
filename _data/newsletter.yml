@@ -11,7 +11,7 @@ tag: >
     <!-- End MailerLite Universal -->
 home:
   newsletter-title: Join our Newsletter and Download a Free eBook
-  newsletter-image: assets/img/3D-DockerCover-large.png
+  newsletter-image: wp-content/uploads/2021/02/3D-DockerCover-medium.png
   newsletter-text: >
     Fill the form below to subscribe to the Code4Projects Newsletter. It's free. You'll receive the eBook
     <b>Getting Started with Docker</b> for free. We hate spam, we use this Newsletter to send updates to our 
