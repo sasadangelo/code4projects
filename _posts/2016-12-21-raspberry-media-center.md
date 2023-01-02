@@ -73,13 +73,13 @@ The first step is to remove the HDD from its enclosure. You can use a small prec
 
 At this point, you can put Raspberry and HDD in the enclosure using few screws available in the enclosure package. With HDD cable connects Raspberry with HDD.
 
-![HDD Raspberry Enclosure Cables DVB]({{ site.baseurl }}/wp-content/uploads/2016/12/HDD_RAspberry_Enclosure_Cables_DVB.jpg){:width="400" height="300" .responsive_img}
+![HDD Raspberry Enclosure Cables DVB]({{ site.baseurl }}/wp-content/uploads/2016/12/HDD_RAspberry_Enclosure_Cables_DVB.jpg){:width="450" height="232" .responsive_img}
 
 As you can see I have also a WI-FI dongle in the enclosure that works fine without any connection issues.
 
 I have a [TV Antenna stick](https://www.amazon.it/TrekStor-59900-Trekstor-DVBT-Stick-Terres/dp/B007Y6GA6Q) that I use to watch TV on KODI. Since it does not fit inside the box I bought two USB extensors. I use them also to attach two gamepads that my kids use to play video games. In this way, without open the box I disconnect the TV stick and connect the Gamepads.
 
-![Raspberry Media Center]({{ site.baseurl }}/wp-content/uploads/2016/12/Hector_TV_Box.jpg){:width="267" height="200" .responsive_img}
+![Raspberry Media Center]({{ site.baseurl }}/wp-content/uploads/2016/12/Hector_TV_Box.jpg){:width="450" height="397" .responsive_img}
 
 The enclosure is easy to open. There are no screws but magnets so you can open it and attach USB cables whenever you want. To be honest I do not like this option and this is the reason I bought the two USB extensors.
 
