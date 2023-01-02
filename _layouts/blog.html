@@ -4,7 +4,7 @@ layout: default
 <div id="blog-main">
   <div id="blog-container">
     <div id="blog-content">
-      <h1>Blog Archives</h1>
+      <h1>Blog Archives: {{ page.title }}</h1>
       {% for post in paginator.posts %}
         <div class="blog-entry">
           <div class="blog-entry-thumbnail">
