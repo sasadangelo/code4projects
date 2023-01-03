@@ -3,12 +3,12 @@ layout: post
 title: How to transform your Kodi Media Center in a Game Platform
 post_series_id: raspberry-media-center
 slug: how-to-transform-kodi-media-center-retro-game-platform
-thumbnail: assets/img/mortal_kombat.png
+thumbnail: wp-content/uploads/2017/04/mortal_kombat.png
 excerpt: In this article, I would like to show you how to transform your Raspberry Kodi Media Center in a Retro Game platform.
 categories: Multimedia
 ---
 
-![How to transform your Kodi Media Center in a Game Platform](assets/img/mortal_kombat.png){:width="200" height="127" .responsive_img}
+![How to transform your Kodi Media Center in a Game Platform]({{ site.baseurl }}/wp-content/uploads/2017/04/mortal_kombat.png){:width="200" height="127" .responsive_img}
 
 # How to transform your Kodi Media Center in a Game Platform
 _Posted on **{{ page.date | date_to_string }}**_
@@ -17,14 +17,14 @@ In this article, I would like to show you how to transform your Raspberry Kodi M
 
 Before you read this article I assume:
 
-1.  you already [built your own Kodi Media Center with Raspberry](raspberry-media-center);
-2.  you already [configured it](how-to-configure-kodi-media-center).
+1.  you already [built your own Kodi Media Center with Raspberry]({{ site.baseurl }}/raspberry-media-center/);
+2.  you already [configured it]({{ site.baseurl }}/how-to-configure-kodi-media-center/).
 
 ## How to Install RetroPie
 
 In order to create a Retro Game platform on your Raspberry Kodi Media Center, it is required you install the RetroPie software. RetroPie is an emulation station that allows playing games for several platforms like Mame, Nintendo 64, Nintendo SNES, and so on. The installation of this software is very easy.
 
-Access to your Raspberry [via ssh as described in this article](how-to-configure-kodi-media-center) and give the following commands to start the installation procedure:
+Access to your Raspberry [via ssh as described in this article]({{ site.baseurl }}/how-to-configure-kodi-media-center/) and give the following commands to start the installation procedure:
 
     {% highlight shell %}
 mkdir /media/KODI/Programs/RetroPie
@@ -42,7 +42,7 @@ A text menu will appear in the terminal, choose the option _Install Retrosmc_. S
 
 Now the RetroPie Launcher will be visible in the Add-Ons menu of Kodi. To launch it select _Add-Ons -> RetroPie Launcher_.
 
-![Retrosmc Launcher](assets/img/Retrosmc-Launcher.png){:width="450" height="253" .responsive_img}
+![Retrosmc Launcher]({{ site.baseurl }}/wp-content/uploads/2017/04/Retrosmc-Launcher.png){:width="450" height="253" .responsive_img}
 
 For more details on the RetroPie installation on OSMC look at the [official guide](https://discourse.osmc.tv/t/howto-retropie-and-osmc-retrosmc-retrogaming-on-osmc/6671).
 
@@ -52,7 +52,7 @@ To play Retro Game on Kodi and Raspberry it is required to buy at least a game c
 
 Here a photo of my two Game Controllers attached to my Kodi Media Center. As you can see I use also [two USB extenders](https://www.amazon.it/gp/product/B000E5CYW8/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1) to avoid opening the enclosure every time I want to attach the Game Controllers to the Media Center.
 
-![Kodi Media Center Gamepad](assets/img/Kodi-Media-Center-Gamepad.jpeg){:width="450" height="337" .responsive_img}
+![Kodi Media Center Gamepad]({{ site.baseurl }}/wp-content/uploads/2017/04/Kodi-Media-Center-Gamepad.jpg){:width="450" height="337" .responsive_img}
 
 I tried to find these controllers on the Internet but I haven’t found them, however, I think whatever Xbox 360 Gamepad compatible works fine with Kodi and Raspberry.
 
@@ -60,33 +60,33 @@ I tried to find these controllers on the Internet but I haven’t found them, ho
 
 You have installed RetroPie and attached one or two Game Controllers, go on _Add-Ons -> Retrosmc_ to start RetroPie. The Emulation station starts and a Welcome panel appears with the number of Gamepads detected. Hold a button on your gamepad to configure it.
 
-![Retropie Welcome](assets/img/Retropie_Welcome.jpeg){:width="450" height="240" .responsive_img}
+![Retropie Welcome]({{ site.baseurl }}/wp-content/uploads/2017/04/Retropie_Welcome.jpg){:width="450" height="240" .responsive_img}
 
 _Photo from [http://bitfixgaming.boards.net](http://bitfixgaming.boards.net/)_
 
 [At the following page](https://github.com/RetroPie/RetroPie-Setup/wiki/first-installation) in the section _Configure Controllers_, you can find the instructions to configure your Gamepad. The following figure shows you how I assigned the buttons to my controller.
 
-![Gamepad Buttons](assets/img/Gamepad_Buttons.jpeg){:width="450" height="337" .responsive_img}
+![Gamepad Buttons]({{ site.baseurl }}/wp-content/uploads/2017/04/Gamepad_Buttons.jpg){:width="450" height="337" .responsive_img}
 
 **5 Important Things!!!**
 
-1.  The Left and Right Thumbstick have five movements: up, down, left, right, and press. When LEFT THUMB and RIGHT THUMB actions are associated with the press movements. When the Left Thumbstick move the actions are the same as D-PAD.
-2.  LEFT ANALOG UP, LEFT ANALOG DOWN, LEFT ANALOG RIGHT, LEFT ANALOG LEFT are not reported in the figure. I associated them with Left Thumbstick once the ANALOG button is turned on. However, when I play video games I never turn it on.
-3.  RIGHT ANALOG UP, RIGHT ANALOG DOWN, RIGHT ANALOG RIGHT, RIGHT ANALOG LEFT are not reported in the figure. I associated them to Right Thumbstick once the ANALOG button is turned on. However, when I play video games I never turn it on.
-4.  On my Game Controller, 2 is A, 3 is B, 1 is X, and 4 is Y.
-5.  If there are buttons that you cannot assign to anything on your game controller, simply hold down whatever button to skip it.
+1. The Left and Right Thumbstick have five movements: up, down, left, right, and press. When LEFT THUMB and RIGHT THUMB actions are associated with the press movements. When the Left Thumbstick move the actions are the same as D-PAD.
+2. LEFT ANALOG UP, LEFT ANALOG DOWN, LEFT ANALOG RIGHT, LEFT ANALOG LEFT are not reported in the figure. I associated them with Left Thumbstick once the ANALOG button is turned on. However, when I play video games I never turn it on.
+3. RIGHT ANALOG UP, RIGHT ANALOG DOWN, RIGHT ANALOG RIGHT, RIGHT ANALOG LEFT are not reported in the figure. I associated them to Right Thumbstick once the ANALOG button is turned on. However, when I play video games I never turn it on.
+4. On my Game Controller, 2 is A, 3 is B, 1 is X, and 4 is Y.
+5. If there are buttons that you cannot assign to anything on your game controller, simply hold down whatever button to skip it.
 
 When you start to play games you need three important actions like:
 
-1.  insert coin;
-2.  start the game;
-3.  exit from the game.
+1. insert coin;
+2. start the game;
+3. exit from the game.
 
 There is some buttons combination that by default provide you this functionality like:
 
-1.  _Select+Right_ to insert coin;
-2.  _Start_ to start the game;
-3.  _Select+Start_ to exit from the game.
+1. _Select+Right_ to insert coin;
+2. _Start_ to start the game;
+3. _Select+Start_ to exit from the game.
 
 For other button combinations, check the [section Hotkeys of this page](https://github.com/RetroPie/RetroPie-Setup/wiki/first-installation).
 
@@ -96,11 +96,11 @@ Retropie, by default, is installed with a set of emulators included two for Mame
 
 From Emulation Station’s main menu click on _RetroPie_.
 
-![Retropie Configuration](assets/img/Retropie_Configuration.png){:width="450" height="253" .responsive_img}
+![Retropie Configuration]({{ site.baseurl }}/wp-content/uploads/2017/04/Retropie_Configuration.png){:width="450" height="253" .responsive_img}
 
 Select the menu _RetroPie Setup_, a text menu will appear.
 
-![Retropie Setup](assets/img/Retropie_Setup.png){:width="450" height="253" .responsive_img}
+![Retropie Setup]({{ site.baseurl }}/wp-content/uploads/2017/04/Retropie_Setup.png){:width="450" height="253" .responsive_img}
 
 Select the _Manage packages -> Manage optional packages -> LR-Mame2010_ to install the emulator. The operation will take some time and even if you have the impression that nothing is happening, be patient. Once the installation completes exit from the text menu. Then go back to the Emulation station main menu pressing the X button (button 1 on my controller). Select Start to have the Main menu appear on the screen and select _Quit -> Quit Emulation station -> Yes_ to exit from Emulation station.
 
@@ -124,7 +124,7 @@ Suppose you want to play Bubble Bobble and you have installed the three emulator
 
 Go on _Add-Ons -> Retrosmc_ to start RetroPie again. When the Emulation Station menu appears to select the Arcade option.
 
-![Retropie Main Menu](assets/img/Retropie_Main_Menu.png){:width="450" height="253" .responsive_img}
+![Retropie Main Menu]({{ site.baseurl }}/wp-content/uploads/2017/04/Retropie_Main_Menu.png){:width="450" height="253" .responsive_img}
 
 Select the game you want to play pressing the button A (button 2 on my controller). Before the game starts to play immediately the button X (button 1 on my controller), a text menu will appear where you can select the emulator you want to use to play the game.
 
