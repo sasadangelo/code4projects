@@ -2,30 +2,30 @@
   post_series_title: Getting started with Kubernetes
   post_series:
   - name: Getting started with Kubernetes
-    link: /getting-started-with-kubernetes
+    link: /getting-started-with-kubernetes/
   - name: Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress
-    link: /kubernetes-services-cluster-ip-vs-nodeport-vs-loadbalancer-vs-ingress
+    link: /kubernetes-services-cluster-ip-vs-nodeport-vs-loadbalancer-vs-ingress/
   - name: How I use Kubernetes ConfigMaps to manage configurations
-    link: /how-to-use-kubernetes-configmaps
+    link: /how-to-use-kubernetes-configmaps/
   - name: How to create your own Kubernetes cluster
-    link: /how-to-create-your-own-kubernetes-cluster
+    link: /how-to-create-your-own-kubernetes-cluster/
 - post_series_id: getting-started-with-docker
   post_series_title: Getting started with Docker
   post_series:
   - name: Getting started with Docker
-    link: /getting-started-with-docker
+    link: /getting-started-with-docker/
   - name: Containers vs Virtual Machines
-    link: /containers-vs-virtual-machines
+    link: /containers-vs-virtual-machines/
   - name: How to install PostgreSQL on Docker
-    link: /how-to-install-postgresql-on-docker
+    link: /how-to-install-postgresql-on-docker/
   - name: How docker networking works
-    link: /how-docker-networking-works
+    link: /how-docker-networking-works/
   - name: How to install PostgreSQL cluster on Docker
-    link: /install-postgresql-cluster-docker
+    link: /install-postgresql-cluster-docker/
   - name: How Docker volumes works
-    link: /how-docker-volumes-works
+    link: /how-docker-volumes-works/
   - name: How Docker Compose works
-    link: /how-docker-compose-works
+    link: /how-docker-compose-works/
 - post_series_id: raspberry-media-center
   post_series_title: How to build a Raspberry Media Center
   post_series:
@@ -44,7 +44,7 @@
   - name: How to play Nintendo DS games with Retropie on Kodi Media Center
     link: /to-play-nintendo-ds-games-kodi-media-center/
   - name: How to transform your Raspberry Media Center in a NAS
-    link: /how-to-transform-your-raspberry-media-center-nas/
+    link: /to-transform-your-raspberry-media-center-nas/
 - post_series_id: android-game-programming
   post_series_title: Android Game Programming
   post_series:

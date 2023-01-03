@@ -3,7 +3,7 @@ layout: post
 title: Getting Started with Docker
 post_series_id: getting-started-with-docker
 slug: getting-started-with-docker
-thumbnail: assets/img/docker-logo-mini.png
+thumbnail: wp-content/uploads/2018/06/Docker-logo.png
 excerpt: In this article, you will learn what Docker is, its main concepts, how to create images and containers and the commands to play with it.
 categories: Virtualization
 sitemap:
@@ -12,7 +12,7 @@ sitemap:
   changefreq: 'weekly'
 ---
 
-![Docker](assets/img/docker-logo-mini.png){:width="258" height="200" .responsive_img}
+![Docker]({{ site.baseurl }}/wp-content/uploads/2018/06/Docker-logo.png){:width="258" height="200" .responsive_img}
 
 # Getting Started with Docker
 _Posted on **{{ page.date | date_to_string }}**_
@@ -23,17 +23,17 @@ This is the first article of **Getting started with Docker** series. Here I woul
 
 Docker is a hot technology adopted by the most important companies in the world. The following picture shows the adoption growth in recent years.
 
-![Docker adoption](assets/img/docker-adoption.png){:width="450" height="241" .responsive_img}
+![Docker adoption]({{ site.baseurl }}/wp-content/uploads/2018/06/Docker-Adoption.png){:width="450" height="241" .responsive_img}
 
 This other picture shows some numbers relative to Docker. It’s clear that in recent five years the technology acquired a good momentum and its adoption has grown very fast.
 
-![Docker statistics](assets/img/docker-numbers.png){:width="450" height="165" .responsive_img}
+![Docker statistics]({{ site.baseurl }}/wp-content/uploads/2018/06/Docker-numbers.png){:width="450" height="165" .responsive_img}
 
 _Photo from [www.slideshare.net](https://www.slideshare.net/Docker/introduction-to-docker-2017)_
 
 However, containerization is not a new concept and as you can see in the following figure it goes back to 2004. The question now is **why the containerization has become so important only in recent years?**
 
-![Docker History](assets/img/history-of-docker.png){:width="450" height="252" .responsive_img}
+![Docker History]({{ site.baseurl }}/wp-content/uploads/2018/06/History-of-Docker.png){:width="450" height="252" .responsive_img}
 
 _Photo from [www.slideshare.net](https://www.slideshare.net/Docker/introduction-to-docker-2017)_
 
@@ -63,7 +63,7 @@ In recent years, application designers started to consider convenient divide the
 
 Today hundreds of microservices compose applications like Netflix and manage their deployment lifecycle (install, configure, and upgrade) and dependencies is not an easy task. **Here where Docker comes into play**.
 
-![Netflix Ecosystem](assets/img/netflix_ecosystem.png){:width="450" height="323" .responsive_img}
+![Netflix Ecosystem]({{ site.baseurl }}/wp-content/uploads/2018/06/Netflix_Ecosystem.png){:width="450" height="323" .responsive_img}
 
 _Photo from [medium.com](https://medium.com/refraction-tech-everything/how-netflix-works-the-hugely-simplified-complex-stuff-that-happens-every-time-you-hit-play-3a40c9be254b)_
 
@@ -79,9 +79,9 @@ When I started working with Docker, the first thing I needed to learn was what D
 
 From this definition, it’s clear that Docker is an isolated environment on your target system where your application runs with its own dependencies that are completely unrelated to the other software deployed on the system. This isolated environment is called **Container**.
 
-![Container](assets/img/container.png){:width="289" height="258" .responsive_img}
+![Container]({{ site.baseurl }}/wp-content/uploads/2018/06/Container.png){:width="289" height="258" .responsive_img}
 
-More details about the differences between Containers and Virtual Machines will be discussed [here](containers-vs-virtual-machines).
+More details about the differences between Containers and Virtual Machines will be discussed [here]({{ site.baseurl }}/containers-vs-virtual-machines/).
 
 The next thing I had to learn was the Container concept in detail. Docker is based mainly on this concept and in order to understand it, I needed to understand first the **Docker image** concept.
 
@@ -101,7 +101,7 @@ A container is the runnable instance of a docker image. You can have multiple co
 
 A container, however, is more efficient than a virtual machine because it does not add any layer between kernel and application but it only uses its isolation mechanism that does not degrade performance. This is the reason why modern architectures deploy a containerized version of applications in order to avoid classical dependencies problems of a normal on-premise application.
 
-![Container vs VM](assets/img/container-vs-vm.png){:width="450" height="201" .responsive_img}
+![Container vs VM]({{ site.baseurl }}/wp-content/uploads/2018/06/Container-vs-VM.png){:width="450" height="201" .responsive_img}
 
 ## How to install Docker
 
@@ -125,9 +125,9 @@ At the very beginning, the list is empty. Now suppose you want to download an Ub
 docker pull ubuntu:16.04
     {% endhighlight %}
 
-Now if you run the “_docker image ls_” command the following will appear:
+Now if you run the _docker image ls_ command the following will appear:
 
-_ubuntu              16.04               a35e70164dfb        1 minute ago         222MB_
+_ubuntu 16.04 a35e70164dfb 1 minute ago 222MB_
 
 You have installed the image on your system. Start an instance of this image (the container) using the following command:
 
@@ -194,7 +194,7 @@ The -d option will start the container in detach mode so that the shell doesn’
 
 Open your browser and type localhost in the address bar. You’ll see the “Hello World!” message appear.
 
-![Docker Hello World application](assets/img/docker-hello-world.jpeg){:width="450" height="194" .responsive_img}
+![Docker Hello World application]({{ site.baseurl }}/wp-content/uploads/2018/06/DockerHelloWorld.jpg){:width="450" height="194" .responsive_img}
 
 If you want, you can access the container using the command:
 
@@ -202,7 +202,7 @@ If you want, you can access the container using the command:
 docker exec -it CONTAINER_ID /bin/bash
     {% endhighlight %}
 
-where you can retrieve the  CONTAINER\_ID with the “_docker container ls_” command.
+where you can retrieve the CONTAINER\_ID with the _docker container ls_ command.
 
 ## What’s Next?
 
