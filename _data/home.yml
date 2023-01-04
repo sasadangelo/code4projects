@@ -35,7 +35,7 @@ feature-area:
       Then, I will show you how to install PostgreSQL in a container and use it as a service. I will discuss about how the networking 
       layer works in Docker and we will configure three PostgreSQL containers to work in cluster. Finally, we will use Docker Compose 
       to simplify the deployment and complete our journey. <a href="getting-started-with-docker">Check out the article series here</a>.
-    feature-image: assets/img/docker-logo.png
+    feature-image: wp-content/uploads/2020/06/Getting-started-with-Docker.png
     feature-link: getting-started-with-docker
   - feature-title: Getting Started with Kubernetes
     feature-text: >

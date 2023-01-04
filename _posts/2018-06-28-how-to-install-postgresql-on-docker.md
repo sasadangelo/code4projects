@@ -3,19 +3,19 @@ layout: post
 title: How to install PostgreSQL on Docker
 post_series_id: getting-started-with-docker
 slug: how-to-install-postgresql-on-docker
-thumbnail: assets/img/postgres_and_docker.png
+thumbnail: wp-content/uploads/2018/06/postgres_and_docker.png
 excerpt: This is the second article of Getting started with Docker series. You&#039;ll learn how to install PostgreSQL on a Docker container.
 categories: 
 - Virtualization
 - Database
 ---
 
-![How to install PostgreSQL on Docker](assets/img/postgres_and_docker.png){:width="422" height="200" .responsive_img}
+![How to install PostgreSQL on Docker]({{ site.baseurl }}/wp-content/uploads/2018/06/postgres_and_docker.png){:width="422" height="200" .responsive_img}
 
 # How to install PostgreSQL on Docker
 _Posted on **{{ page.date | date_to_string }}**_
 
-This is the third article of the [Getting started with Docker](getting-started-with-docker) series. Here I want to show you how to use Docker to create a container where you can install PostgreSQL.
+This is the third article of the [Getting started with Docker]({{ site.baseurl }}/getting-started-with-docker/) series. Here I want to show you how to use Docker to create a container where you can install PostgreSQL.
 
 ## Create the Docker image with Dockerfile
 
@@ -133,6 +133,6 @@ CREATE DATABASE mydb;
 
 You can check its creation with the command **\\list**. To quit from _psql_ command line use the command **\\q**.
 
-## What’s next?
+## What's next?
 
-In this article, we created a simple Docker container where we installed a PostgreSQL database server.  You can [download the sample code here](https://github.com/sasadangelo/docker-tutorials) in the _postgresql_ folder. In the [next article](how-docker-networking-works), I will explain how Docker networking works. This step is a prerequisite to creating our cluster.
+In this article, we created a simple Docker container where we installed a PostgreSQL database server.  You can [download the sample code here](https://github.com/sasadangelo/docker-tutorials) in the _postgresql_ folder. In the [next article]({{ site.baseurl }}/how-docker-networking-works/), I will explain how Docker networking works. This step is a prerequisite to creating our cluster.
