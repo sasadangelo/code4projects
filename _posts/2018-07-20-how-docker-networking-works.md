@@ -3,29 +3,29 @@ layout: post
 title: How Docker Networking works
 post_series_id: getting-started-with-docker
 slug: how-docker-networking-works
-thumbnail: assets/img/docker-bridge-network-mini.png
+thumbnail: wp-content/uploads/2018/07/docker-bridge-network-mini.png
 excerpt: In this article, I&#039;ll talk about how Docker networking. You&#039;ll learn how to let two containers communicate when they are on the same or different host.
 categories:
 - Networking
 - Virtualization
 ---
 
-![How docker networking works](assets/img/docker-bridge-network-mini.png){:width="214" height="200" .responsive_img}
+![How docker networking works]({{ site.baseurl }}/wp-content/uploads/2018/07/docker-bridge-network-mini.png){:width="214" height="200" .responsive_img}
 
 # How docker networking works
 _Posted on **{{ page.date | date_to_string }}**_
 
-This is the fourth article of the [Getting started with Docker](getting-started-with-docker) series. In this article, I want to discuss a bit about how Docker networking works. These concepts will be used to modify the PostgreSQL code to create three containers that communicate with each other via TCP/IP.
+This is the fourth article of the [Getting started with Docker]({{ site.baseurl }}/getting-started-with-docker/) series. In this article, I want to discuss a bit about how Docker networking works. These concepts will be used to modify the PostgreSQL code to create three containers that communicate with each other via TCP/IP.
 
 ## Networking overview in Docker
 
-Docker has a pluggable networking system where plugins are called drivers. Docker provides by default some drivers whose names are:
+Docker has a pluggable networking system where plugins are called drivers. Docker provides by default some drivers whose names are:
 
-1.  **bridge**;
-2.  **host**;
-3.  **overlay**;
-4.  **macvlan**;
-5.  **none**.
+1. **bridge**;
+2. **host**;
+3. **overlay**;
+4. **macvlan**;
+5. **none**.
 
 When a container uses the type **none** the networking is disabled.
 
@@ -35,7 +35,7 @@ The **bridge** driver is the default one and it creates a private network that a
 
 External access is granted by exposing ports to containers. In the following photo, you can see the containers _web_ and _db_ attached to the same bridge driver on the same host that allow them to communicate.
 
-![Docker Bridge Network](assets/img/docker-bridge-network.png){:width="450" height="420" .responsive_img}
+![Docker Bridge Network]({{ site.baseurl }}/wp-content/uploads/2018/07/docker-bridge-network.png){:width="450" height="420" .responsive_img}
 
 _Photo from [https://blog.docker.com](https://blog.docker.com/2016/12/understanding-docker-networking-drivers-use-cases/)_
 
@@ -43,7 +43,7 @@ _Photo from [https://blog.docker.com](https://blog.docker.com/2016/12/understand
 
 The **host** driver allows the container to use directly the host network facility without any mapping. This driver is particularly useful in scenarios where networking sharing between containers is not necessary. In the following image, you can see the containers _C1_ and _nginx_ share the same host network interface.
 
-![Docker Host Networking](assets/img/docker-host-networking.png){:width="450" height="329" .responsive_img}
+![Docker Host Networking]({{ site.baseurl }}/wp-content/uploads/2018/07/docker-host-networking.png){:width="450" height="329" .responsive_img}
 
 _Photo from [https://success.docker.com](https://success.docker.com/article/networking)_
 
@@ -51,13 +51,13 @@ _Photo from [https://success.docker.com](https://success.docker.com/article/netw
 
 The **overlay** driver allows the communication between containers running on different hosts.
 
-![Docker Overlay Networking](assets/img/docker-overlay-networking.png){:width="450" height="235" .responsive_img}
+![Docker Overlay Networking]({{ site.baseurl }}/wp-content/uploads/2018/07/docker-overlay-networking.png){:width="450" height="235" .responsive_img}
 
 ### The macvlan networking
 
-The **macvlan** driver allows assigning a Mac address to a container. Using this driver is sometimes the best choice when dealing with legacy applications that expect to be directly connected to the physical network, rather than routed through the Docker host’s network stack.
+The **macvlan** driver allows assigning a Mac address to a container. Using this driver is sometimes the best choice when dealing with legacy applications that expect to be directly connected to the physical network, rather than routed through the Docker host’s network stack.
 
-![Docker macvlan driver](assets/img/docker-macvlan.png){:width="450" height="516" .responsive_img}
+![Docker macvlan driver]({{ site.baseurl }}/wp-content/uploads/2018/07/docker-macvlan.png){:width="450" height="516" .responsive_img}
 
 In this article series, I want to focus mainly on the bridge driver because we will use it to allow our cluster containers to communicate. If you want more details on Docker network driver you can read the [official documentation](https://docs.docker.com/network/).
 
@@ -71,9 +71,9 @@ docker network create -d bridge --gateway=GATEWAY --subnet=SUBNET/NETWORK_PREFIX
 
 for example, suppose we want to create the subnet 10.1.1.0 we can have the following values:
 
--   GATEWAY=10.1.1.1
--   SUBNET=10.1.1.0
--   NETWORK\_PREFIX\_BITS=24.
+- GATEWAY=10.1.1.1
+- SUBNET=10.1.1.0
+- NETWORK\_PREFIX\_BITS=24.
 
 The same command can be used to create other network type specifying the driver name with the -d option.
 
@@ -153,6 +153,6 @@ docker exec -it nodeX /bin/bash
 
 where X could be 1, 2, or 3, and ping the other two containers using the node name or the IP.
 
-## What’s next?
+## What's next?
 
-In this article, we explained the docker network capabilities focusing mainly on the bridge driver, we modified the PostgreSQL project code to create three containers that communicate with each other via TCP/IP. In the [next article](install-postgresql-cluster-docker), we will use these three containers to create a PostgreSQL cluster.
+In this article, we explained the docker network capabilities focusing mainly on the bridge driver, we modified the PostgreSQL project code to create three containers that communicate with each other via TCP/IP. In the [next article]({{ site.baseurl }}/install-postgresql-cluster-docker/), we will use these three containers to create a PostgreSQL cluster.
