@@ -3,26 +3,26 @@ layout: post
 title: Containers vs Virtual Machines
 post_series_id: getting-started-with-docker
 slug: containers-vs-virtual-machines
-thumbnail: assets/img/virtual-machine-architecture-mini.jpeg
+thumbnail: wp-content/uploads/2018/07/Virtual-Machine-Architecture-mini.jpg
 excerpt: If you&#039;re in trouble getting the differences between Containers vs Virtual Machines, this article will explain the pros and cons of both.
 categories: Virtualization
 ---
 
-![Containers vs Virtual Maachines](assets/img/virtual-machine-architecture-mini.jpeg){:width="200" height="211" .responsive_img}
+![Containers vs Virtual Maachines]({{ site.baseurl }}/wp-content/uploads/2018/07/Virtual-Machine-Architecture-mini.jpg){:width="200" height="211" .responsive_img}
 
 # Containers vs Virtual Machines
 _Posted on **{{ page.date | date_to_string }}**_
 
-This is the second article of the [Getting started with Docker](getting-started-with-docker) series. Here I would like to explain my understanding of the differences between **containers** and **virtual machines** (VMs).
+This is the second article of the [Getting started with Docker]({{ site.baseurl }}/getting-started-with-docker/) series. Here I would like to explain my understanding of the differences between **containers** and **virtual machines** (VMs).
 
 ## Introduction
 
-When I started working with Docker understanding the main differences between containers and VMs was not an easy task. In the [first article of this series](getting-started-with-docker) I talked a bit about this, in this article, I would like to go deep into the subject and listing pro and cons of the two technologies.
+When I started working with Docker understanding the main differences between containers and VMs was not an easy task. In the [first article of this series]({{ site.baseurl }}/getting-started-with-docker/) I talked a bit about this, in this article, I would like to go deep into the subject and listing pro and cons of the two technologies.
 
 Virtualization can be achieved in two ways:
 
--   **Full virtualization**, where basically the hypervisor can simulate via software or hardware assisted, enough hardware facilities to run a whole copy of a guest operating system. This is the Virtual Machine approach.
--   **Operating system virtualization**, where operating system facilities are used to create isolated environments, called “containers”, that share the same kernel. This is the Container approach.
+- **Full virtualization**, where basically the hypervisor can simulate via software or hardware assisted, enough hardware facilities to run a whole copy of a guest operating system. This is the Virtual Machine approach.
+- **Operating system virtualization**, where operating system facilities are used to create isolated environments, called “containers”, that share the same kernel. This is the Container approach.
 
 ### A bit of history
 
@@ -30,9 +30,9 @@ Historically, as server processing power and capacity increased, applications ru
 
 A hypervisor, or a virtual machine monitor, is software, firmware, or hardware that creates and runs VMs. It’s what sits between the hardware and the virtual machine and is necessary to virtualize the server. History of virtual machines goes back to ’60, you can [find more details here](https://en.wikipedia.org/wiki/Virtual_machine).
 
-![Virtual Machine Architecture](assets/img/virtual-machine-architecture.jpeg){:width="450" height="475" .responsive_img}
+![Virtual Machine Architecture]({{ site.baseurl }}/wp-content/uploads/2018/07/Virtual-Machine-Architecture.jpg){:width="450" height="475" .responsive_img}
 
-_Photo from [http://vitolavecchia.altervista.org](http://vitolavecchia.altervista.org/come-funziona-caratteristiche-del-virtual-machine-monitor-vmm/)_
+_Photo from [http://vitolavecchia.altervista.org](http://vitolavecchia.altervista.org/come-funziona-caratteristiche-del-virtual-machine-monitor-vmm/)_
 
 ### The pros and cons
 
@@ -49,7 +49,7 @@ Here a complete list of pros and cons of the new technology introduced in the co
     <div class="pros-cons-table-pros-box">
       <div class="pros-cons-table-header">
         <div class="pros-cons-table-pros-symbol">
-          <img src="https://www.code4projects.net/wp-content/plugins/joomdev-wp-pros-cons/assets/icons/thumbs-up-regular.svg">
+          <img src="{{ site.baseurl }}/assets/img/thumbs-up-regular.svg">
         </div>
         <h4>Pros</h4>
       </div>
@@ -64,7 +64,7 @@ Here a complete list of pros and cons of the new technology introduced in the co
     <div class="pros-cons-table-cons-box cons-content">
       <div class="pros-cons-table-header">
         <div class="pros-cons-table-cons-symbol">
-          <img src="https://www.code4projects.net/wp-content/plugins/joomdev-wp-pros-cons/assets/icons/thumbs-down-regular.svg">
+          <img src="{{ site.baseurl }}/assets/img/thumbs-down-regular.svg">
         </div>
         <h4>Cons</h4>
       </div>
@@ -84,43 +84,43 @@ The **Infrastructure as a Service** (IaaS) market was born and companies like Am
 
 Today a startup does not need to buy a machine, attach it to the power, configure disks, network cables, operating systems, and middleware. It simply connects to an IaaS provider, registers an account, orders a machine with the required specification (i.e. 4Gb RAM, 1 disk of 250 Gb, 4 core CPUs), pays the bill and it is ready to run his business.
 
-![IaaS](assets/img/iaas.png){:width="450" height="399" .responsive_img}
+![IaaS]({{ site.baseurl }}/wp-content/uploads/2018/07/IaaS.png){:width="450" height="399" .responsive_img}
 
 ## Containers
 
-According to a recent [study](https://451research.com/images/Marketing/press_releases/Application-container-market-will-reach-2-7bn-in-2020_final_graphic.pdf) by 451 Research, the adoption of application containers will grow by 40% annually through 2020. Containers are facilitating rapid and agile development like never before.
+According to a recent [study](https://451research.com/images/Marketing/press_releases/Application-container-market-will-reach-2-7bn-in-2020_final_graphic.pdf) by 451 Research, the adoption of application containers will grow by 40% annually through 2020. Containers are facilitating rapid and agile development like never before.
 
-A Docker **Container** is an isolated environment created on top of the operating system kernel. Usually, it contains a single application and its dependencies that run as it was in a separated environment giving the illusion to be a different machine.
+A Docker **Container** is an isolated environment created on top of the operating system kernel. Usually, it contains a single application and its dependencies that run as it was in a separated environment giving the illusion to be a different machine.
 
-This container is saved in a template called **Image** that allows replicating this environment on whatever host system where Docker runs. For more details about the container definition, read the [first article of this series](getting-started-with-docker).
+This container is saved in a template called **Image** that allows replicating this environment on whatever host system where Docker runs. For more details about the container definition, read the [first article of this series]({{ site.baseurl }}/getting-started-with-docker/).
 
-![Container](assets/img/Container.png){:width="289" height="258" .responsive_img}
+![Container]({{ site.baseurl }}/wp-content/uploads/2018/06/Container.png){:width="289" height="258" .responsive_img}
 
-But a question still persists on container basics, namely: **how do they differ from virtual machines?** A good starting point to answer this question is to list the pros and cons of the technology, the reason why it was born and use case scenarios where it can be used.
+But a question still persists on container basics, namely: **how do they differ from virtual machines?** A good starting point to answer this question is to list the pros and cons of the technology, the reason why it was born and use case scenarios where it can be used.
 
 Here a list of the pros and cons of the Container technology.
 
 Pros
 
--   It is lighter than a virtual machine;
--   the bootstrap is fast;
--   it does not add much overhead when the application runs;
--   it is replicable and avoids the “work on my machine” problem;
--   update an application is easier because it requires only to deploy the new container version and start it.
--   it avoids dependencies problems during application deploy.
+- It is lighter than a virtual machine;
+- the bootstrap is fast;
+- it does not add much overhead when the application runs;
+- it is replicable and avoids the “work on my machine” problem;
+- update an application is easier because it requires only to deploy the new container version and start it.
+- it avoids dependencies problems during application deploy.
 
 Cons
 
--   it does not simulate a whole guest operating system;
--   works only on Linux host operating system, on Windows and Mac a Linux virtual machine is required to run the containers;
--   difficult to manage when the number of containers increases;
--   security issues if you do not know what you are doing;
+- it does not simulate a whole guest operating system;
+- works only on Linux host operating system, on Windows and Mac a Linux virtual machine is required to run the containers;
+- difficult to manage when the number of containers increases;
+- security issues if you do not know what you are doing;
 
 Sometimes on the web, we read that containers are a lightweight virtual machine but this definition is wrong. The two concepts are completely different. A virtual machine simulates perfectly a guest operating system inside a host system. It is possible to run a Windows system inside a Linux one and vice versa.
 
 Containers leverage on isolation Linux facilities like Namespaces and Cgroups, which give us the illusion of an isolated environment while it shares the kernel with other containers. Docker to run on Windows and Mac system needs to run a Linux virtual machine where the containers live.
 
-![cgroups and namespaces in docker](assets/img/cgroups-namespaces-docker.png){:width="450" height="107" .responsive_img}
+![cgroups and namespaces in docker]({{ site.baseurl }}/wp-content/uploads/2018/07/cgroups-namespaces-docker.png){:width="450" height="107" .responsive_img}
 
 These isolation mechanisms make the containers lightweight and do not add too much overhead to the application execution, the boot is faster than VMs and the environment configuration is replicable. These features opened to new forms of applications, the **containerized applications**.
 
@@ -152,4 +152,4 @@ VMs are perfect to create virtual environments that can be created and destroyed
 
 ## What’s Next?
 
-In this article, you learned the differences between containers and VMs. In the [next article](how-to-install-postgresql-on-docker), I’ll show you how to install PostgreSQL on a container.
+In this article, you learned the differences between containers and VMs. In the [next article]({{ site.baseurl }}/how-to-install-postgresql-on-docker/), I'll show you how to install PostgreSQL on a container.
