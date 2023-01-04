@@ -3,19 +3,19 @@ layout: post
 title: How to install PostgreSQL cluster on Docker
 post_series_id: getting-started-with-docker
 slug: install-postgresql-cluster-docker
-thumbnail: assets/img/database-cluster.png
+thumbnail: wp-content/uploads/2018/07/database-cluster.png
 excerpt: This article series will teach you the main Docker concepts and how to use it in practice to install and configure a PostgreSQL cluster.
 categories: 
 - Virtualization
 - Database
 ---
 
-![How to install PostgreSQL cluster on Docker](assets/img/database-cluster.png){:width="385" height="200" .responsive_img}
+![How to install PostgreSQL cluster on Docker]({{ site.baseurl }}/wp-content/uploads/2018/07/database-cluster.png){:width="385" height="200" .responsive_img}
 
 # How to install PostgreSQL cluster on Docker
 _Posted on **{{ page.date | date_to_string }}**_
 
-This is the fifth article of the [Getting started with Docker](getting-started-with-docker) series. In this article, I am going to show how to install a PostgreSQL cluster on three Docker containers.
+This is the fifth article of the [Getting started with Docker]({{ site.baseurl }}/getting-started-with-docker/) series. In this article, I am going to show how to install a PostgreSQL cluster on three Docker containers.
 
 The cluster will be configured in master/slave mode with one master and two slaves. PostgreSQL supports two cluster type: **hot** and **warm standby**. The former allows the slave to receive connections in read-only, the latter doesn’t allow the slaves to receive connections. In this tutorial, we will configure the cluster as hot standby.
 
@@ -130,4 +130,4 @@ psql -h localhost -p 5433 -U postgres
 
 ## What’s next?
 
-In this article, we learned how to use the three containers created in the [previous article](http://code4projects.altervista.org/how-docker-networking-works/) to install a PostgreSQL cluster. You can download the source code [here](https://github.com/sasadangelo/docker-tutorials/tree/master/postgresql-cluster) in the _postgresql-cluster_ folder. In the [next article](http://code4projects.altervista.org/how-docker-volumes-works/), we will discuss another important Docker concept: **volumes**.
+In this article, we learned how to use the three containers created in the [previous article]({{ site.baseurl }}/how-docker-networking-works/) to install a PostgreSQL cluster. You can download the source code [here](https://github.com/sasadangelo/docker-tutorials/tree/master/postgresql-cluster) in the _postgresql-cluster_ folder. In the [next article]({{ site.baseurl }}/how-docker-volumes-works/), we will discuss another important Docker concept: **volumes**.
