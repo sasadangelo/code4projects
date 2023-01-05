@@ -3,23 +3,23 @@ layout: post
 title: How Docker Volumes works
 post_series_id: getting-started-with-docker
 slug: how-docker-volumes-works
-thumbnail: assets/img/types-of-mounts-volume-mini.png
+thumbnail: wp-content/uploads/2018/12/types-of-mounts-volume-mini.png
 excerpt: In this article, I want to discuss how docker volumes works and how to use them to separate application binaries from data for easy upgrade.
 categories: Virtualization
 ---
 
-![How Docker volumes works](assets/img/types-of-mounts-volume-mini.png){:width="393" height="200" .responsive_img}
+![How Docker volumes works]({{ site.baseurl }}/wp-content/uploads/2018/12/types-of-mounts-volume-mini.png){:width="393" height="200" .responsive_img}
 
 # How Docker volumes works
 _Posted on **{{ page.date | date_to_string }}**_
 
-This is the sixth article of the [Getting started with Docker](getting-started-with-docker) series. In this article, I want to discuss how docker volumes work and how to use them to separate an application from its data.
+This is the sixth article of the [Getting started with Docker]({{ site.baseurl }}/getting-started-with-docker/) series. In this article, I want to discuss how docker volumes work and how to use them to separate an application from its data.
 
 ## The upgrade problems
 
-In the [first article](getting-started-with-docker) of this series, in the **“Why Docker?”** section we discussed why docker technology became so popular in recent years. Docker in modern application infrastructure allows us to easily manage the application lifecycle simplifying its deployment. One of the major pain in application deployment is the upgrade. With Docker, it is a simple container replacement.
+In the [first article]({{ site.baseurl }}/getting-started-with-docker/) of this series, in the **“Why Docker?”** section we discussed why docker technology became so popular in recent years. Docker in modern application infrastructure allows us to easily manage the application lifecycle simplifying its deployment. One of the major pain in application deployment is the upgrade. With Docker, it is a simple container replacement.
 
-However, in our [PostgreSQL cluster](install-postgresql-cluster-docker), we have a problem. The data folder (_/home/postgres/data_) is inside the container so if we replace a container we lost the data directory and the configuration.
+However, in our [PostgreSQL cluster]({{ site.baseurl }}/install-postgresql-cluster-docker/), we have a problem. The data folder (_/home/postgres/data_) is inside the container so if we replace a container we lost the data directory and the configuration.
 
 **How we can solve this issue?** Docker allows the separation between binaries, data, and configuration with the **volumes**. Basically, you can allocate space on the host system and share it with the container, when it is destroyed space still exists.
 
@@ -27,17 +27,17 @@ However, in our [PostgreSQL cluster](install-postgresql-cluster-docker), we have
 
 Docker has three options for containers to store files in the host machine so that the files are persisted even after the container stops.
 
--   volumes
--   bind mounts
--   tmpfs mount (only on Linux)
+- volumes
+- bind mounts
+- tmpfs mount (only on Linux)
 
-**Volumes** are stored in a part of the host filesystem which is managed by Docker (_/var/lib/docker/volumes_ on Linux). Non-Docker processes should not modify this part of the filesystem. Volumes are the best way to persist data in Docker.
+**Volumes** are stored in a part of the host filesystem which is managed by Docker (_/var/lib/docker/volumes_ on Linux). Non-Docker processes should not modify this part of the filesystem. Volumes are the best way to persist data in Docker.
 
 **Bind mounts** are the folder on the host system shared with the container. Non-Docker processes on the Docker host or a Docker container can modify them at any time.
 
-![types of mounts volume](assets/img/types-of-mounts-volume.png){:width="450" height="229" .responsive_img}
+![types of mounts volume]({{ site.baseurl }}/wp-content/uploads/2018/12/types-of-mounts-volume.png){:width="450" height="229" .responsive_img}
 
-_Photo from [https://docs.docker.com](https://docs.docker.com/storage/volumes/)_
+_Photo from [https://docs.docker.com](https://docs.docker.com/storage/volumes/)_
 
 **Tmpfs mount** is a disk space in memory very useful when the container needs to quickly manipulate files. Imagine, for example, an application that receives zip files that must be expanded to do some activities. In this scenario, a temporary filesystem is perfect to improve performance.
 
@@ -45,14 +45,14 @@ _Photo from [https://docs.docker.com](https://docs.docker.com/storage/volumes/)
 
 For our PostgreSQL cluster, both volumes and bind mounts are good solutions to persist data outside the container and separate them from the binaries. However, there are some benefits in using volumes over bind mounts. From the [official documentation](https://docs.docker.com/storage/volumes/) here a list of some of them:
 
--   Volumes are easier to back up or migrate than bind mounts.
--   You can manage volumes using Docker CLI commands or the Docker API.
--   Volumes work on both Linux and Windows containers.
--   Volumes can be more safely shared among multiple containers.
--   Volume drivers let you store volumes on remote hosts or cloud providers, to encrypt the contents of volumes, or to add other functionality.
--   New volumes can have their content pre-populated by a container.
+- Volumes are easier to back up or migrate than bind mounts.
+- You can manage volumes using Docker CLI commands or the Docker API.
+- Volumes work on both Linux and Windows containers.
+- Volumes can be more safely shared among multiple containers.
+- Volume drivers let you store volumes on remote hosts or cloud providers, to encrypt the contents of volumes, or to add other functionality.
+- New volumes can have their content pre-populated by a container.
 
-However, if we need to have a storage space of a specific filesystem we cannot use volumes because their filesystem is the one present under the folder _/var/lib/docker/volumes_ on the host system and we cannot change it. If the application needs a specific filesystem we need to allocate it on the host system and share it with the container via bind mounts.
+However, if we need to have a storage space of a specific filesystem we cannot use volumes because their filesystem is the one present under the folder_/var/lib/docker/volumes_ on the host system and we cannot change it. If the application needs a specific filesystem we need to allocate it on the host system and share it with the container via bind mounts.
 
 ## Docker volumes cheat sheet
 
@@ -88,7 +88,7 @@ docker create -it -v <host folder or volume name>:<container folder> <image name
 
 ## How to change PostgreSQL cluster code
 
-In the [fifth article](install-postgresql-cluster-docker), we discussed how to create a PostgreSQL cluster with three containers. In order to have an upgradable cluster, we need to separate PostgreSQL binaries from data and logs.
+In the [fifth article]({{ site.baseurl }}/install-postgresql-cluster-docker/), we discussed how to create a PostgreSQL cluster with three containers. In order to have an upgradable cluster, we need to separate PostgreSQL binaries from data and logs.
 
 ### Script for volumes managements
 
@@ -159,8 +159,8 @@ The code first checks that volume exists and then binds mounts them to the conta
 
 ### How to verify if the cluster is working?
 
-The process is exactly the same as the [previous article](install-postgresql-cluster-docker). This time even if you stop a container, no data loss occurs. The separation of data from binary allows you to run two new scenarios: upgrade and failover. You can find how to implement these scenarios [here](https://github.com/sasadangelo/docker-tutorials/tree/master/postgresql-cluster-volume).
+The process is exactly the same as the [previous article]({{ site.baseurl }}/install-postgresql-cluster-docker/). This time even if you stop a container, no data loss occurs. The separation of data from binary allows you to run two new scenarios: upgrade and failover. You can find how to implement these scenarios [here](https://github.com/sasadangelo/docker-tutorials/tree/master/postgresql-cluster-volume).
 
-## What’s next?
+## What's next?
 
-In this article, we discussed how to use volumes or bind mounts to separate binaries from data e logs of an application. You can download the source code [here](https://github.com/sasadangelo/docker-tutorials) in the _postgresql-cluster-volume_ folder.  In the [next article](how-docker-compose-works), we will see how to manage the Docker build and runtime configuration with **Docker Compose** instead of helper scripts (i.e. build\_image.sh, clean\_image.sh, build\_volumes.sh, clean\_volumes.sh, start\_containers.sh, and stop\_containers.sh).
+In this article, we discussed how to use volumes or bind mounts to separate binaries from data e logs of an application. You can download the source code [here](https://github.com/sasadangelo/docker-tutorials) in the _postgresql-cluster-volume_ folder. In the [next article]({{ site.baseurl }}/how-docker-compose-works/), we will see how to manage the Docker build and runtime configuration with **Docker Compose** instead of helper scripts (i.e. build\_image.sh, clean\_image.sh, build\_volumes.sh, clean\_volumes.sh, start\_containers.sh, and stop\_containers.sh).
