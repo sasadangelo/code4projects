@@ -16,12 +16,13 @@ The following are the projects in hightlight. I consider them the most important
 {% for item in site.data.featured-projects %}
   <div class="featured-projects-box">
     <div class="featured-projects-image">
-      <a title="{{ item.title}}" href="{{ item.link}}"><img src="{{ item.image}}" alt="{{ item.title}}" width="200" height="auto"/></a>
+      <a title="{{ item.title}}" href="{{ site.baseurl }}/{{ item.link}}">
+      <img src="{{ site.baseurl }}/{{ item.image}}" alt="{{ item.title}}" width="200" height="auto"/></a>
     </div>
       <div class="featured-projects-title">
-        <h3><a title="{{ item.title}}" href="{{ item.link}}">{{ item.title}}</a></h3>
+        <h3><a title="{{ item.title}}" href="{{ site.baseurl }}/{{ item.link}}">{{ item.title}}</a></h3>
       </div>
-    <div class="featured-projects-text">{{ item.description}}</div>
+    <div class="featured-projects-text">{{ item.description }} <a title="{{ item.title}}" href="{{ site.baseurl }}/{{ item.link}}">Check out the article here</a></div>
   </div>
 {% endfor %}
 </div>

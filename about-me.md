@@ -6,7 +6,7 @@ excerpt: This page contains some information about Salvatore D'Angelo the owner 
 ---
 # About me
 
-![Salvatore D'Angelo](../assets/img/salvatore_d_angelo.jpeg){:width="100" height="100" .responsive_img}
+![Salvatore D'Angelo]({{ site.baseurl }}/assets/img/salvatore_d_angelo.jpeg){:width="100" height="100" .responsive_img}
 
 My name is Salvatore D’Angelo and I am a professional software programmer since 1999.
 
@@ -20,4 +20,4 @@ After a brief period of military service, I started working in 1999. For a coupl
 
 In this company, I worked on many projects collaborating in the design and implementation of many software products. Currently, I work in the Cloud area designing and implementing resilient solutions for our platform. You can read my full career history on my [Linkedin page](https://www.linkedin.com/in/salvatore-d-angelo-0321851/).
 
-If this is the first time you land on this website I suggest you read the [Start Here page](start-here.html) that explains why I created it and how it can help you to become a better programmer.
+If this is the first time you land on this website I suggest you read the [Start Here page]({{ site.baseurl }}/start-here/) that explains why I created it and how it can help you to become a better programmer.
