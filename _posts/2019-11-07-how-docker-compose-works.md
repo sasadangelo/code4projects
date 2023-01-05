@@ -3,17 +3,17 @@ layout: post
 title: How Docker Compose works
 post_series_id: getting-started-with-docker
 slug: how-docker-compose-works
-thumbnail: assets/img/docker-compose.png
+thumbnail: wp-content/uploads/2019/11/docker-compose.png
 excerpt: This is the seventh article of the Getting started with Docker series. Here I will discuss Docker Compose and how to use it to improve the container orchestration.
 categories: Virtualization
 ---
 
-![How Docker Compose works](assets/img/docker-compose.png){:width="200" height="200" .responsive_img}
+![How Docker Compose works]({{ site.baseurl }}/wp-content/uploads/2019/11/docker-compose.png){:width="200" height="200" .responsive_img}
 
 # How Docker Compose works
 _Posted on **{{ page.date | date_to_string }}**_
 
-This is the seventh article of the [Getting started with Docker](getting-started-with-docker) series. In this article, I will discuss Docker Compose and how to use it to improve the code developed so far for our PostgreSQL cluster.
+This is the seventh article of the [Getting started with Docker]({{ site.baseurl }}/getting-started-with-docker/) series. In this article, I will discuss Docker Compose and how to use it to improve the code developed so far for our PostgreSQL cluster.
 
 ## Image build and runtime configuration
 
@@ -63,9 +63,9 @@ The goal of this section is to modify our PostgreSQL application to leverage on 
 
 To do that, we need to create the YAML file where we define three PostgreSQL services (applications), each one having:
 
--   the definition of the PostgreSQL docker image
--   a docker volume where store the data;
--   networking connection with IP, Port, and hostname assigned;
+- the definition of the PostgreSQL docker image
+- a docker volume where store the data;
+- networking connection with IP, Port, and hostname assigned;
 
 ### The YAML File
 
@@ -160,7 +160,7 @@ To start the cluster you can type the following command.
 docker-compose up -d
     {% endhighlight %}
 
-The test of the upgrade and failover scenarios is exactly the same as the [previous article](how-docker-volumes-works). The only difference is that this time you can use the **docker-compose** command instead of the **docker** one.
+The test of the upgrade and failover scenarios is exactly the same as the [previous article]({{ site.baseurl }}/how-docker-volumes-works/). The only difference is that this time you can use the **docker-compose** command instead of the **docker** one.
 
 To shut down the cluster you can type the following command.
 
@@ -170,6 +170,6 @@ docker-compose down
 
 This command does not remove the volume so the data still exists. If you start again the cluster no data loss occurs. If you want to remove the volume **you can add the -d option** to the command.
 
-## What’s next?
+## What's next?
 
 In this article, we explained what Docker Compose is and how to use it to deploy multi containers application on a single host. However, have a database cluster with all containers on a single node is ok in development and test environments but makes no sense in production because if the node goes down the whole cluster crash. In the next article, to solve this issue and implement a real High Availability solution we need to leverage on Docker Swarm.
