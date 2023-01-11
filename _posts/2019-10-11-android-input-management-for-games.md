@@ -3,23 +3,23 @@ layout: post
 title: Android Input Management for Games
 post_series_id: android-game-programming
 slug: android-input-management-for-games
-thumbnail: assets/img/Android-Input-Management2.jpeg
+thumbnail: wp-content/uploads/2019/10/Android-Input-Management2.jpg
 excerpt: This is the twelfth article of the Android Game Programming series. Here, I would like to discuss how to manage user input on Android for our games.
-categories: 
+categories:
 - Android
 - Game Programming
 ---
 
-![Android Input Management for Games](assets/img/Android-Input-Management2.jpeg){:width="200" height="200" .responsive_img}
+![Android Input Management for Games]({{ site.baseurl }}/wp-content/uploads/2019/10/Android-Input-Management2.jpg){:width="200" height="200" .responsive_img}
 
 # Android Input Management for Games
 _Posted on **{{ page.date | date_to_string }}**_
 
-This is the twelfth article of the [Android Game Programming](android-game-programming) series. In this article, I would like to discuss how to manage user input on Android for our video game.
+This is the twelfth article of the [Android Game Programming]({{ site.baseurl }}/android-game-programming/) series. In this article, I would like to discuss how to manage user input on Android for our video game.
 
-In an Android application, graphic elements such as buttons, text fields, radio buttons, etc., composes the user interface. In Android, all these objects derive from the _View_ interface and grouped together using _ViewGroup_ objects such as a _Layout_. With such interfaces, input management is simple because if we click a button, Android itself that takes the care of it running the relative action code.
+In an Android application, graphic elements such as buttons, text fields, radio buttons, etc., composes the user interface. In Android, all these objects derive from the _View_ interface and grouped together using *ViewGroup* objects such as a *Layout*. With such interfaces, input management is simple because if we click a button, Android itself that takes the care of it running the relative action code.
 
-For example, the _Button_ class extends the _View_ class which allows you to set up a listener to respond to click commands. If you want to execute some code when you click a button, you need to write a code like this:
+For example, the *Button* class extends the *View* class which allows you to set up a listener to respond to click commands. If you want to execute some code when you click a button, you need to write a code like this:
 
     {% highlight java %}
 Button button = (Button) findViewById(R.id.button_id);     
@@ -32,12 +32,12 @@ button.setOnClickListener(new View.OnClickListener() {
 
 Unfortunately, writing a video game is very different from writing a normal Android application. Having to draw game objects by ourselves we cannot leverage the Android APIs to manage buttons.
 
-We have to do everything ourselves and rely on a few classes (such as _View_ and _ViewGroup_) and from these build our infrastructure. In an application the input can occur in several ways:
+We have to do everything ourselves and rely on a few classes (such as *View* and *ViewGroup*) and from these build our infrastructure. In an application the input can occur in several ways:
 
--   keyboard;
--   video touch;
--   accelerometer;
--   gyroscope;
+- keyboard;
+- video touch;
+- accelerometer;
+- gyroscope;
 
 ## Input Management for Games
 
@@ -49,15 +49,15 @@ However, we will create such a flexible interface that adding other input modes 
 
 Clicking on the button, the icon will change making a speaker appear in mute mode. As we have seen we cannot use the Android _Button_ class but we’ll have to draw the button ourselves, capture the touch event, understand that the button has been clicked and execute the corresponding action.
 
-![Button Disable Audio](assets/img/Disattiva-audio.png){:width="450" height="316" .responsive_img}
+![Button Disable Audio]({{ site.baseurl }}/wp-content/uploads/2019/10/Disattiva-audio.png){:width="450" height="316" .responsive_img}
 
-Luckily the _View_ interface (hence also our _AndroidFastRenderView_ class) allows you to register touch events with the _setOnTouchListener_ method and create listeners that implement the _OnTouchListener_ interface just to intercept these events. This interface has only one method to implement:
+Luckily the _View_ interface (hence also our *AndroidFastRenderView* class) allows you to register touch events with the _setOnTouchListener_ method and create listeners that implement the _OnTouchListener_ interface just to intercept these events. This interface has only one method to implement:
 
     {% highlight java %}
 abstract boolean onTouch(View v, MotionEvent event);
     {% endhighlight %}
 
-The idea is to collect all the events that arrive in a buffer and when the user requests them, we supply them in output. To do this we need to extend the interface _OnTouchListener_ so in the package _org.androidforfun.framework.impl_ we add the _TouchHandler_ interface defined as follows:
+The idea is to collect all the events that arrive in a buffer and when the user requests them, we supply them in output. To do this we need to extend the interface *OnTouchListener* so in the package *org.androidforfun.framework.impl* we add the *TouchHandler* interface defined as follows:
 
     {% highlight java %}
 public interface TouchHandler extends OnTouchListener {
@@ -66,7 +66,7 @@ public interface TouchHandler extends OnTouchListener {
 }
     {% endhighlight %}
 
-_TouchEvent_ static class will represent touch-type events in our framework, it will have the following public fields:
+*TouchEvent* static class will represent touch-type events in our framework, it will have the following public fields:
 
     {% highlight java %}
 class TouchEvent {
@@ -84,7 +84,7 @@ As you can see there is the need to know what kind of touch event is, for exampl
 
 With version 1.6 and earlier, Android was only able to detect individual touch events, with later versions you can also manage multi-touch events. **What is a multi-touch event?**
 
-Have you ever wanted to zoom in on one web page and used two fingers spreading them outwards? This is an example of a multi-touch. To avoid having to handle exceptions on older versions of Android will be necessary to implement the _TouchHandler_ interface in two ways depending on whether the Android version is higher or lower than version 1.6. We introduce two classes _SingleThouchHandler_ and _MultiTouchHandler_ which will implement the _TouchHandler_ interface depending on the Android version:
+Have you ever wanted to zoom in on one web page and used two fingers spreading them outwards? This is an example of a multi-touch. To avoid having to handle exceptions on older versions of Android will be necessary to implement the *TouchHandler* interface in two ways depending on whether the Android version is higher or lower than version 1.6. We introduce two classes *SingleThouchHandler* and *MultiTouchHandler* which will implement the *TouchHandler* interface depending on the Android version:
 
     {% highlight java %}
 if(Integer.parseInt(VERSION.SDK) 
@@ -93,18 +93,18 @@ else
     touchHandler = new MultiTouchHandler(view, scaleX, scaleY);
     {% endhighlight %}
 
-SDK 5 corresponds to Android 2.0 which is the version after 1.6. Because today is really difficult to find phones with Android below 2.0 we can safely say that in 99% of cases we will use the _MultiTouchHandler_ class which is the one that we will analyze in this article, the other is similar. The implementation of the _MultiTouchHandler_ class must take into account some very important technical requirements so that input management is done correctly and without degrading performance.
+SDK 5 corresponds to Android 2.0 which is the version after 1.6. Because today is really difficult to find phones with Android below 2.0 we can safely say that in 99% of cases we will use the *MultiTouchHandler* class which is the one that we will analyze in this article, the other is similar. The implementation of the *MultiTouchHandler* class must take into account some very important technical requirements so that input management is done correctly and without degrading performance.
 
--   In a video game the phone screen may be touched by dozens of thousands of times and to generate a new event each time would require an expenditure of memory with consequent activation of the garbage collector that would degrade the video game performance. To avoid this, the allocation of new events will take place using the Object Pool pattern sized up to 100 items. In the package _org.androidforfun.framework_ we define the _Pool_ class whose implementation has already been discussed [here](design-patterns-in-game-programming).
--   The X and Y scale factors of the current video must be taken into account. We said that our assumption is that the resolution of the video is always 320×480 and then we will adapt images and events at the actual resolution of the video using scale factors _scaleX_ and s_caleY_.
--   Collect events in a buffer to prevent them from being lost.
+- In a video game the phone screen may be touched by dozens of thousands of times and to generate a new event each time would require an expenditure of memory with consequent activation of the garbage collector that would degrade the video game performance. To avoid this, the allocation of new events will take place using the Object Pool pattern sized up to 100 items. In the package *org.androidforfun.framework* we define the *Pool* class whose implementation has already been discussed [here]({{ site.baseurl }}/design-patterns-in-game-programming/).
+- The X and Y scale factors of the current video must be taken into account. We said that our assumption is that the resolution of the video is always 320×480 and then we will adapt images and events at the actual resolution of the video using scale factors *scaleX* and *scaleY*.
+- Collect events in a buffer to prevent them from being lost.
 
 Touch events can be single or multi-touch. In the former case, what is needed to know is if the screen has been touched, released or scrolled. It is also necessary to know in which point of the video the touch occurred. Furthermore, in the case of multi-touch, you need this information for each finger. Let’s see what Android offers to manage user touch events.
 
-Every time the user touches the screen, Android generates a _MotionEvent_ event and associates it with the View currently in the foreground. The action field describes what kind of event it is, in our case, it will be an ACTION\_DOWN. Vice versa, when the action releases it, the action will be ACTION\_UP. In the case of dragging, the action will be ACTION\_MOVE. The event will also provide the x, y coordinates where the finger (or mouse, pen, etc.) touched the screen. In the case of single touches, the pointer will always be 0. In the case of multiple touches, a _MotionEvent_ event will be created for each finger. A pointer field will provide information on which finger touched the screen. For each finger, we will have the following actions:
+Every time the user touches the screen, Android generates a *MotionEvent* event and associates it with the View currently in the foreground. The action field describes what kind of event it is, in our case, it will be an ACTION\_DOWN. Vice versa, when the action releases it, the action will be ACTION\_UP. In the case of dragging, the action will be ACTION\_MOVE. The event will also provide the x, y coordinates where the finger (or mouse, pen, etc.) touched the screen. In the case of single touches, the pointer will always be 0. In the case of multiple touches, a *MotionEvent* event will be created for each finger. A pointer field will provide information on which finger touched the screen. For each finger, we will have the following actions:
 
--   ACTION\_POINTER\_DOWN every time the finger touches the screen;
--   ACTION\_POINTER\_UP every time the finger releases the screen; when a gesture is aborted an ACTION\_CANCEL event will be generated which we will consider as an ACTION\_UP.
+- ACTION\_POINTER\_DOWN every time the finger touches the screen;
+- ACTION\_POINTER\_UP every time the finger releases the screen; when a gesture is aborted an ACTION\_CANCEL event will be generated which we will consider as an ACTION\_UP.
 
 Now let’s see how to implement the MultiTouchHandler class.
 
@@ -120,7 +120,7 @@ public class MultiTouchHandler implements TouchHandler {
     float scaleY;
     {% endhighlight %}
 
-The class manages a maximum of 20 pointers (typically 2 or 3 are enough), a pool of 100 events (_touchEventPool_), a buffer (_touchEventsBuffer_) and _scaleX_ and _scaleY_ factors. The constructor is quite simple and requires no comment.
+The class manages a maximum of 20 pointers (typically 2 or 3 are enough), a pool of 100 events (*touchEventPool*), a buffer (*touchEventsBuffer*) and *scaleX* and *scaleY* factors. The constructor is quite simple and requires no comment.
 
     {% highlight java %}
 public MultiTouchHandler(View view, float scaleX, float scaleY) {
@@ -136,7 +136,7 @@ public MultiTouchHandler(View view, float scaleX, float scaleY) {
 }
     {% endhighlight %}
 
-The most important method of the class is _onTouch_ which will convert Android events into events understandable by our framework. How easy it is to observe events ACTION\_DOWN and ACTION\_POINTER\_DOWN will be converted to TOUCH\_DOWN events. The x, y coordinates of the event and the pointer will be taken. The same thing for ACTION\_UP events, ACTION\_POINTER\_UP and ACTION\_CANCEL converted to TOUCH\_UP. Finally, the ACTION\_MOVE event converted to TOUCH\_DRAGGED. You can see that every event arriving is stored in the _touchEventsBuffer_ buffer.
+The most important method of the class is *onTouch* which will convert Android events into events understandable by our framework. How easy it is to observe events ACTION\_DOWN and ACTION\_POINTER\_DOWN will be converted to TOUCH\_DOWN events. The x, y coordinates of the event and the pointer will be taken. The same thing for ACTION\_UP events, ACTION\_POINTER\_UP and ACTION\_CANCEL converted to TOUCH\_UP. Finally, the ACTION\_MOVE event converted to TOUCH\_DRAGGED. You can see that every event arriving is stored in the *touchEventsBuffer* buffer.
 
     {% highlight java %}
 public boolean onTouch(View v, MotionEvent event) {
@@ -233,9 +233,9 @@ public List getTouchEvents() {
 
 ### Buttons Management
 
-Now that we’ve added the infrastructure to manage user input let’s see how to add a button to our screen and how to change its appearance by clicking repeatedly. First, let’s copy the **buttons.png** image into the assets folder. You can take this image with the source code [here](https://github.com/sasadangelo/HelloWorldApp/archive/0.0.7.zip). In the _Assets_ class we add a new bitmap:
+Now that we've added the infrastructure to manage user input let's see how to add a button to our screen and how to change its appearance by clicking repeatedly. First, let’s copy the **buttons.png** image into the assets folder. You can take this image with the source code [here](https://github.com/sasadangelo/HelloWorldApp/archive/0.0.7.zip). In the *Assets* class we add a new bitmap:
 
-![Buttons](assets/img/buttons.png){:width="100" height="250" .responsive_img}
+![Buttons]({{ site.baseurl }}/wp-content/uploads/2019/10/buttons.png){:width="100" height="250" .responsive_img}
 
     {% highlight java %}
 public class Assets {
@@ -244,7 +244,7 @@ public class Assets {
 }
     {% endhighlight %}
 
-and in the _LoadingScreen_ class we provide to load it in memory:
+and in the *LoadingScreen* class we provide to load it in memory:
 
     {% highlight java %}
 public class LoadingScreen implements Screen {
@@ -259,7 +259,7 @@ public class LoadingScreen implements Screen {
 }
     {% endhighlight %}
 
-At this point, in the _StartScreen_ class we define a _soundEnabled_ attribute that indicates whether the sound is active or not. By default, it is activated. In the _update_ method, we take the user inputs and check whether the button has been pressed or not, setting the relative _soundEnabled_ attribute. In the draw method, we will draw the button with the loudspeaker or mute depending on the value of the _soundEnabled_ attribute.
+At this point, in the *StartScreen* class we define a *soundEnabled* attribute that indicates whether the sound is active or not. By default, it is activated. In the *update* method, we take the user inputs and check whether the button has been pressed or not, setting the relative *soundEnabled* attribute. In the draw method, we will draw the button with the loudspeaker or mute depending on the value of the *soundEnabled* attribute.
 
     {% highlight java %}
 public class StartScreen implements Screen {
@@ -296,7 +296,7 @@ public class StartScreen implements Screen {
 }
     {% endhighlight %}
 
-_Gdx.input_ is the reference to the input subsystem of the framework. It must be initialized in _onCreate_ method of the class _MyActivity_ as we have already done for the file subsystems and graphics.
+*Gdx.input* is the reference to the input subsystem of the framework. It must be initialized in *onCreate* method of the class *MyActivity* as we have already done for the file subsystems and graphics.
 
     {% highlight java %}
 public void onCreate(Bundle savedInstanceState) {
