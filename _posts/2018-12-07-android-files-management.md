@@ -61,7 +61,7 @@ There is a lot to write about Android files management on both internal memory a
 
 ## Read and save scores in a file
 
-In this section, we will begin to add functionality to [our “Hello World” application](how-to-create-an-android-application) by including the ability to read and write files to and from external memory. We will use this file to read and write to a file the 5 highest scores reached with the video game. Since we haven’t implemented it yet we will use 5 fake scores such as 100, 80, 50, 30 and 10.
+In this section, we will begin to add functionality to [our “Hello World” application]({{ site.baseurl }}/how-to-create-an-android-application/) by including the ability to read and write files to and from external memory. We will use this file to read and write to a file the 5 highest scores reached with the video game. Since we haven’t implemented it yet we will use 5 fake scores such as 100, 80, 50, 30 and 10.
 
 Here we will put the first brick for the construction of our framework that you can use to write many video games.
 
