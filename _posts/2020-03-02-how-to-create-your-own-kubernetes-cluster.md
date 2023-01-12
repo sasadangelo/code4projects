@@ -3,7 +3,7 @@ layout: post
 title: How to create your own Kubernetes cluster
 post_series_id: getting-started-with-kubernetes
 slug: how-to-create-your-own-kubernetes-cluster
-thumbnail: assets/img/kubernetes-cluster.jpeg
+thumbnail: wp-content/uploads/2020/03/kubernetes-cluster.jpeg
 excerpt: In this article, I want to explain how I run my applications on a Kubernetes cluster using a simple project I created based on Vagrant and VirtualBox.
 categories:
 - Cloud
@@ -11,12 +11,12 @@ categories:
 - Virtualization
 ---
 
-![Kubernetes Cluster](assets/img/kubernetes-cluster.jpeg){:width="247" height="200" .responsive_img}
+![Kubernetes Cluster]({{ site.baseurl }}/wp-content/uploads/2020/03/kubernetes-cluster.jpeg){:width="247" height="200" .responsive_img}
 
 # How to create your own Kubernetes cluster
 _Posted on **{{ page.date | date_to_string }}**_
 
-This is the fourth article of the [Getting Started with Kubernetes](getting-started-with-kubernetes) article series. In this article, I want to explain how I run my applications on a Kubernetes cluster using a simple project based on [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/). In order to test the cluster, we will create a “Hello K8s” application for Kubernetes.
+This is the fourth article of the [Getting Started with Kubernetes]({{ site.baseurl }}/getting-started-with-kubernetes/) article series. In this article, I want to explain how I run my applications on a Kubernetes cluster using a simple project based on [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/). In order to test the cluster, we will create a “Hello K8s” application for Kubernetes.
 
 ## How to start?
 
@@ -227,7 +227,7 @@ Running the kubectl get pods command, you should see the cluster nodes.
 
 This is your first Kubernetes “Hello World” application. It is an Nginx web server that listens on 80 port and when you connect to it with your browser the “Hello World!” message will appear with hostname and image version. This will be useful to understand which Pod responded to a browser request and its hostname and which version is currently in use.
 
-In the [following article](getting-started-with-docker), I created a Hello World application for Docker that we will reuse for Kubernetes with small changes. Here the Dockerfile.
+In the [following article]({{ site.baseurl }}/getting-started-with-docker/), I created a Hello World application for Docker that we will reuse for Kubernetes with small changes. Here the Dockerfile.
 
     {% highlight docker %}
 FROM ubuntu:16.04
@@ -251,7 +251,7 @@ The docker image of this application is now on my Docker Hub account [sasadangel
 
 Kubernetes allows running a containerized application in three approaches: generators, imperative, and declarative. The first two methods are achieved via **kubectl** CLI while the third method is achieved declaring the desired state in a YAML configuration file. In all the cases, the result is this.
 
-![Kubernetes Hello World]('assets/img/kubernetes-hello-world.png'){:width="450" height="132" .responsive_img}
+![Kubernetes Hello World]({{ site.baseurl }}/wp-content/uploads/2020/03/Screenshot-2020-03-03-at-14.07.31.png){:width="450" height="132" .responsive_img}
 
 Let’s analyze all these methods in detail.
 

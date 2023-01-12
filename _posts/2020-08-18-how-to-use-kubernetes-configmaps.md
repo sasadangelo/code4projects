@@ -3,17 +3,17 @@ layout: post
 title: How I use Kubernetes ConfigMaps to manage configurations
 post_series_id: getting-started-with-kubernetes
 slug: how-to-use-kubernetes-configmaps
-thumbnail: assets/img/kubernetes-configmap.jpeg
+thumbnail: wp-content/uploads/2020/08/kubernetes-configmap.jpg
 excerpt: In this article, I would like to explain how to manage application configuration in Kubernetes with ConfigMaps.
 categories: Virtualization
 ---
 
-![Kubernetes ConfigMap](assets/img/kubernetes-configmap.jpeg){:width="231" height="200" .responsive_img}
+![Kubernetes ConfigMap]({{ site.baseurl }}/wp-content/uploads/2020/08/kubernetes-configmap.jpg){:width="231" height="200" .responsive_img}
 
 # How I use Kubernetes ConfigMaps to manage configurations
 _Posted on **{{ page.date | date_to_string }}**_
 
-This is the third article of the [Getting Started with Kubernetes](getting-started-with-kubernetes) series. Here I would like to explain how to manage application configuration with Kubernetes **ConfigMaps**.
+This is the third article of the [Getting Started with Kubernetes]({{ site.baseurl }}/getting-started-with-kubernetes/) series. Here I would like to explain how to manage application configuration with Kubernetes **ConfigMaps**.
 
 ##  The “Anatomy” of an Application
 
@@ -25,7 +25,7 @@ Whatever application has usually three layers:
 
 Presentation and Logic usually are in the binary code that should never change from one deployment to another. What usually changes is the data. With the term data, we essentially mean the data itself and the configuration. For an application that follows the [12-Factor guidelines](https://12factor.net/), it is essentials that configuration is separated by binary code and data.
 
-![The Anatomy of an Application](assets/img/application-layers.png){:width="450" height="289" .responsive_img}
+![The Anatomy of an Application]({{ site.baseurl }}/wp-content/uploads/2020/08/application-layers.png){:width="450" height="289" .responsive_img}
 
 Photo from [https://www.wots.mobi](https://www.wots.mobi)
 
@@ -33,7 +33,7 @@ Kubernetes manages configuration with **ConfigMaps**. In the next sections, I wi
 
 ## What is a ConfigMap in Kubernetes?
 
-In [this article](getting-started-with-kubernetes), I defined a ConfigMap as a key-value dictionary you can create and add to a Kubernetes cluster whose Pods can reference later.
+In [this article]({{ site.baseurl }}/getting-started-with-kubernetes/), I defined a ConfigMap as a key-value dictionary you can create and add to a Kubernetes cluster whose Pods can reference later.
 
 ## Why would you use a ConfigMap in Kubernetes?
 
@@ -49,7 +49,7 @@ The following steps summarize how ConfigMap works in Kubernetes and the figure b
 * Add a ConfigMap to the Kubernetes cluster.
 * Containers in the Pod reference the ConfigMap and use its values.
 
-![How does ConfigMap work?](assets/img/configmap-diagram.gif){:width="450" height="378" .responsive_img}
+![How does ConfigMap work?]({{ site.baseurl }}/wp-content/uploads/2020/08/configmap-diagram.gif){:width="450" height="378" .responsive_img}
 
 Photo from [https://matthewpalmer.net](https://matthewpalmer.net)
 
@@ -57,7 +57,7 @@ Photo from [https://matthewpalmer.net](https://matthewpalmer.net)
 
 ### Using YAML file
 
-In [this article](getting-started-with-kubernetes), I showed how to define a ConfigMap for an application that contains database connection parameters for database services. Here the example:
+In [this article]({{ site.baseurl }}/getting-started-with-kubernetes/), I showed how to define a ConfigMap for an application that contains database connection parameters for database services. Here the example:
 
     {% highlight yaml %}
 apiVersion: v1
@@ -79,7 +79,7 @@ You can use the following command to create the ConfigMap from the YAML file in 
 kubectl apply -f YAML
     {% endhighlight %}
 
-As we know from the [first article](getting-started-with-kubernetes), namespaces are the way Kubernetes manages multiple virtual clusters on a single physical cluster. In our example, we add the ConfigMap to the default namespace.
+As we know from the [first article]({{ site.baseurl }}/getting-started-with-kubernetes/), namespaces are the way Kubernetes manages multiple virtual clusters on a single physical cluster. In our example, we add the ConfigMap to the default namespace.
 
 ### Using command line
 

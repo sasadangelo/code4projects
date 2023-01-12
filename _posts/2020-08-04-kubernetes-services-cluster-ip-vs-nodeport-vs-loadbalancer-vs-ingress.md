@@ -3,17 +3,17 @@ layout: post
 title: Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress
 post_series_id: getting-started-with-kubernetes
 slug: kubernetes-services-cluster-ip-vs-nodeport-vs-loadbalancer-vs-ingress
-thumbnail: assets/img/kubernetes-cluster-ip-services-mini.png
+thumbnail: wp-content/uploads/2020/08/kubernetes-cluster-ip-services-mini.png
 excerpt: Do you want to understand the difference between Cluster IP vs NodePort vs LoadBalancer vs Ingress? Read the following article to learn more.
 categories: Virtualization
 ---
 
-![Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress](assets/img/kubernetes-cluster-ip-services-mini.png){:width="231" height="200" .responsive_img}
+![Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress]({{ site.baseurl }}/wp-content/uploads/2020/08/kubernetes-cluster-ip-services-mini.png){:width="231" height="200" .responsive_img}
 
 # Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress
 _Posted on **{{ page.date | date_to_string }}**_
 
-This is the second article of the [Getting Started with Kubernetes](getting-started-with-kubernetes) article series. In this article, I want to explain a concept that confused me when I started working with Kubernetes: **Cluster IP vs NodePort vs LoadBalancer vs Ingress**.
+This is the second article of the [Getting Started with Kubernetes]({{ site.baseurl }}/getting-started-with-kubernetes/) article series. In this article, I want to explain a concept that confused me when I started working with Kubernetes: **Cluster IP vs NodePort vs LoadBalancer vs Ingress**.
 
 ## Kubernetes Service types
 
@@ -50,7 +50,7 @@ spec:
 It’s possible to access, for debugging purposes, from the external to the Cluster IP using the Kubernetes proxy as the following figure shows. As you can notice, an application App2 can internally communicate with the application App1 via the Cluster IP.
 
 
-![Kubernetes Cluster IP Service](assets/img/kubernetes-cluster-ip-services.png){:width="450" height="389" .responsive_img}
+![Kubernetes Cluster IP Service]({{ site.baseurl }}/wp-content/uploads/2020/08/kubernetes-cluster-ip-services-3.png){:width="450" height="389" .responsive_img}
 
 Start the Kubernetes Proxy:
 
@@ -80,7 +80,7 @@ kubectl get services --all-namespaces
     {% endhighlight %}
 
 
-![Kubernetes Node Port Service](assets/img/kubernetes-nodeport-service.png){:width="450" height="365" .responsive_img}
+![Kubernetes Node Port Service]({{ site.baseurl }}/wp-content/uploads/2020/08/kubernetes-nodeport-service.png){:width="450" height="365" .responsive_img}
 
 As you can notice from the image above the external traffic can arrive on the IP of one of the three nodes on port 30036, it will arrive to the NodePort service that will forward the traffic to a specific Pod.
 
@@ -111,7 +111,7 @@ I think NodePort is really convenient when you want to test immediately your ser
 
 A LoadBalancer service is the standard way to expose a service to the internet. On the Cloud of most vendors, this will create a Network Load Balancer that will give you a single IP address that will forward all traffic to your service.
 
-![Kubernetes Load Balancer Service](assets/img/kubernetes-loadbalancer-services.png){:width="450" height="317" .responsive_img}
+![Kubernetes Load Balancer Service]({{ site.baseurl }}/wp-content/uploads/2020/08/kubernetes-loadbalancer-services.png){:width="450" height="317" .responsive_img}
 
 The problem with this type of service is that it is only available on the Cloud platform of some vendors and you should pay for it. If you are using a local Kubernetes cluster (i.e. using [Kubespray](https://github.com/kubernetes-sigs/kubespray) or [my ad-hoc solution](https://github.com/sasadangelo/k8s-cluster)) on your laptop there is no chance you can use this type of service. In this case, the only way to go is via NodePort.
 
@@ -121,7 +121,7 @@ Unlike all the above examples, Ingress is NOT a type of service. Instead, it sit
 
 The most important thing you can do with an Ingress is to do both path-based and subdomain based routing to backend services as shown by the following figure.
 
-![Kubernetes Ingress](assets/img/kubernetes-ingress.png){:width="450" height="382" .responsive_img}
+![Kubernetes Ingress]({{ site.baseurl }}/wp-content/uploads/2020/08/kubernetes-ingress.png){:width="450" height="382" .responsive_img}
 
 ### Kubernetes Ingress
 
@@ -197,4 +197,4 @@ Here my thoughts about the Ingress:
 
 ## Final Thoughts
 
-This article contains a lot of useful information that for me are very important to understand how Kubernetes works. There are other important concepts to explain. In the [next article](how-to-use-kubernetes-configmaps), I will explain how to separate configuration from code and data using **Kubernetes ConfigMaps**.
+This article contains a lot of useful information that for me are very important to understand how Kubernetes works. There are other important concepts to explain. In the [next article]({{ site.baseurl }}/how-to-use-kubernetes-configmaps/), I will explain how to separate configuration from code and data using **Kubernetes ConfigMaps**.
