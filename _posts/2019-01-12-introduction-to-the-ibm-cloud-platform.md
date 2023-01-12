@@ -3,17 +3,17 @@ layout: post
 title: Introduction to the IBM Cloud platform
 post_series_id: getting-started-with-cloud-computing
 slug: introduction-to-the-ibm-cloud-platform
-thumbnail: assets/img/IBM-Cloud.png
+thumbnail: wp-content/uploads/2019/01/IBM-Cloud.png
 excerpt: "In this article, I would like to go into the details of Cloud Computing analyzing one of the most important platforms on the market: IBM Cloud."
 categories: Cloud
 ---
 
-![Introduction to the IBM Cloud platform](assets/img/IBM-Cloud.png){:width="327" height="200" .responsive_img}
+![Introduction to the IBM Cloud platform]({{ site.baseurl }}/wp-content/uploads/2019/01/IBM-Cloud.png){:width="327" height="200" .responsive_img}
 
 # Introduction to the IBM Cloud platform
 _Posted on **{{ page.date | date_to_string }}**_
 
-In the [previous article,](getting-started-with-cloud-computing) we talked about Cloud Computing in very general terms. In this article, I would like to go into the details of Cloud Computing to understand how the theoretical concepts apply in practice. The platform I chose for this analysis is [IBM Cloud](https://www.ibm.com/cloud/).  
+In the [previous article,]({{ site.baseurl }}/getting-started-with-cloud-computing/) we talked about Cloud Computing in very general terms. In this article, I would like to go into the details of Cloud Computing to understand how the theoretical concepts apply in practice. The platform I chose for this analysis is [IBM Cloud](https://www.ibm.com/cloud/).  
 
 IBM Cloud is the IBM cloud computing platform that combines Infrastructure as a service  (IaaS), platform as a service (PaaS), container as a service (CaaS), and Function as a Service (FaaS). Additionally, it has a rich catalog of over 170 services that can be easily integrated with PaaS and IaaS to build business applications rapidly.
 
@@ -29,7 +29,7 @@ The IBM Cloud offering provides five ways to use its platform.
 4.  Cloud Foundry (PaaS).
 5.  Open Whisk (FaaS).
 
-![IBM Cloud Service Models](assets/img/IBM-Cloud-Service-Models.png){:width="450" height="186" .responsive_img}
+![IBM Cloud Service Models]({{ site.baseurl }}/wp-content/uploads/2019/01/IBM-Cloud-Service-Models.png){:width="450" height="186" .responsive_img}
 
 ### Bare metal and virtual servers (IaaS)
 
@@ -51,13 +51,13 @@ Container infrastructure allows you to easily integrate your application with co
 
 [Cloud Foundry](https://www.cloudfoundry.org/) is an open source PaaS that allows you to build your own application easily thanks to a wide range of available services (i.e. SQL and NoSQL databases, cognitive, blockchain, and others) and framework (i.e. Node.js, Java, PHP, Python, and others). It interfaces easily with a wide range of Cloud systems in different deployment models.
 
-![CloudFoundry Services, Runtimes, and Clouds](assets/img/Cloud-Foundry-Services-Runtime-Cloud.png){:width="450" height="323" .responsive_img}
+![CloudFoundry Services, Runtimes, and Clouds]({{ site.baseurl }}/wp-content/uploads/2019/01/Cloud-Foundry-Services-Runtime-Cloud.png){:width="450" height="323" .responsive_img}
 
 IBM formerly built its Public Cloud around Cloud Foundry adding software like a web UI console, a billing system, an extended command line, services (i.e cognitive, blockchain, and other).
 
 The following figure shows the Cloud Foundry architecture.
 
-![CloudFoundry Architecture](assets/imgCloudFoundry-Architecture.png){:width="450" height="299" .responsive_img}
+![CloudFoundry Architecture]({{ site.baseurl }}/wp-content/uploads/2019/01/CloudFoundry-Architecture.png){:width="450" height="299" .responsive_img}
 
 Whenever a request comes from IBM Cloud web UI or command line the Router routes it to a Cloud Controller that is the Cloud Foundry brain.
 

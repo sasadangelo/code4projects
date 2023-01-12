@@ -2,14 +2,14 @@
 layout: post
 title: BOSH for Beginners
 slug: bosh-for-beginners
-thumbnail: assets/img/bosh_logo.png
+thumbnail: wp-content/uploads/2019/06/bosh_logo.png
 excerpt: In this article, I want to explain what Bosh is, its main concepts, and how to use it practically to deploy software. What is BOSH? According to Bosh
 categories:
 - Cloud
 - DevOps
 ---
 
-![BOSH for Beginners](assets/img/bosh_logo.png){:width="200" height="200" .responsive_img}
+![BOSH for Beginners]({{ site.baseurl }}/wp-content/uploads/2019/06/bosh_logo.png){:width="200" height="200" .responsive_img}
 
 # BOSH for Beginners
 _Posted on **{{ page.date | date_to_string }}**_
@@ -38,7 +38,7 @@ Many tools like Chef, Puppet, Docker exist that address one or more of these ite
 
 The following figure shows the Bosh main components. An administrator can manage Bosh environments using a Bosh Cli that sends commands to the Bosh Director that is a server that keeps track of all the deployment aspects.
 
-![Bosh Architecture](assets/img/bosh-architecture.png){:width="450" height="465" .responsive_img}
+![Bosh Architecture]({{ site.baseurl }}/wp-content/uploads/2019/05/bosh-architecture.png){:width="450" height="465" .responsive_img}
 
 _Figure from [https://bosh.io](https://bosh.io/docs/bosh-components/)_
 
@@ -46,7 +46,7 @@ Internally, there is a CPI that is an API that the Director uses to manage IaaS 
 
 VM that lives in the IaaS environment includes a Bosh Agent that interacts with the Director to manage the software deployment on it. They communicate through a message system based on a publisher-subscriber approach (NATS).
 
-![Bosh Internals](assets/img/bosh-internals-e1594368084446.png){:width="450" height="278" .responsive_img}
+![Bosh Internals]({{ site.baseurl }}/wp-content/uploads/2019/05/bosh-internals-e1594368084446.png){:width="450" height="278" .responsive_img}
 
 _Figure from [http://www.think-foundry.com](http://www.think-foundry.com/cloud-foundry-bosh-introduction/)_
 
@@ -65,7 +65,7 @@ In each environment, you can have one or more **Deployments**. A Bosh deployment
 -   **Stem cell**: A stem cell is a versioned Operating System image wrapped with IaaS specific packaging. A typical stem cell contains a bare minimum OS skeleton with a few common utilities pre-installed, a BOSH Agent, and a few configuration files to securely configure the OS by default.
 -   **Instance (VM)**: A deployment is made up of instances. Normally, instances represent long-running servers on your cloud infrastructure. They can also represent “errands” – one-off tasks that can be run inside of temporary servers.
 
-![Bosh Deployment](assets/img/bosh-deployment-1.png){:width="450" height="450" .responsive_img}
+![Bosh Deployment]({{ site.baseurl }}/wp-content/uploads/2019/05/bosh-deployment-1.png){:width="450" height="450" .responsive_img}
 
 A Release is deployable on different instances, for example, a PostgreSQL server and CLI could be installed on two separate instances. To manage this distributed deployment method each Bosh Release has one or more jobs. A job contains:
 
