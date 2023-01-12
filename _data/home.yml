@@ -43,7 +43,7 @@ feature-area:
       I will explain What Kubernetes is, its architecture, the concepts of Pod, Replication Controller, ReplicaSets, Deployment, ConfigMaps,
       SecretMaps, etc. I will show you how to setup a Kubernetes cluster using Virtual Box and Vagrant and how to deploy an "Hello K8s!" dockerized
       application in it. <a href="getting-started-with-kubernetes">Check out the article series here</a>.
-    feature-image: assets/img/kubernetes-logo.png
+    feature-image: wp-content/uploads/2019/06/Kubernetes.png
     feature-link: getting-started-with-kubernetes
   - feature-title: How to build a Raspberry Media Center
     feature-text: >
