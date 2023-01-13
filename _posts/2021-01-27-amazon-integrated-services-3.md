@@ -3,12 +3,12 @@ layout: post
 title: Amazon Integrated Services (part 2)
 post_series_id: getting-started-with-amazon-web-services
 slug: amazon-integrated-services-3
-thumbnail: assets/img/CloudWatch-CloudFront-SNS-CloudFormation.png
+thumbnail: wp-content/uploads/2021/01/CloudWatch-CloudFront-SNS-CloudFormation.png
 excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
 categories: Cloud
 ---
 
-![Amazon Integrated Services (part 2)](assets/img/CloudWatch-CloudFront-SNS-CloudFormation.png){:width="200" height="200" .responsive_img}
+![Amazon Integrated Services (part 2)]({{ site.baseurl }}/wp-content/uploads/2021/01/CloudWatch-CloudFront-SNS-CloudFormation.png){:width="200" height="200" .responsive_img}
 
 # Amazon Integrated Services (part 2)
 _Posted on **{{ page.date | date_to_string }}**_
@@ -20,7 +20,7 @@ In this article, I am going to continue my overview of the Amazon Integrated Ser
 -   CloudFront
 -   CloudFormation
 
-Before reading this, make sure [you read this](amazon-web-services) and [this](amazon-integrated-services-2).
+Before reading this, make sure [you read this]({{ site.baseurl }}/amazon-web-services/) and [this]({{ site.baseurl }}/amazon-integrated-services-2/).
 
 ## **Simple Notification Service** (**SNS**)
 
@@ -33,7 +33,7 @@ The Simple Notification Service (SNS) is a notification system that allows decou
 
 The following figure shows the two typical usages of Amazon SNS: **Amazon SNS Pub/Sub Messaging** and **Amazon SNS Mobile Notifications**. In the former, the publisher sends notifications to subscribers that could be Lambda, SQS, or HTTP/S services. In the latter, Publisher sends a notification to the mobile subscribers via ADM, Baidu, and others.
 
-![Amazon SNS](assets/img/Amazon-SNS.png){:width="450" height="252" .responsive_img}
+![Amazon SNS]({{ site.baseurl }}/wp-content/uploads/2021/01/Amazon-SNS.png){:width="450" height="252" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -49,11 +49,11 @@ Amazon CoudWatch is a real-time monitoring system for Amazon Web Services (AWS) 
 
 For each AWS resource, CloudWatch monitors a set of metrics. For example, for EC2 instances it monitors CPU, Status, Memory, etc. These statistics are visible to customers via the management console. When a metric reaches a threshold an alarming turn on and an action (SNS, Autoscaling, etc.) starts.
 
-![Amazon CloudWatch](assets/img/Amazon-CloudWatch.png){:width="450" height="195" .responsive_img}
+![Amazon CloudWatch]({{ site.baseurl }}/wp-content/uploads/2021/01/Amazon-CloudWatch.png){:width="450" height="195" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
-In [this article](ec2-auto-scaling-group-tutorial-for-beginners), you can see an example of EC2 scale up when CPU > 80%. There are other useful use cases where you can use CloudWatch:
+In [this article]({{ site.baseurl }}/ec2-auto-scaling-group-tutorial-for-beginners/), you can see an example of EC2 scale up when CPU > 80%. There are other useful use cases where you can use CloudWatch:
 
 -   respond to a state change in an AWS resource  (see the example of EC2 instance scale up when CPU > 80%).
 -   when an EC2 scale-up occurs an AWS Lambda function can update DNS for the new IP.
@@ -124,7 +124,7 @@ AWS CloudFormation simplifies the task of repeatedly and predictably creating gr
 
 You can use the management console, AWS CLI, or SDK to provision AWS resources in your account environment. For example, you can create a pipeline that creates a VPC in your account with a Public subnet and an EC2 instance that runs a web server. You can create an S3 bucket where, periodically, you can store the application logs, and so on. Users can access the web server via an Internet GAteway (IGW) The scenarios you can create are endless.
 
-![Amazon CloudFormation Stack](assets/img/Amazon-CloudFormation-Stack.png){:width="450" height="200" .responsive_img}
+![Amazon CloudFormation Stack]({{ site.baseurl }}/wp-content/uploads/2021/01/Amazon-CloudFormation-Stack.png){:width="450" height="200" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -132,7 +132,7 @@ _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazo
 
 In order to deploy, update, or remove AWS resources in a customer account, CloudFormation uses a Template file that contains a description of the resources that compose the customer environment. This template represents the customer’s “desired state” and CloudFormation takes care that the environment keeps it. It is in JSON or YAML format and it is self-explanatory.
 
-![Amazon CloudFormation Template and Stack](assets/img/Amazon-CloudFormation-Template-Stack.png){:width="450" height="200" .responsive_img}
+![Amazon CloudFormation Template and Stack]({{ site.baseurl }}/wp-content/uploads/2021/01/Amazon-CloudFormation-Template-Stack.png){:width="450" height="200" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -144,4 +144,4 @@ If you are new to CloudFormation you can use the **CloudFormation Designer** to 
 
 ## **Conclusion**
 
-With this article, we terminated our AWS Integration Services overview. We analyzed Amazon SNS, CloudFront, CloudWatch, and CloudFormation. In the [next article](amazon-well-architected-framework), we will continue our overview of the AWS platform.
+With this article, we terminated our AWS Integration Services overview. We analyzed Amazon SNS, CloudFront, CloudWatch, and CloudFormation. In the [next article]({{ site.baseurl }}/amazon-well-architected-framework/), we will continue our overview of the AWS platform.

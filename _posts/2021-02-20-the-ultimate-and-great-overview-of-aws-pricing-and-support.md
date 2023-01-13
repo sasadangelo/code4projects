@@ -3,12 +3,12 @@ layout: post
 title: The Ultimate and Great Overview of AWS Pricing and Support
 post_series_id: getting-started-with-amazon-web-services
 slug: the-ultimate-and-great-overview-of-aws-pricing-and-support
-thumbnail: assets/img/AWS-Pricing.jpeg
+thumbnail: wp-content/uploads/2021/02/AWS-Pricing.jpg
 excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
 categories: Cloud
 ---
 
-![The Ultimate and Great Overview of AWS Pricing and Support](assets/img/AWS-Pricing.jpeg){:width="316" height="200" .responsive_img}
+![The Ultimate and Great Overview of AWS Pricing and Support]({{ site.baseurl }}/wp-content/uploads/2021/02/AWS-Pricing.jpg){:width="316" height="200" .responsive_img}
 
 # The Ultimate and Great Overview of AWS Pricing and Support
 _Posted on **{{ page.date | date_to_string }}**_
@@ -27,7 +27,7 @@ In AWS you only pay for three types of resources:
 
 Moreover, **the more you consume the greater is the discounts you get**. In the Cloud world, you can start small and grow as your business grow. In fact, add new capacity or resources to your ecosystem is easy.
 
-![AWS Pricing](assets/img/AWS-Pricing-2.jpeg){:width="450" height="285" .responsive_img}
+![AWS Pricing]({{ site.baseurl }}/wp-content/uploads/2021/02/AWS-Pricing-2.jpg){:width="450" height="285" .responsive_img}
 
 ### On-Demand vs Reserved resources
 
@@ -48,11 +48,11 @@ In this section, I will briefly analyze the pricing details for some main resour
 
 ### Amazon EC2 and EBS Pricing
 
-You can read details about Amazon EC2 and EBS Pricing [in the following article](amazon-ec2-for-beginners).
+You can read details about Amazon EC2 and EBS Pricing [in the following article]({{ site.baseurl }}/amazon-ec2-for-beginners/).
 
 ### AWS Pricing for S3
 
-The pricing for [S3 storage](amazon-web-services) depends on the Storage classes:
+The pricing for [S3 storage]({{ site.baseurl }}/amazon-web-services/) depends on the Storage classes:
 
 -   **Standard**, you pay for the number and size of objects which will have 9.999999999% durability and 9.99% availability.
 -   **Standard-Infrequent Access (S-IA)**, where you store infrequent access objects with the same durability and availability of the Standard class but a lower costs.
@@ -79,7 +79,7 @@ AWS pricing for Amazon CloudFront varies across geographic regions and it is mai
 
 As your business grows your infrastructure grows as well and with a large number of resources in your environment, it’s hard to keep track of costs and optimize them over time.
 
-![AWS Large Infrastructure](assets/img/AWS-Large-Infrastructure.png){:width="450" height="239" .responsive_img}
+![AWS Large Infrastructure]({{ site.baseurl }}/wp-content/uploads/2021/02/AWS-Large-Infrastructure.png){:width="450" height="239" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -98,7 +98,7 @@ In fact, AWS Trusted Advisor has a dashboard where it immediately shows you:
 -   the suggestion to investigate;
 -   the urgent problem to address.
 
-![AWS Trusted Advisory Dashboard](assets/img/AWS-Trusted-Advisory-Dashboard.png){:width="450" height="130" .responsive_img}
+![AWS Trusted Advisory Dashboard]({{ site.baseurl }}/wp-content/uploads/2021/02/AWS-Trusted-Advisory-Dashboard.png){:width="450" height="130" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -108,7 +108,7 @@ According to Amazon data, this tool helped customers to have 500 million suggest
 
 The tools scan your infrastructure and analyze all your resources and their usage. In addition, it compares this analysis with a set of best practices from which it determines if the resource is correctly used, there are possible optimization to investigate, or there are issues to solve.
 
-![AWS Trusted Advisor](assets/img/AWS-Trusted-Advisor.png){:width="450" height="190" .responsive_img}
+![AWS Trusted Advisor]({{ site.baseurl }}/wp-content/uploads/2021/02/AWS-Trusted-Advisor.png){:width="450" height="190" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -132,7 +132,7 @@ Moreover, there is also the **Basic plan** that is the default when you subscrib
 
 The following tables summarize the difference among the above support plans.
 
-![AWS Support Plans](assets/img/AWS-Support-Plans.png){:width="450" height="266" .responsive_img}
+![AWS Support Plans]({{ site.baseurl }}/wp-content/uploads/2021/02/AWS-Support-Plans.png){:width="450" height="266" .responsive_img}
 
 _Photo from [https://tutorialsdojo.com](https://tutorialsdojo.com/aws-support-plans/)_
 

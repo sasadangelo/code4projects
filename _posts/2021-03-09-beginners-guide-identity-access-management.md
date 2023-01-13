@@ -3,17 +3,17 @@ layout: post
 title: Beginner’s Guide to AWS Identity and Access Management (IAM)
 post_series_id: getting-started-with-amazon-web-services
 slug: beginners-guide-identity-access-management
-thumbnail: assets/img/Identity-and-Access-Management.png
+thumbnail: wp-content/uploads/2021/03/Identity-and-Access-Management.png
 excerpt: "After the AWS Introduction of the previous article, let&#039;s start exploring one of the main AWS components: AWS Identity and Access Management (IAM)."
 categories: Cloud
 ---
 
-![Beginner’s Guide to AWS Identity and Access Management (IAM)](assets/img/Identity-and-Access-Management.png){:width="200" height="200" .responsive_img}
+![Beginner’s Guide to AWS Identity and Access Management (IAM)]({{ site.baseurl }}/wp-content/uploads/2021/03/Identity-and-Access-Management.png){:width="200" height="200" .responsive_img}
 
 # Beginner’s Guide to AWS Identity and Access Management (IAM)
 _Posted on **{{ page.date | date_to_string }}**_
 
-After the AWS Introduction of the [previous article](amazon-web-services), let’s start exploring one of the main AWS components: **AWS Identity and Access Management (IAM)**. You will learn what it is and how to create and manage your account in order to start using AWS.
+After the AWS Introduction of the [previous article]({{ site.baseurl }}/amazon-web-services/), let’s start exploring one of the main AWS components: **AWS Identity and Access Management (IAM)**. You will learn what it is and how to create and manage your account in order to start using AWS.
 
 In this article, there is a hands-on tutorial that will help you to register your account, configure it using well-known best practices, and start using it to deploy your IT infrastructure.
 
@@ -31,11 +31,11 @@ AWS Identity and Access Management (IAM) is an AWS service responsible to verify
 
 **Group**:  a group is a collection of users. Moreover, a user can belong to multiple groups (see Charles and David in the figure below). For this reason, it is an NxM relationship. Examples of groups are developers, auditors, operations, and so on. It is possible to have users that don’t belong to any group (see Fred in the figure below). Groups cannot be nested.
 
-![AWS Groups](assets/img/AWS-Groups.png){:width="450" height="253" .responsive_img}
+![AWS Groups]({{ site.baseurl }}/wp-content/uploads/2021/03/AWS-Groups.png){:width="450" height="253" .responsive_img}
 
 **Role**: in the technology world when we think about a role usually we immediately think of the user permissions. However, **this is not true in AWS**. In fact, a Role in AWS is an authentication method, a way to identify a human or a machine into the system. The main difference with a user is that his credentials are temporary and he cannot be part of a group.
 
-![IAM Identities](assets/img/IAM-Identities.png){:width="450" height="323" .responsive_img}
+![IAM Identities]({{ site.baseurl }}/wp-content/uploads/2021/02/IAM-Identities.png){:width="450" height="323" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -62,7 +62,7 @@ Suppose the organization **example.com** has the administration account **resear
     2.  He gets from Security Token Service (STS) temporary security credentials to writing on the S3 bucket.
     3.  Mario stores via Console the file on the S3 bucket, behind the scene an API call occurs. The API call contains information about Mario. In conclusion, the IAM engine will check the resource Policy Documents to make sure Mario can perform the operation.
 
-![IAM Authorization and Access](assets/img/IAM_Authorization_Access.png){:width="450" height="243" .responsive_img}
+![IAM Authorization and Access]({{ site.baseurl }}/wp-content/uploads/2021/02/IAM_Authorization_Access.png){:width="450" height="243" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -116,30 +116,30 @@ People who want to use AWS must create an account, you can follow the instructio
 
 Sign in to the AWS Console, search the IAM service and select it. Select the **Users** menu on the left, the following screenshot appears. Select the **Add user** button.
 
-![IAM Add User](assets/img/1-IAM-Add-User-2.png){:width="450" height="179" .responsive_img}
+![IAM Add User]({{ site.baseurl }}/wp-content/uploads/2021/03/1-IAM-Add-User-2.png){:width="450" height="179" .responsive_img}
 
 Enter the **User name** and the **Console password**, then click **Next**.
 
-![IAM Fill User Data](assets/img/2-IAM-Fill-User-Data.png){:width="450" height="312" .responsive_img}
+![IAM Fill User Data]({{ site.baseurl }}/wp-content/uploads/2021/03/2-IAM-Fill-User-Data.png){:width="450" height="312" .responsive_img}
 
 Select **Add user to group** and click the button **Create group**, then click the **Next** button.
 
-![IAM Add Group](assets/img/3-IAM-Add-Group.png){:width="450" height="271" .responsive_img}
+![IAM Add Group]({{ site.baseurl }}/wp-content/uploads/2021/03/3-IAM-Add-Group.png){:width="450" height="271" .responsive_img}
 
 Enter **Admins** as Group name and select the predefined policy **AdministratorAccess**.
 
-![IAM Admin Group](assets/img/4-IAM-Admin-Group.png){:width="450" height="189" .responsive_img}
+![IAM Admin Group]({{ site.baseurl }}/wp-content/uploads/2021/03/4-IAM-Admin-Group.png){:width="450" height="189" .responsive_img}
 
 You can add one or more **Tags** to your user. For example, the Business Unit he belongs to, or his job role, and so on. In my example, I added a **department** tag with value **engineers**. Click **Next** to review the user information.
 
-![IAM Add Tags](assets/img/5-IAM-Add-Tags.png){:width="450" height="265" .responsive_img}
+![IAM Add Tags]({{ site.baseurl }}/wp-content/uploads/2021/03/5-IAM-Add-Tags.png){:width="450" height="265" .responsive_img}
 
 In this panel, you can review all the inserted data. In case of an error, you can go back and correct the mistake. Click the **Create user** button.
 
-![IAM Review User Data](assets/img/6-IAM-Review-User-Data.png){:width="450" height="263" .responsive_img}
+![IAM Review User Data]({{ site.baseurl }}/wp-content/uploads/2021/03/6-IAM-Review-User-Data.png){:width="450" height="263" .responsive_img}
 
 Selecting on the left menu the IAM Dashboard you can view the new user. From the IAM Dashboard, you can click the Edit link to change the Sign-in URL to access the AWS console.  
-![IAM Dashboard](assets/img/7-IAM-Dashboard.png){:width="450" height="196" .responsive_img}
+![IAM Dashboard]({{ site.baseurl }}/wp-content/uploads/2021/03/7-IAM-Dashboard.png){:width="450" height="196" .responsive_img}
 
 At this point, you can log into the AWS console using the new administrator account.
 
@@ -147,7 +147,7 @@ At this point, you can log into the AWS console using the new administrator acco
 
 You can change the Password Policy by clicking the **Account Settings** link on the left menu.
 
-![Change Password Policy](assets/img/Change-Password-Policy.png){:width="450" height="141" .responsive_img}
+![Change Password Policy]({{ site.baseurl }}/wp-content/uploads/2021/03/Change-Password-Policy.png){:width="450" height="141" .responsive_img}
 
 By default, AWS provides the following password policy:
 
@@ -160,19 +160,19 @@ but you can change this default allowing password rotation, avoiding password re
 ### Create the Access Key and the Access Secret Key for the administrator
 
 From the left menu select the **Users** link and click on the administrator user link.  
-![IAM Select User](assets/img/1-IAM-Select-User-2.png){:width="450" height="173" .responsive_img}
+![IAM Select User]({{ site.baseurl }}/wp-content/uploads/2021/03/1-IAM-Select-User-2.png){:width="450" height="173" .responsive_img}
 
 Select the **Security Credentials** tab to create your Access Key. Click on the **Create access key** button.
 
-![IAM Security Credentials](assets/img/2-IAM-Security-Credentials-2.png){:width="450" height="331" .responsive_img}
+![IAM Security Credentials]({{ site.baseurl }}/wp-content/uploads/2021/03/2-IAM-Security-Credentials-2.png){:width="450" height="331" .responsive_img}
 
 It’s important you keep track of the Access Key and Access Secret Key and Download the file on your computer because AWS doesn’t show them anymore.
 
-![Create Access Key](assets/img/3-Create-Access-Key.png){:width="450" height="229" .responsive_img}
+![Create Access Key]({{ site.baseurl }}/wp-content/uploads/2021/03/3-Create-Access-Key.png){:width="450" height="229" .responsive_img}
 
 You created the Keys and you can use them to work with AWS CLI or access the resources programmatically via SDK.  
 
-![Access Key creation complete](assets/img/4-Access-Key-creation-complete.png){:width="450" height="157" .responsive_img}
+![Access Key creation complete]({{ site.baseurl }}/wp-content/uploads/2021/03/4-Access-Key-creation-complete.png){:width="450" height="157" .responsive_img}
 
 ### IAM User and Role Access to Billing Information
 
@@ -180,8 +180,8 @@ One important setting for your account to keep expenses under control is to set 
 
 Scroll down until the **IAM User and Role Access to Billing Information** section and click the Edit link. Activate the **IAM user/role access to billing information.**
 
-We will see how to set up a Budget for your account in the [following article](the-ultimate-and-great-overview-of-aws-pricing-and-support).
+We will see how to set up a Budget for your account in the [following article]({{ site.baseurl }}/the-ultimate-and-great-overview-of-aws-pricing-and-support/).
 
 ## Conclusion
 
-In conclusion, in this article, I explained my understanding of the IAM component, and how to use it for the initial setup of your account using the root user. From now on, you should no longer use the root account anymore and only the administrator user you should use to administer your account. In the [next article](amazon-ec2-for-beginners), I’ll talk about the most important service of the Amazon platform: the **Amazon EC2 service**.
+In conclusion, in this article, I explained my understanding of the IAM component, and how to use it for the initial setup of your account using the root user. From now on, you should no longer use the root account anymore and only the administrator user you should use to administer your account. In the [next article]({{ site.baseurl }}/amazon-ec2-for-beginners/), I’ll talk about the most important service of the Amazon platform: the **Amazon EC2 service**.

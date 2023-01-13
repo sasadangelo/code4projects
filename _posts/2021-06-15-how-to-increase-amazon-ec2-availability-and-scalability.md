@@ -3,12 +3,12 @@ layout: post
 title: How to increase Amazon EC2 Availability and Scalability
 post_series_id: getting-started-with-amazon-web-services
 slug: how-to-increase-amazon-ec2-availability-and-scalability
-thumbnail: assets/img//load-balancer.png
+thumbnail: wp-content/uploads/2021/06//load-balancer.png
 excerpt: In this article, I talk about EC2 Availability and Scalability and how to increase them using AWS services like Load Balancers, Autoscalers, and DNS.
 categories: Cloud
 ---
 
-![How to increase Amazon EC2 Availability and Scalability](assets/img/load-balancer.png){:width="200" height="169" .responsive_img}
+![How to increase Amazon EC2 Availability and Scalability]({{ site.baseurl }}/wp-content/uploads/2021/06/load-balancer.png){:width="200" height="169" .responsive_img}
 
 # How to increase Amazon EC2 Availability and Scalability
 _Posted on **{{ page.date | date_to_string }}**_
@@ -21,13 +21,13 @@ In Computing, the term _Availability_ is strictly related to the concept of Upti
 
 For example, the following table list some availability numbers and the relative yearly, monthly, weekly, and daily downtime tolerated.
 
-![Availability Table](assets/img/availability.jpeg){:width="450" height="149" .responsive_img}
+![Availability Table]({{ site.baseurl }}/wp-content/uploads/2021/05/availability.jpeg){:width="450" height="149" .responsive_img}
 
 A highly available system allows it to stay operational even when faults do occur. In order to do that, the system adds redundancy to its resources so that if a resource fails its redundant counterpart can still guarantee the service operational and give the system to heal itself automatically or with the help of the support team.
 
 Ec2 instance availability can be increased by cloning them in different AZs in the same Region and use Load Balancers as an entry point for all the instances. If AZ A goes down, AZ B guarantees the continuity of the service.
 
-![Ec2 Availability](assets/img/Ec2-Availability.png){:width="450" height="303" .responsive_img}
+![Ec2 Availability]({{ site.baseurl }}/wp-content/uploads/2021/05/Ec2-Availability.png){:width="450" height="303" .responsive_img}
 
 _Photo from [https://cloudaffaire.com](https://cloudaffaire.com/how-to-create-a-network-load-balancer-using-aws-cli/)_
 
@@ -60,7 +60,7 @@ When you scale in or out EC2 instances you need a mechanism to:
 
 In AWS the Load Balancers provides all these features. A Load Balancer is a machine (typically an Ec2 instance) that redirects the traffic to the downstream EC2 instances and provides all the above features. In addition, in AWS the load balancers provide Multi-AZ deployment for high availability and support for HTTPS.
 
-![AWS Load Balancer](assets/img/elb_instances_1.png){:width="450" height="391" .responsive_img}
+![AWS Load Balancer]({{ site.baseurl }}/wp-content/uploads/2021/05/elb_instances_1.png){:width="450" height="391" .responsive_img}
 
 Theoretically, a customer can create its own HTTP/HTTPS load balancer by buying an Ec2 instance and deploy a reverse proxy like Nginx. However, in this case, the customer must manage everything by himself like os guest patching, Nginx deployment, maintenance, Multi-AZ deployment, and so on. With AWS Elastic Load Balancers Amazon takes care of all these kinds of stuff at a much lower cost.
 
@@ -70,7 +70,7 @@ AWS supports three load balancers type: **Classic, Networking,** and **Applicati
 
 **Classic Load Balancer** is a Layer 4 and 7 load balancer. It publishes a single IP where clients can connect to. It keeps track of all the EC2 instances where the application runs and split the traffic among them. In the case of EC2 instance failure, the component works in sync with Autoscaler to allocate a new one. Classic Load Balancer targets Ec2 instances directly even in different AZ. **AWS si slowly retiring this load balancer type in favor of Application and Network Load Balancers.**
 
-![AWS Classic Loadbalancer](assets/img/AWS-Classic-Loadbalancer.png){:width="450" height="407" .responsive_img}
+![AWS Classic Loadbalancer]({{ site.baseurl }}/wp-content/uploads/2021/01/AWS-Classic-Loadbalancer.png){:width="450" height="407" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -86,7 +86,7 @@ _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon
 
 ALB introduces three new concepts: **Listeners**, **Target**, **Target Group**. Listeners are the process that listens for incoming requests. They use **Rules** to decide the type of incoming requests to accept. For example, you can decide to accept only HTTPS traffic on the 443 port. Target is the destination of the incoming requests. You can group Targets in a Target Group. The component performs health checks at the Target Group level.
 
-![AWS Application Loadbalancer](assets/img/AWS-Application-Loadbalancer.png){:width="450" height="200" .responsive_img}
+![AWS Application Loadbalancer]({{ site.baseurl }}/wp-content/uploads/2021/01/AWS-Application-Loadbalancer.png){:width="450" height="200" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -105,7 +105,7 @@ Application Load Balancers are useful in a lot of scenarios. One is the ability 
 
 Auto-Scaling allows you to scale EC2 instances based on your needs. Using the Auto-Scaling features you remove the guesswork on how to size your infrastructure because it adjusts capacity as needed avoiding Unused or Over Capacity.
 
-![AWS Autoscaling](assets/img/AWS-Autoscaling.png){:width="450" height="225" .responsive_img}
+![AWS Autoscaling]({{ site.baseurl }}/wp-content/uploads/2021/01/AWS-Autoscaling.png){:width="450" height="225" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -113,7 +113,7 @@ Imagine you have a web server deployed on two EC2 instances in a VPC with two pu
 
 The following figure shows an example of a CloudWatch alarm configuration that triggers an Auto-Scaling event when the CPU reaches 80%.
 
-![AWS CloudWatch Alarm](assets/img/AWS-CloudWatch-Alarm.png){:width="450" height="242" .responsive_img}
+![AWS CloudWatch Alarm]({{ site.baseurl }}/wp-content/uploads/2021/01/AWS-CloudWatch-Alarm.png){:width="450" height="242" .responsive_img}
 
 Auto-Scaling has three components:
 
@@ -123,7 +123,7 @@ Auto-Scaling has three components:
 
 The Launch Configuration specifies **what to launch**, for example, the Instance type, the OS image, the default number of EC2 instances. The Auto-Scaling Group specifies **where to launch**, for example, the VPC, subnets, min and max capacity, desired capacity, and load balancer. Finally, the Auto-Scaling Policies specify **when to launch**, for example, with scheduling, on-demand, Scale-Out, and Scale-In policies.
 
-![AWS Autoscaling Components](assets/img/AWS-Autoscaling-Components.png){:width="450" height="185" .responsive_img}
+![AWS Autoscaling Components]({{ site.baseurl }}/wp-content/uploads/2021/01/AWS-Autoscaling-Components.png){:width="450" height="185" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -143,7 +143,7 @@ Sometimes to translate a domain name into an IP address it could be necessary th
 
 Suppose you want to access the application example.com hosted on Amazon AWS. Then your browser contacts the Internet Service Provider DNS to translate it into an IP address. This DNS service will contact Route 53 that will convert that name into the IP address 54.85.178.219 that the browser will receive and use it to contact the application running on an EC2 instance in the AWS Cloud.
 
-![Route 53 Examples](assets/img/Route-53-Examples.png){:width="450" height="214" .responsive_img}
+![Route 53 Examples]({{ site.baseurl }}/wp-content/uploads/2021/01/Route-53-Examples.png){:width="450" height="214" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -159,7 +159,7 @@ Then you can associate to the Hosted Zone one or more RecordSet, in our example,
 -   **value**: 54.85.178.219
 -   **Routing policy**: Simple
 
-![Route 53 Hosted Zone](assets/img/Route-53-Hosted-Zone.png){:width="450" height="203" .responsive_img}
+![Route 53 Hosted Zone]({{ site.baseurl }}/wp-content/uploads/2021/01/Route-53-Hosted-Zone.png){:width="450" height="203" .responsive_img}
 
 Route 53 supports several routing policy:
 
@@ -171,4 +171,4 @@ Route 53 supports several routing policy:
 
 ## Conclusion
 
-In this article, we talked about the availability and scalability concepts and how to achieve them using Load Balancers and Austoscalers. [In this article](elastic-load-balancer-tutorial), we will do some hands on on Load Balancers and [in this other article](ec2-auto-scaling-group-tutorial-for-beginners), we will do some hands on Autoscalers.
+In this article, we talked about the availability and scalability concepts and how to achieve them using Load Balancers and Austoscalers. [In this article]({{ site.baseurl }}/elastic-load-balancer-tutorial/), we will do some hands on on Load Balancers and [in this other article](ec2-auto-scaling-group-tutorial-for-beginners), we will do some hands on Autoscalers.

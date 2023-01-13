@@ -3,12 +3,12 @@ layout: post
 title: How Amazon Web Services Security and Compliance works
 post_series_id: getting-started-with-amazon-web-services
 slug: how-amazon-web-services-security-and-compliance-works
-thumbnail: assets/img/aws-security-mini.png
+thumbnail: wp-content/uploads/2021/02/aws-security-mini.png
 excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
 categories: Cloud
 ---
 
-![How Amazon Web Services Security and Compliance works](assets/img/aws-security-mini.png){:width="356" height="200" .responsive_img}
+![How Amazon Web Services Security and Compliance works]({{ site.baseurl }}/wp-content/uploads/2021/02/aws-security-mini.png){:width="356" height="200" .responsive_img}
 
 # How Amazon Web Services Security and Compliance works
 _Posted on **{{ page.date | date_to_string }}**_
@@ -41,7 +41,7 @@ Moreover, it provides monitoring and logging tools to find risks and understand 
 
 Amazon Cloud implements network security through a series of features like:
 
--   **VPC**. In [this article](amazon-web-services), I talked about Amazon VPC as a way to create one or more isolated networks in the customer account. Therefore, you can control or filter network traffic to avoid security issues.
+-   **VPC**. In [this article]({{ site.baseurl }}/amazon-web-services/), I talked about Amazon VPC as a way to create one or more isolated networks in the customer account. Therefore, you can control or filter network traffic to avoid security issues.
 -   **Built-in Firewalls**. It is possible to define the service exposed on EC2 instances, the source, and the target of whatever connection.
 -   **Encryption in transit**. Possibility to have TLS network connections where data in transit are encrypted.
 -   **Private or Dedicated connections**. For example, the possibility to create a VPN versus your On-Premises world.
@@ -49,7 +49,7 @@ Amazon Cloud implements network security through a series of features like:
 
 ## Identity and Access Management (IAM)
 
-IAM is the Amazon component responsible to manage Identities and the way they access the AWS resources. The first concepts to learn are user, group, role, and policy documents. For more details about Amazon IAM [read the following article](beginners-guide-identity-access-management).
+IAM is the Amazon component responsible to manage Identities and the way they access the AWS resources. The first concepts to learn are user, group, role, and policy documents. For more details about Amazon IAM [read the following article]({{ site.baseurl }}/beginners-guide-identity-access-management/).
 
 ## Amazon Inspector
 
@@ -81,7 +81,7 @@ The tool leverage the knowledge of AWS expertise so you are sure the most advanc
 
 These activities enforce security standards in the development, test, and operation processes.
 
-![Amazon Inspector Benefits](assets/img/Amazon-Inspector-Benefits.png){:width="450" height="215" .responsive_img}
+![Amazon Inspector Benefits]({{ site.baseurl }}/wp-content/uploads/2021/02/Amazon-Inspector-Benefits.png){:width="450" height="215" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -93,13 +93,13 @@ Amazon Shield is a managed **Distributed Denial of Service (DDoS)** protection s
 
 **DoS attack** is a deliberate attempt to make your website or application unavailable to users. Basically, the attacker sends fake network traffic to the target machine in order to consume as much bandwidth as possible in order to reach its scalability limits, let the system suffers and make its services unavailable to the end-users.
 
-![DoS Attack](assets/img/DoS-Attack.png){:width="450" height="110" .responsive_img}
+![DoS Attack]({{ site.baseurl }}/wp-content/uploads/2021/02/DoS-Attack.png){:width="450" height="110" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
 The **DDoS attack** has the same goal as the DoS but the attack comes from multiple sources orchestrated via software.
 
-![DDoS Attack](assets/img/DDoS-Attack.png){:width="450" height="182" .responsive_img}
+![DDoS Attack]({{ site.baseurl }}/wp-content/uploads/2021/02/DDoS-Attack.png){:width="450" height="182" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -120,7 +120,7 @@ There are other mitigation techniques for EC2, CloudFront, and other resources t
 
 Amazon AWS supports customers in a lot of industries. Sometimes these industries create standards in order to create a legal security baseline for the participant in that industries. There are a lot of standards and Amazon AWS helps its customer to be compliant with them.
 
-![Amazon Web Services Security](assets/img/Amazon-Security-Compliance.png){:width="450" height="192" .responsive_img}
+![Amazon Web Services Security]({{ site.baseurl }}/wp-content/uploads/2021/02/Amazon-Security-Compliance.png){:width="450" height="192" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 

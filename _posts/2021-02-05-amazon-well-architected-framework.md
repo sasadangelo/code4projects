@@ -3,12 +3,12 @@ layout: post
 title: Amazon Well Architected Framework and its 5 Pillars
 post_series_id: getting-started-with-amazon-web-services
 slug: amazon-well-architected-framework
-thumbnail: assets/img/Amazon-Well-Architected-Framework-mini.png
+thumbnail: wp-content/uploads/2021/02/Amazon-Well-Architected-Framework.png
 excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
 categories: Cloud
 ---
 
-![Amazon Well Architected Framework and its 5 Pillars](assets/img/Amazon-Well-Architected-Framework-mini.png){:width="200" height="200" .responsive_img}
+![Amazon Well Architected Framework and its 5 Pillars]({{ site.baseurl }}/wp-content/uploads/2021/02/Amazon-Well-Architected-Framework.png){:width="200" height="200" .responsive_img}
 
 # Amazon Well Architected Framework and its 5 Pillars
 _Posted on **{{ page.date | date_to_string }}**_
@@ -25,7 +25,7 @@ The framework leverages five main pillars:
 -   Cost optimization
 -   Operational excellence
 
-![Amazon Well Architected Framework](assets/img/Amazon-Well-Architected-Framework.png){:width="450" height="391" .responsive_img}
+![Amazon Well Architected Framework]({{ site.baseurl }}/wp-content/uploads/2021/02/Amazon-Well-Architected-Framework.png){:width="450" height="391" .responsive_img}
 
 _Photo from [https://www.reply.com/](https://www.reply.com/storm-reply/en/content/aws-well-architected-framework)_
 
@@ -57,7 +57,7 @@ The above design principles apply in the following five security areas:
 -   **Data protection**. This area is related on how customer protects their data. There are different ways to achieve this goal. For example, data classification helps a customer to classify data for importance and define who can access what data. Another way to protect data is encryption and tokenization. In the disaster recovery scenario, backup and restore are the methods to use, while for high availability the replication is the way to go.
 -   **Incident Response**. Even with the more advanced security prevention system a customer needs a process to respond to the security incidents, assess the issues, and mitigate the risks.
 
-![Amazon Well Architected Frameowrk Security Pillar](assets/img/aws-security-areas.png){:width="450" height="182" .responsive_img}
+![Amazon Well Architected Frameowrk Security Pillar]({{ site.baseurl }}/wp-content/uploads/2021/02/aws-security-areas.png){:width="450" height="182" .responsive_img}
 
 _Photo from [https://dzone.com](https://dzone.com/articles/pillars-of-aws-well-architected-framework)_
 
@@ -69,7 +69,7 @@ This pillar makes sure that customer workload runs correctly and consistently ev
 
 Amazon AWS runs reliable workloads leveraging the following design principles:
 
--   **Automatically recover from failure**. The platform provides a mechanism to recover from failure and continue to provide services to the end-users. For example, in the [following article](how-to-increase-amazon-ec2-availability-and-scalability), we talked about load balancers as a mechanism to detect an EC2 system failure and redirect traffic to another EC2 instance.
+-   **Automatically recover from failure**. The platform provides a mechanism to recover from failure and continue to provide services to the end-users. For example, in the [following article]({{ site.baseurl }}/how-to-increase-amazon-ec2-availability-and-scalability/), we talked about load balancers as a mechanism to detect an EC2 system failure and redirect traffic to another EC2 instance.
 -   **Test recovery procedures**. In the Cloud, you can simulate system failure in order to test and validate the recovery strategies.
 -   **Scale horizontally to increase aggregate workload availability.** In the previous article, we already talked about the platform’s ability to add redundancies to satisfy a capacity increase in the workload.
 -   **Stop guessing capacity**. In the On-Premis world, customers need to plan in advance the system capacity. However, this translates to underutilization or overconsume of the system resources. The Cloud system resolves this issue by starting to use minimal resources and add new capacity on the fly based on requests.
@@ -87,7 +87,7 @@ Reliability in the Amazon Cloud focuses on three areas:
 -   **Change Management**. When you design a system you should start immediately to think about how do you patch it. Patching is a critical aspect of software design and it should be taken into account as soon as possible. In addition, you also have to take into consideration how this change affects the system.
 -   **Failure Management**. When you design your system you have to take into account that failures are not a rare event. Failures are always possible and your design should anticipate what failure can occur and how do you recover from them.
 
-![AWS Reliability](assets/img/AWS-Reliability.png){:width="450" height="220" .responsive_img}
+![AWS Reliability]({{ site.baseurl }}/wp-content/uploads/2021/02/AWS-Reliability.png){:width="450" height="220" .responsive_img}
 
 _Photo from [https://dzone.com](https://dzone.com/articles/pillars-of-aws-well-architected-framework)_
 
@@ -100,7 +100,7 @@ This Pillar focuses on ensuring a system delivers maximum performance efficiency
 The following are the design principles you can use to achieve performance efficiency:
 
 -   **Democratize Advanced Technologies**. Modern technologies can help you to architect complex scenarios easily, however, you need an IT team to manage this complexity. Using the Cloud you leave this complexity the Cloud provider and you just consume these technologies as a service.
--   **Go Global in Minutes**. As described in the [following article](amazon-web-services) AWS has 24 regions and 77 Availability Zones (AZ) so you can go global in minutes. Therefore, you can deploy your application close to your audience using also services like CloudFront. In this way, you can reduce latency improving user experience, and leveraging on the economy of scale to minimize costs.
+-   **Go Global in Minutes**. As described in the [following article]({{ site.baseurl }}/amazon-web-services/) AWS has 24 regions and 77 Availability Zones (AZ) so you can go global in minutes. Therefore, you can deploy your application close to your audience using also services like CloudFront. In this way, you can reduce latency improving user experience, and leveraging on the economy of scale to minimize costs.
 -   **Use Serverless Architectures**. Reduce overhead of running and maintaining servers and use the available AWS options to host and monitor infrastructure.
 -   **Experiment more often**. With a virtual and automated system and deployment, it is very easy to test the system and infrastructure with different types of instances, storage, or configurations.
 -   **Have mechanical sympathy**. This principle suggests that you use the technology approach that best aligns with what you are trying to achieve.
@@ -114,7 +114,7 @@ The above design principles are applicable in the following areas:
 -   **Monitor AWS services**. The review should be based on real data and not on a hypothesis, for this reason, the system must be continuously monitored in order to find-out performance inefficiency and find the right solution to the issue. AWS makes available tools like CloudWatch, Kinesis, etc.
 -   **Consider the trade-offs**. An example of a trade-off that ensures an optimal approach is trading consistency, durability, and space versus time or latency to ensure that you deliver high performance.
 
-![AWS Performance Efficiency](assets/img/AWS-Performance-Efficiency.png){:width="450" height="353" .responsive_img}
+![AWS Performance Efficiency]({{ site.baseurl }}/wp-content/uploads/2021/02/AWS-Performance-Efficiency.png){:width="450" height="353" .responsive_img}
 
 _Photo from [https://dzone.com](https://dzone.com/articles/pillars-of-aws-well-architected-framework)_
 
@@ -139,7 +139,7 @@ The above design principles are applicable in the following areas:
 -   **Increase expenditure awareness**. Amazon platform allows the customer to know in every moment the overall cost of the whole infrastructure, the breakdown for each resource, and how they impact the costs currently and in the future. This allows us to keep track of costs and plan for the future.
 -   **Optimize over time**. The awareness of the overall costs and their breakdown for all the resources used allows customers to keep track of these costs and find ways to optimize them.
 
-![AWS Cost Optimization](assets/img/aws-cost-optimization.png){:width="450" height="297" .responsive_img}
+![AWS Cost Optimization]({{ site.baseurl }}/wp-content/uploads/2021/02/aws-cost-optimization.png){:width="450" height="297" .responsive_img}
 
 _Photo from [https://dzone.com](https://dzone.com/articles/pillars-of-aws-well-architected-framework)_
 
@@ -164,7 +164,7 @@ Apply the above design principles in the following three areas:
 -   **Respond to events**. When your application is in productions event happens at every moment. In fact, failures and change requests are some examples of these events.  For this reason, you need to define a process to respond to these events.
 -   **Define the standards**. A process is not enough to manage an application in production. You need to define standards to avoid that each operator works on their own and that everyone does what he likes.
 
-![AWS Operation Excellence](assets/img/aws-operation-excellence.png){:width="450" height="291" .responsive_img}
+![AWS Operation Excellence]({{ site.baseurl }}/wp-content/uploads/2021/02/aws-operation-excellence.png){:width="450" height="291" .responsive_img}
 
 _Photo from_ [_https://dzone.com_](https://dzone.com/articles/pillars-of-aws-well-architected-framework)
 

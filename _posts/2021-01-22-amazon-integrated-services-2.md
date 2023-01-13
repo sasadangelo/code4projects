@@ -3,12 +3,12 @@ layout: post
 title: Amazon Integrated Services (part 1)
 post_series_id: getting-started-with-amazon-web-services
 slug: amazon-integrated-services-2
-thumbnail: assets/img/Amazon-RDS-Lambda-Beanstalk.png
+thumbnail: wp-content/uploads/2021/01/Amazon-RDS-Lambda-Beanstalk.png
 excerpt: "In this article, I am going to start my overview of the Amazon Integrated Services trying to explain my understanding of the following services: Lambda"
 categories: Cloud
 ---
 
-![Amazon Integrated Services (part 1)](assets/img/Amazon-RDS-Lambda-Beanstalk.png){:width="200" height="200" .responsive_img}
+![Amazon Integrated Services (part 1)]({{ site.baseurl }}/wp-content/uploads/2021/01/Amazon-RDS-Lambda-Beanstalk.png){:width="200" height="200" .responsive_img}
 
 # Amazon Integrated Services (part 1)
 _Posted on **{{ page.date | date_to_string }}**_
@@ -18,11 +18,11 @@ In this article, I am going to start my overview of the Amazon Integrated Servic
 -   Lambda
 -   Beanstalk
 
-Before reading this, make sure [you read this](amazon-web-services).
+Before reading this, make sure [you read this]({{ site.baseurl }}/amazon-web-services/).
 
 ## Lambda
 
-Lambda is the [FaaS solution of the Amazon AWS platform](getting-started-with-cloud-computing). A FaaS solution allows you to run programming functions without managing any server infrastructure. The difference with the PaaS solution is that only code is under the responsibility of the end-user while the Cloud platform manages the whole application stack included the data.
+Lambda is the [FaaS solution of the Amazon AWS platform]({{ site.baseurl }}/getting-started-with-cloud-computing/). A FaaS solution allows you to run programming functions without managing any server infrastructure. The difference with the PaaS solution is that only code is under the responsibility of the end-user while the Cloud platform manages the whole application stack included the data.
 
 The benefit to use the Lambda service is that you only take care of the code to run when a given event occurs. The Cloud platform manages everything else like the server infrastructure, its scalability, the logging, and so on. CloudWatch can monitor your code so you know everything is going on with your application. Amazon Lambda supports a lot of programming languages like Node.js, Java, C#, Python, etc.
 
@@ -34,7 +34,7 @@ Deploy a Lambda application is very easy because you only need to deploy the cod
 
 Let’s consider the following scenario. We have a mobile application that takes a photo and automatically upload them on S3 bucket and they need to be cropped. Whenever the application uploads a photo on the S3 bucket we create an event that will run the Lambda code that takes the photo and crop it storing it again on the same bucket.
 
-![AWS Lambda Scenario](assets/img/AWS-Lambda-Scenario.png){:width="450" height="115" .responsive_img}
+![AWS Lambda Scenario]({{ site.baseurl }}/wp-content/uploads/2021/01/AWS-Lambda-Scenario.png){:width="450" height="115" .responsive_img}
 
 The customer only needs to create the crop code and upload it on the AWS Lambda service, then he needs to create a CloudWatch event to generate an event every time a photo is uploaded on a given bucket and associate with our Lambda code.
 
@@ -46,17 +46,17 @@ There are a lot of scenarios where you can use the Lambda service, for example, 
 
 ## **Elastic Beanstalk**
 
-Elastic Beanstalk is the Amazon **Platform as a Service (PaaS)** solution. [PaaS is one of the service models of Cloud Computing](getting-started-with-cloud-computing) and its basic idea is to let the customer quickly develop its application without managing the infrastructure (i.e. servers, network, disks, operating system, programming language framework, scaling). The customer only takes care of the application and the data, the platform manages everything else.
+Elastic Beanstalk is the Amazon **Platform as a Service (PaaS)** solution. [PaaS is one of the service models of Cloud Computing]({{ site.baseurl }}/getting-started-with-cloud-computing/) and its basic idea is to let the customer quickly develop its application without managing the infrastructure (i.e. servers, network, disks, operating system, programming language framework, scaling). The customer only takes care of the application and the data, the platform manages everything else.
 
 In the figure below, the **Application Service** layer is basically the framework (the runtime environment) where the application runs. For example, if your code is Java the application service is the Java Virtual Machine (JVM) that runs the compiled version of that code. The green box has the label “Your code” but this includes the data and configuration too, which must be managed by the customer.
 
-![Amazon Beanstalk Stack](assets/img/Amazon-Beanstalk-Stack.png){:width="450" height="235" .responsive_img}
+![Amazon Beanstalk Stack]({{ site.baseurl }}/wp-content/uploads/2021/01/Amazon-Beanstalk-Stack.png){:width="450" height="235" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
 The basic idea is that the developer develops the code and uploads it on a repository in the platform. This one will automatically compile and deploy the code on the server in a way completely transparent to the developer. The application will be accessible via web or API to the end-user. All the complexity to manage the infrastructure is removed.
 
-![Amazon Elastic Beanstalk](assets/img/Amazon-Beanstalk.png){:width="450" height="410" .responsive_img}
+![Amazon Elastic Beanstalk]({{ site.baseurl }}/wp-content/uploads/2021/01/Amazon-Beanstalk.png){:width="450" height="410" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -75,10 +75,10 @@ You can choose the following options:
 
 The following figure summarizes the application lifecycle. The developer develops the code and uploads it on a repository, then it creates the application instance in Elastic Beanstalk and associates that repository to it. Elastic Beanstalk prepares the environment for the code, depending on the programming language it instantiates a server with the OS and runtime framework to deploy the code in it. The developer manages the environments via monitoring to check that everything is ok. The developer can update the application at whatever moment by simply uploading the code changes into the repository.
 
-![Elastic Beanstalk Application Lifecycle](assets/img/Amazon-Beanstalk-application-lifecycle.png){:width="450" height="160" .responsive_img}
+![Elastic Beanstalk Application Lifecycle]({{ site.baseurl }}/wp-content/uploads/2021/01/Amazon-Beanstalk-application-lifecycle.png){:width="450" height="160" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
 ## **Conclusion**
 
-In this article, we talked about the Lambda, and Elastic Beanstalk services. [In the next article](amazon-integrated-services-3), we will continue our overview with the other four services.
+In this article, we talked about the Lambda, and Elastic Beanstalk services. [In the next article]({{ site.baseurl }}/amazon-integrated-services-3/), we will continue our overview with the other four services.

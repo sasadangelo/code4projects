@@ -12,7 +12,7 @@ icon-area:
   - icon-image: assets/img/projects-icon.png
     icon-title: Projects
     icon-subtitle: Check out my side Projects
-    icon-link: projects
+    icon-link: projects-2
   - icon-image: assets/img/resources-icon.png
     icon-title: Resources
     icon-subtitle: Check out my favorite Resources
@@ -26,7 +26,7 @@ feature-area:
       like: file, resources, input, music, and graphics management. The result will be a Game Framework whose code you can reuse for 
       other games. Finally, we will use the Framework as base code to write Droids, a Tertris clone. 
       <a href="android-game-programming">Checkout the article series here</a>.
-    feature-image: assets/img/android-game-programming.png
+    feature-image: wp-content/uploads/2020/06/android-game-programming-mini.png
     feature-link: android-game-programming
   - feature-title: Getting Started with Docker
     feature-text: >

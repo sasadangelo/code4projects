@@ -3,23 +3,23 @@ layout: post
 title: Amazon Elastic Cloud Computing (EC2) for Beginners
 post_series_id: getting-started-with-amazon-web-services
 slug: amazon-ec2-for-beginners/
-thumbnail: assets/img/Amazon-EC2-1.png
+thumbnail: wp-content/uploads/2021/03/Amazon-EC2-1.png
 excerpt: The following article is an introduction to the Amazon Elastic Cloud Computing (EC2) service for beginners.
 categories: Cloud
 ---
 
-![Amazon Elastic Cloud Computing (EC2) for Beginners](assets/img/Amazon-EC2-1.png){:width="200" height="200" .responsive_img}
+![Amazon Elastic Cloud Computing (EC2) for Beginners]({{ site.baseurl }}/wp-content/uploads/2021/03/Amazon-EC2-1.png){:width="200" height="200" .responsive_img}
 
 # Amazon Elastic Cloud Computing (EC2) for Beginners
 _Posted on **{{ page.date | date_to_string }}**_
 
-In the [previous article](beginners-guide-identity-access-management), we created and set up our AWS account. We are ready to introduce the most important IaaS AWS resource: the **Amazon EC2 instance**. This service allows you to create a Virtual Machine (VM) choosing among a broad range of instance types.
+In the [previous article]({{ site.baseurl }}/beginners-guide-identity-access-management/), we created and set up our AWS account. We are ready to introduce the most important IaaS AWS resource: the **Amazon EC2 instance**. This service allows you to create a Virtual Machine (VM) choosing among a broad range of instance types.
 
 ## AWS Elastic Cloud Compute (EC2)
 
 The word **Compute** in the AWS EC2 name refers to a virtual or physical computer that can be used as a server for multiple purposes: application server, web server, mail server, etc. The word **Cloud** refers to that this computer is available in the Cloud. This means that this computer is accessible via the Internet with an IP address. The word **Elastic** means that this computer can be replicated on multiple instances to scale the server horizontally in and out depending on the workload.
 
-![Amazon EC2](assets/img/Amazon-EC2.png){:width="450" height="188" .responsive_img} 
+![Amazon EC2]({{ site.baseurl }}/wp-content/uploads/2021/03/Amazon-EC2.png){:width="450" height="188" .responsive_img} 
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -43,7 +43,7 @@ where:
 -   **2** is the **generation**. Amazon improves its instances over time.
 -   **micro** is the **capacity** of the machine.
 
-![Amazon EC2 Instance Types](assets/img/Amazon-EC2-Instance-Types.png){:width="450" height="136" .responsive_img}
+![Amazon EC2 Instance Types]({{ site.baseurl }}/wp-content/uploads/2021/03/Amazon-EC2-Instance-Types.png){:width="450" height="136" .responsive_img}
 
 When you select an instance you can choose:
 
@@ -63,7 +63,7 @@ At the end of the configuration, you will have a remote computer up and running 
 
 The following figure shows some examples of Ec2 Instances. For more details, see [here](https://aws.amazon.com/it/ec2/instance-types/).
 
-![Amazon EC2 Instances Examples](assets/img/Amazon-Ec2-Instances-Examples.png){:width="450" height="153" .responsive_img}
+![Amazon EC2 Instances Examples]({{ site.baseurl }}/wp-content/uploads/2021/03/Amazon-Ec2-Instances-Examples.png){:width="450" height="153" .responsive_img}
 
 ### Amazon EC2 Optimized Instances
 
@@ -90,7 +90,7 @@ In addition to the general-purpose EC2 instances (class **t** and **m**). Amazon
 
 Amazon EC2 instances use a **Pays as You Go** pricing model, so you will pay only for the number of hours you effectively use your instance, its capacity, and the number of instances. **Free-Tier** is available for t2.micro instance type for 720 hours a month for 1 year.
 
-[Amazon Ec2](amazon-web-services) instance is available in four pricing options.
+Amazon Ec2 instance is available in [four pricing options]({{ site.baseurl }}/the-ultimate-and-great-overview-of-aws-pricing-and-support/).
 
 ### On-Demand instances
 
@@ -126,19 +126,19 @@ If you want to use the Auto-Scaling service to manage the scale-in and scale-out
 
 The lifecycle of Amazon EC2 is quite easy and you can see the state diagram in the following image. When you create an EC2 instance, you select the instance type and the OS to run on it. Initially, the machine goes directly in Running state. You can stop and start it again. Finally, when you don’t need it anymore you can terminate it. A terminated instance cannot go into the Running state again, usually, in few minutes the machine disappears from your instances list in the dashboard.  
 
-![Amazon EC2 Lifecycle](assets/img/Amazon-EC2-Lifecycle-2.png){:width="450" height="332" .responsive_img}
+![Amazon EC2 Lifecycle]({{ site.baseurl }}/wp-content/uploads/2021/03/Amazon-EC2-Lifecycle-2.png){:width="450" height="332" .responsive_img}
 
 ### Amazon EC2 Shared Responsibility Model
 
 The following figure summarizes the Shared Responsibility Model for Amazon EC2.
 
-![AWS EC2 Shared Responsibility Model](assets/img/AWS-EC2-Shared-Responsibility-Model.png){:width="450" height="189" .responsive_img}
+![AWS EC2 Shared Responsibility Model]({{ site.baseurl }}/wp-content/uploads/2021/03/AWS-EC2-Shared-Responsibility-Model.png){:width="450" height="189" .responsive_img}
 
 ## Security Groups
 
 A Security Group is like a built-in firewall for your virtual servers to give you full control over how accessible your instances are. You have to imagine it like a filter that acts in front of the EC2 instance to analyze and filter all the incoming and outgoing traffic. You can define which service to expose via a port, from which machine receives incoming traffic, or to which machine sends outgoing traffic.
 
-![AWS Security Group Example](assets/img/AWS-Security-Group-Example.png){:width="450" height="99" .responsive_img}
+![AWS Security Group Example]({{ site.baseurl }}/wp-content/uploads/2021/03/AWS-Security-Group-Example.png){:width="450" height="99" .responsive_img}
 
 _Photo from [http://progressivecoder.com](http://progressivecoder.com/understanding-aws-security-groups-and-best-practices-to-use-them/)_
 
@@ -156,7 +156,7 @@ For more details, [check out the following page](https://docs.aws.amazon.com/vpc
 
 The following figure shows an example of how to configure security groups in a typical multi-tier web application deployed on AWS.
 
-![AWS Security Groups](assets/img/AWS-Security-Groups.png){:width="450" height="226" .responsive_img}
+![AWS Security Groups]({{ site.baseurl }}/wp-content/uploads/2021/01/AWS-Security-Groups.png){:width="450" height="226" .responsive_img}
 
 _Photo from [AWS Cloud Practitioner Essentials (2nd Edition)](https://aws.amazon.com/it/training/course-descriptions/cloud-practitioner-essentials/) course_
 
@@ -172,4 +172,4 @@ Amazon AWS uses EC2 Launch Template to define the characteristics of an EC2 inst
 
 ## Conclusion
 
-In this article, we introduced Amazon EC2, the service to rent computers in the Cloud. We saw how to secure them with Security Groups. In the [next article](definitive-amazon-ec2-tutorial-step-by-step-guide-beginners), we will do some hands-on lab on these resources.
+In this article, we introduced Amazon EC2, the service to rent computers in the Cloud. We saw how to secure them with Security Groups. In the [next article]({{ site.baseurl }}/definitive-amazon-ec2-tutorial-step-by-step-guide-beginners/), we will do some hands-on lab on these resources.
