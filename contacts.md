@@ -30,7 +30,7 @@ If you wish you can also contact me on the [Linkedin social network](https://www
   <input type="hidden" name="_next" value="{{ site.url }}{{ site.baseurl }}/contacts/">
   <input type="hidden" name="_subject" value="Code4Projects Contact Form Submission">
     <!-- your other form fields go here -->
-  <div class="g-recaptcha" data-callback='onSubmit' data-sitekey="6LcTvIAUAAAAAMt-fH4wPnR7T3Sqtn9Ih8tXHNQz"></div>
+  <div class="g-recaptcha" data-callback='onSubmit' data-sitekey="6LeRCxQkAAAAAJdgsSr0HMPqOXN8aQm-1fGmQ0Q0"></div>
   <br/>
   <div class="contact-form-item">
   <button type="submit">Send</button>
