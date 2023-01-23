@@ -16,9 +16,9 @@
     <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico" async="" defer="" />
 
     <!-- Custom JavaScripts -->
-    {% if page.jsscripts_urls %}
-      {% for jsscripts_url in page.jsscripts_urls %}
-    <script type="text/javascript" src="{{ jsscripts_url }}" async="" defer="" ></script>
+    {% if page.javascript_urls %}
+      {% for javascript_url in page.javascript_urls %}
+    <script type="text/javascript" src="{{ javascript_url }}" async="" defer="" ></script>
       {% endfor %}
     {% endif %}
     <!-- End of the Custom JavaScripts -->

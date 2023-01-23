@@ -3,7 +3,7 @@ layout: page
 title: Contacts
 slug: contacts
 excerpt: If you wish to contact Code4Projects author use the following page and fill the contact form included your message for him.
-jsscripts_urls:
+javascript_urls:
 - https://www.google.com/recaptcha/api.js?hl=it
 ---
 # Contacts
