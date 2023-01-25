@@ -23,7 +23,7 @@ layout: default
               <div class="circle-icon" style="background-image: url({{ item.icon-image }})" >
               </div>
             </a>
-            <h4><a title="{{ item.icon-title }}" href="{{ item.icon-link }}">{{ item.icon-title }}</a></h4>
+            <a title="{{ item.icon-title }}" href="{{ item.icon-link }}"><h2>{{ item.icon-title }}</h2></a>
             <a title="{{ item.icon-title }}" href="{{ item.icon-link }}">{{ item.icon-subtitle }}</a>
           </div>
         {% endfor %}
@@ -43,12 +43,12 @@ layout: default
           <div class="{% cycle 'feature-content-box-white', 'feature-content-box-grey' %}">
             <div class="feature-content-image">
               <a href="{{ item.feature-link }}">
-                <img src="{{ item.feature-image }}" />
+                <img src="{{ item.feature-image }}" alt="{{ item.feature-title }}">
               </a>
             </div>
             <div class="feature-content-text">
               <div class="feature-content-text-title">
-                <a href="{{ item.feature-link }}">{{ item.feature-title }}</a>
+                <a href="{{ item.feature-link }}" title="{{ item.feature-title }}"><h3>{{ item.feature-title }}</h3></a>
               </div>
               {{ item.feature-text }}
             </div>

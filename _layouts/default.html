@@ -2,18 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    {% if page.layout == 'home' %}
     <title>{{ page.title }}</title>
+    {% else %}
+    <title>{{ page.title }} &#x2022; {{ site.title }}</title>
+    {% endif %}
 
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/print.css" media="print">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/fontawesome/css/fontawesome.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/fontawesome/css/brands.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     {% if page.robots  %}
-    <meta name='robots' content='{{ page.robots }}' />
+    <meta name='robots' content='{{ page.robots }}'>
     {% else %}
-    <meta name='robots' content='index, follow' />
+    <meta name='robots' content='index, follow'>
     {% endif %}
-    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico" async="" defer="" />
+    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
 
     <!-- Custom JavaScripts -->
     {% if page.javascript_urls %}
@@ -24,6 +29,7 @@
     <!-- End of the Custom JavaScripts -->
 
     {% feed_meta %}
+    {% seo title=false %}
     {% seo %}
     
     {% if site.google_analytics and jekyll.environment == 'production' %}

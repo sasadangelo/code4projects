@@ -895,14 +895,16 @@ header {
   margin-bottom: 30px;
 }
 
-.circle-icon-box h4 {
-  margin-top: 10px;
+
+.circle-icon-box a {
+  text-decoration: none;
+  color: #3b3b3b;
   text-align: center;
 }
 
-.circle-icon-box h4 a {
-  text-decoration: none;
-  color: #3b3b3b;
+.circle-icon-box a h2 {
+  margin-top: 10px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -1031,9 +1033,9 @@ header {
 } 
 
 .feature-content-text-title {
-  color: #444444;
+  /*color: #444444;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 500;*/
   margin: 30px 0px 30px 0px;
   text-align: left;
 } 
@@ -1046,6 +1048,12 @@ header {
 .feature-content-text-title a:hover {
   color: #f47e3c !important;
 } 
+
+.feature-content-text-title a h3 {
+  font-size: 18px;
+  color: #444444;
+  font-weight: 500;
+}
 
 .feature-content-text {
   color: #666666;

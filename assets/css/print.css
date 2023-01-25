@@ -1,0 +1,68 @@
+/**
+ * Print stylesheet for code4projects.net
+ * @version         1.0
+ * @lastmodified    23.01.2023
+ */
+@page {
+	size: 210mm 297mm; 
+	margin-left: 20mm; 
+	margin-right: 10mm;
+	margin-top: 20mm;
+}
+
+body {
+	font-family: Georgia, ‘Times New Roman’, serif;
+	font-size: 12pt;
+	background: none;
+	color: black;
+	-webkit-print-color-adjust: exact;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	page-break-after: avoid;
+	page-break-inside:avoid
+}
+
+div#page {
+	width: auto;
+}
+
+header, footer, div#navigation, div#post-sidebar, .newsletter-post, .newsletter-home, div#blog-sidebar {
+	display:none;
+}
+
+#post-content {
+    text-align: justify;
+	background: transparent;
+}
+
+table {
+	page-break-inside: avoid;
+}
+
+img, figure { 
+	page-break-inside: avoid; 
+	page-break-after: avoid;
+}
+
+a {
+    page-break-inside: avoid
+}
+
+.circle-icon-area {
+	margin: 40px 0px;
+	padding: 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+  }
+  
+  .circle-icon-box {
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  }
+  
+  

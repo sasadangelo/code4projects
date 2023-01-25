@@ -6,8 +6,6 @@ thumbnail: assets/img/html.jpg
 excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
 categories:
   - Web Programming
-sitemap:
-  exclude: 'yes'
 ---
 
 ![Getting Started with HTML: A Beginner's Guide]({{ site.baseurl }}/assets/img/html.jpg){:width="356" height="200" .responsive_img}
