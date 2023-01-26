@@ -21,7 +21,7 @@ You can find the source code of this guide in the **part-1** folder of [this rep
 
 **Hypertext Markup Language** (**HTML**) is a standard markup language used for creating and structuring web pages and applications. It allows developers a web page's content and structure, including headings, paragraphs, lists, links, images, and more. 
 
-HTML uses a series of **elements** each one composed of two tags. **Tags** are enclosed in angle brackets and typically come in pairs, with an opening and closing tag. The content of the page goes between the opening and closing tags. For example, the opening tag **<p>** represents a paragraph, and the closing tag **</p>** indicates the end of that paragraph. 
+HTML uses a series of **elements** each one composed of two tags. **Tags** are enclosed in angle brackets and typically come in pairs, with an opening and closing tag. The content of the page goes between the opening and closing tags. For example, the opening tag **&lt;p&gt;** represents a paragraph, and the closing tag **&lt;/p&gt;** indicates the end of that paragraph. 
 
 By using HTML, developers can create rich, interactive, and engaging web pages that can be accessed by users across the world.
 
@@ -107,17 +107,17 @@ Here is an example of an HTML tag with an attribute:
 <a href="http://www.example.com">This is a link.</a>
     {% endhighlight %}
 
-In this example, the **`<a>`** tag is used to create a link to another web page. The href attribute is used to specify the URL of the page that the link should go to.
+In this example, the **&lt;a&gt;** tag is used to create a link to another web page. The href attribute is used to specify the URL of the page that the link should go to.
 
 So, to sum up, Elements are used to structure and format the content of a web page. Each Element is enclosed in an open and closed Tag. Attributes are used to provide additional information or to modify the behavior of a tag. Together, elements. tags and attributes form the basic building blocks of an HTML document.
 
 ## The head tag
 
-The **`<head>`** element is a container for metadata (data about the document, such as its title, character set, styles, and scripts) in an HTML. The metadata is not displayed on the page but is used by browsers and search engines to understand the content of the page.
+The **&lt;head&gt;** element is a container for metadata (data about the document, such as its title, character set, styles, and scripts) in an HTML. The metadata is not displayed on the page but is used by browsers and search engines to understand the content of the page.
 
-The **`<head>`** element should be placed at the beginning of the **`<html>`** element and must contain a **`<title>`** element, which specifies the title of the document. The **`<head>`** element can also include other elements, such as **`<style>`** for styling the page with CSS, **<link>** for linking to external resources, and **<meta>** for defining metadata, such as the character set, keywords, and description of the page.
+The **&lt;head&gt;** element should be placed at the beginning of the **&lt;html&gt;** element and must contain a **&lt;title&gt;** element, which specifies the title of the document. The **&lt;head&gt;** element can also include other elements, such as **&lt;style&gt;** for styling the page with CSS, **<link>** for linking to external resources, and **<meta>** for defining metadata, such as the character set, keywords, and description of the page.
 
-Here is an example of an **<head>** element that includes a **`<title>`** element and a **`<meta>`** element:
+Here is an example of an **<head>** element that includes a **&lt;title&gt;** element and a **&lt;meta&gt;** element:
 
     {% highlight html %}
 <head>
@@ -126,15 +126,15 @@ Here is an example of an **<head>** element that includes a **`<title>`** elemen
 </head>
     {% endhighlight %}
 
-As you can see, the **`<title>`** element appears within the **<head>** element and specifies the title of the page, and the **<meta>** element appears within the **<head>** element and defines the character set of the page.
+As you can see, the **&lt;title&gt;** element appears within the **&lt;head&gt;** element and specifies the title of the page, and the **<meta>** element appears within the **&lt;head&gt;** element and defines the character set of the page.
 
 ## The body tag
 
-The **`<body>`** element is a container for the main content of an HTML. The content of the <body> element is displayed in the main window or viewport of the browser.
+The **&lt;body&gt;** element is a container for the main content of an HTML. The content of the <body> element is displayed in the main window or viewport of the browser.
 
-The **`<body>`** element should be placed after the **`<head>`** element and can contain any type of content, such as headings, paragraphs, lists, images, links, and more. This content is rendered by the browser according to the styles and layout defined by the document or by external stylesheets.
+The **&lt;body&gt;** element should be placed after the **&lt;head&gt;** element and can contain any type of content, such as headings, paragraphs, lists, images, links, and more. This content is rendered by the browser according to the styles and layout defined by the document or by external stylesheets.
 
-Here is an example of a `<body>` element that contains a heading and a paragraph:
+Here is an example of a **&lt;body&gt;** element that contains a heading and a paragraph:
 
     {% highlight html %}
 <body>
@@ -143,11 +143,11 @@ Here is an example of a `<body>` element that contains a heading and a paragraph
 </body>
     {% endhighlight %}
 
-As you can see, the **`<h1>`** element and the **`<p>`** element are nested within the `<body>` element, and their content is displayed on the page. The **`<h1>`** element represents a heading, and the **`<p>`** element represents a paragraph.
+As you can see, the **&lt;h1&gt;** element and the **&lt;p&gt;** element are nested within the **&lt;body&gt;** element, and their content is displayed on the page. The **&lt;h1&gt;** element represents a heading, and the **&lt;p&gt;** element represents a paragraph.
 
 ## Headlines
 
-In HTML, a headline is a piece of text that is used to indicate the importance or relevance of the content that follows. Headlines are typically larger and bolder than the surrounding text, and they may also be styled differently to make them stand out. There are several different levels of headlines in HTML, ranging from level 1 (the most important) to level 6 (the least important). The level of a headline is indicated by the use of a specific HTML tag, such as **`<h1>`** for a level 1 headline or **`<h2>`** for a level 2 headline. For example, the following code would create a level 2 headline that says "Introduction":
+In HTML, a headline is a piece of text that is used to indicate the importance or relevance of the content that follows. Headlines are typically larger and bolder than the surrounding text, and they may also be styled differently to make them stand out. There are several different levels of headlines in HTML, ranging from level 1 (the most important) to level 6 (the least important). The level of a headline is indicated by the use of a specific HTML tag, such as **&lt;h1&gt;** for a level 1 headline or **&lt;h2&gt;** for a level 2 headline. For example, the following code would create a level 2 headline that says "Introduction":
 
     {% highlight html %}
 <h2>Introduction</h2>
@@ -161,14 +161,14 @@ Download the **index.html** file of [lesson 2](https://github.com/sasadangelo/ht
 
 ## Paragraphs
 
-In HTML, the **<p>** tag is used to define a paragraph of text. The **<p>** tag tells the web browser that the enclosed text should be treated as a paragraph, and it automatically adds some extra space before and after the paragraph to help separate it from other content on the page. The **<p>** tag is an example of an "inline" element, which means that it can be used within a block-level element such as a **<div>** or a **<section>** to add structure and organization to the content of a webpage. Here is an example of how the **<p>** tag might be used:
+In HTML, the **&lt;p&gt;** tag is used to define a paragraph of text. The **&lt;p&gt;** tag tells the web browser that the enclosed text should be treated as a paragraph, and it automatically adds some extra space before and after the paragraph to help separate it from other content on the page. The **&lt;p&gt;** tag is an example of an "inline" element, which means that it can be used within a block-level element such as a **&lt;div&gt;** or a **&lt;section&gt;** to add structure and organization to the content of a webpage. Here is an example of how the **&lt;p&gt;** tag might be used:
 
     {% highlight html %}
 <p>This is the first paragraph of text on the page.</p>
 <p>This is the second paragraph of text on the page.</p>
     {% endhighlight %}
 
-In the example above, the first and second paragraphs of text are each enclosed within their own **<p>** tags. This tells the web browser to treat each paragraph as a distinct block of text and to add the appropriate amount of space between them. The **<p>** tag is a very common and useful element in HTML, and it is used on almost every webpage to structure the content and make it easier to read.
+In the example above, the first and second paragraphs of text are each enclosed within their own **&lt;p&gt;** tags. This tells the web browser to treat each paragraph as a distinct block of text and to add the appropriate amount of space between them. The **&lt;p&gt;** tag is a very common and useful element in HTML, and it is used on almost every webpage to structure the content and make it easier to read.
 
 ## An example of an HTML document
 
@@ -186,7 +186,7 @@ Here is an example of how you might use headlines and paragraphs together in an 
 <p>This is the second paragraph of the key points section, which provides a concise overview of the key ideas discussed in the article.</p>
     {% endhighlight %}
 
-In this example, the **<h1>** tag is used to create a level 1 headline for the introduction, the **<h2>** tag is used to create a level 2 headline for the background information, and the **<h3>** tag is used to create a level 3 headline for the key points. Each of these headlines is followed by one or more paragraphs of text, which provide more details and information about the topic. The use of headlines and paragraphs helps to organize the content of the webpage and make it easier for readers to understand and navigate.
+In this example, the **&lt;h1&gt;** tag is used to create a level 1 headline for the introduction, the **&lt;h2&gt;** tag is used to create a level 2 headline for the background information, and the **&lt;h3&gt;** tag is used to create a level 3 headline for the key points. Each of these headlines is followed by one or more paragraphs of text, which provide more details and information about the topic. The use of headlines and paragraphs helps to organize the content of the webpage and make it easier for readers to understand and navigate.
 
 ## Lorem Ipsum placeholder text
 
@@ -200,7 +200,7 @@ Download the **index.html** file of [lesson 3](https://github.com/sasadangelo/ht
 
 A section in HTML refers to a distinct part of a web page that can be defined by a headline and one or more paragraphs. These sections can be used to organize and divide content on a web page into logical groups, making it easier for users to understand and navigate the page.
 
-For example, a web page about a news article can have multiple sections: one for the introduction, one for the main body of the article, and another for the conclusion. Each section would have its headline, which can be created using one of the heading elements (<h1> to <h6>), and one or more paragraphs, which can be created using the <p> element.
+For example, a web page about a news article can have multiple sections: one for the introduction, one for the main body of the article, and another for the conclusion. Each section would have its headline, which can be created using one of the heading elements (&lt;h1&gt; to &lt;h6&gt;), and one or more paragraphs, which can be created using the &lt;p&gt; element.
 
     {% highlight html %}
 <h1>My Article Title</h1>
@@ -220,31 +220,31 @@ Download the **index.html** file of [lesson 4](https://github.com/sasadangelo/ht
 
 ## Text Formatting with bold, italic, and underline
 
-Yes, HTML supports several ways to format text, including bold, italic, and underline. Here's how to use each one. To make text bold, you can use the `<strong>` or `<b>` tag. For example:
+Yes, HTML supports several ways to format text, including bold, italic, and underline. Here's how to use each one. To make text bold, you can use the &lt;strong&gt; or &lt;b&gt; tag. For example:
 
     {% highlight html %}
 <p>This text is <strong>bold</strong></p>
     {% endhighlight %}
 
-To make text italic, you can use the `<em>` or `<i>` tag. For example:
+To make text italic, you can use the &lt;em&gt; or &lt;i&gt; tag. For example:
 
     {% highlight html %}
 <p>This text is <em>italic</em></p>
     {% endhighlight %}
 
-To underline text, you can use the `<u>` tag. For example:
+To underline text, you can use the &lt;u&gt; tag. For example:
 
     {% highlight html %}
 <p>This text is <u>underlined</u></p>
     {% endhighlight %}
 
-It's important to note that these tags are just a way to add formatting to your text. They don't change the meaning of the text itself, and they don't necessarily affect how the text is read by a screen reader or other assistive technology. If you want to convey the meaning or importance of your text, it's often better to use semantic HTML tags like `<strong>` or `<em>` rather than visual tags like `<b>` or `<u>`.
+It's important to note that these tags are just a way to add formatting to your text. They don't change the meaning of the text itself, and they don't necessarily affect how the text is read by a screen reader or other assistive technology. If you want to convey the meaning or importance of your text, it's often better to use semantic HTML tags like &lt;strong&gt; or &lt;em&gt; rather than visual tags like &lt;b&gt; or &lt;u&gt;.
 
 Download the **index.html** file of [lesson 7](https://github.com/sasadangelo/html-hero/blob/master/part-1/lesson-07/index.html) and open it with your browser. You will see the document built on lesson 6 with bold, italic, and underlined formatting.
 
 ## Creating Hyperlinks in HTML
 
-A link, or hyperlink, is a way to navigate between web pages on the internet. In HTML, a link is created using the **`<a>`** tag, which stands for "anchor". The **`<a>`** tag is used to define the start and end of a link, and the **href** attribute is used to specify the destination of the link.
+A link, or hyperlink, is a way to navigate between web pages on the internet. In HTML, a link is created using the **&lt;a&gt;** tag, which stands for "anchor". The **&lt;a&gt;** tag is used to define the start and end of a link, and the **href** attribute is used to specify the destination of the link.
 
 Here's an example of a basic HTML link:
 
@@ -252,7 +252,7 @@ Here's an example of a basic HTML link:
 <a href="https://www.example.com">This is a link</a>
     {% endhighlight %}
 
-When this link is clicked, the user's web browser will navigate to the URL specified in the href attribute (in this case, "https://www.example.com"). The text between the **`<a>`** and **`</a>`** tags (in this case, "This is a link") is what the user will see and click on.
+When this link is clicked, the user's web browser will navigate to the URL specified in the href attribute (in this case, "https://www.example.com"). The text between the **&lt;a&gt;** and **&lt;/a&gt;** tags (in this case, "This is a link") is what the user will see and click on.
 
 You can also use the target attribute to specify how the link should be opened. For example, you can use **target="_blank"** to open the link in a new tab or window.
 
@@ -260,7 +260,7 @@ You can also use the target attribute to specify how the link should be opened. 
 <a href="https://www.example.com" target="_blank">This is a link that opens in a new tab</a>
     {% endhighlight %}
 
-In addition to linking to other web pages, you can also use the **`</a>`** tag to create links within the same page. This is known as an "anchor" link, and it's created by using the id attribute to give an element a unique name and then using that name as the destination of the link.
+In addition to linking to other web pages, you can also use the **&lt;/a&gt;** tag to create links within the same page. This is known as an "anchor" link, and it's created by using the id attribute to give an element a unique name and then using that name as the destination of the link.
 
 Here's an example:
 
@@ -269,7 +269,7 @@ Here's an example:
 <p>Here's a link to <a href="#section1">the heading above</a></p>
     {% endhighlight %}
 
-When this link is clicked, the user's web browser will jump to the element with the id of "section1" (in this case, the **`<h1>`** heading). This can be useful for creating a table of contents or for allowing users to quickly navigate to different sections of a page.
+When this link is clicked, the user's web browser will jump to the element with the id of "section1" (in this case, the **&lt;h1&gt;** heading). This can be useful for creating a table of contents or for allowing users to quickly navigate to different sections of a page.
 
 In [lesson 08](https://github.com/sasadangelo/html-hero/tree/master/part-1/lesson-08) I added four new HTML files similar to **index.html**. Navigation through the five pages is accomplished by five links placed at the beginning of each file using code like this.
 
@@ -285,7 +285,7 @@ In [lesson 08](https://github.com/sasadangelo/html-hero/tree/master/part-1/lesso
 
 HTML provides two types of lists for displaying content: ordered lists and unordered lists.
 
-An ordered list is created using the <ol> element and is used to display a list of items in a specific order. Each item in the list is represented by a <li> element and is automatically numbered.
+An ordered list is created using the &lt;ol&gt; element and is used to display a list of items in a specific order. Each item in the list is represented by a &lt;li&gt; element and is automatically numbered.
 
     {% highlight html %}
 <ol>
@@ -295,7 +295,7 @@ An ordered list is created using the <ol> element and is used to display a list 
 </ol>
     {% endhighlight %}
 
-An unordered list is created using the <ul> element and is used to display a list of items that do not need to be in a specific order. Each item in the list is represented by a <li> element and is typically displayed with bullet points.
+An unordered list is created using the &lt;ul&gt; element and is used to display a list of items that do not need to be in a specific order. Each item in the list is represented by a &lt;li&gt; element and is typically displayed with bullet points.
 
     {% highlight html %}
 <ul>
@@ -305,7 +305,7 @@ An unordered list is created using the <ul> element and is used to display a lis
 </ul>
     {% endhighlight %}
 
-You can also nest lists within lists by using <ol> or <ul> elements inside the <li> elements.
+You can also nest lists within lists by using &lt;ol&gt; or &lt;ul&gt; elements inside the &lt;li&gt; elements.
 
     {% highlight html %}
 <ul>
@@ -332,11 +332,11 @@ In addition, I created, randomly, an ordered list in each page. Here the result.
 
 ## Enhancing Your Webpage with Images: The &lt;img&gt; Tag
 
-HTML provides a way to embed images into a webpage using the <img> tag. The &lt;img&gt; tag is a self-closing tag, meaning it does not have a closing tag, and is used to specify the source of the image, as well as various other attributes.
+HTML provides a way to embed images into a webpage using the &lt;img&gt; tag. The &lt;img&gt; tag is a self-closing tag, meaning it does not have a closing tag, and is used to specify the source of the image, as well as various other attributes.
 
 The two main attributes used when adding an image to an HTML document are the src and alt attributes.
 
-The src attribute is used to specify the URL or file path of the image file. This attribute is required for the <img> tag to function correctly.
+The src attribute is used to specify the URL or file path of the image file. This attribute is required for the &lt;img&gt; tag to function correctly.
 
 The alt attribute is used to provide a text description of the image, which can be displayed if the image is not available or cannot be displayed for some reason. The alt attribute is also used by screen readers for accessibility purposes.
 
@@ -352,7 +352,7 @@ For our example website I created two to four images for each page and placed th
 
 ## Conclusion: Building a Basic Website with HTML
 
-In this article, we have covered the basics of building a website using HTML. We began by discussing the structure of a basic HTML document and the importance of the <head> and <body> tags. We then moved on to the different elements, tags, and attributes that are used to create the content of a web page, including headlines, paragraphs, links, lists, and images.
+In this article, we have covered the basics of building a website using HTML. We began by discussing the structure of a basic HTML document and the importance of the &lt;head&gt; and &lt;body&gt; tags. We then moved on to the different elements, tags, and attributes that are used to create the content of a web page, including headlines, paragraphs, links, lists, and images.
 
 By following the step-by-step instructions provided in this article, you should now have a basic understanding of how to create a simple website using HTML. However, there is still much more to learn. In the next article, we will continue to build upon the skills learned here by adding images, quotes, and justified paragraphs and we will style our pages using CSS.
 
