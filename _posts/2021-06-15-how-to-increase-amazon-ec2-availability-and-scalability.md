@@ -171,4 +171,4 @@ Route 53 supports several routing policy:
 
 ## Conclusion
 
-In this article, we talked about the availability and scalability concepts and how to achieve them using Load Balancers and Austoscalers. [In this article]({{ site.baseurl }}/elastic-load-balancer-tutorial/), we will do some hands on on Load Balancers and [in this other article](ec2-auto-scaling-group-tutorial-for-beginners), we will do some hands on Autoscalers.
+In this article, we talked about the availability and scalability concepts and how to achieve them using Load Balancers and Austoscalers. [In this article]({{ site.baseurl }}/elastic-load-balancer-tutorial/), we will do some hands on on Load Balancers and [in this other article]({{ site.baseurl }}/ec2-auto-scaling-group-tutorial-for-beginners/), we will do some hands on Autoscalers.

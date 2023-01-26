@@ -59,7 +59,7 @@ The RDS service allows you to create a Multi-AZ configuration, however, in the F
 
 ![RDS Configure Multi AZ]({{ site.baseurl }}/wp-content/uploads/9-RDS-Configure-Multi-AZ.png){:width="450" height="135" .responsive_img}
 
-You can configure the **Connectivity** for your database. For example, you can choose the VPC and Subnet where to deploy the database. moreover, you can decide if the Subnet should be public or private. In a [typical scenario](relational-database-service) the EC2 instance application will live in a public subnet while the database will live in the same VPC but a private Subnet.
+You can configure the **Connectivity** for your database. For example, you can choose the VPC and Subnet where to deploy the database. moreover, you can decide if the Subnet should be public or private. In a [typical scenario]({{ site.baseurl }}/relational-database-service/) the EC2 instance application will live in a public subnet while the database will live in the same VPC but a private Subnet.
 
 ![RDS Configure Connectivity]({{ site.baseurl }}/wp-content/uploads/10-RDS-Configure-Connectivity.png){:width="450" height="304" .responsive_img}
 

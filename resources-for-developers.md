@@ -17,8 +17,6 @@ This is a list of websites, blogs, and resources that I read frequently and that
 
 [Free Programming Books](http://www.e-booksdirectory.com/programming.php)
 
-[Level Up](https://www.level-up.one/)
-
 [Tania Rascia](https://www.taniarascia.com/)
 
 [J Cole Morrison](https://start.jcolemorrison.com/)
@@ -33,7 +31,7 @@ Software programming includes a wide range of topics that it is impossible to co
 
 In this section, I will collect the most important web resources for game programming.
 
-[LibGdx](https://libgdx.badlogicgames.com/)
+[LibGdx](https://libgdx.com/)
 
 [Game Programming Patterns](http://gameprogrammingpatterns.com/)
 

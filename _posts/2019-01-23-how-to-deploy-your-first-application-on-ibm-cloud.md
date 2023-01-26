@@ -101,7 +101,7 @@ You can see your application at the URL **https://multiplayertetris.<region>.my
 
 ## Deploy the application on IBM Cloud with Eclipse
 
-You can develop your applications with Eclipse and deploy them directly from it. To do that, [you need to download Eclipse Oxygen 3](http://eclipse.bluemix.net/packages/epp.bmt/?cm_mc_uid=86302448733915472421149&cm_mc_sid_50200000=46579901547662801853) that is already bundled with IBM Cloud server called Bluemix Server (Bluemix is the old brand name of IBM Cloud). You can also use Jetbrains IDE (IntelliJ, AndroidStudio, WebStorm, etc.) to develop your applications [and deploy them on IBM Cloud.](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains)
+You can develop your applications with Eclipse and deploy them directly from it. To do that, [you need to download Eclipse Oxygen 3](https://www.eclipse.org/downloads/packages/release/oxygen/3) that is already bundled with IBM Cloud server called Bluemix Server (Bluemix is the old brand name of IBM Cloud). You can also use Jetbrains IDE (IntelliJ, AndroidStudio, WebStorm, etc.) to develop your applications [and deploy them on IBM Cloud.](https://github.com/IBM-Cloud/ibm-cloud-developer-tools/tree/master/jetbrains)
 
 ### How to import the application in Eclipse
 

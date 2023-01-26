@@ -45,8 +45,6 @@ The **host** driver allows the container to use directly the host network facili
 
 ![Docker Host Networking]({{ site.baseurl }}/wp-content/uploads/2018/07/docker-host-networking.png){:width="450" height="329" .responsive_img}
 
-_Photo from [https://success.docker.com](https://success.docker.com/article/networking)_
-
 ### The overly networking
 
 The **overlay** driver allows the communication between containers running on different hosts.

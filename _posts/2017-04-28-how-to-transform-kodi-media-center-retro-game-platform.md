@@ -62,8 +62,6 @@ You have installed RetroPie and attached one or two Game Controllers, go on _Add
 
 ![Retropie Welcome]({{ site.baseurl }}/wp-content/uploads/2017/04/Retropie_Welcome.jpg){:width="450" height="240" .responsive_img}
 
-_Photo from [http://bitfixgaming.boards.net](http://bitfixgaming.boards.net/)_
-
 [At the following page](https://github.com/RetroPie/RetroPie-Setup/wiki/first-installation) in the section _Configure Controllers_, you can find the instructions to configure your Gamepad. The following figure shows you how I assigned the buttons to my controller.
 
 ![Gamepad Buttons]({{ site.baseurl }}/wp-content/uploads/2017/04/Gamepad_Buttons.jpg){:width="450" height="337" .responsive_img}
