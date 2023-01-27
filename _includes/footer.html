@@ -4,7 +4,7 @@
       <div class="footer-widget-title">Latest Posts</div>
       <ul>
         {% for post in site.posts limit: site.latest_posts %}
-          <li><a href="{{ site.baseurl }}/{{ post.slug }}">{{ post.title }}</a></li>
+          <li><a href="{{ site.baseurl }}/{{ post.slug }}/">{{ post.title }}</a></li>
         {% endfor %}
       </ul>
     </aside>
@@ -13,7 +13,7 @@
       <ul>
         {% for category in site.categories %}
           {% capture category_name %}{{ category | first }}{% endcapture %}
-          <li><a href="{{ site.baseurl }}/category/{{ category_name | slugify }}">{{ category_name }}</a></li>
+          <li><a href="{{ site.baseurl }}/category/{{ category_name | slugify }}/">{{ category_name }}</a></li>
         {% endfor %}
       </ul>
     </aside>

@@ -115,7 +115,7 @@ So, to sum up, Elements are used to structure and format the content of a web pa
 
 The **&lt;head&gt;** element is a container for metadata (data about the document, such as its title, character set, styles, and scripts) in an HTML. The metadata is not displayed on the page but is used by browsers and search engines to understand the content of the page.
 
-The **&lt;head&gt;** element should be placed at the beginning of the **&lt;html&gt;** element and must contain a **&lt;title&gt;** element, which specifies the title of the document. The **&lt;head&gt;** element can also include other elements, such as **&lt;style&gt;** for styling the page with CSS, **&ltlink&gt;** for linking to external resources, and **&lt;meta&gt;** for defining metadata, such as the character set, keywords, and description of the page.
+The **&lt;head&gt;** element should be placed at the beginning of the **&lt;html&gt;** element and must contain a **&lt;title&gt;** element, which specifies the title of the document. The **&lt;head&gt;** element can also include other elements, such as **&lt;style&gt;** for styling the page with CSS, **&lt;link&gt;** for linking to external resources, and **&lt;meta&gt;** for defining metadata, such as the character set, keywords, and description of the page.
 
 Here is an example of an **&lt;head&gt;** element that includes a **&lt;title&gt;** element and a **&lt;meta&gt;** element:
 
