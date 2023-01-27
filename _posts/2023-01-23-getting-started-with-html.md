@@ -85,7 +85,7 @@ As you can see, the DOCTYPE declaration, the HTML element, the head element, and
 
 Download your first HTML document of [lesson 1](https://github.com/sasadangelo/html-hero/blob/master/part-1/lesson-01/index.html). Its name is **index.html** and you can open it with your browser (Chrome, Firefox, Microsoft Edge, Internet Explorer, or Safari) by clicking on **File**->**Open File...** to render it. Here is the result.
 
-![My First HTML File]({{ site.baseurl }}/assets/img/my-first-html-file.png){:width="450" height="195" .responsive_img}
+![My First HTML File]({{ site.baseurl }}/assets/img/my-first-html-file.webp){:width="450" height="195" .responsive_img}
 
 ## HTML Elements, Tags, and Attributes
 
