@@ -29,7 +29,7 @@
     <nav>
       <ul>
         {% capture category_name %}{{ category | first }}{% endcapture %}
-        <li><a href="{{ site.baseurl }}/category/{{ category_name | | slugify }}">{{ category_name }}</a></li>
+        <li><a href="{{ site.baseurl }}/category/{{ category_name | | slugify }}/">{{ category_name }}</a></li>
       </ul>
     </nav>
   {% endfor %}
