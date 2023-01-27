@@ -8,7 +8,7 @@ categories:
   - Web Programming
 ---
 
-![Getting Started with HTML: A Beginner's Guide]({{ site.baseurl }}/assets/img/html.jpg){:width="356" height="200" .responsive_img}
+![Getting Started with HTML: A Beginner's Guide]({{ site.baseurl }}/assets/img/html.webp){:width="356" height="200" .responsive_img}
 
 # Getting Started with HTML: A Beginner's Guide
 _Posted on **{{ page.date | date_to_string }}**_
@@ -31,7 +31,7 @@ HTML was initially developed to provide a way to share scientific research and i
 
 Today, HTML is the backbone of the World Wide Web, and almost all websites and web applications use HTML in some form or another. It is a powerful and versatile language that continues to evolve and improve, providing new and exciting ways for developers to create dynamic and interactive web content.
 
-![HTML History]({{ site.baseurl }}/assets/img/html-history.jpg){:width="450" height="215" .responsive_img}
+![HTML History]({{ site.baseurl }}/assets/img/html-history.webp){:width="450" height="215" .responsive_img}
 
 Over the years, different HTML versions were released. Here is a brief overview of these versions and the key features and improvements they introduced:
 
@@ -157,7 +157,7 @@ Headlines are used to organize and structure the content of a webpage, making it
 
 Download the **index.html** file of [lesson 2](https://github.com/sasadangelo/html-hero/blob/master/part-1/lesson-02/index.html) and open it with your browser. Here is the result.
 
-![HTML Headlines]({{ site.baseurl }}/assets/img/html-headlines.png){:width="450" height="574" .responsive_img}
+![HTML Headlines]({{ site.baseurl }}/assets/img/html-headlines.webp){:width="450" height="574" .responsive_img}
 
 ## Paragraphs
 
@@ -194,7 +194,7 @@ In this example, the **&lt;h1&gt;** tag is used to create a level 1 headline for
 
 Download the **index.html** file of [lesson 3](https://github.com/sasadangelo/html-hero/blob/master/part-1/lesson-03/index.html) and open it with your browser. Here is the result.
 
-![HTML Paragraph]({{ site.baseurl }}/assets/img/html-paragraph.png){:width="450" height="370" .responsive_img}
+![HTML Paragraph]({{ site.baseurl }}/assets/img/html-paragraph.webp){:width="450" height="370" .responsive_img}
 
 ## Organizing Content with HTML Sections
 
@@ -324,11 +324,11 @@ It's worth noting that, like many other elements in HTML, lists are semantic ele
 
 In [lesson 9](https://github.com/sasadangelo/html-hero/tree/master/part-1/lesson-09) I used the unordered list to create a menu at the beginning of each page. This menu will contain the five links introduced in **lesson 8**. Here is the result. 
 
-![HTML Menu]({{ site.baseurl }}/assets/img/html-menu.png){:width="450" height="466" .responsive_img}
+![HTML Menu]({{ site.baseurl }}/assets/img/html-menu.webp){:width="450" height="466" .responsive_img}
 
 In addition, I created, randomly, an ordered list in each page. Here the result.
 
-![HTML Ordered List]({{ site.baseurl }}/assets/img/html-ordered-list.png){:width="450" height="179" .responsive_img}
+![HTML Ordered List]({{ site.baseurl }}/assets/img/html-ordered-list.webp){:width="450" height="179" .responsive_img}
 
 ## Enhancing Your Webpage with Images: The &lt;img&gt; Tag
 
@@ -348,7 +348,7 @@ As with text, even for images you can use fake images to create your website. Fo
 
 For our example website I created two to four images for each page and placed them in an img folder. In the pages, I have referenced these images with the **&lt;img&gt;** tag as shown in the example above. The result can be seen below. The source code can be found in the [lesson-10](https://github.com/sasadangelo/html-hero/tree/master/part-1/lesson-10) folder of our git project.
 
-![HTML Images]({{ site.baseurl }}/assets/img/html-images.png){:width="450" height="451" .responsive_img}
+![HTML Images]({{ site.baseurl }}/assets/img/html-images.webp){:width="450" height="451" .responsive_img}
 
 ## Conclusion: Building a Basic Website with HTML
 
