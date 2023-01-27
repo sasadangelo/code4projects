@@ -73,7 +73,7 @@ Behind the scene, a number of EC2 instances equal to Desired Capacity will be cr
 
 ![ASG - List groups]({{ site.baseurl }}/wp-content/uploads/11-AutoScalingGroup-List.png){:width="450" height="115" .responsive_img}
 
-![ASG - List EC2](cwp-content/uploads/12-AutoScalingGroup-Show-EC2.png){:width="450" height="114" .responsive_img}
+![ASG - List EC2]({{ site.baseurl }}/wp-content/uploads/12-AutoScalingGroup-Show-EC2.png){:width="450" height="114" .responsive_img}
 
 In the description of the load balancer, there is the **DNS name** to use to access the application. The rest is similar to what we have discussed in [this article]({{ site.baseurl }}/elastic-load-balancer-tutorial/).
 

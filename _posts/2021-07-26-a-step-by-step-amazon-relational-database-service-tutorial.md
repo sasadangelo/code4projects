@@ -65,7 +65,7 @@ You can configure the **Connectivity** for your database. For example, you can c
 
 ### Configure the database security and authentication
 
-You can declare **Security Group** to allow only traffic coming from a given IP or another Security Group to access the database. This option is particularly useful in the [typical scenario](relational-database-service) to allow only the application EC2 instance to access the database. This is another security best practice to avoid hacking your database instance.
+You can declare **Security Group** to allow only traffic coming from a given IP or another Security Group to access the database. This option is particularly useful in the [typical scenario]({{ site.baseurl }}/relational-database-service/) to allow only the application EC2 instance to access the database. This is another security best practice to avoid hacking your database instance.
 
 ![RDS Configure Security Group]({{ site.baseurl }}/wp-content/uploads/11-RDS-Configure-Security-Group.png){:width="450" height="226" .responsive_img}
 
