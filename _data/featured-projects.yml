@@ -1,6 +1,6 @@
 - title: Getting started with Docker
   image: wp-content/uploads/2018/06/Docker-logo.png
-  link: getting-started-with-docker
+  link: getting-started-with-docker/
   description: >
     This is the <b>Getting started with Docker</b> article series. In it I would like to explain what Docker is and how I use it in my 
     day by day job. To make this series more practical, I will show you how to write your first “Hello World!” containerized application. 
@@ -9,7 +9,7 @@
     simplify the deployment and complete our journey.
 - title: Getting started with Kubernetes
   image: wp-content/uploads/2019/06/Kubernetes.png
-  link: getting-started-with-kubernetes
+  link: getting-started-with-kubernetes/
   description: >
     This is the <b>Getting started with Kubernetes</b> article series. In it I would like to give you a brief introduction to Kubernetes.
     I will explain What Kubernetes is, its architecture, the concepts of Pod, Replication Controller, ReplicaSets, Deployment, ConfigMaps,
@@ -17,7 +17,7 @@
     application in it.
 - title: How to build a Raspberry Media Center
   image: wp-content/uploads/2020/07/Hector_TV_Box-min-e1596192046917.jpg
-  link: raspberry-media-center
+  link: raspberry-media-center/
   description: >
     This is the <b>How to build a Raspberry Media Center</b> article series. Here I would like to show you how to build a Raspberry 
     Media Center with an HDD and enclosure. The series will show you the required hardaware to buy to build the Media Center and how 

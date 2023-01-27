@@ -49,70 +49,70 @@
   post_series_title: Android Game Programming
   post_series:
   - name: Android Game Programming
-    link: /android-game-programming
+    link: /android-game-programming/
   - name: How to install Android Studio
-    link: /how-to-install-android-studio
+    link: /how-to-install-android-studio/
   - name: How to create an Android application
-    link: /how-to-create-an-android-application
+    link: /how-to-create-an-android-application/
   - name: How to speed up Android Virtual Device
-    link: /how-to-speed-up-android-virtual-device
+    link: /how-to-speed-up-android-virtual-device/
   - name: Video game programming principles
-    link: /video-game-programming-principles
+    link: /video-game-programming-principles/
   - name: Design Patterns in Game Programming
-    link: /design-patterns-in-game-programming
+    link: /design-patterns-in-game-programming/
   - name: Android Programming for Games (Activity Lifecycle)
-    link: /android-programming-for-games-activity-lifecycle
+    link: /android-programming-for-games-activity-lifecycle/
   - name: Android Files Management
-    link: /android-files-management
+    link: /android-files-management/
   - name: Android Resources Management
-    link: /android-resources-management
+    link: /android-resources-management/
   - name: Android Graphics Programming for Games
-    link: /android-graphics-programming-for-games
+    link: /android-graphics-programming-for-games/
   - name: Let’s start building the Game Framework
-    link: /lets-start-building-the-game-framework
+    link: /lets-start-building-the-game-framework/
   - name: Android Input Management for Games
-    link: /android-input-management-for-games
+    link: /android-input-management-for-games/
 - post_series_id: getting-started-with-cloud-computing
   post_series_title: Getting started with Cloud Computing
   post_series:
   - name: Getting started with Cloud Computing
-    link: /getting-started-with-cloud-computing
+    link: /getting-started-with-cloud-computing/
   - name: Introduction to the IBM Cloud platform
-    link: /introduction-to-the-ibm-cloud-platform
+    link: /introduction-to-the-ibm-cloud-platform/
   - name: How to deploy your first application on IBM Cloud
-    link: /how-to-deploy-your-first-application-on-ibm-cloud
+    link: /how-to-deploy-your-first-application-on-ibm-cloud/
 - post_series_id: getting-started-with-amazon-web-services
   post_series_title: Getting started with Amazon Web Services (AWS)
   post_series:
   - name: Getting started with Cloud Computing
-    link: /getting-started-with-cloud-computing
+    link: /getting-started-with-cloud-computing/
   - name: Amazon Web Services (AWS) Introduction
-    link: /amazon-web-services
+    link: /amazon-web-services/
   - name: Beginner’s Guide to AWS Identity and Access Management (IAM)
-    link: /beginners-guide-identity-access-management
+    link: /beginners-guide-identity-access-management/
   - name: Amazon Elastic Cloud Computing (EC2) for Beginners
-    link: /amazon-ec2-for-beginners
+    link: /amazon-ec2-for-beginners/
   - name: The Definitive Amazon EC2 Tutorial - Step by step Guide for Beginners
-    link: /definitive-amazon-ec2-tutorial-step-by-step-guide-beginners
+    link: /definitive-amazon-ec2-tutorial-step-by-step-guide-beginners/
   - name: Amazon Elastic Block Storage (EBS) vs Elastic File Storage (EFS)
-    link: /amazon-elastic-block-storage
+    link: /amazon-elastic-block-storage/
   - name: Amazon EBS Tutorial - Step by step Guide for Beginners
-    link: /amazon-ebs-tutorial
+    link: /amazon-ebs-tutorial/
   - name: How to increase Amazon EC2 Availability and Scalability
-    link: /how-to-increase-amazon-ec2-availability-and-scalability
+    link: /how-to-increase-amazon-ec2-availability-and-scalability/
   - name: A Step by step tutorial to create your first Elastic Load Balancer
-    link: /elastic-load-balancer-tutorial
+    link: /elastic-load-balancer-tutorial/
   - name: EC2 Auto Scaling Group Tutorial for Beginners
-    link: /ec2-auto-scaling-group-tutorial-for-beginners
+    link: /ec2-auto-scaling-group-tutorial-for-beginners/
   - name: Relational Database Service (RDS) - What Is It and How Does It Work?
-    link: /relational-database-service
+    link: /relational-database-service/
   - name: Amazon Integrated Services (part 1)
-    link: /amazon-integrated-services-2
+    link: /amazon-integrated-services-2/
   - name: Amazon Integrated Services (part 2)
-    link: /amazon-integrated-services-3
+    link: /amazon-integrated-services-3/
   - name: Amazon Well Architected Framework and its 5 Pillars
-    link: /amazon-well-architected-framework
+    link: /amazon-well-architected-framework/
   - name: How Amazon Web Services Security and Compliance works
-    link: /how-amazon-web-services-security-and-compliance-works
+    link: /how-amazon-web-services-security-and-compliance-works/
   - name: The Ultimate and Great Overview of AWS Pricing and Support
-    link: /the-ultimate-and-great-overview-of-aws-pricing-and-support
+    link: /the-ultimate-and-great-overview-of-aws-pricing-and-support/
