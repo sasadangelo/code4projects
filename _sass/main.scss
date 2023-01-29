@@ -1094,6 +1094,12 @@ footer {
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#footer-widget-area {
+  display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
@@ -1105,6 +1111,12 @@ footer {
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#footer-widget-area {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -1121,6 +1133,12 @@ footer {
   flex-direction: column;
   justify-content: flex-start;
 }
+
+#footer-widget-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 }
 
 /* For Mobile Phones */
@@ -1129,6 +1147,12 @@ footer {
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#footer-widget-area {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

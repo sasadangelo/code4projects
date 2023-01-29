@@ -9,4 +9,5 @@ pagination:
 sitemap:
   exclude: 'yes'
 robots: noindex, follow
+redirect_to:  /category/programming/
 ---
