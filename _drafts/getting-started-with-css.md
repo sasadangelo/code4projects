@@ -5,7 +5,7 @@ slug: mastering-basics-css
 thumbnail: assets/img/rds-logo.png
 excerpt: bla bla bla
 categories:
-  - Web Programming
+  - Programming
 sitemap:
   exclude: 'yes'
 ---

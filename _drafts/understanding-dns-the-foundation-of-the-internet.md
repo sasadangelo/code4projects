@@ -5,7 +5,7 @@ slug: understanding-dns-the-foundation-of-the-internet
 thumbnail: assets/img/rds-logo.png
 excerpt: DNS (Domain Name System) is the backbone of the internet, enabling users to access websites and other resources using easy-to-remember domain names, instead of IP addresses.
 categories:
-  - Web Programming
+  - Programming
 sitemap:
   exclude: 'yes'
 ---
