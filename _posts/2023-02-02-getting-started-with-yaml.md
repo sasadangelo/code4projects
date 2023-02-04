@@ -54,6 +54,10 @@ YAML in some ways is a superset of JSON, which means all the features in JSON ca
 
 _Photo from YAML Zero to Master Udemy Course_
 
+The following figure shows an example of the same data structure represented with XML, JSON, and YAML.
+
+![XML vs JSON vs YAML code]({{ site.baseurl }}/assets/img/xml-vs-json-vs-yaml-code.webp){:width="450" height="225" .responsive_img}
+
 Online there are [a lot of tools](https://www.json2yaml.com/) that help you to convert one format into another.
 
 ## YAML: Understanding Basic Concepts
