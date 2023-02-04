@@ -50,7 +50,7 @@ JSON (Javascript Object Notation) is a format created for data transmission betw
 
 YAML in some ways is a superset of JSON, which means all the features in JSON can be found in YAML. The fact that the format is human-readable and easy to use makes it represent configuration files and management.
 
-![Comparison Table]({{ site.baseurl }}/assets/img/xml-vs-json-vs-yaml.png){:width="450" height="225" .responsive_img}
+![Comparison Table]({{ site.baseurl }}/assets/img/xml-vs-json-vs-yaml.webp){:width="450" height="225" .responsive_img}
 
 _Photo from YAML Zero to Master Udemy Course_
 
