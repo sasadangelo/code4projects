@@ -116,3 +116,10 @@
     link: /how-amazon-web-services-security-and-compliance-works/
   - name: The Ultimate and Great Overview of AWS Pricing and Support
     link: /the-ultimate-and-great-overview-of-aws-pricing-and-support/
+- post_series_id: getting-started-with-yaml
+  post_series_title: Getting started with YAML
+  post_series:
+  - name: "Getting Started with YAML: An Introduction to the Basics"
+    link: /getting-started-with-yaml/
+  - name: "Exploring the Depths of YAML: Advanced Features and Functionality"
+    link: /yaml-advanced-feature/

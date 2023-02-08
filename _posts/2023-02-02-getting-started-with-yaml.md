@@ -1,13 +1,12 @@
 ---
 layout: post
 title: "Getting Started with YAML: An Introduction to the Basics"
+post_series_id: getting-started-with-yaml
 slug: getting-started-with-yaml
 thumbnail: assets/img/yaml-logo.webp
 excerpt: YAML, short for Yet Another Markup Language, is a popular data serialization format. This article will discuss its baasic concepts.
 categories:
   - Programming
-sitemap:
-  exclude: 'yes'
 ---
 
 ![YAML]({{ site.baseurl }}/assets/img/yaml-logo.webp){:width="200" height="200" .responsive_img}
@@ -62,7 +61,7 @@ Online there are [a lot of tools](https://www.json2yaml.com/) that help you to c
 
 ## YAML: Understanding Basic Concepts
 
-![YAML Basic Concepts]({{ site.baseurl }}/assets/img/yaml-basic-concepts.webp){:width="450" height="299" .responsive_img}
+![YAML Basic Concepts]({{ site.baseurl }}/assets/img/yaml-basic-concepts.webp){:width="450" height="275" .responsive_img}
 
 A YAML format to represent data uses the following data type:
 
@@ -70,7 +69,6 @@ A YAML format to represent data uses the following data type:
 * **Arrays/Lists** (YAML calls them sequences):
 The content of a sequence node is an ordered series of zero or more nodes. In particular, a sequence may contain the same node more than once. It could even contain itself.
 * **Dictionaries** (YAML calls them mappings): the content of a mapping node is an unordered set of key/value node pairs, with the restriction that each of the keys is unique. YAML places no further restrictions on the nodes.
-* **Objects**: the content is a record describing a given object.
 
 In addition to this, YAML supports comments.
 
@@ -96,7 +94,7 @@ null-value:
 
 In this example, the name is the key, and "John" is the associated value. The name attribute is a string. YAML strings are Unicode. In most situations, you don't have to specify them in quotes. But if we want escape sequences handled, we need to use double or single quotes. Similarly, age is the key and 30 is an integer value. YAML supports also floating points.
 
-Boolean values are "true" and "false", but you can use also "Yes" and "No" because internally YAML converts them into "true" and "false".
+Boolean values are "true" and "false", but you can use also "yes" and "no" or "on" and "off" because internally YAML converts them into "true" and "false".
 
 There are special scalar values in YAML you can use like positive and negative infinity numbers, null values, and invalid numbers.
 
@@ -162,7 +160,19 @@ products:
 
 ## Dictionaries in YAML: Storing Key-Value Pairs in a Collection
 
-In YAML, dictionaries are a collection of key-value pairs that are used to store data. A dictionary is represented by a series of key-value pairs separated by dashes, with the keys and values indented beneath the dashes. For example, consider the following YAML representation of a dictionary of people:
+In YAML, dictionaries are a collection of key-value pairs that are used to store data. YAML calls dictionaries as "mappings" and they are useful to represents complex data structure like Person, Vehicle, Car, etc. An object in YAML is represented using nested key-value pairs, where each key-value pair represents an attribute of the object. For example, consider the following YAML representation of a person object with name and address attributes:
+
+    {% highlight yaml %}
+person:
+  name: John Doe
+  address:
+    street: 123 Main St.
+    city: Anytown
+    state: CA
+    zip: 90210
+    {% endhighlight %}
+
+In YAML, you can organize dictionaries in sequence. For example, if you want to describes a list of three people you can write something like this:
 
     {% highlight yaml %}
 people:
@@ -177,24 +187,6 @@ people:
 In this example, the key "people" is associated with a dictionary of two key-value pairs, each representing a person with a name and age attribute. This syntax allows for the easy representation of collections of data, such as lists of people, products, or any other type of data.
 
 Dictionaries in YAML are useful for grouping related data together and for easily accessing individual items within the collection. The ability to store data in dictionaries and retrieve it based on the keys makes YAML a powerful and flexible data serialization format.
-
-## Representing Objects in YAML: Nested Key-Value Pairs
-
-In addition to primitive data types, YAML also supports the representation of objects or complex data structures. An object in YAML is represented using nested key-value pairs, where each key-value pair represents an attribute of the object. For example, consider the following YAML representation of a person object with name and address attributes:
-
-    {% highlight yaml %}
-person:
-  name: John Doe
-  address:
-    street: 123 Main St.
-    city: Anytown
-    state: CA
-    zip: 90210
-    {% endhighlight %}
-
-In this example, the key "person" is associated with an object that has two attributes: name and address. The address attribute is itself an object with four attributes: street, city, state, and zip. This syntax makes it easy to represent complex data structures in YAML and allows for a clean and intuitive representation of data.
-
-It is worth noting that the indentation of the lines in YAML is important and determines the hierarchy of the data. In the example above, the indentation of the street, city, state, and zip lines indicates that they are attributes of the address object. Proper indentation is crucial for the correct parsing of YAML files. Indentation is how YAML denotes nesting. The number of spaces can vary from file to file, but tabs are not allowed.
 
 ## Conclusion
 
