@@ -24,4 +24,5 @@ The feature included in the [latest version](https://github.com/sasadangelo/code
 * Support for 404 page
 * Favicon
 * Draft posts
-
+* Post series
+* Newsletter
