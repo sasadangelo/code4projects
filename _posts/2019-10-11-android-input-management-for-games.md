@@ -3,7 +3,7 @@ layout: post
 title: Android Input Management for Games
 post_series_id: android-game-programming
 slug: android-input-management-for-games
-thumbnail: wp-content/uploads/2019/10/Android-Input-Management2.jpg
+image: /wp-content/uploads/2019/10/Android-Input-Management2.jpg
 excerpt: This is the twelfth article of the Android Game Programming series. Here, I would like to discuss how to manage user input on Android for our games.
 categories:
 - Android

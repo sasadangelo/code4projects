@@ -3,7 +3,7 @@ layout: post
 title: Amazon Well Architected Framework and its 5 Pillars
 post_series_id: getting-started-with-amazon-web-services
 slug: amazon-well-architected-framework
-thumbnail: wp-content/uploads/2021/02/Amazon-Well-Architected-Framework.png
+image: /wp-content/uploads/2021/02/Amazon-Well-Architected-Framework.png
 excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
 categories: Cloud
 ---

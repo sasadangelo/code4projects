@@ -3,7 +3,7 @@ layout: post
 title: Android Resources Management
 post_series_id: android-game-programming
 slug: android-resources-management
-thumbnail: wp-content/uploads/2018/12/Resource_Management_mini.png
+image: /wp-content/uploads/2018/12/Resource_Management_mini.png
 excerpt: This is the ninth article of the Android Game Programming series. In this article, I will discuss how to manage resources in Android. Resources Management.
 categories: Android
 ---

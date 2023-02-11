@@ -3,7 +3,7 @@ layout: post
 title: How Docker Networking works
 post_series_id: getting-started-with-docker
 slug: how-docker-networking-works
-thumbnail: wp-content/uploads/2018/07/docker-bridge-network-mini.png
+image: /wp-content/uploads/2018/07/docker-bridge-network-mini.png
 excerpt: In this article, I&#039;ll talk about how Docker networking. You&#039;ll learn how to let two containers communicate when they are on the same or different host.
 categories:
 - Networking

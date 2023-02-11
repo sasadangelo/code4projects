@@ -3,7 +3,7 @@ layout: post
 title: Android Graphics Programming for Games
 post_series_id: android-game-programming
 slug: android-graphics-programming-for-games
-thumbnail: wp-content/uploads/2019/07/Blue-bot-paint.jpg
+image: /wp-content/uploads/2019/07/Blue-bot-paint.jpg
 excerpt: In this article, I would like to introduce to you the basic android graphics programming concepts to develop our video game.
 categories:
 - Android

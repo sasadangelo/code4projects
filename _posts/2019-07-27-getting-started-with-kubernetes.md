@@ -3,7 +3,7 @@ layout: post
 title: Getting Started with Kubernetes
 post_series_id: getting-started-with-kubernetes
 slug: getting-started-with-kubernetes
-thumbnail: wp-content/uploads/2019/06/Kubernetes.png
+image: /wp-content/uploads/2019/06/Kubernetes.png
 excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
 categories:
 - Cloud

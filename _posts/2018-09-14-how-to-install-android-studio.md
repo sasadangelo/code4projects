@@ -3,7 +3,7 @@ layout: post
 title: How to install Android Studio
 post_series_id: android-game-programming
 slug: how-to-install-android-studio
-thumbnail: wp-content/uploads/2018/09/android-studio.png
+image: /wp-content/uploads/2018/09/android-studio.png
 excerpt: This is the second article of Android Game Development series. Here I explain, step by step, how to install and configure Android Studio.
 categories: Android
 ---

@@ -3,7 +3,7 @@ layout: post
 title: How to create your own Kubernetes cluster
 post_series_id: getting-started-with-kubernetes
 slug: how-to-create-your-own-kubernetes-cluster
-thumbnail: wp-content/uploads/2020/03/Kubernetes-cluster.jpeg
+image: /wp-content/uploads/2020/03/Kubernetes-cluster.jpeg
 excerpt: In this article, I want to explain how I run my applications on a Kubernetes cluster using a simple project I created based on Vagrant and VirtualBox.
 categories:
 - Cloud

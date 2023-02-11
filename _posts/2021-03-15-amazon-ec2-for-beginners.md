@@ -3,7 +3,7 @@ layout: post
 title: Amazon Elastic Cloud Computing (EC2) for Beginners
 post_series_id: getting-started-with-amazon-web-services
 slug: amazon-ec2-for-beginners/
-thumbnail: wp-content/uploads/2021/03/Amazon-EC2-1.png
+image: /wp-content/uploads/2021/03/Amazon-EC2-1.png
 excerpt: The following article is an introduction to the Amazon Elastic Cloud Computing (EC2) service for beginners.
 categories: Cloud
 ---

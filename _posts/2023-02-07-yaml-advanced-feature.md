@@ -3,12 +3,10 @@ layout: post
 title: "Exploring the Depths of YAML: Advanced Features and Functionality"
 post_series_id: getting-started-with-yaml
 slug: yaml-advanced-feature
-thumbnail: assets/img/yaml-advanced.webp
+image: /assets/img/yaml-advanced.webp
 excerpt: Dive deeper into YAML with this comprehensive guide to advanced concepts. Learn tips and techniques to fully unlock its power and functionality.
 categories:
   - Programming
-sitemap:
-  exclude: 'yes'
 ---
 
 ![YAML]({{ site.baseurl }}/assets/img/yaml-advanced.webp){:width="356" height="200" .responsive_img}

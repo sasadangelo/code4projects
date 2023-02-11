@@ -3,7 +3,7 @@ layout: post
 title: Amazon Integrated Services (part 1)
 post_series_id: getting-started-with-amazon-web-services
 slug: amazon-integrated-services-2
-thumbnail: wp-content/uploads/2021/01/Amazon-RDS-Lambda-Beanstalk.png
+image: /wp-content/uploads/2021/01/Amazon-RDS-Lambda-Beanstalk.png
 excerpt: "In this article, I am going to start my overview of the Amazon Integrated Services trying to explain my understanding of the following services: Lambda"
 categories: Cloud
 ---

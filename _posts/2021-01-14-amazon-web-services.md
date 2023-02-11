@@ -3,7 +3,7 @@ layout: post
 title: Amazon Web Services (AWS) Introduction
 post_series_id: getting-started-with-amazon-web-services
 slug: amazon-web-services
-thumbnail: wp-content/uploads/2021/01/Amazon-Web-Services.png
+image: /wp-content/uploads/2021/01/Amazon-Web-Services.png
 excerpt: This article is an introduction to the Amazon Web Services (AWS) platform. Read it to have a platform and its core services overview.
 categories: Cloud
 sitemap:

@@ -3,7 +3,7 @@ layout: post
 title: "Getting Started with YAML: An Introduction to the Basics"
 post_series_id: getting-started-with-yaml
 slug: getting-started-with-yaml
-thumbnail: assets/img/yaml-logo.webp
+image: /assets/img/yaml-logo.webp
 excerpt: YAML, short for Yet Another Markup Language, is a popular data serialization format. This article will discuss its baasic concepts.
 categories:
   - Programming

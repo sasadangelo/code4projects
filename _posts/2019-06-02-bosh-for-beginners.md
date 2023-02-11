@@ -2,8 +2,8 @@
 layout: post
 title: BOSH for Beginners
 slug: bosh-for-beginners
-thumbnail: wp-content/uploads/2019/06/bosh_logo.png
-excerpt: In this article, I want to explain what Bosh is, its main concepts, and how to use it practically to deploy software. What is BOSH? According to Bosh
+image: /wp-content/uploads/2019/06/bosh_logo.png
+image: In this article, I want to explain what Bosh is, its main concepts, and how to use it practically to deploy software. What is BOSH? According to Bosh
 categories:
 - Cloud
 - DevOps

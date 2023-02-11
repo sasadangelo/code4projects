@@ -3,7 +3,7 @@ layout: post
 title: Relational Database Service (RDS) - What Is It and How Does It Work?
 post_series_id: getting-started-with-amazon-web-services
 slug: relational-database-service
-thumbnail: wp-content/uploads/Amazon-RDS.png
+image: /wp-content/uploads/Amazon-RDS.png
 excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
 categories: Cloud
 ---

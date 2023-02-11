@@ -3,7 +3,7 @@ layout: post
 title: EC2 Auto Scaling Group Tutorial for Beginners
 post_series_id: getting-started-with-amazon-web-services
 slug: ec2-auto-scaling-group-tutorial-for-beginners
-thumbnail: wp-content/uploads/auto-scaling-group-2.jpeg
+image: /wp-content/uploads/auto-scaling-group-2.jpeg
 excerpt: In this article, I&#039;ll show you how to create an EC2 Auto Scaling Group to automate the availability and scalability of your EC2 instances.
 categories: Cloud
 ---

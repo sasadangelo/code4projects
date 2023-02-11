@@ -3,7 +3,7 @@ layout: post
 title: How to install Youtube Add-on on your Kodi Media Center
 post_series_id: raspberry-media-center
 slug: how-to-install-youtube-kodi
-thumbnail: wp-content/uploads/2017/03/youtube.png
+image: /wp-content/uploads/2017/03/youtube.png
 excerpt: In this article, I would like to show you how to install a Youtube add-on on Kodi. This allows you to watch Youtube videos on your TV.
 categories: Multimedia
 ---

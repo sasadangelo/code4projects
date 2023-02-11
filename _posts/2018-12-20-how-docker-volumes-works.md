@@ -3,7 +3,7 @@ layout: post
 title: How Docker Volumes works
 post_series_id: getting-started-with-docker
 slug: how-docker-volumes-works
-thumbnail: wp-content/uploads/2018/12/types-of-mounts-volume-mini.png
+image: /wp-content/uploads/2018/12/types-of-mounts-volume-mini.png
 excerpt: In this article, I want to discuss how docker volumes works and how to use them to separate application binaries from data for easy upgrade.
 categories: Virtualization
 ---

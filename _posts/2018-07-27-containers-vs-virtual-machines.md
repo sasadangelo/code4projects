@@ -3,7 +3,7 @@ layout: post
 title: Containers vs Virtual Machines
 post_series_id: getting-started-with-docker
 slug: containers-vs-virtual-machines
-thumbnail: wp-content/uploads/2018/07/Virtual-Machine-Architecture-mini.jpg
+image: /wp-content/uploads/2018/07/Virtual-Machine-Architecture-mini.jpg
 excerpt: If you&#039;re in trouble getting the differences between Containers vs Virtual Machines, this article will explain the pros and cons of both.
 categories: Virtualization
 ---

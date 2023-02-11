@@ -3,7 +3,7 @@ layout: post
 title: Design Patterns in Game Programming
 post_series_id: android-game-programming
 slug: design-patterns-in-game-programming
-thumbnail: wp-content/uploads/2018/11/design-patterns.jpg
+image: /wp-content/uploads/2018/11/design-patterns.jpg
 excerpt: This is the sixth article of the Android Game Programming series. Here, I would like to show you how to use Design Patterns in your first video.
 categories: 
   - Design Patterns

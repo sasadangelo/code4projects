@@ -3,7 +3,7 @@ layout: post
 title: How to install PostgreSQL cluster on Docker
 post_series_id: getting-started-with-docker
 slug: install-postgresql-cluster-docker
-thumbnail: wp-content/uploads/2018/07/database-cluster.png
+image: /wp-content/uploads/2018/07/database-cluster.png
 excerpt: This article series will teach you the main Docker concepts and how to use it in practice to install and configure a PostgreSQL cluster.
 categories: 
 - Virtualization

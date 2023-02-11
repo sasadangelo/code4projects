@@ -3,7 +3,7 @@ layout: post
 title: How Amazon Web Services Security and Compliance works
 post_series_id: getting-started-with-amazon-web-services
 slug: how-amazon-web-services-security-and-compliance-works
-thumbnail: wp-content/uploads/2021/02/aws-security-mini.png
+image: /wp-content/uploads/2021/02/aws-security-mini.png
 excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
 categories: Cloud
 ---

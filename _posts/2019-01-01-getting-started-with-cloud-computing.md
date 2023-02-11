@@ -5,7 +5,7 @@ post_series_id:
 - getting-started-with-cloud-computing
 - getting-started-with-amazon-web-services
 slug: getting-started-with-cloud-computing
-thumbnail: wp-content/uploads/2018/12/Cloud-Computing-mini.png
+image: /wp-content/uploads/2018/12/Cloud-Computing-mini.png
 excerpt: In this article, I would like to explore the essence of Cloud Computing, what it really is, and why the IT industry started to adopt it.
 categories: Cloud
 sitemap:

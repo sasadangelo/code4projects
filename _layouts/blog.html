@@ -7,9 +7,9 @@ layout: default
       <h1>Blog Archives: {{ page.title }}</h1>
       {% for post in paginator.posts %}
         <div class="blog-entry">
-          <div class="blog-entry-thumbnail">
+          <div class="blog-entry-image">
             <a href="{{ site.baseurl }}{{ post.url }}">
-              <img src="{{ site.baseurl }}/{{ post.thumbnail }}" alt="{{ post.title }}" width="100%" height="auto">
+              <img src="{{ site.baseurl }}{{ post.image }}" alt="{{ post.title }}" width="100%" height="auto">
             </a>
           </div>
           <div class="blog-entry-content">

@@ -3,7 +3,7 @@ layout: post
 title: How to turn your Kodi Media Center in a Torrent machine
 post_series_id: raspberry-media-center
 slug: how-to-turn-your-kodi-media-center-torrent-machine
-thumbnail: wp-content/uploads/2017/03/downloading-torrent.jpg
+image: /wp-content/uploads/2017/03/downloading-torrent.jpg
 excerpt: In this article, I would like to show you how to turn your Kodi Media Center in a Torrent machine.
 categories: Multimedia
 ---

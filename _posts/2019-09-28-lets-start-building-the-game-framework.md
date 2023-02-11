@@ -3,7 +3,7 @@ layout: post
 title: Let’s start building the Game Framework
 post_series_id: android-game-programming
 slug: lets-start-building-the-game-framework
-thumbnail: wp-content/uploads/2019/09/game-framework.jpg
+image: /wp-content/uploads/2019/09/game-framework.jpg
 excerpt: In this article, we will start to create our Game Framework. It will be used to write all our videogames.
 categories: 
 - Android

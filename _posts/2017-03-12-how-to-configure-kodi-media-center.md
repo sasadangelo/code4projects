@@ -3,7 +3,7 @@ layout: post
 title: How to Configure Kodi Media Center
 post_series_id: raspberry-media-center
 slug: how-to-configure-kodi-media-center
-thumbnail: wp-content/uploads/2017/03/Remote-Control-mini.jpg
+image: /wp-content/uploads/2017/03/Remote-Control-mini.jpg
 excerpt: In this article I would like to show you, step by step, how to configure your Kodi Media Center.
 categories: Multimedia
 ---

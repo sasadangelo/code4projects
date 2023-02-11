@@ -3,7 +3,7 @@ layout: post
 title: A Step by step tutorial to create your first Elastic Load Balancer
 post_series_id: getting-started-with-amazon-web-services
 slug: elastic-load-balancer-tutorial
-thumbnail: wp-content/uploads/2021/06/Elastic-Load-Balancer.png
+image: /wp-content/uploads/2021/06/Elastic-Load-Balancer.png
 excerpt: In this article, I want to show you how to create your first AWS Elastic Load Balancer in the Amazon AWS platform.
 categories: Cloud
 ---

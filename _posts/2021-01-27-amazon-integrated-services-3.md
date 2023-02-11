@@ -3,7 +3,7 @@ layout: post
 title: Amazon Integrated Services (part 2)
 post_series_id: getting-started-with-amazon-web-services
 slug: amazon-integrated-services-3
-thumbnail: wp-content/uploads/2021/01/CloudWatch-CloudFront-SNS-CloudFormation.png
+image: /wp-content/uploads/2021/01/CloudWatch-CloudFront-SNS-CloudFormation.png
 excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
 categories: Cloud
 ---

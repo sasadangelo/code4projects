@@ -3,7 +3,7 @@ layout: post
 title: How to install PostgreSQL on Docker
 post_series_id: getting-started-with-docker
 slug: how-to-install-postgresql-on-docker
-thumbnail: wp-content/uploads/2018/06/postgres_and_docker.png
+image: /wp-content/uploads/2018/06/postgres_and_docker.png
 excerpt: This is the second article of Getting started with Docker series. You&#039;ll learn how to install PostgreSQL on a Docker container.
 categories: 
 - Virtualization
