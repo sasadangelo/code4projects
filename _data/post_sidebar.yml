@@ -123,3 +123,10 @@
     link: /getting-started-with-yaml/
   - name: "Exploring the Depths of YAML: Advanced Features and Functionality"
     link: /yaml-advanced-feature/
+- post_series_id: getting-started-with-html
+  post_series_title: "Getting Started with HTML: A Beginner's Guide"
+  post_series:
+  - name: "Getting Started with HTML: A Beginner's Guide"
+    link: /getting-started-with-html/
+  - name: "Mastering the Basics of CSS: A Beginner's Guide"
+    link: /mastering-basics-css/
