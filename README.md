@@ -6,6 +6,8 @@ Code4Projects is my programming blog where I write everything I learned in over 
 
 The feature included in the [latest version](https://github.com/sasadangelo/code4projects/releases/tag/0.0.1) are the following:
 
+### 0.0.1 Release
+
 * Support for posts and pages
 * Home page with hero image and box
 * Home page with Icon and feature boxes
@@ -26,3 +28,8 @@ The feature included in the [latest version](https://github.com/sasadangelo/code
 * Draft posts
 * Post series
 * Newsletter
+
+* Contact Form with FormSpree
+* CSS Print
+* W3C Syntax Validation
+* Read Feed
