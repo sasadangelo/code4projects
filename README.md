@@ -29,6 +29,8 @@ The feature included in the [latest version](https://github.com/sasadangelo/code
 * Post series
 * Newsletter
 
+### 0.0.2 Release
+
 * Contact Form with FormSpree
 * CSS Print
 * W3C Syntax Validation
