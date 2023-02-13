@@ -2,7 +2,7 @@
 layout: post
 title: "Mastering DNS Commands: A Guide to Managing DNS with nslookup, dig, and more"
 slug: mastering-dns-commands
-thumbnail: assets/img/rds-logo.png
+image: assets/img/rds-logo.png
 excerpt: DNS (Domain Name System) is the backbone of the internet, enabling users to access websites and other resources using easy-to-remember domain names, instead of IP addresses.
 categories:
   - Networking

@@ -2,7 +2,7 @@
 layout: post
 title: "An Introduction to Artificial Intelligence: Understanding the Basics and State of the Art"
 slug: introduction-artificial-intelligence
-thumbnail: assets/img/rds-logo.png
+image: assets/img/rds-logo.png
 excerpt: Artificial Intelligence (AI) is a rapidly growing field where machines have the ability to perform tasks that would normally require human intelligence, such as perception, reasoning, decision making, and learning.
 categories:
   - Artificial Intelligence
