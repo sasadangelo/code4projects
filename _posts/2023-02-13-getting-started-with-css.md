@@ -50,7 +50,7 @@ h1 {
     {% endhighlight %}
 
 
-In this example, the selector h1 applies the styles to all h1 headings on the page. The declaration block sets the text color to blue, the font size to 36 pixels and the text alignment to center. It's important to note that multiple CSS rules can apply to a single HTML element, and the order of the rules in the CSS file determines which styles will take priority (known as the cascading effect). The last style declared for a given property wins and overrides any previous styles.
+In this example, the selector h1 applies the styles to all h1 headings on the page. The declaration block sets the text color to blue, the font size to 36 pixels, and the text alignment to the center. It's important to note that multiple CSS rules can apply to a single HTML element, and the order of the rules in the CSS file determines which styles will take priority (known as the cascading effect). The last style declared for a given property wins and overrides any previous styles.
 
 ## CSS Inheritance
 
@@ -58,9 +58,9 @@ In this example, the selector h1 applies the styles to all h1 headings on the pa
 
 _Photo from [https://sites.google.com/site/csstricksandtips](https://sites.google.com/site/csstricksandtips/home/css-progression)_
 
-In CSS, inheritance refers to the mechanism by which certain CSS property values are passed from a parent element to its children. This allows for a more efficient and organized way to apply styles to elements in a HTML document.
+In CSS, inheritance refers to the mechanism by which certain CSS property values are passed from a parent element to its children. This allows for a more efficient and organized way to apply styles to elements in an HTML document.
 
-For example, if you set the font-size property on a body element, all its child elements will also inherit that font-size property value. If you then set the font-size property on a child element, it will override the inherited value and apply its own unique font-size value.
+For example, if you set the font-size property on a body element, all its child elements will also inherit that font-size property value. If you then set the font-size property on a child element, it will override the inherited value and apply its unique font-size value.
 
 It's important to note that not all CSS properties are inherited. For example, the padding and margin properties are not inherited.
 
@@ -72,10 +72,10 @@ Inheritance can be a useful tool for maintaining consistency in styling and redu
 
 _Photo from [https://www.atatus.com](https://www.coderepublics.com/CSS/css-selector.php)_
 
-In CSS, selectors are used to select elements on a web page that you want to apply styles to. There are several types of selectors, including:
+In CSS, selectors are used to select elements on a web page that you want to apply styles. There are several types of selectors, including:
 
 * **Element selectors**: Select elements based on their tag name, such as "p" for paragraphs or "a" for links.
-* **Class selectors**: Select elements based on their class attribute, using a period (.) before the class name. For example, ".my-class" would select all elements with the class "my-class".
+* **Class selectors**: Select elements based on their class attributes, using a period (.) before the class name. For example, ".my-class" would select all elements with the class "my-class".
 * **ID selectors**: Select elements based on their id attribute, using a hash (#) before the id name. For example, "#my-id" would select the element with the id "my-id".
 * **Attribute selectors**: Select elements based on their attributes and attribute values. For example, "[href='https://example.com']" would select all elements with an href attribute equal to "https://example.com".
 
@@ -85,9 +85,9 @@ Cascading refers to how styles are applied to elements when multiple stylesheets
 * **Origin**: Styles that are defined in the user's browser have lower priority than those defined in the author's stylesheet.
 * **Importance**: Styles that are marked as "!important" have higher priority than those that are not.
 
-Finally, cascading also works with the order of styles in the CSS file, styles defined later on the file will overwrite previous styles.
+Finally, cascading also works with the order of styles in the CSS file, styles defined later on in the file will overwrite previous styles.
 
-It's important to keep in mind that specificity and cascading rules when working with CSS to avoid unexpected results.
+It's important to keep in mind specificity and cascading rules when working with CSS to avoid unexpected results.
 
 **Element Selector**:
 
@@ -125,7 +125,7 @@ a[href='https://example.com'] {
 }
     {% endhighlight %}
 
-It's also possible to use attribute selectors to match elements with a specific attribute value prefix, suffix, or a substring by using "^", "$", "*" respectively.
+It's also possible to use attribute selectors to match elements with a specific attribute value prefix, suffix, or substring by using "^", "$", "*" respectively.
 
     {% highlight css %}
 /* This will select all <input> elements with a name attribute that starts with "user" and make their border red */
@@ -146,7 +146,7 @@ _Photo from [https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/css-b
 
 The box model is a concept in CSS that describes the layout of an HTML element as a rectangular box. Each box has four main parts: the content, padding, border, and margin.
 
-* **Content**: This is the area where the element's content is displayed, such as text or images. A Content element has a size expressed with the properties width and height. You can also use properties like min-width, min-heigth, max-width, and max-height to declare the minimun and maximum size.
+* **Content**: This is the area where the element's content is displayed, such as text or images. A Content element has a size expressed by the properties' width and height. You can also use properties like min-width, min-heigth, max-width, and max-height to declare the minimum and maximum size.
 
 * **Padding**: This is the space between the content and the border. You can control the padding using the padding property and its related properties such as padding-top, padding-right, padding-bottom, padding-left.
 
@@ -154,7 +154,7 @@ The box model is a concept in CSS that describes the layout of an HTML element a
 
 * **Margin**: This is the space outside of the border. You can control the margin using the margin property and its related properties such as margin-top, margin-right, margin-bottom, margin-left.
 
-When you set the width and height of an element, by default, it's the width and height of the content area. However, you can include the padding, border and margin by using the box-sizing property with value "border-box". The box-sizing property in CSS determines how the dimensions of an element are calculated. It specifies whether the width and height of an element should include the border and padding or not. There are two possible values for box-sizing:
+When you set the width and height of an element, by default, it's the width and height of the content area. However, you can include the padding, border, and margin by using the box-sizing property with the value "border-box". The box-sizing property in CSS determines how the dimensions of an element are calculated. It specifies whether the width and height of an element should include the border and padding or not. There are two possible values for box-sizing:
 
 1. **content-box** (the default value): the dimensions of an element are determined only by its content, excluding the border and padding.
 
@@ -184,15 +184,15 @@ _Photo from [https://www.reddit.com](https://www.reddit.com/r/webdev/comments/ub
 
 Layout in CSS refers to the positioning and arrangement of elements on a web page. There are several layout techniques that you can use to control the position of elements, such as:
 
-* **display** property: This property is used to specify the type of box an element should generate. The most common values are block, inline, and inline-block. Block elements take up the full width of their parent container, and create a new line after them. Inline elements only take up as much width as their content, and do not create a new line after them. Inline-block elements are similar to inline elements, but they can have dimensions set with width and height properties, and they also create a new line after them.
+* **display** property: This property is used to specify the type of box an element should generate. The most common values are block, inline, and inline-block. Block elements take up the full width of their parent container, and create a new line after them. Inline elements only take up as much width as their content and do not create a new line after them. Inline-block elements are similar to inline elements, but they can have dimensions set with width and height properties, and they also create a new line after them.
 
-* **position** property: This property is used to specify the positioning of an element. The possible values are static, relative, absolute, and fixed. Static is the default value, and means that the element will be positioned according to the normal flow of the document. Relative means that the element will be positioned relative to its normal position, using the left, right, top, and bottom properties. Absolute means that the element will be positioned relative to its nearest positioned ancestor, using the same properties. Fixed means that the element will be positioned relative to the viewport, and it will remain in the same position even when the page is scrolled.
+* **position** property: This property is used to specify the positioning of an element. The possible values are static, relative, absolute, and fixed. Static is the default value and means that the element will be positioned according to the normal flow of the document. Relative means that the element will be positioned relative to its normal position, using the left, right, top, and bottom properties. Absolute means that the element will be positioned relative to its nearest positioned ancestor, using the same properties. Fixed means that the element will be positioned relative to the viewport, and it will remain in the same position even when the page is scrolled.
 
 * **float** property: This property is used to make an element float to the left or right of its parent container. The possible values are left and right. When an element is floated, it will move to the left or right of its parent container, and other elements will flow around it.
 
-* **flexbox** and **grid** layout: These are advanced layout techniques that are used to create flexible and responsive layouts. Flexbox is used to create a layout in one dimension, either a row or a column, and grid is used to create a layout in two dimensions, rows and columns. Both flexbox and grid provide powerful layout capabilities that allow you to control the size, alignment, and positioning of elements on a web page in a more flexible and efficient way.
+* **flexbox** and **grid** layout: These are advanced layout techniques that are used to create flexible and responsive layouts. Flexbox is used to create a layout in one dimension, either a row or a column, and grid is used to create a layout in two dimensions, rows, and columns. Both flexbox and a grid provide powerful layout capabilities that allow you to control the size, alignment, and positioning of elements on a web page in a more flexibly and efficiently way.
 
-It's important to keep in mind that the layout techniques should be used in a combination to make the layout of a webpage more optimal and adaptable to different viewports. Additionally, it's good practice to use semantic HTML and to style according to the meaning of the elements, as this will make the layout more robust and maintainable.
+It's important to keep in mind that the layout techniques should be used in combination to make the layout of a webpage more optimal and adaptable to different viewports. Additionally, it's good practice to use semantic HTML and to style according to the meaning of the elements, as this will make the layout more robust and maintainable.
 
 ## Typography in CSS
 
@@ -202,7 +202,7 @@ _Photo from [https://wpdaddy.com](https://wpdaddy.com/10-best-examples-of-css-fo
 
 Typography in CSS refers to the control of the font, size, and spacing of text on a web page. Here are some key concepts in typography:
 
-* **font-family**: This property is used to specify the font for an element. The value can be a specific font name, such as "Arial" or "Times New Roman", or a generic font family, such as "serif" or "sans-serif". It's also possible to specify a list of fonts, in case the first one is not available in the client device, the next one will be used.
+* **font-family**: This property is used to specify the font for an element. The value can be a specific font name, such as "Arial" or "Times New Roman", or a generic font family, such as "serif" or "sans-serif". It's also possible to specify a list of fonts, in case the first one is not available on the client device, the next one will be used.
 
 * **font-size**: This property is used to specify the size of the text. The value can be specified in different units, such as pixels (px), points (pt), or ems (em).
 
@@ -240,9 +240,9 @@ Color and background in CSS refer to the control of the color and background of 
 
 * **background-size**: This property is used to specify the size of the background image. The value can be specified in several ways, such as using keywords (e.g. "cover"), length units (e.g. "200px 100px"), or percentages (e.g. "50% 50%").
 
-* **background-clip** and **background-origin**: These properties are used to specify the area where the background image and color should be applied. The possible values of background-clip are border-box, padding-box and content-box, and the possible values of background-origin are padding-box and content-box.
+* **background-clip** and **background-origin**: These properties are used to specify the area where the background image and color should be applied. The possible values of background-clip are border-box, padding-box, and content-box, and the possible values of background-origin are padding-box and content-box.
 
-It's important to keep in mind that color and background can greatly impact the aesthetics of a web page, and they should be used in a harmonious way to create a visually pleasing design. Also, it's good practice to consider the accessibility guidelines when choosing the color combinations and contrasts to ensure that the text is legible for users with visual impairments.
+It's important to keep in mind that color and background can greatly impact the aesthetics of a web page, and they should be used in a harmonious way to create a visually pleasing design. Also, it's good practice to consider the accessibility guidelines when choosing color combinations and contrasts to ensure that the text is legible for users with visual impairments.
 
 ## Transitions and animations in CSS
 
@@ -270,7 +270,7 @@ Transitions and animations in CSS are used to create smooth and fluid visual eff
 }
     {% endhighlight %}
 
-The keyframes need to be defined separately, usually in a different css file or in a style tag. The keyframes rule is used to define the styles that the animation should have at different points in time.
+The keyframes need to be defined separately, usually in a different CSS file or in a style tag. The keyframes rule is used to define the styles that the animation should have at different points in time.
 
     {% highlight css %}
 @keyframes my-animation {
@@ -283,9 +283,9 @@ The keyframes need to be defined separately, usually in a different css file or 
 }
     {% endhighlight %}
 
-This animation will rotate the element from 0degrees to 360degrees in 1 second, with an ease-in-out timing function, and will repeat infinitely with a delay of 0.5s.
+This animation will rotate the element from 0 degrees to 360 degrees in 1 second, with an ease-in-out timing function, and will repeat infinitely with a delay of 0.5s.
 
-It's important to keep in mind that transitions and animations can greatly enhance the user experience and make a web page more interactive. However, it's good practice to use them in a subtle and appropriate way, to avoid overwhelming the user and to make sure that the animation does not interfere with the functionality of the page.
+It's important to keep in mind that transitions and animations can greatly enhance the user experience and make a web page more interactive. However, it's good practice to use them in a subtlly and appropriatly way, to avoid overwhelming the user and to make sure that the animation does not interfere with the functionality of the page.
 
 ## Responsive design in CSS 
 
@@ -304,9 +304,9 @@ Responsive design in CSS is used to create web pages that adapt to different scr
 }
     {% endhighlight %}
 
-* **flexbox** and **grid layout**: These layout techniques are very useful for responsive design because they allow you to create flexible and adaptive layouts that adjust to the size of the viewport. Flexbox is used to create a layout in one dimension, either a row or a column, and grid is used to create a layout in two dimensions, rows and columns.
+* **flexbox** and **grid layout**: These layout techniques are very useful for responsive design because they allow you to create flexible and adaptive layouts that adjust to the size of the viewport. Flexbox is used to create a layout in one dimension, either a row or a column, and a grid is used to create a layout in two dimensions, rows, and columns.
 
-* **viewport**: This is the area of the browser window where the web page is displayed. The viewport can be controlled using the viewport meta tag, this will allows you to set the width and initial scale of the viewport, and it will affect the layout of the page and the sizes of elements on the page.
+* **viewport**: This is the area of the browser window where the web page is displayed. The viewport can be controlled using the viewport meta tag, this will allow you to set the width and initial scale of the viewport, and it will affect the layout of the page and the sizes of elements on the page.
 
     {% highlight css %}
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -314,7 +314,7 @@ Responsive design in CSS is used to create web pages that adapt to different scr
 
 It's important to keep in mind that responsive design is crucial for creating a good user experience in today's web, where people access the internet from a wide range of devices and screen sizes. Additionally, it's good practice to test the layout on different devices and screen sizes during the development process to ensure that the layout is consistent and adaptable across different platforms.
 
-## How to Include CSS in web page
+## How to Include CSS in a web page
 
 ![How to Include CSS in web page]({{ site.baseurl }}/assets/img/css-link-html.webp){:width="450" height="197" .responsive_img}
 
@@ -349,7 +349,7 @@ External CSS refers to writing CSS styles in a separate file with a .css extensi
 </head>
     {% endhighlight %}
 
-In conclusion, while inline and internal CSS are quick and easy to implement, it is best practice to use external CSS in web development for maintainability and organization of code.
+In conclusion, while inline and internal CSS are quick and easy to implement, it is best practice to use external CSS in web development for the maintainability and organization of code.
 
 ## Applying CSS Principles to Create a Website Style
 
@@ -464,4 +464,4 @@ https://github.com/sasadangelo/html-hero/tree/master/part-1/lesson-11
 
 ## Conclusion
 
-In conclusion, CSS is an essential tool for web design, allowing for the creation of beautiful and functional websites. From understanding selectors and cascading to exploring the box model, typography, color and background, transitions and animations, and responsive design, this article has covered the fundamental concepts and techniques of CSS. By mastering CSS, you have the power to transform your webpages and bring your vision to life. Happy styling!
+In conclusion, CSS is an essential tool for web design, allowing for the creation of beautiful and functional websites. From understanding selectors and cascading to exploring the box model, typography, color and background, transitions and animations, and responsive design, this article has covered the fundamental concepts and techniques of CSS. By mastering CSS, you have the power to transform your web pages and bring your vision to life. Happy styling!
