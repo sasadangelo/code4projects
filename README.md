@@ -7,7 +7,7 @@ Code4Projects is my programming blog where I write everything I learned in over 
 The feature included in the [latest version](https://github.com/sasadangelo/code4projects/releases/tag/0.0.1) are the following:
 
 * Support for posts and pages
-* Home page with here image and box
+* Home page with hero image and box
 * Home page with Icon and feature boxes
 * Sitemaps including posts and pages
 * Robots.txt
