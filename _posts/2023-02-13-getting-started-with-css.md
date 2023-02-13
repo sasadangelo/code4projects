@@ -270,7 +270,7 @@ Transitions and animations in CSS are used to create smooth and fluid visual eff
 }
     {% endhighlight %}
 
-The keyframes need to be defined separately, usually in a different css file or in a <style> tag. The keyframes rule is used to define the styles that the animation should have at different points in time.
+The keyframes need to be defined separately, usually in a different css file or in a style tag. The keyframes rule is used to define the styles that the animation should have at different points in time.
 
     {% highlight css %}
 @keyframes my-animation {
