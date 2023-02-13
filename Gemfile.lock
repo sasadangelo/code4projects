@@ -74,7 +74,7 @@ DEPENDENCIES
   jekyll-feed
   jekyll-paginate-v2
   jekyll-redirect-from
-  jekyll-seo-tag!
+  jekyll-seo-tag
 
 BUNDLED WITH
    2.3.20
