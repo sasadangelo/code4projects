@@ -7,8 +7,6 @@ image: /assets/img/css-logo.webp
 excerpt: In this article, we will continue to build our website with HTML and CSS. Reading it you will learn how to style your website.
 categories:
   - Programming
-sitemap:
-  exclude: 'yes'
 ---
 
 ![Docker]({{ site.baseurl }}/assets/img/css-logo.webp){:width="200" height="200" .responsive_img}

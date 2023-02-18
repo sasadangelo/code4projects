@@ -119,18 +119,17 @@ However, despite these advances, there are still many challenges to be overcome 
 
 Common sense reasoning: AI currently lacks the ability to understand and reason about the world in the same way that humans do. It struggles to understand concepts such as causality, context, and intention, which are essential for tasks such as natural language understanding and decision making.
 
-Generalization: AI models are often highly specialized and perform well on specific tasks, but they struggle to generalize to new situations or data. This makes it difficult for them to adapt to changing environments or to perform well on tasks that are similar but not identical to the ones they were trained on.
+* **Generalization**: AI models are often highly specialized and perform well on specific tasks, but they struggle to generalize to new situations or data. This makes it difficult for them to adapt to changing environments or to perform well on tasks that are similar but not identical to the ones they were trained on.
 
-Handling uncertainty: AI models are often based on probability and statistics, but they struggle to handle uncertain or ambiguous situations. This makes it difficult for them to make decisions in situations where the data is incomplete, noisy, or contradictory.
+* **Handling uncertainty**: AI models are often based on probability and statistics, but they struggle to handle uncertain or ambiguous situations. This makes it difficult for them to make decisions in situations where the data is incomplete, noisy, or contradictory.
 
-Emotion and creativity: AI currently lacks the ability to understand, generate or express emotions. It also lacks the ability to generate creative ideas like humans do.
+* **Emotion and creativity**: AI currently lacks the ability to understand, generate or express emotions. It also lacks the ability to generate creative ideas like humans do.
 
-Explainability: AI models are often complex and opaque, making it difficult to understand how they arrived at a particular decision. This lack of explainability makes it difficult to trust the decisions made by AI systems, particularly in sensitive or critical applications.
+* **Explainability**: AI models are often complex and opaque, making it difficult to understand how they arrived at a particular decision. This lack of explainability makes it difficult to trust the decisions made by AI systems, particularly in sensitive or critical applications.
 
-Human-like decision making: AI still lacks the ability to make decisions in the same way as humans. They can only make decisions based on their programming and data they were trained on, they lack the ability to understand the environment and the context.
+* **Human-like decision making**: AI still lacks the ability to make decisions in the same way as humans. They can only make decisions based on their programming and data they were trained on, they lack the ability to understand the environment and the context.
 
 Overall, while the current state of the art in AI is quite advanced, there are still many challenges to be overcome and many areas where AI is not yet able to perform as well as humans. However, research in AI is ongoing, and it is likely that many of these challenges will be addressed in the future.
-
 
 ## Conclusion
 
