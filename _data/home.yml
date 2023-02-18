@@ -3,7 +3,7 @@ hero-area:
   hero-message-text: >
     My name is Salvatore and I am a professional Software Engineer with over 30 years of experience. Code4Projects is the website where I write 
     everything I learn on software programming. For more details, read more <a href="about-me/">about me</a>.
-  hero-background-image: /assets/img/code4projects-image-hero.jpeg
+  hero-background-image: /assets/img/code4projects-image-hero.webp
 icon-area:
   - icon-image: assets/img/starthere-icon.png
     icon-title: New User?
