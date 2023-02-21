@@ -9,7 +9,7 @@ categories:
   - Programming
 ---
 
-![Docker]({{ site.baseurl }}/assets/img/css-logo.webp){:width="200" height="200" .responsive_img}
+![CSS Logo]({{ site.baseurl }}/assets/img/css-logo.webp){:width="200" height="200" .responsive_img}
 
 # Mastering the Basics of CSS: A Beginner's Guide
 
