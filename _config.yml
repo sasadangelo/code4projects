@@ -4,7 +4,7 @@ description: Code4Projects is a website about software programming where I write
 baseurl: ""
 url: "https://www.code4projects.net"
 copyright: Code4Projects, Copyright Salvatore D'Angelo © 2016-2022.
-logo: wp-content/uploads/2020/06/code4projects-logo-mini.png
+logo: assets/img/code4projects-logo-mini.webp
 
 # Google Analytics
 google_analytics: G-62DF79P0NY
@@ -68,4 +68,4 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-redirect-from
 
-exclude: [utility]
+exclude: [utility, resources]
