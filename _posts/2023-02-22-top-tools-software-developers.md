@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Top Tools Every Software Developer Should Consider in 2023"
-slug: tools-software-developers-2023
+slug: top-tools-software-developers
 image: /assets/img/top-software-development-tools.webp
 excerpt: Discover the top software development tools to take your coding game to the next level in 2023. From code editors to network analyzers, this article highlights the must-have tools for developers.
 categories:
