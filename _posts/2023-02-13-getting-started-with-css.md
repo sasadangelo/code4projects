@@ -355,7 +355,7 @@ In conclusion, while inline and internal CSS are quick and easy to implement, it
 
 _Photo from [https://fronty.com](https://fronty.com/how-long-does-it-take-to-learn-html-css/)_
 
-In order to enhance the look and feel of the 5 pages created in the previous article "Getting Started with HTML" (https://www.code4projects.net/getting-started-with-html/), we will now create a CSS stylesheet that will apply the principles discussed earlier to these pages.
+In order to enhance the look and feel of the 5 pages created in the previous article [Getting Started with HTML](https://www.code4projects.net/getting-started-with-html/), we will now create a CSS stylesheet that will apply the principles discussed earlier to these pages.
 
 First, it is necessary to include the following line of code in each of the 5 HTML pages:
 
