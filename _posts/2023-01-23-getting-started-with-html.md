@@ -20,9 +20,9 @@ You can find the source code of this guide in the part-1 folder of [this reposit
 
 ## What is HTML?
 
-**Hypertext Markup Language** (**HTML**) is the language used for creating web pages and applications. It allows developers to create web paages with a web with paragraphs, headings, links, images, video, and more. 
+**Hypertext Markup Language** (**HTML**) is the language used for creating web pages and applications. It allows developers to create web pages with with paragraphs, headings, links, images, video, and more. 
 
-HTML uses a series of Elements each one composed of two Tags. Tags are enclosed in angle brackets and typically come in pairs, with an opening and closing tag. The content goes between the opening and closing tags. For example, the opening tag &lt;p&gt; represents a paragraph, and the closing tag &lt;/p&gt; indicates the end of the paragraph. 
+HTML uses a series of Elements each one composed of two Tags. Tags are enclosed in angle brackets and typically come in pairs, with an opening and closing tag. The content goes between them. For example, the opening tag &lt;p&gt; represents a paragraph, and the closing tag &lt;/p&gt; indicates the end of the paragraph. 
 
 By using HTML, developers can create rich, interactive, and engaging web pages that can be accessed by users across the world.
 
@@ -40,9 +40,9 @@ Over the years, different HTML versions were released. Here is a brief overview 
 
 * **HTML 2.0**: This version of HTML was released in 1995 and added support for tables, text formatting, and additional multimedia elements like images and audio files.
 
-* **HTML 3.0**: The third version of HTML, released in 1997, introduced support for forms, scripts, and other advanced features. It also added support for style sheets, which allowed developers to separate the presentation of a web page from its content.
+* **HTML 3.2**: The third version of HTML, released in 1997, introduced support for forms, scripts, and other advanced features. It also added support for style sheets, which allowed developers to separate the presentation of a web page from its content.
 
-* **HTML 4.0**: This version of HTML, released in 1999, added support for more multimedia elements and introduced new tags for creating interactive web applications. It also added support for internationalization and the ability to use XML-based languages like MathML and SVG.
+* **HTML 4.01**: This version of HTML, released in 1999, added support for more multimedia elements and introduced new tags for creating interactive web applications. It also added support for internationalization and the ability to use XML-based languages like MathML and SVG.
 
 * **HTML 5**: The latest version of HTML, released in 2014, added many new features and capabilities, including support for video and audio playback, local storage, and offline web applications. It also introduced a new approach to web development called "responsive design", which allows web pages to adapt to different screen sizes and devices.
 
@@ -50,7 +50,7 @@ The history of HTML, however, has not always been linear. At a certain point, th
 
 XHTML, which stands for Extensible Hypertext Markup Language, is a markup language that is based on HTML but uses stricter syntax rules. It was developed in the late 1990s as a way to make HTML more consistent and compatible with other XML-based languages.
 
-* **XHTML 1.0**, the first version of XHTML, XHTML 1.0, was released in 2000 and was based on HTML 4.0. It introduced several changes to the HTML language, including the use of lowercase tags, the requirement for all tags to be closed, and the requirement to use quotation marks around attribute values.
+* **XHTML 1.0**, the first version of XHTML, was released in 2000 and was based on HTML 4.0. It introduced several changes to the HTML language, including the use of lowercase tags, the requirement for all tags to be closed, and the requirement to use quotation marks around attribute values.
 
 * **XHTML 1.1**, released in 2001, added support for additional modules, such as ruby annotations and bidirectional text, and introduced additional rules for creating well-formed documents.
 
@@ -114,7 +114,7 @@ So, to sum up, Elements are used to structure and format the content of a web pa
 
 ## The head tag
 
-The &lt;head&gt; element is a container for metadata (data about the document, such as its title, character set, styles, and scripts) in an HTML. The metadata is not displayed on the page but is used by browsers and search engines to understand the content of the page.
+The &lt;head&gt; element is a container for HTML metadata (data about the document, such as its title, character set, styles, and scripts). The metadata is not displayed on the page but is used by browsers and search engines to understand the content of the page.
 
 The &lt;head&gt; element should be placed at the beginning of the &lt;html&gt; element and must contain a &lt;title&gt; element, which specifies the title of the document. The &lt;head&gt; element can also include other elements, such as &lt;style&gt; for styling the page with CSS, &lt;link&gt; for linking to external resources, and &lt;meta&gt; for defining metadata, such as the character set, keywords, and description of the page.
 
@@ -221,7 +221,7 @@ Download the index.html file of [lesson 4](https://github.com/sasadangelo/html-h
 
 ## Text Formatting with bold, italic, and underline
 
-Yes, HTML supports several ways to format text, including bold, italic, and underline. Here's how to use each one. To make text bold, you can use the &lt;strong&gt; or &lt;b&gt; tag. For example:
+HTML supports several ways to format text, including bold, italic, and underline. Here's how to use each one. To make text bold, you can use the &lt;strong&gt; or &lt;b&gt; tag. For example:
 
     {% highlight html %}
 <p>This text is <strong>bold</strong></p>
@@ -261,7 +261,7 @@ You can also use the target attribute to specify how the link should be opened. 
 <a href="https://www.example.com" target="_blank">This is a link that opens in a new tab</a>
     {% endhighlight %}
 
-In addition to linking to other web pages, you can also use the &lt;/a&gt; tag to create links within the same page. This is known as an "anchor" link, and it's created by using the id attribute to give an element a unique name and then using that name as the destination of the link.
+In addition to linking to other web pages, you can also use the &lt;a&gt; tag to create links within the same page. This is known as an "anchor" link, and it's created by using the id attribute to give an element a unique name and then using that name as the destination of the link.
 
 Here's an example:
 
@@ -355,7 +355,7 @@ For our example website I created two to four images for each page and placed th
 
 In this article, we have covered the basics of building a website using HTML. We began by discussing the structure of a basic HTML document and the importance of the &lt;head&gt; and &lt;body&gt; tags. We then moved on to the different elements, tags, and attributes that are used to create the content of a web page, including headlines, paragraphs, links, lists, and images.
 
-By following the step-by-step instructions provided in this article, you should now have a basic understanding of how to create a simple website using HTML. However, there is still much more to learn. In the next article, we will continue to build upon the skills learned here by adding images, quotes, and justified paragraphs and we will style our pages using CSS.
+By following the step-by-step instructions provided in this article, you should now have a basic understanding of how to create a simple website using HTML. However, there is still much more to learn. In the next article, we will continue to build upon the skills learned here by adding quotes, and justified paragraphs and we will style our pages using CSS.
 
 In conclusion, HTML is the backbone of any website and it is important to understand its basics and structure. With the knowledge of HTML and CSS, you will be able to create dynamic and visually appealing websites. Stay tuned for the next article where we will dive deeper into CSS and how to style our HTML documents.
 
