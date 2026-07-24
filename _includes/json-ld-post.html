@@ -1,0 +1,28 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ page.title | escape }}",
+  "description": "{{ page.excerpt | strip_html | escape }}",
+  "image": "{{ site.url }}{{ site.baseurl }}{{ page.image }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.sitemap.lastmod | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "Salvatore D'Angelo",
+    "url": "{{ site.url }}{{ site.baseurl }}/about-me/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}{{ site.baseurl }}/{{ site.logo }}"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ site.baseurl }}{{ page.url }}"
+  }
+}
+</script>

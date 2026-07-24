@@ -8,10 +8,10 @@ sitemap:
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<sitemap>
 		<loc>{{ site.url }}{{ site.baseurl }}/post-sitemap.xml</loc>
-		<lastmod>2022-12-24</lastmod>
+		<lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
 	</sitemap>
 	<sitemap>
 		<loc>{{ site.url }}{{ site.baseurl }}/page-sitemap.xml</loc>
-		<lastmod>2022-12-24</lastmod>
+		<lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
 	</sitemap>
 </sitemapindex>

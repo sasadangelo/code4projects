@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Top Programming Languages to Learn in 2023: A Comprehensive Guide"
+title: "Best Programming Languages to Learn in 2023: A Developer's Guide"
 slug: best-programming-languages-2023
 image: /assets/img/top-programming-languages-2023.webp
 excerpt: This article lists the best programming languages to learn in 2023 for beginners and experienced developers.

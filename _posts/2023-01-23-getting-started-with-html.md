@@ -4,7 +4,7 @@ title: "Getting Started with HTML: A Beginner's Guide"
 post_series_id: getting-started-with-html
 slug: getting-started-with-html
 image: /assets/img/html.webp
-excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
+excerpt: In this article, I will introduce you to HTML, the language that forms the foundation of the web. Step by step you will build a multi-page website with paragraphs, headlines, links, and images.
 categories:
   - Programming
 ---

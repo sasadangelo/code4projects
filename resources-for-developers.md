@@ -2,6 +2,7 @@
 layout: page
 title: Resources for Developers
 slug: resources-for-developers
+excerpt: A curated list of websites, blogs, free ebooks, and tools that every software developer should bookmark — covering programming, game dev, architecture, and tech communities.
 ---
 # Resources for Developers
 

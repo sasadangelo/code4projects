@@ -7,6 +7,11 @@ pagination:
   <div id="blog-container">
     <div id="blog-content">
       <h1>Category Archives: {{ page.title }}</h1>
+      {% if page.content and page.content != '' %}
+      <div class="category-description" style="margin-bottom: 2rem;">
+        {{ content }}
+      </div>
+      {% endif %}
       {% for post in paginator.posts %}
         <div class="blog-entry">
           <div class="blog-entry-image">

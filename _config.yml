@@ -6,6 +6,13 @@ baseurl: "/code4projects"
 copyright: Code4Projects, Copyright Salvatore D'Angelo © 2016-2026.
 logo: assets/img/code4projects-logo-mini.webp
 
+author:
+  name: Salvatore D'Angelo
+  twitter: code4projects
+
+twitter:
+  username: code4projects
+
 # Google Analytics
 google_analytics: G-62DF79P0NY
 google_site_verification: BgoS4TSe3LRCda2BIF8h37ezeXG3KNaVBqvf9syjmO4

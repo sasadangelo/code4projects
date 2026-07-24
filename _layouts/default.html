@@ -30,6 +30,9 @@
 
     {% feed_meta %}
     {% seo title=false %}
+    {% if page.layout == 'post' %}
+    {% include json-ld-post.html %}
+    {% endif %}
     
     {% if site.google_analytics and jekyll.environment == 'production' %}
     {% include analytics.html %}
