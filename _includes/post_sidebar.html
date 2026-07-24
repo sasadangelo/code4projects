@@ -24,15 +24,20 @@
     {% endfor %}
   {% endfor %}
 {% else %}
-  <div class="blog-sidebar-title">Categories</div>
-  {% for category in site.categories %}
-    <nav>
-      <ul>
+  <div class="post-sidebar-title">Categories</div>
+  <nav>
+    <ul>
+      {% assign sorted_categories = site.categories | sort %}
+      {% for category in sorted_categories %}
         {% capture category_name %}{{ category | first }}{% endcapture %}
-        <li><a href="{{ site.baseurl }}/category/{{ category_name | | slugify }}/">{{ category_name }}</a></li>
-      </ul>
-    </nav>
-  {% endfor %}
+        {% assign category_posts = category | last %}
+        <li>
+          <a href="{{ site.baseurl }}/category/{{ category_name | slugify }}/">
+            <span>{{ category_name }}</span>
+            <span class="sidebar-category-count">{{ category_posts | size }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
 {% endif %}
-
-

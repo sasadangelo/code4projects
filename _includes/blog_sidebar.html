@@ -1,9 +1,16 @@
 <div class="blog-sidebar-title">Categories</div>
 <nav>
   <ul>
-    {% for category in site.categories %}
+    {% assign sorted_categories = site.categories | sort %}
+    {% for category in sorted_categories %}
       {% capture category_name %}{{ category | first }}{% endcapture %}
-      <li><a href="{{ site.baseurl }}/category/{{ category_name | | slugify }}/">{{ category_name }}</a></li>
+      {% assign category_posts = category | last %}
+      <li>
+        <a href="{{ site.baseurl }}/category/{{ category_name | slugify }}/">
+          <span>{{ category_name }}</span>
+          <span class="sidebar-category-count">{{ category_posts | size }}</span>
+        </a>
+      </li>
     {% endfor %}
-</ul>
+  </ul>
 </nav>

@@ -519,14 +519,7 @@ fastmcp run server.py --transport streamable-http --port 8080
 
 Now that we have covered both protocols, it is worth stepping back and seeing how they fit together.
 
-| Dimension | MCP | A2A |
-|-----------|-----|-----|
-| Who is talking? | Agent ↔ Tool | Agent ↔ Agent |
-| Direction | Agent calls tool | Agents are peers |
-| Initiated by | The LLM's tool-call | Either agent |
-| Typical transport | stdio or HTTP | HTTP |
-| Defined by | Anthropic (open) | Google (open) |
-| Primary use | Extend agent capabilities | Delegate tasks between agents |
+![MCP Dimensions]({{ site.baseurl }}/assets/img/mcp-dimensions.png)
 
 In a real system you use both together:
 
