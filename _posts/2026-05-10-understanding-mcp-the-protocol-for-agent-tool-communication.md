@@ -53,7 +53,7 @@ This is the same idea that made HTTP so powerful: once everyone agreed on the pr
 
 An MCP deployment always contains three actors.
 
-![MCP Architecture]({{ site.baseurl }}/assets/img/a2a-vs-mcp.png)
+![MCP Architecture]({{ site.baseurl }}/assets/img/mcp-architecture.png)
 
 ### The MCP Host
 
