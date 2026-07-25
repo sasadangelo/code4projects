@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#1a2332"/>
+    </linearGradient>
+    <marker id="arr6" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2496ed"/>
+    </marker>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg6)" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="46" font-family="'Segoe UI', system-ui, sans-serif" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">Docker Compose</text>
+
+  <!-- YAML file box -->
+  <rect x="30" y="65" width="230" height="290" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <rect x="30" y="65" width="230" height="34" rx="8" fill="#21262d"/>
+  <rect x="30" y="86" width="230" height="13" fill="#21262d"/>
+  <text x="145" y="88" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700" fill="#e6edf3" text-anchor="middle">docker-compose.yml</text>
+
+  <text x="48" y="122" font-family="'Courier New', monospace" font-size="11" fill="#f78166">services:</text>
+  <text x="48" y="140" font-family="'Courier New', monospace" font-size="11" fill="#388bfd">  frontend:</text>
+  <text x="48" y="156" font-family="'Courier New', monospace" font-size="11" fill="#8b949e">    image: nginx:alpine</text>
+  <text x="48" y="172" font-family="'Courier New', monospace" font-size="11" fill="#8b949e">    ports: ["8080:80"]</text>
+  <text x="48" y="188" font-family="'Courier New', monospace" font-size="11" fill="#8b949e">    networks: [app]</text>
+  <text x="48" y="210" font-family="'Courier New', monospace" font-size="11" fill="#a371f7">  backend:</text>
+  <text x="48" y="226" font-family="'Courier New', monospace" font-size="11" fill="#8b949e">    image: nginx:alpine</text>
+  <text x="48" y="242" font-family="'Courier New', monospace" font-size="11" fill="#8b949e">    networks: [app]</text>
+  <text x="48" y="264" font-family="'Courier New', monospace" font-size="11" fill="#f78166">networks:</text>
+  <text x="48" y="280" font-family="'Courier New', monospace" font-size="11" fill="#8b949e">  app:</text>
+  <text x="48" y="296" font-family="'Courier New', monospace" font-size="11" fill="#8b949e">    driver: bridge</text>
+  <text x="48" y="318" font-family="'Courier New', monospace" font-size="11" fill="#f78166">volumes:</text>
+  <text x="48" y="334" font-family="'Courier New', monospace" font-size="11" fill="#8b949e">  data:</text>
+
+  <!-- Arrow -->
+  <path d="M262 210 L330 210" stroke="#2496ed" stroke-width="2" marker-end="url(#arr6)"/>
+  <text x="296" y="200" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">docker</text>
+  <text x="296" y="226" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#2496ed" text-anchor="middle">compose up</text>
+
+  <!-- Result boxes -->
+  <!-- Frontend -->
+  <rect x="338" y="80" width="200" height="100" rx="8" fill="#161b22" stroke="#388bfd" stroke-width="1.5"/>
+  <rect x="338" y="80" width="200" height="30" rx="8" fill="#21262d"/>
+  <rect x="338" y="97" width="200" height="13" fill="#21262d"/>
+  <text x="438" y="100" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700" fill="#388bfd" text-anchor="middle">frontend</text>
+  <text x="438" y="136" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">nginx:alpine · :8080</text>
+  <text x="438" y="158" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#e6edf3" text-anchor="middle">running ✓</text>
+
+  <!-- Backend -->
+  <rect x="338" y="200" width="200" height="100" rx="8" fill="#161b22" stroke="#a371f7" stroke-width="1.5"/>
+  <rect x="338" y="200" width="200" height="30" rx="8" fill="#21262d"/>
+  <rect x="338" y="217" width="200" height="13" fill="#21262d"/>
+  <text x="438" y="220" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700" fill="#a371f7" text-anchor="middle">backend</text>
+  <text x="438" y="256" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">nginx:alpine · internal</text>
+  <text x="438" y="278" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#e6edf3" text-anchor="middle">running ✓</text>
+
+  <!-- Network badge -->
+  <rect x="338" y="318" width="200" height="37" rx="8" fill="#161b22" stroke="#7ee787" stroke-width="1"/>
+  <text x="438" y="341" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#7ee787" text-anchor="middle">network: app (bridge)</text>
+
+  <!-- Volume badge -->
+  <rect x="338" y="364" width="200" height="30" rx="8" fill="#161b22" stroke="#f78166" stroke-width="1"/>
+  <text x="438" y="383" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#f78166" text-anchor="middle">volume: data</text>
+
+  <!-- Commands on right -->
+  <rect x="558" y="80" width="210" height="180" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <rect x="558" y="80" width="210" height="30" rx="8" fill="#21262d"/>
+  <rect x="558" y="97" width="210" height="13" fill="#21262d"/>
+  <text x="663" y="100" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700" fill="#e6edf3" text-anchor="middle">Key commands</text>
+  <text x="573" y="132" font-family="'Courier New', monospace" font-size="11" fill="#2496ed">docker compose up -d</text>
+  <text x="573" y="152" font-family="'Courier New', monospace" font-size="11" fill="#2496ed">docker compose down</text>
+  <text x="573" y="172" font-family="'Courier New', monospace" font-size="11" fill="#2496ed">docker compose logs -f</text>
+  <text x="573" y="192" font-family="'Courier New', monospace" font-size="11" fill="#2496ed">docker compose ps</text>
+  <text x="573" y="212" font-family="'Courier New', monospace" font-size="11" fill="#2496ed">docker compose exec …</text>
+  <text x="573" y="232" font-family="'Courier New', monospace" font-size="11" fill="#2496ed">docker compose build</text>
+
+  <rect x="558" y="278" width="210" height="46" rx="8" fill="#f78166" opacity="0.1" stroke="#f78166" stroke-width="1"/>
+  <text x="663" y="298" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#f78166" text-anchor="middle">⚠ Use docker compose</text>
+  <text x="663" y="314" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#f78166" text-anchor="middle">not docker-compose (v1)</text>
+
+  <text x="400" y="410" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">Getting Started with Docker Series · Part 6</text>
+</svg>

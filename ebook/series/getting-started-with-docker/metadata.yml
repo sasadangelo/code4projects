@@ -1,0 +1,42 @@
+---
+# ─── Book identity ────────────────────────────────────────────────────────────
+title: "Getting Started with Docker"
+subtitle: "Containers, Images, Networking, Volumes, Compose and Security"
+author: "Salvatore D'Angelo"
+date: "2026"
+rights: "© 2026 Salvatore D'Angelo — code4projects.com. All rights reserved."
+description: |
+  A practical, step-by-step guide to Docker and Podman for developers.
+  From your first container to a secure multi-container application,
+  this book covers everything you need to get productive with containers.
+
+# ─── Series mapping ───────────────────────────────────────────────────────────
+# Must match the post_series_id field in Jekyll frontmatter
+post_series_id: "getting-started-with-docker-2025"
+
+# ─── Output ───────────────────────────────────────────────────────────────────
+output_filename: "getting-started-with-docker.pdf"
+
+# ─── LaTeX / PDF settings ─────────────────────────────────────────────────────
+lang: en-US
+papersize: a4
+fontsize: 11pt
+mainfont: "Georgia"
+sansfont: "Helvetica Neue"
+monofont: "Menlo"
+linestretch: 1.4
+margin-left: 2.5cm
+margin-right: 2.5cm
+margin-top: 3cm
+margin-bottom: 3cm
+linkcolor: "NavyBlue"
+urlcolor: "NavyBlue"
+toccolor: "NavyBlue"
+toc: true
+toc-depth: 2
+numbersections: true
+colorlinks: true
+
+# ─── Cover ────────────────────────────────────────────────────────────────────
+# Path relative to the series folder
+cover-image: "frontmatter/cover.png"

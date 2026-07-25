@@ -30,13 +30,12 @@ feature-area:
     feature-link: android-game-programming/
   - feature-title: Getting Started with Docker
     feature-text: >
-      This is the <b>Getting started with Docker</b> article series. In it I would like to explain what Docker is and how I use it in my day by 
-      day job. To make this series more practical, I will show you how to write your first “Hello World!” containerized application. 
-      Then, I will show you how to install PostgreSQL in a container and use it as a service. I will discuss about how the networking 
-      layer works in Docker and we will configure three PostgreSQL containers to work in cluster. Finally, we will use Docker Compose 
-      to simplify the deployment and complete our journey. <a href="getting-started-with-docker/">Check out the article series here</a>.
-    feature-image: wp-content/uploads/2020/06/Getting-started-with-Docker.png
-    feature-link: getting-started-with-docker/
+      This is the <b>Getting Started with Docker</b> article series. Learn what Docker is, how to use it with Podman, and how to build,
+      network, persist, orchestrate, and secure containerized applications. The series covers everything from your first container to a
+      full multi-container setup with Docker Compose and security best practices.
+      <a href="getting-started-with-docker-2025/">Check out the article series here</a>.
+    feature-image: assets/img/docker-getting-started-mini.png
+    feature-link: getting-started-with-docker-2025/
   - feature-title: Getting Started with Kubernetes
     feature-text: >
       This is the <b>Getting started with Kubernetes</b> article series. In it I would like to give you a brief introduction to Kubernetes.

@@ -1,0 +1,540 @@
+%% ============================================================
+%% ebook.latex — Pandoc LaTeX template for Code4Projects ebooks
+%% ============================================================
+\documentclass[11pt,american,a4paper,]{book}
+
+%% ── Encoding & language ─────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[shorthands=off,main=american]{babel}
+
+%% ── Fonts (xelatex) ─────────────────────────────────────────
+\usepackage{fontspec}
+\setmainfont{Georgia}
+\setsansfont{Helvetica Neue}
+\setmonofont[Scale=0.88]{Menlo}
+
+%% ── Page geometry ───────────────────────────────────────────
+\usepackage[
+  left=2.5cm,
+  right=2.5cm,
+  top=3cm,
+  bottom=3cm,
+]{geometry}
+
+%% ── Line spacing ────────────────────────────────────────────
+\usepackage{setspace}
+\setstretch{1.4}
+
+%% ── Colors & links ──────────────────────────────────────────
+\usepackage[dvipsnames,svgnames,x11names]{xcolor}
+\usepackage[
+  colorlinks=true,
+  linkcolor=NavyBlue,
+  urlcolor=NavyBlue,
+  citecolor=NavyBlue,
+  filecolor=NavyBlue,
+  pdfusetitle
+]{hyperref}
+
+%% ── Code listings ───────────────────────────────────────────
+\usepackage{fancyvrb}
+\usepackage{fvextra}
+
+\definecolor{codebg}{HTML}{1e1e2e}
+\definecolor{codefg}{HTML}{cdd6f4}
+\definecolor{codeframe}{HTML}{313244}
+
+\RecustomVerbatimEnvironment{verbatim}{Verbatim}{
+  fontsize=\small,
+  frame=single,
+  framesep=6pt,
+  rulecolor=\color{codeframe},
+  fillcolor=\color{codebg},
+  formatcom=\color{codefg},
+  breaklines=true,
+  breakanywhere=true,
+  xleftmargin=10pt,
+  xrightmargin=10pt,
+}
+
+%% ── Tables ──────────────────────────────────────────────────
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+
+%% ── Images ──────────────────────────────────────────────────
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+%% ── Misc ────────────────────────────────────────────────────
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{mdframed}
+
+%% Chapter style
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\sffamily}
+  {\chaptertitlename\ \thechapter}{16pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{30pt}{20pt}
+
+%% Section style
+\titleformat{\section}
+  {\normalfont\Large\bfseries\sffamily}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\sffamily}
+  {\thesubsection}{1em}{}
+
+%% ── Headers / footers ───────────────────────────────────────
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\small\thepage}
+\fancyhead[RE]{\small\itshape Getting Started with Docker}
+\fancyhead[LO]{\small\itshape\leftmark}
+\renewcommand{\headrulewidth}{0.4pt}
+
+%% ── Blockquotes ─────────────────────────────────────────────
+\newmdenv[
+  leftline=true, rightline=false, topline=false, bottomline=false,
+  linewidth=3pt, linecolor=NavyBlue!60,
+  backgroundcolor=NavyBlue!5,
+  innerleftmargin=12pt, innerrightmargin=12pt,
+  innertopmargin=8pt, innerbottommargin=8pt,
+  skipabove=10pt, skipbelow=10pt,
+]{quoteblock}
+\renewenvironment{quote}{\begin{quoteblock}}{\end{quoteblock}}
+
+%% ── pandoc required macros ──────────────────────────────────
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{2pt}\setlength{\parskip}{0pt}}
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+
+%% ============================================================
+%% DOCUMENT
+%% ============================================================
+\begin{document}
+
+%% ── Title page ──────────────────────────────────────────────
+\frontmatter
+\thispagestyle{empty}
+\vspace*{2cm}
+\begin{center}
+  {\fontsize{36}{44}\selectfont\bfseries\sffamily Getting Started with
+Docker}\\[0.8em]
+  {\Large\sffamily\color{gray} Containers, Images, Networking, Volumes,
+Compose and Security}\\[3em]
+  {\large Salvatore D'Angelo}\\[0.5em]
+  {\normalsize\color{gray} 2025}\\[4em]
+  {\small\color{gray} © 2025 Salvatore D'Angelo --- code4projects.com.
+All rights reserved.}
+\end{center}
+\newpage
+
+%% ── Table of contents ───────────────────────────────────────
+{
+\hypersetup{linkcolor=NavyBlue}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\newpage
+
+%% ── Body ────────────────────────────────────────────────────
+\mainmatter
+\section{Docker Security Best
+Practices}\label{docker-security-best-practices}
+
+\emph{Posted on ****}
+
+\subsection{Introduction}\label{introduction}
+
+This is the seventh and final article of the \textbf{Getting Started
+with Docker} series. In the
+\href{/Users/sasadangelo/github.com/sasadangelo/code4projects/how-docker-compose-works-2025/}{previous
+article} we orchestrated a multi-container application with Docker
+Compose. Now we turn our attention to \textbf{security}.
+
+Containers are isolated --- but isolation is not the same as security. A
+container running as root, with a writable filesystem and full Linux
+capabilities, is a significant risk if it is ever compromised. The good
+news is that Docker provides several mechanisms to reduce the attack
+surface, and most of them require only a few lines of configuration.
+
+\subsection{1. Never Run as Root}\label{never-run-as-root}
+
+By default, processes inside a container run as \textbf{root} (UID 0).
+This means that if an attacker exploits a vulnerability in your
+application, they have root access inside the container --- and
+depending on how the container is configured, they may be able to escape
+to the host.
+
+The fix is simple: add a \texttt{USER} instruction to your Dockerfile.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{FROM}\NormalTok{ nginx:alpine}
+
+\KeywordTok{COPY}\NormalTok{ html /usr/share/nginx/html}
+
+\CommentTok{\# Switch to the non{-}root user that the nginx image already provides}
+\KeywordTok{USER}\NormalTok{ nginx}
+
+\KeywordTok{EXPOSE}\NormalTok{ 80}
+\KeywordTok{CMD}\NormalTok{ [}\StringTok{"nginx"}\NormalTok{, }\StringTok{"{-}g"}\NormalTok{, }\StringTok{"daemon off;"}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+The official \texttt{nginx:alpine} image already includes a non-root
+\texttt{nginx} user. For your own images, create a dedicated user:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{FROM}\NormalTok{ alpine:3.20}
+
+\KeywordTok{RUN} \ExtensionTok{addgroup} \AttributeTok{{-}S}\NormalTok{ appgroup }\KeywordTok{\&\&} \ExtensionTok{adduser} \AttributeTok{{-}S}\NormalTok{ appuser }\AttributeTok{{-}G}\NormalTok{ appgroup}
+
+\KeywordTok{COPY} \OperatorTok{{-}{-}chown=appuser:appgroup}\NormalTok{ app /app}
+
+\KeywordTok{USER}\NormalTok{ appuser}
+
+\KeywordTok{CMD}\NormalTok{ [}\StringTok{"/app/start.sh"}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+The \texttt{-\/-chown} flag in \texttt{COPY} ensures the files are owned
+by the correct user from the start.
+
+You can also enforce non-root at runtime without changing the
+Dockerfile:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker run {-}{-}user 1001:1001 nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{2. Use a Read-Only
+Filesystem}\label{use-a-read-only-filesystem}
+
+If your application does not need to write to its own filesystem, make
+it read-only:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker run {-}{-}read{-}only {-}p 8080:80 nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+If the application needs to write to specific paths (temp files, logs),
+mount those paths as \texttt{tmpfs}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker run {-}{-}read{-}only \textbackslash{}}
+\NormalTok{  {-}{-}tmpfs /tmp \textbackslash{}}
+\NormalTok{  {-}{-}tmpfs /var/cache/nginx \textbackslash{}}
+\NormalTok{  {-}{-}tmpfs /var/run \textbackslash{}}
+\NormalTok{  {-}p 8080:80 \textbackslash{}}
+\NormalTok{  nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+A read-only filesystem means that even if an attacker gains code
+execution inside the container, they cannot modify the application
+binaries or install tools.
+
+In Docker Compose:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{services}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{frontend}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ nginx:alpine}
+\AttributeTok{    }\FunctionTok{read\_only}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{tmpfs}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ /tmp}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ /var/cache/nginx}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ /var/run}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{3. Drop Linux Capabilities}\label{drop-linux-capabilities}
+
+Linux capabilities are fine-grained divisions of root privileges. By
+default, Docker grants a container a subset of them. You can drop all
+capabilities and add back only what your application actually needs:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker run {-}{-}cap{-}drop=ALL {-}{-}cap{-}add=NET\_BIND\_SERVICE nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+\texttt{NET\_BIND\_SERVICE} allows binding to ports below 1024 (like
+port 80). Most application containers do not need any other capability.
+
+In Docker Compose:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{services}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{frontend}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ nginx:alpine}
+\AttributeTok{    }\FunctionTok{cap\_drop}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ ALL}
+\AttributeTok{    }\FunctionTok{cap\_add}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ NET\_BIND\_SERVICE}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{4. Never Put Secrets in Environment Variables (or
+Images)}\label{never-put-secrets-in-environment-variables-or-images}
+
+A common mistake is passing passwords or API keys through environment
+variables in \texttt{docker-compose.yml} or baking them into the image
+with \texttt{ENV}. Both approaches expose secrets in
+\texttt{docker\ inspect} output and in image layers.
+
+\textbf{What to do instead}:
+
+\begin{itemize}
+\tightlist
+\item
+  Use \textbf{Docker secrets} (available in Swarm mode) which mount
+  secrets as files in \texttt{/run/secrets/}
+\item
+  Use a \textbf{secrets manager} (HashiCorp Vault, AWS Secrets Manager,
+  etc.)
+\item
+  As a minimum, use a \texttt{.env} file that is \textbf{never committed
+  to version control} and reference it in Compose
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# docker{-}compose.yml}
+\FunctionTok{services}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{app}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ my{-}app}
+\AttributeTok{    }\FunctionTok{env\_file}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ .env.secrets}\CommentTok{   \# never committed to git}
+\end{Highlighting}
+\end{Shaded}
+
+Add to \texttt{.gitignore}:
+
+\begin{verbatim}
+.env
+.env.secrets
+*.env
+\end{verbatim}
+
+\subsection{5. Use Minimal Base Images}\label{use-minimal-base-images}
+
+Every package in your base image is a potential attack surface. Prefer
+minimal base images:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{alpine} --- \textasciitilde5MB, very popular, uses musl libc
+\item
+  \texttt{distroless} (Google) --- no shell, no package manager, only
+  the runtime and your app
+\item
+  \texttt{scratch} --- completely empty, for statically compiled
+  binaries (Go, Rust)
+\end{itemize}
+
+For our Nginx example we already use \texttt{nginx:alpine}. Going even
+smaller would mean building a custom Nginx binary, which is rarely
+necessary.
+
+The rule: \textbf{if it is not needed, it should not be in the image}.
+
+\subsection{6. Scan Images for Known
+Vulnerabilities}\label{scan-images-for-known-vulnerabilities}
+
+Even minimal images can contain packages with known CVEs. Docker
+provides a built-in scanner called \textbf{Docker Scout}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\# Quick vulnerability overview}
+\NormalTok{docker scout quickview nginx:alpine}
+
+\NormalTok{\# Full CVE list}
+\NormalTok{docker scout cves nginx:alpine}
+
+\NormalTok{\# Recommendations to fix vulnerabilities}
+\NormalTok{docker scout recommendations nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+Docker Scout is available in Docker Desktop and as a CLI plugin. It
+integrates with Docker Hub and can be added to CI/CD pipelines to fail a
+build when high-severity vulnerabilities are detected.
+
+An alternative open-source scanner is \textbf{Trivy}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{trivy image nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+Make image scanning part of your build pipeline, not an afterthought.
+
+\subsection{7. Keep Images Up to Date}\label{keep-images-up-to-date}
+
+A scanned image with no vulnerabilities today may have CVEs tomorrow.
+Pin your base image to a specific digest rather than a floating tag, and
+automate rebuild checks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Pin to a specific digest (reproducible, auditable)}
+\KeywordTok{FROM}\NormalTok{ nginx:alpine@sha256:...}
+\end{Highlighting}
+\end{Shaded}
+
+Many teams use tools like \textbf{Renovate} or \textbf{Dependabot} to
+automatically open PRs when a newer base image is available.
+
+\subsection{Putting It All Together}\label{putting-it-all-together}
+
+Here is a Dockerfile for our Nginx image that applies all the practices
+above:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{FROM}\NormalTok{ nginx:alpine}
+
+\CommentTok{\# Copy content}
+\KeywordTok{COPY} \OperatorTok{{-}{-}chown=nginx:nginx}\NormalTok{ html /usr/share/nginx/html}
+
+\CommentTok{\# Drop to non{-}root}
+\KeywordTok{USER}\NormalTok{ nginx}
+
+\KeywordTok{EXPOSE}\NormalTok{ 80}
+
+\KeywordTok{CMD}\NormalTok{ [}\StringTok{"nginx"}\NormalTok{, }\StringTok{"{-}g"}\NormalTok{, }\StringTok{"daemon off;"}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+And the corresponding \texttt{docker-compose.yml}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{services}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{frontend}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{build}\KeywordTok{:}\AttributeTok{ .}
+\AttributeTok{    }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ my{-}nginx:secure}
+\AttributeTok{    }\FunctionTok{container\_name}\KeywordTok{:}\AttributeTok{ frontend}
+\AttributeTok{    }\FunctionTok{ports}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"8080:80"}
+\AttributeTok{    }\FunctionTok{read\_only}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{tmpfs}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ /tmp}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ /var/cache/nginx}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ /var/run}
+\AttributeTok{    }\FunctionTok{cap\_drop}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ ALL}
+\AttributeTok{    }\FunctionTok{cap\_add}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ NET\_BIND\_SERVICE}
+\AttributeTok{    }\FunctionTok{networks}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ app{-}network}
+
+\FunctionTok{networks}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{app{-}network}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{driver}\KeywordTok{:}\AttributeTok{ bridge}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Conclusion}\label{conclusion}
+
+In this article we covered:
+
+\begin{itemize}
+\tightlist
+\item
+  Running containers as a \textbf{non-root user} with \texttt{USER} in
+  the Dockerfile
+\item
+  Using a \textbf{read-only filesystem} with \texttt{-\/-read-only} and
+  \texttt{tmpfs} for writable paths
+\item
+  \textbf{Dropping Linux capabilities} with \texttt{-\/-cap-drop=ALL}
+  and adding back only what is needed
+\item
+  Keeping \textbf{secrets out of images and environment variables}
+\item
+  Choosing \textbf{minimal base images} to reduce attack surface
+\item
+  \textbf{Scanning images} for vulnerabilities with Docker Scout or
+  Trivy
+\item
+  \textbf{Keeping images up to date} with pinned digests and automated
+  updates
+\end{itemize}
+
+This concludes the \textbf{Getting Started with Docker} series. You now
+have a solid foundation to build, network, persist, orchestrate, and
+secure containerized applications. The natural next step is
+\textbf{Docker Swarm} for multi-host deployments, or \textbf{Kubernetes}
+for large-scale container orchestration.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+If you enjoyed this article, don't forget to \textbf{give it a clap 👏},
+\textbf{share it with your friends 🔗}, and \textbf{follow me for more
+tips and tutorials on software development 📘}. Your support helps me
+create more content like this --- thank you! 🙌
+
+\end{document}

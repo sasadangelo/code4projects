@@ -1,12 +1,10 @@
-- title: Getting started with Docker
-  image: wp-content/uploads/2018/06/Docker-logo.png
-  link: getting-started-with-docker/
+- title: Getting Started with Docker
+  image: assets/img/docker-getting-started-mini.png
+  link: getting-started-with-docker-2025/
   description: >
-    This is the <b>Getting started with Docker</b> article series. In it I would like to explain what Docker is and how I use it in my 
-    day by day job. To make this series more practical, I will show you how to write your first “Hello World!” containerized application. 
-    Then, I will show you how to install PostgreSQL in a container and use it as a service. I will discuss about how the networking 
-    layer works in Docker and we will configure three PostgreSQL containers to work in cluster. Finally, we will use Docker Compose to 
-    simplify the deployment and complete our journey.
+    This is the <b>Getting Started with Docker</b> article series. Learn what Docker is, how to use it with Podman, and how to build,
+    network, persist, orchestrate, and secure containerized applications — step by step, from your first container to a full
+    multi-container setup with Docker Compose and security best practices.
 - title: Getting started with Kubernetes
   image: wp-content/uploads/2019/06/Kubernetes.png
   link: getting-started-with-kubernetes/

@@ -1,5 +1,6 @@
 ---
 layout: post
+published: false
 title: How to install PostgreSQL on Docker
 post_series_id: getting-started-with-docker
 slug: how-to-install-postgresql-on-docker

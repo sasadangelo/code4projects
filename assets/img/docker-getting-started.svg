@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#1a2332"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" fill="url(#bg)" rx="12"/>
+
+  <!-- Docker whale logo (simplified) -->
+  <g transform="translate(80, 110)">
+    <!-- Body -->
+    <rect x="0" y="60" width="160" height="80" rx="40" fill="#2496ed"/>
+    <!-- Containers on top -->
+    <rect x="10" y="30" width="32" height="26" rx="4" fill="#ffffff" opacity="0.9"/>
+    <rect x="48" y="30" width="32" height="26" rx="4" fill="#ffffff" opacity="0.9"/>
+    <rect x="86" y="30" width="32" height="26" rx="4" fill="#ffffff" opacity="0.9"/>
+    <rect x="10" y="0" width="32" height="26" rx="4" fill="#ffffff" opacity="0.7"/>
+    <rect x="48" y="0" width="32" height="26" rx="4" fill="#ffffff" opacity="0.7"/>
+    <!-- Tail -->
+    <path d="M140 60 Q175 30 170 60" fill="#2496ed"/>
+    <!-- Eye -->
+    <circle cx="50" cy="100" r="8" fill="#ffffff"/>
+    <circle cx="50" cy="100" r="4" fill="#0d1117"/>
+  </g>
+
+  <!-- Title -->
+  <text x="310" y="140" font-family="'Segoe UI', system-ui, sans-serif" font-size="42" font-weight="700" fill="#ffffff">Getting Started</text>
+  <text x="310" y="195" font-family="'Segoe UI', system-ui, sans-serif" font-size="42" font-weight="700" fill="#2496ed">with Docker</text>
+  <text x="310" y="250" font-family="'Segoe UI', system-ui, sans-serif" font-size="24" fill="#8b949e">and Podman</text>
+
+  <!-- Tags -->
+  <rect x="310" y="280" width="130" height="34" rx="17" fill="#2496ed" opacity="0.2"/>
+  <text x="375" y="302" font-family="'Segoe UI', system-ui, sans-serif" font-size="14" fill="#2496ed" text-anchor="middle">containers</text>
+
+  <rect x="455" y="280" width="100" height="34" rx="17" fill="#2496ed" opacity="0.2"/>
+  <text x="505" y="302" font-family="'Segoe UI', system-ui, sans-serif" font-size="14" fill="#2496ed" text-anchor="middle">images</text>
+
+  <rect x="568" y="280" width="90" height="34" rx="17" fill="#2496ed" opacity="0.2"/>
+  <text x="613" y="302" font-family="'Segoe UI', system-ui, sans-serif" font-size="14" fill="#2496ed" text-anchor="middle">podman</text>
+
+  <!-- Bottom line -->
+  <line x1="310" y1="360" x2="720" y2="360" stroke="#2496ed" stroke-width="2" opacity="0.4"/>
+  <text x="310" y="385" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#8b949e">Getting Started with Docker Series · Part 1</text>
+</svg>

@@ -173,3 +173,22 @@ a:active {
 	font-size: 1.125rem;
 }
 }
+
+/* ── Download button (newsletter welcome page) ───────── */
+.download-btn {
+  display: inline-block;
+  margin: 24px 0 16px;
+  padding: 14px 32px;
+  background-color: #1C67B1;
+  color: #ffffff !important;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+.download-btn:hover,
+.download-btn:active {
+  background-color: #1554a0;
+  color: #ffffff !important;
+}

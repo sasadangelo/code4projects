@@ -1,0 +1,2414 @@
+%% ============================================================
+%% ebook.latex — Pandoc LaTeX template for Code4Projects ebooks
+%% ============================================================
+\documentclass[11pt,american,a4paper,openany]{book}
+
+%% ── Encoding & language ─────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[shorthands=off,main=american]{babel}
+
+%% ── Fonts (xelatex) ─────────────────────────────────────────
+\usepackage{fontspec}
+\setmainfont{Georgia}
+\setsansfont{Helvetica Neue}
+\setmonofont[Scale=0.88]{Menlo}
+
+%% ── Page geometry ───────────────────────────────────────────
+\usepackage[
+  left=2.5cm,
+  right=2.5cm,
+  top=3cm,
+  bottom=3cm,
+]{geometry}
+
+%% ── Line spacing ────────────────────────────────────────────
+\usepackage{setspace}
+\setstretch{1.4}
+
+%% ── Colors & links ──────────────────────────────────────────
+\usepackage[dvipsnames,svgnames,x11names]{xcolor}
+\usepackage[
+  colorlinks=true,
+  linkcolor=NavyBlue,
+  urlcolor=NavyBlue,
+  citecolor=NavyBlue,
+  filecolor=NavyBlue,
+  pdfusetitle
+]{hyperref}
+
+%% ── Code listings ───────────────────────────────────────────
+\usepackage{fancyvrb}
+\usepackage{fvextra}
+
+\definecolor{codebg}{HTML}{1e1e2e}
+\definecolor{codefg}{HTML}{cdd6f4}
+\definecolor{codeframe}{HTML}{313244}
+
+\RecustomVerbatimEnvironment{verbatim}{Verbatim}{
+  fontsize=\small,
+  frame=single,
+  framesep=6pt,
+  rulecolor=\color{codeframe},
+  fillcolor=\color{codebg},
+  formatcom=\color{codefg},
+  breaklines=true,
+  breakanywhere=true,
+  xleftmargin=10pt,
+  xrightmargin=10pt,
+}
+
+%% ── Tables ──────────────────────────────────────────────────
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+
+%% ── Images ──────────────────────────────────────────────────
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+%% ── Misc ────────────────────────────────────────────────────
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{mdframed}
+
+%% Chapter style
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\sffamily}
+  {\chaptertitlename\ \thechapter}{16pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{30pt}{20pt}
+
+%% Section style
+\titleformat{\section}
+  {\normalfont\Large\bfseries\sffamily}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\sffamily}
+  {\thesubsection}{1em}{}
+
+%% ── Headers / footers ───────────────────────────────────────
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\small\thepage}
+\fancyhead[RE]{\small\itshape Getting Started with Docker}
+\fancyhead[LO]{\small\itshape\leftmark}
+\renewcommand{\headrulewidth}{0.4pt}
+
+%% ── Blockquotes ─────────────────────────────────────────────
+\newmdenv[
+  leftline=true, rightline=false, topline=false, bottomline=false,
+  linewidth=3pt, linecolor=NavyBlue!60,
+  backgroundcolor=NavyBlue!5,
+  innerleftmargin=12pt, innerrightmargin=12pt,
+  innertopmargin=8pt, innerbottommargin=8pt,
+  skipabove=10pt, skipbelow=10pt,
+]{quoteblock}
+\renewenvironment{quote}{\begin{quoteblock}}{\end{quoteblock}}
+
+%% ── pandoc required macros ──────────────────────────────────
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{2pt}\setlength{\parskip}{0pt}}
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+
+%% ============================================================
+%% DOCUMENT
+%% ============================================================
+\begin{document}
+
+%% ── Title page ──────────────────────────────────────────────
+\pagestyle{empty}
+\vspace*{2cm}
+\begin{center}
+  {\fontsize{36}{44}\selectfont\bfseries\sffamily Getting Started with
+Docker}\\[0.8em]
+  {\Large\sffamily\color{gray} Containers, Images, Networking, Volumes,
+Compose and Security}\\[3em]
+  {\large Salvatore D'Angelo}\\[0.5em]
+  {\normalsize\color{gray} 2025}\\[4em]
+  {\small\color{gray} © 2025 Salvatore D'Angelo --- code4projects.com.
+All rights reserved.}
+\end{center}
+\newpage
+
+%% ── Table of contents ───────────────────────────────────────
+\pagestyle{plain}
+{
+\hypersetup{linkcolor=NavyBlue}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\newpage
+
+%% ── Body ────────────────────────────────────────────────────
+\pagestyle{fancy}
+\section{Getting Started with Docker and
+Podman}\label{getting-started-with-docker-and-podman}
+
+\emph{Posted on ****}
+
+\subsection{Introduction}\label{introduction}
+
+This is the first article of the \textbf{Getting Started with Docker}
+series. By the end of this article you will understand what Docker is,
+what problems it solves, and you will have your first containerized web
+server running on your machine in minutes --- without writing a single
+line of Dockerfile.
+
+You should read this article if:
+
+\begin{itemize}
+\tightlist
+\item
+  You have heard of Docker but never used it
+\item
+  You want a practical, no-nonsense introduction that gets you running
+  immediately
+\item
+  You are on a machine where Docker Desktop is not available and you
+  need an alternative (Podman)
+\end{itemize}
+
+All the commands shown here work identically with both \textbf{Docker}
+and \textbf{Podman}. Where there are differences, they are explicitly
+noted.
+
+\subsection{Why Docker?}\label{why-docker}
+
+Before diving into commands, it is worth spending a minute on the
+problem Docker actually solves.
+
+Imagine you are a developer. You write an application on your laptop, it
+works perfectly. Then you hand it off to a colleague or deploy it to a
+server --- and it breaks. Different OS version, different library
+installed, different path. This is the classic \textbf{``it works on my
+machine''} problem, and it has tormented developers for decades.
+
+Docker solves this by packaging your application together with
+everything it needs to run --- runtime, libraries, configuration ---
+into a single portable unit called a \textbf{container}. That container
+runs identically on your laptop, your colleague's machine, and the
+production server.
+
+This matters not just for individual developers. Modern applications are
+built as dozens (sometimes hundreds) of independent services ---
+\textbf{microservices} --- each with its own dependencies. Docker makes
+it possible to deploy, update, and scale each service independently,
+without interference.
+
+\subsection{Docker vs Podman: Which One Should You
+Use?}\label{docker-vs-podman-which-one-should-you-use}
+
+Both Docker and Podman are tools for running containers. For everything
+covered in this series, they are interchangeable --- the CLI commands
+are identical.
+
+The key differences:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Docker
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Podman
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Architecture} & Requires a background daemon (\texttt{dockerd})
+& Daemonless --- runs containers directly \\
+\textbf{Privileges} & Daemon runs as root & Rootless by default --- more
+secure \\
+\textbf{License} & Docker Desktop requires a paid license for enterprise
+use & Fully open source (Apache 2.0) \\
+\textbf{Installation on Mac} & Docker Desktop &
+\texttt{brew\ install\ podman} + \texttt{podman\ machine\ init} \\
+\textbf{Compose support} & \texttt{docker\ compose} (v2 plugin) &
+\texttt{podman\ compose} (from Podman 4.7+) \\
+\textbf{OCI compatibility} & Yes & Yes --- same image format \\
+\end{longtable}
+
+\textbf{In short}: if Docker Desktop is available and licensed for your
+use, use Docker. If you are on a corporate machine where Docker Desktop
+requires a commercial license, or if you prefer an open source rootless
+alternative, use Podman. The rest of this series works exactly the same
+either way.
+
+\begin{quote}
+Throughout this series, all commands are shown with \texttt{docker}. If
+you are using Podman, simply replace \texttt{docker} with
+\texttt{podman} --- or set the alias \texttt{alias\ docker=podman} once
+and forget about it.
+\end{quote}
+
+\subsection{Installing Docker or
+Podman}\label{installing-docker-or-podman}
+
+\subsubsection{Docker}\label{docker}
+
+On Linux, install Docker Engine following the
+\href{https://docs.docker.com/engine/install/}{official documentation}.
+On Mac and Windows, Docker Desktop is the easiest option if your license
+allows it: download it from
+\href{https://docs.docker.com/desktop/}{docs.docker.com/desktop}.
+
+\subsubsection{Podman (Mac)}\label{podman-mac}
+
+On macOS, Podman uses a lightweight Linux virtual machine behind the
+scenes --- the same approach Docker Desktop uses. Install and initialise
+it with three commands:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{brew install podman}
+\NormalTok{podman machine init}
+\NormalTok{podman machine start}
+\end{Highlighting}
+\end{Shaded}
+
+After this, \texttt{podman} is ready and behaves exactly like
+\texttt{docker}.
+
+\subsection{Core Concepts: Images and
+Containers}\label{core-concepts-images-and-containers}
+
+Before running anything, two concepts are essential.
+
+\subsubsection{Docker Image}\label{docker-image}
+
+A \textbf{Docker image} is a read-only, layered package that contains
+everything needed to run a specific application: the OS filesystem,
+runtime, libraries, configuration files, and the application itself.
+
+Images are stored in registries. The most popular is
+\href{https://hub.docker.com}{Docker Hub}, which hosts thousands of
+official and community images. When you run a container, Docker (or
+Podman) downloads the image from the registry if it is not already
+present on your machine.
+
+Images are built in \textbf{layers}. Each instruction that modifies the
+filesystem adds a layer on top of the previous ones. Layers are cached
+and shared between images --- this is what keeps images small and builds
+fast.
+
+\subsubsection{Docker Container}\label{docker-container}
+
+A \textbf{container} is a running instance of an image. You can think of
+the image as a class and the container as an object instantiated from
+it. Multiple containers can run from the same image simultaneously, each
+fully isolated from the others.
+
+Containers share the host OS kernel but are isolated from each other
+using Linux kernel features: \textbf{namespaces} (for process, network,
+filesystem isolation) and \textbf{cgroups} (for resource limits like CPU
+and memory).
+
+This is the fundamental difference from a Virtual Machine: a VM emulates
+an entire hardware stack and runs a separate OS kernel. A container
+shares the host kernel and is much lighter as a result.
+
+We will explore this topic in depth in the
+\href{/Users/sasadangelo/github.com/sasadangelo/code4projects/containers-vs-virtual-machines-2025/}{next
+article}.
+
+\subsection{Essential Commands}\label{essential-commands}
+
+Here is the minimal set of commands you need to start working with
+Docker. These are the ones you will use every day.
+
+\subsubsection{List local images}\label{list-local-images}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker image ls}
+\end{Highlighting}
+\end{Shaded}
+
+At the beginning, the list is empty.
+
+\subsubsection{Pull an image from Docker
+Hub}\label{pull-an-image-from-docker-hub}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker pull nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+This downloads the official Nginx image based on Alpine Linux --- a very
+small (\textasciitilde40 MB) but fully functional web server image.
+
+\subsubsection{Run a container}\label{run-a-container}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker run {-}d {-}p 8080:80 {-}{-}name my{-}nginx nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+Breaking down the options:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{-d} --- runs the container in detached mode (in the
+  background, shell does not hang)
+\item
+  \texttt{-p\ 8080:80} --- maps port 8080 on your host to port 80 inside
+  the container
+\item
+  \texttt{-\/-name\ my-nginx} --- gives the container a friendly name
+  instead of a random one
+\item
+  \texttt{nginx:alpine} --- the image to use
+\end{itemize}
+
+Open your browser at \texttt{http://localhost:8080} and you will see the
+Nginx welcome page. You just ran a web server without installing
+anything on your machine.
+
+\subsubsection{List running containers}\label{list-running-containers}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker container ls}
+\end{Highlighting}
+\end{Shaded}
+
+To see all containers including stopped ones:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker container ls {-}a}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{View container logs}\label{view-container-logs}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker logs my{-}nginx}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Execute a command inside a running
+container}\label{execute-a-command-inside-a-running-container}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker exec {-}it my{-}nginx /bin/sh}
+\end{Highlighting}
+\end{Shaded}
+
+The \texttt{-it} flags attach an interactive terminal. Note:
+Alpine-based images use \texttt{sh} instead of \texttt{bash}.
+
+\subsubsection{Stop and remove a
+container}\label{stop-and-remove-a-container}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker stop my{-}nginx}
+\NormalTok{docker rm my{-}nginx}
+\end{Highlighting}
+\end{Shaded}
+
+Or in one command:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker rm {-}f my{-}nginx}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Remove an image}\label{remove-an-image}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker image rm nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Clean up everything
+unused}\label{clean-up-everything-unused}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker system prune}
+\end{Highlighting}
+\end{Shaded}
+
+This removes all stopped containers, dangling images, and unused
+networks. Add \texttt{-a} to also remove unused images that are not
+referenced by any container.
+
+\subsection{Your First Containerized
+Application}\label{your-first-containerized-application}
+
+Let us put it all together with a practical example. You will serve a
+custom HTML page through Nginx --- without installing Nginx, without a
+Dockerfile, using only the official image and a single
+\texttt{docker\ run} command.
+
+Create a file called \texttt{index.html} anywhere on your machine:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+
+\NormalTok{  Hello from Docker}
+  
+\NormalTok{    Hello, World!}
+\NormalTok{    This page is served by Nginx running inside a container.}
+  
+\end{Highlighting}
+\end{Shaded}
+
+Now run Nginx and mount that file into the container:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker run {-}d \textbackslash{}}
+\NormalTok{  {-}p 8080:80 \textbackslash{}}
+\NormalTok{  {-}{-}name hello{-}nginx \textbackslash{}}
+\NormalTok{  {-}v $(pwd)/index.html:/usr/share/nginx/html/index.html:ro \textbackslash{}}
+\NormalTok{  nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+The \texttt{-v} option \textbf{bind mounts} your local file into the
+container's web root. The \texttt{:ro} suffix makes the mount read-only
+inside the container (a good practice).
+
+Open \texttt{http://localhost:8080} in your browser:
+
+\begin{quote}
+\textbf{Hello, World!} This page is served by Nginx running inside a
+container.
+\end{quote}
+
+You served a custom page without installing a web server, without
+writing a Dockerfile, and without touching your system configuration.
+When you are done:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker rm {-}f hello{-}nginx}
+\end{Highlighting}
+\end{Shaded}
+
+Your machine is exactly as it was before. Nothing installed, nothing
+left behind.
+
+\subsection{How This Series Is
+Structured}\label{how-this-series-is-structured}
+
+This first article introduced the core concepts and got you running
+immediately. In the upcoming articles we will progressively build on
+this foundation:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Containers vs Virtual Machines} --- deep dive into isolation
+  mechanisms, namespaces, cgroups, and the difference from
+  hypervisor-based virtualization
+\item
+  \textbf{Dockerfile \& Building Custom Images} --- write your own
+  \texttt{Dockerfile}, build and tag a custom image, understand the
+  layer cache
+\item
+  \textbf{How Docker Networking Works} --- user-defined bridge networks,
+  automatic DNS resolution between containers, network isolation
+\item
+  \textbf{How Docker Volumes Work} --- named volumes vs bind mounts,
+  persisting data across container restarts
+\item
+  \textbf{How Docker Compose Works} --- manage multi-container
+  applications with a single \texttt{docker\ compose\ up}
+\item
+  \textbf{Docker Security Best Practices} --- run containers as
+  non-root, drop capabilities, scan images for vulnerabilities
+\end{itemize}
+
+Each article builds on the previous one around the same practical Nginx
+application, adding one concept at a time.
+
+\subsection{Conclusion}\label{conclusion}
+
+In this article we covered:
+
+\begin{itemize}
+\tightlist
+\item
+  The problem Docker solves and why containers matter
+\item
+  The difference between Docker and Podman, and when to use each
+\item
+  The two fundamental concepts: \textbf{images} and \textbf{containers}
+\item
+  The essential CLI commands for daily use
+\item
+  Running a custom web page with Nginx using only the official image
+\end{itemize}
+
+The
+\href{/Users/sasadangelo/github.com/sasadangelo/code4projects/containers-vs-virtual-machines-2025/}{next
+article} goes deeper into the conceptual foundations: what actually
+makes a container different from a virtual machine, and what Linux
+kernel mechanisms make it all work.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+If you enjoyed this article, don't forget to \textbf{give it a clap 👏},
+\textbf{share it with your friends 🔗}, and \textbf{follow me for more
+tips and tutorials on software development 📘}. Your support helps me
+create more content like this --- thank you! 🙌
+
+\section{Containers vs Virtual
+Machines}\label{containers-vs-virtual-machines}
+
+\emph{Posted on ****}
+
+\subsection{Introduction}\label{introduction-1}
+
+This is the second article of the \textbf{Getting Started with Docker}
+series. In the
+\href{/Users/sasadangelo/github.com/sasadangelo/code4projects/getting-started-with-docker-2025/}{previous
+article} we introduced Docker and ran our first container. Before going
+further, it is worth spending time on a fundamental question:
+\textbf{what is the real difference between a container and a virtual
+machine?}
+
+When I started working with Docker this was not easy to grasp. The two
+technologies look similar from the outside --- both give you an isolated
+environment to run software --- but they work in completely different
+ways under the hood.
+
+Virtualization can be achieved in two ways:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Full virtualization} --- a hypervisor simulates enough
+  hardware to run a complete guest operating system. This is the Virtual
+  Machine approach.
+\item
+  \textbf{Operating system-level virtualization} --- the OS kernel
+  itself is used to create isolated environments that share the same
+  kernel. This is the Container approach.
+\end{itemize}
+
+\subsection{Virtual Machines}\label{virtual-machines}
+
+Historically, as server processing power grew, applications running on
+bare metal couldn't exploit the abundance of available resources.
+\textbf{Virtual Machines} were born to solve this: by running a
+hypervisor on top of physical hardware, you could carve up one server
+into many independent guest systems.
+
+A \textbf{hypervisor} (also called Virtual Machine Monitor) is the
+software layer that sits between the hardware and the virtual machines.
+It can be type 1 (bare metal, like VMware ESXi or KVM) or type 2
+(hosted, like VirtualBox or Parallels).
+
+Each VM includes:
+
+\begin{itemize}
+\tightlist
+\item
+  A full copy of a guest operating system
+\item
+  Virtual hardware (CPU, RAM, disk, network)
+\item
+  All the application dependencies
+\end{itemize}
+
+The system running the VMs is called the \textbf{host}, the systems
+running inside are called \textbf{guests}.
+
+\subsubsection{Pros and cons of VMs}\label{pros-and-cons-of-vms}
+
+\begin{verbatim}
+    Pros
+  
+  
+    Strong isolation — each VM has its own kernel.
+    Run different operating systems on the same host (Windows on Linux, etc.).
+    Create and destroy on demand in minutes.
+    Snapshot a VM at any point in time.
+    Foundation of the IaaS cloud model (AWS EC2, Azure VMs, etc.).
+  
+
+
+    Cons
+  
+  
+    Heavy — each VM carries a full OS (GBs of disk, hundreds of MB of RAM).
+    Slow to boot — minutes, not seconds.
+    Hypervisor adds overhead to application execution.
+    Managing a large fleet of VMs is operationally expensive.
+  
+\end{verbatim}
+
+The rise of VMs gave birth to the \textbf{Infrastructure as a Service
+(IaaS)} market. Companies like Amazon, Microsoft, and IBM allow you to
+rent virtual machines on demand. A startup today does not need to buy
+physical hardware --- it registers an account with a cloud provider,
+orders a VM with the required specs, and is ready in minutes.
+
+\subsection{Containers}\label{containers}
+
+A \textbf{container} is an isolated environment created using features
+of the Linux kernel itself --- not a separate hypervisor. Multiple
+containers run on the same host, all sharing the same OS kernel, but
+each seeing its own isolated filesystem, processes, network, and users.
+
+The two kernel mechanisms that make this possible are:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Namespaces} --- give each container an isolated view of the
+  system: its own process tree (PID namespace), network interfaces (net
+  namespace), filesystem (mount namespace), users (user namespace), and
+  more.
+\item
+  \textbf{cgroups} (control groups) --- limit and account for resource
+  usage (CPU, memory, disk I/O) per container.
+\end{itemize}
+
+Together, namespaces and cgroups create the illusion of a separate
+machine without the overhead of emulating hardware or running a second
+kernel.
+
+\begin{quote}
+\textbf{Important note for Mac and Windows users}: because containers
+rely on Linux kernel features, Docker and Podman on macOS and Windows
+run a lightweight Linux VM behind the scenes (using Apple's
+Virtualization Framework on Mac, and WSL2 on Windows). Your containers
+still run in that Linux environment --- you just don't see it.
+\end{quote}
+
+\subsubsection{Pros and cons of
+containers}\label{pros-and-cons-of-containers}
+
+\begin{verbatim}
+    Pros
+  
+  
+    Lightweight — a container image is tens or hundreds of MB, not GBs.
+    Fast — containers start in milliseconds to seconds.
+    No overhead from emulating hardware.
+    Portable — same image runs on your laptop, CI server, and production.
+    Solves the "it works on my machine" problem.
+    Natural fit for microservices architecture.
+  
+
+
+    Cons
+  
+  
+    Weaker isolation than VMs — all containers share the host kernel.
+    Cannot run a different OS kernel (e.g., no Windows containers on Linux).
+    Managing many containers requires an orchestrator (Kubernetes, Swarm).
+    Security requires care — a misconfigured container can affect the host.
+  
+\end{verbatim}
+
+\subsection{The Analogy}\label{the-analogy}
+
+Mike Coleman on the
+\href{https://blog.docker.com/2016/03/containers-are-not-vms/}{Docker
+official blog} provides a memorable analogy:
+
+\begin{quote}
+Houses (VMs) are fully self-contained and offer protection from unwanted
+guests. They each possess their own infrastructure --- plumbing,
+heating, electrical. Apartments (containers) also offer protection from
+unwanted guests, but they are built around shared infrastructure. The
+apartment building (Docker Host) shares plumbing, heating, electrical.
+Apartments are offered in all kinds of sizes --- from studio to
+penthouse. You only rent exactly what you need.
+\end{quote}
+
+\subsection{Containers and VMs: not enemies,
+complementaries}\label{containers-and-vms-not-enemies-complementaries}
+
+In practice, containers and VMs are often used \textbf{together}, not in
+opposition. The most common production setup is:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  A cloud provider gives you a VM (an EC2 instance, an Azure VM, etc.)
+\item
+  Docker or a container runtime runs inside that VM
+\item
+  Your application runs as containers inside Docker
+\end{enumerate}
+
+VMs provide the strong isolation boundary at the infrastructure level.
+Containers provide the lightweight, fast, portable packaging for
+applications within that boundary.
+
+\subsection{Conclusion}\label{conclusion-1}
+
+In this article we covered:
+
+\begin{itemize}
+\tightlist
+\item
+  The difference between full virtualization (VMs) and OS-level
+  virtualization (containers)
+\item
+  How \textbf{namespaces} and \textbf{cgroups} implement container
+  isolation
+\item
+  Pros and cons of each technology
+\item
+  Why containers and VMs are complementary, not competing
+\end{itemize}
+
+The
+\href{/Users/sasadangelo/github.com/sasadangelo/code4projects/dockerfile-and-building-custom-images/}{next
+article} focuses on \textbf{Dockerfiles}: how to write your own image
+definition and build a custom container image from scratch.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+If you enjoyed this article, don't forget to \textbf{give it a clap 👏},
+\textbf{share it with your friends 🔗}, and \textbf{follow me for more
+tips and tutorials on software development 📘}. Your support helps me
+create more content like this --- thank you! 🙌
+
+\section{Dockerfile and Building Custom
+Images}\label{dockerfile-and-building-custom-images}
+
+\emph{Posted on ****}
+
+\subsection{Introduction}\label{introduction-2}
+
+This is the third article of the \textbf{Getting Started with Docker}
+series. In the
+\href{/Users/sasadangelo/github.com/sasadangelo/code4projects/containers-vs-virtual-machines-2025/}{previous
+article} we explored the differences between containers and virtual
+machines. In the
+\href{/Users/sasadangelo/github.com/sasadangelo/code4projects/getting-started-with-docker-2025/}{first
+article} we ran Nginx directly from the official image using a bind
+mount to serve a custom page.
+
+That approach works well for quick experiments, but in a real project
+you want a \textbf{reproducible, self-contained image} that already
+includes your content and configuration --- one that anyone on your team
+(or any CI/CD pipeline) can build and run without manual steps.
+
+This is where \textbf{Dockerfiles} come in.
+
+\subsection{What is a Dockerfile?}\label{what-is-a-dockerfile}
+
+A \textbf{Dockerfile} is a plain-text file containing a sequence of
+instructions that tell Docker how to build an image. Each instruction
+creates a new \textbf{layer} on top of the previous one. When you
+rebuild an image, Docker only rebuilds the layers that changed ---
+everything before the first change is served from the \textbf{layer
+cache}, making subsequent builds very fast.
+
+\subsection{Dockerfile Instructions}\label{dockerfile-instructions}
+
+Here are the most important instructions you will use in every
+Dockerfile.
+
+\subsubsection{FROM}\label{from}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{FROM}\NormalTok{ nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+Every Dockerfile must start with \texttt{FROM}. It specifies the
+\textbf{base image} --- the starting point. In this series we always
+start from \texttt{nginx:alpine}, a minimal image that already contains
+a working Nginx web server.
+
+\subsubsection{COPY}\label{copy}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{COPY}\NormalTok{ ./html /usr/share/nginx/html}
+\end{Highlighting}
+\end{Shaded}
+
+Copies files or directories from your build context (the folder where
+you run \texttt{docker\ build}) into the image. This is the main
+instruction for adding your application code or configuration.
+
+\subsubsection{ADD}\label{add}
+
+\texttt{ADD} is similar to \texttt{COPY} but with two extra powers: it
+can automatically unpack compressed archives (\texttt{.tar.gz}, etc.)
+and it can fetch files from remote URLs. For simply copying local files,
+\textbf{prefer \texttt{COPY}} --- it is explicit and predictable.
+
+\subsubsection{RUN}\label{run}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{RUN} \ExtensionTok{apk}\NormalTok{ add }\AttributeTok{{-}{-}no{-}cache}\NormalTok{ curl}
+\end{Highlighting}
+\end{Shaded}
+
+Executes a command \textbf{during the build} and commits the result as a
+new layer. Use it to install packages, compile code, or run any setup
+step. Each \texttt{RUN} instruction is a layer, so chain related
+commands with \texttt{\&\&} to minimize layer count.
+
+\subsubsection{ENV}\label{env}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ENV}\NormalTok{ APP\_ENV=production}
+\end{Highlighting}
+\end{Shaded}
+
+Sets an environment variable that is available both during the build and
+at container runtime.
+
+\subsubsection{EXPOSE}\label{expose}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{EXPOSE}\NormalTok{ 80}
+\end{Highlighting}
+\end{Shaded}
+
+Documents which port the container listens on. It does \textbf{not}
+actually publish the port --- that happens at runtime with \texttt{-p}.
+Think of it as metadata for the image user.
+
+\subsubsection{CMD}\label{cmd}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{CMD}\NormalTok{ [}\StringTok{"nginx"}\NormalTok{, }\StringTok{"{-}g"}\NormalTok{, }\StringTok{"daemon off;"}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+Specifies the default command to run when a container starts. It can be
+overridden at runtime. Use the \textbf{exec form} (JSON array) rather
+than the shell form to avoid wrapping the process in a shell --- this
+ensures signals like \texttt{SIGTERM} are delivered directly to your
+process.
+
+\subsubsection{ENTRYPOINT}\label{entrypoint}
+
+Similar to \texttt{CMD} but not easily overridden. Use
+\texttt{ENTRYPOINT} when the container has a fixed main executable, and
+\texttt{CMD} to provide default arguments to it.
+
+\subsubsection{USER}\label{user}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{USER}\NormalTok{ nginx}
+\end{Highlighting}
+\end{Shaded}
+
+Switches to a non-root user for all subsequent instructions and at
+runtime. This is a \textbf{security best practice} --- we will cover it
+in detail in the security article.
+
+\subsection{Building a Custom Nginx
+Image}\label{building-a-custom-nginx-image}
+
+Let us build a custom image that already includes our HTML page, so
+anyone can run it with a single \texttt{docker\ run} --- no bind mounts,
+no extra files needed.
+
+Create a project directory:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mkdir my{-}nginx \&\& cd my{-}nginx}
+\end{Highlighting}
+\end{Shaded}
+
+Create the HTML content:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mkdir html}
+\NormalTok{cat \textgreater{} html/index.html }
+
+\NormalTok{  My Custom Nginx}
+  
+\NormalTok{    Hello from my custom image!}
+\NormalTok{    This page is baked into the Docker image.}
+  
+
+\NormalTok{EOF}
+\end{Highlighting}
+\end{Shaded}
+
+Create the Dockerfile:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{FROM}\NormalTok{ nginx:alpine}
+
+\CommentTok{\# Copy our HTML content into the image}
+\KeywordTok{COPY}\NormalTok{ html /usr/share/nginx/html}
+
+\CommentTok{\# Document which port Nginx listens on}
+\KeywordTok{EXPOSE}\NormalTok{ 80}
+\end{Highlighting}
+\end{Shaded}
+
+Build the image:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker build {-}t my{-}nginx:1.0 .}
+\end{Highlighting}
+\end{Shaded}
+
+Breaking down the command:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{-t\ my-nginx:1.0} --- \textbf{tag} the image with a name and
+  version
+\item
+  \texttt{.} --- the \textbf{build context} (current directory); Docker
+  sends all files here to the build engine
+\end{itemize}
+
+List your images to confirm it was created:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker image ls}
+\end{Highlighting}
+\end{Shaded}
+
+Run a container from your custom image:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker run {-}d {-}p 8080:80 {-}{-}name my{-}app my{-}nginx:1.0}
+\end{Highlighting}
+\end{Shaded}
+
+Open \texttt{http://localhost:8080} --- you will see your custom page,
+served directly from the image without any bind mounts.
+
+\subsection{Understanding the Layer
+Cache}\label{understanding-the-layer-cache}
+
+Run \texttt{docker\ build} a second time without changing anything:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker build {-}t my{-}nginx:1.0 .}
+\end{Highlighting}
+\end{Shaded}
+
+You will see output like:
+
+\begin{verbatim}
+ => CACHED [1/2] FROM docker.io/library/nginx:alpine
+ => CACHED [2/2] COPY html /usr/share/nginx/html
+\end{verbatim}
+
+Both steps are served from cache --- the build is instant. Now edit
+\texttt{html/index.html} and rebuild:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker build {-}t my{-}nginx:1.1 .}
+\end{Highlighting}
+\end{Shaded}
+
+Only the \texttt{COPY} layer is rebuilt. The \texttt{FROM} layer
+(downloading the base image) is still cached.
+
+\textbf{Rule of thumb}: order your Dockerfile instructions from least to
+most frequently changing. Put \texttt{RUN} commands that install
+packages near the top, and \texttt{COPY} of your application code near
+the bottom. This maximises cache reuse and keeps builds fast.
+
+\subsection{Tagging and Versioning
+Images}\label{tagging-and-versioning-images}
+
+Good image tags tell you exactly what version is inside:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\# Tag with a version number}
+\NormalTok{docker build {-}t my{-}nginx:1.0 .}
+
+\NormalTok{\# Tag the same image as latest}
+\NormalTok{docker tag my{-}nginx:1.0 my{-}nginx:latest}
+\end{Highlighting}
+\end{Shaded}
+
+Always use explicit version tags in production. The \texttt{latest} tag
+is convenient locally but can cause surprises in automated pipelines
+because it changes silently.
+
+\subsection{Cleaning Up}\label{cleaning-up}
+
+Remove the running container:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker rm {-}f my{-}app}
+\end{Highlighting}
+\end{Shaded}
+
+Remove the image:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker image rm my{-}nginx:1.0 my{-}nginx:1.1}
+\end{Highlighting}
+\end{Shaded}
+
+Remove all unused images and build cache:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker system prune {-}a}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Conclusion}\label{conclusion-2}
+
+In this article we covered:
+
+\begin{itemize}
+\tightlist
+\item
+  The purpose of a \textbf{Dockerfile} and how it defines an image
+\item
+  The most important instructions: \texttt{FROM}, \texttt{COPY},
+  \texttt{RUN}, \texttt{ENV}, \texttt{EXPOSE}, \texttt{CMD},
+  \texttt{ENTRYPOINT}, \texttt{USER}
+\item
+  How to \textbf{build}, \textbf{tag}, and \textbf{run} a custom Nginx
+  image
+\item
+  How the \textbf{layer cache} works and how to structure a Dockerfile
+  to maximise it
+\end{itemize}
+
+The
+\href{/Users/sasadangelo/github.com/sasadangelo/code4projects/how-docker-networking-works-2025/}{next
+article} introduces Docker networking: how to connect containers
+together so they can communicate over a private network.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+If you enjoyed this article, don't forget to \textbf{give it a clap 👏},
+\textbf{share it with your friends 🔗}, and \textbf{follow me for more
+tips and tutorials on software development 📘}. Your support helps me
+create more content like this --- thank you! 🙌
+
+\section{How Docker Networking Works}\label{how-docker-networking-works}
+
+\emph{Posted on ****}
+
+\subsection{Introduction}\label{introduction-3}
+
+This is the fourth article of the \textbf{Getting Started with Docker}
+series. In the
+\href{/Users/sasadangelo/github.com/sasadangelo/code4projects/dockerfile-and-building-custom-images/}{previous
+article} we built a custom Nginx image. So far, each container has been
+an isolated island. In a real application you often have multiple
+containers that need to talk to each other --- a frontend container, a
+backend container, a database.
+
+This is where Docker networking comes in.
+
+\subsection{Networking Overview in
+Docker}\label{networking-overview-in-docker}
+
+Docker has a pluggable networking system. The networking plugins are
+called \textbf{drivers}. Docker provides these drivers out of the box:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{bridge} --- the default; creates a private internal network on
+  the host
+\item
+  \textbf{host} --- the container shares the host's network stack
+  directly
+\item
+  \textbf{overlay} --- connects containers running on different hosts
+  (used in Swarm mode)
+\item
+  \textbf{macvlan} --- assigns a real MAC address to a container, making
+  it appear as a physical device on the network
+\item
+  \textbf{ipvlan} --- similar to macvlan but operates at layer 3; useful
+  when the upstream switch does not allow multiple MACs per port
+\item
+  \textbf{none} --- networking is completely disabled
+\end{enumerate}
+
+For this series we focus on \textbf{bridge}, which is what you will use
+for local development and single-host deployments.
+
+\subsubsection{The bridge driver}\label{the-bridge-driver}
+
+The \textbf{bridge} driver creates a private network on the host.
+Containers attached to the same bridge can communicate with each other.
+External access is granted by publishing ports with \texttt{-p}.
+
+Behind the scenes, Docker creates a Linux bridge interface, assigns IP
+addresses from a private subnet, and manages iptables rules to route
+traffic in and out.
+
+There are two kinds of bridge networks:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{default bridge} (\texttt{bridge}) --- the one Docker uses
+  automatically when you run a container without specifying a network.
+  Containers can reach each other only by IP address, not by name.
+\item
+  \textbf{user-defined bridge} --- created with
+  \texttt{docker\ network\ create}. Containers on the same user-defined
+  bridge can \textbf{resolve each other by container name} via Docker's
+  built-in DNS. This is the right choice for any multi-container setup.
+\end{itemize}
+
+\subsubsection{The host driver}\label{the-host-driver}
+
+With the \textbf{host} driver the container skips Docker's network layer
+entirely and shares the host's network interfaces. Port mapping
+(\texttt{-p}) is not needed --- if the container listens on port 80, it
+is directly reachable on the host's port 80.
+
+Useful for performance-sensitive workloads or tools that need to monitor
+host network traffic. Note: \texttt{-\/-network\ host} does not work on
+Docker Desktop for Mac or Windows --- it only works natively on Linux.
+
+\subsubsection{The overlay driver}\label{the-overlay-driver}
+
+The \textbf{overlay} driver enables containers on different physical
+hosts to communicate as if they were on the same network. It is the
+networking backbone for \textbf{Docker Swarm} clusters. We will cover
+this when we discuss Swarm in a future article.
+
+\subsubsection{The macvlan driver}\label{the-macvlan-driver}
+
+The \textbf{macvlan} driver assigns a MAC address to a container. This
+makes it appear as a physical device directly on the network segment. It
+is the right choice for legacy applications that expect to be directly
+connected to the physical network rather than routed through Docker's
+network stack.
+
+\subsection{Docker Networking
+Commands}\label{docker-networking-commands}
+
+Create a user-defined bridge network:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker network create my{-}network}
+\end{Highlighting}
+\end{Shaded}
+
+To specify a subnet and gateway explicitly:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker network create \textbackslash{}}
+\NormalTok{  {-}d bridge \textbackslash{}}
+\NormalTok{  {-}{-}subnet=10.10.1.0/24 \textbackslash{}}
+\NormalTok{  {-}{-}gateway=10.10.1.1 \textbackslash{}}
+\NormalTok{  my{-}network}
+\end{Highlighting}
+\end{Shaded}
+
+List all networks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker network ls}
+\end{Highlighting}
+\end{Shaded}
+
+Inspect a network (shows connected containers, subnet, gateway):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker network inspect my{-}network}
+\end{Highlighting}
+\end{Shaded}
+
+Remove a network:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker network rm my{-}network}
+\end{Highlighting}
+\end{Shaded}
+
+Connect a running container to a network:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker network connect my{-}network my{-}container}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Practical Example: Frontend and Backend on the Same
+Network}\label{practical-example-frontend-and-backend-on-the-same-network}
+
+Let us build a concrete example. We will run two containers on the same
+user-defined bridge network and have them communicate by name --- no IP
+addresses needed.
+
+\subsubsection{Create the network}\label{create-the-network}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker network create app{-}network}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Start the ``backend''
+container}\label{start-the-backend-container}
+
+For simplicity we use another Nginx instance as a mock backend serving a
+JSON response.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mkdir backend}
+\NormalTok{cat \textgreater{} backend/index.html  frontend/index.html }
+
+\NormalTok{  Frontend}
+  
+\NormalTok{    Frontend container}
+\NormalTok{    Backend is reachable at http://backend}
+  
+
+\NormalTok{EOF}
+
+\NormalTok{docker run {-}d \textbackslash{}}
+\NormalTok{  {-}{-}name frontend \textbackslash{}}
+\NormalTok{  {-}{-}network app{-}network \textbackslash{}}
+\NormalTok{  {-}p 8080:80 \textbackslash{}}
+\NormalTok{  {-}v $(pwd)/frontend:/usr/share/nginx/html:ro \textbackslash{}}
+\NormalTok{  nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Verify containers can resolve each other by
+name}\label{verify-containers-can-resolve-each-other-by-name}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker exec frontend ping {-}c 3 backend}
+\end{Highlighting}
+\end{Shaded}
+
+Because both containers are on the same user-defined bridge network,
+Docker's built-in DNS resolves \texttt{backend} to the correct container
+IP automatically. No need to hardcode IP addresses anywhere.
+
+Open \texttt{http://localhost:8080} in your browser to see the frontend.
+The backend is reachable internally at \texttt{http://backend} from
+within the \texttt{frontend} container.
+
+\subsubsection{Clean up}\label{clean-up}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker rm {-}f frontend backend}
+\NormalTok{docker network rm app{-}network}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Conclusion}\label{conclusion-3}
+
+In this article we covered:
+
+\begin{itemize}
+\tightlist
+\item
+  Docker's five network drivers: \textbf{bridge}, \textbf{host},
+  \textbf{overlay}, \textbf{macvlan}, \textbf{ipvlan}, and \textbf{none}
+\item
+  The difference between the \textbf{default bridge} and
+  \textbf{user-defined bridge} networks
+\item
+  How \textbf{automatic DNS resolution} works on user-defined bridges
+  (containers talk by name, not IP)
+\item
+  Essential networking commands: \texttt{create}, \texttt{ls},
+  \texttt{inspect}, \texttt{rm}, \texttt{connect}
+\item
+  A practical example with frontend and backend containers communicating
+  by name
+\end{itemize}
+
+The
+\href{/Users/sasadangelo/github.com/sasadangelo/code4projects/how-docker-volumes-work/}{next
+article} covers \textbf{Docker volumes}: how to persist data outside a
+container so it survives restarts and replacements.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+If you enjoyed this article, don't forget to \textbf{give it a clap 👏},
+\textbf{share it with your friends 🔗}, and \textbf{follow me for more
+tips and tutorials on software development 📘}. Your support helps me
+create more content like this --- thank you! 🙌
+
+\section{How Docker Volumes Work}\label{how-docker-volumes-work}
+
+\emph{Posted on ****}
+
+\subsection{Introduction}\label{introduction-4}
+
+This is the fifth article of the \textbf{Getting Started with Docker}
+series. In the
+\href{/Users/sasadangelo/github.com/sasadangelo/code4projects/how-docker-networking-works-2025/}{previous
+article} we connected containers over a private network. Now we need to
+address another fundamental question: \textbf{what happens to your data
+when a container is stopped or replaced?}
+
+By default, a container's filesystem is \textbf{ephemeral} ---
+everything written inside it disappears when the container is removed.
+This is fine for stateless services like a web server, but it is a
+problem as soon as you have anything that needs to survive: logs,
+configuration, user data, database files.
+
+Docker solves this with \textbf{volumes}.
+
+\subsection{The Upgrade Problem}\label{the-upgrade-problem}
+
+One of Docker's main benefits is that upgrading an application is as
+simple as replacing the old container with a new one. But if your data
+is stored inside the container, replacing it means losing the data.
+
+The solution is to \textbf{separate the application binaries from the
+data}. Store the binaries in the image and the data in a volume that
+lives outside the container. When you replace the container, the volume
+stays where it is and the new container picks it up.
+
+\subsection{Docker Storage Types}\label{docker-storage-types}
+
+Docker provides three options for persisting data from a container to
+the host filesystem.
+
+\subsubsection{Volumes}\label{volumes}
+
+\textbf{Volumes} are managed entirely by Docker. They are stored in a
+directory on the host that Docker controls (typically
+\texttt{/var/lib/docker/volumes/} on Linux) and you interact with them
+through Docker CLI commands --- not by poking around the filesystem
+directly.
+
+Volumes are the \textbf{recommended way to persist data} in Docker. From
+the \href{https://docs.docker.com/storage/volumes/}{official
+documentation}, some of the reasons:
+
+\begin{itemize}
+\tightlist
+\item
+  Easier to back up and migrate than bind mounts
+\item
+  Manageable through the Docker CLI and API
+\item
+  Work on both Linux and Windows containers
+\item
+  Can be safely shared among multiple containers
+\item
+  Support remote storage drivers (NFS, cloud block storage, etc.)
+\item
+  New volumes can be pre-populated with data from a container
+\end{itemize}
+
+\subsubsection{Bind Mounts}\label{bind-mounts}
+
+\textbf{Bind mounts} map a specific directory or file on the
+\textbf{host filesystem} into the container. Unlike volumes, bind mounts
+are not managed by Docker --- any process on the host can read and write
+them.
+
+Bind mounts are ideal when:
+
+\begin{itemize}
+\tightlist
+\item
+  You want to share source code between your editor on the host and the
+  running container (live reload during development)
+\item
+  You need the storage to be on a specific filesystem type
+\item
+  You need direct access to the files from the host without going
+  through Docker
+\end{itemize}
+
+We already used a bind mount in the first article:
+\texttt{-v\ \$(pwd)/index.html:/usr/share/nginx/html/index.html:ro}.
+
+\subsubsection{Tmpfs Mounts}\label{tmpfs-mounts}
+
+\textbf{Tmpfs mounts} store data in the host's memory, not on disk. The
+data is never written to disk and disappears when the container stops.
+They are useful for sensitive data (secrets, tokens) that should never
+touch disk, or for temporary scratch space that requires very fast I/O.
+
+Tmpfs mounts are only available on Linux hosts.
+
+\subsection{\texorpdfstring{The \texttt{-\/-mount}
+Syntax}{The -\/-mount Syntax}}\label{the---mount-syntax}
+
+Docker has two ways to attach storage to a container: the older
+\texttt{-v} flag and the newer \texttt{-\/-mount} flag. The
+\texttt{-\/-mount} syntax is more explicit and is the one recommended by
+the official documentation today.
+
+Comparison:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\# Old syntax ({-}v)}
+\NormalTok{docker run {-}v my{-}volume:/app/data nginx:alpine}
+
+\NormalTok{\# New syntax ({-}{-}mount) — equivalent}
+\NormalTok{docker run {-}{-}mount type=volume,source=my{-}volume,target=/app/data nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+The \texttt{-\/-mount} form accepts key-value pairs:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{type} --- \texttt{volume}, \texttt{bind}, or \texttt{tmpfs}
+\item
+  \texttt{source} (or \texttt{src}) --- volume name or host path (for
+  bind mounts)
+\item
+  \texttt{target} (or \texttt{dst}) --- path inside the container
+\item
+  \texttt{readonly} --- makes the mount read-only
+\end{itemize}
+
+Both syntaxes work; \texttt{-\/-mount} is preferred in scripts and
+documentation for clarity.
+
+\subsection{Docker Volumes Cheat
+Sheet}\label{docker-volumes-cheat-sheet}
+
+Create a named volume:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker volume create my{-}data}
+\end{Highlighting}
+\end{Shaded}
+
+List all volumes:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker volume ls}
+\end{Highlighting}
+\end{Shaded}
+
+Inspect a volume (shows the mount point on the host):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker volume inspect my{-}data}
+\end{Highlighting}
+\end{Shaded}
+
+Remove a volume:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker volume rm my{-}data}
+\end{Highlighting}
+\end{Shaded}
+
+Remove all unused volumes:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker volume prune}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Practical Example: Nginx with Persistent
+Content}\label{practical-example-nginx-with-persistent-content}
+
+Let us demonstrate volumes with our Nginx container. We will create a
+volume, write content into it from a temporary container, then serve
+that content with Nginx --- and show that the content survives a
+container replacement.
+
+\subsubsection{Create the volume}\label{create-the-volume}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker volume create web{-}content}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Populate the volume}\label{populate-the-volume}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker run {-}{-}rm \textbackslash{}}
+\NormalTok{  {-}{-}mount type=volume,source=web{-}content,target=/data \textbackslash{}}
+\NormalTok{  alpine sh {-}c \textquotesingle{}echo "Content from a volume" \textgreater{} /data/index.html\textquotesingle{}}
+\end{Highlighting}
+\end{Shaded}
+
+This starts a temporary Alpine container, mounts the volume at
+\texttt{/data}, writes a file, and immediately exits and removes itself
+(\texttt{-\/-rm}). The volume and its content persist.
+
+\subsubsection{Serve the content with
+Nginx}\label{serve-the-content-with-nginx}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker run {-}d \textbackslash{}}
+\NormalTok{  {-}{-}name nginx{-}volume \textbackslash{}}
+\NormalTok{  {-}p 8080:80 \textbackslash{}}
+\NormalTok{  {-}{-}mount type=volume,source=web{-}content,target=/usr/share/nginx/html \textbackslash{}}
+\NormalTok{  nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+Open \texttt{http://localhost:8080} --- you see the page from the
+volume.
+
+\subsubsection{Replace the container --- data
+survives}\label{replace-the-container-data-survives}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker rm {-}f nginx{-}volume}
+
+\NormalTok{docker run {-}d \textbackslash{}}
+\NormalTok{  {-}{-}name nginx{-}volume{-}new \textbackslash{}}
+\NormalTok{  {-}p 8080:80 \textbackslash{}}
+\NormalTok{  {-}{-}mount type=volume,source=web{-}content,target=/usr/share/nginx/html \textbackslash{}}
+\NormalTok{  nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+Open \texttt{http://localhost:8080} again. The same page is still there.
+The volume outlived the container.
+
+\subsubsection{Clean up}\label{clean-up-1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker rm {-}f nginx{-}volume{-}new}
+\NormalTok{docker volume rm web{-}content}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Volumes vs Bind Mounts: When to Use
+Which}\label{volumes-vs-bind-mounts-when-to-use-which}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Volumes
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Bind Mounts
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Managed by Docker & Yes & No \\
+Portable across machines & Yes (with volume drivers) & No (path must
+exist on host) \\
+Best for production data & Yes & No \\
+Best for dev code sharing & No & Yes \\
+Access from host directly & Via \texttt{docker\ volume\ inspect} &
+Direct filesystem path \\
+Works on Windows containers & Yes & Limited \\
+\end{longtable}
+
+\subsection{Conclusion}\label{conclusion-4}
+
+In this article we covered:
+
+\begin{itemize}
+\tightlist
+\item
+  Why containers are ephemeral by default and why that matters
+\item
+  The three Docker storage types: \textbf{volumes}, \textbf{bind
+  mounts}, and \textbf{tmpfs}
+\item
+  The modern \textbf{\texttt{-\/-mount}} syntax vs the older \texttt{-v}
+  flag
+\item
+  Essential volume commands: \texttt{create}, \texttt{ls},
+  \texttt{inspect}, \texttt{rm}, \texttt{prune}
+\item
+  A practical example showing that volume data survives container
+  replacement
+\item
+  A comparison table to decide when to use volumes vs bind mounts
+\end{itemize}
+
+The
+\href{/Users/sasadangelo/github.com/sasadangelo/code4projects/how-docker-compose-works-2025/}{next
+article} introduces \textbf{Docker Compose}: how to manage a
+multi-container application with a single YAML file instead of juggling
+multiple \texttt{docker\ run} commands.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+If you enjoyed this article, don't forget to \textbf{give it a clap 👏},
+\textbf{share it with your friends 🔗}, and \textbf{follow me for more
+tips and tutorials on software development 📘}. Your support helps me
+create more content like this --- thank you! 🙌
+
+\section{How Docker Compose Works}\label{how-docker-compose-works}
+
+\emph{Posted on ****}
+
+\subsection{Introduction}\label{introduction-5}
+
+This is the sixth article of the \textbf{Getting Started with Docker}
+series. In the
+\href{/Users/sasadangelo/github.com/sasadangelo/code4projects/how-docker-volumes-work/}{previous
+article} we learned how to persist data with volumes. So far, to run our
+application we have been juggling multiple \texttt{docker\ run} commands
+--- one for the network, one for each container, one for each volume.
+This quickly becomes hard to manage and impossible to share reliably
+with a team.
+
+\textbf{Docker Compose} solves this: you describe your entire
+application in a single YAML file and launch everything with one
+command.
+
+\subsection{What is Docker Compose?}\label{what-is-docker-compose}
+
+Docker Compose is a tool for defining and running multi-container Docker
+applications. You describe your services, networks, and volumes in a
+\texttt{docker-compose.yml} file, and Docker Compose translates that
+into the correct sequence of \texttt{docker} commands.
+
+\begin{quote}
+\textbf{Important}: the original \texttt{docker-compose} command (v1,
+written in Python) was deprecated in May 2023 and is no longer
+maintained. The current tool is \textbf{\texttt{docker\ compose}} (v2,
+written in Go), which is a plugin built directly into the Docker CLI.
+Always use \texttt{docker\ compose} (with a space, not a hyphen). If you
+are on Podman, use \texttt{podman\ compose} which is compatible with the
+same YAML format.
+\end{quote}
+
+You can think of \texttt{docker\ compose} as a wrapper that orchestrates
+all the \texttt{docker} commands you would otherwise run manually ---
+but declaratively, from a single file.
+
+\subsection{The docker-compose.yml
+File}\label{the-docker-compose.yml-file}
+
+The Compose file is a YAML document. Its top-level keys are:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{services} --- the containers that make up your application
+\item
+  \texttt{volumes} --- named volumes used by the services
+\item
+  \texttt{networks} --- custom networks (if not specified, Compose
+  creates a default bridge network automatically)
+\end{itemize}
+
+\subsubsection{\texorpdfstring{A Note on the \texttt{version}
+Field}{A Note on the version Field}}\label{a-note-on-the-version-field}
+
+Older tutorials and documentation show a
+\texttt{version:\ \textquotesingle{}3.x\textquotesingle{}} field at the
+top of the Compose file. This field is \textbf{deprecated} and should be
+omitted. Modern Docker Compose uses the
+\href{https://compose-spec.io/}{Compose Specification} which does not
+require a version declaration.
+
+\subsection{Practical Example: Frontend and Backend with
+Compose}\label{practical-example-frontend-and-backend-with-compose}
+
+We will rebuild the two-container application from the networking
+article using Docker Compose, adding a named volume for the frontend
+content.
+
+\subsubsection{Project structure}\label{project-structure}
+
+\begin{verbatim}
+my-app/
+├── docker-compose.yml
+├── frontend/
+│   └── index.html
+└── backend/
+    └── index.html
+\end{verbatim}
+
+Create the directories and content:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mkdir {-}p my{-}app/frontend my{-}app/backend}
+\NormalTok{cd my{-}app}
+
+\NormalTok{cat \textgreater{} frontend/index.html }
+
+\NormalTok{  Frontend}
+  
+\NormalTok{    Frontend}
+\NormalTok{    This app is managed by Docker Compose.}
+  
+
+\NormalTok{EOF}
+
+\NormalTok{cat \textgreater{} backend/index.html \textless{}\textless{} \textquotesingle{}EOF\textquotesingle{}}
+\NormalTok{\{"status": "ok", "message": "Hello from the backend!"\}}
+\NormalTok{EOF}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{The docker-compose.yml
+file}\label{the-docker-compose.yml-file-1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{services}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{frontend}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ nginx:alpine}
+\AttributeTok{    }\FunctionTok{container\_name}\KeywordTok{:}\AttributeTok{ frontend}
+\AttributeTok{    }\FunctionTok{ports}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"8080:80"}
+\AttributeTok{    }\FunctionTok{volumes}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ ./frontend:/usr/share/nginx/html:ro}
+\AttributeTok{    }\FunctionTok{networks}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ app{-}network}
+\AttributeTok{    }\FunctionTok{depends\_on}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ backend}
+
+\AttributeTok{  }\FunctionTok{backend}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ nginx:alpine}
+\AttributeTok{    }\FunctionTok{container\_name}\KeywordTok{:}\AttributeTok{ backend}
+\AttributeTok{    }\FunctionTok{volumes}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ ./backend:/usr/share/nginx/html:ro}
+\AttributeTok{    }\FunctionTok{networks}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ app{-}network}
+
+\FunctionTok{networks}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{app{-}network}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{driver}\KeywordTok{:}\AttributeTok{ bridge}
+\end{Highlighting}
+\end{Shaded}
+
+Key things to notice:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{No \texttt{version:} field} --- not needed with modern Compose
+\item
+  \textbf{\texttt{depends\_on}} --- ensures the backend container starts
+  before the frontend. For health-based ordering, you can use
+  \texttt{condition:\ service\_healthy} together with a
+  \texttt{healthcheck} definition
+\item
+  \textbf{Networks are created automatically} --- Compose creates
+  \texttt{app-network} for you
+\item
+  \textbf{Bind mounts} use relative paths from the directory containing
+  \texttt{docker-compose.yml}
+\end{itemize}
+
+\subsection{Docker Compose Commands}\label{docker-compose-commands}
+
+The most important commands:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\# Start all services (build images if needed, create networks and volumes)}
+\NormalTok{docker compose up {-}d}
+
+\NormalTok{\# Stop and remove containers, networks (volumes are preserved)}
+\NormalTok{docker compose down}
+
+\NormalTok{\# Stop and remove everything including volumes}
+\NormalTok{docker compose down {-}v}
+
+\NormalTok{\# View logs of all services}
+\NormalTok{docker compose logs}
+
+\NormalTok{\# Follow logs in real time}
+\NormalTok{docker compose logs {-}f}
+
+\NormalTok{\# List running containers managed by this Compose file}
+\NormalTok{docker compose ps}
+
+\NormalTok{\# Execute a command inside a running service container}
+\NormalTok{docker compose exec frontend sh}
+
+\NormalTok{\# Rebuild images (useful after changing a Dockerfile)}
+\NormalTok{docker compose build}
+
+\NormalTok{\# Pull the latest versions of all images}
+\NormalTok{docker compose pull}
+
+\NormalTok{\# Restart a single service}
+\NormalTok{docker compose restart frontend}
+\end{Highlighting}
+\end{Shaded}
+
+The key difference from \texttt{docker} commands is that all of these
+act on the \textbf{entire application} defined in the Compose file, not
+a single container.
+
+\subsection{Environment Variables}\label{environment-variables}
+
+Hard-coded values in \texttt{docker-compose.yml} are fine for
+development, but for anything sensitive (passwords, API keys) or
+environment-specific (URLs, port numbers) you should use variables.
+
+Docker Compose automatically reads a file named \texttt{.env} in the
+same directory:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\# .env}
+\NormalTok{NGINX\_PORT=8080}
+\NormalTok{APP\_ENV=development}
+\end{Highlighting}
+\end{Shaded}
+
+Then reference them in \texttt{docker-compose.yml}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{services}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{frontend}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{ports}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"$\{NGINX\_PORT\}:80"}
+\AttributeTok{    }\FunctionTok{environment}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ APP\_ENV=$\{APP\_ENV\}}
+\end{Highlighting}
+\end{Shaded}
+
+Never commit \texttt{.env} files containing secrets to version control.
+Add \texttt{.env} to your \texttt{.gitignore}.
+
+\subsection{Starting the Application}\label{starting-the-application}
+
+From the \texttt{my-app/} directory:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker compose up {-}d}
+\end{Highlighting}
+\end{Shaded}
+
+Compose will:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Create the \texttt{app-network} bridge network
+\item
+  Start the \texttt{backend} container
+\item
+  Start the \texttt{frontend} container
+\item
+  Map port 8080 on your host to port 80 on the frontend container
+\end{enumerate}
+
+Open \texttt{http://localhost:8080} --- the frontend is running. Check
+that both services are up:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker compose ps}
+\end{Highlighting}
+\end{Shaded}
+
+Verify the backend is reachable by name from the frontend:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker compose exec frontend ping {-}c 3 backend}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Clean up}\label{clean-up-2}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker compose down}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Conclusion}\label{conclusion-5}
+
+In this article we covered:
+
+\begin{itemize}
+\tightlist
+\item
+  What Docker Compose is and why it replaces manual \texttt{docker\ run}
+  scripts
+\item
+  The difference between \texttt{docker-compose} v1 (deprecated) and
+  \textbf{\texttt{docker\ compose}} v2 (current)
+\item
+  The structure of a \texttt{docker-compose.yml} file:
+  \texttt{services}, \texttt{volumes}, \texttt{networks}
+\item
+  Why the \texttt{version:} field is no longer needed
+\item
+  Essential Compose commands: \texttt{up}, \texttt{down}, \texttt{logs},
+  \texttt{ps}, \texttt{exec}, \texttt{build}
+\item
+  How to manage configuration with \textbf{environment variables} and
+  \texttt{.env} files
+\end{itemize}
+
+The
+\href{/Users/sasadangelo/github.com/sasadangelo/code4projects/docker-security-best-practices/}{next
+article} closes the series with \textbf{Docker security best practices}:
+how to run containers safely, limit their privileges, and scan images
+for vulnerabilities.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+If you enjoyed this article, don't forget to \textbf{give it a clap 👏},
+\textbf{share it with your friends 🔗}, and \textbf{follow me for more
+tips and tutorials on software development 📘}. Your support helps me
+create more content like this --- thank you! 🙌
+
+\section{Docker Security Best
+Practices}\label{docker-security-best-practices}
+
+\emph{Posted on ****}
+
+\subsection{Introduction}\label{introduction-6}
+
+This is the seventh and final article of the \textbf{Getting Started
+with Docker} series. In the
+\href{/Users/sasadangelo/github.com/sasadangelo/code4projects/how-docker-compose-works-2025/}{previous
+article} we orchestrated a multi-container application with Docker
+Compose. Now we turn our attention to \textbf{security}.
+
+Containers are isolated --- but isolation is not the same as security. A
+container running as root, with a writable filesystem and full Linux
+capabilities, is a significant risk if it is ever compromised. The good
+news is that Docker provides several mechanisms to reduce the attack
+surface, and most of them require only a few lines of configuration.
+
+\subsection{1. Never Run as Root}\label{never-run-as-root}
+
+By default, processes inside a container run as \textbf{root} (UID 0).
+This means that if an attacker exploits a vulnerability in your
+application, they have root access inside the container --- and
+depending on how the container is configured, they may be able to escape
+to the host.
+
+The fix is simple: add a \texttt{USER} instruction to your Dockerfile.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{FROM}\NormalTok{ nginx:alpine}
+
+\KeywordTok{COPY}\NormalTok{ html /usr/share/nginx/html}
+
+\CommentTok{\# Switch to the non{-}root user that the nginx image already provides}
+\KeywordTok{USER}\NormalTok{ nginx}
+
+\KeywordTok{EXPOSE}\NormalTok{ 80}
+\KeywordTok{CMD}\NormalTok{ [}\StringTok{"nginx"}\NormalTok{, }\StringTok{"{-}g"}\NormalTok{, }\StringTok{"daemon off;"}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+The official \texttt{nginx:alpine} image already includes a non-root
+\texttt{nginx} user. For your own images, create a dedicated user:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{FROM}\NormalTok{ alpine:3.20}
+
+\KeywordTok{RUN} \ExtensionTok{addgroup} \AttributeTok{{-}S}\NormalTok{ appgroup }\KeywordTok{\&\&} \ExtensionTok{adduser} \AttributeTok{{-}S}\NormalTok{ appuser }\AttributeTok{{-}G}\NormalTok{ appgroup}
+
+\KeywordTok{COPY} \OperatorTok{{-}{-}chown=appuser:appgroup}\NormalTok{ app /app}
+
+\KeywordTok{USER}\NormalTok{ appuser}
+
+\KeywordTok{CMD}\NormalTok{ [}\StringTok{"/app/start.sh"}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+The \texttt{-\/-chown} flag in \texttt{COPY} ensures the files are owned
+by the correct user from the start.
+
+You can also enforce non-root at runtime without changing the
+Dockerfile:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker run {-}{-}user 1001:1001 nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{2. Use a Read-Only
+Filesystem}\label{use-a-read-only-filesystem}
+
+If your application does not need to write to its own filesystem, make
+it read-only:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker run {-}{-}read{-}only {-}p 8080:80 nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+If the application needs to write to specific paths (temp files, logs),
+mount those paths as \texttt{tmpfs}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker run {-}{-}read{-}only \textbackslash{}}
+\NormalTok{  {-}{-}tmpfs /tmp \textbackslash{}}
+\NormalTok{  {-}{-}tmpfs /var/cache/nginx \textbackslash{}}
+\NormalTok{  {-}{-}tmpfs /var/run \textbackslash{}}
+\NormalTok{  {-}p 8080:80 \textbackslash{}}
+\NormalTok{  nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+A read-only filesystem means that even if an attacker gains code
+execution inside the container, they cannot modify the application
+binaries or install tools.
+
+In Docker Compose:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{services}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{frontend}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ nginx:alpine}
+\AttributeTok{    }\FunctionTok{read\_only}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{tmpfs}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ /tmp}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ /var/cache/nginx}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ /var/run}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{3. Drop Linux Capabilities}\label{drop-linux-capabilities}
+
+Linux capabilities are fine-grained divisions of root privileges. By
+default, Docker grants a container a subset of them. You can drop all
+capabilities and add back only what your application actually needs:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{docker run {-}{-}cap{-}drop=ALL {-}{-}cap{-}add=NET\_BIND\_SERVICE nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+\texttt{NET\_BIND\_SERVICE} allows binding to ports below 1024 (like
+port 80). Most application containers do not need any other capability.
+
+In Docker Compose:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{services}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{frontend}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ nginx:alpine}
+\AttributeTok{    }\FunctionTok{cap\_drop}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ ALL}
+\AttributeTok{    }\FunctionTok{cap\_add}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ NET\_BIND\_SERVICE}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{4. Never Put Secrets in Environment Variables (or
+Images)}\label{never-put-secrets-in-environment-variables-or-images}
+
+A common mistake is passing passwords or API keys through environment
+variables in \texttt{docker-compose.yml} or baking them into the image
+with \texttt{ENV}. Both approaches expose secrets in
+\texttt{docker\ inspect} output and in image layers.
+
+\textbf{What to do instead}:
+
+\begin{itemize}
+\tightlist
+\item
+  Use \textbf{Docker secrets} (available in Swarm mode) which mount
+  secrets as files in \texttt{/run/secrets/}
+\item
+  Use a \textbf{secrets manager} (HashiCorp Vault, AWS Secrets Manager,
+  etc.)
+\item
+  As a minimum, use a \texttt{.env} file that is \textbf{never committed
+  to version control} and reference it in Compose
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# docker{-}compose.yml}
+\FunctionTok{services}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{app}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ my{-}app}
+\AttributeTok{    }\FunctionTok{env\_file}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ .env.secrets}\CommentTok{   \# never committed to git}
+\end{Highlighting}
+\end{Shaded}
+
+Add to \texttt{.gitignore}:
+
+\begin{verbatim}
+.env
+.env.secrets
+*.env
+\end{verbatim}
+
+\subsection{5. Use Minimal Base Images}\label{use-minimal-base-images}
+
+Every package in your base image is a potential attack surface. Prefer
+minimal base images:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{alpine} --- \textasciitilde5MB, very popular, uses musl libc
+\item
+  \texttt{distroless} (Google) --- no shell, no package manager, only
+  the runtime and your app
+\item
+  \texttt{scratch} --- completely empty, for statically compiled
+  binaries (Go, Rust)
+\end{itemize}
+
+For our Nginx example we already use \texttt{nginx:alpine}. Going even
+smaller would mean building a custom Nginx binary, which is rarely
+necessary.
+
+The rule: \textbf{if it is not needed, it should not be in the image}.
+
+\subsection{6. Scan Images for Known
+Vulnerabilities}\label{scan-images-for-known-vulnerabilities}
+
+Even minimal images can contain packages with known CVEs. Docker
+provides a built-in scanner called \textbf{Docker Scout}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\# Quick vulnerability overview}
+\NormalTok{docker scout quickview nginx:alpine}
+
+\NormalTok{\# Full CVE list}
+\NormalTok{docker scout cves nginx:alpine}
+
+\NormalTok{\# Recommendations to fix vulnerabilities}
+\NormalTok{docker scout recommendations nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+Docker Scout is available in Docker Desktop and as a CLI plugin. It
+integrates with Docker Hub and can be added to CI/CD pipelines to fail a
+build when high-severity vulnerabilities are detected.
+
+An alternative open-source scanner is \textbf{Trivy}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{trivy image nginx:alpine}
+\end{Highlighting}
+\end{Shaded}
+
+Make image scanning part of your build pipeline, not an afterthought.
+
+\subsection{7. Keep Images Up to Date}\label{keep-images-up-to-date}
+
+A scanned image with no vulnerabilities today may have CVEs tomorrow.
+Pin your base image to a specific digest rather than a floating tag, and
+automate rebuild checks:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Pin to a specific digest (reproducible, auditable)}
+\KeywordTok{FROM}\NormalTok{ nginx:alpine@sha256:...}
+\end{Highlighting}
+\end{Shaded}
+
+Many teams use tools like \textbf{Renovate} or \textbf{Dependabot} to
+automatically open PRs when a newer base image is available.
+
+\subsection{Putting It All Together}\label{putting-it-all-together}
+
+Here is a Dockerfile for our Nginx image that applies all the practices
+above:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{FROM}\NormalTok{ nginx:alpine}
+
+\CommentTok{\# Copy content}
+\KeywordTok{COPY} \OperatorTok{{-}{-}chown=nginx:nginx}\NormalTok{ html /usr/share/nginx/html}
+
+\CommentTok{\# Drop to non{-}root}
+\KeywordTok{USER}\NormalTok{ nginx}
+
+\KeywordTok{EXPOSE}\NormalTok{ 80}
+
+\KeywordTok{CMD}\NormalTok{ [}\StringTok{"nginx"}\NormalTok{, }\StringTok{"{-}g"}\NormalTok{, }\StringTok{"daemon off;"}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+And the corresponding \texttt{docker-compose.yml}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{services}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{frontend}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{build}\KeywordTok{:}\AttributeTok{ .}
+\AttributeTok{    }\FunctionTok{image}\KeywordTok{:}\AttributeTok{ my{-}nginx:secure}
+\AttributeTok{    }\FunctionTok{container\_name}\KeywordTok{:}\AttributeTok{ frontend}
+\AttributeTok{    }\FunctionTok{ports}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ }\StringTok{"8080:80"}
+\AttributeTok{    }\FunctionTok{read\_only}\KeywordTok{:}\AttributeTok{ }\CharTok{true}
+\AttributeTok{    }\FunctionTok{tmpfs}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ /tmp}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ /var/cache/nginx}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ /var/run}
+\AttributeTok{    }\FunctionTok{cap\_drop}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ ALL}
+\AttributeTok{    }\FunctionTok{cap\_add}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ NET\_BIND\_SERVICE}
+\AttributeTok{    }\FunctionTok{networks}\KeywordTok{:}
+\AttributeTok{      }\KeywordTok{{-}}\AttributeTok{ app{-}network}
+
+\FunctionTok{networks}\KeywordTok{:}
+\AttributeTok{  }\FunctionTok{app{-}network}\KeywordTok{:}
+\AttributeTok{    }\FunctionTok{driver}\KeywordTok{:}\AttributeTok{ bridge}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Conclusion}\label{conclusion-6}
+
+In this article we covered:
+
+\begin{itemize}
+\tightlist
+\item
+  Running containers as a \textbf{non-root user} with \texttt{USER} in
+  the Dockerfile
+\item
+  Using a \textbf{read-only filesystem} with \texttt{-\/-read-only} and
+  \texttt{tmpfs} for writable paths
+\item
+  \textbf{Dropping Linux capabilities} with \texttt{-\/-cap-drop=ALL}
+  and adding back only what is needed
+\item
+  Keeping \textbf{secrets out of images and environment variables}
+\item
+  Choosing \textbf{minimal base images} to reduce attack surface
+\item
+  \textbf{Scanning images} for vulnerabilities with Docker Scout or
+  Trivy
+\item
+  \textbf{Keeping images up to date} with pinned digests and automated
+  updates
+\end{itemize}
+
+This concludes the \textbf{Getting Started with Docker} series. You now
+have a solid foundation to build, network, persist, orchestrate, and
+secure containerized applications. The natural next step is
+\textbf{Docker Swarm} for multi-host deployments, or \textbf{Kubernetes}
+for large-scale container orchestration.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+If you enjoyed this article, don't forget to \textbf{give it a clap 👏},
+\textbf{share it with your friends 🔗}, and \textbf{follow me for more
+tips and tutorials on software development 📘}. Your support helps me
+create more content like this --- thank you! 🙌
+
+\end{document}

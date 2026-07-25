@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1130" width="800" height="1130">
+  <defs>
+    <linearGradient id="bgcover" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#0a1628"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2496ed"/>
+      <stop offset="100%" stop-color="#1a6fb5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1130" fill="url(#bgcover)"/>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="800" height="6" fill="url(#accent)"/>
+
+  <!-- Docker whale illustration (centered, large) -->
+  <g transform="translate(240, 140)">
+    <!-- Containers stack on whale -->
+    <rect x="20"  y="0"   width="52" height="44" rx="6" fill="#ffffff" opacity="0.95"/>
+    <rect x="80"  y="0"   width="52" height="44" rx="6" fill="#ffffff" opacity="0.95"/>
+    <rect x="140" y="0"   width="52" height="44" rx="6" fill="#ffffff" opacity="0.95"/>
+    <rect x="20"  y="52"  width="52" height="44" rx="6" fill="#ffffff" opacity="0.80"/>
+    <rect x="80"  y="52"  width="52" height="44" rx="6" fill="#ffffff" opacity="0.80"/>
+    <!-- Whale body -->
+    <ellipse cx="160" cy="155" rx="155" ry="70" fill="#2496ed"/>
+    <!-- Tail -->
+    <path d="M285 130 Q330 90 320 140" fill="#2496ed"/>
+    <!-- Belly highlight -->
+    <ellipse cx="145" cy="175" rx="100" ry="35" fill="#1a6fb5" opacity="0.5"/>
+    <!-- Eye -->
+    <circle cx="70" cy="145" r="12" fill="#ffffff"/>
+    <circle cx="70" cy="145" r="6"  fill="#0d1117"/>
+    <circle cx="73" cy="142" r="2"  fill="#ffffff"/>
+    <!-- Water spray -->
+    <path d="M50 108 Q45 80 55 65" stroke="#2496ed" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M65 105 Q65 75 72 58" stroke="#2496ed" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M80 108 Q82 78 88 62" stroke="#2496ed" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Divider line -->
+  <rect x="60" y="430" width="680" height="2" fill="#2496ed" opacity="0.4"/>
+
+  <!-- Title -->
+  <text x="400" y="500"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="54" font-weight="700" fill="#ffffff"
+        text-anchor="middle" letter-spacing="-1">Getting Started</text>
+  <text x="400" y="565"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="54" font-weight="700" fill="#2496ed"
+        text-anchor="middle" letter-spacing="-1">with Docker</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="625"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="20" fill="#8b949e"
+        text-anchor="middle">Containers, Images, Networking,</text>
+  <text x="400" y="653"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="20" fill="#8b949e"
+        text-anchor="middle">Volumes, Compose and Security</text>
+
+  <!-- Chapter pills -->
+  <g transform="translate(60, 700)">
+    <rect x="0"   y="0" width="92"  height="30" rx="15" fill="#2496ed" opacity="0.15"/>
+    <text x="46"  y="20" font-family="'Helvetica Neue', Helvetica, sans-serif" font-size="12" fill="#2496ed" text-anchor="middle">Docker</text>
+    <rect x="102" y="0" width="92"  height="30" rx="15" fill="#2496ed" opacity="0.15"/>
+    <text x="148" y="20" font-family="'Helvetica Neue', Helvetica, sans-serif" font-size="12" fill="#2496ed" text-anchor="middle">Podman</text>
+    <rect x="204" y="0" width="92"  height="30" rx="15" fill="#2496ed" opacity="0.15"/>
+    <text x="250" y="20" font-family="'Helvetica Neue', Helvetica, sans-serif" font-size="12" fill="#2496ed" text-anchor="middle">Networking</text>
+    <rect x="306" y="0" width="92"  height="30" rx="15" fill="#2496ed" opacity="0.15"/>
+    <text x="352" y="20" font-family="'Helvetica Neue', Helvetica, sans-serif" font-size="12" fill="#2496ed" text-anchor="middle">Volumes</text>
+    <rect x="408" y="0" width="92"  height="30" rx="15" fill="#2496ed" opacity="0.15"/>
+    <text x="454" y="20" font-family="'Helvetica Neue', Helvetica, sans-serif" font-size="12" fill="#2496ed" text-anchor="middle">Security</text>
+  </g>
+
+  <!-- Bottom divider -->
+  <rect x="60" y="820" width="680" height="1" fill="#30363d"/>
+
+  <!-- Author block -->
+  <text x="400" y="890"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="26" font-weight="600" fill="#e6edf3"
+        text-anchor="middle">Salvatore D'Angelo</text>
+  <text x="400" y="925"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="16" fill="#57606a"
+        text-anchor="middle">code4projects.com</text>
+
+  <!-- Year -->
+  <text x="400" y="975"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="15" fill="#30363d"
+        text-anchor="middle">2026</text>
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="1124" width="800" height="6" fill="url(#accent)"/>
+</svg>

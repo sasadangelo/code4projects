@@ -1,3 +1,20 @@
+- post_series_id: getting-started-with-docker-2025
+  post_series_title: Getting Started with Docker (2025)
+  post_series:
+  - name: "Part 1: Getting Started with Docker and Podman"
+    link: /getting-started-with-docker-2025/
+  - name: "Part 2: Containers vs Virtual Machines"
+    link: /containers-vs-virtual-machines-2025/
+  - name: "Part 3: Dockerfile and Building Custom Images"
+    link: /dockerfile-and-building-custom-images/
+  - name: "Part 4: How Docker Networking Works"
+    link: /how-docker-networking-works-2025/
+  - name: "Part 5: How Docker Volumes Work"
+    link: /how-docker-volumes-work/
+  - name: "Part 6: How Docker Compose Works"
+    link: /how-docker-compose-works-2025/
+  - name: "Part 7: Docker Security Best Practices"
+    link: /docker-security-best-practices/
 - post_series_id: getting-started-with-kubernetes
   post_series_title: Getting started with Kubernetes
   post_series:
