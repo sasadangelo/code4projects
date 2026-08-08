@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360">
+  <!-- Background -->
+  <rect width="760" height="360" fill="#f0f4f8"/>
+
+  <!-- Title -->
+  <rect x="0" y="0" width="760" height="48" fill="#1d63ed"/>
+  <text x="380" y="30" font-family="'Segoe UI',system-ui,sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Multi-Stage Build — How It Works</text>
+
+  <!-- Stage 1: builder box -->
+  <rect x="40" y="74" width="280" height="246" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+  <rect x="40" y="74" width="280" height="42" rx="8" fill="#16a34a"/>
+  <rect x="40" y="100" width="280" height="16" fill="#16a34a"/>
+  <text x="180" y="100" font-family="'Segoe UI',system-ui,sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Stage 1 — builder</text>
+
+  <text x="60" y="136" font-family="'Courier New',monospace" font-size="11" fill="#57606a">FROM node:20-alpine AS builder</text>
+  <text x="60" y="154" font-family="'Courier New',monospace" font-size="11" fill="#57606a">WORKDIR /build</text>
+  <text x="60" y="172" font-family="'Courier New',monospace" font-size="11" fill="#57606a">COPY package*.json ./</text>
+  <text x="60" y="190" font-family="'Courier New',monospace" font-size="11" fill="#57606a">RUN npm ci</text>
+  <text x="60" y="208" font-family="'Courier New',monospace" font-size="11" fill="#57606a">COPY . .</text>
+  <text x="60" y="226" font-family="'Courier New',monospace" font-size="11" fill="#57606a">RUN npm run build</text>
+
+  <!-- Label: tools + sources -->
+  <rect x="60" y="246" width="240" height="28" rx="4" fill="#dcfce7"/>
+  <text x="180" y="264" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#15803d" text-anchor="middle">node_modules · sources · build tools</text>
+
+  <!-- Label: output -->
+  <rect x="60" y="282" width="240" height="28" rx="4" fill="#bbf7d0"/>
+  <text x="180" y="300" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" font-weight="600" fill="#15803d" text-anchor="middle">→ /build/dist  (only artifact needed)</text>
+
+  <!-- Arrow -->
+  <line x1="328" y1="200" x2="418" y2="200" stroke="#1d63ed" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="373" y="190" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#1d63ed" text-anchor="middle">COPY</text>
+  <text x="373" y="202" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#1d63ed" text-anchor="middle">--from=</text>
+  <text x="373" y="214" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#1d63ed" text-anchor="middle">builder</text>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1d63ed"/>
+    </marker>
+  </defs>
+
+  <!-- Stage 2: final box -->
+  <rect x="424" y="74" width="296" height="246" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+  <rect x="424" y="74" width="296" height="42" rx="8" fill="#1d63ed"/>
+  <rect x="424" y="100" width="296" height="16" fill="#1d63ed"/>
+  <text x="572" y="100" font-family="'Segoe UI',system-ui,sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Stage 2 — final image</text>
+
+  <text x="444" y="136" font-family="'Courier New',monospace" font-size="11" fill="#57606a">FROM nginx:alpine</text>
+  <text x="444" y="154" font-family="'Courier New',monospace" font-size="11" fill="#57606a">COPY --from=builder \</text>
+  <text x="444" y="172" font-family="'Courier New',monospace" font-size="11" fill="#57606a">  /build/dist \</text>
+  <text x="444" y="190" font-family="'Courier New',monospace" font-size="11" fill="#57606a">  /usr/share/nginx/html</text>
+  <text x="444" y="208" font-family="'Courier New',monospace" font-size="11" fill="#57606a">USER nginx</text>
+  <text x="444" y="226" font-family="'Courier New',monospace" font-size="11" fill="#57606a">EXPOSE 80</text>
+
+  <!-- Label: only what's needed -->
+  <rect x="444" y="246" width="256" height="28" rx="4" fill="#dbeafe"/>
+  <text x="572" y="264" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1d4ed8" text-anchor="middle">nginx binary + static dist only</text>
+
+  <!-- Size comparison -->
+  <rect x="444" y="282" width="256" height="28" rx="4" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+  <text x="572" y="300" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" font-weight="600" fill="#1d4ed8" text-anchor="middle">~500 MB  →  ~25 MB final image</text>
+
+  <!-- Bottom note -->
+  <rect x="0" y="328" width="760" height="32" fill="#1d63ed"/>
+  <text x="380" y="349" font-family="'Segoe UI',system-ui,sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Build tools never reach the final image — smaller, faster, safer</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <!-- Background -->
+  <rect width="760" height="400" fill="#f0f4f8"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="760" height="56" fill="#1d63ed"/>
+  <text x="380" y="35" font-family="'Segoe UI',system-ui,sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">Dockerfile Best Practices</text>
+
+  <!-- Four pillars -->
+
+  <!-- 1 - Functional -->
+  <rect x="28" y="76" width="160" height="288" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1.2"/>
+  <rect x="28" y="76" width="160" height="44" rx="8" fill="#1d63ed"/>
+  <rect x="28" y="100" width="160" height="20" fill="#1d63ed"/>
+  <text x="108" y="103" font-family="'Segoe UI',system-ui,sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">⚙ Functional</text>
+  <text x="44" y="140" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• ENTRYPOINT + CMD</text>
+  <text x="44" y="158" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• EXPOSE ports</text>
+  <text x="44" y="176" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• HEALTHCHECK</text>
+  <text x="44" y="194" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• Env variables</text>
+  <text x="44" y="212" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• .dockerignore</text>
+  <text x="44" y="230" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• Exec form CMD</text>
+
+  <!-- 2 - Lightweight -->
+  <rect x="208" y="76" width="160" height="288" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1.2"/>
+  <rect x="208" y="76" width="160" height="44" rx="8" fill="#16a34a"/>
+  <rect x="208" y="100" width="160" height="20" fill="#16a34a"/>
+  <text x="288" y="103" font-family="'Segoe UI',system-ui,sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">⬡ Lightweight</text>
+  <text x="224" y="140" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• Alpine/distroless</text>
+  <text x="224" y="158" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• Multi-stage builds</text>
+  <text x="224" y="176" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• Chain RUN with &amp;&amp;</text>
+  <text x="224" y="194" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• --no-cache flag</text>
+  <text x="224" y="212" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• Layer cache order</text>
+  <text x="224" y="230" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• Remove temp files</text>
+
+  <!-- 3 - Debuggable -->
+  <rect x="388" y="76" width="160" height="288" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1.2"/>
+  <rect x="388" y="76" width="160" height="44" rx="8" fill="#d97706"/>
+  <rect x="388" y="100" width="160" height="20" fill="#d97706"/>
+  <text x="468" y="103" font-family="'Segoe UI',system-ui,sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">🔍 Debuggable</text>
+  <text x="404" y="140" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• HEALTHCHECK</text>
+  <text x="404" y="158" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• Structured logs</text>
+  <text x="404" y="176" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• docker logs</text>
+  <text x="404" y="194" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• docker exec -it</text>
+  <text x="404" y="212" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• LABEL metadata</text>
+  <text x="404" y="230" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• Explicit tags</text>
+
+  <!-- 4 - Secure -->
+  <rect x="568" y="76" width="160" height="288" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1.2"/>
+  <rect x="568" y="76" width="160" height="44" rx="8" fill="#dc2626"/>
+  <rect x="568" y="100" width="160" height="20" fill="#dc2626"/>
+  <text x="648" y="103" font-family="'Segoe UI',system-ui,sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">🔒 Secure</text>
+  <text x="584" y="140" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• Non-root USER</text>
+  <text x="584" y="158" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• Read-only FS</text>
+  <text x="584" y="176" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• Drop capabilities</text>
+  <text x="584" y="194" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• No secrets in ENV</text>
+  <text x="584" y="212" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• Scan with Trivy</text>
+  <text x="584" y="230" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#1f2328">• Pin base digest</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="368" width="760" height="32" fill="#1d63ed"/>
+  <text x="380" y="388" font-family="'Segoe UI',system-ui,sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">One Dockerfile — four dimensions of quality</text>
+</svg>

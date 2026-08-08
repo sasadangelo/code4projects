@@ -15,6 +15,8 @@
     link: /how-docker-compose-works-2025/
   - name: "Part 7: Docker Security Best Practices"
     link: /docker-security-best-practices/
+  - name: "Part 8: Docker Image Best Practices"
+    link: /docker-image-best-practices/
 - post_series_id: getting-started-with-kubernetes
   post_series_title: Getting started with Kubernetes
   post_series:

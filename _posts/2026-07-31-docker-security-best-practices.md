@@ -16,7 +16,7 @@ _Posted on **{{ page.date | date_to_string }}**_
 
 ## Introduction
 
-This is the seventh and final article of the **Getting Started with Docker** series. In the [previous article]({{ site.baseurl }}/how-docker-compose-works-2025/) we orchestrated a multi-container application with Docker Compose. Now we turn our attention to **security**.
+This is the seventh article of the **Getting Started with Docker** series. In the [previous article]({{ site.baseurl }}/how-docker-compose-works-2025/) we orchestrated a multi-container application with Docker Compose. Now we turn our attention to **security**.
 
 Containers are isolated — but isolation is not the same as security. A container running as root, with a writable filesystem and full Linux capabilities, is a significant risk if it is ever compromised. The good news is that Docker provides several mechanisms to reduce the attack surface, and most of them require only a few lines of configuration.
 
@@ -144,6 +144,8 @@ Add to `.gitignore`:
 *.env
 ```
 
+Keep in mind what `env_file` actually protects against: it keeps the secret out of your Dockerfile and out of git. It does **not** keep the secret out of `docker inspect` — whatever ends up as a container environment variable, whether set with `-e`, `environment:`, or `env_file:`, is resolved into a real env var at container creation time and shows up in cleartext under `Config.Env` in `docker inspect`. Anyone with access to the Docker API or socket sees it — no shell access to the container required. Only file-based secrets (Docker secrets, a mounted volume, a secrets-manager agent) avoid that particular exposure, because they are never turned into an environment variable in the first place.
+
 ## 5. Use Minimal Base Images
 
 Every package in your base image is a potential attack surface. Prefer minimal base images:
@@ -191,6 +193,21 @@ FROM nginx:alpine@sha256:...
 ```
 
 Many teams use tools like **Renovate** or **Dependabot** to automatically open PRs when a newer base image is available.
+
+Pinning to a digest does not mean your image can never be updated — it means updates stop happening silently and start happening through your normal review process. The two ideas work together like this:
+
+- **Tags are mutable, digests are not.** `nginx:alpine` is just a pointer that the Nginx team can repoint to a new build at any time (for example, to patch a CVE). Today it might resolve to `sha256:aaa...`; next week the same tag could resolve to `sha256:bbb...` — different bytes, same tag. Pinning to `sha256:aaa...` gives you a byte-for-byte reproducible build, wherever and whenever it runs.
+- **Even a fully specific version tag is still mutable.** It is tempting to think that a precise tag like `nginx:1.27-alpine3.20` is "pinned enough" because it names both the Nginx version and the Alpine version. It is not: that tag only fixes the *label*, not the *contents*. Alpine 3.20 is a supported release that keeps receiving security patches to its own packages (musl, OpenSSL, zlib, PCRE2...) for as long as it is maintained. When the Nginx maintainers rebuild the `1.27-alpine3.20` tag to pick up those patches, the tag name stays identical but the digest underneath it changes. You can see this yourself:
+  {% raw %}```shell
+  docker pull nginx:1.27-alpine3.20
+  docker inspect nginx:1.27-alpine3.20 --format '{{index .RepoDigests 0}}'
+  ```{% endraw %}
+  Run the same two commands again in a few weeks and there is no guarantee you get the same digest back. This is true of any tag on any registry (Docker Hub, GHCR, ECR...) — a tag is just a "name-to-digest" entry that anyone with push rights can reassign, and most registries do not lock it by default. The version in the tag narrows *how much* can change under your feet (you will not silently jump from `1.27` to `1.29`), but only the digest gives you a cryptographic guarantee that the bytes never change.
+- **Renovate/Dependabot poll the registry, not your running containers.** On a schedule (typically daily), the bot asks the registry what `nginx:alpine` currently resolves to, and compares it against the digest pinned in your Dockerfile. If they differ, it opens a pull request that changes just that one line — `FROM nginx:alpine@sha256:aaa...` becomes `FROM nginx:alpine@sha256:bbb...`. Nothing in production changes yet.
+- **The PR goes through your usual pipeline.** CI builds the image at the new digest, runs your tests, and can re-run a vulnerability scan against it before anyone merges. If the new base image breaks something, you find out in the PR, not in production.
+- **Only after merge** does your normal CI/CD build and deploy the image at the new, now-pinned digest.
+
+In other words, a floating tag can silently hand you a different image on every build with no diff to review; a pinned digest plus an update bot turns every base image change into a reviewed, tested commit — you keep the ability to stay current without giving up reproducibility.
 
 ## Putting It All Together
 
@@ -249,7 +266,7 @@ In this article we covered:
 - **Scanning images** for vulnerabilities with Docker Scout or Trivy
 - **Keeping images up to date** with pinned digests and automated updates
 
-This concludes the **Getting Started with Docker** series. You now have a solid foundation to build, network, persist, orchestrate, and secure containerized applications. The natural next step is **Docker Swarm** for multi-host deployments, or **Kubernetes** for large-scale container orchestration.
+The [next and final article]({{ site.baseurl }}/docker-image-best-practices/) of the series ties everything together into a single checklist for writing Dockerfiles that are functional, lightweight, debuggable, and secure.
 
 ---
 
