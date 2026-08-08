@@ -66,6 +66,7 @@ $endif$
 \usepackage{longtable}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{calc}
 
 %% ── Images ──────────────────────────────────────────────────
 \usepackage{graphicx}
@@ -74,6 +75,10 @@ $endif$
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
 \makeatother
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+%% ── Math ────────────────────────────────────────────────────
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 %% ── Misc ────────────────────────────────────────────────────
 \usepackage{parskip}
@@ -121,6 +126,10 @@ $endif$
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{2pt}\setlength{\parskip}{0pt}}
 
+%% pandoc 3.x: bounding box helper for images
+\providecommand{\pandocbounded}[1]{%
+  \begin{minipage}[t]{\linewidth}#1\end{minipage}}
+
 $if(highlighting-macros)$
 $highlighting-macros$
 $endif$
@@ -130,7 +139,13 @@ $endif$
 %% ============================================================
 \begin{document}
 
-%% ── Title page ──────────────────────────────────────────────
+%% ── Cover (injected via --include-before-body) ────────────────
+$for(include-before)$
+$include-before$
+$endfor$
+
+%% ── Title page (skipped when title is suppressed for a cover image) ──
+$if(title)$
 \pagestyle{empty}
 \vspace*{2cm}
 \begin{center}
@@ -141,6 +156,7 @@ $endif$
   {\small\color{gray} $if(rights)$$rights$$endif$}
 \end{center}
 \newpage
+$endif$
 
 %% ── Table of contents ───────────────────────────────────────
 $if(toc)$

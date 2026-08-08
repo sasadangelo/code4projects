@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/bash
+#!/bin/bash
 # =============================================================================
 # build-ebook.sh — Generate a PDF ebook from a Jekyll blog post series
 #
@@ -63,6 +63,10 @@ TMP_DIR="$BUILD_DIR/.tmp"
 [[ -d "$SERIES_DIR" ]]              || error "Series folder not found:\n  $SERIES_DIR\nRun with --help for usage."
 [[ -f "$SERIES_DIR/metadata.yml" ]] || error "metadata.yml not found in $SERIES_DIR"
 [[ -f "$TEMPLATE" ]]                || error "LaTeX template not found: $TEMPLATE"
+
+# Front matter (e.g. cover.md) embeds paths relative to the repo root, so
+# pandoc/xelatex must always run from there regardless of the caller's cwd.
+cd "$REPO_ROOT"
 
 mkdir -p "$BUILD_DIR" "$TMP_DIR"
 
@@ -214,16 +218,20 @@ OUTPUT_PATH="$BUILD_DIR/$OUTPUT_FILENAME"
 step "Running pandoc → xelatex  →  $OUTPUT_FILENAME ..."
 echo ""
 
-# Build cover injection option: if a cover file was found, use --include-before-body
-# and suppress pandoc's automatic title page with -V title=""
+# Build cover injection option: if a cover file was found, copy it as a .tex
+# file so pandoc includes it as raw LaTeX (not processed as Markdown), and
+# suppress the template's text title page with --metadata title="".
 COVER_OPT=()
 if [[ -n "$COVER_FILE" ]]; then
-  COVER_OPT=(--include-before-body="$COVER_FILE" -V "title=")
+  COVER_TEX="$TMP_DIR/00-cover.tex"
+  cp "$COVER_FILE" "$COVER_TEX"
+  COVER_OPT=(--include-before-body="$COVER_TEX" --metadata "title=")
 fi
 
 pandoc \
   "${PARTS[@]}" \
   "${COVER_OPT[@]}" \
+  --template="$TEMPLATE" \
   --metadata-file="$SERIES_DIR/metadata.yml" \
   --pdf-engine=xelatex \
   --toc \
