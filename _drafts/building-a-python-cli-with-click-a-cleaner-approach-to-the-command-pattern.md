@@ -2,7 +2,7 @@
 layout: post
 title: "Building a Python CLI with Click: A Cleaner Approach to the Command Pattern"
 slug: building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern
-image: /assets/img/1_pedFcOIVIlWiyAdNM7Dw0w.png
+image: /assets/img/building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern-hero.png
 excerpt: Learn how Click simplifies Python CLI development.
 categories:
   - "Programming"
@@ -11,7 +11,7 @@ categories:
 # Building a Python CLI with Click: A Cleaner Approach to the Command Pattern
 _Posted on **{{ page.date | date_to_string }}**_
 
-![Building a Python CLI with Click: A Cleaner Approach to the Command Pattern]({{ site.baseurl }}/assets/img/1_pedFcOIVIlWiyAdNM7Dw0w.png){:width="760" height="400" .responsive_img}
+![Building a Python CLI with Click: A Cleaner Approach to the Command Pattern]({{ site.baseurl }}/assets/img/building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern-hero.png){:width="760" height="400" .responsive_img}
 
 ## Introduction
 

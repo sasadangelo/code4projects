@@ -70,14 +70,25 @@ def slugify(text: str) -> str:
     return text.strip("-")
 
 
-def download_image(url: str, dest_dir: Path) -> str | None:
-    """Download an image to dest_dir, return the local filename or None on failure."""
+def download_image(url: str, dest_dir: Path, rename_as: str | None = None) -> str | None:
+    """
+    Download an image to dest_dir and return the local filename, or None on failure.
+    If rename_as is provided, the file is saved with that name (extension preserved
+    from the original URL). rename_as should be the stem only, e.g. 'my-post-hero'.
+    """
     try:
         parsed = urllib.parse.urlparse(url)
-        name = Path(parsed.path).name
-        if not name or "." not in name:
-            name = "image.png"
-        name = re.sub(r"[^a-zA-Z0-9._-]", "_", name)
+        # Derive extension from the original URL path
+        original_name = Path(parsed.path).name
+        suffix = Path(original_name).suffix if "." in original_name else ".png"
+        if suffix.lower() not in (".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"):
+            suffix = ".png"
+
+        if rename_as:
+            name = re.sub(r"[^a-zA-Z0-9._-]", "-", rename_as) + suffix
+        else:
+            name = re.sub(r"[^a-zA-Z0-9._-]", "_", original_name) if original_name else "image.png"
+
         dest = dest_dir / name
         if not dest.exists():
             req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
@@ -130,11 +141,13 @@ def _heading_shift(soup_node) -> int:
 
 
 def html_to_markdown(
-    soup_node, assets_dir: Path, blog_slugs: set[str], downloaded_images: list
+    soup_node, assets_dir: Path, blog_slugs: set[str], downloaded_images: list,
+    slug: str = "article",
 ) -> str:
     """Recursively convert a BeautifulSoup node tree to Markdown."""
 
     shift = _heading_shift(soup_node)
+    inline_img_counter = [0]  # mutable counter accessible inside convert()
 
     def convert(node) -> str:
         from bs4 import NavigableString, Tag
@@ -253,7 +266,9 @@ def html_to_markdown(
             ):
                 return ""
 
-            local_name = download_image(src, assets_dir)
+            inline_img_counter[0] += 1
+            rename = f"{slug}-fig-{inline_img_counter[0]}"
+            local_name = download_image(src, assets_dir, rename_as=rename)
             if local_name:
                 downloaded_images.append(local_name)
                 return (
@@ -329,7 +344,7 @@ def convert_medium_html(
         first_figure.decompose()
 
     downloaded_images: list[str] = []
-    body_md = html_to_markdown(soup, assets_dir, blog_slugs, downloaded_images)
+    body_md = html_to_markdown(soup, assets_dir, blog_slugs, downloaded_images, slug=slug)
 
     # Clean up excessive blank lines
     body_md = re.sub(r"\n{3,}", "\n\n", body_md).strip()
@@ -348,7 +363,7 @@ def convert_medium_html(
     # --- Hero image ---
     hero_filename = None
     if hero_src_from_content:
-        hero_filename = download_image(hero_src_from_content, assets_dir)
+        hero_filename = download_image(hero_src_from_content, assets_dir, rename_as=f"{slug}-hero")
 
     hero_line = ""
     if hero_filename:
