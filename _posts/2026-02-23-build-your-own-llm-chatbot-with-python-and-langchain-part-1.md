@@ -2,6 +2,7 @@
 layout: post
 title: "Build Your Own LLM Chatbot with Python & LangChain (Part 1)"
 slug: build-your-own-llm-chatbot-with-python-and-langchain-part-1
+post_series_id: llm-chatbot-langchain
 image: /assets/img/llm-chatbot-part1.png
 excerpt: Build a production-ready LLM chatbot with Python and LangChain. Step-by-step guide to scalable, configurable architecture for real-world applications.
 categories:

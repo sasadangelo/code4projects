@@ -2,6 +2,7 @@
 layout: post
 title: "Build Your Own LLM Chatbot with Python & LangChain (Part 3)"
 slug: build-your-own-llm-chatbot-with-python-and-langchain-part-3
+post_series_id: llm-chatbot-langchain
 image: /assets/img/llm-chatbot-part3.png
 excerpt: Add Retrieval-Augmented Generation (RAG) to your LLM chatbot — ingest PDFs and Wikipedia pages into a vector database and retrieve context dynamically.
 categories:

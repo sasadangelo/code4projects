@@ -156,3 +156,14 @@
     link: /building-a-python-cli-with-the-command-pattern/
   - name: "Part 2: Building a Python CLI with Click"
     link: /building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern/
+- post_series_id: llm-chatbot-langchain
+  post_series_title: "Build Your Own LLM Chatbot with Python & LangChain"
+  post_series:
+  - name: "Part 1: Architecture and Core Setup"
+    link: /build-your-own-llm-chatbot-with-python-and-langchain-part-1/
+  - name: "Part 2: Memory, Parameters, and Logging"
+    link: /build-your-own-llm-chatbot-with-python-and-langchain-part-2/
+  - name: "Part 3: Retrieval-Augmented Generation (RAG)"
+    link: /build-your-own-llm-chatbot-with-python-and-langchain-part-3/
+  - name: "Part 4: Web UI with Streamlit"
+    link: /build-your-own-llm-chatbot-with-python-and-langchain-part-4/

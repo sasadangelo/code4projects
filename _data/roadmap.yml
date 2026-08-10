@@ -849,6 +849,7 @@
   title: Build Your Own LLM Chatbot with Python & LangChain (Part 1)
   status: published
   category: Artificial Intelligence
+  series: llm-chatbot-langchain
   scheduled: '2026-02-23'
   slug: build-your-own-llm-chatbot-with-python-and-langchain-part-1
   distributed:
@@ -862,6 +863,7 @@
   title: Build Your Own LLM Chatbot with Python & LangChain (Part 2)
   status: published
   category: Artificial Intelligence
+  series: llm-chatbot-langchain
   scheduled: '2026-02-27'
   slug: build-your-own-llm-chatbot-with-python-and-langchain-part-2
   distributed:
@@ -875,6 +877,7 @@
   title: Build Your Own LLM Chatbot with Python & LangChain (Part 3)
   status: published
   category: Artificial Intelligence
+  series: llm-chatbot-langchain
   scheduled: '2026-02-27'
   slug: build-your-own-llm-chatbot-with-python-and-langchain-part-3
   distributed:
@@ -888,6 +891,7 @@
   title: Build Your Own LLM Chatbot with Python & LangChain (Part 4)
   status: published
   category: Artificial Intelligence
+  series: llm-chatbot-langchain
   scheduled: '2026-02-28'
   slug: build-your-own-llm-chatbot-with-python-and-langchain-part-4
   distributed:

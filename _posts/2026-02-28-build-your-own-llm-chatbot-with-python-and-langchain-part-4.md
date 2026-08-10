@@ -2,6 +2,7 @@
 layout: post
 title: "Build Your Own LLM Chatbot with Python & LangChain (Part 4)"
 slug: build-your-own-llm-chatbot-with-python-and-langchain-part-4
+post_series_id: llm-chatbot-langchain
 image: /assets/img/llm-chatbot-part4.png
 excerpt: Add a Streamlit-based web UI to your LLM chatbot — session management, interactive chat window, and seamless integration with your existing LangChain backend.
 categories:
