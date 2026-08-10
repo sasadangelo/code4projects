@@ -11,7 +11,9 @@ This skill turns an approved idea into a detailed, ready-to-write plan. No prose
 
 Read `_data/roadmap.yml` with `read_file` to find the idea entry. If the user referred to it by title, locate the matching entry by `id` or `title`.
 
-If any of these are missing from the roadmap entry, ask the user (inline):
+Read `docs/EDITORIAL_PLAN.md` with `read_file` to understand the series context and current priorities before asking the user anything.
+
+If any of these are still missing from the roadmap entry after reading the plan, ask the user (inline):
 - Target audience level: beginner / intermediate / advanced
 - Standalone post or part of a series? If series: existing or new?
 - Is there a companion GitHub repo or code example?
