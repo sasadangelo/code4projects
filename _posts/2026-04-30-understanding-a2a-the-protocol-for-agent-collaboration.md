@@ -3,9 +3,10 @@ layout: post
 title: "Understanding A2A: The Protocol for Agent Collaboration"
 slug: understanding-a2a-the-protocol-for-agent-collaboration
 image: /assets/img/a2a-protocol-agent-collaboration.png
-excerpt: A2A is Google’s protocol for agent collaboration, enabling discovery, communication, and coordination across independent AI agents in scalable multi-agent systems.
+excerpt: A2A is Google's protocol for agent collaboration, enabling discovery, communication, and coordination across independent AI agents in scalable multi-agent systems.
 categories:
   - "Artificial Intelligence"
+post_series_id: agentic-ai-protocols
 ---
 
 # Understanding A2A: The Protocol for Agent Collaboration

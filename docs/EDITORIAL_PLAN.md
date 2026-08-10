@@ -1,6 +1,6 @@
 # Code4Projects — Editorial Plan
 
-Last updated: 2026-08  
+Last updated: 2026-08 (revised post Agentic AI Protocols formalisation)
 Author: Salvatore D'Angelo
 
 This document defines the strategic direction of the blog, the active series, and the week-by-week execution plan. It is the **why** and **what next** — `_data/roadmap.yml` is the **operational status** of each individual article.
@@ -48,28 +48,35 @@ Docker 2025 is the reference implementation. All new series follow this model.
 
 ---
 
-### ⚠️ INCOMPLETE — LangChain Chatbot (needs formalisation)
-`post_series_id: llm-chatbot-langchain` ← **to be added to all 4 posts**  
-4 articles published (Feb 2026). Currently no series ID, no sidebar entry.  
+### ✅ COMPLETE — LangChain Chatbot
+`post_series_id: llm-chatbot-langchain`
+4 articles published (Feb 2026). Series ID, sidebar entry, and roadmap entries all formalised.
 Planned title: **"Build Your Own LLM Chatbot with Python & LangChain"**
 
-Missing:
-- [ ] Add `post_series_id: llm-chatbot-langchain` to all 4 post files
-- [ ] Add entry to `_data/post_sidebar.yml`
-- [ ] Add `series: llm-chatbot-langchain` to all 4 roadmap entries
-- [ ] Decide: is Part 4 the final article, or is a Part 5 warranted?
+- [x] Add `post_series_id: llm-chatbot-langchain` to all 4 post files
+- [x] Add entry to `_data/post_sidebar.yml`
+- [x] Add `series: llm-chatbot-langchain` to all 4 roadmap entries
+- [x] Decide: Part 4 is the final article. A Part 5 (Deployment or Agents & Tools) is possible but deferred.
+
+**No further articles needed** unless a Part 5 is explicitly approved.
 
 ---
 
-### ⚠️ INCOMPLETE — Agentic AI Protocols (needs formalisation)
-`post_series_id: agentic-ai-protocols` ← **to be added to A2A and MCP posts**  
-2 articles published: A2A (Apr 2026), MCP (May 2026). Currently standalone.  
+### ✅ FORMALISED — Agentic AI Protocols
+`post_series_id: agentic-ai-protocols`
+2 articles published: A2A (Apr 2026), MCP (May 2026). Series ID, sidebar entry, and roadmap entries all formalised.
 Planned title: **"Agentic AI: Protocols and Patterns"**
 
-Missing:
-- [ ] Add `post_series_id: agentic-ai-protocols` to A2A and MCP posts
-- [ ] Add entry to `_data/post_sidebar.yml`
-- [ ] Plan next articles (e.g. building a real agent with A2A+MCP, orchestration patterns)
+- [x] Add `post_series_id: agentic-ai-protocols` to A2A and MCP posts
+- [x] Add entry to `_data/post_sidebar.yml`
+- [x] Update the 2 roadmap entries with `series: agentic-ai-protocols`
+
+**Next articles** (planned for Phase 5 / Weeks 21+):
+- Part 3: Building a Real Agent with A2A + MCP (end-to-end walkthrough)
+- Part 4: Multi-Agent Orchestration Patterns
+- Part 5: Agentic AI in Production — observability, failure modes, cost control
+
+**No further articles needed** until Phase 5 begins.
 
 ---
 
@@ -176,15 +183,15 @@ The pace is **1 productive action per week** — not 1 article per week. Some we
 ### Phase 1 — Housekeeping (Weeks 1–3)
 *Goal: get the existing content properly organised before writing anything new.*
 
-**Week 1**
-- [ ] Add `post_series_id: llm-chatbot-langchain` to the 4 LangChain chatbot posts
-- [ ] Add `llm-chatbot-langchain` entry to `_data/post_sidebar.yml`
-- [ ] Update the 4 roadmap entries with `series: llm-chatbot-langchain`
+**Week 1** ✅ Done
+- [x] Add `post_series_id: llm-chatbot-langchain` to the 4 LangChain chatbot posts
+- [x] Add `llm-chatbot-langchain` entry to `_data/post_sidebar.yml`
+- [x] Update the 4 roadmap entries with `series: llm-chatbot-langchain`
 
-**Week 2**
-- [ ] Add `post_series_id: agentic-ai-protocols` to the A2A and MCP posts
-- [ ] Add `agentic-ai-protocols` entry to `_data/post_sidebar.yml`
-- [ ] Update the 2 roadmap entries with `series: agentic-ai-protocols`
+**Week 2** ✅ Done
+- [x] Add `post_series_id: agentic-ai-protocols` to the A2A and MCP posts
+- [x] Add `agentic-ai-protocols` entry to `_data/post_sidebar.yml`
+- [x] Update the 2 roadmap entries with `series: agentic-ai-protocols`
 
 **Week 3**
 - [ ] Import "Python Blueprint" article from Medium (`medium-importer`)
@@ -278,8 +285,8 @@ At the end of Phase 4: **Python Modern App Dev series is complete** → compile 
 |---|---|---|
 | `getting-started-with-docker-2025` | Getting Started with Docker 2025 | ✅ Complete |
 | `python-cli-command-pattern` | Python CLI with the Command Pattern | ✅ Complete |
-| `llm-chatbot-langchain` | Build Your Own LLM Chatbot with LangChain | ⚠️ Needs formalisation |
-| `agentic-ai-protocols` | Agentic AI: Protocols and Patterns | ⚠️ Needs formalisation |
+| `llm-chatbot-langchain` | Build Your Own LLM Chatbot with LangChain | ✅ Complete |
+| `agentic-ai-protocols` | Agentic AI: Protocols and Patterns | ✅ Formalised (2 articles) |
 | `modern-python-app-dev` | Modern Python Application Development | 🔵 Planned |
 | `getting-started-with-kubernetes-2026` | Getting Started with Kubernetes 2026 | 🔵 Planned |
 | `build-your-own-llm` | Build Your Own LLM from Scratch | 🔵 Planned |

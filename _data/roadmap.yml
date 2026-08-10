@@ -905,6 +905,7 @@
   title: 'Understanding A2A: The Protocol for Agent Collaboration'
   status: published
   category: Artificial Intelligence
+  series: agentic-ai-protocols
   scheduled: '2026-04-30'
   slug: understanding-a2a-the-protocol-for-agent-collaboration
   distributed:
@@ -918,6 +919,7 @@
   title: 'Understanding MCP: The Protocol for Agent-Tool Communication'
   status: published
   category: Artificial Intelligence
+  series: agentic-ai-protocols
   scheduled: '2026-05-10'
   slug: understanding-mcp-the-protocol-for-agent-tool-communication
   distributed:

@@ -1,3 +1,10 @@
+- post_series_id: agentic-ai-protocols
+  post_series_title: "Agentic AI: Protocols and Patterns"
+  post_series:
+  - name: "Part 1: Understanding A2A — The Protocol for Agent Collaboration"
+    link: /understanding-a2a-the-protocol-for-agent-collaboration/
+  - name: "Part 2: Understanding MCP — The Protocol for Agent-Tool Communication"
+    link: /understanding-mcp-the-protocol-for-agent-tool-communication/
 - post_series_id: getting-started-with-docker-2025
   post_series_title: Getting Started with Docker (2025)
   post_series:

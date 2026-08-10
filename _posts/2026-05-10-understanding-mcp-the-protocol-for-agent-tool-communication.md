@@ -6,6 +6,7 @@ image: /assets/img/understanding-mcp-protocol.png
 excerpt: MCP is Anthropic's open protocol that standardizes how AI agents connect to tools, APIs, and resources — making any capability pluggable and interoperable across agent frameworks.
 categories:
   - "Artificial Intelligence"
+post_series_id: agentic-ai-protocols
 ---
 
 # Understanding MCP: The Protocol for Agent-Tool Communication
