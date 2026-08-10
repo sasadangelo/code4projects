@@ -149,3 +149,10 @@
     link: /getting-started-with-html/
   - name: "Mastering the Basics of CSS: A Beginner's Guide"
     link: /mastering-basics-css/
+- post_series_id: python-cli-command-pattern
+  post_series_title: Python CLI with the Command Pattern
+  post_series:
+  - name: "Part 1: Building a Python CLI with the Command Pattern"
+    link: /building-a-python-cli-with-the-command-pattern/
+  - name: "Part 2: Building a Python CLI with Click"
+    link: /building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern/

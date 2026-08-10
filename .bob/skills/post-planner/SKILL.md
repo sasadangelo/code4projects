@@ -23,6 +23,9 @@ If the post belongs to a series:
 1. List all other posts in that series from `roadmap.yml`.
 2. Identify where this post fits in the sequence (before/after which articles).
 3. Note what the previous article covered and what the next will cover — for intro/conclusion bridges.
+4. Check `_data/post_sidebar.yml` for an existing entry with the same `post_series_id`.
+   - If it exists: confirm the new post will be appended to it.
+   - If it does not exist: flag that a new series entry must be created in `post_sidebar.yml` when the post is published.
 
 ## Step 3 — Produce the plan
 
@@ -120,6 +123,12 @@ categories:
    - Set `slug:` to the confirmed slug
 2. Apply the change to `_data/roadmap.yml` with `apply_diff`.
 3. Confirm the update.
+
+## Step 6 — Series sidebar note
+
+If the post belongs to a series, include a reminder in the plan output:
+
+> **Series sidebar:** When this post is published, add or update the `post_series_id: <id>` entry in `_data/post_sidebar.yml` with the post's name and slug. This is required for the series sidebar to appear on all posts in the series.
 
 ## Rules
 

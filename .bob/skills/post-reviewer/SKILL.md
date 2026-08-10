@@ -34,6 +34,7 @@ Check every item below. For each violation, note: severity, approximate line num
 - [ ] `excerpt:` present, 1–2 sentences, no markdown, ≤160 chars
 - [ ] `categories:` uses only allowed values
 - [ ] `post_series_id:` present if part of a series
+- [ ] `_data/post_sidebar.yml` has an entry for this `post_series_id` (if series) — if missing, flag as 🔴 CRITICAL
 
 ### STRUCTURE
 - [ ] H1 is the article title (first line after front matter, no other H1 in body)
@@ -146,7 +147,8 @@ After the report, ask the user if they want the fixes applied automatically.
 
 If yes:
 - Apply all CRITICAL and IMPORTANT fixes using `apply_diff` or `search_and_replace`.
-  Priority order: language tags on code blocks → heading levels → link resolution → CTA deduplication → front matter gaps.
+  Priority order: language tags on code blocks → heading levels → link resolution → CTA deduplication → front matter gaps → `post_sidebar.yml` series entry.
+- For a missing `post_sidebar.yml` series entry: create it with `insert_content`, using the post title and slug. If other posts in the series already exist in `_posts/`, include them too.
 - Leave MINOR fixes for the user unless they ask.
 - After applying, re-read the relevant sections and confirm each fix is clean.
 - Report which fixes were applied and which need manual action (e.g. "I cannot auto-resolve this Medium link — the target article does not exist in the roadmap yet").

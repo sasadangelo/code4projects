@@ -1,0 +1,98 @@
+<figure><img src="https://miro.medium.com/v2/resize:fit:700/1*placeholder.png" alt="Photo from https://realpython.com/ — Command Lines in Python"/><figcaption>Photo from https://realpython.com/ — Command Lines in Python</figcaption></figure>
+
+<p>How to design a clean, extensible command-line architecture with argparse and the Command design pattern.</p>
+
+<h3>1. Introduction</h3>
+
+<p>Python is one of the best languages to build automation tools and developer utilities. But as a CLI grows, it often becomes a messy mix of <code>if ... elif ...</code> blocks handling different commands, parameters, and logic.</p>
+
+<p>That's where the Command Pattern shines.</p>
+
+<p>The Command Pattern encapsulates a request (a command) as an object — allowing us to structure our CLI in a modular, testable, and extensible way. Each command becomes a small, focused class that knows how to execute a specific action.</p>
+
+<p>In this post, we'll build a simple but realistic CLI that follows this pattern:</p>
+
+<pre><code>python3 cli.py &lt;command&gt; &lt;subcommand&gt; [parameters]</code></pre>
+
+<p>But this article is not just theory — the entire source code is available on GitHub, so you can download it, run it, and experiment with it yourself:<br/>
+👉 <a href="https://github.com/sasadangelo/task-cli">https://github.com/sasadangelo/task-cli</a> (v0.0.1)</p>
+
+<h3>2. Designing the Syntax</h3>
+
+<p>Before writing any code, let's define what our CLI should look like. We'll imagine a simple "Task Manager" CLI that allows us to:</p>
+
+<ul>
+<li>add new tasks</li>
+<li>list existing tasks</li>
+<li>delete a task</li>
+<li>show basic statistics about the tasks</li>
+</ul>
+
+<p>The syntax will follow the familiar pattern:</p>
+
+<pre><code>python3 cli.py task add --name "Buy milk"<br/>python3 cli.py task list<br/>python3 cli.py task delete --id 1<br/><br/># Command with subcommands<br/>python3 -m src.cli stats summary<br/>python3 -m src.cli stats export</code></pre>
+
+<h3>3. Parsing Arguments with argparse</h3>
+
+<p>We'll use Python's built-in <code>argparse</code> module to parse commands, subcommands, and parameters.</p>
+
+<p>The CLI entry point (<code>cli.py</code>) will look like this:</p>
+
+<pre><code># cli.py<br/>import argparse<br/>from commands import AddTaskCommand, ListTaskCommand, DeleteTaskCommand<br/><br/>class TaskCLI:<br/>    def __init__(self):<br/>        self.commands = {<br/>            "add": AddTaskCommand(),<br/>            "list": ListTaskCommand(),<br/>            "delete": DeleteTaskCommand(),<br/>        }<br/><br/>    def run(self):<br/>        parser = argparse.ArgumentParser(description="Task Manager CLI")<br/>        subparsers = parser.add_subparsers(dest="command", required=True)<br/>        # add<br/>        add_parser = subparsers.add_parser("add", help="Add a new task")<br/>        add_parser.add_argument("--name", required=True, help="Task name")<br/>        add_parser.set_defaults(func=self.commands["add"].execute)<br/>        # list<br/>        list_parser = subparsers.add_parser("list", help="List all tasks")<br/>        list_parser.set_defaults(func=self.commands["list"].execute)<br/>        # delete<br/>        delete_parser = subparsers.add_parser("delete", help="Delete a task")<br/>        delete_parser.add_argument("--id", type=int, required=True, help="Task ID to delete")<br/>        delete_parser.set_defaults(func=self.commands["delete"].execute)<br/>        # stats command (with subcommands)<br/>        stats_parser = subparsers.add_parser("stats", help="Show or export task statistics")<br/>        stats_subparsers = stats_parser.add_subparsers(dest="subcommand", required=True)<br/>        # stats summary<br/>        summary_parser = stats_subparsers.add_parser("summary", help="Show a summary of tasks")<br/>        summary_parser.set_defaults(subcommand="summary", func=self.commands["stats"].execute)<br/>        # stats export<br/>        export_parser = stats_subparsers.add_parser("export", help="Export tasks to CSV file")<br/>        export_parser.add_argument("--output", default="tasks.csv", help="Output CSV file name")<br/>        export_parser.set_defaults(subcommand="export", func=self.commands["stats"].execute)<br/><br/>        args = parser.parse_args()<br/>        args.func(args)<br/><br/>if __name__ == "__main__":<br/>    TaskCLI().run()</code></pre>
+
+<h3>4. The Command Pattern in Action</h3>
+
+<p>Each command is implemented as a class with an <code>execute()</code> method. Let's define a base class first:</p>
+
+<pre><code># commands/base.py<br/>from abc import ABC, abstractmethod<br/><br/>class Command(ABC):<br/>    """Base class for all CLI commands."""<br/>    @abstractmethod<br/>    def execute(self, args):<br/>        pass</code></pre>
+
+<p>Now we can implement concrete commands:</p>
+
+<pre><code># commands/add_task_command.py<br/>from .base import Command<br/><br/>class AddTaskCommand(Command):<br/>    def execute(self, args):<br/>        with open("tasks.txt", "a") as f:<br/>            f.write(args.name + "\n")<br/>        print(f"✅ Task added: {args.name}")</code></pre>
+
+<pre><code># commands/list_task_command.py<br/>from .base import Command<br/><br/>class ListTaskCommand(Command):<br/>    def execute(self, args):<br/>        try:<br/>            with open("tasks.txt") as f:<br/>                tasks = [line.strip() for line in f]<br/>        except FileNotFoundError:<br/>            tasks = []<br/>        if not tasks:<br/>            print("🗒️  No tasks found.")<br/>        else:<br/>            print("📋 Tasks:")<br/>            for i, t in enumerate(tasks, 1):<br/>                print(f"{i}. {t}")</code></pre>
+
+<pre><code># commands/delete_task_command.py<br/>from .base import Command<br/><br/>class DeleteTaskCommand(Command):<br/>    def execute(self, args):<br/>        try:<br/>            with open("tasks.txt") as f:<br/>                tasks = [line.strip() for line in f]<br/>        except FileNotFoundError:<br/>            print("❌ No tasks found.")<br/>            return<br/>        if args.id &lt; 1 or args.id &gt; len(tasks):<br/>            print(f"❌ Invalid task ID: {args.id}")<br/>            return<br/>        removed = tasks.pop(args.id - 1)<br/>        with open("tasks.txt", "w") as f:<br/>            f.write("\n".join(tasks) + "\n")<br/>        print(f"🗑️  Task deleted: {removed}")</code></pre>
+
+<pre><code>import csv<br/>import os<br/>from .base import Command<br/><br/><br/>class StatsCommand(Command):<br/>    TASKS_FILE = "tasks.txt"<br/><br/>    def execute(self, args):<br/>        if args.subcommand == "summary":<br/>            self._show_summary()<br/>        elif args.subcommand == "export":<br/>            self._export_to_csv(args.output)<br/>        else:<br/>            print(f"Unknown subcommand: {args.subcommand}")<br/><br/>    def _load_tasks(self):<br/>        if not os.path.exists(self.TASKS_FILE):<br/>            return []<br/>        with open(self.TASKS_FILE, "r") as f:<br/>            return [line.strip() for line in f.readlines() if line.strip()]<br/><br/>    def _show_summary(self):<br/>        tasks = self._load_tasks()<br/>        total = len(tasks)<br/>        print(f"📊 You have {total} task(s).")<br/>        if total:<br/>            for i, t in enumerate(tasks, start=1):<br/>                print(f"{i}. {t}")<br/><br/>    def _export_to_csv(self, output_file):<br/>        tasks = self._load_tasks()<br/>        if not tasks:<br/>            print("No tasks to export.")<br/>            return<br/>        with open(output_file, "w", newline="") as csvfile:<br/>            writer = csv.writer(csvfile)<br/>            writer.writerow(["ID", "Task"])<br/>            for i, task in enumerate(tasks, start=1):<br/>                writer.writerow([i, task])<br/>        print(f"✅ Tasks exported to {output_file}")</code></pre>
+
+<h3>5. Folder Structure</h3>
+
+<p>Here's the final project layout:</p>
+
+<pre><code>task-cli/<br/>│<br/>├── cli.py<br/>└── commands/<br/>    ├── __init__.py<br/>    ├── base.py<br/>    ├── add_task_command.py<br/>    ├── list_task_command.py<br/>    ├── stats_task_command.py<br/>    └── delete_task_command.py</code></pre>
+
+<p>You can run it directly:</p>
+
+<pre><code>python3 cli.py add --name "Write Medium article"<br/>python3 cli.py list<br/>python3 cli.py delete --id 1<br/>python3 cli.py stats summary<br/>python3 cli.py stats export</code></pre>
+
+<h3>6. Why This Architecture Scales</h3>
+
+<p>Using the Command Pattern gives several benefits:</p>
+
+<ul>
+<li><strong>Encapsulation:</strong> each command is an isolated class.</li>
+<li><strong>Extensibility:</strong> adding a new command is as simple as writing a new class.</li>
+<li><strong>Readability:</strong> the <code>cli.py</code> file only defines syntax and delegates logic.</li>
+<li><strong>Testability:</strong> you can test each command independently.</li>
+</ul>
+
+<p>This same structure scales easily to complex real-world CLIs — for example, the one I use to manage data collection jobs, where each command talks to a service layer and handles multiple subcommands.</p>
+
+<h3>7. Conclusion</h3>
+
+<p>You've just built a modular, extensible Python CLI using the Command Pattern.</p>
+
+<p>The full example is available on GitHub here:<br/>
+👉 <a href="https://github.com/sasadangelo/task-cli">github.com/sasadangelo/task-cli</a> (v0.0.1)</p>
+
+<p>From here, you can expand your CLI with:</p>
+
+<ul>
+<li>nested subcommands</li>
+<li>configuration loading (dotenv, YAML, etc.)</li>
+<li>async commands</li>
+<li>or remote API calls</li>
+</ul>
+
+<p>If you liked this, check out the original Command Pattern explanation on <a href="https://refactoring.guru/design-patterns/command">Refactoring.Guru</a>.</p>

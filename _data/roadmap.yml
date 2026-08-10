@@ -819,6 +819,32 @@
     linkedin: false
     instagram: false
     facebook: false
+- id: building-a-python-cli-with-the-command-pattern
+  title: "Building a Python Command Line Interface (CLI) with the Command Pattern"
+  status: published
+  category: Programming
+  scheduled: '2025-11-09'
+  slug: building-a-python-cli-with-the-command-pattern
+  distributed:
+    medium: true
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern
+  title: "Building a Python CLI with Click: A Cleaner Approach to the Command Pattern"
+  status: published
+  category: Programming
+  scheduled: '2026-01-05'
+  slug: building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern
+  distributed:
+    medium: true
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
 - id: build-your-own-llm-chatbot-with-python-and-langchain-part-1
   title: Build Your Own LLM Chatbot with Python & LangChain (Part 1)
   status: published

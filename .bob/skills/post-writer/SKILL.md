@@ -83,6 +83,10 @@ Write the draft to `_drafts/<slug>.md` using `write_file`.
 Then update `_data/roadmap.yml`:
 - Set `status: draft` on the entry using `apply_diff`.
 
+If the post belongs to a series, check `_data/post_sidebar.yml`:
+- If an entry with the matching `post_series_id` already exists: do nothing (it will be updated at publish time).
+- If no entry exists yet: note it in the Step 4 summary — it must be created when the post is published.
+
 ## Step 4 — Summary
 
 After writing, show:
