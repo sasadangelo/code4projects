@@ -823,6 +823,7 @@
   title: "Building a Python Command Line Interface (CLI) with the Command Pattern"
   status: published
   category: Programming
+  series: python-cli
   scheduled: '2025-11-09'
   slug: building-a-python-cli-with-the-command-pattern
   distributed:
@@ -836,6 +837,7 @@
   title: "Building a Python CLI with Click: A Cleaner Approach to the Command Pattern"
   status: published
   category: Programming
+  series: python-cli
   scheduled: '2026-01-05'
   slug: building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern
   distributed:
@@ -1050,6 +1052,20 @@
   slug: how-to-set-up-your-next-python-project
   distributed:
     medium: true
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: building-a-python-cli-with-typer-the-modern-approach-to-the-command-pattern
+  title: "Building a Python CLI with Typer: The Modern Approach to the Command Pattern"
+  status: draft
+  category: Programming
+  series: python-cli
+  scheduled: '2026-03-09'
+  slug: building-a-python-cli-with-typer-the-modern-approach-to-the-command-pattern
+  distributed:
+    medium: false
     substack: false
     twitter: false
     linkedin: false
