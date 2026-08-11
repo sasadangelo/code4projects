@@ -1,3 +1,9 @@
+- post_series_id: modern-python-application
+  post_series_title: "How to Write Modern Python Applications"
+  post_series:
+  - name: "Part 1: How to Set Up Your Next Python Project"
+    link: /how-to-set-up-your-next-python-project/
+
 - post_series_id: agentic-ai-protocols
   post_series_title: "Agentic AI: Protocols and Patterns"
   post_series:

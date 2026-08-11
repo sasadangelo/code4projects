@@ -1041,3 +1041,16 @@
     linkedin: false
     instagram: false
     facebook: false
+- id: how-to-set-up-your-next-python-project
+  title: "How to Set Up Your Next Python Project"
+  status: draft
+  category: Programming
+  scheduled: '2025-11-08'
+  slug: how-to-set-up-your-next-python-project
+  distributed:
+    medium: true
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
