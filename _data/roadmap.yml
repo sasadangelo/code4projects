@@ -1045,6 +1045,7 @@
   title: "How to Set Up Your Next Python Project"
   status: draft
   category: Programming
+  series: modern-python-application
   scheduled: '2025-11-08'
   slug: how-to-set-up-your-next-python-project
   distributed:
