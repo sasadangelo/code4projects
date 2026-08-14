@@ -1,6 +1,6 @@
 ---
 name: social-content
-description: Use when a blog post has been published and the user wants to generate social media content — produces ready-to-post text for Twitter/X thread, LinkedIn post, Instagram caption, Facebook post, and Substack newsletter intro.
+description: Use when a blog post has been published and the user wants to generate social media content — produces ready-to-post text for a single Twitter/X promotional tweet, LinkedIn post, Instagram caption, Facebook post, and Substack newsletter intro.
 ---
 
 # Social Content Generator — Code4Projects
@@ -25,17 +25,16 @@ Also read the `distributed:` flags from `_data/roadmap.yml` to know which channe
 
 ---
 
-### Twitter / X Thread
+### Twitter / X
 
-**Format:** 4–8 tweets. First tweet is the hook. Last tweet is the CTA.
+**Format:** Single promotional tweet. Max 280 characters.
 
 Rules:
-- Tweet 1: hook — a provocative statement, surprising fact, or the core problem. No "I wrote an article about…".
-- Tweets 2–N: one key insight per tweet. Short sentences. Can include a code snippet (max 5 lines) if it is striking.
-- Second-to-last tweet: key takeaway or summary in one line.
-- Last tweet: link + CTA. Format: `Full article 👇\n[url]\n\nFollow @code4projects for more.`
-- Max 280 chars per tweet. Number them: `1/N`, `2/N`, etc.
-- No hashtag spam — max 2 relevant hashtags on the last tweet only.
+- Open with the core problem or a surprising insight — no "I wrote an article about…".
+- 2–3 short punchy lines covering the main value of the article.
+- End with the article URL and `Follow @code4projects for more.`
+- Max 2 relevant hashtags at the end.
+- No numbering (it's a single tweet, not a thread).
 
 ---
 
@@ -108,11 +107,8 @@ Rules:
 Present all five outputs in clearly labelled sections:
 
 ```
-## Twitter / X Thread
-[tweet 1/N]
----
-[tweet 2/N]
-...
+## Twitter / X
+[tweet text]
 
 ## LinkedIn
 [full post text]
