@@ -1066,8 +1066,8 @@
   slug: building-a-python-cli-with-typer-the-modern-approach-to-the-command-pattern
   distributed:
     medium: false
-    substack: false
-    twitter: false
+    substack: true
+    twitter: true
     linkedin: false
     instagram: false
-    facebook: false
+    facebook: true

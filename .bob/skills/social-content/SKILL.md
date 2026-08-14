@@ -85,7 +85,16 @@ Rules:
 
 **Format:** 150–250 words. Opening section of the newsletter issue, not a full summary.
 
+Always output **both** a title and a subtitle before the body text:
+
+```
+**Title:** [short, punchy — max 8 words]
+**Subtitle:** [one sentence that expands on the title — max 20 words]
+```
+
 Rules:
+- The title is the Substack issue title — bold, no punctuation at the end.
+- The subtitle is the Substack issue subtitle — a single sentence that adds context or the key promise.
 - Opens with 1–2 sentences of personal context: why you wrote this, what triggered the idea, or what you were working on when you discovered it.
 - Summarises what the reader will learn (3 bullet points).
 - Ends with: "Read the full article here: [title]([url])"
@@ -117,6 +126,9 @@ Present all five outputs in clearly labelled sections:
 [full post text]
 
 ## Substack Newsletter Intro
+**Title:** [title]
+**Subtitle:** [subtitle]
+
 [intro text]
 ```
 
