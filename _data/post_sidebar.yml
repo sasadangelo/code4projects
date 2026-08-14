@@ -3,6 +3,8 @@
   post_series:
   - name: "Part 1: How to Set Up Your Next Python Project"
     link: /how-to-set-up-your-next-python-project/
+  - name: "Part 2: Managing Application Configuration in Python with Pydantic Settings"
+    link: /managing-application-configuration-in-python-with-pydantic-settings/
 
 - post_series_id: agentic-ai-protocols
   post_series_title: "Agentic AI: Protocols and Patterns"

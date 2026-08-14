@@ -1071,3 +1071,17 @@
     linkedin: false
     instagram: false
     facebook: true
+- id: managing-application-configuration-in-python-with-pydantic-settings
+  title: "Managing Application Configuration in Python with Pydantic Settings"
+  status: draft
+  category: Programming
+  series: modern-python-application
+  scheduled: '2025-12-30'
+  slug: managing-application-configuration-in-python-with-pydantic-settings
+  distributed:
+    medium: true
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
