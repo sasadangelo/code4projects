@@ -1099,3 +1099,17 @@
     instagram: false
     facebook: false
 
+- id: database-layer-with-sqlalchemy-in-a-layered-python-architecture
+  title: "Building a Database Layer in Python with SQLAlchemy ORM"
+  status: published
+  category: Programming
+  series: modern-python-application
+  scheduled: '2026-08-24'
+  slug: database-layer-with-sqlalchemy-in-a-layered-python-architecture
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
