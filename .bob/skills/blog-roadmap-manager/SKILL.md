@@ -1,5 +1,5 @@
 ---
-name: roadmap-manager
+name: blog-roadmap-manager
 description: Use when the user wants to manage the blog roadmap — add ideas, change status, schedule posts, view the pipeline, check what is published but not yet distributed, or update distribution flags.
 ---
 
@@ -12,13 +12,13 @@ The roadmap lives in `_data/roadmap.yml`. Every idea, draft, and published post 
 Each entry in `roadmap.yml` has this shape:
 
 ```yaml
-- id: unique-kebab-case-id          # required, unique, used as key
-  title: "Post Title"               # required
-  status: idea                      # idea | planned | draft | published
-  category: "Category Name"         # must match existing blog categories
-  series: series-slug               # optional — matches post_series_id
-  scheduled: YYYY-MM-DD             # optional — planned publication date
-  slug: post-slug                   # optional until draft; required for published
+- id: unique-kebab-case-id # required, unique, used as key
+  title: "Post Title" # required
+  status: idea # idea | planned | draft | published
+  category: "Category Name" # must match existing blog categories
+  series: series-slug # optional — matches post_series_id
+  scheduled: YYYY-MM-DD # optional — planned publication date
+  slug: post-slug # optional until draft; required for published
   distributed:
     medium: false
     substack: false
@@ -29,6 +29,7 @@ Each entry in `roadmap.yml` has this shape:
 ```
 
 **Status values:**
+
 - `idea` — raw idea, not yet planned
 - `planned` — approved, outline exists or scheduled
 - `draft` — post file exists in `_drafts/`
@@ -39,6 +40,7 @@ Each entry in `roadmap.yml` has this shape:
 ## Allowed categories
 
 Use only these values in `category:`:
+
 - `Virtualization`
 - `Artificial Intelligence`
 - `Cloud`
@@ -55,7 +57,7 @@ Use only these values in `category:`:
 
 When the user asks to see the roadmap, pipeline, calendar, or backlog:
 
-1. Run `python3 .bob/skills/roadmap-manager/roadmap.py show` with `execute_command`.
+1. Run `python3 .bob/skills/blog-roadmap-manager/roadmap.py show` with `execute_command`.
 2. Present the output as a formatted table grouped by status.
 
 ### 2. Add an idea
@@ -80,7 +82,7 @@ When the user promotes an idea to planned/draft/published, or demotes it:
 When the user sets or changes a publication date:
 
 1. Use `apply_diff` to update `scheduled:` on the matching entry.
-2. Run `python3 .bob/skills/roadmap-manager/roadmap.py calendar` to show the updated calendar.
+2. Run `python3 .bob/skills/blog-roadmap-manager/roadmap.py calendar` to show the updated calendar.
 
 ### 5. Mark as distributed
 
@@ -93,7 +95,7 @@ When the user says a post has been published on a channel:
 
 When the user asks what is published but not yet distributed:
 
-1. Run `python3 .bob/skills/roadmap-manager/roadmap.py gaps` with `execute_command`.
+1. Run `python3 .bob/skills/blog-roadmap-manager/roadmap.py gaps` with `execute_command`.
 2. Show the output as a table: post title × channel, ❌ for missing, ✅ for done.
 
 ### 7. Remove an entry

@@ -1,5 +1,5 @@
 ---
-name: medium-importer
+name: blog-medium-importer
 description: Use when the user wants to import an article from Medium into the Jekyll blog — converts Medium HTML content (pasted by the user) into a Jekyll Markdown draft, downloads images, resolves internal links, and sets the correct front matter.
 ---
 
@@ -31,6 +31,7 @@ If not already provided in the message, ask (inline, no tool):
 There are three ways to provide the article content, in order of quality:
 
 ### Option A — RSS feed HTML (best quality)
+
 The article is in the author's RSS feed (most recent ~10 articles).
 
 1. Open `https://medium.com/feed/@sasadangelo` in the browser
@@ -40,10 +41,12 @@ The article is in the author's RSS feed (most recent ~10 articles).
 This preserves all formatting: headings, code blocks, lists, bold/italic, images.
 
 ### Option B — Paste the article text directly in the prompt (good)
+
 If the article is not in the RSS feed, the user can copy the full article text from the Medium page (select all, copy) and paste it directly into the prompt.
 
 **When the user pastes plain text:**
 Bob must reconstruct minimal HTML before passing to the script. Apply these rules:
+
 - Each paragraph separated by a blank line → wrap in `<p>...</p>`
 - Lines starting with `#` → convert to `<h3>`, `##` → `<h4>` (Medium style)
 - Fenced code blocks (` ``` `) → convert to `<pre><code>...</code></pre>`, preserving newlines as `<br/>`
@@ -54,6 +57,7 @@ Bob must reconstruct minimal HTML before passing to the script. Apply these rule
 Do this reconstruction inline (no tool call needed) before calling the script.
 
 ### Option C — HTML from browser DevTools (best for old articles)
+
 1. Open the Medium article in Chrome/Safari
 2. Open DevTools → Network tab → reload the page
 3. Find the RSS feed request or use: right-click on page → "View Page Source"
@@ -103,6 +107,7 @@ The script prints a JSON object:
 ```
 
 Show the user a summary:
+
 - Draft file created at `_drafts/<slug>.md`
 - N images downloaded to `assets/img/`
 - Any Medium links that were kept as-is (not resolved to internal blog links)
@@ -131,7 +136,7 @@ Append a new entry to `_data/roadmap.yml` with `status: draft`:
   scheduled: "<date>"
   slug: <slug>
   distributed:
-    medium: true        # already on Medium — mark as distributed
+    medium: true # already on Medium — mark as distributed
     substack: false
     twitter: false
     linkedin: false
@@ -144,6 +149,7 @@ Note: `medium: true` because the article originated on Medium.
 ## Step 7 — Confirm
 
 Tell the user:
+
 - Draft is at `_drafts/<slug>.md` — ready for `post-reviewer`
 - Images are in `assets/img/`
 - Next step: run `/post-reviewer` on the draft before publishing

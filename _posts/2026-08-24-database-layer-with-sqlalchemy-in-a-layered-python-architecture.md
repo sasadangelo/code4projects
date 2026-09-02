@@ -22,7 +22,7 @@ This article builds the database layer of a layered Python application. It cover
 
 All the code shown here is extracted from [runalyze](https://github.com/sasadangelo/runalyze), a personal project I built to analyse my Garmin running workouts. You can browse the full [source layout](https://github.com/sasadangelo/runalyze/tree/main/src/runanalyze) on GitHub.
 
-This post is Part 4 of the [How to Write Modern Python Applications]({{ site.baseurl }}/how-to-set-up-your-next-python-project/) series. The previous article covered [Managing Application Configuration in Python with Pydantic Settings]({{ site.baseurl }}/managing-application-configuration-in-python-with-pydantic-settings/), which introduced the `config.yaml` and the typed `Settings` object we rely on here.
+This post is Part 5 of the [How to Write Modern Python Applications]({{ site.baseurl }}/how-to-set-up-your-next-python-project/) series. The previous article covered [How to Create Cron Jobs in Python for Your Applications]({{ site.baseurl }}/how-to-create-cron-jobs-in-python/).
 
 You should read this article if:
 

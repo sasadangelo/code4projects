@@ -1,5 +1,5 @@
 ---
-name: social-content
+name: blog-social
 description: Use when a blog post has been published and the user wants to generate social media content — produces ready-to-post text for a single Twitter/X promotional tweet, LinkedIn post, Instagram caption, Facebook post, and Substack newsletter intro.
 ---
 
@@ -11,6 +11,7 @@ This skill generates platform-specific content for distributing a published blog
 
 Read the post file from `_posts/<filename>.md` using `read_file`.
 Extract:
+
 - Title
 - Excerpt
 - Key sections (H2 headings + opening paragraph of each)
@@ -30,6 +31,7 @@ Also read the `distributed:` flags from `_data/roadmap.yml` to know which channe
 **Format:** Single promotional tweet. Max 280 characters.
 
 Rules:
+
 - Open with the core problem or a surprising insight — no "I wrote an article about…".
 - 2–3 short punchy lines covering the main value of the article.
 - End with the article URL and `Follow @code4projects for more.`
@@ -43,6 +45,7 @@ Rules:
 **Format:** 150–300 words. Single flowing post, not a thread.
 
 Rules:
+
 - Open with a 1–2 line hook (problem or surprising insight). No "Excited to share…".
 - 2–3 short paragraphs covering the main insight of the article.
 - Bullet list of 3–5 key takeaways (use `→` not `-`).
@@ -57,6 +60,7 @@ Rules:
 **Format:** 100–150 words + hashtag block.
 
 Rules:
+
 - Open with a 1-sentence hook strong enough to stop the scroll.
 - 3–4 short paragraphs (1–2 sentences each). White space is essential.
 - End with: "Link in bio 🔗"
@@ -71,6 +75,7 @@ Rules:
 **Format:** 80–150 words. Conversational.
 
 Rules:
+
 - Slightly warmer tone than LinkedIn — this is a community, not a professional network.
 - Open with a question or relatable problem statement.
 - 2–3 short paragraphs.
@@ -92,6 +97,7 @@ Always output **both** a title and a subtitle before the body text:
 ```
 
 Rules:
+
 - The title is the Substack issue title — bold, no punctuation at the end.
 - The subtitle is the Substack issue subtitle — a single sentence that adds context or the key promise.
 - Opens with 1–2 sentences of personal context: why you wrote this, what triggered the idea, or what you were working on when you discovered it.

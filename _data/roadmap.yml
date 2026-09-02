@@ -1045,7 +1045,7 @@
     facebook: false
 - id: how-to-set-up-your-next-python-project
   title: "How to Set Up Your Next Python Project"
-  status: draft
+  status: published
   category: Programming
   series: modern-python-application
   scheduled: '2025-11-08'
@@ -1057,13 +1057,13 @@
     linkedin: false
     instagram: false
     facebook: false
-- id: building-a-python-cli-with-typer-the-modern-approach-to-the-command-pattern
+- id: modern-approach-to-the-command-pattern
   title: "Building a Python CLI with Typer: The Modern Approach to the Command Pattern"
-  status: draft
+  status: published
   category: Programming
   series: python-cli
-  scheduled: '2026-03-09'
-  slug: building-a-python-cli-with-typer-the-modern-approach-to-the-command-pattern
+  scheduled: '2026-08-11'
+  slug: modern-approach-to-the-command-pattern
   distributed:
     medium: false
     substack: true
@@ -1073,7 +1073,7 @@
     facebook: true
 - id: managing-application-configuration-in-python-with-pydantic-settings
   title: "Managing Application Configuration in Python with Pydantic Settings"
-  status: draft
+  status: published
   category: Programming
   series: modern-python-application
   scheduled: '2025-12-30'
@@ -1087,7 +1087,7 @@
     facebook: false
 - id: logging-in-a-flask-application-with-loguru
   title: "Logging in a Flask Application with Loguru"
-  status: draft
+  status: published
   category: Programming
   scheduled: '2025-12-31'
   slug: logging-in-a-flask-application-with-loguru
@@ -1106,6 +1106,34 @@
   series: modern-python-application
   scheduled: '2026-08-24'
   slug: database-layer-with-sqlalchemy-in-a-layered-python-architecture
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: how-to-create-cron-jobs-in-python
+  title: "How to Create Cron Jobs in Python for Your Applications"
+  status: published
+  category: Programming
+  series: modern-python-application
+  scheduled: '2026-01-02'
+  slug: how-to-create-cron-jobs-in-python
+  distributed:
+    medium: true
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: concurrency-in-python-threads-processes-and-the-event-loop
+  title: "Concurrency in Python: Threads, Processes, and the Event Loop"
+  status: planned
+  category: Programming
+  series: modern-python-application
+  scheduled: '2026-09-15'
+  slug: concurrency-in-python-threads-processes-and-the-event-loop
   distributed:
     medium: false
     substack: false

@@ -1,5 +1,5 @@
 ---
-name: post-planner
+name: blog-planner
 description: Use when a blog post idea has been approved and the user wants to plan it — produces a complete outline, series placement, front matter, estimated length, and image brief before writing begins.
 ---
 
@@ -14,6 +14,7 @@ Read `_data/roadmap.yml` with `read_file` to find the idea entry. If the user re
 Read `docs/EDITORIAL_PLAN.md` with `read_file` to understand the series context and current priorities before asking the user anything.
 
 If any of these are still missing from the roadmap entry after reading the plan, ask the user (inline):
+
 - Target audience level: beginner / intermediate / advanced
 - Standalone post or part of a series? If series: existing or new?
 - Is there a companion GitHub repo or code example?
@@ -22,6 +23,7 @@ If any of these are still missing from the roadmap entry after reading the plan,
 ## Step 2 — Check series context
 
 If the post belongs to a series:
+
 1. List all other posts in that series from `roadmap.yml`.
 2. Identify where this post fits in the sequence (before/after which articles).
 3. Note what the previous article covered and what the next will cover — for intro/conclusion bridges.
@@ -108,7 +110,7 @@ Produce the complete Jekyll front matter block ready to paste:
 ---
 layout: post
 title: "Full Title in Title Case"
-post_series_id: series-slug        # omit if standalone
+post_series_id: series-slug # omit if standalone
 slug: post-slug
 image: /assets/img/suggested-filename.svg
 excerpt: One to two sentence SEO summary without markdown.

@@ -31,7 +31,10 @@ from pathlib import Path
 try:
     from bs4 import BeautifulSoup
 except ImportError:
-    print("ERROR: beautifulsoup4 is required. Run: pip install beautifulsoup4", file=sys.stderr)
+    print(
+        "ERROR: beautifulsoup4 is required. Run: pip install beautifulsoup4",
+        file=sys.stderr,
+    )
     sys.exit(1)
 
 # ---------------------------------------------------------------------------
@@ -40,14 +43,26 @@ except ImportError:
 
 BLOG_SLUG_BASE = "https://sasadangelo.github.io/code4projects"
 MEDIUM_DOMAINS = (
-    "medium.com", "plainenglish.io", "towardsdatascience.com",
-    "betterprogramming.pub", "itnext.io", "stackademic.com",
-    "python.plainenglish.io", "levelup.gitconnected.com",
+    "medium.com",
+    "plainenglish.io",
+    "towardsdatascience.com",
+    "betterprogramming.pub",
+    "itnext.io",
+    "stackademic.com",
+    "python.plainenglish.io",
+    "levelup.gitconnected.com",
 )
 
 ALLOWED_CATEGORIES = [
-    "Virtualization", "Artificial Intelligence", "Cloud", "Programming",
-    "Networking", "Android", "Multimedia", "Project Management", "Design Patterns",
+    "Virtualization",
+    "Artificial Intelligence",
+    "Cloud",
+    "Programming",
+    "Networking",
+    "Android",
+    "Multimedia",
+    "Project Management",
+    "Design Patterns",
 ]
 
 CTA_BLOCK = (
@@ -62,6 +77,7 @@ CTA_BLOCK = (
 # Helpers
 # ---------------------------------------------------------------------------
 
+
 def slugify(text: str) -> str:
     text = text.lower().strip()
     text = re.sub(r"[^\w\s-]", "", text)
@@ -70,7 +86,9 @@ def slugify(text: str) -> str:
     return text.strip("-")
 
 
-def download_image(url: str, dest_dir: Path, rename_as: str | None = None) -> str | None:
+def download_image(
+    url: str, dest_dir: Path, rename_as: str | None = None
+) -> str | None:
     """
     Download an image to dest_dir and return the local filename, or None on failure.
     If rename_as is provided, the file is saved with that name (extension preserved
@@ -87,7 +105,11 @@ def download_image(url: str, dest_dir: Path, rename_as: str | None = None) -> st
         if rename_as:
             name = re.sub(r"[^a-zA-Z0-9._-]", "-", rename_as) + suffix
         else:
-            name = re.sub(r"[^a-zA-Z0-9._-]", "_", original_name) if original_name else "image.png"
+            name = (
+                re.sub(r"[^a-zA-Z0-9._-]", "_", original_name)
+                if original_name
+                else "image.png"
+            )
 
         dest = dest_dir / name
         if not dest.exists():
@@ -110,6 +132,7 @@ def load_roadmap_slugs(roadmap_path: Path) -> set[str]:
         return set()
     try:
         import yaml
+
         with open(roadmap_path) as f:
             entries = yaml.safe_load(f) or []
         return {e.get("slug", "") for e in entries if e.get("slug")}
@@ -120,6 +143,7 @@ def load_roadmap_slugs(roadmap_path: Path) -> set[str]:
 # ---------------------------------------------------------------------------
 # HTML → Markdown converter (no external markdownify dependency)
 # ---------------------------------------------------------------------------
+
 
 def _heading_shift(soup_node) -> int:
     """
@@ -141,7 +165,10 @@ def _heading_shift(soup_node) -> int:
 
 
 def html_to_markdown(
-    soup_node, assets_dir: Path, blog_slugs: set[str], downloaded_images: list,
+    soup_node,
+    assets_dir: Path,
+    blog_slugs: set[str],
+    downloaded_images: list,
     slug: str = "article",
 ) -> str:
     """Recursively convert a BeautifulSoup node tree to Markdown."""
@@ -206,13 +233,14 @@ def html_to_markdown(
                 br.replace_with("\n")
             code_text = node.get_text()
             # Unescape HTML entities
-            code_text = (code_text
-                         .replace("&lt;", "<")
-                         .replace("&gt;", ">")
-                         .replace("&amp;", "&")
-                         .replace("&quot;", '"')
-                         .replace("&#39;", "'")
-                         .replace("&nbsp;", " "))
+            code_text = (
+                code_text.replace("&lt;", "<")
+                .replace("&gt;", ">")
+                .replace("&amp;", "&")
+                .replace("&quot;", '"')
+                .replace("&#39;", "'")
+                .replace("&nbsp;", " ")
+            )
             return f"\n\n```{lang}\n{code_text.rstrip()}\n```\n\n"
 
         if tag == "code" and node.parent.name != "pre":
@@ -273,7 +301,7 @@ def html_to_markdown(
                 downloaded_images.append(local_name)
                 return (
                     f"\n\n![{alt}]({{{{ site.baseurl }}}}/assets/img/{local_name})"
-                    f"{{:width=\"760\" height=\"400\" .responsive_img}}\n\n"
+                    f'{{:width="760" height="400" .responsive_img}}\n\n'
                 )
             return f"\n\n![{alt}]({src})\n\n"
 
@@ -290,8 +318,17 @@ def html_to_markdown(
             return ""  # handled by figure
 
         # --- Skip noise tags ---
-        if tag in ("script", "style", "nav", "footer", "button",
-                   "form", "input", "noscript", "svg"):
+        if tag in (
+            "script",
+            "style",
+            "nav",
+            "footer",
+            "button",
+            "form",
+            "input",
+            "noscript",
+            "svg",
+        ):
             return ""
 
         # Default: recurse
@@ -303,6 +340,7 @@ def html_to_markdown(
 # ---------------------------------------------------------------------------
 # Main conversion
 # ---------------------------------------------------------------------------
+
 
 def convert_medium_html(
     html_content: str,
@@ -344,7 +382,9 @@ def convert_medium_html(
         first_figure.decompose()
 
     downloaded_images: list[str] = []
-    body_md = html_to_markdown(soup, assets_dir, blog_slugs, downloaded_images, slug=slug)
+    body_md = html_to_markdown(
+        soup, assets_dir, blog_slugs, downloaded_images, slug=slug
+    )
 
     # Clean up excessive blank lines
     body_md = re.sub(r"\n{3,}", "\n\n", body_md).strip()
@@ -358,28 +398,30 @@ def convert_medium_html(
         )
         m = list(cta_pattern.finditer(body_md))
         if m:
-            body_md = body_md[:m[-1].start()].rstrip()
+            body_md = body_md[: m[-1].start()].rstrip()
 
     # --- Hero image ---
     hero_filename = None
     if hero_src_from_content:
-        hero_filename = download_image(hero_src_from_content, assets_dir, rename_as=f"{slug}-hero")
+        hero_filename = download_image(
+            hero_src_from_content, assets_dir, rename_as=f"{slug}-hero"
+        )
 
     hero_line = ""
     if hero_filename:
         hero_line = (
             f"\n![{title}]({{{{ site.baseurl }}}}/assets/img/{hero_filename})"
-            f"{{:width=\"760\" height=\"400\" .responsive_img}}\n"
+            f'{{:width="760" height="400" .responsive_img}}\n'
         )
     elif downloaded_images:
         hero_line = (
             f"\n![{title}]({{{{ site.baseurl }}}}/assets/img/{downloaded_images[0]})"
-            f"{{:width=\"760\" height=\"400\" .responsive_img}}\n"
+            f'{{:width="760" height="400" .responsive_img}}\n'
         )
     elif hero_image_hint:
         hero_line = (
             f"\n![{title}]({{{{ site.baseurl }}}}/assets/img/{hero_image_hint})"
-            f"{{:width=\"760\" height=\"400\" .responsive_img}}\n"
+            f'{{:width="760" height="400" .responsive_img}}\n'
         )
 
     # --- Front matter ---
@@ -423,28 +465,49 @@ def convert_medium_html(
 # CLI entry point
 # ---------------------------------------------------------------------------
 
+
 def main():
     parser = argparse.ArgumentParser(description="Convert Medium HTML to Jekyll draft")
-    parser.add_argument("--html", required=True,
-                        help="Medium article HTML (content:encoded from RSS, or pasted HTML)")
+    parser.add_argument(
+        "--html",
+        required=True,
+        help="Medium article HTML (content:encoded from RSS, or pasted HTML)",
+    )
     parser.add_argument("--title", required=True, help="Article title")
-    parser.add_argument("--date", default=str(date.today()), help="Publication date YYYY-MM-DD")
-    parser.add_argument("--slug", default="", help="Post slug (derived from title if omitted)")
-    parser.add_argument("--category", default="Programming",
-                        help=f"One of: {', '.join(ALLOWED_CATEGORIES)}")
+    parser.add_argument(
+        "--date", default=str(date.today()), help="Publication date YYYY-MM-DD"
+    )
+    parser.add_argument(
+        "--slug", default="", help="Post slug (derived from title if omitted)"
+    )
+    parser.add_argument(
+        "--category",
+        default="Programming",
+        help=f"One of: {', '.join(ALLOWED_CATEGORIES)}",
+    )
     parser.add_argument("--series", default="", help="post_series_id (optional)")
     parser.add_argument("--excerpt", default="", help="SEO excerpt (optional)")
-    parser.add_argument("--image", default="", help="Hero image filename hint (optional)")
-    parser.add_argument("--out", default="_drafts", help="Output directory for the .md file")
-    parser.add_argument("--assets", default="assets/img",
-                        help="Directory to download images into")
-    parser.add_argument("--roadmap", default="_data/roadmap.yml",
-                        help="Path to roadmap.yml for internal link resolution")
+    parser.add_argument(
+        "--image", default="", help="Hero image filename hint (optional)"
+    )
+    parser.add_argument(
+        "--out", default="_drafts", help="Output directory for the .md file"
+    )
+    parser.add_argument(
+        "--assets", default="assets/img", help="Directory to download images into"
+    )
+    parser.add_argument(
+        "--roadmap",
+        default="_data/roadmap.yml",
+        help="Path to roadmap.yml for internal link resolution",
+    )
     args = parser.parse_args()
 
     if args.category not in ALLOWED_CATEGORIES:
-        print(f"WARNING: '{args.category}' not in allowed categories. Using 'Programming'.",
-              file=sys.stderr)
+        print(
+            f"WARNING: '{args.category}' not in allowed categories. Using 'Programming'.",
+            file=sys.stderr,
+        )
         args.category = "Programming"
 
     slug = args.slug or slugify(args.title)

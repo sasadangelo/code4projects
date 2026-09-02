@@ -7,7 +7,9 @@
     link: /managing-application-configuration-in-python-with-pydantic-settings/
   - name: "Part 3: Logging in a Flask Application with Loguru"
     link: /logging-in-a-flask-application-with-loguru/
-  - name: "Part 4: Building a Database Layer in Python with SQLAlchemy ORM"
+  - name: "Part 4: How to Create Cron Jobs in Python for Your Applications"
+    link: /database-layer-with-sqlalchemy-in-a-layered-python-architecture/
+  - name: "Part 5: Building a Database Layer in Python with SQLAlchemy ORM"
     link: /database-layer-with-sqlalchemy-in-a-layered-python-architecture/
 
 - post_series_id: agentic-ai-protocols

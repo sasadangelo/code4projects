@@ -13,8 +13,8 @@ Bob reads this file automatically when using `blog-advisor` and `post-planner`.
 
 > "A website about software programming where I write everything I learnt in over 30 years of experience."
 
-Primary goal: **professional growth and reputation**.  
-Secondary goal: **reader value** — practitioners who want depth, not tutorials copied from the docs.  
+Primary goal: **professional growth and reputation**.
+Secondary goal: **reader value** — practitioners who want depth, not tutorials copied from the docs.
 Tertiary goal: **audience growth** — newsletter subscribers via ebook lead magnets.
 
 ---
@@ -35,15 +35,15 @@ Docker 2025 is the reference implementation. All new series follow this model.
 ## Active Series
 
 ### ✅ COMPLETE — Getting Started with Docker 2025
-`post_series_id: getting-started-with-docker-2025`  
-8 articles published (Jul–Aug 2026). Ebook exists. Lead magnet active.  
+`post_series_id: getting-started-with-docker-2025`
+8 articles published (Jul–Aug 2026). Ebook exists. Lead magnet active.
 **No further articles needed.** Model to replicate.
 
 ---
 
 ### ✅ COMPLETE — Python CLI with the Command Pattern
-`post_series_id: python-cli-command-pattern`  
-2 articles published (Nov 2025, Jan 2026). Intentionally short — topic is exhausted.  
+`post_series_id: python-cli-command-pattern`
+2 articles published (Nov 2025, Jan 2026). Intentionally short — topic is exhausted.
 **No further articles needed.**
 
 ---
@@ -81,7 +81,7 @@ Planned title: **"Agentic AI: Protocols and Patterns"**
 ---
 
 ### 🔵 PLANNED — Modern Python Application Development
-`post_series_id: modern-python-app-dev`  
+`post_series_id: modern-python-app-dev`
 Planned title: **"Modern Python Application Development"**
 
 **Philosophy**: Python is the vehicle, the principles are universal. Every article teaches a pattern applicable in any language — Python is just the clearest implementation language.
@@ -98,21 +98,22 @@ Planned sequence:
 9. Building a REST API — FastAPI from scratch
 10. Testing — pytest patterns for real applications
 
-Status: articles 1–3 exist on Medium (to import), 4–5 published on blog.  
+Status: articles 1–3 exist on Medium (to import), 4–5 published on blog.
 Articles 6–10 to write.
 
 Missing:
-- [ ] Import articles 1–3 from Medium (`medium-importer`)
-- [ ] Reassign `post_series_id: modern-python-app-dev` to articles 4–5 (currently `python-cli-command-pattern`)
-- [ ] Add entry to `_data/post_sidebar.yml`
-- [ ] Plan and write articles 6–10 progressively
+- [x] Import articles 1–3 from Medium (`medium-importer`)
+- [x] Reassign `post_series_id: modern-python-app-dev` to articles 4–5 (currently `python-cli-command-pattern`)
+- [x] Add entry to `_data/post_sidebar.yml`
+- [x] Data Persistence — files, SQLite, simple ORM patterns
+- [ ] Plan and write articles 7–10 progressively
 
 > **Note on articles 4–5**: the Python CLI posts currently belong to `python-cli-command-pattern`. Two options: (a) keep them in their own mini-series and reference them from `modern-python-app-dev` with a link, (b) move them into the larger series. Decision deferred — discuss before acting.
 
 ---
 
 ### 🔵 PLANNED — Getting Started with Kubernetes 2026
-`post_series_id: getting-started-with-kubernetes-2026`  
+`post_series_id: getting-started-with-kubernetes-2026`
 Planned title: **"Getting Started with Kubernetes 2026"**
 
 **Approach**: completely new series, from scratch. The 2019–2020 articles are left as-is (archived). Same model as Docker 2025.
@@ -129,7 +130,7 @@ Planned sequence:
 9. Kubernetes Security Best Practices
 10. Kubernetes in Production — resource limits, health checks, HPA
 
-Ebook: yes — same pipeline as Docker 2025.  
+Ebook: yes — same pipeline as Docker 2025.
 Lead magnet: yes — tag `Virtualization`.
 
 Status: **not started**. Priority for Q4 2026.
@@ -137,7 +138,7 @@ Status: **not started**. Priority for Q4 2026.
 ---
 
 ### 🔵 PLANNED — Build Your Own LLM
-`post_series_id: build-your-own-llm`  
+`post_series_id: build-your-own-llm`
 Planned title: **"Build Your Own LLM from Scratch"**
 
 High-effort, high-differentiation series. No other blog covers this with 30 years of engineering experience behind it.
@@ -156,7 +157,7 @@ Status: **not started**. Priority Q1 2027. Do not start before Kubernetes 2026 i
 ---
 
 ### ⚙️ DECISION PENDING — Android Game Programming
-`post_series_id: android-game-programming`  
+`post_series_id: android-game-programming`
 12 articles published (2018–2019). Series stopped mid-implementation.
 
 **Decision needed**: complete the original series (3–4 more articles to close the game framework) or freeze consciously.
@@ -194,9 +195,9 @@ The pace is **1 productive action per week** — not 1 article per week. Some we
 - [x] Update the 2 roadmap entries with `series: agentic-ai-protocols`
 
 **Week 3**
-- [ ] Import "Python Blueprint" article from Medium (`medium-importer`)
-- [ ] Review and publish it
-- [ ] Add `modern-python-app-dev` entry to `_data/post_sidebar.yml` (placeholder, will grow)
+- [x] Import "Python Blueprint" article from Medium (`medium-importer`)
+- [x] Review and publish it
+- [x] Add `modern-python-app-dev` entry to `_data/post_sidebar.yml` (placeholder, will grow)
 
 ---
 
@@ -204,8 +205,8 @@ The pace is **1 productive action per week** — not 1 article per week. Some we
 *Goal: build the series skeleton by importing from Medium + writing the first new article.*
 
 **Week 4**
-- [ ] Import "Configuration & Logging" from Medium
-- [ ] Review and publish
+- [x] Import "Configuration & Logging" from Medium
+- [x] Review and publish
 
 **Week 5**
 - [ ] Import "Cron Jobs & Scheduled Tasks" from Medium
@@ -216,7 +217,7 @@ The pace is **1 productive action per week** — not 1 article per week. Some we
 - [ ] Update `post_sidebar.yml` accordingly
 
 **Week 7**
-- [ ] Plan and write: "Data Persistence in Python" (article 6 of the series)
+- [x] Plan and write: "Data Persistence in Python" (article 6 of the series)
 
 **Week 8**
 - [ ] Plan and write: "Concurrency in Python — Threads and Processes" (article 7)

@@ -1,5 +1,5 @@
 ---
-name: style-guide
+name: blog-style
 description: Use when writing, reviewing, editing, or evaluating a blog post for Code4Projects — applies the established style, voice, tone, and structure guidelines derived from the existing corpus.
 ---
 
@@ -56,18 +56,18 @@ Required fields for every post:
 
 ```yaml
 layout: post
-title: "..."          # Title Case, quoted
-slug: ...             # kebab-case, no trailing slash
+title: "..." # Title Case, quoted
+slug: ... # kebab-case, no trailing slash
 image: /assets/img/... # SVG preferred for diagrams, PNG/WebP for photos
-excerpt: ...          # 1–2 sentence SEO summary, no markdown
+excerpt: ... # 1–2 sentence SEO summary, no markdown
 categories:
-  - "Category Name"   # exact match to existing category
+  - "Category Name" # exact match to existing category
 ```
 
 Optional but common:
 
 ```yaml
-post_series_id: series-slug   # links the post into a series
+post_series_id: series-slug # links the post into a series
 ```
 
 ## 5. Headings and Lists
