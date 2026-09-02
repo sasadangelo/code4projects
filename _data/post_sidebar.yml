@@ -8,7 +8,7 @@
   - name: "Part 3: Logging in a Flask Application with Loguru"
     link: /logging-in-a-flask-application-with-loguru/
   - name: "Part 4: How to Create Cron Jobs in Python for Your Applications"
-    link: /database-layer-with-sqlalchemy-in-a-layered-python-architecture/
+    link: /how-to-create-cron-jobs-in-python/
   - name: "Part 5: Building a Database Layer in Python with SQLAlchemy ORM"
     link: /database-layer-with-sqlalchemy-in-a-layered-python-architecture/
 

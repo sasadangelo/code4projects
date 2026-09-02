@@ -1132,8 +1132,58 @@
   status: planned
   category: Programming
   series: modern-python-application
-  scheduled: '2026-09-15'
+  scheduled: '2026-09-06'
   slug: concurrency-in-python-threads-processes-and-the-event-loop
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: async-and-event-loop-in-python-asyncio-in-practice
+  title: "Async and the Event Loop in Python: asyncio in Practice"
+  status: planned
+  category: Programming
+  series: modern-python-application
+  scheduled: '2026-09-13'
+  slug: async-and-event-loop-in-python-asyncio-in-practice
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: getting-started-with-rest-api
+  title: "Getting Started with REST API"
+  status: idea
+  category: Programming
+  series: modern-python-application
+  distributed:
+    medium: true
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: building-a-rest-api-with-fastapi-async-thread-pools-and-production-tips
+  title: "Building a REST API with FastAPI: Async, Thread Pools, and Production Tips"
+  status: idea
+  category: Programming
+  series: modern-python-application
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: testing-python-applications-with-pytest-patterns-for-real-code
+  title: "Testing Python Applications with pytest: Patterns for Real Code"
+  status: idea
+  category: Programming
+  series: modern-python-application
   distributed:
     medium: false
     substack: false
