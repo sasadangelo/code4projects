@@ -1336,3 +1336,185 @@
     linkedin: false
     instagram: false
     facebook: false
+
+- id: what-is-git-and-basic-commands
+  title: "What is Git and Basic Commands"
+  status: idea
+  category: Programming
+  series: getting-started-with-git
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: beyond-push-and-pull-understanding-git-core-concepts
+  title: "Beyond Push and Pull: Understanding Git's Core Concepts to Avoid Common Pitfalls"
+  status: planned
+  category: Programming
+  series: getting-started-with-git
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: hidden-challenges-of-git-lessons-from-large-projects
+  title: "The Hidden Challenges of Git: Lessons from Working in Large Projects"
+  status: planned
+  category: Programming
+  series: getting-started-with-git
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: what-is-kubernetes-and-why-it-exists
+  title: "What is Kubernetes and Why It Exists"
+  status: idea
+  category: Virtualization
+  series: getting-started-with-kubernetes-2026
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: your-first-kubernetes-cluster
+  title: "Your First Kubernetes Cluster"
+  status: idea
+  category: Virtualization
+  series: getting-started-with-kubernetes-2026
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: kubernetes-pods-deployments-and-replicasets
+  title: "Pods, Deployments, and ReplicaSets: The Building Blocks of Kubernetes"
+  status: idea
+  category: Virtualization
+  series: getting-started-with-kubernetes-2026
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: kubernetes-services-clusterip-nodeport-loadbalancer-ingress
+  title: "Kubernetes Services: ClusterIP, NodePort, LoadBalancer, and Ingress"
+  status: idea
+  category: Virtualization
+  series: getting-started-with-kubernetes-2026
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: kubernetes-configmaps-and-secrets
+  title: "Kubernetes ConfigMaps and Secrets: Configuration Management"
+  status: idea
+  category: Virtualization
+  series: getting-started-with-kubernetes-2026
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: kubernetes-persistent-volumes-and-storage
+  title: "Kubernetes Persistent Volumes and Storage: Stateful Workloads"
+  status: idea
+  category: Virtualization
+  series: getting-started-with-kubernetes-2026
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: kubernetes-networking
+  title: "Kubernetes Networking: How Pods Talk to Each Other"
+  status: idea
+  category: Virtualization
+  series: getting-started-with-kubernetes-2026
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: kubernetes-helm
+  title: "Helm: Packaging and Deploying Applications on Kubernetes"
+  status: idea
+  category: Virtualization
+  series: getting-started-with-kubernetes-2026
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: kubernetes-security-best-practices
+  title: "Kubernetes Security Best Practices"
+  status: idea
+  category: Virtualization
+  series: getting-started-with-kubernetes-2026
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: kubernetes-in-production
+  title: "Kubernetes in Production: Resource Limits, Health Checks, and HPA"
+  status: idea
+  category: Virtualization
+  series: getting-started-with-kubernetes-2026
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: git-merge-vs-rebase
+  title: "Git Merge vs Rebase: When to Use Which and Why It Matters"
+  status: idea
+  category: Programming
+  series: getting-started-with-git
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false

@@ -1,6 +1,6 @@
 # Code4Projects — Editorial Plan
 
-Last updated: 2026-08 (revised post Agentic AI Protocols formalisation)
+Last updated: 2026-08 (revised: DevOps super-series + Git series added)
 Author: Salvatore D'Angelo
 
 This document defines the strategic direction of the blog, the active series, and the week-by-week execution plan. It is the **why** and **what next** — `_data/roadmap.yml` is the **operational status** of each individual article.
@@ -116,7 +116,7 @@ Missing:
 `post_series_id: getting-started-with-kubernetes-2026`
 Planned title: **"Getting Started with Kubernetes 2026"**
 
-**Approach**: completely new series, from scratch. The 2019–2020 articles are left as-is (archived). Same model as Docker 2025.
+**Approach**: completely new series, from scratch. The 2019–2020 articles are left as-is (archived). Same model as Docker 2025. Part of the **DevOps super-series** (see below).
 
 Planned sequence:
 1. What is Kubernetes and Why It Exists — concepts, architecture
@@ -133,7 +133,48 @@ Planned sequence:
 Ebook: yes — same pipeline as Docker 2025.
 Lead magnet: yes — tag `Virtualization`.
 
-Status: **not started**. Priority for Q4 2026.
+Status: **10 entries added to roadmap.yml as `idea`**. Priority for Q4 2026.
+
+---
+
+### 🔵 PLANNED — Getting Started with Git
+`post_series_id: getting-started-with-git`
+Planned title: **"Getting Started with Git"**
+
+**Approach**: 3-article series. Two articles already exist on Medium (to import); one introductory article to write from scratch. Part of the **DevOps super-series** (see below).
+
+**Note on YAML**: the two YAML articles published in 2023 (`getting-started-with-yaml`, `yaml-advanced-feature`) remain in category **Programming**. They are referenced as prerequisites from the Kubernetes series intro — not absorbed into DevOps.
+
+Planned sequence:
+1. What is Git and Basic Commands ← **to write** (entry-level intro)
+2. Beyond Push and Pull: Understanding Git's Core Concepts to Avoid Common Pitfalls ← **import from Medium**
+3. The Hidden Challenges of Git: Lessons from Working in Large Projects ← **import from Medium**
+
+Ebook: evaluate after completion (series is short — may combine with a broader DevOps ebook).
+Lead magnet: tag `Programming`.
+
+Status: **3 entries added to roadmap.yml** (1 `idea`, 2 `planned`). Priority Q1 2027 (after Kubernetes 2026).
+
+---
+
+### 🔵 PLANNED — DevOps Super-Series (umbrella)
+`post_series_id`: N/A — this is a **landing page / sidebar group**, not a series with its own ID.
+Planned title: **"DevOps: From Containers to Orchestration"**
+
+Three sub-series grouped under a single DevOps umbrella:
+
+| Sub-series | Series ID | Status |
+|---|---|---|
+| Getting Started with Docker 2025 | `getting-started-with-docker-2025` | ✅ Complete (8 articles) |
+| Getting Started with Kubernetes 2026 | `getting-started-with-kubernetes-2026` | 🔵 Planned (Q4 2026) |
+| Getting Started with Git | `getting-started-with-git` | 🔵 Planned (Q1 2027) |
+
+**YAML as prerequisite**: the two existing YAML posts are cross-linked as recommended reading from the Kubernetes series intro. They stay in `Programming` category and are not re-tagged.
+
+Implementation tasks:
+- [ ] Create a DevOps landing page or sidebar section in `_data/post_sidebar.yml` grouping the 3 sub-series
+- [ ] Each sub-series intro article links to the DevOps landing page
+- [ ] Evaluate a combined DevOps ebook once all 3 sub-series are complete (Q2 2027)
 
 ---
 
@@ -227,10 +268,10 @@ The pace is **1 productive action per week** — not 1 article per week. Some we
 ### Phase 3 — Kubernetes 2026 Launch (Weeks 9–20)
 *Goal: publish the first 4 articles of the new Kubernetes series.*
 
-**Week 9**
-- [ ] Define the final sequence (10 articles), titles, and `post_series_id`
+**Week 9** ✅ Done
+- [x] Define the final sequence (10 articles), titles, and `post_series_id`
 - [ ] Create `getting-started-with-kubernetes-2026` entry in `post_sidebar.yml`
-- [ ] Add all 10 planned articles as `idea` entries in `roadmap.yml`
+- [x] Add all 10 planned articles as `idea` entries in `roadmap.yml`
 
 **Week 10**
 - [ ] Plan and write: "What is Kubernetes and Why It Exists" (Part 1)
@@ -259,8 +300,29 @@ At the end of Phase 4: **Python Modern App Dev series is complete** → compile 
 
 ---
 
-### Phase 5 — Agentic AI expansion (Weeks 21+)
-*Q1 2027 — after Kubernetes and Python series are solid.*
+### Phase 5 — Git Series + DevOps umbrella (Weeks 21–24)
+*Q1 2027 — after Kubernetes 2026 is complete.*
+
+**Week 21**
+- [ ] Write Part 1: "What is Git and Basic Commands"
+- [ ] Create `getting-started-with-git` entry in `post_sidebar.yml`
+
+**Week 22**
+- [ ] Import Part 2 from Medium: "Beyond Push and Pull" (`medium-importer`)
+- [ ] Review and publish
+
+**Week 23**
+- [ ] Import Part 3 from Medium: "The Hidden Challenges of Git" (`medium-importer`)
+- [ ] Review and publish
+
+**Week 24**
+- [ ] Create DevOps landing page / sidebar group linking all 3 sub-series
+- [ ] Evaluate combined DevOps ebook
+
+---
+
+### Phase 6 — Agentic AI expansion (Weeks 25+)
+*Q2 2027 — after DevOps umbrella is solid.*
 
 - Add articles to the Agentic AI Protocols series
 - Begin planning "Build Your Own LLM" series
@@ -276,7 +338,9 @@ At the end of Phase 4: **Python Modern App Dev series is complete** → compile 
 | LangChain Chatbot | ⚠️ Formalise first | Q3 2026 |
 | Modern Python App Dev | 🔵 Series not complete | Q4 2026 |
 | Kubernetes 2026 | 🔵 Not started | Q2 2027 |
-| Build Your Own LLM | 🔵 Not started | Q3 2027 |
+| Getting Started with Git | 🔵 Not started | Q2 2027 |
+| DevOps combined ebook | 🔵 Evaluate post-completion | Q3 2027 |
+| Build Your Own LLM | 🔵 Not started | Q4 2027 |
 
 ---
 
@@ -284,12 +348,13 @@ At the end of Phase 4: **Python Modern App Dev series is complete** → compile 
 
 | Series ID | Title | Status |
 |---|---|---|
-| `getting-started-with-docker-2025` | Getting Started with Docker 2025 | ✅ Complete |
+| `getting-started-with-docker-2025` | Getting Started with Docker 2025 | ✅ Complete — DevOps sub-series |
 | `python-cli-command-pattern` | Python CLI with the Command Pattern | ✅ Complete |
 | `llm-chatbot-langchain` | Build Your Own LLM Chatbot with LangChain | ✅ Complete |
 | `agentic-ai-protocols` | Agentic AI: Protocols and Patterns | ✅ Formalised (2 articles) |
 | `modern-python-app-dev` | Modern Python Application Development | 🔵 Planned |
-| `getting-started-with-kubernetes-2026` | Getting Started with Kubernetes 2026 | 🔵 Planned |
+| `getting-started-with-kubernetes-2026` | Getting Started with Kubernetes 2026 | 🔵 Planned — DevOps sub-series |
+| `getting-started-with-git` | Getting Started with Git | 🔵 Planned — DevOps sub-series |
 | `build-your-own-llm` | Build Your Own LLM from Scratch | 🔵 Planned |
 | `android-game-programming` | Android Game Programming | ⚙️ Decision pending |
 | `getting-started-with-docker` | Getting Started with Docker (legacy 2018) | 🗄️ Archived |
