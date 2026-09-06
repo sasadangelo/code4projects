@@ -1136,11 +1136,11 @@
   slug: concurrency-in-python-threads-processes-and-the-event-loop
   distributed:
     medium: false
-    substack: false
-    twitter: false
+    substack: true
+    twitter: true
     linkedin: false
     instagram: false
-    facebook: false
+    facebook: true
 - id: async-and-event-loop-in-python-asyncio-in-practice
   title: "Async and the Event Loop in Python: asyncio in Practice"
   status: planned
