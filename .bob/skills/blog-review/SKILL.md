@@ -21,7 +21,10 @@ Check for Medium origin: if the roadmap entry has `distributed.medium: true`, or
 Read the target file from `_drafts/<slug>.md` or `_posts/<filename>.md` using `read_file`.
 If the user pastes the content directly, use that.
 
-Also read `.bob/skills/style-guide/style-reference.md` with `read_file` to have the guidelines active.
+Also read the following files with `read_file` to have all guidelines active:
+
+- `.bob/skills/blog-style/SKILL.md` — voice, tone, structure
+- `.bob/skills/blog-review/references/quality-scoring.md` — scoring rubric
 
 ## Step 2a — Standard checklist (all posts)
 
@@ -144,7 +147,34 @@ Run this section in addition to 2a when the post was imported from Medium.
 - CTA block: present once
 - ...
 
+### 📊 Quality Score
+Score the post against `references/quality-scoring.md`.
+For each failed check, deduct the listed points and record the gap.
+
+| Category | Score | Max |
+|---|---|---|
+| Content Quality | N | 30 |
+| SEO Optimization | N | 25 |
+| E-E-A-T Signals | N | 15 |
+| Technical Elements | N | 15 |
+| AI Citation Readiness | N | 15 |
+| **Total** | **N** | **100** |
+
+**Rating:** [Exceptional / Strong / Acceptable / Below Standard / Rewrite]
+
+#### Gaps to fix (score < 100)
+List every deducted point as an actionable item, classified by the priority
+from `references/quality-scoring.md` (🔴 Critical / 🟡 High / 🟠 Medium / 🔵 Low).
+Merge with and do not duplicate issues already listed in the CRITICAL / IMPORTANT / MINOR
+sections above.
+
+Example:
+- 🟡 [SEO -4] No internal links → add 3–10 contextual links using `{{ site.baseurl }}/slug/`
+- 🟠 [Content -2] Hero is the only image → add at least 1 diagram or screenshot
+- 🔵 [Technical -1] Images are JPEG → convert to WebP/AVIF
+
 ### Summary
+Total score: N/100 — [rating]
 X critical, Y important, Z minor issues.
 [ready to publish / needs minor fixes / needs work / major revision needed]
 ```

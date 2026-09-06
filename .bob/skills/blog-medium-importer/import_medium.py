@@ -63,6 +63,7 @@ ALLOWED_CATEGORIES = [
     "Multimedia",
     "Project Management",
     "Design Patterns",
+    "Software Architecture",
 ]
 
 CTA_BLOCK = (

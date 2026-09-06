@@ -50,6 +50,7 @@ Use only these values in `category:`:
 - `Multimedia`
 - `Project Management`
 - `Design Patterns`
+- `Software Architecture`
 
 ## Operations
 

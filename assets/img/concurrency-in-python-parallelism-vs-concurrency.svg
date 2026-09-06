@@ -1,0 +1,85 @@
+<svg viewBox="0 0 760 400" width="760" height="400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, system-ui, sans-serif">
+
+  <!-- Background -->
+  <rect width="760" height="400" fill="#ffffff"/>
+
+  <!-- ── LEFT PANEL: Parallelism ── -->
+  <text x="190" y="36" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f2328">Parallelism</text>
+  <text x="190" y="54" text-anchor="middle" font-size="11" fill="#57606a">4 tasks · 4 cores · same instant</text>
+
+  <!-- Core labels -->
+  <text x="52" y="90" text-anchor="middle" font-size="11" fill="#57606a">Core 1</text>
+  <text x="52" y="140" text-anchor="middle" font-size="11" fill="#57606a">Core 2</text>
+  <text x="52" y="190" text-anchor="middle" font-size="11" fill="#57606a">Core 3</text>
+  <text x="52" y="240" text-anchor="middle" font-size="11" fill="#57606a">Core 4</text>
+
+  <!-- Timeline axis -->
+  <line x1="80" y1="260" x2="320" y2="260" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="80"  y="274" text-anchor="middle" font-size="10" fill="#57606a">0</text>
+  <text x="200" y="274" text-anchor="middle" font-size="10" fill="#57606a">t</text>
+  <text x="320" y="274" text-anchor="middle" font-size="10" fill="#57606a">2t</text>
+
+  <!-- Task bars — all start at 80, all end at 200 (same duration t) -->
+  <rect x="80" y="76"  width="120" height="22" rx="4" fill="#3b82d4" opacity="0.85"/>
+  <text x="140" y="91" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="bold">Task A</text>
+
+  <rect x="80" y="126" width="120" height="22" rx="4" fill="#7c5cd8" opacity="0.85"/>
+  <text x="140" y="141" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="bold">Task B</text>
+
+  <rect x="80" y="176" width="120" height="22" rx="4" fill="#3b82d4" opacity="0.65"/>
+  <text x="140" y="191" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="bold">Task C</text>
+
+  <rect x="80" y="226" width="120" height="22" rx="4" fill="#7c5cd8" opacity="0.65"/>
+  <text x="140" y="241" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="bold">Task D</text>
+
+  <!-- Wall-clock bracket -->
+  <line x1="80"  y1="290" x2="80"  y2="300" stroke="#1f2328" stroke-width="1.5"/>
+  <line x1="200" y1="290" x2="200" y2="300" stroke="#1f2328" stroke-width="1.5"/>
+  <line x1="80"  y1="295" x2="200" y2="295" stroke="#1f2328" stroke-width="1.5"/>
+  <text x="140" y="315" text-anchor="middle" font-size="11" fill="#1f2328">Wall time = t</text>
+
+  <!-- ── DIVIDER ── -->
+  <line x1="380" y1="20" x2="380" y2="380" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- ── RIGHT PANEL: Concurrency ── -->
+  <text x="570" y="36" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f2328">Concurrency</text>
+  <text x="570" y="54" text-anchor="middle" font-size="11" fill="#57606a">4 tasks · 1 core · interleaved</text>
+
+  <!-- Core label -->
+  <text x="432" y="165" text-anchor="middle" font-size="11" fill="#57606a">Core 1</text>
+
+  <!-- Timeline axis -->
+  <line x1="460" y1="260" x2="700" y2="260" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="460" y="274" text-anchor="middle" font-size="10" fill="#57606a">0</text>
+  <text x="580" y="274" text-anchor="middle" font-size="10" fill="#57606a">2t</text>
+  <text x="700" y="274" text-anchor="middle" font-size="10" fill="#57606a">4t</text>
+
+  <!-- Interleaved task slices (each task gets 4 slices of width ~15, gaps between) -->
+  <!-- Task A slices -->
+  <rect x="460" y="150" width="28" height="22" rx="3" fill="#3b82d4" opacity="0.85"/>
+  <rect x="520" y="150" width="28" height="22" rx="3" fill="#3b82d4" opacity="0.85"/>
+  <rect x="580" y="150" width="28" height="22" rx="3" fill="#3b82d4" opacity="0.85"/>
+  <rect x="640" y="150" width="28" height="22" rx="3" fill="#3b82d4" opacity="0.85"/>
+
+  <!-- Task B slices -->
+  <rect x="490" y="150" width="28" height="22" rx="3" fill="#7c5cd8" opacity="0.85"/>
+  <rect x="550" y="150" width="28" height="22" rx="3" fill="#7c5cd8" opacity="0.85"/>
+  <rect x="610" y="150" width="28" height="22" rx="3" fill="#7c5cd8" opacity="0.85"/>
+  <rect x="670" y="150" width="28" height="22" rx="3" fill="#7c5cd8" opacity="0.85"/>
+
+  <!-- Legend -->
+  <rect x="460" y="290" width="14" height="14" rx="2" fill="#3b82d4" opacity="0.85"/>
+  <text x="480" y="302" font-size="11" fill="#57606a">Task A / C</text>
+  <rect x="560" y="290" width="14" height="14" rx="2" fill="#7c5cd8" opacity="0.85"/>
+  <text x="580" y="302" font-size="11" fill="#57606a">Task B / D</text>
+
+  <!-- Wall-clock bracket -->
+  <line x1="460" y1="316" x2="460" y2="326" stroke="#1f2328" stroke-width="1.5"/>
+  <line x1="698" y1="316" x2="698" y2="326" stroke="#1f2328" stroke-width="1.5"/>
+  <line x1="460" y1="321" x2="698" y2="321" stroke="#1f2328" stroke-width="1.5"/>
+  <text x="579" y="341" text-anchor="middle" font-size="11" fill="#1f2328">Wall time ≈ 4t (same work, 1 core)</text>
+
+  <!-- Bottom note -->
+  <text x="380" y="375" text-anchor="middle" font-size="11" fill="#57606a">Concurrency hides I/O waiting · Parallelism reduces computation time</text>
+
+</svg>

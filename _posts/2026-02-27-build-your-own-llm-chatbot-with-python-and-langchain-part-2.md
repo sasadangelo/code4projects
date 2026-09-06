@@ -2,7 +2,9 @@
 layout: post
 title: "Build Your Own LLM Chatbot with Python & LangChain (Part 2)"
 slug: build-your-own-llm-chatbot-with-python-and-langchain-part-2
-post_series_id: llm-chatbot-langchain
+post_series_id:
+  - llm-chatbot-langchain
+  - generative-and-agentic-ai
 image: /assets/img/llm-chatbot-part2.png
 excerpt: Learn how to build a context-aware LLM chatbot with Python and LangChain, managing conversation memory, generation parameters, and robust logging.
 categories:

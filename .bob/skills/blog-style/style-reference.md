@@ -183,6 +183,7 @@ Contrast this with the Agile article (`2023-06-03`) which is long but thin: many
 | `Artificial Intelligence` | LLMs, LangChain, A2A, MCP |
 | `Cloud` | AWS, IBM Cloud |
 | `Project Management` | Agile, DevOps |
+| `Software Architecture` | Layered, Hexagonal, Clean, Event-Driven, Hybrid architectures |
 | `Android` | Android game development |
 
 Always use the exact string shown above. Do not invent new categories without confirming with the author.

@@ -1,0 +1,105 @@
+<svg viewBox="0 0 760 400" width="760" height="400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, system-ui, sans-serif">
+
+  <rect width="760" height="400" fill="#ffffff"/>
+
+  <!-- ══ LEFT: Java ══ -->
+  <text x="190" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2328">Java / C#</text>
+  <text x="190" y="48" text-anchor="middle" font-size="11" fill="#57606a">4 threads · 4 cores · true parallelism</text>
+
+  <!-- Core lanes -->
+  <text x="58" y="88"  text-anchor="end" font-size="11" fill="#57606a">Core 1</text>
+  <text x="58" y="148" text-anchor="end" font-size="11" fill="#57606a">Core 2</text>
+  <text x="58" y="208" text-anchor="end" font-size="11" fill="#57606a">Core 3</text>
+  <text x="58" y="268" text-anchor="end" font-size="11" fill="#57606a">Core 4</text>
+
+  <!-- Timeline axis -->
+  <line x1="65" y1="300" x2="340" y2="300" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="65"  y="315" text-anchor="middle" font-size="10" fill="#57606a">0</text>
+  <text x="202" y="315" text-anchor="middle" font-size="10" fill="#57606a">t</text>
+  <text x="340" y="315" text-anchor="middle" font-size="10" fill="#57606a">2t</text>
+  <line x1="202" y1="296" x2="202" y2="304" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- Thread bars — all start at 65, end at 202 (duration t) -->
+  <rect x="65" y="72"  width="137" height="24" rx="4" fill="#3b82d4" opacity="0.9"/>
+  <text x="133" y="88"  text-anchor="middle" font-size="11" fill="#ffffff" font-weight="bold">Thread 1</text>
+
+  <rect x="65" y="132" width="137" height="24" rx="4" fill="#3b82d4" opacity="0.75"/>
+  <text x="133" y="148" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="bold">Thread 2</text>
+
+  <rect x="65" y="192" width="137" height="24" rx="4" fill="#3b82d4" opacity="0.6"/>
+  <text x="133" y="208" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="bold">Thread 3</text>
+
+  <rect x="65" y="252" width="137" height="24" rx="4" fill="#3b82d4" opacity="0.45"/>
+  <text x="133" y="268" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="bold">Thread 4</text>
+
+  <!-- Wall-clock bracket -->
+  <line x1="65"  y1="330" x2="65"  y2="340" stroke="#1f2328" stroke-width="1.5"/>
+  <line x1="202" y1="330" x2="202" y2="340" stroke="#1f2328" stroke-width="1.5"/>
+  <line x1="65"  y1="335" x2="202" y2="335" stroke="#1f2328" stroke-width="1.5"/>
+  <text x="133" y="356" text-anchor="middle" font-size="11" fill="#1f2328">Wall time = t</text>
+
+  <!-- badge -->
+  <rect x="85" y="368" width="110" height="20" rx="4" fill="#d1fae5" stroke="#6ee7b7" stroke-width="1"/>
+  <text x="140" y="382" text-anchor="middle" font-size="10" fill="#1f2328">✓ True parallelism</text>
+
+  <!-- ══ DIVIDER ══ -->
+  <line x1="380" y1="15" x2="380" y2="390" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- ══ RIGHT: CPython ══ -->
+  <text x="570" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2328">CPython (standard)</text>
+  <text x="570" y="48" text-anchor="middle" font-size="11" fill="#57606a">4 threads · 1 GIL · one at a time</text>
+
+  <!-- Single core lane -->
+  <text x="438" y="168" text-anchor="end" font-size="11" fill="#57606a">Core 1</text>
+  <text x="438" y="208" text-anchor="end" font-size="11" fill="#57606a">Core 2</text>
+  <text x="438" y="248" text-anchor="end" font-size="11" fill="#57606a">Core 3</text>
+  <text x="438" y="288" text-anchor="end" font-size="11" fill="#57606a">Core 4</text>
+
+  <!-- Timeline axis -->
+  <line x1="445" y1="300" x2="740" y2="300" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="445" y="315" text-anchor="middle" font-size="10" fill="#57606a">0</text>
+  <text x="519" y="315" text-anchor="middle" font-size="10" fill="#57606a">t</text>
+  <text x="593" y="315" text-anchor="middle" font-size="10" fill="#57606a">2t</text>
+  <text x="667" y="315" text-anchor="middle" font-size="10" fill="#57606a">3t</text>
+  <text x="740" y="315" text-anchor="middle" font-size="10" fill="#57606a">4t</text>
+  <line x1="519" y1="296" x2="519" y2="304" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="593" y1="296" x2="593" y2="304" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="667" y1="296" x2="667" y2="304" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- Thread 1 on core 1 only, slice 0→t -->
+  <rect x="445" y="152" width="74" height="24" rx="4" fill="#3b82d4" opacity="0.9"/>
+  <text x="482" y="168" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="bold">T1</text>
+
+  <!-- Thread 2 on core 1 only, slice t→2t -->
+  <rect x="519" y="152" width="74" height="24" rx="4" fill="#3b82d4" opacity="0.75"/>
+  <text x="556" y="168" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="bold">T2</text>
+
+  <!-- Thread 3 on core 1 only, slice 2t→3t -->
+  <rect x="593" y="152" width="74" height="24" rx="4" fill="#3b82d4" opacity="0.6"/>
+  <text x="630" y="168" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="bold">T3</text>
+
+  <!-- Thread 4 on core 1 only, slice 3t→4t -->
+  <rect x="667" y="152" width="74" height="24" rx="4" fill="#3b82d4" opacity="0.45"/>
+  <text x="704" y="168" text-anchor="middle" font-size="11" fill="#ffffff" font-weight="bold">T4</text>
+
+  <!-- Cores 2-4: idle -->
+  <rect x="445" y="192" width="295" height="24" rx="4" fill="#f7f8fa" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="592" y="208" text-anchor="middle" font-size="10" fill="#b0b8c1">idle (GIL not available)</text>
+
+  <rect x="445" y="232" width="295" height="24" rx="4" fill="#f7f8fa" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="592" y="248" text-anchor="middle" font-size="10" fill="#b0b8c1">idle (GIL not available)</text>
+
+  <rect x="445" y="272" width="295" height="24" rx="4" fill="#f7f8fa" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="592" y="288" text-anchor="middle" font-size="10" fill="#b0b8c1">idle (GIL not available)</text>
+
+  <!-- Wall-clock bracket -->
+  <line x1="445" y1="330" x2="445" y2="340" stroke="#1f2328" stroke-width="1.5"/>
+  <line x1="740" y1="330" x2="740" y2="340" stroke="#1f2328" stroke-width="1.5"/>
+  <line x1="445" y1="335" x2="740" y2="335" stroke="#1f2328" stroke-width="1.5"/>
+  <text x="592" y="356" text-anchor="middle" font-size="11" fill="#1f2328">Wall time = 4t (no speedup)</text>
+
+  <!-- badge -->
+  <rect x="502" y="368" width="180" height="20" rx="4" fill="#fff3cd" stroke="#f0c040" stroke-width="1"/>
+  <text x="592" y="382" text-anchor="middle" font-size="10" fill="#1f2328">✗ GIL serialises CPU-bound threads</text>
+
+</svg>

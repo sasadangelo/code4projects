@@ -134,6 +134,12 @@ If the post belongs to a series, include a reminder in the plan output:
 
 > **Series sidebar:** When this post is published, add or update the `post_series_id: <id>` entry in `_data/post_sidebar.yml` with the post's name and slug. This is required for the series sidebar to appear on all posts in the series.
 
+## Step 7 — Hand off to Research
+
+At the end of the plan output, remind the user that the next step is to run the research skill to gather authoritative articles, statistics, and images:
+
+> **Next Step:** Run `/blog research <topic>` (or invoke the `blog-research` skill) to search, fetch, and compile research notes, 5 reference articles, and image options in `.bob/tmp/blog-research/<slug>/` before invoking `blog-writer` to draft the post.
+
 ## Rules
 
 - The outline must be concrete — actual section titles, not placeholders like "Section about X".

@@ -2,7 +2,9 @@
 layout: post
 title: "Building a Python CLI with Typer: The Modern Approach to the Command Pattern"
 slug: building-a-python-cli-with-typer-the-modern-approach-to-the-command-pattern
-post_series_id: python-cli-command-pattern
+post_series_id:
+  - python-cli-command-pattern
+  - modern-python-application
 image: /assets/img/building-a-python-cli-with-typer-the-modern-approach-to-the-command-pattern.png
 excerpt: Typer brings Python type hints to CLI development — no decorators, no boilerplate, just annotated functions. See how it compares to argparse and Click on the same Task Manager CLI.
 categories:

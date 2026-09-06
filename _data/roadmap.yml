@@ -1129,7 +1129,7 @@
     facebook: false
 - id: concurrency-in-python-threads-processes-and-the-event-loop
   title: "Concurrency in Python: Threads, Processes, and the Event Loop"
-  status: planned
+  status: published
   category: Programming
   series: modern-python-application
   scheduled: '2026-09-06'
@@ -1148,6 +1148,14 @@
   series: modern-python-application
   scheduled: '2026-09-13'
   slug: async-and-event-loop-in-python-asyncio-in-practice
+  notes: >
+    Build a real async news aggregator step by step: fetches RSS feeds from
+    ANSA, Il Post, BBC, Reuters, TechCrunch, Hacker News. Each section adds
+    one asyncio pattern (TaskGroup, timeout, Semaphore, error handling,
+    aiofiles output). Final output is a JSON/Markdown digest ready to be
+    forwarded to a WhatsApp bot. Scraping done with aiohttp + BeautifulSoup
+    on open-access sources only (no paywall). Optional final section: pass
+    summaries to a free LLM (Gemini free tier) to produce a unified digest.
   distributed:
     medium: false
     substack: false
@@ -1157,9 +1165,10 @@
     facebook: false
 - id: getting-started-with-rest-api
   title: "Getting Started with REST API"
-  status: idea
+  status: planned
   category: Programming
   series: modern-python-application
+  scheduled: 2026-09-16
   distributed:
     medium: true
     substack: false
@@ -1169,9 +1178,10 @@
     facebook: false
 - id: building-a-rest-api-with-fastapi-async-thread-pools-and-production-tips
   title: "Building a REST API with FastAPI: Async, Thread Pools, and Production Tips"
-  status: idea
+  status: planned
   category: Programming
   series: modern-python-application
+  scheduled: 2026-09-20
   distributed:
     medium: false
     substack: false
@@ -1181,9 +1191,144 @@
     facebook: false
 - id: testing-python-applications-with-pytest-patterns-for-real-code
   title: "Testing Python Applications with pytest: Patterns for Real Code"
-  status: idea
+  status: planned
   category: Programming
   series: modern-python-application
+  scheduled: 2026-09-23
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: from-requirements-to-architecture
+  title: "From Requirements to Architecture: A Decision Guide to Software Architectural Patterns"
+  status: planned
+  category: Software Architecture
+  series: software-architecture-patterns
+  scheduled: 2026-09-30
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: layered-architecture-in-python
+  title: "Layered Architecture in Practice: Package by Layer, Feature, and Component"
+  status: planned
+  category: Software Architecture
+  series: software-architecture-patterns
+  scheduled: 2026-09-27
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: hexagonal-architecture-in-python
+  title: "Hexagonal Architecture (Ports and Adapters): Isolating Domain from Infrastructure"
+  status: idea
+  category: Software Architecture
+  series: software-architecture-patterns
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: clean-architecture-in-python
+  title: "Clean Architecture: Building Testable and Framework-Independent Systems"
+  status: idea
+  category: Software Architecture
+  series: software-architecture-patterns
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: event-driven-architecture-in-python
+  title: "Event-Driven Architecture: Decoupling Systems with Events and Brokers"
+  status: idea
+  category: Software Architecture
+  series: software-architecture-patterns
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: pragmatic-hybrid-architectures-in-python
+  title: "Pragmatic Hybrid Architectures: Combining Patterns for Real-World Systems"
+  status: idea
+  category: Software Architecture
+  series: software-architecture-patterns
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: getting-started-with-artificial-intelligence
+  title: "Artificial Intelligence: A Practical Introduction for Beginners"
+  status: idea
+  category: Artificial Intelligence
+  series: generative-and-agentic-ai
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: dont-fear-intelligent-machines-work-with-them
+  title: "Don't Fear Intelligent Machines: Work with Them"
+  status: idea
+  category: Artificial Intelligence
+  series: generative-and-agentic-ai
+  distributed:
+    medium: true
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: building-ai-agents-with-langchain-and-langgraph
+  title: "What Is an AI Agent? Building Autonomous Workflows with LangChain and LangGraph"
+  status: idea
+  category: Artificial Intelligence
+  series: generative-and-agentic-ai
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: multi-agent-design-patterns
+  title: "Multi-Agent Design Patterns: Supervisor, Pipeline, and Fan-Out/Fan-In"
+  status: idea
+  category: Artificial Intelligence
+  series: generative-and-agentic-ai
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: architecting-an-agentic-platform-with-golem
+  title: "Architecting an Agentic Platform: File-Based Agents, SKILL.md, and Golem"
+  status: idea
+  category: Artificial Intelligence
+  series: generative-and-agentic-ai
   distributed:
     medium: false
     substack: false

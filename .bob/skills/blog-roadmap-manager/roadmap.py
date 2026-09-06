@@ -50,7 +50,7 @@ def cmd_show(entries):
                 f"  {truncate(e.get('id',''), 35):<35} "
                 f"{truncate(e.get('title',''), 50):<50} "
                 f"{truncate(e.get('category',''), 22):<22} "
-                f"{e.get('scheduled','') or '':<12}"
+                f"{str(e.get('scheduled','') or ''):<12}"
             )
 
 

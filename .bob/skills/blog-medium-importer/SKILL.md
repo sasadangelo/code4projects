@@ -21,7 +21,8 @@ If not already provided in the message, ask (inline, no tool):
 2. **Publication date** — format `YYYY-MM-DD`
 3. **Category** — must be one of:
    `Virtualization`, `Artificial Intelligence`, `Cloud`, `Programming`,
-   `Networking`, `Android`, `Multimedia`, `Project Management`, `Design Patterns`
+   `Networking`, `Android`, `Multimedia`, `Project Management`, `Design Patterns`,
+   `Software Architecture`
 4. **Series** — `post_series_id` if this article belongs to a series (optional)
 5. **Excerpt** — 1–2 sentence SEO summary, max 160 chars (optional — Bob can suggest one)
 6. **Slug** — leave blank to auto-derive from title

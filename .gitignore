@@ -2,3 +2,6 @@ _site/**
 .jekyll-cache/
 vendor
 .bundle
+.bob/mcp.json
+.bob/tmp
+.env
