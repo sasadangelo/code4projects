@@ -18,7 +18,7 @@
   - name: "Part 8: Building a Python CLI with Click"
     link: /building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern/
   - name: "Part 9: Building a Python CLI with Typer"
-    link: /modern-approach-to-the-command-pattern/
+    link: /building-a-python-cli-with-typer-the-modern-approach-to-the-command-pattern/
 
 - post_series_id: agentic-ai-protocols
   post_series_title: "Agentic AI: Protocols and Patterns"
@@ -185,6 +185,8 @@
     link: /building-a-python-cli-with-the-command-pattern/
   - name: "Part 2: Building a Python CLI with Click"
     link: /building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern/
+  - name: "Part 3: Building a Python CLI with Typer: The Modern Approach to the Command Pattern"
+    link: /building-a-python-cli-with-typer-the-modern-approach-to-the-command-pattern/
 - post_series_id: llm-chatbot-langchain
   post_series_title: "Build Your Own LLM Chatbot with Python & LangChain"
   post_series:
