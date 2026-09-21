@@ -1143,7 +1143,7 @@
     facebook: true
 - id: async-and-event-loop-in-python-asyncio-in-practice
   title: "Async and the Event Loop in Python: asyncio in Practice"
-  status: planned
+  status: published
   category: Programming
   series: modern-python-application
   scheduled: '2026-09-13'

@@ -13,11 +13,13 @@
     link: /database-layer-with-sqlalchemy-in-a-layered-python-architecture/
   - name: "Part 6: Concurrency in Python: Threads, Processes, and the Event Loop"
     link: /concurrency-in-python-threads-processes-and-the-event-loop/
-  - name: "Part 7: Building a Python CLI with the Command Pattern"
+  - name: "Part 7: Async and the Event Loop in Python: asyncio in Practice"
+    link: /async-and-event-loop-in-python-asyncio-in-practice/
+  - name: "Part 8: Building a Python CLI with the Command Pattern"
     link: /building-a-python-cli-with-the-command-pattern/
-  - name: "Part 8: Building a Python CLI with Click"
+  - name: "Part 9: Building a Python CLI with Click"
     link: /building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern/
-  - name: "Part 9: Building a Python CLI with Typer"
+  - name: "Part 10: Building a Python CLI with Typer"
     link: /building-a-python-cli-with-typer-the-modern-approach-to-the-command-pattern/
 
 - post_series_id: agentic-ai-protocols

@@ -19,6 +19,8 @@ _Posted on **{{ page.date | date_to_string }}**_
 
 ## Introduction
 
+The [previous article]({{ site.baseurl }}/async-and-event-loop-in-python-asyncio-in-practice/) put the event loop into practice with a real async news aggregator. This article is part of the [Modern Python Application]({{ site.baseurl }}/how-to-set-up-your-next-python-project/) series.
+
 Python is one of the best languages to build automation tools and developer utilities. But as a CLI grows, it often becomes a messy mix of `if ... elif ...` blocks handling different commands, parameters, and logic.
 
 That's where the Command Pattern shines. The Command Pattern encapsulates a request (a command) as an object — allowing us to structure our CLI in a modular, testable, and extensible way. Each command becomes a small, focused class that knows how to execute a specific action.
@@ -293,6 +295,8 @@ In this article we covered:
 - Why this structure makes CLIs easier to test, read, and extend
 
 The full source code is available on [sasadangelo/task-cli on GitHub](https://github.com/sasadangelo/task-cli) (v0.0.1). For a deeper dive into the Command Pattern itself, see the [Refactoring.Guru reference](https://refactoring.guru/design-patterns/command).
+
+The [next article]({{ site.baseurl }}/building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern/) rebuilds the same CLI with Click — shorter code, automatic type validation, and no shared `execute()` interface.
 
 ---
 

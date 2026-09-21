@@ -372,7 +372,7 @@ In this article we covered:
 - `asyncio.to_thread()` as the bridge between synchronous libraries and async applications.
 - Gunicorn + Uvicorn workers for scaling the event loop across all CPU cores in production.
 
-This is the final article of the [Modern Python Application]({{ site.baseurl }}/how-to-set-up-your-next-python-project/) series. You now have the full toolkit to build Python applications that are well-structured, [configurable]({{ site.baseurl }}/managing-application-configuration-in-python-with-pydantic-settings/), observable, scheduled, persistent, and concurrent.
+The [next article]({{ site.baseurl }}/async-and-event-loop-in-python-asyncio-in-practice/) puts the event loop theory into practice — building a real async news aggregator with `aiohttp`, `TaskGroup`, `Semaphore`, and `asyncio.timeout` in a single working module.
 
 ---
 

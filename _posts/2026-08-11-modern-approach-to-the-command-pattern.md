@@ -405,7 +405,7 @@ In this article we covered:
 - A side-by-side comparison of `argparse`, Click, and Typer on the same command, with a concrete table of differences
 - How `golem-cli` applies this exact pattern in a real project
 
-This is the final article in the Python CLI series. The three posts together form a complete toolkit: argparse for zero-dependency scripts, Click for mature ecosystems, Typer for new projects where type safety and readability matter. For a deeper dive into the Command Pattern used throughout the series, the [Refactoring.Guru reference](https://refactoring.guru/design-patterns/command) is still the best starting point.
+This is the final article in the [Modern Python Application]({{ site.baseurl }}/how-to-set-up-your-next-python-project/) series. The three CLI posts together form a complete toolkit: argparse for zero-dependency scripts, Click for mature ecosystems, Typer for new projects where type safety and readability matter. For a deeper dive into the Command Pattern used throughout, the [Refactoring.Guru reference](https://refactoring.guru/design-patterns/command) is still the best starting point.
 
 ---
 

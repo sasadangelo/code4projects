@@ -279,7 +279,7 @@ In this article we covered:
 
 Click is a pragmatic choice: less boilerplate, stronger typing, and a cleaner architecture — an architecture that grows with the application. If using classes feels like overengineering for your use case, nothing prevents you from implementing commands as standalone functions instead. The pattern is flexible by design.
 
-This is the second and final article in the [Python CLI with the Command Pattern]({{ site.baseurl }}/building-a-python-cli-with-the-command-pattern/) series. If you missed Part 1, start there to understand the argparse-based foundation this article builds upon.
+The [next article]({{ site.baseurl }}/building-a-python-cli-with-typer-the-modern-approach-to-the-command-pattern/) completes the trilogy by rebuilding the same CLI with Typer — where type annotations replace decorators and help text is generated from docstrings.
 
 ---
 
