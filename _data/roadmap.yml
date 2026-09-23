@@ -1164,11 +1164,12 @@
     instagram: false
     facebook: false
 - id: getting-started-with-rest-api
-  title: "Getting Started with REST API"
-  status: planned
+  title: "Designing REST APIs in Practice: A Kubernetes Case Study"
+  status: published
   category: Programming
   series: modern-python-application
   scheduled: 2026-09-16
+  slug: designing-rest-apis-in-practice-a-kubernetes-case-study
   distributed:
     medium: true
     substack: false

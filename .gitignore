@@ -5,3 +5,4 @@ vendor
 .bob/mcp.json
 .bob/tmp
 .env
+**/__pycache__/*

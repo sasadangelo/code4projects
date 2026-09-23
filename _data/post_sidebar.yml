@@ -21,6 +21,8 @@
     link: /building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern/
   - name: "Part 10: Building a Python CLI with Typer"
     link: /building-a-python-cli-with-typer-the-modern-approach-to-the-command-pattern/
+  - name: "Part 11: Designing REST APIs in Practice: A Kubernetes Case Study"
+    link: /designing-rest-apis-in-practice-a-kubernetes-case-study/
 
 - post_series_id: agentic-ai-protocols
   post_series_title: "Agentic AI: Protocols and Patterns"
