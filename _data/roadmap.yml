@@ -1177,12 +1177,33 @@
     linkedin: false
     instagram: false
     facebook: false
-- id: building-a-rest-api-with-fastapi-async-thread-pools-and-production-tips
-  title: "Building a REST API with FastAPI: Async, Thread Pools, and Production Tips"
+- id: building-a-rest-api-with-fastapi-architecture-and-clean-design
+  title: "Building a REST API with FastAPI: Architecture, Pydantic, and Clean Design"
   status: planned
   category: Programming
   series: modern-python-application
   scheduled: 2026-09-20
+  notes: >
+    Step 1 of FastAPI guide. Practical project: Smart URL Shortener & Link Inspector.
+    Covers layered architecture (Routers, Services, Schemas, Repositories), Pydantic v2
+    validation, lifespan events, and global exception handlers for standardized errors.
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: fastapi-in-production-concurrency-thread-pools-and-background-tasks
+  title: "FastAPI in Production: Concurrency, Thread Pools, and Background Tasks"
+  status: planned
+  category: Programming
+  series: modern-python-application
+  scheduled: 2026-09-23
+  notes: >
+    Step 2 of FastAPI guide. Links back to threads/processes and asyncio articles.
+    Focuses on practical FastAPI concurrency: async def vs def, AnyIO thread pool offload,
+    in-process BackgroundTasks vs Celery/distributed workers, and production deployment tips.
   distributed:
     medium: false
     substack: false
@@ -1195,7 +1216,7 @@
   status: planned
   category: Programming
   series: modern-python-application
-  scheduled: 2026-09-23
+  scheduled: 2026-09-26
   distributed:
     medium: false
     substack: false
