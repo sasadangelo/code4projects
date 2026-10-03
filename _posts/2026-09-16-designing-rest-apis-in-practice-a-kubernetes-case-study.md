@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "Designing REST APIs in Practice: A Kubernetes Case Study"
-post_series_id: modern-python-application
+post_series_id:
+  - modern-python-application
+  - building-rest-apis
 date: 2026-09-16
 author: sasadangelo
 slug: designing-rest-apis-in-practice-a-kubernetes-case-study
@@ -119,11 +121,20 @@ When representing relationships between entities in the endpoint, it is recommen
 
 The operation specifies the action to be performed on the resource. This is determined by the HTTP method used in the request. The most common HTTP methods include:
 
-- **GET:** Retrieve a resource or a collection of resources. It is **idempotent** and **does not alter** the system.
-- **POST:** Create a new resource. **Non-idempotent** and **alters** the system.
-- **PUT:** replaces the entire resource representation. **Idempotent** and **alters** the system.
-- **PATCH:** Apply partial updates. **It may be idempotent**, depending on implementation.
-- **DELETE:** Remove a resource. **Non-idempotent** and **alters** the system.
+| Method   | Purpose                                      | Idempotent by spec | Idempotent by design |
+|----------|----------------------------------------------|:------------------:|:--------------------:|
+| `GET`    | Retrieve a resource or a collection          | ✅ Yes             | —                    |
+| `POST`   | Create a new resource                        | ❌ No              | ⚠️ Possible          |
+| `PUT`    | Replace the entire resource representation   | ✅ Yes             | —                    |
+| `PATCH`  | Apply partial updates                        | ❌ No              | ⚠️ Possible          |
+| `DELETE` | Remove a resource                            | ❌ No              | ⚠️ Possible          |
+
+**Idempotent by spec** reflects what the HTTP specification (RFC 9110) mandates for the method.
+**Idempotent by design** marks methods that are not idempotent by spec but can be made so through deliberate implementation choices:
+
+- **POST** — A payment system must not charge a customer twice on retried requests. This is solved with an `Idempotency-Key` header: the server stores the result of the first call and returns it unchanged on subsequent calls with the same key.
+- **PATCH** — A partial update that sets an absolute value (e.g., `{"status": "active"}`) is idempotent; one that applies a relative delta (e.g., `{"counter": "+1"}`) is not.
+- **DELETE** — A soft delete (setting a `deleted_at` timestamp or a `status=deleted` flag) makes the operation idempotent: a second call finds the resource already marked as deleted and returns the same successful response.
 
 Some actions, like **restarting a Pod**, are not CRUD operations but can be modeled using **POST**, as they trigger an action on a resource without modifying it directly.
 

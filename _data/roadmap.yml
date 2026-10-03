@@ -1178,15 +1178,18 @@
     instagram: false
     facebook: false
 - id: building-a-rest-api-with-fastapi-architecture-and-clean-design
-  title: "Building a REST API with FastAPI: Architecture, Pydantic, and Clean Design"
-  status: planned
+  title: "From Domain Design to REST API: Building FastURL with FastAPI"
+  status: published
+  slug: from-domain-design-to-rest-api-building-fasturl-with-fastapi
   category: Programming
   series: modern-python-application
   scheduled: 2026-09-20
   notes: >
-    Step 1 of FastAPI guide. Practical project: Smart URL Shortener & Link Inspector.
-    Covers layered architecture (Routers, Services, Schemas, Repositories), Pydantic v2
-    validation, lifespan events, and global exception handlers for standardized errors.
+    Article 1 of the FastURL series. Shows how requirements → domain model → API design
+    are the same thing at different levels of abstraction. Covers: job stories as design
+    input, Link entity and Value Objects ShortCode/TargetUrl, endpoint table, error envelope
+    {success, error, details}, Pydantic as VO implementation (field_validator,
+    model_validator, HttpUrl), mapping domain exceptions to HTTP status codes.
   distributed:
     medium: false
     substack: false
@@ -1195,15 +1198,34 @@
     instagram: false
     facebook: false
 - id: fastapi-in-production-concurrency-thread-pools-and-background-tasks
-  title: "FastAPI in Production: Concurrency, Thread Pools, and Background Tasks"
+  title: "Layered Architecture with FastAPI: Routers, Services, and Repositories"
   status: planned
   category: Programming
   series: modern-python-application
   scheduled: 2026-09-23
   notes: >
-    Step 2 of FastAPI guide. Links back to threads/processes and asyncio articles.
-    Focuses on practical FastAPI concurrency: async def vs def, AnyIO thread pool offload,
-    in-process BackgroundTasks vs Celery/distributed workers, and production deployment tips.
+    Article 2 of the FastURL series. Focus on code structure: layered architecture,
+    dependency injection with Depends, separation of concerns. Covers: lifespan and
+    middleware stack in main.py, thin routers by design, services with isolated business
+    logic, async repository with SQLAlchemy, Pydantic Settings fail-fast with config.yaml.
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: fastapi-async-background-tasks-and-error-handling
+  title: "Async, Background Tasks, and Error Handling in FastAPI"
+  status: planned
+  category: Programming
+  series: modern-python-application
+  scheduled: 2026-09-27
+  notes: >
+    Article 3 of the FastURL series. FastAPI specifics that go beyond the official docs.
+    Covers: async I/O with httpx.AsyncClient, BackgroundTasks fire-and-forget vs external
+    broker, shared client in lifespan, three global exception handlers, testing async
+    endpoints with pytest and TestClient.
   distributed:
     medium: false
     substack: false
