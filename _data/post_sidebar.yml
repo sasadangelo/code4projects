@@ -33,10 +33,6 @@
     link: /designing-rest-apis-in-practice-a-kubernetes-case-study/
   - name: "Part 2: From Domain Design to REST API: Building FastURL with FastAPI"
     link: /from-domain-design-to-rest-api-building-fasturl-with-fastapi/
-  - name: "Part 3: Layered Architecture with FastAPI: Routers, Services, and Repositories"
-    link: /layered-architecture-with-fastapi-routers-services-and-repositories/
-  - name: "Part 4: Async, Background Tasks, and Error Handling in FastAPI"
-    link: /fastapi-async-background-tasks-and-error-handling/
 
 - post_series_id: agentic-ai-protocols
   post_series_title: "Agentic AI: Protocols and Patterns"
