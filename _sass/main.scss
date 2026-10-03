@@ -1,4 +1,4 @@
-@import "friendly.css";
+@import "friendly";
 
 /* Mobile devices              @media screen and (max-width: 479px)                         */
 /* Tablets or iPad             @media screen and (min-width: 480px) and (max-width: 767px)  */
@@ -1292,15 +1292,16 @@ footer {
 }
 
 .footer-widget a {
-  color: rgba(255,255,255,0.82);
+  color: #ffffff;
   text-decoration: none !important;
   font-size: 14px;
   line-height: 1.5;
-  transition: color 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .footer-widget a:hover {
-  color: #ffffff;
+  text-decoration: underline !important;
+  opacity: 0.85;
 }
 
 .footer-widget ul {
@@ -1314,7 +1315,7 @@ footer {
 }
 
 #site-info {
-  color: #f2f2f2;
+  color: #ffffff;
   margin: 25px 0px 0px 0px;
   text-align: center;
 }
@@ -2151,7 +2152,7 @@ footer {
   font-size: 15px;
   font-weight: 700;
   color: #ffffff;
-  background-color: #f47e3c;
+  background-color: #c85312;
   border: none;
   border-radius: 6px;
   cursor: pointer;

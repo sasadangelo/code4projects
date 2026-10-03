@@ -17,6 +17,9 @@ twitter:
 google_analytics: G-62DF79P0NY
 google_site_verification: DOd2vjP70sDXbIq93jN9j4P-jI5jjd9WKCXnWt7VoFs
 
+sass:
+  style: compressed
+
 # Typography configuration
 fonts:
     size: 30px

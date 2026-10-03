@@ -27,6 +27,8 @@ feature-area:
       other games. Finally, we will use the Framework as base code to write Droids, a Tertris clone.
       <a href="android-game-programming/">Checkout the article series here</a>.
     feature-image: wp-content/uploads/2020/06/android-game-programming-mini.webp
+    feature-image-width: 300
+    feature-image-height: 265
     feature-link: android-game-programming/
   - feature-title: Getting Started with Docker
     feature-text: >
@@ -35,6 +37,8 @@ feature-area:
       full multi-container setup with Docker Compose and security best practices.
       <a href="getting-started-with-docker-2025/">Check out the article series here</a>.
     feature-image: assets/img/docker-getting-started-mini.webp
+    feature-image-width: 260
+    feature-image-height: 260
     feature-link: getting-started-with-docker-2025/
   - feature-title: Getting Started with Kubernetes
     feature-text: >
@@ -43,6 +47,8 @@ feature-area:
       SecretMaps, etc. I will show you how to setup a Kubernetes cluster using Virtual Box and Vagrant and how to deploy an "Hello K8s!" dockerized
       application in it. <a href="getting-started-with-kubernetes/">Check out the article series here</a>.
     feature-image: wp-content/uploads/2019/06/Kubernetes.webp
+    feature-image-width: 206
+    feature-image-height: 200
     feature-link: getting-started-with-kubernetes/
   - feature-title: How to build a Raspberry Media Center
     feature-text: >
@@ -51,5 +57,7 @@ feature-area:
       to configure it properly to watch Movie and TV Series, to play Retrogames, to use it as a Torrent machine, and to share files in
       your network like a NAS. <a href="raspberry-media-center/">Check out the article series here</a>.
     feature-image: wp-content/uploads/2020/07/Hector_TV_Box-min-e1596192046917.webp
+    feature-image-width: 267
+    feature-image-height: 200
     feature-link: raspberry-media-center/
   

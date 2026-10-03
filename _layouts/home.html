@@ -49,7 +49,7 @@ layout: default
           <div class="{% cycle 'feature-content-box-white', 'feature-content-box-grey' %}">
             <div class="feature-content-image">
               <a href="{{ item.feature-link }}">
-                <img src="{{ item.feature-image }}" alt="{{ item.feature-title }}" loading="lazy">
+                <img src="{{ item.feature-image }}" alt="{{ item.feature-title }}" width="{{ item.feature-image-width }}" height="{{ item.feature-image-height }}" loading="lazy">
               </a>
             </div>
             <div class="feature-content-text">
