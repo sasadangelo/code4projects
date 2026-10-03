@@ -8,12 +8,18 @@ layout: default
       <div class="newsletter-post">
         <div class="newsletter-post-box">
           <div class="newsletter-post-image">
-            <img src="{{ site.baseurl }}/{{ site.data.newsletter.post.newsletter-image }}" alt="{{ site.data.newsletter.post.newsletter-title }}">
+            <img src="{{ site.baseurl }}/{{ site.data.newsletter.post.newsletter-image }}" alt="{{ site.data.newsletter.post.newsletter-title }}" width="250" height="250" loading="lazy">
           </div>
           <div class="newsletter-post-form">
-            {{ site.data.newsletter.post.newsletter-code }}
+            <h3 class="newsletter-card-title">{{ site.data.newsletter.post.newsletter-title }}</h3>
+            <p class="newsletter-card-desc">Enjoyed this article? Subscribe to get new programming tutorials and free eBooks directly in your inbox.</p>
+            <form action="https://code4projects.substack.com/subscribe" method="get" target="_blank" class="newsletter-card-form" rel="noopener">
+              <input type="email" name="email" placeholder="Type your email..." aria-label="Email address" required class="newsletter-card-input">
+              <button type="submit" class="newsletter-card-btn">Subscribe</button>
+            </form>
+            <p class="newsletter-card-note">No spam. Unsubscribe at any time.</p>
           </div>
-        </div>  
+        </div>
       </div>
     </div>
     <div id="post-sidebar">

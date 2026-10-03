@@ -1,12 +1,17 @@
 <div class="newsletter-sidebar">
   <div class="newsletter-sidebar-box">
     <div class="newsletter-sidebar-image">
-      <img src="{{ site.baseurl }}/{{ site.data.newsletter.sidebar.newsletter-image }}" alt="{{ site.data.newsletter.sidebar.newsletter-title }}">
+      <img src="{{ site.baseurl }}/{{ site.data.newsletter.sidebar.newsletter-image }}" alt="{{ site.data.newsletter.sidebar.newsletter-title }}" width="200" height="200" loading="lazy">
     </div>
     <div class="newsletter-sidebar-form">
-      {{ site.data.newsletter.sidebar.newsletter-code }}
+      <h3 class="newsletter-card-title-sidebar">{{ site.data.newsletter.sidebar.newsletter-title }}</h3>
+      <p class="newsletter-card-desc-sidebar">Get free eBooks and tech tutorials directly in your inbox.</p>
+      <form action="https://code4projects.substack.com/subscribe" method="get" target="_blank" class="newsletter-card-form-sidebar" rel="noopener">
+        <input type="email" name="email" placeholder="Type your email..." aria-label="Email address" required class="newsletter-card-input-sidebar">
+        <button type="submit" class="newsletter-card-btn">Subscribe</button>
+      </form>
     </div>
-  </div>  
+  </div>
 </div>
 {% if page.post_series_id != null %}
   {% for post_series in site.data.post_sidebar %}
