@@ -25,7 +25,7 @@ feature-area:
       Then I will explain the basic concepts of Game Programming. From this point forward, we will add to our application more features
       like: file, resources, input, music, and graphics management. The result will be a Game Framework whose code you can reuse for
       other games. Finally, we will use the Framework as base code to write Droids, a Tertris clone.
-      <a href="android-game-programming/">Checkout the article series here</a>.
+      <a href="android-game-programming/" aria-label="Check out the Android Game Programming article series">Check out the Android Game Programming series here</a>.
     feature-image: wp-content/uploads/2020/06/android-game-programming-mini.webp
     feature-image-width: 300
     feature-image-height: 265
@@ -35,7 +35,7 @@ feature-area:
       This is the <b>Getting Started with Docker</b> article series. Learn what Docker is, how to use it with Podman, and how to build,
       network, persist, orchestrate, and secure containerized applications. The series covers everything from your first container to a
       full multi-container setup with Docker Compose and security best practices.
-      <a href="getting-started-with-docker-2025/">Check out the article series here</a>.
+      <a href="getting-started-with-docker-2025/" aria-label="Check out the Getting Started with Docker article series">Check out the Docker series here</a>.
     feature-image: assets/img/docker-getting-started-mini.webp
     feature-image-width: 260
     feature-image-height: 260
@@ -45,7 +45,7 @@ feature-area:
       This is the <b>Getting started with Kubernetes</b> article series. In it I would like to give you a brief introduction to Kubernetes.
       I will explain What Kubernetes is, its architecture, the concepts of Pod, Replication Controller, ReplicaSets, Deployment, ConfigMaps,
       SecretMaps, etc. I will show you how to setup a Kubernetes cluster using Virtual Box and Vagrant and how to deploy an "Hello K8s!" dockerized
-      application in it. <a href="getting-started-with-kubernetes/">Check out the article series here</a>.
+      application in it. <a href="getting-started-with-kubernetes/" aria-label="Check out the Getting started with Kubernetes article series">Check out the Kubernetes series here</a>.
     feature-image: wp-content/uploads/2019/06/Kubernetes.webp
     feature-image-width: 206
     feature-image-height: 200
@@ -55,7 +55,7 @@ feature-area:
       This is the <b>How to build a Raspberry Media Center</b> article series. Here I would like to show you how to build a Raspberry
       Media Center with an HDD and enclosure. The series will show you the required hardaware to buy to build the Media Center and how
       to configure it properly to watch Movie and TV Series, to play Retrogames, to use it as a Torrent machine, and to share files in
-      your network like a NAS. <a href="raspberry-media-center/">Check out the article series here</a>.
+      your network like a NAS. <a href="raspberry-media-center/" aria-label="Check out the How to build a Raspberry Media Center article series">Check out the Raspberry Media Center series here</a>.
     feature-image: wp-content/uploads/2020/07/Hector_TV_Box-min-e1596192046917.webp
     feature-image-width: 267
     feature-image-height: 200
