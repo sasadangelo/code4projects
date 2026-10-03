@@ -216,7 +216,15 @@ header {
   margin-right: 4px;
   position: relative;
   border-radius: 3px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.social-media-icon svg {
+  width: 18px;
+  height: 18px;
 }
 
 .social-media-icon-facebook {
@@ -1164,6 +1172,14 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.feature-content-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .feature-content-text a {
@@ -1835,11 +1851,11 @@ footer {
 
 .blog-entry-meta {
   font-size: 13px;
-  color: #888;
+  color: #555555;
 }
 
 .blog-entry-excerpt p {
-  color: #555;
+  color: #333333;
   margin: 0px 0px 13px 0px;
   font-size: 0.95em;
   line-height: 1.7;
@@ -2069,6 +2085,13 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+}
+
+.newsletter-home-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .newsletter-home-form {
@@ -2083,7 +2106,7 @@ footer {
 }
 
 .newsletter-home-text {
-  color: #555;
+  color: #333333;
   font-size: 1em;
   text-align: left;
   line-height: 1.75;
