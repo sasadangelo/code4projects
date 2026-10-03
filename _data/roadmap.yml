@@ -1205,9 +1205,12 @@
   scheduled: 2026-09-23
   notes: >
     Article 2 of the FastURL series. Focus on code structure: layered architecture,
-    dependency injection with Depends, separation of concerns. Covers: lifespan and
-    middleware stack in main.py, thin routers by design, services with isolated business
-    logic, async repository with SQLAlchemy, Pydantic Settings fail-fast with config.yaml.
+    dependency injection with Depends, separation of concerns. Sections: (1) layer map
+    and folder structure, (2) Domain→ORM mapping — how the Link aggregate becomes a flat
+    SQLAlchemy model with embedded VOs (includes ER diagram and schema), (3) Repository
+    layer — async SQLAlchemy sessions, (4) Service layer — business logic isolated from
+    HTTP, (5) Router layer — thin by design, BackgroundTasks, status codes,
+    (6) Dependency injection — how all layers wire together via FastAPI Depends.
   distributed:
     medium: false
     substack: false

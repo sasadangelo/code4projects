@@ -28,15 +28,17 @@ Also read the `distributed:` flags from `_data/roadmap.yml` to know which channe
 
 ### Twitter / X
 
-**Format:** Single promotional tweet. Max 280 characters.
+**Format:** Single promotional tweet. Hard limit: **280 characters** (including URL and hashtags). Always count characters before outputting — if over 280, cut until under.
 
 Rules:
 
 - Open with the core problem or a surprising insight — no "I wrote an article about…".
-- 2–3 short punchy lines covering the main value of the article.
-- End with the article URL and `Follow @code4projects for more.`
+- 2–3 short punchy lines covering the main value of the article, using `→` for bullet points.
+- URL on its own line (Twitter counts URLs as 23 characters regardless of length — use a shortened URL if provided by the user).
 - Max 2 relevant hashtags at the end.
 - No numbering (it's a single tweet, not a thread).
+- Do NOT add "Follow @code4projects for more." — omit it.
+- **Validation step:** count the total characters of the generated tweet. If > 280, shorten the body lines until it fits. Show the character count next to the tweet.
 
 ---
 
