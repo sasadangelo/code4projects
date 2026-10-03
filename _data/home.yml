@@ -5,28 +5,28 @@ hero-area:
     everything I learn on software programming. For more details, read more <a href="about-me/">about me</a>.
   hero-background-image: /assets/img/code4projects-image-hero.webp
 icon-area:
-  - icon-image: assets/img/starthere-icon.png
+  - icon-image: assets/img/starthere-icon.webp
     icon-title: New User?
     icon-subtitle: Start Here
     icon-link: start-here/
-  - icon-image: assets/img/projects-icon.png
+  - icon-image: assets/img/projects-icon.webp
     icon-title: Projects
     icon-subtitle: Check out my side Projects
     icon-link: projects-2/
-  - icon-image: assets/img/resources-icon.png
+  - icon-image: assets/img/resources-icon.webp
     icon-title: Resources
     icon-subtitle: Check out my favorite Resources
     icon-link: resources-for-developers/
 feature-area:
   - feature-title: Android Game Programming
     feature-text: >
-      This is the <b>Android Game Programming</b> article series. Here I will show you, step by step, how to write your first Android 
-      game: Droids a Tetris clone. The series starts showing how to write your first Android application using Java and Android Studio. 
-      Then I will explain the basic concepts of Game Programming. From this point forward, we will add to our application more features 
-      like: file, resources, input, music, and graphics management. The result will be a Game Framework whose code you can reuse for 
-      other games. Finally, we will use the Framework as base code to write Droids, a Tertris clone. 
+      This is the <b>Android Game Programming</b> article series. Here I will show you, step by step, how to write your first Android
+      game: Droids a Tetris clone. The series starts showing how to write your first Android application using Java and Android Studio.
+      Then I will explain the basic concepts of Game Programming. From this point forward, we will add to our application more features
+      like: file, resources, input, music, and graphics management. The result will be a Game Framework whose code you can reuse for
+      other games. Finally, we will use the Framework as base code to write Droids, a Tertris clone.
       <a href="android-game-programming/">Checkout the article series here</a>.
-    feature-image: wp-content/uploads/2020/06/android-game-programming-mini.png
+    feature-image: wp-content/uploads/2020/06/android-game-programming-mini.webp
     feature-link: android-game-programming/
   - feature-title: Getting Started with Docker
     feature-text: >
@@ -34,7 +34,7 @@ feature-area:
       network, persist, orchestrate, and secure containerized applications. The series covers everything from your first container to a
       full multi-container setup with Docker Compose and security best practices.
       <a href="getting-started-with-docker-2025/">Check out the article series here</a>.
-    feature-image: assets/img/docker-getting-started-mini.png
+    feature-image: assets/img/docker-getting-started-mini.webp
     feature-link: getting-started-with-docker-2025/
   - feature-title: Getting Started with Kubernetes
     feature-text: >
@@ -42,14 +42,14 @@ feature-area:
       I will explain What Kubernetes is, its architecture, the concepts of Pod, Replication Controller, ReplicaSets, Deployment, ConfigMaps,
       SecretMaps, etc. I will show you how to setup a Kubernetes cluster using Virtual Box and Vagrant and how to deploy an "Hello K8s!" dockerized
       application in it. <a href="getting-started-with-kubernetes/">Check out the article series here</a>.
-    feature-image: wp-content/uploads/2019/06/Kubernetes.png
+    feature-image: wp-content/uploads/2019/06/Kubernetes.webp
     feature-link: getting-started-with-kubernetes/
   - feature-title: How to build a Raspberry Media Center
     feature-text: >
-      This is the <b>How to build a Raspberry Media Center</b> article series. Here I would like to show you how to build a Raspberry 
-      Media Center with an HDD and enclosure. The series will show you the required hardaware to buy to build the Media Center and how 
-      to configure it properly to watch Movie and TV Series, to play Retrogames, to use it as a Torrent machine, and to share files in 
+      This is the <b>How to build a Raspberry Media Center</b> article series. Here I would like to show you how to build a Raspberry
+      Media Center with an HDD and enclosure. The series will show you the required hardaware to buy to build the Media Center and how
+      to configure it properly to watch Movie and TV Series, to play Retrogames, to use it as a Torrent machine, and to share files in
       your network like a NAS. <a href="raspberry-media-center/">Check out the article series here</a>.
-    feature-image: wp-content/uploads/2020/07/Hector_TV_Box-min-e1596192046917.jpg
+    feature-image: wp-content/uploads/2020/07/Hector_TV_Box-min-e1596192046917.webp
     feature-link: raspberry-media-center/
   

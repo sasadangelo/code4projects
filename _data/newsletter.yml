@@ -1,15 +1,15 @@
 home:
   newsletter-title: Join our Newsletter and Download a Free eBook
-  newsletter-image: wp-content/uploads/2021/02/3D-DockerCover-large.png
+  newsletter-image: wp-content/uploads/2021/02/3D-DockerCover-large.webp
   newsletter-code: >
-    <iframe src="https://code4projects.substack.com/embed" width="480" height="320" style="border: 1px solid #EEE; background: white" frameborder="0" scrolling="no"></iframe>
+    <iframe title="Subscribe to Code4Projects Newsletter on Substack" loading="lazy" src="https://code4projects.substack.com/embed" width="480" height="320" style="border: 1px solid #EEE; background: white" frameborder="0" scrolling="no"></iframe>
 sidebar:
   newsletter-title: Download Free eBook
-  newsletter-image: wp-content/uploads/2021/02/3D-DockerCover-mini.png
+  newsletter-image: wp-content/uploads/2021/02/3D-DockerCover-mini.webp
   newsletter-code: >
-    <iframe src="https://code4projects.substack.com/embed" width="100%" height="320" style="border: 1px solid #EEE; background: white" frameborder="0" scrolling="no"></iframe>
+    <iframe title="Subscribe to Code4Projects Newsletter on Substack" loading="lazy" src="https://code4projects.substack.com/embed" width="100%" height="320" style="border: 1px solid #EEE; background: white" frameborder="0" scrolling="no"></iframe>
 post:
   newsletter-title: Download Free eBook
-  newsletter-image: wp-content/uploads/2021/02/3D-DockerCover-medium.png
+  newsletter-image: wp-content/uploads/2021/02/3D-DockerCover-medium.webp
   newsletter-code: >
-    <iframe src="https://code4projects.substack.com/embed" width="480" height="320" style="border: 1px solid #EEE; background: white" frameborder="0" scrolling="no"></iframe>
+    <iframe title="Subscribe to Code4Projects Newsletter on Substack" loading="lazy" src="https://code4projects.substack.com/embed" width="480" height="320" style="border: 1px solid #EEE; background: white" frameborder="0" scrolling="no"></iframe>

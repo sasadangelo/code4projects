@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div id="home-main">
+<main id="home-main">
   <div id="home-container">
     <div id="home-content">
       <div class="hero-background">
@@ -31,7 +31,7 @@ layout: default
       <div class="newsletter-home">
         <div class="newsletter-home-box">
           <div class="newsletter-home-image">
-            <img src="{{ site.baseurl }}/{{ site.data.newsletter.home.newsletter-image }}" alt="{{ site.data.newsletter.home.newsletter-title }}">
+            <img src="{{ site.baseurl }}/{{ site.data.newsletter.home.newsletter-image }}" alt="{{ site.data.newsletter.home.newsletter-title }}" width="300" height="300" loading="lazy">
           </div>
           <div class="newsletter-home-form">
             {{ site.data.newsletter.home.newsletter-code }}
@@ -43,7 +43,7 @@ layout: default
           <div class="{% cycle 'feature-content-box-white', 'feature-content-box-grey' %}">
             <div class="feature-content-image">
               <a href="{{ item.feature-link }}">
-                <img src="{{ item.feature-image }}" alt="{{ item.feature-title }}">
+                <img src="{{ item.feature-image }}" alt="{{ item.feature-title }}" width="300" height="260" loading="lazy">
               </a>
             </div>
             <div class="feature-content-text">
@@ -57,4 +57,4 @@ layout: default
       {% endfor %}
     </div>
   </div>
-</div>
+</main>

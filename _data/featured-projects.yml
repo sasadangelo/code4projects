@@ -1,12 +1,12 @@
 - title: Getting Started with Docker
-  image: assets/img/docker-getting-started-mini.png
+  image: assets/img/docker-getting-started-mini.webp
   link: getting-started-with-docker-2025/
   description: >
     This is the <b>Getting Started with Docker</b> article series. Learn what Docker is, how to use it with Podman, and how to build,
     network, persist, orchestrate, and secure containerized applications — step by step, from your first container to a full
     multi-container setup with Docker Compose and security best practices.
 - title: Getting started with Kubernetes
-  image: wp-content/uploads/2019/06/Kubernetes.png
+  image: wp-content/uploads/2019/06/Kubernetes.webp
   link: getting-started-with-kubernetes/
   description: >
     This is the <b>Getting started with Kubernetes</b> article series. In it I would like to give you a brief introduction to Kubernetes.
@@ -14,7 +14,7 @@
     SecretMaps, etc. I will show you how to setup a Kubernetes cluster using Virtual Box and Vagrant and how to deploy an "Hello K8s!" dockerized
     application in it.
 - title: How to build a Raspberry Media Center
-  image: wp-content/uploads/2020/07/Hector_TV_Box-min-e1596192046917.jpg
+  image: wp-content/uploads/2020/07/Hector_TV_Box-min-e1596192046917.webp
   link: raspberry-media-center/
   description: >
     This is the <b>How to build a Raspberry Media Center</b> article series. Here I would like to show you how to build a Raspberry 

@@ -924,12 +924,22 @@ header {
 }
 
 .hero-messagebox p {
-  color: rgba(255,255,255,0.92);
+  color: #ffffff;
   text-align: left;
   line-height: 1.7;
   font-size: 1em;
   margin: 0;
   -webkit-font-smoothing: antialiased;
+}
+
+.hero-messagebox p a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.hero-messagebox p a:hover {
+  color: #f47e3c;
 }
 
 /*
