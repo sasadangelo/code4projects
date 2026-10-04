@@ -53,6 +53,8 @@ Check every item below. For each violation, note: severity, approximate line num
 - [ ] Bridge sentence to next article in Conclusion (if series)
 - [ ] Fixed CTA block at the very end — exact wording, appears exactly once:
       `If you enjoyed this article, don't forget to **give it a clap 👏**...`
+      followed by:
+      `**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.`
 - [ ] "How This Series Is Structured" section present **only** in Part 1 of a series
 
 ### HEADING HIERARCHY

@@ -271,3 +271,5 @@ The [next and final article]({{ site.baseurl }}/docker-image-best-practices/) of
 ---
 
 If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
+
+**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

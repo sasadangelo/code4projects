@@ -13,11 +13,10 @@ layout: default
           <div class="newsletter-post-form">
             <h3 class="newsletter-card-title">{{ site.data.newsletter.post.newsletter-title }}</h3>
             <p class="newsletter-card-desc">Enjoyed this article? Subscribe to get new programming tutorials and free eBooks directly in your inbox.</p>
-            <form action="https://code4projects.substack.com/subscribe" method="get" target="_blank" class="newsletter-card-form" rel="noopener">
-              <input type="email" name="email" placeholder="Type your email..." aria-label="Email address" required class="newsletter-card-input">
-              <button type="submit" class="newsletter-card-btn">Subscribe</button>
-            </form>
-            <p class="newsletter-card-note">No spam. Unsubscribe at any time.</p>
+            <div class="newsletter-card-form">
+              <button type="button" class="newsletter-card-btn" data-open-newsletter>Download eBook</button>
+            </div>
+            <p class="newsletter-card-note">Free eBook with newsletter signup. No spam; unsubscribe anytime.</p>
           </div>
         </div>
       </div>

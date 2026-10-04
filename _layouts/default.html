@@ -50,5 +50,48 @@
       {{ content }}
       {% include footer.html %}
     </div>
+    {% if page.layout == 'home' or page.layout == 'post' %}
+    <dialog class="newsletter-dialog" id="newsletter-signup-dialog" aria-labelledby="newsletter-dialog-title">
+      <div class="newsletter-dialog-content">
+        <button type="button" class="newsletter-dialog-close" data-close-newsletter aria-label="Close newsletter signup">&times;</button>
+        <h2 id="newsletter-dialog-title">Get your free eBook</h2>
+        <p>Subscribe to the Code4Projects newsletter to get the eBook and new tutorials.</p>
+        <div class="newsletter-dialog-embed" id="newsletter-dialog-embed"></div>
+      </div>
+    </dialog>
+    <script>
+      document.addEventListener('click', function (event) {
+        var openButton = event.target.closest('[data-open-newsletter]');
+        var dialog = document.getElementById('newsletter-signup-dialog');
+        if (openButton && dialog) {
+          var container = document.getElementById('newsletter-dialog-embed');
+          if (!container.dataset.loaded) {
+            var frame = document.createElement('iframe');
+            frame.src = 'https://code4projects.substack.com/embed';
+            frame.title = 'Subscribe to Code4Projects Newsletter on Substack';
+            frame.style.width = '100%';
+            frame.style.height = '320px';
+            frame.style.border = '1px solid #eee';
+            frame.style.background = '#fff';
+            frame.setAttribute('loading', 'eager');
+            frame.setAttribute('scrolling', 'no');
+            frame.setAttribute('frameborder', '0');
+            container.dataset.loaded = 'true';
+            container.appendChild(frame);
+          }
+          dialog.showModal();
+          return;
+        }
+
+        if (event.target.closest('[data-close-newsletter]')) {
+          dialog.close();
+        }
+      });
+
+      document.getElementById('newsletter-signup-dialog').addEventListener('click', function (event) {
+        if (event.target === this) this.close();
+      });
+    </script>
+    {% endif %}
   </body>
 </html>

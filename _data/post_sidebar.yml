@@ -25,6 +25,8 @@
     link: /designing-rest-apis-in-practice-a-kubernetes-case-study/
   - name: "Part 12: From Domain Design to REST API: Building FastURL with FastAPI"
     link: /from-domain-design-to-rest-api-building-fasturl-with-fastapi/
+  - name: "Part 13: Layered Architecture with FastAPI: Routers, Services, and Repositories"
+    link: /layered-architecture-with-fastapi-routers-services-and-repositories/
 
 - post_series_id: building-rest-apis
   post_series_title: "Building REST APIs: From Design to Production"
@@ -33,6 +35,8 @@
     link: /designing-rest-apis-in-practice-a-kubernetes-case-study/
   - name: "Part 2: From Domain Design to REST API: Building FastURL with FastAPI"
     link: /from-domain-design-to-rest-api-building-fasturl-with-fastapi/
+  - name: "Part 3: Layered Architecture with FastAPI: Routers, Services, and Repositories"
+    link: /layered-architecture-with-fastapi-routers-services-and-repositories/
 
 - post_series_id: agentic-ai-protocols
   post_series_title: "Agentic AI: Protocols and Patterns"

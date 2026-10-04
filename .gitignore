@@ -6,3 +6,6 @@ vendor
 .bob/tmp
 .env
 **/__pycache__/*
+.claude
+.claude/mcp.json
+.claude/tmp

@@ -1,14 +1,14 @@
 ---
 name: blog
-description: "Full-lifecycle blog engine with 10 sub-skills. Routes requests to the right sub-skill: blog-advisor, blog-idea, blog-medium-importer, blog-planner, blog-research, blog-review, blog-roadmap-manager, blog-social, blog-style, blog-writer."
+description: "Full-lifecycle blog engine with 11 sub-skills. Routes requests to the right sub-skill: blog-advisor, blog-idea, blog-illustrator, blog-medium-importer, blog-planner, blog-research, blog-review, blog-roadmap-manager, blog-social, blog-style, blog-writer."
 metadata:
   disable-model-invocation: true
-  argument-hint: [write|idea|medium-importer|planner|research|reviewer|roadmap-manager|social|style|writer]
+  argument-hint: [illustrate|write|idea|medium-importer|planner|research|reviewer|roadmap-manager|social|style|writer]
 ---
 
 # Blog: Engine for Content Management
 
-Full-lifecycle blog management: idea, medium-importer, planner, research, reviewer, roadmap-manager, social, style, writer.
+Full-lifecycle blog management: idea, illustrator, medium-importer, planner, research, reviewer, roadmap-manager, social, style, writer.
 
 ## Quick Reference
 
@@ -17,6 +17,7 @@ Full-lifecycle blog management: idea, medium-importer, planner, research, review
 | /blog idea <topic>            | Evaluate an idea for blog post                      |
 | /blog planner <topic>         | When an idea is approved it plans the new blog post |
 | /blog research <topic>        | Research references, statistics, and images for the post |
+| /blog illustrator <topic>     | Generate hero or inline SVG diagrams and illustrations (760px) |
 | /blog medium-importer <topic> | Import an article from Medium.com                   |
 | /blog write <topic>           | Write a new blog post as draft                      |
 | /blog review <topic>          | Evaluate a new blog post before publish it          |
@@ -34,6 +35,7 @@ Full-lifecycle blog management: idea, medium-importer, planner, research, review
    idea -> blog-idea (Evaluate an idea for blog post)
    planner -> blog-planner (When an idea is approved it plans the new blog post)
    research -> blog-research (Research references, statistics, and images for the post)
+   illustrate | illustrator -> blog-illustrator (Generate hero and inline SVG diagrams and schemes)
    medium-importer → blog-medium-importer (Import an article from Medium.com )
    write → blog-write (Write a new blog post as draft )
    review → blog-review (Evaluate a new blog post before publish it)

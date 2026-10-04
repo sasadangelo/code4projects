@@ -4,7 +4,7 @@ title: "From Domain Design to REST API: Building FastURL with FastAPI"
 post_series_id:
   - modern-python-application
   - building-rest-apis
-date: 2026-09-20
+date: 2026-10-03
 author: sasadangelo
 slug: from-domain-design-to-rest-api-building-fasturl-with-fastapi
 image: /assets/img/from-domain-design-to-rest-api-building-fasturl-with-fastapi-hero.png
@@ -279,3 +279,5 @@ The [next article]({{ site.baseurl }}/layered-architecture-with-fastapi-routers-
 ---
 
 If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
+
+**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.
