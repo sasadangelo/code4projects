@@ -2,7 +2,9 @@
 layout: post
 title: "Async and the Event Loop in Python: asyncio in Practice"
 slug: async-and-event-loop-in-python-asyncio-in-practice
-post_series_id: modern-python-application
+post_series_id:
+  - modern-python-application
+  - building-rest-apis
 date: 2026-09-13
 author: sasadangelo
 image: /assets/img/async-and-event-loop-in-python-asyncio-in-practice-hero.jpg

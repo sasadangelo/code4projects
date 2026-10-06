@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 Z" fill="#57606a"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 Z" fill="#3b82d4"/>
+    </marker>
+    <marker id="arr-purple" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 Z" fill="#7c5cd8"/>
+    </marker>
+    <marker id="arr-green" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 Z" fill="#10b981"/>
+    </marker>
+    <marker id="arr-red" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 Z" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <rect width="760" height="420" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="380" y="34" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2328">Application Lifespan — Shared Resource Lifecycle</text>
+  <text x="380" y="52" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" fill="#57606a">One engine · One HTTP client · One session per request</text>
+
+  <!-- ── Timeline axis ── -->
+  <!-- Startup label -->
+  <rect x="30" y="72" width="80" height="24" rx="5" fill="#3b82d4"/>
+  <text x="70" y="88" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">Startup</text>
+
+  <!-- yield / running label -->
+  <rect x="310" y="72" width="140" height="24" rx="5" fill="#10b981"/>
+  <text x="380" y="88" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">Application Running</text>
+
+  <!-- Shutdown label -->
+  <rect x="650" y="72" width="80" height="24" rx="5" fill="#ef4444"/>
+  <text x="690" y="88" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="700" fill="#ffffff">Shutdown</text>
+
+  <!-- main timeline line -->
+  <line x1="70" y1="108" x2="690" y2="108" stroke="#d1d5db" stroke-width="2"/>
+  <circle cx="70" cy="108" r="5" fill="#3b82d4"/>
+  <circle cx="380" cy="108" r="5" fill="#10b981"/>
+  <circle cx="690" cy="108" r="5" fill="#ef4444"/>
+
+  <!-- ── ROW 1: AsyncEngine ── -->
+  <!-- open bar -->
+  <rect x="70" y="130" width="620" height="40" rx="6" fill="#dbeafe" stroke="#3b82d4" stroke-width="1.5"/>
+  <text x="90" y="146" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563eb">AsyncEngine  (connection pool)</text>
+  <text x="90" y="162" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#3b82d4">create_async_engine()  →  await engine.dispose()</text>
+  <!-- open marker -->
+  <line x1="70" y1="122" x2="70" y2="178" stroke="#3b82d4" stroke-width="2"/>
+  <!-- close marker -->
+  <line x1="690" y1="122" x2="690" y2="178" stroke="#ef4444" stroke-width="2"/>
+
+  <!-- ── ROW 2: httpx.AsyncClient ── -->
+  <rect x="70" y="184" width="620" height="40" rx="6" fill="#ede9fe" stroke="#7c5cd8" stroke-width="1.5"/>
+  <text x="90" y="200" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="700" fill="#6d28d9">httpx.AsyncClient  (HTTP connection pool)</text>
+  <text x="90" y="216" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#7c5cd8">httpx.AsyncClient(...)  →  await client.aclose()</text>
+  <line x1="70" y1="176" x2="70" y2="232" stroke="#3b82d4" stroke-width="2"/>
+  <line x1="690" y1="176" x2="690" y2="232" stroke="#ef4444" stroke-width="2"/>
+
+  <!-- ── ROW 3: async_sessionmaker ── -->
+  <rect x="70" y="238" width="620" height="40" rx="6" fill="#f0fdf4" stroke="#10b981" stroke-width="1.5"/>
+  <text x="90" y="254" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="700" fill="#059669">async_sessionmaker  (session factory)</text>
+  <text x="90" y="270" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#10b981">async_sessionmaker(bind=engine)  →  lives with engine</text>
+  <line x1="70" y1="230" x2="70" y2="286" stroke="#3b82d4" stroke-width="2"/>
+  <line x1="690" y1="230" x2="690" y2="286" stroke="#ef4444" stroke-width="2"/>
+
+  <!-- ── ROW 4: AsyncSession (per-request, multiple short bars) ── -->
+  <text x="90" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="700" fill="#57606a">AsyncSession  (per-request)</text>
+
+  <!-- session bars -->
+  <rect x="145" y="316" width="60" height="22" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="175" y="331" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9" fill="#d97706">req 1</text>
+
+  <rect x="240" y="316" width="60" height="22" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="270" y="331" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9" fill="#d97706">req 2</text>
+
+  <rect x="340" y="316" width="60" height="22" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="370" y="331" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9" fill="#d97706">req 3</text>
+
+  <rect x="430" y="316" width="60" height="22" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="460" y="331" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9" fill="#d97706">req 4</text>
+
+  <rect x="530" y="316" width="60" height="22" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="560" y="331" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9" fill="#d97706">req 5</text>
+
+  <text x="90" y="331" font-family="ui-monospace,Menlo,monospace" font-size="9" fill="#57606a">get_db()</text>
+
+  <!-- dashed baseline for sessions -->
+  <line x1="130" y1="327" x2="640" y2="327" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Legend -->
+  <rect x="30" y="368" width="700" height="38" rx="6" fill="#f7f8fa" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="50" y="381" width="14" height="14" rx="2" fill="#dbeafe" stroke="#3b82d4" stroke-width="1"/>
+  <text x="70" y="392" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">Application-scoped (lifespan)</text>
+  <rect x="230" y="381" width="14" height="14" rx="2" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="250" y="392" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">Request-scoped (per-request, not safe to share)</text>
+  <rect x="510" y="381" width="14" height="14" rx="2" fill="#f0fdf4" stroke="#10b981" stroke-width="1"/>
+  <text x="530" y="392" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">Factory (wraps engine)</text>
+</svg>

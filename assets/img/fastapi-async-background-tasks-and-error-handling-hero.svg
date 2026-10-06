@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 Z" fill="#d1d5db"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 Z" fill="#3b82d4"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 Z" fill="#7c5cd8"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 Z" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="760" height="400" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="380" y="36" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="17" font-weight="700" fill="#1f2328">Async, Background Tasks &amp; Error Handling in FastAPI</text>
+  <text x="380" y="56" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="12" fill="#57606a">Three pillars of a production-ready FastAPI application</text>
+
+  <!-- ── PILLAR 1: Async I/O ── -->
+  <rect x="30" y="80" width="210" height="280" rx="10" fill="#f7f8fa" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="30" y="80" width="210" height="36" rx="10" fill="#3b82d4"/>
+  <rect x="30" y="102" width="210" height="14" fill="#3b82d4"/>
+  <text x="135" y="103" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Async I/O</text>
+
+  <!-- async def box -->
+  <rect x="52" y="132" width="166" height="38" rx="6" fill="#dbeafe" stroke="#3b82d4" stroke-width="1.2"/>
+  <text x="135" y="148" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="11" font-weight="700" fill="#2563eb">async def handler()</text>
+  <text x="135" y="162" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">awaits I/O, yields to event loop</text>
+
+  <!-- arrow down -->
+  <line x1="135" y1="170" x2="135" y2="188" stroke="#3b82d4" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+  <!-- event loop box -->
+  <rect x="52" y="190" width="166" height="38" rx="6" fill="#ffffff" stroke="#d1d5db" stroke-width="1.2"/>
+  <text x="135" y="206" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="600" fill="#1f2328">Event Loop</text>
+  <text x="135" y="220" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">runs other requests while waiting</text>
+
+  <!-- arrow down -->
+  <line x1="135" y1="228" x2="135" y2="246" stroke="#3b82d4" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+  <!-- blocking danger box -->
+  <rect x="52" y="248" width="166" height="38" rx="6" fill="#fef2f2" stroke="#ef4444" stroke-width="1.2"/>
+  <text x="135" y="264" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="11" font-weight="700" fill="#dc2626">def handler()</text>
+  <text x="135" y="278" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">blocking call → stalls loop</text>
+
+  <text x="135" y="324" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">Use async replacements:</text>
+  <text x="135" y="338" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#3b82d4">httpx · asyncpg · aiofiles</text>
+  <text x="135" y="352" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#3b82d4">AsyncSession · asyncio.sleep</text>
+
+  <!-- ── PILLAR 2: Background Tasks ── -->
+  <rect x="275" y="80" width="210" height="280" rx="10" fill="#f7f8fa" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="275" y="80" width="210" height="36" rx="10" fill="#7c5cd8"/>
+  <rect x="275" y="102" width="210" height="14" fill="#7c5cd8"/>
+  <text x="380" y="103" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Background Tasks</text>
+
+  <!-- POST request -->
+  <rect x="297" y="132" width="166" height="30" rx="6" fill="#ede9fe" stroke="#7c5cd8" stroke-width="1.2"/>
+  <text x="380" y="152" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="11" font-weight="700" fill="#6d28d9">POST /api/v1/links</text>
+
+  <line x1="380" y1="162" x2="380" y2="178" stroke="#7c5cd8" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+
+  <!-- 201 response -->
+  <rect x="297" y="180" width="166" height="30" rx="6" fill="#d1fae5" stroke="#10b981" stroke-width="1.2"/>
+  <text x="380" y="200" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="11" font-weight="700" fill="#059669">201 Created ← immediate</text>
+
+  <line x1="380" y1="210" x2="380" y2="226" stroke="#7c5cd8" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+
+  <!-- background task -->
+  <rect x="297" y="228" width="166" height="46" rx="6" fill="#ffffff" stroke="#d1d5db" stroke-width="1.2"/>
+  <text x="380" y="246" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="600" fill="#1f2328">inspect_link()</text>
+  <text x="380" y="260" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">runs after response is sent</text>
+  <text x="380" y="272" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">HTTP fetch · metadata · DB write</text>
+
+  <text x="380" y="312" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">No broker needed for</text>
+  <text x="380" y="326" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">low-latency side effects</text>
+  <text x="380" y="340" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">Use Celery for durable/critical work</text>
+
+  <!-- ── PILLAR 3: Error Handling ── -->
+  <rect x="520" y="80" width="210" height="280" rx="10" fill="#f7f8fa" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="520" y="80" width="210" height="36" rx="10" fill="#0ea5e9"/>
+  <rect x="520" y="102" width="210" height="14" fill="#0ea5e9"/>
+  <text x="625" y="103" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="13" font-weight="700" fill="#ffffff">Error Handling</text>
+
+  <!-- envelope -->
+  <rect x="542" y="132" width="166" height="54" rx="6" fill="#ffffff" stroke="#d1d5db" stroke-width="1.2"/>
+  <text x="558" y="149" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#57606a">{ "success": false,</text>
+  <text x="558" y="163" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#dc2626">  "error": "LINK_NOT_FOUND",</text>
+  <text x="558" y="177" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#57606a">  "details": [...] }</text>
+
+  <!-- 3 handler rows -->
+  <rect x="542" y="200" width="166" height="26" rx="5" fill="#fef2f2" stroke="#ef4444" stroke-width="1.2"/>
+  <text x="625" y="210" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" font-weight="600" fill="#dc2626">RequestValidationError → 400</text>
+  <text x="625" y="222" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="9" fill="#57606a">Pydantic schema failure</text>
+
+  <rect x="542" y="232" width="166" height="26" rx="5" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="625" y="242" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" font-weight="600" fill="#d97706">AppError → 404 / 409 / 410</text>
+  <text x="625" y="254" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="9" fill="#57606a">Domain rule violation</text>
+
+  <rect x="542" y="264" width="166" height="26" rx="5" fill="#f0fdf4" stroke="#10b981" stroke-width="1.2"/>
+  <text x="625" y="274" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" font-weight="600" fill="#059669">Exception → 500</text>
+  <text x="625" y="286" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="9" fill="#57606a">Safety net — no stack trace to client</text>
+
+  <text x="625" y="324" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">One consistent envelope</text>
+  <text x="625" y="338" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">for every failure path</text>
+
+  <!-- Bottom label -->
+  <text x="380" y="383" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" fill="#57606a">FastURL · github.com/sasadangelo/fasturl</text>
+</svg>

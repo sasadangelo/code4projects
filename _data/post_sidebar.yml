@@ -27,16 +27,24 @@
     link: /from-domain-design-to-rest-api-building-fasturl-with-fastapi/
   - name: "Part 13: Layered Architecture with FastAPI: Routers, Services, and Repositories"
     link: /layered-architecture-with-fastapi-routers-services-and-repositories/
+  - name: "Part 14: Async, Background Tasks, and Error Handling in FastAPI"
+    link: /fastapi-async-background-tasks-and-error-handling/
 
 - post_series_id: building-rest-apis
   post_series_title: "Building REST APIs: From Design to Production"
   post_series:
-  - name: "Part 1: Designing REST APIs in Practice: A Kubernetes Case Study"
+  - name: "Part 1: Concurrency in Python: Threads, Processes, and the Event Loop"
+    link: /concurrency-in-python-threads-processes-and-the-event-loop/
+  - name: "Part 2: Async and the Event Loop in Python: asyncio in Practice"
+    link: /async-and-event-loop-in-python-asyncio-in-practice/
+  - name: "Part 3: Designing REST APIs in Practice: A Kubernetes Case Study"
     link: /designing-rest-apis-in-practice-a-kubernetes-case-study/
-  - name: "Part 2: From Domain Design to REST API: Building FastURL with FastAPI"
+  - name: "Part 4: From Domain Design to REST API: Building FastURL with FastAPI"
     link: /from-domain-design-to-rest-api-building-fasturl-with-fastapi/
-  - name: "Part 3: Layered Architecture with FastAPI: Routers, Services, and Repositories"
+  - name: "Part 5: Layered Architecture with FastAPI: Routers, Services, and Repositories"
     link: /layered-architecture-with-fastapi-routers-services-and-repositories/
+  - name: "Part 6: Async, Background Tasks, and Error Handling in FastAPI"
+    link: /fastapi-async-background-tasks-and-error-handling/
 
 - post_series_id: agentic-ai-protocols
   post_series_title: "Agentic AI: Protocols and Patterns"

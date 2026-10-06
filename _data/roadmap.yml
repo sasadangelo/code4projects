@@ -1221,10 +1221,11 @@
     facebook: false
 - id: fastapi-async-background-tasks-and-error-handling
   title: "Async, Background Tasks, and Error Handling in FastAPI"
-  status: planned
+  status: published
   category: Programming
   series: modern-python-application
-  scheduled: 2026-09-27
+  scheduled: 2026-10-06
+  slug: fastapi-async-background-tasks-and-error-handling
   notes: >
     Article 3 of the FastURL series. FastAPI specifics that go beyond the official docs.
     Covers: async I/O with httpx.AsyncClient, BackgroundTasks fire-and-forget vs external

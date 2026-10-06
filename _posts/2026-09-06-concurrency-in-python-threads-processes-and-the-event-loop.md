@@ -2,7 +2,9 @@
 layout: post
 title: "Concurrency in Python: Threads, Processes, and the Event Loop"
 slug: concurrency-in-python-threads-processes-and-the-event-loop
-post_series_id: modern-python-application
+post_series_id:
+  - modern-python-application
+  - building-rest-apis
 date: 2026-09-06
 author: sasadangelo
 image: /assets/img/concurrency-in-python-threads-processes-and-the-event-loop-hero.webp

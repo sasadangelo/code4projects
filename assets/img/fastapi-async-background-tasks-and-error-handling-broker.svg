@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380">
+  <rect width="760" height="380" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="380" y="32" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2328">BackgroundTasks vs External Broker</text>
+  <text x="380" y="50" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" fill="#57606a">Choose based on durability, retry, and scale requirements</text>
+
+  <!-- ── Column headers ── -->
+  <rect x="200" y="64" width="160" height="30" rx="6" fill="#7c5cd8"/>
+  <text x="280" y="84" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">BackgroundTasks</text>
+
+  <rect x="400" y="64" width="180" height="30" rx="6" fill="#3b82d4"/>
+  <text x="490" y="84" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">External Broker</text>
+  <text x="490" y="94" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="9" fill="#57606a">(Celery / RQ / etc.)</text>
+
+  <!-- ── Row data ── -->
+  <!-- Row separator helper: alternating backgrounds -->
+  <!-- Row 1: Infrastructure -->
+  <rect x="30" y="104" width="700" height="40" rx="0" fill="#f7f8fa"/>
+  <text x="120" y="120" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="600" fill="#1f2328">Infrastructure</text>
+  <text x="120" y="136" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">What you need to run it</text>
+  <!-- BT cell -->
+  <rect x="200" y="108" width="160" height="32" rx="4" fill="#d1fae5" stroke="#10b981" stroke-width="1"/>
+  <text x="280" y="128" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" fill="#059669">None — same process</text>
+  <!-- Broker cell -->
+  <rect x="400" y="108" width="180" height="32" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="490" y="128" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" fill="#d97706">Redis / RabbitMQ required</text>
+
+  <!-- Row 2: Durability -->
+  <rect x="30" y="144" width="700" height="40" rx="0" fill="#ffffff"/>
+  <text x="120" y="160" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="600" fill="#1f2328">Durability</text>
+  <text x="120" y="176" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">Survives process crash?</text>
+  <rect x="200" y="148" width="160" height="32" rx="4" fill="#fef2f2" stroke="#ef4444" stroke-width="1"/>
+  <text x="280" y="168" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" fill="#dc2626">Lost on crash</text>
+  <rect x="400" y="148" width="180" height="32" rx="4" fill="#d1fae5" stroke="#10b981" stroke-width="1"/>
+  <text x="490" y="168" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" fill="#059669">Persisted, survives restarts</text>
+
+  <!-- Row 3: Retries -->
+  <rect x="30" y="184" width="700" height="40" rx="0" fill="#f7f8fa"/>
+  <text x="120" y="200" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="600" fill="#1f2328">Retries</text>
+  <text x="120" y="216" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">Built-in failure recovery?</text>
+  <rect x="200" y="188" width="160" height="32" rx="4" fill="#fef2f2" stroke="#ef4444" stroke-width="1"/>
+  <text x="280" y="208" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" fill="#dc2626">Manual — code explicitly</text>
+  <rect x="400" y="188" width="180" height="32" rx="4" fill="#d1fae5" stroke="#10b981" stroke-width="1"/>
+  <text x="490" y="208" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" fill="#059669">Built-in retry policies</text>
+
+  <!-- Row 4: Scalability -->
+  <rect x="30" y="224" width="700" height="40" rx="0" fill="#ffffff"/>
+  <text x="120" y="240" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="600" fill="#1f2328">Scalability</text>
+  <text x="120" y="256" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">Worker capacity</text>
+  <rect x="200" y="228" width="160" height="32" rx="4" fill="#fef2f2" stroke="#ef4444" stroke-width="1"/>
+  <text x="280" y="248" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" fill="#dc2626">Bounded by web process</text>
+  <rect x="400" y="228" width="180" height="32" rx="4" fill="#d1fae5" stroke="#10b981" stroke-width="1"/>
+  <text x="490" y="248" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" fill="#059669">Dedicated worker pool</text>
+
+  <!-- Row 5: Best for -->
+  <rect x="30" y="264" width="700" height="44" rx="0" fill="#f7f8fa"/>
+  <text x="120" y="280" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="600" fill="#1f2328">Best for</text>
+  <rect x="200" y="268" width="160" height="36" rx="4" fill="#ede9fe" stroke="#7c5cd8" stroke-width="1"/>
+  <text x="280" y="282" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#6d28d9">Low-latency, non-critical</text>
+  <text x="280" y="296" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#6d28d9">side effects</text>
+  <rect x="400" y="268" width="180" height="36" rx="4" fill="#dbeafe" stroke="#3b82d4" stroke-width="1"/>
+  <text x="490" y="282" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#2563eb">Critical work that must</text>
+  <text x="490" y="296" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#2563eb">not be lost</text>
+
+  <!-- Bottom border -->
+  <line x1="30" y1="308" x2="730" y2="308" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- FastURL callout -->
+  <rect x="30" y="320" width="700" height="44" rx="6" fill="#f0fdf4" stroke="#10b981" stroke-width="1.2"/>
+  <text x="380" y="337" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="700" fill="#059669">FastURL uses BackgroundTasks for URL inspection</text>
+  <text x="380" y="354" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">Losing an inspection on crash is acceptable — client can re-trigger via POST /api/v1/links/{code}/inspect</text>
+</svg>
