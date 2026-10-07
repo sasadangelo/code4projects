@@ -1567,3 +1567,31 @@
     linkedin: false
     instagram: false
     facebook: false
+
+- id: building-professional-website-layout-with-css
+  title: "Building a Professional Website Layout with CSS: Header, Navigation, and Responsive Design"
+  status: published
+  category: Programming
+  series: getting-started-with-html
+  slug: building-professional-website-layout-with-css
+  scheduled: 2026-10-07
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: building-complete-website-pages-forms-gallery
+  title: "Building the Complete Website: Real Pages, HTML Forms, and a Photo Gallery"
+  status: idea
+  category: Programming
+  series: getting-started-with-html
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false

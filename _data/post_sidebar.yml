@@ -204,6 +204,8 @@
     link: /getting-started-with-html/
   - name: "Mastering the Basics of CSS: A Beginner's Guide"
     link: /mastering-basics-css/
+  - name: "Building a Professional Website Layout with CSS: Header, Navigation, and Responsive Design"
+    link: /building-professional-website-layout-with-css/
 - post_series_id: python-cli-command-pattern
   post_series_title: Python CLI with the Command Pattern
   post_series:

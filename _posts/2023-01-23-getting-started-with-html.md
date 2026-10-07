@@ -4,19 +4,29 @@ title: "Getting Started with HTML: A Beginner's Guide"
 post_series_id: getting-started-with-html
 slug: getting-started-with-html
 image: /assets/img/html.webp
-excerpt: In this article, I will introduce you to HTML, the language that forms the foundation of the web. Step by step you will build a multi-page website with paragraphs, headlines, links, and images.
+excerpt: Learn HTML from scratch — build a real five-page website with headings, paragraphs, links, lists, and images, step by step.
 categories:
   - Programming
+author: Salvatore D'Angelo
 ---
 
-![Getting Started with HTML: A Beginner's Guide]({{ site.baseurl }}/assets/img/html.webp){:width="356" height="200" .responsive_img}
+![Getting Started with HTML: A Beginner's Guide]({{ site.baseurl }}/assets/img/html.webp){:width="760" height="400" .responsive_img}
 
 # Getting Started with HTML: A Beginner's Guide
+
 _Posted on **{{ page.date | date_to_string }}**_
 
-In this article, I will talk about HTML, the language that forms the foundation of the web. By the end of this guide, I will create step by step a website with five pages containing paragraphs, headlines, links, images, text, and so on.
+## Introduction
 
-You can find the source code of this guide in the part-1 folder of [this repository](https://github.com/sasadangelo/html-hero/tree/master/part-1). This guide covers the first 10 lessons.
+HTML is the language that forms the foundation of the web. By the end of this guide you will have built a five-page website with paragraphs, headlines, links, images, and formatted text — entirely from scratch.
+
+You can find the source code of this guide in the [part-1 folder of the html-hero repository](https://github.com/sasadangelo/html-hero/tree/master/part-1). This guide covers the first 10 lessons.
+
+You should read this article if:
+
+- you have never written a line of HTML and want to start with a real project
+- you want to understand how a browser renders a web page, from the DOCTYPE down
+- you want a hands-on foundation before moving to CSS and page layout
 
 ## What is HTML?
 
@@ -323,11 +333,11 @@ You can also nest lists within lists by using &lt;ol&gt; or &lt;ul&gt; elements 
 
 It's worth noting that, like many other elements in HTML, lists are semantic elements, meaning they provide information about the content they contain but do not affect the appearance of the content. You can use CSS to control the appearance of lists and list items, such as changing the bullet point or numbering style.
 
-In [lesson 9](https://github.com/sasadangelo/html-hero/tree/master/part-1/lesson-09) I used the unordered list to create a menu at the beginning of each page. This menu will contain the five links introduced in lesson 8. Here is the result. 
+In [lesson 9](https://github.com/sasadangelo/html-hero/tree/master/part-1/lesson-09) I used the unordered list to create a menu at the beginning of each page. This menu will contain the five links introduced in lesson 8. Here is the result.
 
 ![HTML Menu]({{ site.baseurl }}/assets/img/html-menu.webp){:width="450" height="466" .responsive_img}
 
-In addition, I created, randomly, an ordered list in each page. Here the result.
+In addition, I added an ordered list to each page as a demonstration. Here the result.
 
 ![HTML Ordered List]({{ site.baseurl }}/assets/img/html-ordered-list.webp){:width="450" height="179" .responsive_img}
 
@@ -351,17 +361,26 @@ For our example website I created two to four images for each page and placed th
 
 ![HTML Images]({{ site.baseurl }}/assets/img/html-images.webp){:width="450" height="451" .responsive_img}
 
-## Conclusion: Building a Basic Website with HTML
+## Conclusion
 
-In this article, we have covered the basics of building a website using HTML. We began by discussing the structure of a basic HTML document and the importance of the &lt;head&gt; and &lt;body&gt; tags. We then moved on to the different elements, tags, and attributes that are used to create the content of a web page, including headlines, paragraphs, links, lists, and images.
+In this article we covered:
 
-By following the step-by-step instructions provided in this article, you should now have a basic understanding of how to create a simple website using HTML. However, there is still much more to learn. In the next article, we will continue to build upon the skills learned here by adding quotes, and justified paragraphs and we will style our pages using CSS.
+- What HTML is and a brief history of its versions
+- The basic structure of an HTML document: `DOCTYPE`, `<html>`, `<head>`, `<body>`
+- Elements, tags, and attributes
+- Headings (`<h1>`–`<h6>`) and paragraphs (`<p>`)
+- Text formatting: bold, italic, underline
+- Hyperlinks and anchor navigation
+- Ordered and unordered lists
+- Embedding images with `<img>`
 
-In conclusion, HTML is the backbone of any website and it is important to understand its basics and structure. With the knowledge of HTML and CSS, you will be able to create dynamic and visually appealing websites. Stay tuned for the next article where we will dive deeper into CSS and how to style our HTML documents.
+The [next article]({{ site.baseurl }}/mastering-basics-css/) covers CSS theory — selectors, the box model, typography, colours, and responsive design. After that, [Part 2 of the series]({{ site.baseurl }}/building-professional-website-layout-with-css/) applies those concepts to build a real styled layout with a header, navigation bar, and responsive home page.
 
+---
 
+If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
 
-
+**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.
 
 
 

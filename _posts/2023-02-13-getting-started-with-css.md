@@ -4,12 +4,13 @@ title: "Mastering the Basics of CSS: A Beginner's Guide"
 post_series_id: getting-started-with-html
 slug: mastering-basics-css
 image: /assets/img/css-logo.webp
-excerpt: In this article, we will continue to build our website with HTML and CSS. Reading it you will learn how to style your website.
+excerpt: Master the core CSS concepts — selectors, the box model, layout, typography, colours, animations, and responsive design — and apply them to a real website.
 categories:
   - Programming
+author: Salvatore D'Angelo
 ---
 
-![CSS Logo]({{ site.baseurl }}/assets/img/css-logo.webp){:width="200" height="200" .responsive_img}
+![CSS Logo]({{ site.baseurl }}/assets/img/css-logo.webp){:width="760" height="400" .responsive_img}
 
 # Mastering the Basics of CSS: A Beginner's Guide
 
@@ -17,7 +18,13 @@ _Posted on **{{ page.date | date_to_string }}**_
 
 ## Introduction
 
-In this article, we will continue to build our website with HTML and CSS. I am going to show you how to style the website we created in the [previous article]({{ site.baseurl }}/getting-started-with-html/) improving its look and feel.
+In the [previous article]({{ site.baseurl }}/getting-started-with-html/) you built a five-page HTML website from scratch. The pages work, but they have no style at all. This article covers the CSS concepts you need to change that — and ends by applying them to the project.
+
+You should read this article if:
+
+- you finished the HTML article and want to understand how styling works before applying it
+- you know CSS properties exist but have never understood how selectors, cascading, or the box model actually interact
+- you want a solid theory foundation before building a full layout in the [next part of the series]({{ site.baseurl }}/building-professional-website-layout-with-css/)
 
 ## What is CSS?
 
@@ -242,7 +249,7 @@ Color and background in CSS refer to the control of the color and background of 
 
 It's important to keep in mind that color and background can greatly impact the aesthetics of a web page, and they should be used in a harmonious way to create a visually pleasing design. Also, it's good practice to consider the accessibility guidelines when choosing color combinations and contrasts to ensure that the text is legible for users with visual impairments.
 
-## Transitions and animations in CSS
+## Transitions and Animations in CSS
 
 ![CSS Animations]({{ site.baseurl }}/assets/img/css-animations.webp){:width="450" height="338" .responsive_img}
 
@@ -285,7 +292,7 @@ This animation will rotate the element from 0 degrees to 360 degrees in 1 second
 
 It's important to keep in mind that transitions and animations can greatly enhance the user experience and make a web page more interactive. However, it's good practice to use them in a subtlly and appropriatly way, to avoid overwhelming the user and to make sure that the animation does not interfere with the functionality of the page.
 
-## Responsive design in CSS 
+## Responsive Design in CSS
 
 ![CSS Responsive Design]({{ site.baseurl }}/assets/img/responsive-design.webp){:width="450" height="338" .responsive_img}
 
@@ -306,7 +313,7 @@ Responsive design in CSS is used to create web pages that adapt to different scr
 
 * **viewport**: This is the area of the browser window where the web page is displayed. The viewport can be controlled using the viewport meta tag, this will allow you to set the width and initial scale of the viewport, and it will affect the layout of the page and the sizes of elements on the page.
 
-    {% highlight css %}
+    {% highlight html %}
 <meta name="viewport" content="width=device-width, initial-scale=1">
     {% endhighlight %}
 
@@ -355,7 +362,7 @@ In conclusion, while inline and internal CSS are quick and easy to implement, it
 
 _Photo from [https://fronty.com](https://fronty.com/how-long-does-it-take-to-learn-html-css/)_
 
-In order to enhance the look and feel of the 5 pages created in the previous article [Getting Started with HTML](https://www.code4projects.net/getting-started-with-html/), we will now create a CSS stylesheet that will apply the principles discussed earlier to these pages.
+In order to enhance the look and feel of the 5 pages created in the [previous article]({{ site.baseurl }}/getting-started-with-html/), we will now create a CSS stylesheet that will apply the principles discussed earlier to these pages.
 
 First, it is necessary to include the following line of code in each of the 5 HTML pages:
 
@@ -457,9 +464,26 @@ img.img-right {
 
 As you can see, the images have a padding of 10px all around except on the side where they are aligned. The float attribute expresses how the text should flow.
 
-The entire code can be found here:
-https://github.com/sasadangelo/html-hero/tree/master/part-1/lesson-11
+The entire code can be found in the [lesson-11 folder](https://github.com/sasadangelo/html-hero/tree/master/part-1/lesson-11) of the repository.
 
 ## Conclusion
 
-In conclusion, CSS is an essential tool for web design, allowing for the creation of beautiful and functional websites. From understanding selectors and cascading to exploring the box model, typography, color and background, transitions and animations, and responsive design, this article has covered the fundamental concepts and techniques of CSS. By mastering CSS, you have the power to transform your web pages and bring your vision to life. Happy styling!
+In this article we covered:
+
+- CSS rules, declarations, selectors, and the cascading mechanism
+- Inheritance — which properties propagate and which do not
+- The box model: content, padding, border, margin, and `box-sizing`
+- Layout techniques: `display`, `position`, `float`, Flexbox, and Grid
+- Typography: `font-family`, `font-size`, `font-weight`, `line-height`, `text-align`
+- Colour and background properties
+- Transitions and animations with `@keyframes`
+- Responsive design with the viewport meta tag and media queries
+- Three ways to include CSS: inline, internal, and external
+
+The [next article]({{ site.baseurl }}/building-professional-website-layout-with-css/) puts all of this into practice — building a real site layout with a header, navigation bar, social icons, a home page with a hero image, and a fully responsive mobile menu.
+
+---
+
+If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
+
+**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.
