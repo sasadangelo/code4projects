@@ -108,6 +108,10 @@ After writing, show:
 - Any sections that need the user's input (e.g. actual command output to paste, screenshots needed, GitHub repo links)
 - Open questions for the user (e.g. "confirm the next article slug")
 
+At the end of the summary, remind the user that the next step is illustration:
+
+> **Next Step:** Run `/blog illustrator <slug>` (or invoke the `blog-illustrator` skill) to generate the **hero image** and any **inline technical diagrams** referenced in the draft. The illustrator will save all SVG files to `assets/img/` and update the front matter `image:` field and inline `![alt]()` references automatically.
+
 ## Rules
 
 - Never truncate the draft. Write the complete article.

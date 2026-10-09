@@ -17,17 +17,38 @@ Full-lifecycle blog management: idea, illustrator, medium-importer, planner, res
 | /blog idea <topic>            | Evaluate an idea for blog post                      |
 | /blog planner <topic>         | When an idea is approved it plans the new blog post |
 | /blog research <topic>        | Research references, statistics, and images for the post |
-| /blog illustrator <topic>     | Generate hero or inline SVG diagrams and illustrations (760px) |
-| /blog medium-importer <topic> | Import an article from Medium.com                   |
 | /blog write <topic>           | Write a new blog post as draft                      |
+| /blog illustrator <topic>     | Generate the hero SVG + inline diagrams after writing |
 | /blog review <topic>          | Evaluate a new blog post before publish it          |
+| /blog medium-importer <topic> | Import an article from Medium.com                   |
 | /blog roadmap-manager         | Define a roadmap for blog content                   |
 | /blog social                  | Write social content to promote a blog post         |
 | /blog style                   | Define the style of blog post                       |
 
+## Standard Post Pipeline
+
+For every new post, follow this exact sequence:
+
+```
+idea → planner → research → writer → illustrator → review → (roadmap-manager) → social
+```
+
+| Step | Command | Output |
+| ---- | ------- | ------ |
+| 1. Evaluate idea | `/blog idea <topic>` | approve / reject / transform decision |
+| 2. Plan the post | `/blog planner <topic>` | outline, front matter, series context |
+| 3. Research | `/blog research <topic>` | notes + references in `.bob/tmp/blog-research/<slug>/` |
+| 4. Write draft | `/blog write <topic>` | `_drafts/<slug>.md` |
+| 5. Illustrate | `/blog illustrator <slug>` | hero `<slug>-hero.svg` + inline `<slug>-<concept>.svg` → `assets/img/` |
+| 6. Review | `/blog review <topic>` | prioritised fix list; apply fixes |
+| 7. Publish | `/blog roadmap-manager` | update roadmap status to `published` |
+| 8. Promote | `/blog social` | Twitter/X, LinkedIn, Instagram, Facebook, Substack copy |
+
+> **Illustrator note:** Step 5 is mandatory for every post. It generates at minimum a **hero image** (`<slug>-hero.svg`) and adds as many inline diagrams as are needed to replace prose the reader would otherwise have to imagine. The goal is ≥1 inline diagram per major concept.
+
 ## Orchestration Logic
 
-### Command Routing
+### Command Routing
 
 1. Parse the user's command to determine the sub-skill
 2. If no sub-command given, ask which action they need
@@ -35,11 +56,11 @@ Full-lifecycle blog management: idea, illustrator, medium-importer, planner, res
    idea -> blog-idea (Evaluate an idea for blog post)
    planner -> blog-planner (When an idea is approved it plans the new blog post)
    research -> blog-research (Research references, statistics, and images for the post)
-   illustrate | illustrator -> blog-illustrator (Generate hero and inline SVG diagrams and schemes)
-   medium-importer → blog-medium-importer (Import an article from Medium.com )
-   write → blog-write (Write a new blog post as draft )
+   write → blog-writer (Write a new blog post as draft)
+   illustrate | illustrator -> blog-illustrator (Generate hero SVG and inline diagrams after writing)
+   medium-importer → blog-medium-importer (Import an article from Medium.com)
    review → blog-review (Evaluate a new blog post before publish it)
-   roadmap-manager → blog-roadmap-manager (Define a roadmap for blog content )
+   roadmap-manager → blog-roadmap-manager (Define a roadmap for blog content)
    social → blog-social (Write social content to promote a blog post)
    style → blog-style (Define the style of blog post)
 
