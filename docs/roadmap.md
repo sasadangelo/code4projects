@@ -72,12 +72,34 @@ The editorial plan in `docs/EDITORIAL_PLAN.md` is already solid. Follow it.
 
 Traffic exists (219/month). The problem is that none of it converts into anything measurable.
 
-### 2a. Connect Substack to the Docker lead magnet
+### 2a. Per-series lead magnets → Substack ✅ First one live
 
-The mechanism already exists (Docker ebook + newsletter box in post layout). It just needs to be wired up:
-- The "Download eBook" button in the post layout must point to a Substack landing page or embed form
-- Every article in the Docker 2025 series must have the CTA visible
-- **Effort: low** — configuration, not content
+The model: every completed series has its own ebook, and every article in that series promotes its own ebook via a "Download eBook" popup → Substack subscribe.
+
+```
+Kubernetes article  → "Download Kubernetes ebook" popup → Substack
+AI article          → "Download AI ebook" popup          → Substack
+Python article      → "Download Python ebook" popup      → Substack
+standalone article  → default "Best of Code4Projects" ebook → Substack
+```
+
+**Docker 2025 is live.** Clicking "Download eBook" opens a popup where the reader enters their email and is redirected to Substack to subscribe.
+
+All future series follow the same model: complete the series → compile the ebook → wire the lead magnet → activate on all articles in that series.
+
+**Ebook selection logic (via tags):** the post layout reads the post's tags and maps them to the correct ebook. If no tag matches an active ebook, the default fallback is shown.
+
+```
+tag: docker      → Docker 2025 ebook
+tag: kubernetes  → Kubernetes 2026 ebook
+tag: python      → Modern Python App Dev ebook
+tag: ai          → AI / LangChain ebook
+(no match)       → default "Best of Code4Projects" ebook
+```
+
+This means every post must have at least one meaningful tag in its front matter. The mapping is maintained in the post layout (or a `_data/ebook_map.yml` config file).
+
+**Default ebook (fallback):** articles with no matching tag show a generic lead magnet — e.g. "The Best of Code4Projects" or "Software Engineering Essentials" — so that no article ever runs without a conversion opportunity. This default ebook needs to be created once and wired as the fallback in the post layout.
 
 ### 2b. Rewrite the Start Here page
 
