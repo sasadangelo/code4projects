@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: How Amazon Web Services Security and Compliance works
 post_series_id: getting-started-with-amazon-web-services
 slug: how-amazon-web-services-security-and-compliance-works

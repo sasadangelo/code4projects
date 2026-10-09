@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: How to increase Amazon EC2 Availability and Scalability
 post_series_id: getting-started-with-amazon-web-services
 slug: how-to-increase-amazon-ec2-availability-and-scalability

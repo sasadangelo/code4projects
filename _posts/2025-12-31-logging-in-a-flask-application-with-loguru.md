@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "Logging in a Flask Application with Loguru"
 post_series_id: modern-python-application
 slug: logging-in-a-flask-application-with-loguru
@@ -379,9 +380,3 @@ In this article we covered:
 - where logging adds value in controllers, services, and external integrations
 
 The [next article]({{ site.baseurl }}/logging-in-fastapi-with-loguru/) will show how to apply the same ideas in a FastAPI application, where the integration points change but the architectural goals stay the same.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

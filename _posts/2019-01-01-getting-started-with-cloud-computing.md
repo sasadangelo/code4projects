@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Getting started with Cloud Computing
 post_series_id: 
 - getting-started-with-cloud-computing

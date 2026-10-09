@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "DevOps in Software Development: Bridging Dev and Ops for Faster Delivery"
 slug: bridging-gap-devops-software-development
 image: /assets/img/devops-logo.webp

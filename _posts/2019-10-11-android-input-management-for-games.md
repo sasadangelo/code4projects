@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Android Input Management for Games
 post_series_id: android-game-programming
 slug: android-input-management-for-games

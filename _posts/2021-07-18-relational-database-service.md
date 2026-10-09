@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Relational Database Service (RDS) - What Is It and How Does It Work?
 post_series_id: getting-started-with-amazon-web-services
 slug: relational-database-service

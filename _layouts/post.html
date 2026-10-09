@@ -16,6 +16,9 @@ layout: default
           <span class="post-byline-details">
             {{ page.content | number_of_words | divided_by: 200 | plus: 1 }} min read &middot; {{ page.date | date: "%B %-d, %Y" }}
           </span>
+          <div class="social-media-icons post-byline-social">
+            {% include author_social_icons.html author=author %}
+          </div>
         </div>
       </div>
       {% endif %}
@@ -26,9 +29,8 @@ layout: default
         <div class="post-author-bio-text">
           <span class="post-author-bio-name">{{ author.name }}</span>
           <p>{{ author.position }}. Writes at <a href="https://code4projects.org">code4projects.org</a>.</p>
-          <div class="post-author-bio-links">
-            {% if author.linkedin %}<a href="{{ author.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
-            {% if author.substack %}<a href="{{ author.substack }}" target="_blank" rel="noopener">Substack</a>{% endif %}
+          <div class="social-media-icons post-author-bio-social">
+            {% include author_social_icons.html author=author %}
           </div>
         </div>
       </div>

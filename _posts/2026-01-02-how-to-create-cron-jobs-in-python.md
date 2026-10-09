@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "How to Create Cron Jobs in Python for Your Applications"
 post_series_id: modern-python-application
 slug: how-to-create-cron-jobs-in-python
@@ -199,9 +200,3 @@ In this article we covered:
 - how `UpdateQuotesCronJob` applies this pattern to a real ETF data-update workflow
 
 In the next article we will build the database layer of the application: [Building a Database Layer in Python with SQLAlchemy ORM]({{ site.baseurl }}/database-layer-with-sqlalchemy-in-a-layered-python-architecture/).
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: EC2 Auto Scaling Group Tutorial for Beginners
 post_series_id: getting-started-with-amazon-web-services
 slug: ec2-auto-scaling-group-tutorial-for-beginners

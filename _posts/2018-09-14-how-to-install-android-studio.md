@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: How to install Android Studio
 post_series_id: android-game-programming
 slug: how-to-install-android-studio

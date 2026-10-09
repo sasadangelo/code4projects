@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "Docker Security Best Practices"
 post_series_id: getting-started-with-docker-2025
 slug: docker-security-best-practices
@@ -264,9 +265,3 @@ In this article we covered:
 - **Keeping images up to date** with pinned digests and automated updates
 
 The [next and final article]({{ site.baseurl }}/docker-image-best-practices/) of the series ties everything together into a single checklist for writing Dockerfiles that are functional, lightweight, debuggable, and secure.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Beginner’s Guide to AWS Identity and Access Management (IAM)
 post_series_id: getting-started-with-amazon-web-services
 slug: beginners-guide-identity-access-management

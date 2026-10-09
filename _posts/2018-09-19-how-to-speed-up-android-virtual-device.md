@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: How to speed up Android Virtual Device
 post_series_id: android-game-programming
 slug: how-to-speed-up-android-virtual-device

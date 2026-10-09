@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "Docker Image Best Practices"
 post_series_id: getting-started-with-docker-2025
 slug: docker-image-best-practices
@@ -307,9 +308,3 @@ In this article we brought together everything the series covered, organized aro
 - **Secure**: non-root users, read-only filesystems, dropped capabilities, and vulnerability scanning
 
 This concludes the **Getting Started with Docker** series. You now have a solid foundation to build, network, persist, orchestrate, secure, and package containerized applications the right way. The natural next step is **Docker Swarm** for multi-host deployments, or **Kubernetes** for large-scale container orchestration.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

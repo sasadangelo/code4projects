@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Kubernetes Cluster IP vs NodePort vs LoadBalancer vs Ingress
 post_series_id: getting-started-with-kubernetes
 slug: kubernetes-services-cluster-ip-vs-nodeport-vs-loadbalancer-vs-ingress

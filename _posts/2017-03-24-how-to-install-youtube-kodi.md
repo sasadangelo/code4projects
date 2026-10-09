@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: How to install Youtube Add-on on your Kodi Media Center
 post_series_id: raspberry-media-center
 slug: how-to-install-youtube-kodi

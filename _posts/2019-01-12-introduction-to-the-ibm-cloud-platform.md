@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Introduction to the IBM Cloud platform
 post_series_id: getting-started-with-cloud-computing
 slug: introduction-to-the-ibm-cloud-platform

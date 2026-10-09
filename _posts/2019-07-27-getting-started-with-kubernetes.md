@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Getting Started with Kubernetes
 post_series_id: getting-started-with-kubernetes
 slug: getting-started-with-kubernetes

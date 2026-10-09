@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "Building a Database Layer in Python with SQLAlchemy ORM"
 post_series_id: modern-python-application
 slug: database-layer-with-sqlalchemy-in-a-layered-python-architecture
@@ -445,9 +446,3 @@ In this article we covered:
 - how the `DatabaseInitializer` service creates the schema at startup in an idempotent, safe way
 - when simple ORM queries are enough and when the Repository Pattern earns its place
 - why Alembic is the right tool for schema migrations in production
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

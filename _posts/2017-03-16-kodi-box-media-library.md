@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: How to transform your Kodi Box in a Netflix-like platform
 post_series_id: raspberry-media-center
 slug: kodi-box-media-library

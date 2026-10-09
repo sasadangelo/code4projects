@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Android Graphics Programming for Games
 post_series_id: android-game-programming
 slug: android-graphics-programming-for-games

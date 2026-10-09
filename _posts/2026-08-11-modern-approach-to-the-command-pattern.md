@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "Building a Python CLI with Typer: The Modern Approach to the Command Pattern"
 slug: building-a-python-cli-with-typer-the-modern-approach-to-the-command-pattern
 post_series_id:
@@ -403,9 +404,3 @@ In this article we covered:
 - How `golem-cli` applies this exact pattern in a real project
 
 This is the final article in the [Modern Python Application]({{ site.baseurl }}/how-to-set-up-your-next-python-project/) series. The three CLI posts together form a complete toolkit: argparse for zero-dependency scripts, Click for mature ecosystems, Typer for new projects where type safety and readability matter. For a deeper dive into the Command Pattern used throughout, the [Refactoring.Guru reference](https://refactoring.guru/design-patterns/command) is still the best starting point.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

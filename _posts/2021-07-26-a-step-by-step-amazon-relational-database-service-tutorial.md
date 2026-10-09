@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: A Step by step Amazon Relational Database Service tutorial
 post_series_id: getting-started-with-amazon-web-services
 slug: a-step-by-step-amazon-relational-database-service-tutorial

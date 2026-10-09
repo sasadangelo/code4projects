@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Amazon EBS Tutorial - Step by step Guide for Beginners
 post_series_id: getting-started-with-amazon-web-services
 slug: amazon-ebs-tutorial

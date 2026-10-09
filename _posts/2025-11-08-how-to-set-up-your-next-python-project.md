@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "How to Set Up Your Next Python Project"
 post_series_id: modern-python-application
 slug: how-to-set-up-your-next-python-project
@@ -245,9 +246,3 @@ Setting up a Python project is much more than just installing dependencies and w
 A clean environment, a consistent style, meaningful tests, and a solid Git strategy are the cornerstones of professional Python development. Once these foundations are in place, you can focus on what really matters — delivering value through great code.
 
 If you found this article useful, consider using the [python-boilerplate](https://github.com/sasadangelo/python-boilerplate) template as a starting point for your next project and adapting it to your team's workflow.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

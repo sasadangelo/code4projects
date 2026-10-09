@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 published: false
 title: How to install PostgreSQL cluster on Docker
 post_series_id: getting-started-with-docker

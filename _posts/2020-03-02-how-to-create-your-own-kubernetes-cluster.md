@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: How to create your own Kubernetes cluster
 post_series_id: getting-started-with-kubernetes
 slug: how-to-create-your-own-kubernetes-cluster

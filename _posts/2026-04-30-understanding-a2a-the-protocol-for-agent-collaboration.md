@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "Understanding A2A: The Protocol for Agent Collaboration"
 slug: understanding-a2a-the-protocol-for-agent-collaboration
 image: /assets/img/a2a-protocol-agent-collaboration.png
@@ -383,9 +384,3 @@ The key insights:
 As more companies adopt A2A, we'll see an ecosystem of interoperable agents emerge — much like the web emerged from HTTP standardization.
 
 The multi-agent future is here. A2A is the protocol that makes it possible.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

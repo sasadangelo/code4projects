@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "Managing Application Configuration in Python with Pydantic Settings"
 post_series_id: modern-python-application
 slug: managing-application-configuration-in-python-with-pydantic-settings
@@ -292,9 +293,3 @@ In this article we covered:
 - how this pattern scales to containerised applications using Kubernetes ConfigMaps
 
 This approach scales naturally from small scripts to complex, containerized applications, while keeping configuration explicit, validated, and under control. The next article in the series builds on this foundation — stay tuned.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

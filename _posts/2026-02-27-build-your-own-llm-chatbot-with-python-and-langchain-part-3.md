@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "Build Your Own LLM Chatbot with Python & LangChain (Part 3)"
 slug: build-your-own-llm-chatbot-with-python-and-langchain-part-3
 post_series_id:
@@ -326,9 +327,3 @@ This approach allows the LLM to leverage external knowledge dynamically, keeping
 In this third article, we added RAG to let our chatbot access **external knowledge dynamically** via a vector database. PDFs and Wikipedia pages are ingested, split into chunks, and the top-K relevant documents are retrieved to enrich LLM responses.
 
 Next, we'll implement a UI for a more user-friendly chatbot experience in [Part 4]({{ site.baseurl }}/build-your-own-llm-chatbot-with-python-and-langchain-part-4).
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

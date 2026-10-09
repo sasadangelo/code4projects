@@ -389,9 +389,3 @@ In this article we covered:
 - **Standardized error handling and Swagger documentation**: Returning machine-readable status codes and using tags and OpenAPI metadata to generate self-documenting APIs.
 
 The next article will put these architectural principles into practice: building a production-ready asynchronous REST API using **FastAPI**, with thread pools for blocking operations and dependency injection patterns.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

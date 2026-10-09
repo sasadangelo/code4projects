@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Video game programming principles
 post_series_id: android-game-programming
 slug: video-game-programming-principles

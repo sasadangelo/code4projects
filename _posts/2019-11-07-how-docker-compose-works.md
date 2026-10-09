@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 published: false
 title: How Docker Compose works
 post_series_id: getting-started-with-docker

@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "Getting Started with Docker and Podman"
 post_series_id: getting-started-with-docker-2025
 slug: getting-started-with-docker-2025
@@ -248,9 +249,3 @@ In this article we covered:
 - Running a custom web page with Nginx using only the official image
 
 The [next article]({{ site.baseurl }}/containers-vs-virtual-machines-2025/) goes deeper into the conceptual foundations: what actually makes a container different from a virtual machine, and what Linux kernel mechanisms make it all work.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

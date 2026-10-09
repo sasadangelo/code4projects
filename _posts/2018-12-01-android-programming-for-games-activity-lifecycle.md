@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Android Programming for Games (Activity Lifecycle)
 post_series_id: android-game-programming
 slug: android-programming-for-games-activity-lifecycle

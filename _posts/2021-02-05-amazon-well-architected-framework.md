@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Amazon Well Architected Framework and its 5 Pillars
 post_series_id: getting-started-with-amazon-web-services
 slug: amazon-well-architected-framework

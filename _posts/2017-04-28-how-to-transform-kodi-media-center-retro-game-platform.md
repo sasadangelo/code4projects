@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: How to transform your Kodi Media Center in a Game Platform
 post_series_id: raspberry-media-center
 slug: how-to-transform-kodi-media-center-retro-game-platform

@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "Build Your Own LLM Chatbot with Python & LangChain (Part 1)"
 slug: build-your-own-llm-chatbot-with-python-and-langchain-part-1
 post_series_id:
@@ -442,9 +443,3 @@ In this article, we built the foundation of a **multi-provider**, **multi-protoc
 - The context problem, highlighting the need for explicit conversation memory
 
 The [next step]({{ site.baseurl }}/build-your-own-llm-chatbot-with-python-and-langchain-part-2) will be to implement memory and context management, turning ChatterPy from a simple loop into a conversational agent capable of maintaining state and context across multiple interactions.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

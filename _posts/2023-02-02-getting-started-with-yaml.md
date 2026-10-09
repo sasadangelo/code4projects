@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "Getting Started with YAML: An Introduction to the Basics"
 post_series_id: getting-started-with-yaml
 slug: getting-started-with-yaml

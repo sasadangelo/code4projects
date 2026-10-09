@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Amazon Integrated Services (part 2)
 post_series_id: getting-started-with-amazon-web-services
 slug: amazon-integrated-services-3

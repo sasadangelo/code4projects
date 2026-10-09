@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Amazon Elastic Cloud Computing (EC2) for Beginners
 post_series_id: getting-started-with-amazon-web-services
 slug: amazon-ec2-for-beginners/

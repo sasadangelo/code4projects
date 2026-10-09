@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Let’s start building the Game Framework
 post_series_id: android-game-programming
 slug: lets-start-building-the-game-framework

@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "Building a Python CLI with Click: A Cleaner Approach to the Command Pattern"
 slug: building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern
 post_series_id:
@@ -277,9 +278,3 @@ In this article we covered:
 Click is a pragmatic choice: less boilerplate, stronger typing, and a cleaner architecture — an architecture that grows with the application. If using classes feels like overengineering for your use case, nothing prevents you from implementing commands as standalone functions instead. The pattern is flexible by design.
 
 The [next article]({{ site.baseurl }}/building-a-python-cli-with-typer-the-modern-approach-to-the-command-pattern/) completes the trilogy by rebuilding the same CLI with Typer — where type annotations replace decorators and help text is generated from docstrings.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

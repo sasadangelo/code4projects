@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "How Docker Networking Works"
 post_series_id: getting-started-with-docker-2025
 slug: how-docker-networking-works-2025
@@ -178,9 +179,3 @@ In this article we covered:
 - A practical example with frontend and backend containers communicating by name
 
 The [next article]({{ site.baseurl }}/how-docker-volumes-work/) covers **Docker volumes**: how to persist data outside a container so it survives restarts and replacements.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

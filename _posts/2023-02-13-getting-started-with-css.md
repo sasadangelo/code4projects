@@ -478,9 +478,3 @@ In this article we covered:
 - Three ways to include CSS: inline, internal, and external
 
 The [next article]({{ site.baseurl }}/building-professional-website-layout-with-css/) puts all of this into practice — building a real site layout with a header, navigation bar, social icons, a home page with a hero image, and a fully responsive mobile menu.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

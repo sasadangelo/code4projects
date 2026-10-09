@@ -230,11 +230,18 @@ header {
 #post-content .social-media-icon,
 #page-content .social-media-icon {
   color: #fff !important;
+  text-decoration: none !important;
+}
+
+#post-content a.social-media-icon,
+#page-content a.social-media-icon {
+  color: #fff !important;
+  text-decoration: none !important;
 }
 
 #post-content .social-media-icon svg,
 #page-content .social-media-icon svg {
-  fill: #fff;
+  fill: #fff !important;
 }
 
 .social-media-icon-x {
@@ -2542,6 +2549,16 @@ footer {
   color: #57606a;
 }
 
+.post-byline-social {
+  margin-top: 8px;
+  justify-content: flex-start;
+}
+
+.post-author-bio-social {
+  margin-top: 0;
+  justify-content: flex-start;
+}
+
 /*
  * ################################################################################
  * # Post Author Bio (bottom of article)
@@ -2567,7 +2584,7 @@ footer {
 .post-author-bio-text {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 0;
 }
 
 .post-author-bio-name {
@@ -2580,7 +2597,7 @@ footer {
 .post-author-bio-text p {
   font-size: 13px;
   color: #57606a;
-  margin: 4px 0 8px 0;
+  margin: 0;
   line-height: 1.6;
 }
 

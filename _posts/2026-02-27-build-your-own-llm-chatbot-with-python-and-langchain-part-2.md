@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "Build Your Own LLM Chatbot with Python & LangChain (Part 2)"
 slug: build-your-own-llm-chatbot-with-python-and-langchain-part-2
 post_series_id:
@@ -401,9 +402,3 @@ By combining these techniques, ChatterPy becomes a **robust**, **configurable**,
 In the next article, we will explore **RAG (Retrieval-Augmented Generation)**, allowing ChatterPy to access external knowledge sources and provide even more accurate and informed responses.
 
 This concludes Lesson 4–7 of the series; the full code for this part is [available here](https://github.com/sasadangelo/langchain-tutorials/tree/main/lesson-7).
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

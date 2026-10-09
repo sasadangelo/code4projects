@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "Building a Python Command Line Interface (CLI) with the Command Pattern"
 slug: building-a-python-cli-with-the-command-pattern
 post_series_id:
@@ -294,9 +295,3 @@ In this article we covered:
 The full source code is available on [sasadangelo/task-cli on GitHub](https://github.com/sasadangelo/task-cli) (v0.0.1). For a deeper dive into the Command Pattern itself, see the [Refactoring.Guru reference](https://refactoring.guru/design-patterns/command).
 
 The [next article]({{ site.baseurl }}/building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern/) rebuilds the same CLI with Click — shorter code, automatic type validation, and no shared `execute()` interface.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "Exploring the Depths of YAML: Advanced Features and Functionality"
 post_series_id: getting-started-with-yaml
 slug: yaml-advanced-feature

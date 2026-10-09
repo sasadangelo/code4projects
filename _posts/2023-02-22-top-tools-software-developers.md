@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "Best Software Developer Tools to Consider in 2023"
 slug: top-tools-software-developers
 image: /assets/img/top-software-development-tools.webp

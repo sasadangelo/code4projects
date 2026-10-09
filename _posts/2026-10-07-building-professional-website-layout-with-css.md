@@ -406,9 +406,3 @@ In this article we covered:
 - How to apply responsive design with the viewport meta tag, media queries, and a CSS-only hamburger menu
 
 The [next article]({{ site.baseurl }}/building-complete-website-pages-forms-gallery/) builds out the real content pages: About Me, Start Here, Resources, a Contacts form, and an interactive photo gallery — introducing HTML forms, CSS Grid, and the first JavaScript in the series.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

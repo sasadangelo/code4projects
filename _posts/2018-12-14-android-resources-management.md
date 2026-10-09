@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Android Resources Management
 post_series_id: android-game-programming
 slug: android-resources-management

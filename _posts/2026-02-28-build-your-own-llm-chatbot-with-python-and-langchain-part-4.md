@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "Build Your Own LLM Chatbot with Python & LangChain (Part 4)"
 slug: build-your-own-llm-chatbot-with-python-and-langchain-part-4
 post_series_id:
@@ -176,9 +177,3 @@ In this article, we added a Streamlit UI to transform our backend chatbot into a
 With proper session management, a clean page structure, and seamless integration with our existing `ChatBOT` logic, we now have a simple yet functional browser-based interface.
 
 This chatbot is the complete **ChatterPy** project, available on [GitHub](https://github.com/sasadangelo/langchain-tutorials). What started as a step-by-step tutorial has evolved into a fully structured, modular, and extensible AI application ready to grow further. The GitHub README also includes a video demo of the ChatBOT.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

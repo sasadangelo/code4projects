@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: BOSH for Beginners
 slug: bosh-for-beginners
 image: /wp-content/uploads/2019/06/bosh_logo.png

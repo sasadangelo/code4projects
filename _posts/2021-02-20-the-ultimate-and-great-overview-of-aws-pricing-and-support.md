@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: The Ultimate and Great Overview of AWS Pricing and Support
 post_series_id: getting-started-with-amazon-web-services
 slug: the-ultimate-and-great-overview-of-aws-pricing-and-support

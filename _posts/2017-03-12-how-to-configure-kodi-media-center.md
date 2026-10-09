@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: How to Configure Kodi Media Center
 post_series_id: raspberry-media-center
 slug: how-to-configure-kodi-media-center

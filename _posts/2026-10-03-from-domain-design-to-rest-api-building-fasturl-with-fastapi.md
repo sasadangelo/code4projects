@@ -272,9 +272,3 @@ In this article we covered:
 - **Resource hierarchy derived from the domain**: five management endpoints plus a public redirect endpoint, each with a clear ownership and a precise set of status codes.
 
 The [next article]({{ site.baseurl }}/layered-architecture-with-fastapi-routers-services-and-repositories/) walks through the layered code structure that makes all of this work: how routers, services, repositories, and the dependency injection system are organized to keep each concern in its own place.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

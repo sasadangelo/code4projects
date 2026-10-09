@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Amazon Web Services (AWS) Introduction
 post_series_id: getting-started-with-amazon-web-services
 slug: amazon-web-services

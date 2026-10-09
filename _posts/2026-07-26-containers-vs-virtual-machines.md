@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "Containers vs Virtual Machines"
 post_series_id: getting-started-with-docker-2025
 slug: containers-vs-virtual-machines-2025
@@ -154,9 +155,3 @@ In this article we covered:
 - Why containers and VMs are complementary, not competing
 
 The [next article]({{ site.baseurl }}/dockerfile-and-building-custom-images/) focuses on **Dockerfiles**: how to write your own image definition and build a custom container image from scratch.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

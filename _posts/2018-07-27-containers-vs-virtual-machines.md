@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 published: false
 title: Containers vs Virtual Machines
 post_series_id: getting-started-with-docker

@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: How to create an Android application
 post_series_id: android-game-programming
 slug: how-to-create-an-android-application

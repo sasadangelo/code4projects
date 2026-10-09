@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: How to build a Raspberry Media Center
 post_series_id: raspberry-media-center
 slug: raspberry-media-center

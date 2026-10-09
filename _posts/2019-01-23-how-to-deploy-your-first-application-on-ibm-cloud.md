@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: How to deploy your first application on IBM Cloud
 post_series_id: getting-started-with-cloud-computing
 slug: how-to-deploy-your-first-application-on-ibm-cloud

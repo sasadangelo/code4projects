@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Android Game Programming
 post_series_id: android-game-programming
 slug: android-game-programming

@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: How I use Kubernetes ConfigMaps to manage configurations
 post_series_id: getting-started-with-kubernetes
 slug: how-to-use-kubernetes-configmaps

@@ -479,9 +479,3 @@ In this article we covered:
 - Converting the results dict to a WhatsApp-ready string with a plain synchronous `format_news` function — keeping async code at the I/O boundary and normal Python everywhere else.
 
 The [next article]({{ site.baseurl }}/building-a-python-cli-with-the-command-pattern/) starts a three-part mini-series on Python CLI development — building the same Task Manager CLI first with `argparse` and the Command Pattern, then with Click, then with Typer.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

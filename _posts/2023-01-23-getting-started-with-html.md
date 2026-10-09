@@ -373,15 +373,3 @@ In this article we covered:
 
 The [next article]({{ site.baseurl }}/mastering-basics-css/) covers CSS theory — selectors, the box model, typography, colours, and responsive design. After that, [Part 2 of the series]({{ site.baseurl }}/building-professional-website-layout-with-css/) applies those concepts to build a real styled layout with a header, navigation bar, and responsive home page.
 
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.
-
-
-
-
-
-
-

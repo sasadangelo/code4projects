@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Design Patterns in Game Programming
 post_series_id: android-game-programming
 slug: design-patterns-in-game-programming

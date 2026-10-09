@@ -110,7 +110,7 @@ This means every post must have at least one meaningful tag in its front matter.
 - Substack CTA at the bottom
 - **Effort: medium** — 1–2 hours of writing
 
-### 2c. Author bio at the bottom of every article
+### 2c. Author bio at the bottom of every article ✅
 
 `_layouts/post.html` has no author bio. A block needs to be added after the content with:
 - Photo + 2 lines ("Salvatore D'Angelo, software engineer with 30+ years of experience in AI, Cloud, and architecture. Writes at code4projects.org.")

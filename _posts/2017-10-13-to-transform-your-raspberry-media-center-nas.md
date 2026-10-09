@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: How to transform your Raspberry Media Center in a NAS
 post_series_id: raspberry-media-center
 slug: to-transform-your-raspberry-media-center-nas

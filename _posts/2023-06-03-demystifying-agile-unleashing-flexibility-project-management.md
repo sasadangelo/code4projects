@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "Agile Methodology: A Practical Guide to Flexible Project Management"
 slug: demystifying-agile-unleashing-flexibility-project-management
 image: /assets/img/agile.webp

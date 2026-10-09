@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: Android Files Management
 post_series_id: android-game-programming
 slug: android-files-management

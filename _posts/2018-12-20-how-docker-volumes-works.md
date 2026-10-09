@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 published: false
 title: How Docker Volumes works
 post_series_id: getting-started-with-docker

@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: "How Docker Compose Works"
 post_series_id: getting-started-with-docker-2025
 slug: how-docker-compose-works-2025
@@ -220,9 +221,3 @@ In this article we covered:
 - How to manage configuration with **environment variables** and `.env` files
 
 The [next article]({{ site.baseurl }}/docker-security-best-practices/) closes the series with **Docker security best practices**: how to run containers safely, limit their privileges, and scan images for vulnerabilities.
-
----
-
-If you enjoyed this article, don't forget to **give it a clap 👏**, **share it with your friends 🔗**, and **follow me for more tips and tutorials on software development 📘**. Your support helps me create more content like this — thank you! 🙌
-
-**Note**: English is not my native language, and this article was drafted with the assistance of AI. However, all the ideas, projects, concepts, and content are entirely my own.

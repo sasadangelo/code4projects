@@ -1,5 +1,6 @@
 ---
 layout: post
+author: sasadangelo
 title: A Step by step tutorial to create your first Elastic Load Balancer
 post_series_id: getting-started-with-amazon-web-services
 slug: elastic-load-balancer-tutorial
