@@ -10,9 +10,6 @@ categories: Android
 
 ![Android Resources Management]({{ site.baseurl }}/wp-content/uploads/2018/12/Resource_Management_mini.png){:width="200" height="112" .responsive_img}
 
-# Android Resources Management
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the ninth article of the [Android Game Programming]({{ site.baseurl }}/android-game-programming/) series. In this article, I will discuss how to manage **resources** in Android.
 
 In Android applications, Java code calls internal project elements such as XML files,  strings, numbers, images, and more. The best way to keep all these “values” available to the application is to place them in the project folder called **res** and manage them using the appropriate resource mechanism.

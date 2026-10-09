@@ -9,9 +9,6 @@ categories:
   - "Programming"
 ---
 
-# Logging in a Flask Application with Loguru
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![Logging in a Flask Application with Loguru]({{ site.baseurl }}/assets/img/loguru-hero.webp){:width="760" height="400" .responsive_img}
 
 ## Introduction

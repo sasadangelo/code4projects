@@ -9,9 +9,6 @@ categories:
   - Virtualization
 ---
 
-# Docker Image Best Practices
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![Docker Image Best Practices]({{ site.baseurl }}/assets/img/docker-best-practices.svg){:width="760" height="400" .responsive_img}
 
 ## Introduction

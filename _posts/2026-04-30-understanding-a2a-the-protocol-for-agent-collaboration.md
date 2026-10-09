@@ -11,9 +11,6 @@ post_series_id:
   - generative-and-agentic-ai
 ---
 
-# Understanding A2A: The Protocol for Agent Collaboration
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![Understanding A2A: The Protocol for Agent Collaboration]({{ site.baseurl }}/assets/img/a2a-protocol-agent-collaboration.png)
 
 ## Introduction

@@ -10,9 +10,6 @@ categories: Cloud
 
 ![Amazon EBS Tutorial: Step by step Guide for Beginners]({{ site.baseurl }}/wp-content/uploads/2021/06/Amazon_EBS.png){:width="200" height="200" .responsive_img}
 
-# Amazon EBS Tutorial: Step by step Guide for Beginners
-_Posted on **{{ page.date | date_to_string }}**_
-
 In the [previous article]({{ site.baseurl }}/amazon-elastic-block-storage/), I talked about Amazon Elastic Block Storage (EBS) service and this is a hands-on tutorial the will help you to learn how to use this service.
 
 ## How to create an EBS volume and attach it to your EC2 instance

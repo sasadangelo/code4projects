@@ -10,9 +10,6 @@ categories: Cloud
 
 ![Introduction to the IBM Cloud platform]({{ site.baseurl }}/wp-content/uploads/2019/01/IBM-Cloud.png){:width="327" height="200" .responsive_img}
 
-# Introduction to the IBM Cloud platform
-_Posted on **{{ page.date | date_to_string }}**_
-
 In the [previous article,]({{ site.baseurl }}/getting-started-with-cloud-computing/) we talked about Cloud Computing in very general terms. In this article, I would like to go into the details of Cloud Computing to understand how the theoretical concepts apply in practice. The platform I chose for this analysis is [IBM Cloud](https://www.ibm.com/cloud/).  
 
 IBM Cloud is the IBM cloud computing platform that combines Infrastructure as a service  (IaaS), platform as a service (PaaS), container as a service (CaaS), and Function as a Service (FaaS). Additionally, it has a rich catalog of over 170 services that can be easily integrated with PaaS and IaaS to build business applications rapidly.

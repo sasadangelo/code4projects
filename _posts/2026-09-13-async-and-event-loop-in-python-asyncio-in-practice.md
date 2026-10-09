@@ -13,9 +13,6 @@ categories:
   - "Programming"
 ---
 
-# Async and the Event Loop in Python: asyncio in Practice
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![Async and the Event Loop in Python: asyncio in Practice]({{ site.baseurl }}/assets/img/async-and-event-loop-in-python-asyncio-in-practice-hero.jpg){:width="760" height="400" .responsive_img}
 
 ## Introduction

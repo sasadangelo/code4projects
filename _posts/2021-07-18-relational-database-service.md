@@ -10,9 +10,6 @@ categories: Cloud
 
 ![Relational Database Service (RDS): What Is It and How Does It Work?]({{ site.baseurl }}/wp-content/uploads/Amazon-RDS.png){:width="200" height="200" .responsive_img}
 
-# Relational Database Service (RDS): What Is It and How Does It Work?
-_Posted on **{{ page.date | date_to_string }}**_
-
 In this article, I am going to discuss Amazon Relational Database Service, a managed service to quickly deploy a database for your application. You will learn what is available in the AWS platform and how you can reduce your application time to market.
 
 Amazon Relational Database Service (RDS) is a managed database service that allows, with a single click, to create a database, configure it (also in HA), and manage backups automatically. If you have experience in building applications you know that you can keep data in several places (file, remote storage, etc.) included a database. However, managing the database infrastructure is not easy. You need to manage the following items:

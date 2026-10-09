@@ -7,14 +7,11 @@ image: /assets/img/html.webp
 excerpt: Learn HTML from scratch — build a real five-page website with headings, paragraphs, links, lists, and images, step by step.
 categories:
   - Programming
-author: Salvatore D'Angelo
+author: sasadangelo
 ---
 
 ![Getting Started with HTML: A Beginner's Guide]({{ site.baseurl }}/assets/img/html.webp){:width="760" height="400" .responsive_img}
 
-# Getting Started with HTML: A Beginner's Guide
-
-_Posted on **{{ page.date | date_to_string }}**_
 
 ## Introduction
 

@@ -9,9 +9,6 @@ categories:
   - Virtualization
 ---
 
-# How Docker Volumes Work
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![How Docker Volumes Work]({{ site.baseurl }}/assets/img/docker-volumes.svg){:width="760" height="400" .responsive_img}
 
 ## Introduction

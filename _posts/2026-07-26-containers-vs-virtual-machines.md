@@ -9,9 +9,6 @@ categories:
   - Virtualization
 ---
 
-# Containers vs Virtual Machines
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![Containers vs Virtual Machines]({{ site.baseurl }}/assets/img/docker-containers-vs-vms.svg){:width="760" height="400" .responsive_img}
 
 ## Introduction

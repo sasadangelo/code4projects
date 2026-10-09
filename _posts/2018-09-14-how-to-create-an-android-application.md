@@ -12,9 +12,6 @@ categories:
 
 ![How to create an Android application]({{ site.baseurl }}/wp-content/uploads/2018/09/android-app-feature-picture.png){:width="267" height="200" .responsive_img}
 
-# How to create an Android application
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the third article of the [Android Game Programming]({{ site.baseurl }}/android-game-programming/) series. Here I would like to explain, step by step, how to create your first Android application. It will be the starting point for the development of your first Android video game.
 
 ## Create your first Android application

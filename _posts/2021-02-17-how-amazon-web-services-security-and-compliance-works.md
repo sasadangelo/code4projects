@@ -10,9 +10,6 @@ categories: Cloud
 
 ![How Amazon Web Services Security and Compliance works]({{ site.baseurl }}/wp-content/uploads/2021/02/aws-security-mini.png){:width="356" height="200" .responsive_img}
 
-# How Amazon Web Services Security and Compliance works
-_Posted on **{{ page.date | date_to_string }}**_
-
 In this article, I will give an overview of how Amazon Web Services Security and Compliance work.
 
 ## Introduction to Amazon Web Services Security

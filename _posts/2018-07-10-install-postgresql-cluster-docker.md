@@ -13,9 +13,6 @@ categories:
 
 ![How to install PostgreSQL cluster on Docker]({{ site.baseurl }}/wp-content/uploads/2018/07/database-cluster.png){:width="385" height="200" .responsive_img}
 
-# How to install PostgreSQL cluster on Docker
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the fifth article of the [Getting started with Docker]({{ site.baseurl }}/getting-started-with-docker/) series. In this article, I am going to show how to install a PostgreSQL cluster on three Docker containers.
 
 The cluster will be configured in master/slave mode with one master and two slaves. PostgreSQL supports two cluster type: **hot** and **warm standby**. The former allows the slave to receive connections in read-only, the latter doesn’t allow the slaves to receive connections. In this tutorial, we will configure the cluster as hot standby.

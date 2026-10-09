@@ -10,9 +10,6 @@ categories: Cloud
 
 ![Amazon Elastic Block Storage (EBS) vs Elastic File Storage (EFS)]({{ site.baseurl }}/wp-content/uploads/2021/03/HDD-SDD-mini.png){:width="356" height="200" .responsive_img}
 
-# Amazon Elastic Block Storage (EBS) vs Elastic File Storage (EFS)
-_Posted on **{{ page.date | date_to_string }}**_
-
 In this article, I am going to talk about Amazon Elastic Block Storage (EBS) and Elastic File Storage (EFS). **Storage** is the second most important service category in AWS after Compute. AWS supports three Storage categories: **Block**, **File**, and **Object Storage**. Object Storage will be the subject of a future article.
 
 ### Amazon EBS Service

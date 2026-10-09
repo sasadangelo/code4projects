@@ -11,9 +11,6 @@ categories:
 
 ![BOSH for Beginners]({{ site.baseurl }}/wp-content/uploads/2019/06/bosh_logo.png){:width="200" height="200" .responsive_img}
 
-# BOSH for Beginners
-_Posted on **{{ page.date | date_to_string }}**_
-
 In this article, I want to explain what Bosh is, its main concepts, and how to use it practically to deploy software.
 
 ## What is BOSH?

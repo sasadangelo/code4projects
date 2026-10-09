@@ -10,9 +10,6 @@ categories: Cloud
 
 ![A Step by step Amazon Relational Database Service tutorial]({{ site.baseurl }}/wp-content/uploads/rds-logo.png){:width="393" height="200" .responsive_img}
 
-# A Step by step Amazon Relational Database Service tutorial
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is a step-by-step Relational Database Service tutorial to show you how you can easily create a database with the Amazon platform. In the [previous article]({{ site.baseurl }}/relational-database-service/), I showed you the theory behind the Relational Database Service (RDS), here I will show you how to put those concepts into practice.
 
 ## How to Create a MySQL database

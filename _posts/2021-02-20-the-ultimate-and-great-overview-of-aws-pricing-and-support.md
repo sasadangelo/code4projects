@@ -10,9 +10,6 @@ categories: Cloud
 
 ![The Ultimate and Great Overview of AWS Pricing and Support]({{ site.baseurl }}/wp-content/uploads/2021/02/AWS-Pricing.jpg){:width="316" height="200" .responsive_img}
 
-# The Ultimate and Great Overview of AWS Pricing and Support
-_Posted on **{{ page.date | date_to_string }}**_
-
 In this article, I want to show my understanding of AWS Pricing and Support. We will discuss the Amazon policies about pricing and the tool and services that help customers optimize costs and have them under control.
 
 ### Introduction to the AWS Pricing

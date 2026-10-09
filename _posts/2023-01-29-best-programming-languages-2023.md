@@ -12,7 +12,6 @@ categories:
 
 # The Top Programming Languages to Learn in 2023: A Comprehensive Guide
 
-_Posted on **{{ page.date | date_to_string }}**_
 
 ## Programming languages to watch out for in 2023
 

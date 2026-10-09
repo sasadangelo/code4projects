@@ -12,9 +12,6 @@ categories:
 
 ![Android Files Management]({{ site.baseurl }}/wp-content/uploads/2018/12/android-file.jpg){:width="280" height="197" .responsive_img}
 
-# Android Files Management
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the eighth article of the [Android Game Programming]({{ site.baseurl }}/android-game-programming/) series. In this article, I will discuss how to manage **files** in Android.
 
 ## File Management

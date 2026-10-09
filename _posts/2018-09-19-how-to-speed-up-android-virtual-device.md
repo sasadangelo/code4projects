@@ -10,9 +10,6 @@ categories: Android
 
 ![How to speed up Android Virtual Device]({{ site.baseurl }}/wp-content/uploads/2018/09/android_virtual_device-mini.jpg){:width="216" height="200" .responsive_img}
 
-# How to speed up Android Virtual Device
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the fourth article of the [Android Game Programming]({{ site.baseurl }}/android-game-programming/) series. Here I would like to explain, step by step, how to speed up Android Virtual devices to run your video game with acceptable performance on Intel processors.
 
 ## The Problem

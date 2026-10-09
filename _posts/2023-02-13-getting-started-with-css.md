@@ -7,14 +7,11 @@ image: /assets/img/css-logo.webp
 excerpt: Master the core CSS concepts — selectors, the box model, layout, typography, colours, animations, and responsive design — and apply them to a real website.
 categories:
   - Programming
-author: Salvatore D'Angelo
+author: sasadangelo
 ---
 
 ![CSS Logo]({{ site.baseurl }}/assets/img/css-logo.webp){:width="760" height="400" .responsive_img}
 
-# Mastering the Basics of CSS: A Beginner's Guide
-
-_Posted on **{{ page.date | date_to_string }}**_
 
 ## Introduction
 

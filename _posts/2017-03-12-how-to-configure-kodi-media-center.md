@@ -10,9 +10,6 @@ categories: Multimedia
 
 ![How to Configure Kodi Media Center]({{ site.baseurl }}/wp-content/uploads/2017/03/Remote-Control-mini.jpg){:width="200" height="267" .responsive_img}
 
-# How to Configure Kodi Media Center
-_Posted on **{{ page.date | date_to_string }}**_
-
 In this article, I would like to show you how to configure your Kodi Media Center. I assume [you already bought all the necessary components to build it]({{ site.baseurl }}/raspberry-media-center/) and you’re media center is ready to be configured.
 
 ![Hector TV Box]({{ site.baseurl }}/wp-content/uploads/2016/12/Hector_TV_Box.jpg){:width="450" height="397" .responsive_img}

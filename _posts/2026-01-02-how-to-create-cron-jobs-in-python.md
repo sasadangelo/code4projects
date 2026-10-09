@@ -9,9 +9,6 @@ categories:
   - "Programming"
 ---
 
-# How to Create Cron Jobs in Python for Your Applications
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![How to Create Cron Jobs in Python for Your Applications]({{ site.baseurl }}/assets/img/how-to-create-cron-jobs-in-python.webp){:width="600" height="400" .responsive_img}
 
 ## Introduction

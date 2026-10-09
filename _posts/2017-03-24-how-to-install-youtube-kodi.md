@@ -10,9 +10,6 @@ categories: Multimedia
 
 ![How to install Youtube Add-on on your Kodi Media Center]({{ site.baseurl }}/wp-content/uploads/2017/03/youtube.png){:width="200" height="200" .responsive_img}
 
-# How to install Youtube Add-on on your Kodi Media Center
-_Posted on **{{ page.date | date_to_string }}**_
-
 In this article, I would like to show you how to install a Youtube add-on on Kodi. This add-on is one of the most important for Kodi media center because it allows you to watch Youtube videos on your TV.
 
 ## Install Youtube Add-on

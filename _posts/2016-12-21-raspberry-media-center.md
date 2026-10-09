@@ -14,9 +14,6 @@ sitemap:
 
 ![How to build a Raspberry Media Center]({{ site.baseurl }}/wp-content/uploads/2020/07/Hector_TV_Box-min-e1596192046917.jpg){:width="267" height="200" .responsive_img}
 
-# How to build a Raspberry Media Center
-_Posted on **{{ page.date | date_to_string }}**_
-
 In this article series, I would like to show you how to build a Raspberry Media Center with an HDD and enclosure. This article will discuss only the hardware I bought and assembled to create it. The name of this Media Center solution is **Hector**.
 
 ## The Problem

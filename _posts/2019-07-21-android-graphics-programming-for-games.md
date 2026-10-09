@@ -12,9 +12,6 @@ categories:
 
 ![Android Graphics Programming for Games]({{ site.baseurl }}/wp-content/uploads/2019/07/Blue-bot-paint.jpg){:width="355" height="200" .responsive_img}
 
-# Android Graphics Programming for Games
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the tenth article of the [Android Game Programming]({{ site.baseurl }}/android-game-programming/) series. In this article, I will talk about android graphics programming and how to use it to implement our video game.
 
 ## How to draw a bitmap

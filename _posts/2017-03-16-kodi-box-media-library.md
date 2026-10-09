@@ -10,9 +10,6 @@ categories: Multimedia
 
 ![How to transform your Kodi Box in a Netflix-like platform]({{ site.baseurl }}/wp-content/uploads/2017/03/Kodi_Movies-Library-mini.png){:width="200" height="112" .responsive_img}
 
-# How to transform your Kodi Box in a Netflix-like platform
-_Posted on **{{ page.date | date_to_string }}**_
-
 In this article, I’ll show you how to transform your Kodi Box in a Netflix-like platform. Before you read this article I assume:
 
 1. you already [built your own Kodi Media Center following these instructions]({{ site.baseurl }}/raspberry-media-center/);

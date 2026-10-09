@@ -11,9 +11,6 @@ categories:
 
 ![YAML]({{ site.baseurl }}/assets/img/yaml-advanced.webp){:width="356" height="200" .responsive_img}
 
-# Exploring the Depths of YAML: Advanced Features and Functionality
-
-_Posted on **{{ page.date | date_to_string }}**_
 
 ## Introduction
 

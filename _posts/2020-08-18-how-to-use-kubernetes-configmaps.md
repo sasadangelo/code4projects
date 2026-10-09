@@ -10,9 +10,6 @@ categories: Virtualization
 
 ![Kubernetes ConfigMap]({{ site.baseurl }}/wp-content/uploads/2020/08/kubernetes-configmap.jpg){:width="231" height="200" .responsive_img}
 
-# How I use Kubernetes ConfigMaps to manage configurations
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the third article of the [Getting Started with Kubernetes]({{ site.baseurl }}/getting-started-with-kubernetes/) series. Here I would like to explain how to manage application configuration with Kubernetes **ConfigMaps**.
 
 ##  The “Anatomy” of an Application

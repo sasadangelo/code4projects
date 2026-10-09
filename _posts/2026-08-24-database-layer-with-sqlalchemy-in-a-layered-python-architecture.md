@@ -9,9 +9,6 @@ categories:
   - "Programming"
 ---
 
-# Building a Database Layer in Python with SQLAlchemy ORM
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![Building a Database Layer in Python with SQLAlchemy ORM]({{ site.baseurl }}/assets/img/database-layer-with-sqlalchemy-python.jpg){:width="760" height="400" .responsive_img}
 
 ## Introduction

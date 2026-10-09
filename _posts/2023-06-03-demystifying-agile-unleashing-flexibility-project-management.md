@@ -11,7 +11,6 @@ categories:
 ![Agile]({{ site.baseurl }}/assets/img/agile.webp){:width="295" height="200" .responsive_img}
 
 # Demystifying Agile: Unleashing the Power of Flexibility in Project Management
-_Posted on **{{ page.date | date_to_string }}**_
 
 ## Introduction
 

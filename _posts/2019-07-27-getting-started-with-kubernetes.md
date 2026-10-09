@@ -17,9 +17,6 @@ sitemap:
 
 ![Kubernetes]({{ site.baseurl }}/wp-content/uploads/2019/06/Kubernetes.png){:width="206" height="200" .responsive_img}
 
-# Getting Started with Kubernetes
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the first article of the **Getting Started with Kubernetes** article series. In this article, I would like to give you a brief introduction to Kubernetes. This will be the first step to show you how to deploy applications on it.
 
 ## What is Kubernetes?

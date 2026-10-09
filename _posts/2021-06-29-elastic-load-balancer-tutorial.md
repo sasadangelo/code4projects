@@ -10,9 +10,6 @@ categories: Cloud
 
 ![A Step by step tutorial to create your first Elastic Load Balancer]({{ site.baseurl }}/wp-content/uploads/2021/06/Elastic-Load-Balancer.png){:width="215" height="200" .responsive_img}
 
-# A Step by step tutorial to create your first Elastic Load Balancer
-_Posted on **{{ page.date | date_to_string }}**_
-
 In this article, I want to show you how to create your first AWS Elastic Load Balancer. Load Balancers are an essentials tool to improve the availability and scalability of the applications running on EC2 instances.
 
 ## Create your Application running on two EC2 instances

@@ -14,9 +14,6 @@ sitemap:
 
 ![Amazon Web Services (AWS) Introduction]({{ site.baseurl }}/wp-content/uploads/2021/01/Amazon-Web-Services.png){:width="200" height="200" .responsive_img}
 
-# Amazon Web Services (AWS) Introduction
-_Posted on **{{ page.date | date_to_string }}**_
-
 This article is an introduction to the Amazon Web Services (AWS) platform.
 
 ## What is the Amazon Web Services platform?

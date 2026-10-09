@@ -10,9 +10,6 @@ categories:
 date: 2025-12-30
 ---
 
-# Managing Application Configuration in Python with Pydantic Settings
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![Managing Application Configuration in Python with Pydantic Settings]({{ site.baseurl }}/assets/img/python-application-configuration.webp){:width="760" height="400" .responsive_img}
 
 ## Introduction

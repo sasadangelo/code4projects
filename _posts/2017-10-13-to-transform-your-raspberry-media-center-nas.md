@@ -10,9 +10,6 @@ categories: Multimedia
 
 ![How to transform your Raspberry Media Center in a NAS]({{ site.baseurl }}/wp-content/uploads/2017/10/Raspberry_Samba.jpg){:width="200" height="200" .responsive_img}
 
-# How to transform your Raspberry Media Center in a NAS
-_Posted on **{{ page.date | date_to_string }}**_
-
 In this article, I would like to show you how to transform your Raspberry Media Center in a Network Attached Server (NAS) and share your media files (movies, tv-series, ebooks, music, documents, etc.) across your home network.
 
 I use this feature to browse media files, hosted on my media center, from my PC (Windows or Mac), Tablet or Phone. This is very useful to organize photos, movies, TV series, and read e-books.

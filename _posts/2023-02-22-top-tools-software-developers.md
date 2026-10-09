@@ -11,7 +11,6 @@ categories:
 ![Top Software Developer Tools]({{ site.baseurl }}/assets/img/top-software-development-tools.webp){:width="402" height="200" .responsive_img}
 
 # Top Tools Every Software Developer Should Consider in 2023
-_Posted on **{{ page.date | date_to_string }}**_
 
 ## Introduction
 

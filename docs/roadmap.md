@@ -101,7 +101,7 @@ This means every post must have at least one meaningful tag in its front matter.
 
 **Default ebook (fallback):** articles with no matching tag show a generic lead magnet — e.g. "The Best of Code4Projects" or "Software Engineering Essentials" — so that no article ever runs without a conversion opportunity. This default ebook needs to be created once and wired as the fallback in the post layout.
 
-### 2b. Rewrite the Start Here page
+### 2b. Rewrite the Start Here page ✅
 
 `start-here.md` exists but dates from 2019. It needs to be updated with:
 - Current positioning (AI, DevOps, Software Architecture)
@@ -142,10 +142,6 @@ When you start: do not promote articles — share **insights**. "I have worked o
 ### LinkedIn — medium priority
 
 More useful than Twitter for the consulting/speaker target. Every published article becomes a LinkedIn post with the central point extracted as a strong thesis. Investment: 15 minutes per article.
-
-### Facebook — do not invest
-
-The senior technical audience does not use Facebook to consume technical content. Zero time.
 
 ---
 
@@ -188,8 +184,8 @@ Tool to build: a Python script that queries the GSC API and produces an automati
 | 1 | Keep writing (follow EDITORIAL_PLAN) | High (ongoing) | High | Always |
 | 2 | Import "How LLMs Work" from Medium | Low | Medium | Next week |
 | 3 | Connect Substack to Docker lead magnet | Low | High | Next 2 weeks |
-| 4 | Author bio at the bottom of articles | Low | Medium | Next 2 weeks |
-| 5 | Rewrite Start Here page | Medium | Medium | Next month |
+| 4 | ~~Author bio + byline on articles~~ ✅ Done | Low | Medium | ~~Next 2 weeks~~ |
+| 5 | ~~Rewrite Start Here page~~ ✅ Done | Medium | Medium | ~~Next month~~ |
 | 6 | Change Medium strategy (only Part 1 of each series) | Low | Medium | Next month |
 | 7 | LinkedIn (post per article) | Low (15 min/article) | Medium | From Kubernetes 2026 launch |
 | 8 | Twitter/X | Low/Medium | Low now | After 2 ebooks published |

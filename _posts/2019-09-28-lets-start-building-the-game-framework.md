@@ -12,9 +12,6 @@ categories:
 
 ![Let's start building the Game Framework]({{ site.baseurl }}/wp-content/uploads/2019/09/game-framework.jpg){:width="312" height="200" .responsive_img}
 
-# Let's start building the Game Framework
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the eleventh article of the [Android Game Programming]({{ site.baseurl }}/android-game-programming/) series. Starting from this article we will begin to add very significant classes to our Game Framework.
 
 ## Graphics interface

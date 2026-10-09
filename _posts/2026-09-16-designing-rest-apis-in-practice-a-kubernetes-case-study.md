@@ -13,9 +13,6 @@ categories:
   - "Programming"
 ---
 
-# Designing REST APIs in Practice: A Kubernetes Case Study
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![Designing REST APIs in Practice: A Kubernetes Case Study]({{ site.baseurl }}/assets/img/designing-rest-apis-in-practice-a-kubernetes-case-study-hero.png){:width="760" height="400" .responsive_img}
 
 ## Introduction

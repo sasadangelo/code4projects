@@ -11,9 +11,6 @@ categories:
 
 ![YAML]({{ site.baseurl }}/assets/img/yaml-logo.webp){:width="200" height="200" .responsive_img}
 
-# Getting Started with YAML: An Introduction to the Basics
-
-_Posted on **{{ page.date | date_to_string }}**_
 
 ## Introduction
 

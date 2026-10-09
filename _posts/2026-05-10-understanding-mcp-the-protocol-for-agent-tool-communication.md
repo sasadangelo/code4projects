@@ -11,9 +11,6 @@ post_series_id:
   - generative-and-agentic-ai
 ---
 
-# Understanding MCP: The Protocol for Agent-Tool Communication
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![Understanding MCP: The Protocol for Agent-Tool Communication]({{ site.baseurl }}/assets/img/understanding-mcp-protocol.png)
 
 ## Introduction

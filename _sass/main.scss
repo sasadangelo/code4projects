@@ -227,28 +227,38 @@ header {
   height: 18px;
 }
 
-.social-media-icon-facebook {
-  background: -webkit-gradient(linear,left bottom,left top,color-stop(0,#597ac7),color-stop(1,#6483cb));
-  border: 1px solid #466bc1;
+#post-content .social-media-icon,
+#page-content .social-media-icon {
+  color: #fff !important;
 }
 
-.social-media-icon-twitter {
-  background: -webkit-gradient(linear,left bottom,left top,color-stop(0,#5bbcec),color-stop(1,#69c2ee));
-  border: 1px solid #44b3e9;
+#post-content .social-media-icon svg,
+#page-content .social-media-icon svg {
+  fill: #fff;
+}
+
+.social-media-icon-x {
+  background: #000000;
+  border: 1px solid #000000;
+}
+
+.social-media-icon-substack {
+  background: #e06b28;
+  border: 1px solid #d05e20;
 }
 
 .social-media-icon-linkedin {
-  background: -webkit-gradient(linear,left bottom,left top,color-stop(0,#0070b4),color-stop(1,#007ac3));
+  background: #0077b5;
   border: 1px solid #00609b;
 }
 
 .social-media-icon-youtube {
-  background: -webkit-gradient(linear,left bottom,left top,color-stop(0,#ff3635),color-stop(1,#ff4544));
-  border: 1px solid #ff1d1b;
+  background: #ff0000;
+  border: 1px solid #cc0000;
 }
 
 .social-media-icon-github {
-  background: -webkit-gradient(linear,left bottom,left top,color-stop(0,#333333),color-stop(1,#3b3b3b));
+  background: #333333;
   border: 1px solid #262626;
 }
 
@@ -2436,6 +2446,158 @@ footer {
 .newsletter-post-image {
   padding: 20px;
   margin: auto auto;
+}
+
+/*
+ * ################################################################################
+ * # Author Profile Page
+ * ################################################################################
+ */
+.author-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0 0 1.5em 0;
+}
+
+.author-profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.author-profile-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.author-profile-position {
+  font-size: 14px;
+  color: #57606a;
+}
+
+.author-profile-links {
+  display: flex;
+  gap: 12px;
+}
+
+.author-profile-links a {
+  font-size: 13px;
+  font-weight: 600;
+  color: #3b82d4;
+  text-decoration: none;
+}
+
+.author-profile-links a:hover {
+  text-decoration: underline;
+}
+
+/*
+ * ################################################################################
+ * # Post Byline (Medium-style, below hero image)
+ * ################################################################################
+ */
+.post-byline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 1.5em 0;
+}
+
+.post-byline-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.post-byline-meta {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.post-byline-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2328;
+  text-decoration: none;
+}
+
+.post-byline-name:hover {
+  text-decoration: underline;
+  color: #1f2328;
+}
+
+.post-byline-avatar {
+  display: block;
+}
+
+.post-byline-details {
+  font-size: 15px;
+  color: #57606a;
+}
+
+/*
+ * ################################################################################
+ * # Post Author Bio (bottom of article)
+ * ################################################################################
+ */
+.post-author-bio {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 24px;
+  margin: 2em 0 1.5em 0;
+}
+
+.post-author-bio-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.post-author-bio-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.post-author-bio-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1f2328;
+  display: block;
+}
+
+.post-author-bio-text p {
+  font-size: 13px;
+  color: #57606a;
+  margin: 4px 0 8px 0;
+  line-height: 1.6;
+}
+
+.post-author-bio-links {
+  display: flex;
+  gap: 12px;
+}
+
+.post-author-bio-links a {
+  font-size: 13px;
+  font-weight: 600;
+  color: #3b82d4;
+  text-decoration: none;
+}
+
+.post-author-bio-links a:hover {
+  text-decoration: underline;
 }
 
 /*

@@ -15,9 +15,6 @@ sitemap:
 
 ![Docker]({{ site.baseurl }}/wp-content/uploads/2018/06/Docker-logo.png){:width="258" height="200" .responsive_img}
 
-# Getting Started with Docker
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the first article of **Getting started with Docker** series. Here I would like to explain what is Docker and how I use it in my day by day job. To make this series more practical, I will show you how to write your first “Hello World!” containerized application. In the next articles, I will show you how to create a PostgreSQL cluster.
 
 ## Why Docker?

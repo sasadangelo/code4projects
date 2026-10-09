@@ -10,9 +10,6 @@ categories: Cloud
 
 ![Amazon Elastic Cloud Computing (EC2) for Beginners]({{ site.baseurl }}/wp-content/uploads/2021/03/Amazon-EC2-1.png){:width="200" height="200" .responsive_img}
 
-# Amazon Elastic Cloud Computing (EC2) for Beginners
-_Posted on **{{ page.date | date_to_string }}**_
-
 In the [previous article]({{ site.baseurl }}/beginners-guide-identity-access-management/), we created and set up our AWS account. We are ready to introduce the most important IaaS AWS resource: the **Amazon EC2 instance**. This service allows you to create a Virtual Machine (VM) choosing among a broad range of instance types.
 
 ## AWS Elastic Cloud Compute (EC2)

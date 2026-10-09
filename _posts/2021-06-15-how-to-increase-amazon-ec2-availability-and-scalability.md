@@ -10,9 +10,6 @@ categories: Cloud
 
 ![How to increase Amazon EC2 Availability and Scalability]({{ site.baseurl }}/wp-content/uploads/2021/06/load-balancer.png){:width="200" height="169" .responsive_img}
 
-# How to increase Amazon EC2 Availability and Scalability
-_Posted on **{{ page.date | date_to_string }}**_
-
 In this article, I want to talk about EC2 Availability and Scalability concepts and how to guarantee them using AWS services like Load Balancers, Autoscaling,  and Route53.
 
 ## What is Availability?

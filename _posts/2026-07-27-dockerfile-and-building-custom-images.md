@@ -9,9 +9,6 @@ categories:
   - Virtualization
 ---
 
-# Dockerfile and Building Custom Images
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![Dockerfile and Building Custom Images]({{ site.baseurl }}/assets/img/docker-dockerfile.svg){:width="760" height="400" .responsive_img}
 
 ## Introduction

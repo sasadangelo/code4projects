@@ -9,9 +9,6 @@ categories:
   - "Programming"
 ---
 
-# How to Set Up Your Next Python Project
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![How to Set Up Your Next Python Project]({{ site.baseurl }}/assets/img/setup-python-project.webp){:width="760" height="400" .responsive_img}
 
 ## Introduction

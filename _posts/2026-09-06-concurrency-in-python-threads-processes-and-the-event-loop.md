@@ -13,9 +13,6 @@ categories:
   - "Programming"
 ---
 
-# Concurrency in Python: Threads, Processes, and the Event Loop
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![Concurrency in Python: Threads, Processes, and the Event Loop]({{ site.baseurl }}/assets/img/concurrency-in-python-threads-processes-and-the-event-loop-hero.webp){:width="760" height="400" .responsive_img}
 
 ## Introduction

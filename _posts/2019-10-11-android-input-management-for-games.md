@@ -12,9 +12,6 @@ categories:
 
 ![Android Input Management for Games]({{ site.baseurl }}/wp-content/uploads/2019/10/Android-Input-Management2.jpg){:width="200" height="200" .responsive_img}
 
-# Android Input Management for Games
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the twelfth article of the [Android Game Programming]({{ site.baseurl }}/android-game-programming/) series. In this article, I would like to discuss how to manage user input on Android for our video game.
 
 In an Android application, graphic elements such as buttons, text fields, radio buttons, etc., composes the user interface. In Android, all these objects derive from the _View_ interface and grouped together using *ViewGroup* objects such as a *Layout*. With such interfaces, input management is simple because if we click a button, Android itself that takes the care of it running the relative action code.

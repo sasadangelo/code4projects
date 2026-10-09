@@ -12,9 +12,6 @@ categories:
   - "Programming"
 ---
 
-# Building a Python Command Line Interface (CLI) with the Command Pattern
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![Building a Python Command Line Interface (CLI) with the Command Pattern]({{ site.baseurl }}/assets/img/building-a-python-cli-with-the-command-pattern.webp){:width="760" height="400" .responsive_img}
 
 ## Introduction

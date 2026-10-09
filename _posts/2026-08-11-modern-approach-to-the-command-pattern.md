@@ -11,9 +11,6 @@ categories:
   - "Programming"
 ---
 
-# Building a Python CLI with Typer: The Modern Approach to the Command Pattern
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![Building a Python CLI with Typer: The Modern Approach to the Command Pattern]({{ site.baseurl }}/assets/img/building-a-python-cli-with-typer-the-modern-approach-to-the-command-pattern.png){:width="760" height="400" .responsive_img}
 
 ## Introduction

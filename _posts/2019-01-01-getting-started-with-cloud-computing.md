@@ -16,9 +16,6 @@ sitemap:
 
 ![Getting started with Cloud Computing]({{ site.baseurl }}/wp-content/uploads/2018/12/Cloud-Computing-mini.png){:width="221" height="200" .responsive_img}
 
-# Getting started with Cloud Computing
-_Posted on **{{ page.date | date_to_string }}**_
-
 In this article, I would like to talk about Cloud Computing. I will try to explain what it really is, its advantages and its main characteristics.
 
 ## Traditional IT Overview

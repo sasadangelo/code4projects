@@ -11,9 +11,6 @@ categories: Virtualization
 
 ![How Docker Compose works]({{ site.baseurl }}/wp-content/uploads/2019/11/docker-compose.png){:width="200" height="200" .responsive_img}
 
-# How Docker Compose works
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the seventh article of the [Getting started with Docker]({{ site.baseurl }}/getting-started-with-docker/) series. In this article, I will discuss Docker Compose and how to use it to improve the code developed so far for our PostgreSQL cluster.
 
 ## Image build and runtime configuration

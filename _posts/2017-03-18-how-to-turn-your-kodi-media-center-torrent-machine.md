@@ -10,9 +10,6 @@ categories: Multimedia
 
 ![How to turn your Kodi Media Center in a Torrent machine]({{ site.baseurl }}/wp-content/uploads/2017/03/downloading-torrent.jpg){:width="200" height="133" .responsive_img}
 
-# How to turn your Kodi Media Center in a Torrent machine
-_Posted on **{{ page.date | date_to_string }}**_
-
 In this article, I would like to show you how to turn your Kodi Media Center in a Torrent machine. Reading this article you’ll be able to search your torrents on your phone and queue them for download on your Kodi Box. You will not need any more to turn on your computer to manage your torrents.
 
 Before you read this article I assume:

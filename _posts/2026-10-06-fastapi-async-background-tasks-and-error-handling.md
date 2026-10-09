@@ -13,9 +13,6 @@ categories:
   - "Programming"
 ---
 
-# Async, Background Tasks, and Error Handling in FastAPI
-
-_Posted on **{{ page.date | date_to_string }}**_
 
 ![Async, Background Tasks, and Error Handling in FastAPI]({{ site.baseurl }}/assets/img/fastapi-async-background-tasks-and-error-handling-hero.svg){:width="760" height="400" .responsive_img}
 

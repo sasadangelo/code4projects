@@ -11,9 +11,6 @@ categories: Virtualization
 
 ![Containers vs Virtual Maachines]({{ site.baseurl }}/wp-content/uploads/2018/07/Virtual-Machine-Architecture-mini.jpg){:width="200" height="211" .responsive_img}
 
-# Containers vs Virtual Machines
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the second article of the [Getting started with Docker]({{ site.baseurl }}/getting-started-with-docker/) series. Here I would like to explain my understanding of the differences between **containers** and **virtual machines** (VMs).
 
 ## Introduction

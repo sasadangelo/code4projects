@@ -12,9 +12,6 @@ categories:
   - "Programming"
 ---
 
-# Building a Python CLI with Click: A Cleaner Approach to the Command Pattern
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![Building a Python CLI with Click: A Cleaner Approach to the Command Pattern]({{ site.baseurl }}/assets/img/building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern-hero.webp){:width="760" height="400" .responsive_img}
 
 ## Introduction

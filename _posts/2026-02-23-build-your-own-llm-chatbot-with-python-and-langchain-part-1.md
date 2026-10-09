@@ -11,9 +11,6 @@ categories:
   - "Artificial Intelligence"
 ---
 
-# Build Your Own LLM Chatbot with Python & LangChain (Part 1)
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![Build Your Own LLM Chatbot with Python & LangChain (Part 1)]({{ site.baseurl }}/assets/img/llm-chatbot-part1.png)
 
 ## Introduction

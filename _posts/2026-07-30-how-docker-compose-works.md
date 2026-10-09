@@ -9,9 +9,6 @@ categories:
   - Virtualization
 ---
 
-# How Docker Compose Works
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![How Docker Compose Works]({{ site.baseurl }}/assets/img/docker-compose.svg){:width="760" height="400" .responsive_img}
 
 ## Introduction

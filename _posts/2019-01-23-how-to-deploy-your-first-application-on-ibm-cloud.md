@@ -10,9 +10,6 @@ categories: Cloud
 
 ![How to deploy your first application on IBM Cloud]({{ site.baseurl }}/wp-content/uploads/2019/01/Tetris_mini.png){:width="282" height="200" .responsive_img}
 
-# How to deploy your first application on IBM Cloud
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the third article of the [Getting started with Cloud Computing]({{ site.baseurl }}/getting-started-with-cloud-computing/) series. In this article, I want to show how to deploy your first application on IBM Cloud.
 
 How explained in the [previous article]({{ site.baseurl }}/introduction-to-the-ibm-cloud-platform/), IBM Cloud allows you to deploy your application written in programming languages like Java, Ruby, Node.js, Javascript, and others.

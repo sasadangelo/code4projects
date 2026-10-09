@@ -16,9 +16,6 @@ sitemap:
 
 ![Android Game Programming]({{ site.baseurl }}/wp-content/uploads/2018/09/Android-Game-Programming-mini.jpg){:width="356" height="200" .responsive_img}
 
-# Android Game Programming
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the first article of the **Android Game Programming** series. Here I will show you, step by step, how to write your first Android game: Droids a Tetris clone.
 
 ## Why an Android Game Programming series?

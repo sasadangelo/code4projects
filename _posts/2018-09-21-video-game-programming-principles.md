@@ -11,9 +11,6 @@ categories:
 
 ![Video game programming principles]({{ site.baseurl }}/wp-content/uploads/2018/09/Background-Sprite-Walking-mini.jpg){:width="320" height="200" .responsive_img}
 
-# Video game programming principles
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the fifth article of the [Android Game Programming]({{ site.baseurl }}/android-game-programming/) series. Here I would like to explain basic video game programming principles in order to help you to write your first Android video game.
 
 ## A Brief Introduction

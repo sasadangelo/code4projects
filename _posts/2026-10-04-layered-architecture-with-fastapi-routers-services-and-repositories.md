@@ -13,9 +13,6 @@ categories:
   - "Programming"
 ---
 
-# Layered Architecture with FastAPI: Routers, Services, and Repositories
-
-_Posted on **{{ page.date | date_to_string }}**_
 
 ![Layered Architecture with FastAPI: Routers, Services, and Repositories]({{ site.baseurl }}/assets/img/layered-architecture-with-fastapi-routers-services-and-repositories-hero.png){:width="760" height="400" .responsive_img}
 

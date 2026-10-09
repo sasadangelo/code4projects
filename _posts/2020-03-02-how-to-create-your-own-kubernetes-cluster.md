@@ -13,9 +13,6 @@ categories:
 
 ![Kubernetes Cluster]({{ site.baseurl }}/wp-content/uploads/2020/03/Kubernetes-cluster.jpeg){:width="247" height="200" .responsive_img}
 
-# How to create your own Kubernetes cluster
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the fourth article of the [Getting Started with Kubernetes]({{ site.baseurl }}/getting-started-with-kubernetes/) article series. In this article, I want to explain how I run my applications on a Kubernetes cluster using a simple project based on [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/). In order to test the cluster, we will create a “Hello K8s” application for Kubernetes.
 
 ## How to start?

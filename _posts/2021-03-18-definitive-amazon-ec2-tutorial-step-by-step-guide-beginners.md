@@ -10,9 +10,6 @@ categories: Cloud
 
 ![The Definitive Amazon EC2 Tutorial: Step by step Guide for Beginners]({{ site.baseurl }}/wp-content/uploads/2021/03/Amazon-EC2-Tutorial.png){:width="341" height="200" .responsive_img}
 
-# The Definitive Amazon EC2 Tutorial: Step by step Guide for Beginners
-_Posted on **{{ page.date | date_to_string }}**_
-
 In this Amazon EC2 Tutorial, I will show you how to create an EC2 instance and secure it with Security Groups. I will also show how to create Ec2 instances easily with EC2 launch templates.
 
 Before to start you need to know that the Amazon dashboard can change over time and the screenshot in this article could not perfectly correspond to the one you see. Usually, when the dashboard change there is a period of time where a button appears on the top left that allows you to switch back to the old version.

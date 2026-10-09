@@ -10,9 +10,6 @@ categories: Cloud
 
 ![Beginner’s Guide to AWS Identity and Access Management (IAM)]({{ site.baseurl }}/wp-content/uploads/2021/03/Identity-and-Access-Management.png){:width="200" height="200" .responsive_img}
 
-# Beginner’s Guide to AWS Identity and Access Management (IAM)
-_Posted on **{{ page.date | date_to_string }}**_
-
 After the AWS Introduction of the [previous article]({{ site.baseurl }}/amazon-web-services/), let’s start exploring one of the main AWS components: **AWS Identity and Access Management (IAM)**. You will learn what it is and how to create and manage your account in order to start using AWS.
 
 In this article, there is a hands-on tutorial that will help you to register your account, configure it using well-known best practices, and start using it to deploy your IT infrastructure.

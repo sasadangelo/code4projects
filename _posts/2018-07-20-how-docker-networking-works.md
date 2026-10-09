@@ -13,9 +13,6 @@ categories:
 
 ![How docker networking works]({{ site.baseurl }}/wp-content/uploads/2018/07/docker-bridge-network-mini.png){:width="214" height="200" .responsive_img}
 
-# How docker networking works
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the fourth article of the [Getting started with Docker]({{ site.baseurl }}/getting-started-with-docker/) series. In this article, I want to discuss a bit about how Docker networking works. These concepts will be used to modify the PostgreSQL code to create three containers that communicate with each other via TCP/IP.
 
 ## Networking overview in Docker

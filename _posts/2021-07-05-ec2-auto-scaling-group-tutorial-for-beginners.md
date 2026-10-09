@@ -10,9 +10,6 @@ categories: Cloud
 
 ![EC2 Auto Scaling Group Tutorial for Beginners]({{ site.baseurl }}/wp-content/uploads/auto-scaling-group-2.jpeg){:width="287" height="200" .responsive_img}
 
-# EC2 Auto Scaling Group Tutorial for Beginners
-_Posted on **{{ page.date | date_to_string }}**_
-
 In this article, I’ll show you how to create an EC2 Auto Scaling Group to automate availability and scalability and let your application automatically adapt to workload changes.
 
 In a [previous article]({{ site.baseurl }}/how-to-increase-amazon-ec2-availability-and-scalability/), I explained what availability and scalability are and how to increase the availability and scalability of an application using multiple Ec2 instances and [a load balancer to balance the traffic]({{ site.baseurl }}/elastic-load-balancer-tutorial/). Let’s see now how to automate the EC2 provisioning using Auto Scaling Groups.

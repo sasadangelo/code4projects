@@ -11,7 +11,6 @@ categories:
 ![Unleashing the Power of DevOps]({{ site.baseurl }}/assets/img/devops-logo.webp){:width="446" height="200" .responsive_img}
 
 # Bridging the Gap: Unleashing the Power of DevOps in Software Development
-_Posted on **{{ page.date | date_to_string }}**_
 
 ## Introduction
 

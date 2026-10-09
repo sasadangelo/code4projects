@@ -10,9 +10,6 @@ categories: Cloud
 
 ![Amazon Integrated Services (part 2)]({{ site.baseurl }}/wp-content/uploads/2021/01/CloudWatch-CloudFront-SNS-CloudFormation.png){:width="200" height="200" .responsive_img}
 
-# Amazon Integrated Services (part 2)
-_Posted on **{{ page.date | date_to_string }}**_
-
 In this article, I am going to continue my overview of the Amazon Integrated Services, trying to explain my understanding of the following services:
 
 -   Simple Notification Service (SNS)

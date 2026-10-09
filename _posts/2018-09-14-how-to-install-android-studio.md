@@ -10,9 +10,6 @@ categories: Android
 
 ![How to install Android Studio]({{ site.baseurl }}/wp-content/uploads/2018/09/android-studio.png){:width="400" height="200" .responsive_img}
 
-# How to install Android Studio
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the second article of the [Android Game Programming]({{ site.baseurl }}/android-game-programming/) series. Here I would like to explain, step by step, how to install and configure Android Studio. It is the development environment that we will use to create our video game.
 
 Android Studio is based on the IntelliJ platform and was developed by Google, it is the official software to develop applications for Android. The software is free and can be downloaded from this [website](https://developer.android.com/sdk/index.html).

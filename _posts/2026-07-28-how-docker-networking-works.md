@@ -10,9 +10,6 @@ categories:
   - Networking
 ---
 
-# How Docker Networking Works
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![How Docker Networking Works]({{ site.baseurl }}/assets/img/docker-networking.svg){:width="760" height="400" .responsive_img}
 
 ## Introduction

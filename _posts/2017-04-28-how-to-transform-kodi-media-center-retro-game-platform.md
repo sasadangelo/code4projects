@@ -10,9 +10,6 @@ categories: Multimedia
 
 ![How to transform your Kodi Media Center in a Game Platform]({{ site.baseurl }}/wp-content/uploads/2017/04/Mortal_Kombat.png){:width="200" height="127" .responsive_img}
 
-# How to transform your Kodi Media Center in a Game Platform
-_Posted on **{{ page.date | date_to_string }}**_
-
 In this article, I would like to show you how to transform your Raspberry Kodi Media Center in a Retro Game platform.
 
 Before you read this article I assume:

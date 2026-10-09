@@ -10,9 +10,6 @@ categories: Cloud
 
 ![Amazon Well Architected Framework and its 5 Pillars]({{ site.baseurl }}/wp-content/uploads/2021/02/Amazon-Well-Architected-Framework.png){:width="200" height="200" .responsive_img}
 
-# Amazon Well Architected Framework and its 5 Pillars
-_Posted on **{{ page.date | date_to_string }}**_
-
 In this article, I will talk about the Amazon [Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/). This is a set of best practices to help customers design their software solutions.
 
 The Amazon WAF is a set of best practices to help customers to create secure, efficient, cost-effective, and reliable solutions for their businesses. The framework started as a simple whitepaper that expanded to include domain-specific lenses, [hands-on labs](https://www.wellarchitectedlabs.com/), and [tools](https://aws.amazon.com/well-architected-tool/). Therefore, the basic idea is to have mechanisms for regularly evaluating your workloads, identifying high-risk issues, and find room for improvements.

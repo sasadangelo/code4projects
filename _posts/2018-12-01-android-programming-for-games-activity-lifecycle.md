@@ -12,9 +12,6 @@ categories:
 
 ![Android Programming for Games (Activity Lifecycle)]({{ site.baseurl }}/wp-content/uploads/2018/12/ActivityState-mini.png){:width="200" height="91" .responsive_img}
 
-# Android Programming for Games (Activity Lifecycle)
-_Posted on **{{ page.date | date_to_string }}**_
-
 This is the seventh article of the [Android Game Programming]({{ site.baseurl }}/android-game-programming/) series. In this article, I will introduce a basic android programming concept: the **activity lifecycle**.
 
 ### What is an Activity?

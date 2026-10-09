@@ -7,14 +7,11 @@ image: /assets/img/html-css-layout.svg
 excerpt: Turn your plain HTML site into a professional layout — styled header, footer, navigation bar, home page with hero image, and a mobile-friendly hamburger menu.
 categories:
   - Programming
-author: Salvatore D'Angelo
+author: sasadangelo
 ---
 
 ![Building a Professional Website Layout with CSS]({{ site.baseurl }}/assets/img/html-css-layout.svg){:width="760" height="400" .responsive_img}
 
-# Building a Professional Website Layout with CSS: Header, Navigation, and Responsive Design
-
-_Posted on **{{ page.date | date_to_string }}**_
 
 ## Introduction
 

@@ -13,9 +13,6 @@ categories:
   - "Programming"
 ---
 
-# From Domain Design to REST API: Building FastURL with FastAPI
-
-_Posted on **{{ page.date | date_to_string }}**_
 
 ![From Domain Design to REST API: Building FastURL with FastAPI]({{ site.baseurl }}/assets/img/from-domain-design-to-rest-api-building-fasturl-with-fastapi-hero.png){:width="760" height="400" .responsive_img}
 
