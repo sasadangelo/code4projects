@@ -19,13 +19,13 @@ _Posted on **{{ page.date | date_to_string }}**_
 
 In the [previous article]({{ site.baseurl }}/building-professional-website-layout-with-css/) you gave your site a real shell: a consistent header and footer, a navigation bar, social media icons, a styled home page, and a responsive hamburger menu. The five inner pages still had placeholder content — just a heading and a paragraph.
 
-This is Part 3 of the series. If you missed the earlier articles, you can start from [Getting Started with HTML]({{ site.baseurl }}/getting-started-with-html/) or catch up on [Mastering the Basics of CSS]({{ site.baseurl }}/mastering-basics-css/).
+This is Part 4 of the series. If you missed the earlier articles, you can start from [Getting Started with HTML]({{ site.baseurl }}/getting-started-with-html/), [Mastering the Basics of CSS]({{ site.baseurl }}/mastering-basics-css/), or [Building a Professional Website Layout with CSS]({{ site.baseurl }}/building-professional-website-layout-with-css/).
 
 This article builds out those pages for real. Following the [Part 3 of the html-hero project](https://github.com/sasadangelo/html-hero/tree/master/part-3) lesson by lesson, I will show you how to write the About Me, Start Here, and Resources pages, how to build a contact form with HTML form elements, and how to create an interactive photo gallery using CSS Grid and a handful of lines of JavaScript.
 
 You should read this article if:
 
-- you completed Part 2 and want to move beyond layout into real content pages
+- you completed Part 3 and want to move beyond layout into real content pages
 - you have never built an HTML form and want to understand how `<input>`, `<label>`, `<textarea>`, and `<button>` work together
 - you want to understand CSS Grid and how it differs from Flexbox for image-based layouts
 - you want to add your first JavaScript to a web page without reaching for a framework
