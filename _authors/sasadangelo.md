@@ -14,7 +14,7 @@ slug: about-me
 excerpt: Salvatore D'Angelo — software engineer and technologist with 30+ years of experience in AI, Cloud, DevOps, and software architecture.
 ---
 
-I started programming in 1986 as a hobby — long before it became a career. My early years were spent with Turbo Pascal, C, C++, Java, SQL, and Visual Basic, building compilers, operating systems, and small applications just to understand how things worked.
+I started programming in 1991 as a hobby — long before it became a career. My early years were spent with Turbo Pascal, C, C++, Java, SQL, and Visual Basic, building compilers, operating systems, and small applications just to understand how things worked.
 
 In 1992 I enrolled in Computer Science at the University of Salerno and graduated with honours in 1998. A brief period of military service followed, and in 1999 I joined a well-known American software company in Rome — where I still work today.
 
