@@ -183,7 +183,7 @@ Tool to build: a Python script that queries the GSC API and produces an automati
 |---|---|---|---|---|
 | 1 | Keep writing (follow EDITORIAL_PLAN) | High (ongoing) | High | Always |
 | 2 | Import "How LLMs Work" from Medium | Low | Medium | Next week |
-| 3 | Connect Substack to Docker lead magnet | Low | High | Next 2 weeks |
+| 3 | ~~Connect Substack to Docker lead magnet~~ ✅ Done | Low | High | ~~Next 2 weeks~~ |
 | 4 | ~~Author bio + byline on articles~~ ✅ Done | Low | Medium | ~~Next 2 weeks~~ |
 | 5 | ~~Rewrite Start Here page~~ ✅ Done | Medium | Medium | ~~Next month~~ |
 | 6 | Change Medium strategy (only Part 1 of each series) | Low | Medium | Next month |
