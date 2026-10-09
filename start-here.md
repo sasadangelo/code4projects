@@ -1,55 +1,89 @@
 ---
 layout: page
-title: New User? Start Here
+title: New Here? Start Here
 slug: start-here
-excerpt: If this is the first time you land on this website, start reading from this web page. 
+excerpt: A quick guide to everything on Code4Projects — what this blog is about, who writes it, and where to start based on your goals.
 ---
-# New User? Start Here
+# New Here? Start Here
 
-If this is the first time you land on this website probably you are wondering how it can help you to become a better programmer. In the following page, I explain why I created this website and what benefits you can find as a hobbyist or professional programmer.
+![Code4Projects — pillars of expertise]({{ site.baseurl }}/assets/img/start-here-hero.svg){:width="760" height="480" .responsive_img}
+
+Welcome to **Code4Projects** — a blog about software engineering written from 30+ years of real-world experience. Not tutorials copied from the docs, but genuine depth from someone who has actually built these systems.
+
+---
 
 ## Who am I?
 
 ![Salvatore D'Angelo]({{ site.baseurl }}/assets/img/salvatore_d_angelo.jpeg){:width="100" height="100" .responsive_img}
 
-My name is Salvatore D’Angelo and I am a professional software engineer that works for a well-known American software company. You can read my story [here]({{ site.baseurl }}/about-me/).
+My name is **Salvatore D'Angelo**. I am a professional software engineer and technologist with over 30 years of experience across AI, Cloud, DevOps, and software architecture.
 
-## What is my experience?
+I have lived through every major wave of the industry — from procedural to object-oriented, from monoliths to microservices, from on-premise data centres to cloud-native systems, from rule-based AI to large language models. That perspective shapes everything I write: not just *how* to use a technology, but *why* it exists, *what problem* it was designed to solve, and *where* it is heading.
 
-In over 30 years of experience as a professional software developer, I have had the opportunity to work on numerous projects. You can read my full career history on my [Linkedin page](https://www.linkedin.com/in/salvatore-d-angelo-0321851/). I was fortunate enough to be involved in all phases of a software development cycle.
+Beyond the technical depth, I aim to offer **strategic guidance** — helping engineers and organisations understand which technologies matter, which are hype, and how to make sound decisions in a landscape that never stops changing.
 
-![Software Developer]({{ site.baseurl }}/wp-content/uploads/2019/09/software-developer2.jpg){:width="450" height="450" .responsive_img}
+You can read the full story on my [About Me]({{ site.baseurl }}/about-me/) page and find my career history on [LinkedIn](https://www.linkedin.com/in/salvatore-d-angelo-0321851/).
 
-_Photo from [https://clipartstation.com](https://clipartstation.com/software-developer-clipart-5/)_
+---
 
-I soon realized that the challenges to be faced in creating quality software that met the customer demands are very different from what the books on which I had studied explained. Throughout this period I have seen the software world transform rapidly and radically thanks to new technologies and development models.
+## What this blog covers
 
-**I believe this perspective on the computer world can help me create a website different from those on the web today**.
+Code4Projects is organised around five areas, all viewed through a **Technology Vision** lens — how the industry has evolved, where it is heading, and what that means for decisions you make today.
 
-## Why this website?
+| Area | What you will find |
+|---|---|
+| **Applied AI** | LLMs, LangChain, Agentic AI, MCP and A2A protocols |
+| **Modern DevOps** | Docker, Kubernetes — from zero to production |
+| **Cloud** | AWS, cloud-native architecture, serverless patterns |
+| **System Architecture & Design** | Layered, Hexagonal, Clean, Event-Driven patterns |
+| **Software Architecture & Development** | Python, HTML & CSS, Git, Android game programming |
 
-I love writing, I think writing is a great tool to consolidate my knowledge. For this reason, I decided to open this website to share everything I have learned in recent years. I think it can help other people who want to approach this fantastic world professionally or as a hobby.
+Every major topic becomes a **series**: a sequence of progressive articles that builds from fundamentals to a working system, plus a free ebook at the end.
 
-![Sharing Knowledge]({{ site.baseurl }}/wp-content/uploads/2019/09/sharing-knowledge.png){:width="235" height="215" .responsive_img}
+---
 
-I have always believed that the best way to learn a new programming language or technology is to make a small project with it.
+## Where to start — by goal
 
-**This will be the philosophy of this website. Explain how to use programming languages ​​and technologies through small projects or tutorials explained step by step**.
+### Applied AI
 
-This philosophy and my perspective on the software development world is a good mix to help you understand how to learn a programming language or a technology, what are the things that really matter and how companies today face new challenges that the world put in front of them.
+- [Build Your Own LLM Chatbot with Python & LangChain](https://code4projects.org/build-your-own-llm-chatbot-with-python-and-langchain-part-1/) — 4 articles, from a basic chatbot to RAG and conversational memory.
+- [Generative & Agentic AI: From Foundations to Autonomous Platforms](https://code4projects.org/understanding-a2a-the-protocol-for-agent-collaboration/) — MCP and A2A protocols explained from first principles, with real architecture diagrams.
 
-## How to Start?
+### Modern DevOps
 
-This website contains a set of projects where I explain, step by step, how to use a specific technology. I suggest you visit the [Project page]({{ site.baseurl }}/projects-2/) and search for a project that is of interest to you.
+- [Getting Started with Docker 2025](https://code4projects.org/getting-started-with-docker-2025/) — 8 articles, from installation to multi-stage builds, security, and Docker Compose. **Free ebook available.**
 
-In all these years of experience, I learned that people learn faster when they study something that interests them.
+### Software Architecture & Development
 
-All projects and tutorials provide the source code that you can download from my [Github page](https://github.com/sasadangelo).
+- [Getting Started with HTML & CSS](https://code4projects.org/getting-started-with-html/) — from a blank page to a fully responsive layout.
+- [How to Write Modern Python Applications](https://code4projects.org/how-to-set-up-your-next-python-project/) — 10 articles covering project setup, configuration, scheduling, databases, concurrency, async, and REST APIs with FastAPI.
+- [Python CLI with the Command Pattern](https://code4projects.org/building-a-python-cli-with-the-command-pattern/) — 3 articles, building a clean CLI application using the Command design pattern.
+- [Building REST APIs: From Design to Production](https://code4projects.org/concurrency-in-python-threads-processes-and-the-event-loop/) — concurrency, async, and REST API design with FastAPI.
 
-Once you selected a project, read the articles and try to understand its basic concepts. In this phase, it’s not important you understand everything and all the source code. When all basic concepts are clear, you can download the source code and trying to play with it.
+---
 
-![Make a project]({{ site.baseurl }}/wp-content/uploads/2019/09/make-project.png){:width="450" height="434" .responsive_img}
+## The reading philosophy
 
-When you are able to run the software, you can go deep in detail analyzing how it works. In this phase, you can fork the projects and try to fix some bugs or add new features. Feel free to do it and make a pull request. I will be happy to merge your contribution in the original code.
+Every series follows the same model:
 
-In my blog, there are some standalone articles that are not included in any projects. You can find them starting from the [Blog page]({{ site.baseurl }}/blog/) and clicking the page links in the bottom.
+1. **Read** the articles in order — each one builds on the previous
+2. **Run** the code — all examples have source code on [GitHub](https://github.com/sasadangelo)
+3. **Experiment** — fork, break things, add features
+4. **Download the ebook** at the end of each series to keep it as a reference
+
+The ebooks are free. They require only a newsletter subscription — which means you will also receive new articles as they are published.
+
+---
+
+## Stay in the loop
+
+If you want to be notified when new articles and ebooks are published, subscribe to the newsletter on [Substack](https://code4projects.substack.com).
+
+One email per article. No spam.
+
+---
+
+## Browse everything
+
+- [All articles]({{ site.baseurl }}/blog/) — the full archive
+- [GitHub](https://github.com/sasadangelo) — all project source code

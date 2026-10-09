@@ -1443,14 +1443,16 @@ footer {
   padding: 10px 0px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: flex-start;
+  gap: 20px;
 }
 
 .featured-projects-box {
-  width: 320px;
+  flex: 1 1 240px;
+  max-width: calc(50% - 10px);
   height: auto;
   padding: 10px;
-  margin-right: 20px;
   border-radius: 4px;
   box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -1466,14 +1468,16 @@ footer {
   padding: 10px 0px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: flex-start;
+  gap: 20px;
 }
 
 .featured-projects-box {
-  width: 320px;
+  flex: 1 1 200px;
+  max-width: calc(50% - 10px);
   height: auto;
   padding: 10px;
-  margin-right: 20px;
   border-radius: 4px;
   box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
   display: flex;

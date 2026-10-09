@@ -229,25 +229,15 @@
 - post_series_id: generative-and-agentic-ai
   post_series_title: "Generative & Agentic AI: From Foundations to Autonomous Platforms"
   post_series:
-  - name: "Part 1: Artificial Intelligence: A Practical Introduction for Beginners"
-    link: /getting-started-with-artificial-intelligence/
-  - name: "Part 2: Don't Fear Intelligent Machines: Work with Them"
-    link: /dont-fear-intelligent-machines-work-with-them/
-  - name: "Part 3: Build Your Own LLM Chatbot (1) Architecture and Core Setup"
+  - name: "Part 1: Build Your Own LLM Chatbot (1) Architecture and Core Setup"
     link: /build-your-own-llm-chatbot-with-python-and-langchain-part-1/
-  - name: "Part 4: Build Your Own LLM Chatbot (2) Memory, Parameters, and Logging"
+  - name: "Part 2: Build Your Own LLM Chatbot (2) Memory, Parameters, and Logging"
     link: /build-your-own-llm-chatbot-with-python-and-langchain-part-2/
-  - name: "Part 5: Build Your Own LLM Chatbot (3) Retrieval-Augmented Generation (RAG)"
+  - name: "Part 3: Build Your Own LLM Chatbot (3) Retrieval-Augmented Generation (RAG)"
     link: /build-your-own-llm-chatbot-with-python-and-langchain-part-3/
-  - name: "Part 6: Build Your Own LLM Chatbot (4) Web UI with Streamlit"
+  - name: "Part 4: Build Your Own LLM Chatbot (4) Web UI with Streamlit"
     link: /build-your-own-llm-chatbot-with-python-and-langchain-part-4/
-  - name: "Part 7: Understanding MCP — The Protocol for Agent-Tool Communication"
+  - name: "Part 5: Understanding MCP — The Protocol for Agent-Tool Communication"
     link: /understanding-mcp-the-protocol-for-agent-tool-communication/
-  - name: "Part 8: Understanding A2A — The Protocol for Agent Collaboration"
+  - name: "Part 6: Understanding A2A — The Protocol for Agent Collaboration"
     link: /understanding-a2a-the-protocol-for-agent-collaboration/
-  - name: "Part 9: What Is an AI Agent? Building Autonomous Workflows with LangChain & LangGraph"
-    link: /building-ai-agents-with-langchain-and-langgraph/
-  - name: "Part 10: Multi-Agent Design Patterns: Supervisor, Pipeline, and Fan-Out/Fan-In"
-    link: /multi-agent-design-patterns/
-  - name: "Part 11: Architecting an Agentic Platform: File-Based Agents, SKILL.md, and Golem"
-    link: /architecting-an-agentic-platform-with-golem/

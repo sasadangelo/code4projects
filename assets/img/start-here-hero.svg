@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+
+  <!-- Canvas background -->
+  <rect width="760" height="480" fill="#ffffff"/>
+
+  <!-- Blog title -->
+  <text x="380" y="36" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1f2328">Code4Projects</text>
+  <text x="380" y="57" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#57606a">30+ years of real-world software engineering experience</text>
+
+  <!-- TECHNOLOGY VISION outer wrapper -->
+  <rect x="28" y="72" width="704" height="378" rx="16" fill="#f0f4ff" stroke="#3b82d4" stroke-width="2.5"/>
+
+  <!-- Technology Vision pill label centred on top border -->
+  <rect x="248" y="61" width="264" height="28" rx="14" fill="#3b82d4"/>
+  <text x="380" y="80" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff" letter-spacing="1">TECHNOLOGY VISION</text>
+
+  <!-- Subtitle inside wrapper -->
+  <text x="380" y="105" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#57606a">How the industry evolved, where it is heading, and how to make sound decisions today</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- ROW 1: Applied AI · Modern DevOps · Cloud      -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <!-- CARD: Applied AI -->
+  <rect x="46" y="118" width="208" height="145" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="46" y="118" width="208" height="7" rx="4" fill="#7c5cd8"/>
+  <rect x="46" y="122" width="208" height="3" fill="#7c5cd8"/>
+  <circle cx="80" cy="160" r="19" fill="#ede9fe"/>
+  <text x="80" y="167" text-anchor="middle" font-size="18" font-family="Arial" fill="#7c5cd8">🤖</text>
+  <text x="108" y="150" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2328">Applied AI</text>
+  <rect x="108" y="157" width="56" height="16" rx="8" fill="#ede9fe"/>
+  <text x="136" y="169" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#6d28d9">LangChain</text>
+  <rect x="170" y="157" width="64" height="16" rx="8" fill="#ede9fe"/>
+  <text x="202" y="169" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#6d28d9">Agentic AI</text>
+  <rect x="108" y="178" width="62" height="16" rx="8" fill="#ede9fe"/>
+  <text x="139" y="190" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#6d28d9">MCP / A2A</text>
+  <text x="56" y="212" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#57606a">LLMs, chatbots, RAG,</text>
+  <text x="56" y="226" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#57606a">autonomous agents.</text>
+  <text x="246" y="255" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#7c5cd8" font-weight="600">2 series · 8 articles →</text>
+
+  <!-- CARD: Modern DevOps -->
+  <rect x="276" y="118" width="208" height="145" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="276" y="118" width="208" height="7" rx="4" fill="#0ea5e9"/>
+  <rect x="276" y="122" width="208" height="3" fill="#0ea5e9"/>
+  <circle cx="310" cy="160" r="19" fill="#e0f2fe"/>
+  <text x="310" y="167" text-anchor="middle" font-size="18" font-family="Arial" fill="#0ea5e9">🐳</text>
+  <text x="338" y="150" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2328">Modern DevOps</text>
+  <rect x="338" y="157" width="46" height="16" rx="8" fill="#e0f2fe"/>
+  <text x="361" y="169" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#0369a1">Docker</text>
+  <rect x="390" y="157" width="72" height="16" rx="8" fill="#e0f2fe"/>
+  <text x="426" y="169" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#0369a1">Kubernetes</text>
+  <rect x="338" y="178" width="42" height="16" rx="8" fill="#e0f2fe"/>
+  <text x="359" y="190" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#0369a1">CI/CD</text>
+  <text x="286" y="212" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#57606a">Containers, orchestration,</text>
+  <text x="286" y="226" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#57606a">delivery pipelines.</text>
+  <text x="476" y="255" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#0ea5e9" font-weight="600">2 series · 18 articles →</text>
+
+  <!-- CARD: Cloud -->
+  <rect x="506" y="118" width="208" height="145" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="506" y="118" width="208" height="7" rx="4" fill="#0d9488"/>
+  <rect x="506" y="122" width="208" height="3" fill="#0d9488"/>
+  <circle cx="540" cy="160" r="19" fill="#ccfbf1"/>
+  <text x="540" y="167" text-anchor="middle" font-size="18" font-family="Arial" fill="#0d9488">☁️</text>
+  <text x="568" y="150" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1f2328">Cloud</text>
+  <rect x="568" y="157" width="36" height="16" rx="8" fill="#ccfbf1"/>
+  <text x="586" y="169" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#0f766e">AWS</text>
+  <rect x="610" y="157" width="80" height="16" rx="8" fill="#ccfbf1"/>
+  <text x="650" y="169" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#0f766e">Cloud-Native</text>
+  <rect x="568" y="178" width="72" height="16" rx="8" fill="#ccfbf1"/>
+  <text x="604" y="190" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#0f766e">Serverless</text>
+  <text x="516" y="212" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#57606a">AWS, cloud-native design,</text>
+  <text x="516" y="226" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#57606a">serverless patterns.</text>
+  <text x="706" y="255" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#0d9488" font-weight="600">1 series · 16 articles →</text>
+
+  <!-- ════════════════════════════════════════════════════════════════ -->
+  <!-- ROW 2: System Architecture & Design · Software Arch & Dev      -->
+  <!-- centred pair: x=161 and x=391, each 208px wide, gap=22        -->
+  <!-- ════════════════════════════════════════════════════════════════ -->
+
+  <!-- CARD: System Architecture & Design -->
+  <rect x="161" y="281" width="208" height="148" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="161" y="281" width="208" height="7" rx="4" fill="#10b981"/>
+  <rect x="161" y="285" width="208" height="3" fill="#10b981"/>
+  <circle cx="195" cy="323" r="19" fill="#d1fae5"/>
+  <text x="195" y="330" text-anchor="middle" font-size="18" font-family="Arial" fill="#10b981">🏛️</text>
+  <text x="223" y="313" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1f2328">System Architecture</text>
+  <text x="223" y="328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1f2328">&amp; Design</text>
+  <rect x="223" y="336" width="48" height="16" rx="8" fill="#d1fae5"/>
+  <text x="247" y="348" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#047857">Layered</text>
+  <rect x="277" y="336" width="58" height="16" rx="8" fill="#d1fae5"/>
+  <text x="306" y="348" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#047857">Hexagonal</text>
+  <rect x="223" y="357" width="36" height="16" rx="8" fill="#d1fae5"/>
+  <text x="241" y="369" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#047857">Clean</text>
+  <rect x="265" y="357" width="70" height="16" rx="8" fill="#d1fae5"/>
+  <text x="300" y="369" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#047857">Event-Driven</text>
+  <text x="171" y="392" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#57606a">Patterns for maintainable,</text>
+  <text x="171" y="406" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#57606a">testable, scalable systems.</text>
+  <text x="361" y="421" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#10b981" font-weight="600">1 series · 10 articles →</text>
+
+  <!-- CARD: Software Architecture & Development -->
+  <rect x="391" y="281" width="208" height="148" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="391" y="281" width="208" height="7" rx="4" fill="#f59e0b"/>
+  <rect x="391" y="285" width="208" height="3" fill="#f59e0b"/>
+  <circle cx="425" cy="323" r="19" fill="#fef3c7"/>
+  <text x="425" y="330" text-anchor="middle" font-size="18" font-family="Arial" fill="#f59e0b">💻</text>
+  <text x="453" y="313" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1f2328">Software Architecture</text>
+  <text x="453" y="328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1f2328">&amp; Development</text>
+  <rect x="453" y="336" width="42" height="16" rx="8" fill="#fef3c7"/>
+  <text x="474" y="348" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#92400e">Python</text>
+  <rect x="501" y="336" width="50" height="16" rx="8" fill="#fef3c7"/>
+  <text x="526" y="348" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#92400e">HTML/CSS</text>
+  <rect x="453" y="357" width="28" height="16" rx="8" fill="#fef3c7"/>
+  <text x="467" y="369" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#92400e">Git</text>
+  <rect x="487" y="357" width="52" height="16" rx="8" fill="#fef3c7"/>
+  <text x="513" y="369" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#92400e">Android</text>
+  <text x="401" y="392" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#57606a">Languages, frameworks, tools</text>
+  <text x="401" y="406" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" fill="#57606a">for building real software.</text>
+  <text x="591" y="421" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9.5" fill="#f59e0b" font-weight="600">4 series · 30+ articles →</text>
+
+  <!-- Bottom tagline -->
+  <text x="380" y="465" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#57606a">Every series ends with a free ebook — subscribe to download it.</text>
+
+</svg>
