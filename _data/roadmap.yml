@@ -1243,7 +1243,7 @@
   status: planned
   category: Programming
   series: modern-python-application
-  scheduled: 2026-09-26
+  scheduled: 2026-10-13
   distributed:
     medium: false
     substack: false
@@ -1256,7 +1256,7 @@
   status: planned
   category: Software Architecture
   series: software-architecture-patterns
-  scheduled: 2026-09-30
+  scheduled: 2026-10-19
   distributed:
     medium: false
     substack: false
@@ -1269,7 +1269,7 @@
   status: planned
   category: Software Architecture
   series: software-architecture-patterns
-  scheduled: 2026-09-27
+  scheduled: 2026-10-16
   distributed:
     medium: false
     substack: false
@@ -1585,9 +1585,11 @@
 
 - id: building-complete-website-pages-forms-gallery
   title: "Building the Complete Website: Real Pages, HTML Forms, and a Photo Gallery"
-  status: idea
+  status: planned
   category: Programming
   series: getting-started-with-html
+  scheduled: 2026-10-10
+  slug: building-complete-website-pages-forms-gallery
   distributed:
     medium: false
     substack: false
