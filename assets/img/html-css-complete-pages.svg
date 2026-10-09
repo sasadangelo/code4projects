@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#57606a"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="760" height="400" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="380" y="36" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="17" font-weight="700" fill="#1f2328">Building a Complete Website — Part 3</text>
+  <text x="380" y="56" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" fill="#57606a">Real Pages · HTML Forms · CSS Grid · JavaScript Lightbox</text>
+
+  <!-- CSS file strip -->
+  <rect x="40" y="76" width="680" height="36" rx="6" fill="#f7f8fa" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="58" y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" font-weight="700" fill="#57606a">CSS FILES</text>
+  <!-- default.css -->
+  <rect x="120" y="81" width="110" height="22" rx="4" fill="#3b82d4"/>
+  <text x="175" y="96" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#ffffff">default.css</text>
+  <!-- home.css -->
+  <rect x="240" y="81" width="90" height="22" rx="4" fill="#7c5cd8"/>
+  <text x="285" y="96" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#ffffff">home.css</text>
+  <!-- page.css NEW -->
+  <rect x="340" y="81" width="90" height="22" rx="4" fill="#10b981"/>
+  <text x="385" y="96" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#ffffff">page.css ✦new</text>
+  <!-- fontawesome.css -->
+  <rect x="440" y="81" width="120" height="22" rx="4" fill="#f59e0b"/>
+  <text x="500" y="96" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#ffffff">fontawesome.css</text>
+  <!-- brands.css -->
+  <rect x="570" y="81" width="90" height="22" rx="4" fill="#ef4444"/>
+  <text x="615" y="96" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#ffffff">brands.css</text>
+
+  <!-- Page cards row -->
+  <!-- About Me -->
+  <rect x="40" y="130" width="124" height="150" rx="8" fill="#f7f8fa" stroke="#3b82d4" stroke-width="1.5"/>
+  <rect x="40" y="130" width="124" height="28" rx="8" fill="#3b82d4"/>
+  <rect x="40" y="148" width="124" height="10" fill="#3b82d4"/>
+  <text x="102" y="150" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">About Me</text>
+  <circle cx="102" cy="181" r="18" fill="#d1d5db"/>
+  <text x="102" y="186" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="18" fill="#57606a">👤</text>
+  <text x="102" y="214" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#57606a">float image</text>
+  <text x="102" y="228" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#57606a">+ responsive</text>
+  <rect x="54" y="238" width="96" height="16" rx="3" fill="#3b82d4" opacity="0.15"/>
+  <text x="102" y="250" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#3b82d4">img-left / img-right</text>
+  <text x="102" y="270" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="9" fill="#57606a">about-me.html</text>
+
+  <!-- Start Here -->
+  <rect x="176" y="130" width="124" height="150" rx="8" fill="#f7f8fa" stroke="#7c5cd8" stroke-width="1.5"/>
+  <rect x="176" y="130" width="124" height="28" rx="8" fill="#7c5cd8"/>
+  <rect x="176" y="148" width="124" height="10" fill="#7c5cd8"/>
+  <text x="238" y="150" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Start Here</text>
+  <rect x="196" y="170" width="84" height="48" rx="4" fill="#e5e7eb"/>
+  <text x="238" y="190" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="18" fill="#57606a">🖼</text>
+  <text x="238" y="208" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#57606a">figcaption</text>
+  <text x="238" y="226" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#57606a">&lt;figure&gt; /</text>
+  <text x="238" y="240" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#57606a">&lt;figcaption&gt;</text>
+  <text x="238" y="256" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#7c5cd8">semantic tags</text>
+  <text x="238" y="270" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="9" fill="#57606a">start-here.html</text>
+
+  <!-- Resources -->
+  <rect x="312" y="130" width="124" height="150" rx="8" fill="#f7f8fa" stroke="#0ea5e9" stroke-width="1.5"/>
+  <rect x="312" y="130" width="124" height="28" rx="8" fill="#0ea5e9"/>
+  <rect x="312" y="148" width="124" height="10" fill="#0ea5e9"/>
+  <text x="374" y="150" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Resources</text>
+  <text x="374" y="178" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="20" fill="#57606a">🔗</text>
+  <text x="374" y="200" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#57606a">target="_blank"</text>
+  <rect x="326" y="208" width="96" height="14" rx="3" fill="#0ea5e9" opacity="0.15"/>
+  <text x="374" y="219" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#0ea5e9">rel="noopener"</text>
+  <text x="374" y="234" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#57606a">ordered lists</text>
+  <text x="374" y="248" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#0ea5e9">security</text>
+  <text x="374" y="270" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="9" fill="#57606a">resources.html</text>
+
+  <!-- Contacts -->
+  <rect x="448" y="130" width="124" height="150" rx="8" fill="#f7f8fa" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="448" y="130" width="124" height="28" rx="8" fill="#f59e0b"/>
+  <rect x="448" y="148" width="124" height="10" fill="#f59e0b"/>
+  <text x="510" y="150" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Contacts</text>
+  <!-- form mockup -->
+  <rect x="462" y="168" width="96" height="10" rx="2" fill="#e5e7eb"/>
+  <rect x="462" y="182" width="96" height="10" rx="2" fill="#e5e7eb"/>
+  <rect x="462" y="196" width="96" height="22" rx="2" fill="#e5e7eb"/>
+  <rect x="478" y="222" width="64" height="14" rx="3" fill="#f59e0b"/>
+  <text x="510" y="233" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="9" fill="#ffffff">Send Message</text>
+  <text x="510" y="252" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#57606a">native validation</text>
+  <text x="510" y="264" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#f59e0b">type="email"</text>
+  <text x="510" y="270" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="9" fill="#57606a">contacts.html</text>
+
+  <!-- Gallery -->
+  <rect x="584" y="130" width="136" height="150" rx="8" fill="#f7f8fa" stroke="#10b981" stroke-width="1.5"/>
+  <rect x="584" y="130" width="136" height="28" rx="8" fill="#10b981"/>
+  <rect x="584" y="148" width="136" height="10" fill="#10b981"/>
+  <text x="652" y="150" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Gallery</text>
+  <!-- grid mockup -->
+  <rect x="598" y="168" width="38" height="30" rx="2" fill="#d1d5db"/>
+  <rect x="642" y="168" width="38" height="30" rx="2" fill="#d1d5db"/>
+  <rect x="598" y="202" width="38" height="30" rx="2" fill="#d1d5db"/>
+  <rect x="642" y="202" width="38" height="30" rx="2" fill="#d1d5db"/>
+  <text x="652" y="246" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#10b981">CSS Grid</text>
+  <text x="652" y="258" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="9" fill="#57606a">JS lightbox</text>
+  <text x="652" y="270" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="9" fill="#57606a">gallery.html</text>
+
+  <!-- Bottom bar: concepts row -->
+  <rect x="40" y="300" width="680" height="70" rx="8" fill="#f7f8fa" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="380" y="319" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" font-weight="700" fill="#57606a">NEW CONCEPTS IN PART 3</text>
+
+  <!-- concept pills -->
+  <rect x="56" y="326" width="96" height="18" rx="9" fill="#3b82d4"/>
+  <text x="104" y="339" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#ffffff">float layout</text>
+
+  <rect x="162" y="326" width="104" height="18" rx="9" fill="#7c5cd8"/>
+  <text x="214" y="339" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#ffffff">figure / figcaption</text>
+
+  <rect x="276" y="326" width="96" height="18" rx="9" fill="#0ea5e9"/>
+  <text x="324" y="339" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#ffffff">HTML forms</text>
+
+  <rect x="382" y="326" width="84" height="18" rx="9" fill="#f59e0b"/>
+  <text x="424" y="339" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#ffffff">CSS Grid</text>
+
+  <rect x="476" y="326" width="96" height="18" rx="9" fill="#10b981"/>
+  <text x="524" y="339" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#ffffff">JS lightbox</text>
+
+  <rect x="582" y="326" width="122" height="18" rx="9" fill="#ef4444"/>
+  <text x="643" y="339" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#ffffff">noopener security</text>
+
+  <!-- project link -->
+  <text x="380" y="358" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#57606a">github.com/sasadangelo/html-hero — part-3 / lesson-20 → lesson-24</text>
+
+  <!-- footer -->
+  <text x="380" y="390" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#d1d5db">code4projects.org</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" width="760" height="340">
+  <!-- Background -->
+  <rect width="760" height="340" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="380" y="28" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2328">CSS Grid — repeat(auto-fill, minmax(150px, 1fr))</text>
+
+  <!-- === WIDE SCREEN (desktop) === -->
+  <rect x="40" y="46" width="320" height="260" rx="8" fill="#f7f8fa" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="200" y="66" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" font-weight="700" fill="#57606a">Wide screen — 4 columns</text>
+
+  <!-- Grid cells wide -->
+  <rect x="56"  y="76" width="64" height="56" rx="4" fill="#d1d5db"/>
+  <rect x="128" y="76" width="64" height="56" rx="4" fill="#d1d5db"/>
+  <rect x="200" y="76" width="64" height="56" rx="4" fill="#d1d5db"/>
+  <rect x="272" y="76" width="64" height="56" rx="4" fill="#d1d5db"/>
+  <rect x="56"  y="140" width="64" height="56" rx="4" fill="#d1d5db"/>
+  <rect x="128" y="140" width="64" height="56" rx="4" fill="#d1d5db"/>
+  <rect x="200" y="140" width="64" height="56" rx="4" fill="#d1d5db"/>
+  <rect x="272" y="140" width="64" height="56" rx="4" fill="#d1d5db"/>
+  <rect x="56"  y="204" width="64" height="56" rx="4" fill="#d1d5db"/>
+  <rect x="128" y="204" width="64" height="56" rx="4" fill="#d1d5db"/>
+  <rect x="200" y="204" width="64" height="56" rx="4" fill="#d1d5db"/>
+  <rect x="272" y="204" width="64" height="56" rx="4" fill="#d1d5db"/>
+
+  <!-- column width annotation -->
+  <line x1="56" y1="274" x2="120" y2="274" stroke="#10b981" stroke-width="1.5"/>
+  <line x1="56" y1="270" x2="56" y2="278" stroke="#10b981" stroke-width="1.5"/>
+  <line x1="120" y1="270" x2="120" y2="278" stroke="#10b981" stroke-width="1.5"/>
+  <text x="88" y="288" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#10b981">≥150px (1fr)</text>
+
+  <text x="200" y="305" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#57606a">object-fit: cover · height: 150px</text>
+
+  <!-- === NARROW SCREEN (mobile) === -->
+  <rect x="400" y="46" width="320" height="260" rx="8" fill="#f7f8fa" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="560" y="66" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" font-weight="700" fill="#57606a">Narrow screen — 2 columns (auto)</text>
+
+  <!-- Grid cells narrow -->
+  <rect x="418" y="76" width="114" height="72" rx="4" fill="#d1d5db"/>
+  <rect x="542" y="76" width="114" height="72" rx="4" fill="#d1d5db"/>
+  <rect x="418" y="156" width="114" height="72" rx="4" fill="#d1d5db"/>
+  <rect x="542" y="156" width="114" height="72" rx="4" fill="#d1d5db"/>
+  <rect x="418" y="236" width="114" height="56" rx="4" fill="#d1d5db"/>
+  <rect x="542" y="236" width="114" height="56" rx="4" fill="#d1d5db"/>
+
+  <!-- NO media queries badge -->
+  <rect x="464" y="305" width="192" height="18" rx="9" fill="#10b981"/>
+  <text x="560" y="318" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#ffffff">Zero media queries needed</text>
+
+  <!-- Hover state callout -->
+  <rect x="56" y="140" width="64" height="56" rx="4" fill="#10b981" opacity="0.8"/>
+  <text x="88" y="164" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="9" fill="#ffffff">opacity: 1</text>
+  <text x="88" y="176" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="9" fill="#ffffff">on :hover</text>
+
+  <!-- vs label -->
+  <text x="380" y="184" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="700" fill="#57606a">vs</text>
+
+  <!-- bottom note -->
+  <text x="380" y="330" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#d1d5db">code4projects.org</text>
+</svg>

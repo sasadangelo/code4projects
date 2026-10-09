@@ -206,6 +206,8 @@
     link: /mastering-basics-css/
   - name: "Building a Professional Website Layout with CSS: Header, Navigation, and Responsive Design"
     link: /building-professional-website-layout-with-css/
+  - name: "Building the Complete Website: Real Pages, HTML Forms, and a Photo Gallery"
+    link: /building-complete-website-pages-forms-gallery/
 - post_series_id: python-cli-command-pattern
   post_series_title: Python CLI with the Command Pattern
   post_series:
