@@ -7,6 +7,9 @@ slug: how-to-deploy-your-first-application-on-ibm-cloud
 image: /wp-content/uploads/2019/01/Tetris_mini.png
 excerpt: In this article, I want to show how to deploy your first application on IBM Cloud.
 categories: Cloud
+tags:
+  - cloud
+  - ibm-cloud
 ---
 
 ![How to deploy your first application on IBM Cloud]({{ site.baseurl }}/wp-content/uploads/2019/01/Tetris_mini.png){:width="282" height="200" .responsive_img}

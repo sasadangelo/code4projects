@@ -7,6 +7,9 @@ image: /assets/img/css-logo.webp
 excerpt: Master the core CSS concepts — selectors, the box model, layout, typography, colours, animations, and responsive design — and apply them to a real website.
 categories:
   - Programming
+tags:
+  - programming
+  - css
 author: sasadangelo
 ---
 

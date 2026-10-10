@@ -7,6 +7,10 @@ image: /assets/img/html-css-layout.svg
 excerpt: Turn your plain HTML site into a professional layout — styled header, footer, navigation bar, home page with hero image, and a mobile-friendly hamburger menu.
 categories:
   - Programming
+tags:
+  - programming
+  - html
+  - css
 author: sasadangelo
 ---
 

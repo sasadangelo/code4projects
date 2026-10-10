@@ -8,6 +8,9 @@ image: /assets/img/docker-getting-started.svg
 excerpt: Learn what Docker is, understand containers and images, and run your first containerized web server with Docker or Podman — no setup complexity required.
 categories:
   - Virtualization
+tags:
+  - virtualization
+  - docker
 ---
 
 ![Getting Started with Docker and Podman]({{ site.baseurl }}/assets/img/docker-getting-started.svg){:width="760" height="400" .responsive_img}

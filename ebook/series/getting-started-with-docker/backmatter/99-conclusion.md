@@ -28,7 +28,7 @@ complexity of Kubernetes, Swarm is the right next step.
 Kubernetes (K8s) is the industry-standard container orchestrator for large-scale
 production deployments. It builds on the same container concepts you now know
 and adds automated rollouts, self-healing, horizontal scaling, and much more.
-The [Getting Started with Kubernetes](https://sasadangelo.github.io/code4projects/getting-started-with-kubernetes/)
+The [Getting Started with Kubernetes](https://www.code4projects.org/getting-started-with-kubernetes/)
 series on Code4Projects is a natural continuation.
 
 ### CI/CD with Docker and GitHub Actions
@@ -56,7 +56,7 @@ If this book helped you, consider:
 Thank you for reading.
 
 — *Salvatore D'Angelo*
-\hfill code4projects.com
+\hfill code4projects.org
 
 \vspace{2em}
 \begin{center}

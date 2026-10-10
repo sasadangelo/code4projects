@@ -8,6 +8,9 @@ image: /assets/img/docker-dockerfile.svg
 excerpt: Learn how to write a Dockerfile, build a custom image, understand the layer cache, and serve your own web content with a custom Nginx container.
 categories:
   - Virtualization
+tags:
+  - virtualization
+  - docker
 ---
 
 ![Dockerfile and Building Custom Images]({{ site.baseurl }}/assets/img/docker-dockerfile.svg){:width="760" height="400" .responsive_img}

@@ -7,6 +7,9 @@ slug: definitive-amazon-ec2-tutorial-step-by-step-guide-beginners
 image: /wp-content/uploads/2021/03/Amazon-EC2-Tutorial.png
 excerpt: In this Amazon EC2 Tutorial, I will show you how to create an EC2 instance, attach an EBS volume to it, and secure it with Security Groups.
 categories: Cloud
+tags:
+  - cloud
+  - aws
 ---
 
 ![The Definitive Amazon EC2 Tutorial: Step by step Guide for Beginners]({{ site.baseurl }}/wp-content/uploads/2021/03/Amazon-EC2-Tutorial.png){:width="341" height="200" .responsive_img}

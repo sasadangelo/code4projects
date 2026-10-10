@@ -65,6 +65,7 @@ $endif$
 %% ── Tables ──────────────────────────────────────────────────
 \usepackage{longtable}
 \usepackage{booktabs}
+\newcounter{none} % pandoc 3.x: tables without caption use \LTcaptype{none}
 \usepackage{array}
 \usepackage{calc}
 
@@ -132,6 +133,17 @@ $endif$
 
 $if(highlighting-macros)$
 $highlighting-macros$
+%% Wrap long lines in highlighted code blocks instead of overflowing the margin
+\RecustomVerbatimEnvironment{Highlighting}{Verbatim}{
+  commandchars=\\\{\},
+  fontsize=\small,
+  breaklines=true,
+  breakanywhere=true,
+}
+%% Plain code blocks (no language) get the same light box as highlighted ones
+\renewenvironment{verbatim}
+  {\VerbatimEnvironment\begin{Shaded}\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]}
+  {\end{Verbatim}\end{Shaded}}
 $endif$
 
 %% ============================================================
@@ -139,13 +151,17 @@ $endif$
 %% ============================================================
 \begin{document}
 
-%% ── Cover (injected via --include-before-body) ────────────────
 $for(include-before)$
 $include-before$
 $endfor$
 
-%% ── Title page (skipped when title is suppressed for a cover image) ──
-$if(title)$
+%% ── Cover image (cover-path is set by build-ebook.sh from cover-image) ──
+$if(cover-path)$
+\thispagestyle{empty}
+\noindent\makebox[\textwidth][c]{\includegraphics[width=\textwidth,height=0.95\textheight,keepaspectratio]{$cover-path$}}
+\newpage
+$else$
+%% ── Title page (used when the series has no cover image) ────
 \pagestyle{empty}
 \vspace*{2cm}
 \begin{center}
@@ -155,6 +171,19 @@ $if(title)$
   {\normalsize\color{gray} $date$}\\[4em]
   {\small\color{gray} $if(rights)$$rights$$endif$}
 \end{center}
+\newpage
+$endif$
+
+%% ── Dedication (one centred line per item of `dedication` in metadata.yml) ──
+$if(dedication)$
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+$for(dedication)$
+$dedication$$sep$\\[0.4em]
+$endfor$
+\end{center}
+\vspace*{\fill}
 \newpage
 $endif$
 

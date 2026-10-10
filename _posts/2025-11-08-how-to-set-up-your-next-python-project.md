@@ -8,6 +8,9 @@ image: /assets/img/setup-python-project.webp
 excerpt: A practical guide to setting up a professional Python project with the right tools for package management, code quality, testing, and version control.
 categories:
   - "Programming"
+tags:
+  - programming
+  - python
 ---
 
 ![How to Set Up Your Next Python Project]({{ site.baseurl }}/assets/img/setup-python-project.webp){:width="760" height="400" .responsive_img}

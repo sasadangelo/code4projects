@@ -10,6 +10,9 @@ image: /assets/img/llm-chatbot-part2.png
 excerpt: Learn how to build a context-aware LLM chatbot with Python and LangChain, managing conversation memory, generation parameters, and robust logging.
 categories:
   - "Artificial Intelligence"
+tags:
+  - artificial-intelligence
+  - python
 ---
 
 ![Build Your Own LLM Chatbot with Python & LangChain (Part 2)]({{ site.baseurl }}/assets/img/llm-chatbot-part2.png)

@@ -7,6 +7,9 @@ image: /assets/img/devops-logo.webp
 excerpt: Bridging the gap between development and operations, DevOps revolutionizes software lifecycle management with unified teams and streamlined processes.
 categories:
   - "Project Management"
+tags:
+  - project-management
+  - devops
 ---
 
 ![Unleashing the Power of DevOps]({{ site.baseurl }}/assets/img/devops-logo.webp){:width="446" height="200" .responsive_img}

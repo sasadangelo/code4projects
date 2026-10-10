@@ -7,6 +7,10 @@ slug: how-to-turn-your-kodi-media-center-torrent-machine
 image: /wp-content/uploads/2017/03/downloading-torrent.jpg
 excerpt: In this article, I would like to show you how to turn your Kodi Media Center in a Torrent machine.
 categories: Multimedia
+tags:
+  - multimedia
+  - raspberry
+  - kodi
 ---
 
 ![How to turn your Kodi Media Center in a Torrent machine]({{ site.baseurl }}/wp-content/uploads/2017/03/downloading-torrent.jpg){:width="200" height="133" .responsive_img}

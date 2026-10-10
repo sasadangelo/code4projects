@@ -7,6 +7,9 @@ slug: amazon-web-services
 image: /wp-content/uploads/2021/01/Amazon-Web-Services.png
 excerpt: This article is an introduction to the Amazon Web Services (AWS) platform. Read it to have a platform and its core services overview.
 categories: Cloud
+tags:
+  - cloud
+  - aws
 sitemap:
   lastmod: 2021-01-14
   priority: 0.7

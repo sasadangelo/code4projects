@@ -7,6 +7,9 @@ slug: introduction-to-the-ibm-cloud-platform
 image: /wp-content/uploads/2019/01/IBM-Cloud.png
 excerpt: "In this article, I would like to go into the details of Cloud Computing analyzing one of the most important platforms on the market: IBM Cloud."
 categories: Cloud
+tags:
+  - cloud
+  - ibm-cloud
 ---
 
 ![Introduction to the IBM Cloud platform]({{ site.baseurl }}/wp-content/uploads/2019/01/IBM-Cloud.png){:width="327" height="200" .responsive_img}

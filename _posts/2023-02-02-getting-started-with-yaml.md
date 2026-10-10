@@ -8,6 +8,9 @@ image: /assets/img/yaml-logo.webp
 excerpt: YAML, short for Yet Another Markup Language, is a popular data serialization format. This article will discuss its baasic concepts.
 categories:
   - Programming
+tags:
+  - programming
+  - yaml
 ---
 
 ![YAML]({{ site.baseurl }}/assets/img/yaml-logo.webp){:width="200" height="200" .responsive_img}

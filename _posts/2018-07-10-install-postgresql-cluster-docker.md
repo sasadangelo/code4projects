@@ -10,6 +10,10 @@ excerpt: This article series will teach you the main Docker concepts and how to 
 categories: 
 - Virtualization
 - Database
+tags:
+  - virtualization
+  - database
+  - docker
 ---
 
 ![How to install PostgreSQL cluster on Docker]({{ site.baseurl }}/wp-content/uploads/2018/07/database-cluster.png){:width="385" height="200" .responsive_img}

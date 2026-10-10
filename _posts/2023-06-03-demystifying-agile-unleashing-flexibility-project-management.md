@@ -7,6 +7,9 @@ image: /assets/img/agile.webp
 excerpt: Discover how Agile methodology revolutionizes project management by embracing flexibility and empowering teams to deliver continuous value. Explore the key principles, benefits, and best practices behind Agile's success in this comprehensive guide.
 categories:
   - "Project Management"
+tags:
+  - project-management
+  - agile
 ---
 
 ![Agile]({{ site.baseurl }}/assets/img/agile.webp){:width="295" height="200" .responsive_img}

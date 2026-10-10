@@ -8,6 +8,9 @@ slug: getting-started-with-docker
 image: /wp-content/uploads/2018/06/Docker-logo.png
 excerpt: In this article, you will learn what Docker is, its main concepts, how to create images and containers and the commands to play with it.
 categories: Virtualization
+tags:
+  - virtualization
+  - docker
 sitemap:
   lastmod: 2018-06-27
   priority: 0.7

@@ -8,6 +8,9 @@ excerpt: In this article, I want to explain what Bosh is, its main concepts, and
 categories:
 - Cloud
 - DevOps
+tags:
+  - cloud
+  - devops
 ---
 
 ![BOSH for Beginners]({{ site.baseurl }}/wp-content/uploads/2019/06/bosh_logo.png){:width="200" height="200" .responsive_img}

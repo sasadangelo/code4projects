@@ -7,7 +7,7 @@ sitemap:
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {% for page in site.html_pages %}
-    {% unless page.sitemap.exclude == "yes" or page.name == "/feed.xml" or page.name == "robots.txt" or page.name == "redirect.html" %}
+    {% unless page.autopage or page.sitemap.exclude == "yes" or page.name == "/feed.xml" or page.name == "robots.txt" or page.name == "redirect.html" %}
     <url>
         {% if page.slug %}
             <loc>{{ site.url }}{{ site.baseurl }}/{{ page.slug | remove: "index.html" }}/</loc>

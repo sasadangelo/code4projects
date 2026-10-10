@@ -9,6 +9,10 @@ excerpt: This is the twelfth article of the Android Game Programming series. Her
 categories:
 - Android
 - Programming
+tags:
+  - android
+  - programming
+  - game-programming
 ---
 
 ![Android Input Management for Games]({{ site.baseurl }}/wp-content/uploads/2019/10/Android-Input-Management2.jpg){:width="200" height="200" .responsive_img}

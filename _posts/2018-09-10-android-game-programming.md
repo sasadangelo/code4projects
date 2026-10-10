@@ -9,6 +9,10 @@ excerpt: "This is the first article of the Android Game Programming series where
 categories:
 - Android
 - Programming
+tags:
+  - android
+  - programming
+  - game-programming
 sitemap:
   lastmod: 2018-09-10
   priority: 0.7

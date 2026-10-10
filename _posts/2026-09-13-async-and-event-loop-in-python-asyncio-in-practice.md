@@ -11,6 +11,9 @@ image: /assets/img/async-and-event-loop-in-python-asyncio-in-practice-hero.jpg
 excerpt: "Build a real async news aggregator step by step — fetching RSS feeds concurrently with aiohttp, the same code used in the Alfred open-source project. Each section adds one asyncio pattern: gather, TaskGroup, timeout, Semaphore, and format_news."
 categories:
   - "Programming"
+tags:
+  - programming
+  - python
 ---
 
 ![Async and the Event Loop in Python: asyncio in Practice]({{ site.baseurl }}/assets/img/async-and-event-loop-in-python-asyncio-in-practice-hero.jpg){:width="760" height="400" .responsive_img}

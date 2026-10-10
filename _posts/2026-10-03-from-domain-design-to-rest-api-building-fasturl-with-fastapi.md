@@ -11,6 +11,9 @@ image: /assets/img/from-domain-design-to-rest-api-building-fasturl-with-fastapi-
 excerpt: "Learn how to turn requirements and a domain model into a clean REST API using FastAPI and Pydantic v2, using FastURL — a URL shortener — as a concrete case study."
 categories:
   - "Programming"
+tags:
+  - programming
+  - python
 ---
 
 

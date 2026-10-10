@@ -9,6 +9,10 @@ excerpt: In this article, I would like to introduce to you the basic android gra
 categories:
 - Android
 - Programming
+tags:
+  - android
+  - programming
+  - game-programming
 ---
 
 ![Android Graphics Programming for Games]({{ site.baseurl }}/wp-content/uploads/2019/07/Blue-bot-paint.jpg){:width="355" height="200" .responsive_img}

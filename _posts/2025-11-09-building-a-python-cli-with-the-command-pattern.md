@@ -11,6 +11,9 @@ image: /assets/img/building-a-python-cli-with-the-command-pattern.webp
 excerpt: Learn how to design a clean, extensible Python CLI using argparse and the Command design pattern — each command as an isolated, testable class.
 categories:
   - "Programming"
+tags:
+  - programming
+  - python
 ---
 
 ![Building a Python Command Line Interface (CLI) with the Command Pattern]({{ site.baseurl }}/assets/img/building-a-python-cli-with-the-command-pattern.webp){:width="760" height="400" .responsive_img}

@@ -10,6 +10,9 @@ image: /assets/img/llm-chatbot-part3.png
 excerpt: Add Retrieval-Augmented Generation (RAG) to your LLM chatbot — ingest PDFs and Wikipedia pages into a vector database and retrieve context dynamically.
 categories:
   - "Artificial Intelligence"
+tags:
+  - artificial-intelligence
+  - python
 ---
 
 ![Build Your Own LLM Chatbot with Python & LangChain (Part 3)]({{ site.baseurl }}/assets/img/llm-chatbot-part3.png)

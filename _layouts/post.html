@@ -16,35 +16,37 @@ layout: default
           <span class="post-byline-details">
             {{ page.content | number_of_words | divided_by: 200 | plus: 1 }} min read &middot; {{ page.date | date: "%B %-d, %Y" }}
           </span>
-          <div class="social-media-icons post-byline-social">
-            {% include author_social_icons.html author=author %}
-          </div>
         </div>
       </div>
       {% endif %}
       {{ content }}
+      {% if page.tags and page.tags.size > 0 %}
+      <div class="post-tags">
+        {% for tag in page.tags %}
+        <a class="post-tag" href="{{ site.baseurl }}/tag/{{ tag | slugify }}/">#{{ tag }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
       {% if author %}
       <div class="post-author-bio">
         <img class="post-author-bio-avatar" src="{{ author.image }}" alt="{{ author.name }}"/>
         <div class="post-author-bio-text">
           <span class="post-author-bio-name">{{ author.name }}</span>
           <p>{{ author.position }}. Writes at <a href="https://code4projects.org">code4projects.org</a>.</p>
-          <div class="social-media-icons post-author-bio-social">
-            {% include author_social_icons.html author=author %}
-          </div>
         </div>
       </div>
       {% endif %}
+      {% include select_ebook.html %}
       <div class="newsletter-post">
         <div class="newsletter-post-box">
           <div class="newsletter-post-image">
-            <img src="{{ site.baseurl }}/{{ site.data.newsletter.post.newsletter-image }}" alt="{{ site.data.newsletter.post.newsletter-title }}" width="250" height="250" loading="lazy">
+            <img src="{{ site.baseurl }}/{{ ebook.image-medium }}" alt="{{ ebook.title }}" width="250" height="250" loading="lazy">
           </div>
           <div class="newsletter-post-form">
             <h3 class="newsletter-card-title">{{ site.data.newsletter.post.newsletter-title }}</h3>
             <p class="newsletter-card-desc">Enjoyed this article? Subscribe to get new programming tutorials and free eBooks directly in your inbox.</p>
             <div class="newsletter-card-form">
-              <button type="button" class="newsletter-card-btn" data-open-newsletter>Download eBook</button>
+              <button type="button" class="newsletter-card-btn" data-open-newsletter data-ebook="{{ ebook.id }}">Download eBook</button>
             </div>
             <p class="newsletter-card-note">Free eBook with newsletter signup. No spam; unsubscribe anytime.</p>
           </div>

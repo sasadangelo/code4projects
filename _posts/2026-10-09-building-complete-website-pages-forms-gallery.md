@@ -7,11 +7,12 @@ image: /assets/img/html-css-complete-pages.svg
 excerpt: Build the real inner pages of your site — About Me, Start Here, Resources, a contact form, and an interactive photo gallery with CSS Grid and JavaScript.
 categories:
   - Programming
+tags:
+  - programming
+  - html
+  - css
 author: sasadangelo
 ---
-
-# Building the Complete Website: Real Pages, HTML Forms, and a Photo Gallery
-_Posted on **{{ page.date | date_to_string }}**_
 
 ![Building the Complete Website: Real Pages, HTML Forms, and a Photo Gallery]({{ site.baseurl }}/assets/img/html-css-complete-pages.svg){:width="760" height="400" .responsive_img}
 

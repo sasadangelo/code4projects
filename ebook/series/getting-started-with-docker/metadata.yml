@@ -4,11 +4,18 @@ title: "Getting Started with Docker"
 subtitle: "Containers, Images, Networking, Volumes, Compose and Security"
 author: "Salvatore D'Angelo"
 date: "2026"
-rights: "© 2026 Salvatore D'Angelo — code4projects.com. All rights reserved."
+rights: "© 2026 Salvatore D'Angelo — code4projects.org. All rights reserved."
 description: |
   A practical, step-by-step guide to Docker and Podman for developers.
   From your first container to a secure multi-container application,
   this book covers everything you need to get productive with containers.
+
+# ─── Dedication ───────────────────────────────────────────────────────────────
+# One centred line per item (Markdown: *italic*, `code`). Remove to skip the page.
+dedication:
+  - '*To every developer who has ever typed*'
+  - '`docker run hello-world`'
+  - '*and wondered what actually just happened.*'
 
 # ─── Series mapping ───────────────────────────────────────────────────────────
 # Must match the post_series_id field in Jekyll frontmatter

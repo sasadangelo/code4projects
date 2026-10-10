@@ -8,6 +8,9 @@ image: /assets/img/docker-volumes.svg
 excerpt: Learn the three Docker storage types — volumes, bind mounts, and tmpfs — and how to use them to persist data outside a container so it survives restarts and replacements.
 categories:
   - Virtualization
+tags:
+  - virtualization
+  - docker
 ---
 
 ![How Docker Volumes Work]({{ site.baseurl }}/assets/img/docker-volumes.svg){:width="760" height="400" .responsive_img}

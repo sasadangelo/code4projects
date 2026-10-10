@@ -7,6 +7,9 @@ slug: how-to-increase-amazon-ec2-availability-and-scalability
 image: /wp-content/uploads/2021/06//load-balancer.png
 excerpt: In this article, I talk about EC2 Availability and Scalability and how to increase them using AWS services like Load Balancers, Autoscalers, and DNS.
 categories: Cloud
+tags:
+  - cloud
+  - aws
 ---
 
 ![How to increase Amazon EC2 Availability and Scalability]({{ site.baseurl }}/wp-content/uploads/2021/06/load-balancer.png){:width="200" height="169" .responsive_img}

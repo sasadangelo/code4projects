@@ -8,6 +8,9 @@ image: /assets/img/python-application-configuration.webp
 excerpt: Learn how to manage Python application configuration using pydantic-settings, combining YAML files for non-secret parameters and environment variables for secrets.
 categories:
   - "Programming"
+tags:
+  - programming
+  - python
 date: 2025-12-30
 ---
 

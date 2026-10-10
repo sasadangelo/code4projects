@@ -8,6 +8,9 @@ image: /assets/img/database-layer-with-sqlalchemy-python.jpg
 excerpt: Learn how to build a clean, transactional database layer in Python using SQLAlchemy ORM, a DatabaseSessionManager, DAO models, and the DAO vs DTO boundary inside a layered architecture.
 categories:
   - "Programming"
+tags:
+  - programming
+  - python
 ---
 
 ![Building a Database Layer in Python with SQLAlchemy ORM]({{ site.baseurl }}/assets/img/database-layer-with-sqlalchemy-python.jpg){:width="760" height="400" .responsive_img}

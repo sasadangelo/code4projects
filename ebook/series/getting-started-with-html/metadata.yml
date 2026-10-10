@@ -1,0 +1,49 @@
+---
+# ─── Book identity ────────────────────────────────────────────────────────────
+title: "Build Your First Website with HTML & CSS"
+subtitle: "Step by Step, from a Blank Page to a Complete, Responsive Site"
+author: "Salvatore D'Angelo"
+date: "2026"
+rights: "© 2026 Salvatore D'Angelo — code4projects.org. All rights reserved."
+description: |
+  A practical, step-by-step guide to HTML and CSS for beginners.
+  From a blank text file to a complete, responsive, multi-page website
+  with a navigation bar, a contact form, and an interactive photo gallery.
+
+# ─── Dedication ───────────────────────────────────────────────────────────────
+# One centred line per item (Markdown: *italic*, `code`). Remove to skip the page.
+dedication:
+  - '*To every beginner who has ever typed*'
+  - '`<h1>Hello, World!</h1>`'
+  - '*into a plain text file and watched it come alive in a browser.*'
+
+# ─── Series mapping ───────────────────────────────────────────────────────────
+# Must match the post_series_id field in Jekyll frontmatter
+post_series_id: "getting-started-with-html"
+
+# ─── Output ───────────────────────────────────────────────────────────────────
+output_filename: "build-your-first-website-with-html-and-css.pdf"
+
+# ─── LaTeX / PDF settings ─────────────────────────────────────────────────────
+lang: en-US
+papersize: a4
+fontsize: 11pt
+mainfont: "Georgia"
+sansfont: "Helvetica Neue"
+monofont: "Menlo"
+linestretch: 1.4
+margin-left: 2.5cm
+margin-right: 2.5cm
+margin-top: 3cm
+margin-bottom: 3cm
+linkcolor: "NavyBlue"
+urlcolor: "NavyBlue"
+toccolor: "NavyBlue"
+toc: true
+toc-depth: 2
+numbersections: true
+colorlinks: true
+
+# ─── Cover ────────────────────────────────────────────────────────────────────
+# Path relative to the series folder
+cover-image: "frontmatter/cover.png"

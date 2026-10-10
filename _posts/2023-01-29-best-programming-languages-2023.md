@@ -7,6 +7,8 @@ image: /assets/img/top-programming-languages-2023.webp
 excerpt: This article lists the best programming languages to learn in 2023 for beginners and experienced developers.
 categories:
   - Programming
+tags:
+  - programming
 ---
 
 ![The Top Programming Languages to Learn in 2023]({{ site.baseurl }}/assets/img/top-programming-languages-2023.webp){:width="454" height="200" .responsive_img}

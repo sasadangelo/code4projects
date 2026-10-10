@@ -10,6 +10,10 @@ excerpt: This is the second article of Getting started with Docker series. You&#
 categories: 
 - Virtualization
 - Database
+tags:
+  - virtualization
+  - database
+  - docker
 ---
 
 ![How to install PostgreSQL on Docker]({{ site.baseurl }}/wp-content/uploads/2018/06/postgres_and_docker.png){:width="422" height="200" .responsive_img}

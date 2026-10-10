@@ -10,6 +10,10 @@ excerpt: In this article, I&#039;ll talk about how Docker networking. You&#039;l
 categories:
 - Networking
 - Virtualization
+tags:
+  - networking
+  - virtualization
+  - docker
 ---
 
 ![How docker networking works]({{ site.baseurl }}/wp-content/uploads/2018/07/docker-bridge-network-mini.png){:width="214" height="200" .responsive_img}

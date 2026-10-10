@@ -9,6 +9,10 @@ excerpt: Learn how Docker networking works — bridge, host, overlay, and macvla
 categories:
   - Virtualization
   - Networking
+tags:
+  - virtualization
+  - networking
+  - docker
 ---
 
 ![How Docker Networking Works]({{ site.baseurl }}/assets/img/docker-networking.svg){:width="760" height="400" .responsive_img}

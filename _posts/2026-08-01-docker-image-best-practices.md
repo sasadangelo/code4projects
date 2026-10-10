@@ -8,6 +8,9 @@ image: /assets/img/docker-best-practices.svg
 excerpt: A practical checklist for writing Dockerfiles that produce functional, lightweight, debuggable, and secure images — multi-stage builds, layer ordering, healthchecks, and more.
 categories:
   - Virtualization
+tags:
+  - virtualization
+  - docker
 ---
 
 ![Docker Image Best Practices]({{ site.baseurl }}/assets/img/docker-best-practices.svg){:width="760" height="400" .responsive_img}

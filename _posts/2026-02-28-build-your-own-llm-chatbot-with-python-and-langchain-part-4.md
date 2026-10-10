@@ -10,6 +10,9 @@ image: /assets/img/llm-chatbot-part4.png
 excerpt: Add a Streamlit-based web UI to your LLM chatbot — session management, interactive chat window, and seamless integration with your existing LangChain backend.
 categories:
   - "Artificial Intelligence"
+tags:
+  - artificial-intelligence
+  - python
 ---
 
 ![Build Your Own LLM Chatbot with Python & LangChain (Part 4)]({{ site.baseurl }}/assets/img/llm-chatbot-part4.png)

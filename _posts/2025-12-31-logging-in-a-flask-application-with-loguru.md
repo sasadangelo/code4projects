@@ -8,6 +8,9 @@ image: /assets/img/loguru-hero.webp
 excerpt: Learn how to centralize logging in a Flask application with Loguru, including stdout/file outputs and standard logging interception.
 categories:
   - "Programming"
+tags:
+  - programming
+  - python
 ---
 
 ![Logging in a Flask Application with Loguru]({{ site.baseurl }}/assets/img/loguru-hero.webp){:width="760" height="400" .responsive_img}

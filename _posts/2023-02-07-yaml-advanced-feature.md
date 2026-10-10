@@ -8,6 +8,9 @@ image: /assets/img/yaml-advanced.webp
 excerpt: Dive deeper into YAML with this comprehensive guide to advanced concepts. Learn tips and techniques to fully unlock its power and functionality.
 categories:
   - Programming
+tags:
+  - programming
+  - yaml
 ---
 
 ![YAML]({{ site.baseurl }}/assets/img/yaml-advanced.webp){:width="356" height="200" .responsive_img}

@@ -9,6 +9,10 @@ excerpt: This is the third article of Android Game Development series. Here I wo
 categories:
 - Android
 - Programming
+tags:
+  - android
+  - programming
+  - game-programming
 ---
 
 ![How to create an Android application]({{ site.baseurl }}/wp-content/uploads/2018/09/android-app-feature-picture.png){:width="267" height="200" .responsive_img}

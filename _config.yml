@@ -68,6 +68,24 @@ pagination:
     before: 2
     after: 2
 
+# Tag archives (/tag/<tag>/), generated from the posts' `tags` and marked
+# noindex in _layouts/default.html
+autopages:
+  enabled: true
+  categories:
+    enabled: false
+  collections:
+    enabled: false
+  tags:
+    enabled: true
+    layouts:
+      - 'tag.html'
+    title: 'Posts tagged #:tag'
+    permalink: '/tag/:tag/'
+    slugify:
+      mode: 'default'
+      case: false
+
 latest_posts: 5
 
 sidebars:

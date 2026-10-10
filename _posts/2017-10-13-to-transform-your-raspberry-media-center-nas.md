@@ -7,6 +7,10 @@ slug: to-transform-your-raspberry-media-center-nas
 image: /wp-content/uploads/2017/10/Raspberry_Samba.jpg
 excerpt: In this article, I would like to show you how to transform your Raspberry Media Center in a Network Attached Server (NAS) and share your media files
 categories: Multimedia
+tags:
+  - multimedia
+  - raspberry
+  - kodi
 ---
 
 ![How to transform your Raspberry Media Center in a NAS]({{ site.baseurl }}/wp-content/uploads/2017/10/Raspberry_Samba.jpg){:width="200" height="200" .responsive_img}

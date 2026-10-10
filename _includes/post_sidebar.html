@@ -1,13 +1,14 @@
+{% include select_ebook.html %}
 <div class="newsletter-sidebar">
   <div class="newsletter-sidebar-box">
     <div class="newsletter-sidebar-image">
-      <img src="{{ site.baseurl }}/{{ site.data.newsletter.sidebar.newsletter-image }}" alt="{{ site.data.newsletter.sidebar.newsletter-title }}" width="200" height="200" loading="lazy">
+      <img src="{{ site.baseurl }}/{{ ebook.image-mini }}" alt="{{ ebook.title }}" width="200" height="200" loading="lazy">
     </div>
     <div class="newsletter-sidebar-form">
       <h3 class="newsletter-card-title-sidebar">{{ site.data.newsletter.sidebar.newsletter-title }}</h3>
       <p class="newsletter-card-desc-sidebar">Get free eBooks and tech tutorials directly in your inbox.</p>
       <div class="newsletter-card-form-sidebar">
-        <button type="button" class="newsletter-card-btn" data-open-newsletter>Download eBook</button>
+        <button type="button" class="newsletter-card-btn" data-open-newsletter data-ebook="{{ ebook.id }}">Download eBook</button>
       </div>
     </div>
   </div>

@@ -2549,14 +2549,32 @@ footer {
   color: #57606a;
 }
 
-.post-byline-social {
-  margin-top: 8px;
-  justify-content: flex-start;
+/*
+ * ################################################################################
+ * # Post Tags (bottom of article, each linking to its noindex /tag/ archive)
+ * ################################################################################
+ */
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 2em 0 0 0;
 }
 
-.post-author-bio-social {
-  margin-top: 0;
-  justify-content: flex-start;
+.post-tag {
+  padding: 4px 12px;
+  font-size: 14px;
+  color: #57606a;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.post-tag:hover,
+.post-tag:focus {
+  color: #a84005;
+  border-color: #a84005;
 }
 
 /*

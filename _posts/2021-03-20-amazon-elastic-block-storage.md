@@ -7,6 +7,9 @@ slug: amazon-elastic-block-storage
 image: /wp-content/uploads/2021/03/HDD-SDD-mini.png
 excerpt: In this article, I am going to talk about Amazon Elastic Block Storage (EBS) and Elastic File Storage (EFS).
 categories: Cloud
+tags:
+  - cloud
+  - aws
 ---
 
 ![Amazon Elastic Block Storage (EBS) vs Elastic File Storage (EFS)]({{ site.baseurl }}/wp-content/uploads/2021/03/HDD-SDD-mini.png){:width="356" height="200" .responsive_img}

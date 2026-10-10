@@ -11,6 +11,9 @@ image: /assets/img/concurrency-in-python-threads-processes-and-the-event-loop-he
 excerpt: "Master Python concurrency: understand when to use threads, processes, or asyncio — and why the event loop became the backbone of modern high-throughput applications."
 categories:
   - "Programming"
+tags:
+  - programming
+  - python
 ---
 
 ![Concurrency in Python: Threads, Processes, and the Event Loop]({{ site.baseurl }}/assets/img/concurrency-in-python-threads-processes-and-the-event-loop-hero.webp){:width="760" height="400" .responsive_img}

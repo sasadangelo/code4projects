@@ -1,0 +1,26 @@
+# Free eBooks offered with the newsletter signup.
+#
+# The newsletter boxes (post bottom and sidebar) show the first eBook whose
+# `tags` match one of the post's tags; every other page (home included) shows
+# the `default` eBook. The chosen eBook is remembered when the reader clicks
+# "Download eBook", so the newsletter-welcome page offers the same PDF.
+default: docker
+
+list:
+  - id: docker
+    title: Getting Started with Docker
+    pdf: ebook-download/getting-started-with-docker.pdf
+    image-mini: wp-content/uploads/2021/02/3D-DockerCover-mini.webp
+    image-medium: wp-content/uploads/2021/02/3D-DockerCover-medium.webp
+    image-large: wp-content/uploads/2021/02/3D-DockerCover-large.webp
+    tags: []
+
+  - id: html-css
+    title: Build Your First Website with HTML & CSS
+    pdf: ebook-download/build-your-first-website-with-html-and-css.pdf
+    image-mini: wp-content/uploads/2021/02/3D-HtmlCssCover-mini.webp
+    image-medium: wp-content/uploads/2021/02/3D-HtmlCssCover-medium.webp
+    image-large: wp-content/uploads/2021/02/3D-HtmlCssCover-large.webp
+    tags:
+      - html
+      - css

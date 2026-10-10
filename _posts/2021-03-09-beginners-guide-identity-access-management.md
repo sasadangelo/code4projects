@@ -7,6 +7,9 @@ slug: beginners-guide-identity-access-management
 image: /wp-content/uploads/2021/03/Identity-and-Access-Management.png
 excerpt: "After the AWS Introduction of the previous article, let&#039;s start exploring one of the main AWS components: AWS Identity and Access Management (IAM)."
 categories: Cloud
+tags:
+  - cloud
+  - aws
 ---
 
 ![Beginner’s Guide to AWS Identity and Access Management (IAM)]({{ site.baseurl }}/wp-content/uploads/2021/03/Identity-and-Access-Management.png){:width="200" height="200" .responsive_img}

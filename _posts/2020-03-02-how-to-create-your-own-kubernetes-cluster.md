@@ -10,6 +10,11 @@ categories:
 - Cloud
 - DevOps
 - Virtualization
+tags:
+  - cloud
+  - devops
+  - virtualization
+  - kubernetes
 ---
 
 ![Kubernetes Cluster]({{ site.baseurl }}/wp-content/uploads/2020/03/Kubernetes-cluster.jpeg){:width="247" height="200" .responsive_img}

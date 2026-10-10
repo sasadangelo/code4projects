@@ -7,6 +7,9 @@ slug: the-ultimate-and-great-overview-of-aws-pricing-and-support
 image: /wp-content/uploads/2021/02/AWS-Pricing.jpg
 excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
 categories: Cloud
+tags:
+  - cloud
+  - aws
 ---
 
 ![The Ultimate and Great Overview of AWS Pricing and Support]({{ site.baseurl }}/wp-content/uploads/2021/02/AWS-Pricing.jpg){:width="316" height="200" .responsive_img}

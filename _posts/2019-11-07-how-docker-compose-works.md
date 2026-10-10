@@ -8,6 +8,9 @@ slug: how-docker-compose-works
 image: /wp-content/uploads/2019/11/docker-compose.png
 excerpt: This is the seventh article of the Getting started with Docker series. Here I will discuss Docker Compose and how to use it to improve the container orchestration.
 categories: Virtualization
+tags:
+  - virtualization
+  - docker
 ---
 
 ![How Docker Compose works]({{ site.baseurl }}/wp-content/uploads/2019/11/docker-compose.png){:width="200" height="200" .responsive_img}

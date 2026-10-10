@@ -11,6 +11,10 @@ image: /assets/img/designing-rest-apis-in-practice-a-kubernetes-case-study-hero.
 excerpt: "Learn how to design robust, domain-driven REST APIs using HTTP semantics and clean architecture principles, using Kubernetes as a practical case study."
 categories:
   - "Programming"
+tags:
+  - programming
+  - kubernetes
+  - python
 ---
 
 ![Designing REST APIs in Practice: A Kubernetes Case Study]({{ site.baseurl }}/assets/img/designing-rest-apis-in-practice-a-kubernetes-case-study-hero.png){:width="760" height="400" .responsive_img}

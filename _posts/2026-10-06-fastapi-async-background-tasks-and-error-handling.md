@@ -11,6 +11,9 @@ image: /assets/img/fastapi-async-background-tasks-and-error-handling-hero.svg
 excerpt: "Async I/O, fire-and-forget background tasks, a shared httpx client, and three global exception handlers in FastAPI — grounded in the FastURL project."
 categories:
   - "Programming"
+tags:
+  - programming
+  - python
 ---
 
 

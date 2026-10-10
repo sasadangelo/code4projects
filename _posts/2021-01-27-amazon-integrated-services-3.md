@@ -7,6 +7,9 @@ slug: amazon-integrated-services-3
 image: /wp-content/uploads/2021/01/CloudWatch-CloudFront-SNS-CloudFormation.png
 excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
 categories: Cloud
+tags:
+  - cloud
+  - aws
 ---
 
 ![Amazon Integrated Services (part 2)]({{ site.baseurl }}/wp-content/uploads/2021/01/CloudWatch-CloudFront-SNS-CloudFormation.png){:width="200" height="200" .responsive_img}

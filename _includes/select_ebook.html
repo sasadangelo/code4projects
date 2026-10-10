@@ -1,0 +1,18 @@
+{%- comment -%}
+  Sets `ebook` to the eBook offered on the current page: the first entry of
+  _data/ebooks.yml whose tags match one of page.tags, or the default one.
+{%- endcomment -%}
+{%- assign ebook = site.data.ebooks.list | where: "id", site.data.ebooks.default | first -%}
+{%- assign ebook_found = false -%}
+{%- if page.tags -%}
+  {%- for candidate in site.data.ebooks.list -%}
+    {%- if ebook_found -%}{%- break -%}{%- endif -%}
+    {%- for tag in candidate.tags -%}
+      {%- if page.tags contains tag -%}
+        {%- assign ebook = candidate -%}
+        {%- assign ebook_found = true -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endfor -%}
+{%- endif -%}

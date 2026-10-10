@@ -11,6 +11,9 @@ image: /assets/img/building-a-python-cli-with-click-a-cleaner-approach-to-the-co
 excerpt: "Learn how the Click library simplifies Python CLI development — cleaner commands, built-in type validation, and no shared execute() boilerplate."
 categories:
   - "Programming"
+tags:
+  - programming
+  - python
 ---
 
 ![Building a Python CLI with Click: A Cleaner Approach to the Command Pattern]({{ site.baseurl }}/assets/img/building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern-hero.webp){:width="760" height="400" .responsive_img}

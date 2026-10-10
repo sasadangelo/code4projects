@@ -9,6 +9,10 @@ excerpt: This is the eighth article of the Android Game Programming series. In t
 categories:
 - Android
 - Programming
+tags:
+  - android
+  - programming
+  - game-programming
 ---
 
 ![Android Files Management]({{ site.baseurl }}/wp-content/uploads/2018/12/android-file.jpg){:width="280" height="197" .responsive_img}

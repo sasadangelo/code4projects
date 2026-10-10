@@ -29,20 +29,7 @@ with the command line is all you need.
 Each chapter of this book corresponds to a foundational Docker concept, introduced
 in a deliberate order so that each one builds on the previous:
 
-1. **Getting Started with Docker and Podman** — first contact, core concepts,
-   essential commands, your first running container.
-2. **Containers vs Virtual Machines** — how containers actually work under the hood,
-   what Linux namespaces and cgroups are, and when to use VMs instead.
-3. **Dockerfile and Building Custom Images** — write your own Dockerfile, understand
-   the layer cache, build and tag images.
-4. **How Docker Networking Works** — connect containers so they can talk to each other,
-   automatic DNS resolution, network drivers.
-5. **How Docker Volumes Work** — separate data from code, persist state across
-   container restarts and replacements.
-6. **How Docker Compose Works** — manage a multi-container application with a single
-   YAML file and a single command.
-7. **Docker Security Best Practices** — run containers safely: non-root users,
-   read-only filesystems, capability limits, vulnerability scanning.
+<!-- chapters -->
 
 ## A Note on Docker vs Podman
 
@@ -56,6 +43,6 @@ The examples in this book are maintained on GitHub at
 [github.com/sasadangelo/docker-tutorials](https://github.com/sasadangelo/docker-tutorials).
 
 For corrections, suggestions, or feedback, write to **sasadangelo@gmail.com**
-or visit [code4projects.com](https://sasadangelo.github.io/code4projects).
+or visit [code4projects.org](https://www.code4projects.org).
 
 \newpage

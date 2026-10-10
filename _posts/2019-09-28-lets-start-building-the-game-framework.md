@@ -9,6 +9,10 @@ excerpt: In this article, we will start to create our Game Framework. It will be
 categories: 
 - Android
 - Programming
+tags:
+  - android
+  - programming
+  - game-programming
 ---
 
 ![Let's start building the Game Framework]({{ site.baseurl }}/wp-content/uploads/2019/09/game-framework.jpg){:width="312" height="200" .responsive_img}

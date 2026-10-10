@@ -28,16 +28,17 @@ layout: default
           </div>
         {% endfor %}
       </div>
+      {% include select_ebook.html %}
       <div class="newsletter-home">
         <div class="newsletter-home-box">
           <div class="newsletter-home-image">
-            <img src="{{ site.baseurl }}/{{ site.data.newsletter.home.newsletter-image }}" alt="{{ site.data.newsletter.home.newsletter-title }}" width="300" height="300" loading="lazy">
+            <img src="{{ site.baseurl }}/{{ ebook.image-large }}" alt="{{ ebook.title }}" width="300" height="300" loading="lazy">
           </div>
           <div class="newsletter-home-form">
             <h3 class="newsletter-card-title">{{ site.data.newsletter.home.newsletter-title }}</h3>
             <p class="newsletter-card-desc">Get the latest articles on software engineering, Docker, Kubernetes, and Python delivered straight to your inbox, plus instant access to our free eBooks.</p>
             <div class="newsletter-card-form">
-              <button type="button" class="newsletter-card-btn" data-open-newsletter>Download eBook</button>
+              <button type="button" class="newsletter-card-btn" data-open-newsletter data-ebook="{{ ebook.id }}">Download eBook</button>
             </div>
             <p class="newsletter-card-note">Free eBook with newsletter signup. No spam; unsubscribe anytime.</p>
           </div>

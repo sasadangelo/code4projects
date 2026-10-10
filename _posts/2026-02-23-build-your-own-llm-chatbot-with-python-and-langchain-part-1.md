@@ -10,6 +10,9 @@ image: /assets/img/llm-chatbot-part1.png
 excerpt: Build a production-ready LLM chatbot with Python and LangChain. Step-by-step guide to scalable, configurable architecture for real-world applications.
 categories:
   - "Artificial Intelligence"
+tags:
+  - artificial-intelligence
+  - python
 ---
 
 ![Build Your Own LLM Chatbot with Python & LangChain (Part 1)]({{ site.baseurl }}/assets/img/llm-chatbot-part1.png)

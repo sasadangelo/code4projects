@@ -8,6 +8,9 @@ image: /assets/img/docker-containers-vs-vms.svg
 excerpt: Understand the real differences between containers and virtual machines — how each one works under the hood, their pros and cons, and when to use which.
 categories:
   - Virtualization
+tags:
+  - virtualization
+  - docker
 ---
 
 ![Containers vs Virtual Machines]({{ site.baseurl }}/assets/img/docker-containers-vs-vms.svg){:width="760" height="400" .responsive_img}

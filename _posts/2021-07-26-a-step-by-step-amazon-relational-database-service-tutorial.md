@@ -7,6 +7,9 @@ slug: a-step-by-step-amazon-relational-database-service-tutorial
 image: /wp-content/uploads/rds-logo.png
 excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
 categories: Cloud
+tags:
+  - cloud
+  - aws
 ---
 
 ![A Step by step Amazon Relational Database Service tutorial]({{ site.baseurl }}/wp-content/uploads/rds-logo.png){:width="393" height="200" .responsive_img}

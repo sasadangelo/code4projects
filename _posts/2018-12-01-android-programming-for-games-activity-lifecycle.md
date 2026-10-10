@@ -9,6 +9,10 @@ excerpt: In this article, I will introduce a basic android programming concept, 
 categories:
 - Android
 - Programming
+tags:
+  - android
+  - programming
+  - game-programming
 ---
 
 ![Android Programming for Games (Activity Lifecycle)]({{ site.baseurl }}/wp-content/uploads/2018/12/ActivityState-mini.png){:width="200" height="91" .responsive_img}

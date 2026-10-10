@@ -7,6 +7,9 @@ image: /assets/img/html.webp
 excerpt: Learn HTML from scratch — build a real five-page website with headings, paragraphs, links, lists, and images, step by step.
 categories:
   - Programming
+tags:
+  - programming
+  - html
 author: sasadangelo
 ---
 

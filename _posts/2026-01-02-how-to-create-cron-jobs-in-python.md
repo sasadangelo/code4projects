@@ -8,6 +8,9 @@ image: /assets/img/how-to-create-cron-jobs-in-python.webp
 excerpt: Learn how to build a generic, configurable cron job class in Python with APScheduler — run periodic tasks in the background with clean scheduling, logging, and error handling.
 categories:
   - "Programming"
+tags:
+  - programming
+  - python
 ---
 
 ![How to Create Cron Jobs in Python for Your Applications]({{ site.baseurl }}/assets/img/how-to-create-cron-jobs-in-python.webp){:width="600" height="400" .responsive_img}
