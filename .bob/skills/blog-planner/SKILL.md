@@ -140,7 +140,7 @@ At the end of the plan output, remind the user of the full pipeline for this pos
 
 > **Pipeline:** `blog-research` → `blog-writer` → `blog-illustrator` → `blog-review`
 >
-> **Next Step:** Run `/blog research <topic>` (or invoke the `blog-research` skill) to search, fetch, and compile research notes, 5 reference articles, and image options in `.bob/tmp/blog-research/<slug>/` before invoking `blog-writer` to draft the post. After writing, run `blog-illustrator` to generate the hero SVG and any inline diagrams, then `blog-review` before publishing.
+> **Next Step:** Run `/blog research <topic>` (or invoke the `blog-research` skill) to search, fetch, and compile research notes and 5 reference articles in `.bob/tmp/blog-research/<slug>/` before invoking `blog-writer` to draft the post. After writing, run `blog-illustrator` to generate the hero SVG and any inline diagrams, then `blog-review` before publishing.
 
 ## Rules
 

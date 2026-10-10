@@ -1,13 +1,15 @@
 ---
 name: blog-research
-description: Use after blog-planner and before blog-writer to search, fetch, and compile references, statistics, and images for the blog post.
+description: Use after blog-planner and before blog-writer to search, fetch, and compile references and statistics for the blog post.
 ---
 
 # Blog Research — Code4Projects
 
-This skill researches a planned blog post topic to ensure the content is grounded in authoritative sources, contains current statistics (2025-2026), covers competitor gaps, and is supported by both hero and inline image concepts.
+This skill researches a planned blog post topic to ensure the content is grounded in authoritative sources, contains current statistics (2025-2026), and covers competitor gaps.
 
 It uses the `blog-researcher` subagent to execute searches and fetches.
+
+> **Images are out of scope.** Hero images and inline diagrams are produced by `blog-illustrator` *after* the draft is written, so it can design them around the actual article content.
 
 ## Workflow
 
@@ -24,26 +26,11 @@ Spawn the `blog-researcher` subagent to perform the heavy-lifting research:
   1. Search for top-tier articles and statistics on the topic using **Tavily MCP** (or relevant search tools).
   2. Select the **top 5 most authoritative articles** and fetch their contents.
   3. Create a temporary folder at `.bob/tmp/blog-research/[slug]/articles/` and save each article as a `.txt` file (e.g., `article_1.txt`, `article_2.txt`, etc.).
-  4. Search and select **5 different candidates for the Hero image** (from Pixabay, Unsplash, or Pexels) with direct CDN URLs, alt text, and relevance.
-  5. **Physically download and standardize** (resize/crop to exactly **760x400 px**) the 5 hero image candidates into `.bob/tmp/blog-research/[slug]/images/` as `hero_1.jpg` to `hero_5.jpg`.
-  6. **Physically download and standardize or generate** 2-3 content images or diagrams (ensuring a size of exactly **760x400 px**; vector SVGs must use `viewBox="0 0 760 400"`, `width="760"`, `height="400"`) and save them into `.bob/tmp/blog-research/[slug]/images/`.
-  7. **Always generate AI images** using the Gemini script. Construct 4 optimized prompts (1 hero + 3 content), then run:
-     ```
-     python3 .bob/skills/blog-research/generate_ai_image.py "[slug]" "[topic]" "[hero_prompt]" "[content_prompt_1]" "[content_prompt_2]" "[content_prompt_3]"
-     ```
-     This produces `ai_hero.jpg`, `ai_content_1.jpg`, `ai_content_2.jpg`, `ai_content_3.jpg` in `.bob/tmp/blog-research/[slug]/images/`.
-     Prompt guidelines:
-     - **Hero prompt**: photorealistic editorial wide shot (16:9), topic-relevant scene, include "blog cover image" and lighting details.
-     - **Content prompts**: each supports a different section of the article — use flat illustration, technical diagram, or editorial style as appropriate. Keep prompts under 150 words.
-     If the script fails (missing API key, network error), skip silently and continue with stock photos only.
-  8. Compile a master `notes.md` file in `.bob/tmp/blog-research/[slug]/notes.md` with the 5 article URLs, empty placeholder sections for additional user URLs, key takeaways, statistics, LLM pre-existing knowledge notes, an empty user custom notes bullet section, competitor content gaps, the 5 downloaded hero image options, the AI-generated image details, and local content/diagram image details.
+  4. Compile a master `notes.md` file in `.bob/tmp/blog-research/[slug]/notes.md` with the 5 article URLs, empty placeholder sections for additional user URLs, key takeaways, statistics, LLM pre-existing knowledge notes, an empty user custom notes bullet section, and competitor content gaps.
 
 ### Step 3 — Review the Research Bundle
 Once the subagent completes its task, verify the research bundle has been compiled in `.bob/tmp/blog-research/[slug]/`:
 - Check that the directory `.bob/tmp/blog-research/[slug]/articles/` contains the fetched article files.
-- Check that the directory `.bob/tmp/blog-research/[slug]/images/` contains:
-  - The 5 downloaded hero image files (`hero_1.jpg` through `hero_5.jpg`).
-  - The content/diagram image files (e.g., `decision_flowchart.svg`, etc.).
 - Read and verify the `.bob/tmp/blog-research/[slug]/notes.md` file contains:
   - Table of the 5 reference articles (including their URLs and short takeaways).
   - **User Additional Articles & Resources**: An empty table/section with pre-formatted placeholders for the user to append extra URLs.
@@ -51,34 +38,13 @@ Once the subagent completes its task, verify the research bundle has been compil
   - **LLM Pre-existing Knowledge Notes**: Bulleted key technical concepts drawn from pre-existing knowledge. (Concise notes, max 4-5 lines each).
   - **User Custom Notes**: Pre-formatted empty bullet section for the user's custom constraints/notes.
   - **Core Competitor Gaps**: Specific nuances missed by competitors. (Concise gaps, max 4-5 lines each).
-  - The 5 hero image candidates (with their local file paths and direct CDN URLs).
-  - The AI-generated image details (`ai_hero.jpg`, `ai_content_1.jpg` through `ai_content_3.jpg`).
-  - The content image/diagram details.
 
 ### Step 4 — Present Results to User
 Output a structured research summary to the user:
 - Path to the compiled notes file: `.bob/tmp/blog-research/[slug]/notes.md`
 - List of the 5 top reference articles (Titles & URLs)
 - Key takeaways and statistics found
-- The 5 Hero image candidates (stock photo) + 1 AI-generated hero (`ai_hero.jpg`)
-- The 3 AI-generated content images (`ai_content_1.jpg` to `ai_content_3.jpg`)
 - The next step recommendation (proceeding to `blog-write`)
 
-## Image Standardization Automation
-
-To automate the physical downloading and standard `760x400` px center-cropping of hero images, a permanent script is provided:
-
-```
-python3 .bob/skills/blog-research/image_downloader.py <slug>
-```
-
-When run, this script:
-1. Parses `.bob/tmp/blog-research/<slug>/notes.md` to find the 5 hero image candidate CDN URLs.
-2. Automatically downloads them with safe browser headers to bypass CDN blocklists.
-3. Programmatically center-crops and rescales each image to exactly **760x400 px** using Pillow (LANCZOS high-quality filter).
-4. Saves them directly as `hero_1.jpg` through `hero_5.jpg` under `.bob/tmp/blog-research/<slug>/images/`.
-
-Always run or suggest running this script to handle the image standardization step.
-
 ## Next Step Coordination
-When this research step is completed and approved, proceed to the **`blog-write`** skill. The `blog-writer` will ingest both the plan from `blog-planner` and the research bundle (fetched articles and `notes.md`) to write the final blog post draft.
+When this research step is completed and approved, proceed to the **`blog-write`** skill. The `blog-writer` will ingest both the plan from `blog-planner` and the research bundle (fetched articles and `notes.md`) to write the final blog post draft. After the draft exists, run **`blog-illustrator`** to generate the hero image and inline diagrams from the written article.

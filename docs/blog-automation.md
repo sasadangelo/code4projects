@@ -17,7 +17,7 @@ idea → planner → research → writer → illustrator → review → roadmap-
 |------|---------|-------|--------|
 | 1 | `/blog idea <topic>` | `blog-idea` | approve / reject / transform decision |
 | 2 | `/blog planner <topic>` | `blog-planner` | outline, front matter, series context, image brief |
-| 3 | `/blog research <topic>` | `blog-research` | notes + 5 reference articles + images in `.bob/tmp/blog-research/<slug>/` |
+| 3 | `/blog research <topic>` | `blog-research` | notes + 5 reference articles in `.bob/tmp/blog-research/<slug>/` |
 | 4 | `/blog write <topic>` | `blog-writer` | `_drafts/<slug>.md` |
 | 5 | `/blog illustrator <slug>` | `blog-illustrator` | `assets/img/<slug>-hero.svg` + inline `assets/img/<slug>-<concept>.svg` |
 | 6 | `/blog review <topic>` | `blog-review` | prioritised fix list; fixes applied inline |
@@ -66,9 +66,10 @@ At the end of the plan, shows the full pipeline reminder:
 Runs before writing. Spawns the `blog-researcher` subagent to:
 
 - Find and fetch the 5 most authoritative articles on the topic
-- Download and standardise 5 hero image candidates (760×400 px)
-- Generate AI images (Gemini) for hero and content
+- Compile statistics, knowledge notes and competitor gaps into `notes.md`
 - Save everything to `.bob/tmp/blog-research/<slug>/`
+
+Research does not handle images: `blog-illustrator` creates them after the draft is written, based on the article itself.
 
 The writer skill picks up research notes automatically from that folder.
 

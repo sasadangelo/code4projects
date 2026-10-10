@@ -55,7 +55,7 @@ idea → planner → research → writer → illustrator → review → (roadmap
 3. Route to the appropriate sub-skill:
    idea -> blog-idea (Evaluate an idea for blog post)
    planner -> blog-planner (When an idea is approved it plans the new blog post)
-   research -> blog-research (Research references, statistics, and images for the post)
+   research -> blog-research (Research references and statistics for the post)
    write → blog-writer (Write a new blog post as draft)
    illustrate | illustrator -> blog-illustrator (Generate hero SVG and inline diagrams after writing)
    medium-importer → blog-medium-importer (Import an article from Medium.com)
@@ -89,7 +89,7 @@ Every post must respect these 6 pillars, derived from the existing corpus:
 
 | Agent | Role |
 | :--- | :--- |
-| **blog-researcher** | Research specialist: finds statistics, sources, images, competitive data |
+| **blog-researcher** | Research specialist: finds statistics, sources, competitive data |
 
 ## Reference Files
 

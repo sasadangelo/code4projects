@@ -12,7 +12,7 @@ This skill writes the complete draft of a blog post. It requires a plan (from `p
 1. Read the post plan from the conversation or ask the user to paste it.
 2. Read `.bob/skills/blog-style/style-reference.md` with `read_file` — apply all guidelines throughout.
 3. If the post belongs to a series, read 1–2 adjacent posts from `_posts/` to match tone and pick up cross-references correctly.
-4. **[Optional Research Step]** If the research folder exists, read the compiled research notes from `.bob/tmp/blog-research/<slug>/notes.md` and any reference article files under `.bob/tmp/blog-research/<slug>/articles/`. Integrate the statistics (especially 2025-2026 data), technical insights, and competitor content gaps into the draft, and use the selected Hero and inline image direct CDN URLs/alt text from the notes. **If the research folder or files do not exist, silently ignore them and proceed to write the draft based purely on the plan and your general knowledge.**
+4. **[Optional Research Step]** If the research folder exists, read the compiled research notes from `.bob/tmp/blog-research/<slug>/notes.md` and any reference article files under `.bob/tmp/blog-research/<slug>/articles/`. Integrate the statistics (especially 2025-2026 data), technical insights, and competitor content gaps into the draft. Images are not part of the research bundle: leave the hero and inline diagrams to `blog-illustrator`, which runs after the draft is written. **If the research folder or files do not exist, silently ignore them and proceed to write the draft based purely on the plan and your general knowledge.**
 
 ## Step 2 — Write the draft
 
