@@ -1597,3 +1597,94 @@
     linkedin: false
     instagram: false
     facebook: false
+
+- id: why-static-site-generators-exist
+  title: "From Static HTML to Jekyll: Why Every Website Needs a Template System"
+  status: idea
+  category: Programming
+  series: building-a-blog-with-jekyll
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: jekyll-layouts-and-includes
+  title: "Jekyll Layouts and Includes: One Header, One Footer, Every Page"
+  status: idea
+  category: Programming
+  series: building-a-blog-with-jekyll
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: jekyll-front-matter-data-files-liquid
+  title: "Front Matter, Data Files and Liquid: Driving a Jekyll Site from YAML"
+  status: idea
+  category: Programming
+  series: building-a-blog-with-jekyll
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: turning-a-jekyll-site-into-a-blog
+  title: "Turning a Jekyll Site into a Blog: Posts, Authors, Categories, Tags and Pagination"
+  status: idea
+  category: Programming
+  series: building-a-blog-with-jekyll
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: jekyll-seo-sitemap-and-feeds
+  title: "SEO for a Jekyll Blog: Meta Tags, Sitemaps, RSS Feeds and noindex Archives"
+  status: idea
+  category: Programming
+  series: building-a-blog-with-jekyll
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: publishing-jekyll-on-github-pages
+  title: "Publishing a Jekyll Blog on GitHub Pages with GitHub Actions"
+  status: idea
+  category: Programming
+  series: building-a-blog-with-jekyll
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: extracting-a-reusable-jekyll-theme
+  title: "Extracting a Reusable Jekyll Theme: Separating the Template from the Content"
+  status: idea
+  category: Programming
+  series: building-a-blog-with-jekyll
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
