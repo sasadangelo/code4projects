@@ -51,7 +51,7 @@ In the seventh article, I will introduce Android basic concepts and, step by ste
 
 In the tenth article, I will present the video game that we will implement in this series: Droids, a Tetris clone. I chose a video game so famous because I do not want you to spend a lot of time learning the rules of a new game. Tetris is so famous that there is no need for presentations.
 
-![Droids Screen]({{ site.baseurl }}/wp-content/uploads/2018/09/Droids-Main-Screen.png){:width="200" height="355" .responsive_img} ![Droids Game Screen]({{ site.baseurl }}/wp-content/uploads/2018/09/Droids-Game-Screen.png){:width="200" height="355" .responsive_img}
+![Droids Screen]({{ site.baseurl }}/wp-content/uploads/2018/09/Droids-Main-Screen.png){:width="200" height="400" .responsive_img} ![Droids Game Screen]({{ site.baseurl }}/wp-content/uploads/2018/09/Droids-Game-Screen.png){:width="200" height="400" .responsive_img}
 
 ## Source code structure
 

@@ -36,9 +36,9 @@ feature-area:
       network, persist, orchestrate, and secure containerized applications. The series covers everything from your first container to a
       full multi-container setup with Docker Compose and security best practices.
       <a href="getting-started-with-docker-2025/" aria-label="Check out the Getting Started with Docker article series">Check out the Docker series here</a>.
-    feature-image: assets/img/docker-getting-started-mini.webp
-    feature-image-width: 260
-    feature-image-height: 260
+    feature-image: assets/img/docker-getting-started.svg
+    feature-image-width: 300
+    feature-image-height: 158
     feature-link: getting-started-with-docker-2025/
   - feature-title: Getting Started with Kubernetes
     feature-text: >
