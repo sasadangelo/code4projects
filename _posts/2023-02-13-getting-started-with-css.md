@@ -3,6 +3,8 @@ layout: post
 title: "Mastering the Basics of CSS: A Beginner's Guide"
 post_series_id: getting-started-with-html
 slug: mastering-basics-css
+sitemap:
+  lastmod: 2026-10-10
 image: /assets/img/css-logo.webp
 excerpt: Master the core CSS concepts — selectors, the box model, layout, typography, colours, animations, and responsive design — and apply them to a real website.
 categories:

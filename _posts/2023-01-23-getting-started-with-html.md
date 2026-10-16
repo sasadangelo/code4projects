@@ -3,6 +3,8 @@ layout: post
 title: "Getting Started with HTML: A Beginner's Guide"
 post_series_id: getting-started-with-html
 slug: getting-started-with-html
+sitemap:
+  lastmod: 2026-10-10
 image: /assets/img/html.webp
 excerpt: Learn HTML from scratch — build a real five-page website with headings, paragraphs, links, lists, and images, step by step.
 categories:
