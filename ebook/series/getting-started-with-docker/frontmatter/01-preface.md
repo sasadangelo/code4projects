@@ -43,6 +43,6 @@ The examples in this book are maintained on GitHub at
 [github.com/sasadangelo/docker-tutorials](https://github.com/sasadangelo/docker-tutorials).
 
 For corrections, suggestions, or feedback, write to **sasadangelo@gmail.com**
-or visit [code4projects.org](https://www.code4projects.org).
+or visit [code4projects.org](https://code4projects.org).
 
 \newpage

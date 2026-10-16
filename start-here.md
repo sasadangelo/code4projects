@@ -46,19 +46,19 @@ Every major topic becomes a **series**: a sequence of progressive articles that 
 
 ### Applied AI
 
-- [Build Your Own LLM Chatbot with Python & LangChain](https://code4projects.org/build-your-own-llm-chatbot-with-python-and-langchain-part-1/) — 4 articles, from a basic chatbot to RAG and conversational memory.
-- [Generative & Agentic AI: From Foundations to Autonomous Platforms](https://code4projects.org/understanding-a2a-the-protocol-for-agent-collaboration/) — MCP and A2A protocols explained from first principles, with real architecture diagrams.
+- [Build Your Own LLM Chatbot with Python & LangChain]({{ site.baseurl }}/build-your-own-llm-chatbot-with-python-and-langchain-part-1/) — 4 articles, from a basic chatbot to RAG and conversational memory.
+- [Generative & Agentic AI: From Foundations to Autonomous Platforms]({{ site.baseurl }}/understanding-a2a-the-protocol-for-agent-collaboration/) — MCP and A2A protocols explained from first principles, with real architecture diagrams.
 
 ### Modern DevOps
 
-- [Getting Started with Docker 2025](https://code4projects.org/getting-started-with-docker-2025/) — 8 articles, from installation to multi-stage builds, security, and Docker Compose. **Free ebook available.**
+- [Getting Started with Docker 2025]({{ site.baseurl }}/getting-started-with-docker-2025/) — 8 articles, from installation to multi-stage builds, security, and Docker Compose. **Free ebook available.**
 
 ### Software Architecture & Development
 
-- [Getting Started with HTML & CSS](https://code4projects.org/getting-started-with-html/) — from a blank page to a fully responsive layout.
-- [How to Write Modern Python Applications](https://code4projects.org/how-to-set-up-your-next-python-project/) — 10 articles covering project setup, configuration, scheduling, databases, concurrency, async, and REST APIs with FastAPI.
-- [Python CLI with the Command Pattern](https://code4projects.org/building-a-python-cli-with-the-command-pattern/) — 3 articles, building a clean CLI application using the Command design pattern.
-- [Building REST APIs: From Design to Production](https://code4projects.org/concurrency-in-python-threads-processes-and-the-event-loop/) — concurrency, async, and REST API design with FastAPI.
+- [Getting Started with HTML & CSS]({{ site.baseurl }}/getting-started-with-html/) — from a blank page to a fully responsive layout.
+- [How to Write Modern Python Applications]({{ site.baseurl }}/how-to-set-up-your-next-python-project/) — 10 articles covering project setup, configuration, scheduling, databases, concurrency, async, and REST APIs with FastAPI.
+- [Python CLI with the Command Pattern]({{ site.baseurl }}/building-a-python-cli-with-the-command-pattern/) — 3 articles, building a clean CLI application using the Command design pattern.
+- [Building REST APIs: From Design to Production]({{ site.baseurl }}/concurrency-in-python-threads-processes-and-the-event-loop/) — concurrency, async, and REST API design with FastAPI.
 
 ---
 
