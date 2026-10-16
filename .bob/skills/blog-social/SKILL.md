@@ -144,5 +144,5 @@ Ask the user which channels were actually posted (do not assume all were), then 
 
 - Each output must be self-contained — a reader seeing only that platform post must understand the value without reading the others.
 - Never start any post with "I wrote an article" or "Check out my new post".
-- The blog URL format is: `https://sasadangelo.github.io/code4projects/<slug>/`
+- The blog URL format is: `https://www.code4projects.org/<slug>/`
 - Substack: the newsletter is at `https://code4projects.substack.com`.

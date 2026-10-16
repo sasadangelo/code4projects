@@ -63,12 +63,36 @@ layout: default
       <hr/>
 
       <h2>Articles</h2>
-      <ul>
-        {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
-        {% for post in filtered_posts %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-      </ul>
+      {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+      {% for post in filtered_posts %}
+        <div class="blog-entry">
+          <div class="blog-entry-top">
+            <div class="blog-entry-image">
+              <a href="{{ site.baseurl }}{{ post.url }}">
+                <img src="{{ site.baseurl }}{{ post.image }}" alt="{{ post.title }}" width="100%" height="auto">
+              </a>
+            </div>
+            <div class="blog-entry-header">
+              <div class="blog-entry-title">
+                <h2>
+                  <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                </h2>
+              </div>
+              <div class="blog-entry-meta">
+                {% assign first_cat = post.categories | first %}
+                {% if first_cat %}
+                  <a class="entry-category-badge" href="{{ site.baseurl }}/category/{{ first_cat | slugify }}/">{{ first_cat }}</a>
+                {% endif %}
+                <span class="entry-meta-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="blog-entry-excerpt">
+            <p>{{ post.excerpt }}</p>
+            <a href="{{ site.baseurl }}{{ post.url }}">Continue Reading</a>
+          </div>
+        </div>
+      {% endfor %}
 
     </div>
     <div id="post-sidebar">

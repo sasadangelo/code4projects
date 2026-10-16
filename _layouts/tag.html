@@ -9,12 +9,12 @@ pagination:
       <h1>Tag Archives: #{{ page.autopage.display_name }}</h1>
       {% for post in paginator.posts %}
         <div class="blog-entry">
-          <div class="blog-entry-image">
-            <a href="{{ site.baseurl }}{{ post.url }}">
-              <img src="{{ site.baseurl }}{{ post.image }}" alt="{{ post.title }}" width="100%" height="auto">
-            </a>
-          </div>
-          <div class="blog-entry-content">
+          <div class="blog-entry-top">
+            <div class="blog-entry-image">
+              <a href="{{ site.baseurl }}{{ post.url }}">
+                <img src="{{ site.baseurl }}{{ post.image }}" alt="{{ post.title }}" width="100%" height="auto">
+              </a>
+            </div>
             <div class="blog-entry-header">
               <div class="blog-entry-title">
                 <h2>
@@ -22,30 +22,70 @@ pagination:
                 </h2>
               </div>
               <div class="blog-entry-meta">
-                Posted on <b>{{ post.date | date_to_string }}</b>
+                {% assign first_cat = post.categories | first %}
+                {% if first_cat %}
+                  <a class="entry-category-badge" href="{{ site.baseurl }}/category/{{ first_cat | slugify }}/">{{ first_cat }}</a>
+                {% endif %}
+                <span class="entry-meta-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                {% if post.author %}
+                  <span class="entry-meta-author">by {{ post.author }}</span>
+                {% endif %}
               </div>
             </div>
-            <div class="blog-entry-excerpt">
-              <p>{{ post.excerpt }}</p>
-              <a href="{{ site.baseurl }}{{ post.url }}">Continue Reading</a>
-            </div>
+          </div>
+          <div class="blog-entry-excerpt">
+            <p>{{ post.excerpt }}</p>
+            <a href="{{ site.baseurl }}{{ post.url }}">Continue Reading</a>
           </div>
         </div>
       {% endfor %}
-      <!-- Pagination links -->
-      <div class="pagination">
+
+      <!-- Pagination -->
+      {% if paginator.total_pages > 1 %}
+      <nav class="pagination" aria-label="Tag pages">
         {% if paginator.previous_page %}
-          <a href="{{ site.baseurl }}{{ paginator.previous_page_path | remove: "index.html" }}" class="previous-page">Previous</a>
+          <a href="{{ site.baseurl }}{{ paginator.previous_page_path | remove: 'index.html' }}" class="page-btn page-prev" aria-label="Previous page">&laquo;</a>
         {% else %}
-          <span class="previous-page">Previous</span>
+          <span class="page-btn page-prev disabled" aria-disabled="true">&laquo;</span>
         {% endif %}
-        <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+        {% assign pstart = paginator.page | minus: 2 %}
+        {% if pstart < 1 %}{% assign pstart = 1 %}{% endif %}
+        {% assign pend = pstart | plus: 4 %}
+        {% if pend > paginator.total_pages %}{% assign pend = paginator.total_pages %}{% endif %}
+        {% assign pstart2 = pend | minus: 4 %}
+        {% if pstart2 > 1 %}{% assign pstart = pstart2 %}{% endif %}
+
+        {% assign tag_base = paginator.page_path | remove: "/page/" | remove: paginator.page | append: "" %}
+
+        {% if pstart > 1 %}
+          <a href="{{ site.baseurl }}{{ paginator.first_page_path | remove: 'index.html' }}" class="page-btn">1</a>
+          {% if pstart > 2 %}<span class="page-btn page-ellipsis">…</span>{% endif %}
+        {% endif %}
+
+        {% for p in (pstart..pend) %}
+          {% if p == paginator.page %}
+            <span class="page-btn page-current" aria-current="page">{{ p }}</span>
+          {% elsif p == 1 %}
+            <a href="{{ site.baseurl }}{{ paginator.first_page_path | remove: 'index.html' }}" class="page-btn">{{ p }}</a>
+          {% else %}
+            <a href="{{ site.baseurl }}{{ paginator.page_path | replace: ':num', p }}" class="page-btn">{{ p }}</a>
+          {% endif %}
+        {% endfor %}
+
+        {% if pend < paginator.total_pages %}
+          {% assign ptotal_minus1 = paginator.total_pages | minus: 1 %}
+          {% if pend < ptotal_minus1 %}<span class="page-btn page-ellipsis">…</span>{% endif %}
+          <a href="{{ site.baseurl }}{{ paginator.page_path | replace: ':num', paginator.total_pages }}" class="page-btn">{{ paginator.total_pages }}</a>
+        {% endif %}
+
         {% if paginator.next_page %}
-          <a href="{{ site.baseurl }}{{ paginator.next_page_path | remove: "index.html" }}" class="next-page">Next</a>
+          <a href="{{ site.baseurl }}{{ paginator.next_page_path | remove: 'index.html' }}" class="page-btn page-next" aria-label="Next page">&raquo;</a>
         {% else %}
-          <span class="next-page">Next</span>
+          <span class="page-btn page-next disabled" aria-disabled="true">&raquo;</span>
         {% endif %}
-      </div>
+      </nav>
+      {% endif %}
     </div>
     <div id="blog-sidebar">
       {% include blog_sidebar.html %}

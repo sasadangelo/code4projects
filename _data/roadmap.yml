@@ -1240,10 +1240,24 @@
     facebook: false
 - id: testing-python-applications-with-pytest-patterns-for-real-code
   title: "Testing Python Applications with pytest: Patterns for Real Code"
-  status: planned
+  status: draft
   category: Programming
   series: modern-python-application
   scheduled: 2026-10-13
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: testing-fastapi-in-practice
+  title: "Testing FastAPI in Practice: Async Tests, Dependency Overrides, Coverage, and CI"
+  status: planned
+  category: Programming
+  series: modern-python-application
+  slug: testing-fastapi-in-practice
+  scheduled: 2026-10-20
   distributed:
     medium: false
     substack: false
@@ -1681,6 +1695,45 @@
   status: idea
   category: Programming
   series: building-a-blog-with-jekyll
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: scrum-explained-roles-artifacts-events
+  title: "Scrum Explained: Roles, Artifacts, Events, and a Sprint from Start to Finish"
+  status: idea
+  category: Project Management
+  series: scrum-in-practice
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: scrum-for-small-teams
+  title: "Scrum for Small Teams: What to Keep and What to Drop"
+  status: idea
+  category: Project Management
+  series: scrum-in-practice
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: scrum-anti-patterns
+  title: "Scrum Anti-Patterns: Rituals to Stop Doing"
+  status: idea
+  category: Project Management
+  series: scrum-in-practice
   distributed:
     medium: false
     substack: false
