@@ -2,6 +2,7 @@
 layout: post
 author: sasadangelo
 title: Amazon Elastic Block Storage (EBS) vs Elastic File Storage (EFS)
+seo_title: "Amazon EBS vs EFS: Elastic Block vs Elastic File Storage"
 post_series_id: getting-started-with-amazon-web-services
 slug: amazon-elastic-block-storage
 image: /wp-content/uploads/2021/03/HDD-SDD-mini.png

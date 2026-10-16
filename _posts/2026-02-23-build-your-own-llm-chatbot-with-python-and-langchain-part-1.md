@@ -445,4 +445,4 @@ In this article, we built the foundation of a **multi-provider**, **multi-protoc
 - A simple ChatBot loop to handle user input and model responses
 - The context problem, highlighting the need for explicit conversation memory
 
-The [next step]({{ site.baseurl }}/build-your-own-llm-chatbot-with-python-and-langchain-part-2) will be to implement memory and context management, turning ChatterPy from a simple loop into a conversational agent capable of maintaining state and context across multiple interactions.
+The [next step]({{ site.baseurl }}/build-your-own-llm-chatbot-with-python-and-langchain-part-2/) will be to implement memory and context management, turning ChatterPy from a simple loop into a conversational agent capable of maintaining state and context across multiple interactions.

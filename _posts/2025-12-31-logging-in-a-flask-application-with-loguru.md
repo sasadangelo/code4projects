@@ -382,4 +382,4 @@ In this article we covered:
 - how to intercept standard library and Flask logs so everything flows through one pipeline
 - where logging adds value in controllers, services, and external integrations
 
-The [next article]({{ site.baseurl }}/logging-in-fastapi-with-loguru/) will show how to apply the same ideas in a FastAPI application, where the integration points change but the architectural goals stay the same.
+A future article will show how to apply the same ideas in a FastAPI application, where the integration points change but the architectural goals stay the same.

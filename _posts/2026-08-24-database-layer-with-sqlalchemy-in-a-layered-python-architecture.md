@@ -2,6 +2,7 @@
 layout: post
 author: sasadangelo
 title: "Building a Database Layer in Python with SQLAlchemy ORM"
+description: "Build a clean, transactional database layer in Python with SQLAlchemy ORM, a DatabaseSessionManager, DAO models, and a clear DAO vs DTO boundary."
 post_series_id: modern-python-application
 slug: database-layer-with-sqlalchemy-in-a-layered-python-architecture
 image: /assets/img/database-layer-with-sqlalchemy-python.jpg

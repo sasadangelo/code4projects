@@ -2,6 +2,7 @@
 layout: post
 author: sasadangelo
 title: "Docker Image Best Practices"
+description: "A practical checklist for Dockerfiles that produce lightweight, debuggable, and secure images: multi-stage builds, layer ordering, healthchecks, and more."
 post_series_id: getting-started-with-docker-2025
 slug: docker-image-best-practices
 image: /assets/img/docker-best-practices.svg

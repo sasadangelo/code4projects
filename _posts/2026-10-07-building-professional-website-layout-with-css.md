@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Building a Professional Website Layout with CSS: Header, Navigation, and Responsive Design"
+seo_title: "Professional Website Layout with CSS: Header and Navigation"
 post_series_id: getting-started-with-html
 slug: building-professional-website-layout-with-css
 image: /assets/img/html-css-layout.svg

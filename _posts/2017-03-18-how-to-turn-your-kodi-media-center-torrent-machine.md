@@ -2,6 +2,7 @@
 layout: post
 author: sasadangelo
 title: How to turn your Kodi Media Center in a Torrent machine
+description: "Turn your Kodi Media Center into a torrent machine: install Transmission on the Raspberry Pi and control downloads from your Android phone with Torrnado."
 post_series_id: raspberry-media-center
 slug: how-to-turn-your-kodi-media-center-torrent-machine
 image: /wp-content/uploads/2017/03/downloading-torrent.jpg

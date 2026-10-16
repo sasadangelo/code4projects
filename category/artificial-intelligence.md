@@ -1,6 +1,7 @@
 ---
 layout: category
 title: Artificial Intelligence
+description: "Articles on Artificial Intelligence: agent protocols like MCP and A2A, multi-agent systems, and the tools and frameworks shaping AI development."
 slug: artificial-intelligence
 permalink: /category/artificial-intelligence/
 excerpt: Articles on Artificial Intelligence — covering agent protocols like MCP and A2A, multi-agent systems, and the tools and frameworks shaping the future of AI development.

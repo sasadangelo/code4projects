@@ -2,6 +2,7 @@
 layout: post
 author: sasadangelo
 title: The Definitive Amazon EC2 Tutorial - Step by step Guide for Beginners
+seo_title: "Amazon EC2 Tutorial: A Step-by-Step Guide for Beginners"
 post_series_id: getting-started-with-amazon-web-services
 slug: definitive-amazon-ec2-tutorial-step-by-step-guide-beginners
 image: /wp-content/uploads/2021/03/Amazon-EC2-Tutorial.png

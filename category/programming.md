@@ -1,6 +1,7 @@
 ---
 layout: category
 title: Programming
+description: "Programming tutorials for beginners and experienced developers: HTML, CSS, YAML, Python, the best languages to learn, and practical coding guides."
 slug: programming
 permalink: /category/programming/
 excerpt: Programming tutorials for beginners and experienced developers — covering HTML, CSS, YAML, the best languages to learn, and practical coding guides across multiple technologies.

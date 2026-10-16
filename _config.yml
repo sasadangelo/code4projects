@@ -52,6 +52,10 @@ defaults:
       path: ""
     values:
       layout: "default"
+      # Fallback og:image for pages without their own `image` (home,
+      # categories, blog, static pages). JPG because social networks don't
+      # render SVG/WebP previews reliably.
+      image: /assets/img/code4projects-social.jpg
 
 permalink: /:slug/
 page_excerpts: "true"

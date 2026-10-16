@@ -21,7 +21,7 @@ tags:
 
 This is the second article in the series **Build your own LLM Chatbot, step by step, with Python and LangChain from scratch**.
 
-In [Part 1]({{ site.baseurl }}/build-your-own-llm-chatbot-with-python-and-langchain-part-1), we built the architectural foundation of a **multi-provider**, **multi-protocol**, and **multi-model** chatbot. We implemented configuration-driven protocol selection, a factory-based instantiation mechanism, and a simple chatbot loop.
+In [Part 1]({{ site.baseurl }}/build-your-own-llm-chatbot-with-python-and-langchain-part-1/), we built the architectural foundation of a **multi-provider**, **multi-protocol**, and **multi-model** chatbot. We implemented configuration-driven protocol selection, a factory-based instantiation mechanism, and a simple chatbot loop.
 
 Now we move to the next level.
 

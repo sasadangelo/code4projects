@@ -2,6 +2,7 @@
 layout: post
 author: sasadangelo
 title: "Building a Python CLI with Click: A Cleaner Approach to the Command Pattern"
+seo_title: "Building a Python CLI with Click: The Command Pattern"
 slug: building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern
 post_series_id:
   - python-cli-command-pattern

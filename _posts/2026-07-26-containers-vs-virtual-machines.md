@@ -4,6 +4,8 @@ author: sasadangelo
 title: "Containers vs Virtual Machines"
 post_series_id: getting-started-with-docker-2025
 slug: containers-vs-virtual-machines-2025
+redirect_from:
+  - /containers-vs-virtual-machines/
 image: /assets/img/docker-containers-vs-vms.svg
 excerpt: Understand the real differences between containers and virtual machines — how each one works under the hood, their pros and cons, and when to use which.
 categories:
@@ -47,7 +49,7 @@ The system running the VMs is called the **host**, the systems running inside ar
     <div class="pros-cons-table-pros-box">
       <div class="pros-cons-table-header">
         <div class="pros-cons-table-pros-symbol">
-          <img src="{{ site.baseurl }}/assets/img/thumbs-up-regular.svg">
+          <img src="{{ site.baseurl }}/assets/img/thumbs-up-regular.svg" alt="">
         </div>
         <h4>Pros</h4>
       </div>
@@ -62,7 +64,7 @@ The system running the VMs is called the **host**, the systems running inside ar
     <div class="pros-cons-table-cons-box cons-content">
       <div class="pros-cons-table-header">
         <div class="pros-cons-table-cons-symbol">
-          <img src="{{ site.baseurl }}/assets/img/thumbs-down-regular.svg">
+          <img src="{{ site.baseurl }}/assets/img/thumbs-down-regular.svg" alt="">
         </div>
         <h4>Cons</h4>
       </div>
@@ -102,7 +104,7 @@ Together, namespaces and cgroups create the illusion of a separate machine witho
     <div class="pros-cons-table-pros-box">
       <div class="pros-cons-table-header">
         <div class="pros-cons-table-pros-symbol">
-          <img src="{{ site.baseurl }}/assets/img/thumbs-up-regular.svg">
+          <img src="{{ site.baseurl }}/assets/img/thumbs-up-regular.svg" alt="">
         </div>
         <h4>Pros</h4>
       </div>
@@ -118,7 +120,7 @@ Together, namespaces and cgroups create the illusion of a separate machine witho
     <div class="pros-cons-table-cons-box cons-content">
       <div class="pros-cons-table-header">
         <div class="pros-cons-table-cons-symbol">
-          <img src="{{ site.baseurl }}/assets/img/thumbs-down-regular.svg">
+          <img src="{{ site.baseurl }}/assets/img/thumbs-down-regular.svg" alt="">
         </div>
         <h4>Cons</h4>
       </div>

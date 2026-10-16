@@ -2,6 +2,7 @@
 layout: post
 author: sasadangelo
 title: "Building a Python Command Line Interface (CLI) with the Command Pattern"
+seo_title: "Building a Python CLI with the Command Pattern"
 slug: building-a-python-cli-with-the-command-pattern
 post_series_id:
   - python-cli-command-pattern

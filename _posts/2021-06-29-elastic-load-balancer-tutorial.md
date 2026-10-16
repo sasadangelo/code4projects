@@ -2,6 +2,7 @@
 layout: post
 author: sasadangelo
 title: A Step by step tutorial to create your first Elastic Load Balancer
+seo_title: "Elastic Load Balancer Tutorial: Create Your First ELB"
 post_series_id: getting-started-with-amazon-web-services
 slug: elastic-load-balancer-tutorial
 image: /wp-content/uploads/2021/06/Elastic-Load-Balancer.png
@@ -24,7 +25,7 @@ First of all, create an EC2 instance with a web server running a Hello World app
 
 AWS platform allows you to easily duplicate your EC2 instance by simply right-clicking the EC2 instance in the EC2 dashboard and selecting the menu **Image and template** -> **Launch more like this**.
 
-![ELB Duplicate EC2 Instance]({{ site.baseurl }}/wp-content/uploads/2021/06/1-ELB-Duplicate-Ec2-Instance.png){:width="450" height="455" .responsive_img}
+![ELB Duplicate EC2 Instance]({{ site.baseurl }}/wp-content/uploads/1-ELB-Duplicate-Ec2-Instance.png){:width="450" height="455" .responsive_img}
 
 You should see two EC2 instances running in the EC2 dashboard. If you enter the IP of the second EC2 instance you should see a second “Hello World” message with a different IP. This IP later will help you to understand which EC2 instance will reply to your request.
 

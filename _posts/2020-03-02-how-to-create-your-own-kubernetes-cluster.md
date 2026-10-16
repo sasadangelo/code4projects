@@ -230,7 +230,7 @@ Running the kubectl get pods command, you should see the cluster nodes.
 
 This is your first Kubernetes “Hello World” application. It is an Nginx web server that listens on 80 port and when you connect to it with your browser the “Hello World!” message will appear with hostname and image version. This will be useful to understand which Pod responded to a browser request and its hostname and which version is currently in use.
 
-In the [following article]({{ site.baseurl }}/getting-started-with-docker/), I created a Hello World application for Docker that we will reuse for Kubernetes with small changes. Here the Dockerfile.
+In the [following article]({{ site.baseurl }}/getting-started-with-docker-2025/), I created a Hello World application for Docker that we will reuse for Kubernetes with small changes. Here the Dockerfile.
 
     {% highlight docker %}
 FROM ubuntu:16.04

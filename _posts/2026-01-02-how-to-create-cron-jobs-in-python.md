@@ -2,6 +2,7 @@
 layout: post
 author: sasadangelo
 title: "How to Create Cron Jobs in Python for Your Applications"
+description: "Build a configurable cron job class in Python with APScheduler to run periodic background tasks with clean scheduling, logging, and error handling."
 post_series_id: modern-python-application
 slug: how-to-create-cron-jobs-in-python
 image: /assets/img/how-to-create-cron-jobs-in-python.webp

@@ -4,6 +4,8 @@ author: sasadangelo
 title: "How Docker Compose Works"
 post_series_id: getting-started-with-docker-2025
 slug: how-docker-compose-works-2025
+redirect_from:
+  - /how-docker-compose-works/
 image: /assets/img/docker-compose.svg
 excerpt: Learn how Docker Compose v2 works — define, build, and run multi-container applications with a single YAML file and a single command.
 categories:

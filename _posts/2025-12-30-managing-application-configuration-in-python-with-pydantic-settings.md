@@ -2,6 +2,8 @@
 layout: post
 author: sasadangelo
 title: "Managing Application Configuration in Python with Pydantic Settings"
+description: "Manage Python application configuration with pydantic-settings, combining YAML files for non-secret parameters and environment variables for secrets."
+seo_title: "Python Application Configuration with Pydantic Settings"
 post_series_id: modern-python-application
 slug: managing-application-configuration-in-python-with-pydantic-settings
 image: /assets/img/python-application-configuration.webp

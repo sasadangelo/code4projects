@@ -4,6 +4,8 @@ author: sasadangelo
 title: "How Docker Networking Works"
 post_series_id: getting-started-with-docker-2025
 slug: how-docker-networking-works-2025
+redirect_from:
+  - /how-docker-networking-works/
 image: /assets/img/docker-networking.svg
 excerpt: Learn how Docker networking works — bridge, host, overlay, and macvlan drivers — and how to connect containers so they can communicate over a private network.
 categories:

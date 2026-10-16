@@ -21,7 +21,7 @@ tags:
 
 ## Introduction
 
-In the previous installments of this series, we explored CLI application patterns with [Click]({{ site.baseurl }}/building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern/) and [Typer]({{ site.baseurl }}/modern-approach-to-the-command-pattern/). While CLI interfaces offer a convenient way for developers to interact with services locally, building distributed applications requires exposing services over the network via structured HTTP interfaces.
+In the previous installments of this series, we explored CLI application patterns with [Click]({{ site.baseurl }}/building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern/) and [Typer]({{ site.baseurl }}/building-a-python-cli-with-typer-the-modern-approach-to-the-command-pattern/). While CLI interfaces offer a convenient way for developers to interact with services locally, building distributed applications requires exposing services over the network via structured HTTP interfaces.
 
 When designing a REST API, engineers often focus on choosing the “right” framework — FastAPI, Spring Boot, and so on. Tools matter, but they solve only the implementation detail. The real challenge is designing an API that reflects the business domain, exposes domain entities as resources, and uses HTTP semantics consistently, including errors and status codes.
 

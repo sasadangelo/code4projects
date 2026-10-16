@@ -2,8 +2,11 @@
 layout: post
 author: sasadangelo
 title: "How Docker Volumes Work"
+description: "Learn the three Docker storage types (volumes, bind mounts, and tmpfs) and how to persist data outside a container so it survives restarts."
 post_series_id: getting-started-with-docker-2025
 slug: how-docker-volumes-work
+redirect_from:
+  - /how-docker-volumes-works/
 image: /assets/img/docker-volumes.svg
 excerpt: Learn the three Docker storage types — volumes, bind mounts, and tmpfs — and how to use them to persist data outside a container so it survives restarts and replacements.
 categories:

@@ -1,6 +1,7 @@
 ---
 layout: category
 title: "Project Management"
+description: "Articles on software project management: Agile methodology, DevOps culture, and practices that help development teams deliver better software faster."
 slug: project-management
 permalink: /category/project-management/
 excerpt: Articles on software project management — covering Agile methodology, DevOps culture, and the practices that help development teams deliver better software faster.

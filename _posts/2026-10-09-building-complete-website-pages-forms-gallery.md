@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Building the Complete Website: Real Pages, HTML Forms, and a Photo Gallery"
+seo_title: "Building a Complete Website: Pages, Forms, and Gallery"
 post_series_id: getting-started-with-html
 slug: building-complete-website-pages-forms-gallery
 image: /assets/img/html-css-complete-pages.svg

@@ -1,0 +1,66 @@
+<svg viewBox="0 0 760 400" width="760" height="400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, system-ui, sans-serif">
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="760" height="400" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="380" y="40" text-anchor="middle" font-size="16" font-weight="bold" fill="#1f2328">Which concurrency model should I use?</text>
+
+  <!-- ══ DECISIONS ══ -->
+  <rect x="27" y="90" width="150" height="60" rx="8" fill="#f7f8fa" stroke="#3b82d4" stroke-width="1.5"/>
+  <text x="102" y="116" text-anchor="middle" font-size="12" font-weight="bold" fill="#1f2328">Is the task</text>
+  <text x="102" y="133" text-anchor="middle" font-size="12" font-weight="bold" fill="#1f2328">I/O-bound?</text>
+
+  <rect x="212" y="90" width="150" height="60" rx="8" fill="#f7f8fa" stroke="#3b82d4" stroke-width="1.5"/>
+  <text x="287" y="116" text-anchor="middle" font-size="12" font-weight="bold" fill="#1f2328">Thousands of</text>
+  <text x="287" y="133" text-anchor="middle" font-size="12" font-weight="bold" fill="#1f2328">connections?</text>
+
+  <rect x="490" y="90" width="150" height="60" rx="8" fill="#f7f8fa" stroke="#3b82d4" stroke-width="1.5"/>
+  <text x="565" y="116" text-anchor="middle" font-size="12" font-weight="bold" fill="#1f2328">Calling sync libraries</text>
+  <text x="565" y="133" text-anchor="middle" font-size="12" font-weight="bold" fill="#1f2328">from async code?</text>
+
+  <!-- ══ ARROWS BETWEEN DECISIONS ══ -->
+  <line x1="177" y1="120" x2="210" y2="120" stroke="#57606a" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="194" y="112" text-anchor="middle" font-size="11" fill="#57606a">Yes</text>
+
+  <line x1="362" y1="120" x2="488" y2="120" stroke="#57606a" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="425" y="112" text-anchor="middle" font-size="11" fill="#57606a">No</text>
+
+  <!-- ══ ARROWS TO OUTCOMES ══ -->
+  <line x1="102" y1="150" x2="102" y2="268" stroke="#57606a" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="110" y="212" font-size="11" fill="#57606a">No (CPU-bound)</text>
+
+  <line x1="287" y1="150" x2="287" y2="268" stroke="#57606a" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="295" y="212" font-size="11" fill="#57606a">Yes</text>
+
+  <path d="M 540 150 L 540 200 L 472 200 L 472 268" fill="none" stroke="#57606a" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="506" y="193" text-anchor="middle" font-size="11" fill="#57606a">Yes</text>
+
+  <path d="M 590 150 L 590 200 L 657 200 L 657 268" fill="none" stroke="#57606a" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="624" y="193" text-anchor="middle" font-size="11" fill="#57606a">No</text>
+
+  <!-- ══ OUTCOMES ══ -->
+  <rect x="20" y="270" width="165" height="80" rx="8" fill="#3b82d4"/>
+  <text x="102" y="300" text-anchor="middle" font-size="12" font-weight="bold" font-family="Menlo, Consolas, monospace" fill="#ffffff">ProcessPoolExecutor</text>
+  <text x="102" y="320" text-anchor="middle" font-size="10" fill="#ffffff">or InterpreterPoolExecutor</text>
+  <text x="102" y="335" text-anchor="middle" font-size="10" fill="#ffffff">on Python 3.14+</text>
+
+  <rect x="205" y="270" width="165" height="80" rx="8" fill="#3b82d4"/>
+  <text x="287" y="305" text-anchor="middle" font-size="12" font-weight="bold" font-family="Menlo, Consolas, monospace" fill="#ffffff">asyncio</text>
+  <text x="287" y="325" text-anchor="middle" font-size="10" fill="#ffffff">event loop, async/await</text>
+
+  <rect x="390" y="270" width="165" height="80" rx="8" fill="#3b82d4"/>
+  <text x="472" y="305" text-anchor="middle" font-size="12" font-weight="bold" font-family="Menlo, Consolas, monospace" fill="#ffffff">asyncio.to_thread()</text>
+  <text x="472" y="325" text-anchor="middle" font-size="10" fill="#ffffff">bridge sync code into async</text>
+
+  <rect x="575" y="270" width="165" height="80" rx="8" fill="#3b82d4"/>
+  <text x="657" y="305" text-anchor="middle" font-size="12" font-weight="bold" font-family="Menlo, Consolas, monospace" fill="#ffffff">ThreadPoolExecutor</text>
+  <text x="657" y="325" text-anchor="middle" font-size="10" fill="#ffffff">moderate I/O, simple code</text>
+
+</svg>

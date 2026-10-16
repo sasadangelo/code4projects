@@ -2,8 +2,8 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "{{ page.title | escape }}",
-  "description": "{{ page.excerpt | strip_html | escape }}",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | default: page.excerpt | strip_html | strip_newlines | strip | jsonify }},
   "image": "{{ site.url }}{{ site.baseurl }}{{ page.image }}",
   "datePublished": "{{ page.date | date_to_xmlschema }}",
   "dateModified": "{{ page.sitemap.lastmod | default: page.date | date_to_xmlschema }}",

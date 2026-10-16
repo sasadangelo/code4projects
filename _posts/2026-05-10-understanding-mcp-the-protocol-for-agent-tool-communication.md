@@ -2,6 +2,7 @@
 layout: post
 author: sasadangelo
 title: "Understanding MCP: The Protocol for Agent-Tool Communication"
+description: "MCP is Anthropic's open protocol that standardizes how AI agents connect to tools, APIs, and resources, making capabilities pluggable across frameworks."
 slug: understanding-mcp-the-protocol-for-agent-tool-communication
 image: /assets/img/understanding-mcp-protocol.png
 excerpt: MCP is Anthropic's open protocol that standardizes how AI agents connect to tools, APIs, and resources — making any capability pluggable and interoperable across agent frameworks.
@@ -19,7 +20,7 @@ post_series_id:
 
 ## Introduction
 
-In the [previous article]({{ site.baseurl }}/understanding-a2a-the-protocol-for-agent-collaboration) we explored **A2A**, Google's protocol that lets independent AI agents discover each other and collaborate as peers. A2A answered the question: *how do agents talk to agents?*
+In the [previous article]({{ site.baseurl }}/understanding-a2a-the-protocol-for-agent-collaboration/) we explored **A2A**, Google's protocol that lets independent AI agents discover each other and collaborate as peers. A2A answered the question: *how do agents talk to agents?*
 
 But there is a second, equally important question: *how does an agent talk to the tools it needs?*
 

@@ -56,7 +56,7 @@ pagination:
         {% assign pstart2 = pend | minus: 4 %}
         {% if pstart2 > 1 %}{% assign pstart = pstart2 %}{% endif %}
 
-        {% assign tag_base = paginator.page_path | remove: "/page/" | remove: paginator.page | append: "" %}
+        {% assign tag_base = paginator.first_page_path | remove: 'index.html' %}
 
         {% if pstart > 1 %}
           <a href="{{ site.baseurl }}{{ paginator.first_page_path | remove: 'index.html' }}" class="page-btn">1</a>
@@ -69,14 +69,14 @@ pagination:
           {% elsif p == 1 %}
             <a href="{{ site.baseurl }}{{ paginator.first_page_path | remove: 'index.html' }}" class="page-btn">{{ p }}</a>
           {% else %}
-            <a href="{{ site.baseurl }}{{ paginator.page_path | replace: ':num', p }}" class="page-btn">{{ p }}</a>
+            <a href="{{ site.baseurl }}{{ tag_base }}page/{{ p }}/" class="page-btn">{{ p }}</a>
           {% endif %}
         {% endfor %}
 
         {% if pend < paginator.total_pages %}
           {% assign ptotal_minus1 = paginator.total_pages | minus: 1 %}
           {% if pend < ptotal_minus1 %}<span class="page-btn page-ellipsis">…</span>{% endif %}
-          <a href="{{ site.baseurl }}{{ paginator.page_path | replace: ':num', paginator.total_pages }}" class="page-btn">{{ paginator.total_pages }}</a>
+          <a href="{{ site.baseurl }}{{ tag_base }}page/{{ paginator.total_pages }}/" class="page-btn">{{ paginator.total_pages }}</a>
         {% endif %}
 
         {% if paginator.next_page %}

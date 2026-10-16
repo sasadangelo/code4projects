@@ -21,9 +21,9 @@ tags:
 
 In the previous articles of this series, we progressively built our LLM chatbot from scratch:
 
-- [Part 1]({{ site.baseurl }}/build-your-own-llm-chatbot-with-python-and-langchain-part-1) — Core architecture and conversation management
-- [Part 2]({{ site.baseurl }}/build-your-own-llm-chatbot-with-python-and-langchain-part-2) — Logging, configuration, memory management, and production-ready structure
-- [Part 3]({{ site.baseurl }}/build-your-own-llm-chatbot-with-python-and-langchain-part-3) — Retrieval-Augmented Generation (RAG) with a vector database
+- [Part 1]({{ site.baseurl }}/build-your-own-llm-chatbot-with-python-and-langchain-part-1/) — Core architecture and conversation management
+- [Part 2]({{ site.baseurl }}/build-your-own-llm-chatbot-with-python-and-langchain-part-2/) — Logging, configuration, memory management, and production-ready structure
+- [Part 3]({{ site.baseurl }}/build-your-own-llm-chatbot-with-python-and-langchain-part-3/) — Retrieval-Augmented Generation (RAG) with a vector database
 
 Now it's time to take the last step.
 

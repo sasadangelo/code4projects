@@ -2,6 +2,7 @@
 layout: post
 author: sasadangelo
 title: How to Configure Kodi Media Center
+description: "Configure your Kodi Media Center on Raspberry Pi step by step: install OSMC, set up Wi-Fi and the Yatse remote, video codecs, and an external hard drive."
 post_series_id: raspberry-media-center
 slug: how-to-configure-kodi-media-center
 image: /wp-content/uploads/2017/03/Remote-Control-mini.jpg
@@ -81,7 +82,7 @@ Once you installed Yatse click on Device->Manage Host and add a new Host. Insert
 
 Yatse will detect automatically KODI and automatically will activate the remote control via HTTP. If this does not occur you can enable the remote control going on _Settings->Services Settings->Control_ and activate the option _Allow remote control from applications on other systems_.
 
-![Kodi Allow Remote Control from Applications]({{ site.baseurl }}/wp-content/uploads/2017/03//Kodi-Allow-Remote-Control-from-Applications.png){:width="450" height="253" .responsive_img}
+![Kodi Allow Remote Control from Applications]({{ site.baseurl }}/wp-content/uploads/2017/03/Kodi-Allow-Remote-Control-from-Applications.png){:width="450" height="253" .responsive_img}
 
 Now you are ready to control your media center also via Yatse.
 

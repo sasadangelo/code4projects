@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Concurrency in Python: Threads, Processes, and the Event Loop"
+description: "Master Python concurrency: learn when to use threads, processes, or asyncio, and why the event loop powers modern high-throughput applications."
+seo_title: "Python Concurrency: Threads, Processes, and the Event Loop"
 slug: concurrency-in-python-threads-processes-and-the-event-loop
 post_series_id:
   - modern-python-application

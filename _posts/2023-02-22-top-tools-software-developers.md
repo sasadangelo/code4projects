@@ -2,6 +2,7 @@
 layout: post
 author: sasadangelo
 title: "Best Software Developer Tools to Consider in 2023"
+description: "Discover the best software development tools of 2023, from code editors to network analyzers: the must-have tools every developer should know."
 slug: top-tools-software-developers
 image: /assets/img/top-software-development-tools.webp
 excerpt: Discover the top software development tools to take your coding game to the next level in 2023. From code editors to network analyzers, this article highlights the must-have tools for developers.
@@ -12,8 +13,6 @@ tags:
 ---
 
 ![Top Software Developer Tools]({{ site.baseurl }}/assets/img/top-software-development-tools.webp){:width="402" height="200" .responsive_img}
-
-# Top Tools Every Software Developer Should Consider in 2023
 
 ## Introduction
 
@@ -241,7 +240,7 @@ One of the biggest advantages of Docker is that it allows developers to easily c
 
 However, running applications in containers can add some overhead in terms of memory and processing requirements, which can impact performance in some cases. Docker can also be challenging to configure and secure, and misconfigurations or security vulnerabilities can expose sensitive data or compromise the integrity of the application. While Docker makes it easy to manage and distribute applications, it can also add complexity to the development process, especially for developers who are new to containerization.
 
-You can learn more about Docker reading my [Getting Started with Docker]({{ site.baseurl }}/getting-started-with-docker/) guide.
+You can learn more about Docker reading my [Getting Started with Docker]({{ site.baseurl }}/getting-started-with-docker-2025/) guide.
 
 ### Kubernetes
 

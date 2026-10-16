@@ -2,6 +2,7 @@
 layout: post
 author: sasadangelo
 title: Android Programming for Games (Activity Lifecycle)
+description: "Learn the Android activity lifecycle for game programming: what an Activity is, its states, the state diagram, and the callbacks you need to handle."
 post_series_id: android-game-programming
 slug: android-programming-for-games-activity-lifecycle
 image: /wp-content/uploads/2018/12/ActivityState-mini.png

@@ -51,7 +51,7 @@ Here a complete list of pros and cons of the new technology introduced in the co
     <div class="pros-cons-table-pros-box">
       <div class="pros-cons-table-header">
         <div class="pros-cons-table-pros-symbol">
-          <img src="{{ site.baseurl }}/assets/img/thumbs-up-regular.svg">
+          <img src="{{ site.baseurl }}/assets/img/thumbs-up-regular.svg" alt="">
         </div>
         <h4>Pros</h4>
       </div>
@@ -66,7 +66,7 @@ Here a complete list of pros and cons of the new technology introduced in the co
     <div class="pros-cons-table-cons-box cons-content">
       <div class="pros-cons-table-header">
         <div class="pros-cons-table-cons-symbol">
-          <img src="{{ site.baseurl }}/assets/img/thumbs-down-regular.svg">
+          <img src="{{ site.baseurl }}/assets/img/thumbs-down-regular.svg" alt="">
         </div>
         <h4>Cons</h4>
       </div>

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Layered Architecture with FastAPI: Routers, Services, and Repositories"
+seo_title: "Layered Architecture with FastAPI: Routers and Services"
 post_series_id:
   - modern-python-application
   - building-rest-apis

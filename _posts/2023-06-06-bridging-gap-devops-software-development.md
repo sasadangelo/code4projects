@@ -2,6 +2,7 @@
 layout: post
 author: sasadangelo
 title: "DevOps in Software Development: Bridging Dev and Ops for Faster Delivery"
+seo_title: "DevOps in Software Development: Bridging Dev and Ops"
 slug: bridging-gap-devops-software-development
 image: /assets/img/devops-logo.webp
 excerpt: Bridging the gap between development and operations, DevOps revolutionizes software lifecycle management with unified teams and streamlined processes.
@@ -13,8 +14,6 @@ tags:
 ---
 
 ![Unleashing the Power of DevOps]({{ site.baseurl }}/assets/img/devops-logo.webp){:width="446" height="200" .responsive_img}
-
-# Bridging the Gap: Unleashing the Power of DevOps in Software Development
 
 ## Introduction
 

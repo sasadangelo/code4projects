@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "From Domain Design to REST API: Building FastURL with FastAPI"
+description: "Turn requirements and a domain model into a clean REST API with FastAPI and Pydantic v2, using FastURL, a URL shortener, as a concrete case study."
+seo_title: "From Domain Design to REST API: FastURL with FastAPI"
 post_series_id:
   - modern-python-application
   - building-rest-apis

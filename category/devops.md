@@ -1,6 +1,7 @@
 ---
 layout: category
 title: DevOps
+description: "Guides on DevOps practices: Docker, Kubernetes, Docker Compose, container networking, volumes, and bridging the gap between development and operations."
 slug: devops
 permalink: /category/devops/
 excerpt: Guides on DevOps practices — covering Docker, Kubernetes, Docker Compose, container networking, volumes, and bridging the gap between development and operations.

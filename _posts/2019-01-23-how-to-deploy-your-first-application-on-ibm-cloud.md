@@ -2,6 +2,7 @@
 layout: post
 author: sasadangelo
 title: How to deploy your first application on IBM Cloud
+description: "Deploy your first application on IBM Cloud step by step: make a Node.js app cloud-ready, run it locally, and deploy it with the CLI or with Eclipse."
 post_series_id: getting-started-with-cloud-computing
 slug: how-to-deploy-your-first-application-on-ibm-cloud
 image: /wp-content/uploads/2019/01/Tetris_mini.png

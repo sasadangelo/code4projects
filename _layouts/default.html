@@ -2,10 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    {% if page.layout == 'home' %}
-    <title>{{ page.title }}</title>
+    {% comment %}
+      seo_title overrides the H1 title in search results. The site suffix is
+      added only when the whole title stays within Google's ~60 characters.
+    {% endcomment %}
+    {% assign html_title = page.seo_title | default: page.title %}
+    {% assign html_title_full_size = html_title.size | plus: 3 | plus: site.title.size %}
+    {% if page.layout == 'home' or html_title_full_size > 60 %}
+    <title>{{ html_title }}</title>
     {% else %}
-    <title>{{ page.title }} &#x2022; {{ site.title }}</title>
+    <title>{{ html_title }} &#x2022; {{ site.title }}</title>
     {% endif %}
 
     {% if page.layout == 'home' %}

@@ -4,6 +4,8 @@ author: sasadangelo
 title: "Getting Started with Docker and Podman"
 post_series_id: getting-started-with-docker-2025
 slug: getting-started-with-docker-2025
+redirect_from:
+  - /getting-started-with-docker/
 image: /assets/img/docker-getting-started.svg
 excerpt: Learn what Docker is, understand containers and images, and run your first containerized web server with Docker or Podman — no setup complexity required.
 categories:

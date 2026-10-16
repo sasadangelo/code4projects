@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Async and the Event Loop in Python: asyncio in Practice"
+description: "Build a real async news aggregator with aiohttp step by step, adding one asyncio pattern at a time: gather, TaskGroup, timeouts, and Semaphore."
 slug: async-and-event-loop-in-python-asyncio-in-practice
 post_series_id:
   - modern-python-application

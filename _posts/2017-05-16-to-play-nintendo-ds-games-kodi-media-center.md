@@ -2,6 +2,7 @@
 layout: post
 author: sasadangelo
 title: How to play Nintendo DS games with Retropie on Kodi Media Center
+seo_title: "Play Nintendo DS Games with RetroPie on Kodi Media Center"
 post_series_id: raspberry-media-center
 slug: to-play-nintendo-ds-games-kodi-media-center
 image: /wp-content/uploads/2017/05/NintendoDS.jpg

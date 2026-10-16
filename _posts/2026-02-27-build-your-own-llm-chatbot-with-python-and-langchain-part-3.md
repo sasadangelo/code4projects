@@ -19,7 +19,7 @@ tags:
 
 ## Introduction
 
-If you read [Part 1]({{ site.baseurl }}/build-your-own-llm-chatbot-with-python-and-langchain-part-1) and [Part 2]({{ site.baseurl }}/build-your-own-llm-chatbot-with-python-and-langchain-part-2), your chatbot can now manage providers, protocols, models, conversation, memory, and configuration — but it still doesn't know **your data**.
+If you read [Part 1]({{ site.baseurl }}/build-your-own-llm-chatbot-with-python-and-langchain-part-1/) and [Part 2]({{ site.baseurl }}/build-your-own-llm-chatbot-with-python-and-langchain-part-2/), your chatbot can now manage providers, protocols, models, conversation, memory, and configuration — but it still doesn't know **your data**.
 
 In [Lessons 8](https://github.com/sasadangelo/langchain-tutorials/tree/main/lesson-8) and [9](https://github.com/sasadangelo/langchain-tutorials/tree/main/lesson-9), we implement **Retrieval-Augmented Generation (RAG)**. First, we build a CLI tool called **Dataweave** to ingest PDFs and Wikipedia pages into a vector database. Then, we enable the chatbot to use that knowledge to answer domain-specific questions.
 
@@ -329,4 +329,4 @@ This approach allows the LLM to leverage external knowledge dynamically, keeping
 
 In this third article, we added RAG to let our chatbot access **external knowledge dynamically** via a vector database. PDFs and Wikipedia pages are ingested, split into chunks, and the top-K relevant documents are retrieved to enrich LLM responses.
 
-Next, we'll implement a UI for a more user-friendly chatbot experience in [Part 4]({{ site.baseurl }}/build-your-own-llm-chatbot-with-python-and-langchain-part-4).
+Next, we'll implement a UI for a more user-friendly chatbot experience in [Part 4]({{ site.baseurl }}/build-your-own-llm-chatbot-with-python-and-langchain-part-4/).

@@ -1,0 +1,6 @@
+# Read by jekyll-seo-tag to resolve the post `author` slug into the
+# name/url used in JSON-LD and meta tags. Keep in sync with _authors/.
+sasadangelo:
+  name: Salvatore D'Angelo
+  url: https://code4projects.org/about-me/
+  twitter: code4projects
