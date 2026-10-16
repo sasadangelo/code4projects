@@ -39,6 +39,12 @@
 
     {% feed_meta %}
     {% seo title=false %}
+    {% comment %} jekyll-seo-tag doesn't emit these two Twitter tags {% endcomment %}
+    {% assign twitter_description = page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | strip %}
+    <meta name="twitter:description" content="{{ twitter_description | escape }}" />
+    {% if page.image %}
+    <meta name="twitter:image:alt" content="{{ page.image_alt | default: page.title | escape }}" />
+    {% endif %}
     {% if page.layout == 'post' %}
     {% include json-ld-post.html %}
     {% endif %}
