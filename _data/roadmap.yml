@@ -1266,6 +1266,148 @@
     linkedin: false
     instagram: false
     facebook: false
+- id: api-design-requests-and-responses
+  title: "API Design in Practice: Parameters, Headers, Pagination, and Versioning"
+  status: idea
+  category: Programming
+  series: modern-python-application
+  notes: >
+    Theory 1/4. Focus on decisions, not definitions (parameter types already defined in the
+    REST design post). Path vs query vs body vs header and when to use which; standard headers
+    (FastURL CorrelationIdMiddleware as header example, never covered); content negotiation
+    406/415; pagination offset vs cursor (FastURL list endpoint has filter + sort but NO
+    pagination, while requirements.md asks for page/limit: add it here); versioning and
+    deprecation (build on the /api/v1 vs unversioned /{code} choice); RFC 9457 Problem Details
+    only as a short comparison with the {success, error, details} envelope already covered twice.
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: api-reliability-timeouts-retries-and-idempotency
+  title: "Reliable APIs: Timeouts, Retries with Backoff, and Idempotency"
+  status: idea
+  category: Programming
+  series: modern-python-application
+  notes: >
+    Theory 2/4 (part a). Stateless APIs (never explained; tie to multiple Uvicorn workers);
+    timeouts beyond the client-side httpx.Timeout already shown (server-side, 504/408, deadline
+    budgets); retry with exponential backoff and jitter (FastURL inspector has none: natural
+    example); circuit breaker. Idempotency in depth: the REST design post already introduces
+    Idempotency-Key, so go into storage, TTL, concurrent duplicates, response replay.
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: api-rate-limiting-and-throttling
+  title: "Rate Limiting and Throttling: Algorithms and HTTP Headers"
+  status: idea
+  category: Programming
+  series: modern-python-application
+  notes: >
+    Theory 2/4 (part b). Rate limiting vs throttling; token bucket, leaky bucket, fixed and
+    sliding window; 429, Retry-After, RateLimit-* (check IETF draft status). Where to enforce
+    (proxy, gateway, app), with nuance: domain-aware limits need the app. Distributed limits with
+    Redis. Theory base for the reverse proxy and API gateway posts.
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: api-long-running-operations-streaming-and-webhooks
+  title: "Beyond Request-Response: Long-Running Operations, Streaming, and Webhooks"
+  status: idea
+  category: Programming
+  series: modern-python-application
+  notes: >
+    Theory 3/4. 202 + polling already shown for POST /inspect and BackgroundTasks already covered:
+    go further (status resource, Location header, durable jobs). Streaming: SSE is already
+    explained as a transport in the A2A and MCP posts, link them; focus on choosing SSE vs
+    WebSocket vs NDJSON. Webhooks are new: FastURL example = notify when an inspection completes
+    (HMAC signature, retries, receiver idempotency). Keep brokers/events for
+    event-driven-architecture-in-python.
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: api-caching-etags-and-optimistic-concurrency
+  title: "HTTP Caching and Optimistic Concurrency: ETags, Conditional Requests, and Lost Updates"
+  status: idea
+  category: Programming
+  series: modern-python-application
+  notes: >
+    Theory 4/4. Only prior coverage: 307 vs 301 browser caching in the layered architecture post.
+    Cache-Control, ETag, If-None-Match/304; optimistic concurrency If-Match/412. FastURL has no
+    PUT/PATCH endpoint today: the lost-update demo needs a new PATCH /api/v1/links/{code}.
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: api-authentication-and-authorization-with-fastapi
+  title: "Authentication and Authorization for APIs: API Keys, OAuth2, and JWT in FastAPI"
+  status: idea
+  category: Programming
+  series: modern-python-application
+  notes: >
+    FastURL auth milestone (requirements.md lists RBAC / API keys / OAuth2 as future work).
+    401/403 and role concepts already exist in the REST design post: do not repeat them.
+    API keys for machine clients, JWT access tokens from a self-hosted IdP (Keycloak in Docker
+    Compose), OAuth2/OIDC flows explained but delegated to the IdP, authorization in the
+    service layer.
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: reverse-proxy-in-front-of-fastapi
+  title: "Putting a Reverse Proxy in Front of FastAPI: TLS, Rate Limits, and Load Balancing"
+  status: idea
+  category: Programming
+  series: modern-python-application
+  notes: >
+    NGINX/Caddy/Traefik in Docker Compose in front of FastURL: TLS, per-IP rate limiting (answers the
+    open question in requirements.md), timeouts, max body size, slow-client buffering, load
+    balancing across Uvicorn instances, hey load test showing 429s. Decide where CORS and request
+    IDs live (FastURL already has CORSMiddleware and CorrelationIdMiddleware).
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: api-gateway-vs-reverse-proxy
+  title: "When You Need an API Gateway: API Keys, Quotas, and Centralized Auth Without a Cloud"
+  status: idea
+  category: Programming
+  series: modern-python-application
+  notes: >
+    What a gateway adds over the reverse proxy post. Angle: external consumers (API keys, per-plan
+    quotas, centralized JWT validation), which makes sense even with the single-service FastURL.
+    Self-hosted options (Kong, APISIX, Tyk, KrakenD, Traefik); Kubernetes Gateway API in one
+    paragraph only (defer to the Kubernetes series). Authorization stays in the app.
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
 - id: from-requirements-to-architecture
   title: "From Requirements to Architecture: A Decision Guide to Software Architectural Patterns"
   status: planned
