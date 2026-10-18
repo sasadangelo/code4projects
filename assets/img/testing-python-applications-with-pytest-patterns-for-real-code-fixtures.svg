@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 Z" fill="#57606a"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="760" height="400" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="380" y="34" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="16" font-weight="700" fill="#1f2328">Fixture Setup and Teardown Chain</text>
+  <text x="380" y="54" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="12" fill="#57606a">A test requests api_client, which requests db_session</text>
+
+  <!-- ── Phase labels ── -->
+  <line x1="28" y1="96" x2="300" y2="96" stroke="#d1d5db" stroke-width="1.2"/>
+  <text x="164" y="88" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="700" fill="#57606a">SETUP · before yield</text>
+  <line x1="316" y1="96" x2="444" y2="96" stroke="#d1d5db" stroke-width="1.2"/>
+  <text x="380" y="88" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="700" fill="#57606a">TEST</text>
+  <line x1="460" y1="96" x2="732" y2="96" stroke="#d1d5db" stroke-width="1.2"/>
+  <text x="596" y="88" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="700" fill="#57606a">TEARDOWN · after yield</text>
+
+  <!-- ── Steps ── -->
+  <!-- 1 db_session setup -->
+  <rect x="28" y="114" width="128" height="84" rx="8" fill="#dbeafe" stroke="#3b82d4" stroke-width="1.2"/>
+  <text x="92" y="134" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" font-weight="700" fill="#57606a">1</text>
+  <text x="92" y="152" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#2563eb">db_session</text>
+  <text x="92" y="170" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">create engine</text>
+  <text x="92" y="184" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">create all tables</text>
+
+  <line x1="156" y1="156" x2="170" y2="156" stroke="#57606a" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 2 api_client setup -->
+  <rect x="172" y="114" width="128" height="84" rx="8" fill="#ede9fe" stroke="#7c5cd8" stroke-width="1.2"/>
+  <text x="236" y="134" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" font-weight="700" fill="#57606a">2</text>
+  <text x="236" y="152" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#6d28d9">api_client</text>
+  <text x="236" y="170" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">override get_db</text>
+  <text x="236" y="184" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">open ASGI client</text>
+
+  <line x1="300" y1="156" x2="314" y2="156" stroke="#57606a" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 3 test -->
+  <rect x="316" y="114" width="128" height="84" rx="8" fill="#10b981"/>
+  <text x="380" y="134" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" font-weight="700" fill="#ffffff">3</text>
+  <text x="380" y="152" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">test body runs</text>
+  <text x="380" y="170" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#ffffff">pass or fail,</text>
+  <text x="380" y="184" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#ffffff">teardown still runs</text>
+
+  <line x1="444" y1="156" x2="458" y2="156" stroke="#57606a" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 4 api_client teardown -->
+  <rect x="460" y="114" width="128" height="84" rx="8" fill="#ede9fe" stroke="#7c5cd8" stroke-width="1.2"/>
+  <text x="524" y="134" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" font-weight="700" fill="#57606a">4</text>
+  <text x="524" y="152" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#6d28d9">api_client</text>
+  <text x="524" y="170" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">clear overrides</text>
+  <text x="524" y="184" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">close HTTP client</text>
+
+  <line x1="588" y1="156" x2="602" y2="156" stroke="#57606a" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 5 db_session teardown -->
+  <rect x="604" y="114" width="128" height="84" rx="8" fill="#dbeafe" stroke="#3b82d4" stroke-width="1.2"/>
+  <text x="668" y="134" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" font-weight="700" fill="#57606a">5</text>
+  <text x="668" y="152" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#2563eb">db_session</text>
+  <text x="668" y="170" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">drop all tables</text>
+  <text x="668" y="184" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">dispose engine</text>
+
+  <!-- ── Lifetimes ── -->
+  <text x="28" y="232" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2328">Lifetime of each fixture</text>
+
+  <rect x="172" y="244" width="416" height="28" rx="6" fill="#7c5cd8"/>
+  <text x="380" y="262" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="11" font-weight="700" fill="#ffffff">api_client</text>
+
+  <rect x="28" y="280" width="704" height="28" rx="6" fill="#3b82d4"/>
+  <text x="380" y="298" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="11" font-weight="700" fill="#ffffff">db_session  (shared by api_client and the test)</text>
+
+  <!-- ── Notes ── -->
+  <text x="380" y="344" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="12" fill="#1f2328">Setup follows the dependency chain. Teardown runs in reverse order.</text>
+  <text x="380" y="364" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="12" fill="#57606a">Within one test, each fixture is created once and every requester gets the same instance.</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <!-- Background -->
+  <rect width="760" height="400" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="380" y="34" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="16" font-weight="700" fill="#1f2328">Test Types Mapped to FastURL</text>
+
+  <!-- ── Pyramid ── -->
+  <!-- End-to-end -->
+  <polygon points="182,110 278,110 325,190 135,190" fill="#0d9488"/>
+  <text x="230" y="148" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">End-to-end</text>
+  <text x="230" y="164" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#ffffff">few scenarios</text>
+
+  <!-- Integration -->
+  <polygon points="135,194 325,194 372,270 88,270" fill="#7c5cd8"/>
+  <text x="230" y="228" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">Integration</text>
+  <text x="230" y="244" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#ffffff">32 tests · 2.65 s</text>
+
+  <!-- Unit -->
+  <polygon points="88,274 372,274 420,350 40,350" fill="#3b82d4"/>
+  <text x="230" y="308" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">Unit</text>
+  <text x="230" y="324" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#ffffff">47 tests · 0.06 s</text>
+
+  <!-- ── Connectors ── -->
+  <line x1="306" y1="150" x2="448" y2="150" stroke="#d1d5db" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="350" y1="232" x2="448" y2="232" stroke="#d1d5db" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="396" y1="312" x2="448" y2="312" stroke="#d1d5db" stroke-width="1.2" stroke-dasharray="4 3"/>
+
+  <!-- ── Details ── -->
+  <!-- E2E -->
+  <rect x="450" y="124" width="290" height="52" rx="8" fill="#f7f8fa" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="464" y="144" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="700" fill="#0d9488">A deployed instance, from outside</text>
+  <text x="464" y="160" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">Runs when features reach the test environments</text>
+  <text x="464" y="172" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="#57606a">covered by tests/integration/ for now</text>
+
+  <!-- Integration -->
+  <rect x="450" y="206" width="290" height="52" rx="8" fill="#f7f8fa" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="464" y="226" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="700" fill="#6d28d9">Real layers and database, in-process</text>
+  <text x="464" y="242" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">Runs when the work of several PRs is integrated</text>
+  <text x="464" y="254" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="#57606a">tests/integration/</text>
+
+  <!-- Unit -->
+  <rect x="450" y="286" width="290" height="52" rx="8" fill="#f7f8fa" stroke="#e5e7eb" stroke-width="1.2"/>
+  <text x="464" y="306" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="700" fill="#2563eb">One piece of logic, dependencies mocked</text>
+  <text x="464" y="322" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">Runs on every commit and every PR</text>
+  <text x="464" y="334" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="#57606a">tests/unit/</text>
+
+  <!-- Performance, outside the pyramid -->
+  <rect x="450" y="58" width="290" height="44" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <text x="464" y="76" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="11" font-weight="700" fill="#d97706">Performance · outside the pytest suite</text>
+  <text x="464" y="92" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">A live server under load, on demand</text>
+
+  <!-- Axis legend -->
+  <text x="40" y="380" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">▲ slower, more infrastructure, fewer tests</text>
+  <text x="740" y="380" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">▼ faster, isolated, more tests</text>
+</svg>

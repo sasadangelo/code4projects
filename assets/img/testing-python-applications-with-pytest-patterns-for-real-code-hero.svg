@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1a44"/>
+      <stop offset="0.55" stop-color="#0d2f78"/>
+      <stop offset="1" stop-color="#0a1a44"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="core" cx="0.4" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#60a5fa"/>
+      <stop offset="0.6" stop-color="#1d4ed8"/>
+      <stop offset="1" stop-color="#0b2a6b"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16346f"/>
+      <stop offset="1" stop-color="#0c2154"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="tip" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="760" height="400" fill="url(#bg)"/>
+  <rect width="760" height="400" fill="url(#halo)"/>
+
+  <!-- Circuit decoration -->
+  <g stroke="#3b82f6" stroke-opacity="0.18" stroke-width="1" fill="none">
+    <path d="M0 110 H40 L60 90 H130"/>
+    <path d="M760 110 H720 L700 90 H630"/>
+    <path d="M0 290 H30 L50 270 H90"/>
+    <path d="M760 290 H730 L710 270 H670"/>
+  </g>
+  <g fill="#60a5fa" fill-opacity="0.5">
+    <circle cx="130" cy="90" r="2"/><circle cx="630" cy="90" r="2"/>
+    <circle cx="90" cy="270" r="2"/><circle cx="670" cy="270" r="2"/>
+  </g>
+
+  <!-- Title -->
+  <text x="380" y="50" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="27" font-weight="800" fill="#ffffff" filter="url(#softglow)">Testing Python Applications with pytest</text>
+  <text x="380" y="78" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="15" fill="#bfd6ff">Patterns for Real Code</text>
+
+  <!-- ── Left: test code ── -->
+  <rect x="36" y="112" width="208" height="132" rx="10" fill="none" stroke="#3b82f6" stroke-width="2" filter="url(#glow)"/>
+  <rect x="36" y="112" width="208" height="132" rx="10" fill="url(#panel)" stroke="#3b82f6" stroke-width="1.5"/>
+  <circle cx="50" cy="125" r="3.5" fill="#ef4444"/><circle cx="62" cy="125" r="3.5" fill="#f59e0b"/><circle cx="74" cy="125" r="3.5" fill="#10b981"/>
+  <text x="236" y="128" text-anchor="end" font-family="ui-monospace,Menlo,monospace" font-size="9" fill="#93c5fd">test_links_api.py</text>
+  <g font-family="ui-monospace,Menlo,monospace" font-size="10">
+    <text x="48" y="150" fill="#c4b5fd">@pytest.fixture()</text>
+    <text x="48" y="164" fill="#e0ecff">def db_session():</text>
+    <text x="66" y="178" fill="#e0ecff">yield session</text>
+    <text x="48" y="200" fill="#e0ecff">def test_redirect(api_client):</text>
+    <text x="66" y="214" fill="#e0ecff">r = await api_client.get(…)</text>
+    <text x="66" y="228" fill="#86efac">assert r.status_code == 307</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <line x1="246" y1="178" x2="312" y2="178" stroke="url(#flow)" stroke-width="3" marker-end="url(#tip)" filter="url(#softglow)"/>
+  <rect x="250" y="148" width="56" height="20" rx="10" fill="#0c2154" stroke="#38bdf8" stroke-opacity="0.7"/>
+  <text x="278" y="162" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#bae6fd">collect</text>
+
+  <!-- ── Center: pytest runner ── -->
+  <circle cx="380" cy="178" r="70" fill="#3b82f6" fill-opacity="0.12"/>
+  <circle cx="380" cy="178" r="58" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3 6" stroke-opacity="0.8"/>
+  <circle cx="380" cy="178" r="46" fill="url(#core)" stroke="#93c5fd" stroke-width="2" filter="url(#glow)"/>
+  <text x="380" y="176" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="20" font-weight="800" fill="#ffffff">pytest</text>
+  <path d="M368 188 l8 8 l16 -16" fill="none" stroke="#86efac" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Arrow 2 -->
+  <line x1="448" y1="178" x2="514" y2="178" stroke="url(#flow)" stroke-width="3" marker-end="url(#tip)" filter="url(#softglow)"/>
+  <rect x="454" y="148" width="56" height="20" rx="10" fill="#0c2154" stroke="#38bdf8" stroke-opacity="0.7"/>
+  <text x="482" y="162" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#bae6fd">report</text>
+
+  <!-- ── Right: terminal ── -->
+  <rect x="516" y="112" width="208" height="132" rx="10" fill="none" stroke="#3b82f6" stroke-width="2" filter="url(#glow)"/>
+  <rect x="516" y="112" width="208" height="132" rx="10" fill="#071330" stroke="#3b82f6" stroke-width="1.5"/>
+  <circle cx="530" cy="125" r="3.5" fill="#ef4444"/><circle cx="542" cy="125" r="3.5" fill="#f59e0b"/><circle cx="554" cy="125" r="3.5" fill="#10b981"/>
+  <g font-family="ui-monospace,Menlo,monospace" font-size="10">
+    <text x="528" y="150" fill="#e0ecff">$ uv run pytest</text>
+    <text x="528" y="170" fill="#93c5fd">tests/unit</text>
+    <text x="606" y="170" fill="#4ade80">............</text>
+    <text x="528" y="186" fill="#93c5fd">tests/integration</text>
+    <text x="648" y="186" fill="#4ade80">.......</text>
+  </g>
+  <rect x="528" y="206" width="184" height="26" rx="5" fill="#14532d" fill-opacity="0.6" stroke="#22c55e" stroke-width="1.2" filter="url(#softglow)"/>
+  <text x="620" y="223" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#4ade80">79 passed</text>
+
+  <!-- Step labels -->
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">
+    <text x="140" y="270">Test Code</text>
+    <text x="380" y="270">pytest Runner</text>
+    <text x="620" y="270">Green Suite</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="60" y1="292" x2="700" y2="292" stroke="#3b82f6" stroke-opacity="0.35"/>
+  <line x1="285" y1="306" x2="285" y2="380" stroke="#3b82f6" stroke-opacity="0.3"/>
+  <line x1="475" y1="306" x2="475" y2="380" stroke="#3b82f6" stroke-opacity="0.3"/>
+
+  <!-- ── Bottom icons ── -->
+  <!-- Fixtures: linked chain -->
+  <g transform="translate(190 330)" fill="none" stroke="#fbbf24" stroke-width="3.5" filter="url(#softglow)">
+    <rect x="-20" y="-8" width="24" height="16" rx="8" transform="rotate(-35)"/>
+    <rect x="-4" y="-8" width="24" height="16" rx="8" transform="rotate(-35)"/>
+  </g>
+  <!-- Mocks: stand-in object -->
+  <g transform="translate(380 330)" filter="url(#softglow)">
+    <rect x="-18" y="-18" width="26" height="26" rx="4" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="4 3"/>
+    <rect x="-8" y="-8" width="26" height="26" rx="4" fill="#0c2154" stroke="#38bdf8" stroke-width="3"/>
+    <path d="M-1 5 h12 M-1 11 h8" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <!-- Parametrize: table of cases -->
+  <g transform="translate(570 330)" filter="url(#softglow)">
+    <rect x="-20" y="-18" width="40" height="36" rx="4" fill="none" stroke="#4ade80" stroke-width="2.5"/>
+    <line x1="-20" y1="-6" x2="20" y2="-6" stroke="#4ade80" stroke-width="2"/>
+    <line x1="-20" y1="6" x2="20" y2="6" stroke="#4ade80" stroke-width="2"/>
+    <line x1="-2" y1="-18" x2="-2" y2="18" stroke="#4ade80" stroke-width="2"/>
+    <rect x="-20" y="-6" width="40" height="12" fill="#4ade80" fill-opacity="0.35"/>
+  </g>
+
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">
+    <text x="190" y="378">Fixtures</text>
+    <text x="380" y="378">Mocks</text>
+    <text x="570" y="378">Parametrize</text>
+  </g>
+</svg>

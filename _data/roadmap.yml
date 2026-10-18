@@ -1240,10 +1240,11 @@
     facebook: false
 - id: testing-python-applications-with-pytest-patterns-for-real-code
   title: "Testing Python Applications with pytest: Patterns for Real Code"
-  status: draft
+  status: published
   category: Programming
   series: modern-python-application
-  scheduled: 2026-10-13
+  slug: testing-python-applications-with-pytest-patterns-for-real-code
+  scheduled: 2026-10-18
   distributed:
     medium: false
     substack: false
