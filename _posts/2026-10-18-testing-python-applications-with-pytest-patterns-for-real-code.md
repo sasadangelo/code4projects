@@ -24,7 +24,7 @@ In the [previous article]({{ site.baseurl }}/fastapi-async-background-tasks-and-
 
 Most testing tutorials show one `assert` against one function and stop there. Real projects raise harder questions. Which tests should run on every pull request, and which only when several branches come together? How do you test code that calls a database, a remote web page, or a random number generator? What exactly is a fixture, and why does every pytest project seem to have a `conftest.py`?
 
-This article answers those questions with the 79 tests in the FastURL repository. Every concept points to a real test you can open and run.
+This article answers those questions with the 80 tests in the FastURL repository. Every concept points to a real test you can open and run, and all the code refers to FastURL [v0.1.0](https://github.com/sasadangelo/fasturl/tree/v0.1.0).
 
 You should read this article if:
 
@@ -44,7 +44,7 @@ Software tests follow the same split. They differ in **what they isolate**, **ho
 
 A unit test checks one piece of business logic in isolation. Everything the logic depends on (the database, the network, the clock) is replaced by a stand-in the test controls. The result is a test that runs in a few milliseconds and fails for exactly one reason: the logic is wrong.
 
-In FastURL, the unit tests live in `tests/unit/`. The [LinkService tests](https://github.com/sasadangelo/fasturl/blob/main/tests/unit/test_link_service.py) check the domain rules (custom alias collisions, the self-redirect guard, link expiry, the retry loop for auto-generated codes) without opening a single database connection. The [inspector tests](https://github.com/sasadangelo/fasturl/blob/main/tests/unit/test_inspector_service.py) feed raw HTML strings to the title and OpenGraph extractors without making any HTTP call.
+In FastURL, the unit tests live in `tests/unit/`. The [LinkService tests](https://github.com/sasadangelo/fasturl/blob/v0.1.0/tests/unit/test_link_service.py) check the domain rules (custom alias collisions, the self-redirect guard, link expiry, the retry loop for auto-generated codes) without opening a single database connection. The [inspector tests](https://github.com/sasadangelo/fasturl/blob/v0.1.0/tests/unit/test_inspector_service.py) feed raw HTML strings to the title and OpenGraph extractors without making any HTTP call.
 
 This is what the whole unit suite costs on my laptop:
 
@@ -52,9 +52,9 @@ This is what the whole unit suite costs on my laptop:
 uv run pytest tests/unit -q
 ```
 
-> 47 passed in 0.06s
+> 47 passed in 0.05s
 
-Forty-seven tests in sixty milliseconds. A suite this fast can run on every pull request, and on every save in your editor if you want. That speed is the whole point. A developer who waits two seconds for feedback runs the tests constantly; a developer who waits ten minutes runs them before lunch.
+Forty-seven tests in fifty milliseconds. A suite this fast can run on every pull request, and on every save in your editor if you want. That speed is the whole point. A developer who waits two seconds for feedback runs the tests constantly; a developer who waits ten minutes runs them before lunch.
 
 > A unit test isolates business logic from everything it talks to. Its job is to be fast enough to run on every change.
 
@@ -64,7 +64,7 @@ Unit tests prove each piece works alone. They cannot prove the pieces fit. A `Li
 
 Integration tests close that gap. They wire the real components together (router, service, repository, database) and sometimes real third-party systems. They are slower and need infrastructure, so they typically run when the work of several pull requests is merged into the main branch, not on every single commit.
 
-FastURL's integration tests live in `tests/integration/`. A test like this one, from [test_links_api.py](https://github.com/sasadangelo/fasturl/blob/main/tests/integration/test_links_api.py), crosses every layer of the application:
+FastURL's integration tests live in `tests/integration/`. A test like this one, from [test_links_api.py](https://github.com/sasadangelo/fasturl/blob/v0.1.0/tests/integration/test_links_api.py), crosses every layer of the application:
 
 ```python
 async def test_duplicate_alias_returns_409(self, api_client: httpx.AsyncClient) -> None:
@@ -84,9 +84,9 @@ The price is visible in the timing:
 uv run pytest tests/integration -q
 ```
 
-> 32 passed in 2.65s
+> 33 passed in 0.24s
 
-Each integration test creates a fresh database, runs real SQL, and some of them let the background inspector make a real HTTP call to `example.com`, which is why the slowest ones take around 150 ms each. Two seconds is still fast, but the gap is a factor of thirty, and it grows quickly as a project adds more infrastructure.
+Each integration test creates a fresh database and runs real SQL through the whole stack. A quarter of a second is still fast, but each integration test costs about seven times as much as a unit test (7 ms against 1 ms), and the gap grows quickly as a project adds real infrastructure: a PostgreSQL server, a message broker, a container to start.
 
 ### End-to-end tests: the user's point of view
 
@@ -94,13 +94,13 @@ An end-to-end (or functional) test exercises a complete user scenario from the o
 
 The difference from an integration test is where the application runs. An integration test drives the code in-process, with test fixtures in control of the database and the configuration. An end-to-end test talks to a *deployed* instance (a container, a test environment) exactly as a real client would, with no access to its internals.
 
-In FastURL, the end-to-end layer is an extension of the integration layer, to be added only when it becomes necessary. The `api_client` fixture (which we will dissect later) already drives the real FastAPI application through its public HTTP surface. The redirect tests in [test_redirect_api.py](https://github.com/sasadangelo/fasturl/blob/main/tests/integration/test_redirect_api.py) are a good example: they seed a link, call `GET /{code}` like a browser would, and assert on the `307` status and the `Location` header.
+In FastURL, the end-to-end layer is an extension of the integration layer, to be added only when it becomes necessary. The `api_client` fixture (which we will dissect later) already drives the real FastAPI application through its public HTTP surface. The redirect tests in [test_redirect_api.py](https://github.com/sasadangelo/fasturl/blob/v0.1.0/tests/integration/test_redirect_api.py) are a good example: they seed a link, call `GET /{code}` like a browser would, and assert on the `307` status and the `Location` header.
 
-The whole suite runs in two seconds and the user scenarios are few and all covered, so a second layer would run the same scenarios twice for no extra confidence.
+The whole suite runs in a third of a second and the user scenarios are few and all covered, so a second layer would run the same scenarios twice for no extra confidence.
 
 That trade-off changes as a project grows. When the integration suite takes many minutes, or when what matters is the deployed artefact (the Docker image, the configuration of a real environment, authentication in front of the API), a separate end-to-end suite earns its place.
 
-That suite then runs against the official test environments, when several features are promoted there together, rather than on every merge. FastURL's [test strategy](https://github.com/sasadangelo/fasturl/blob/main/docs/test-strategy.md) puts that step at the milestone that introduces authentication and containerised deployment.
+That suite then runs against the official test environments, when several features are promoted there together, rather than on every merge. FastURL's [test strategy](https://github.com/sasadangelo/fasturl/blob/v0.1.0/docs/test-strategy.md) puts that step at the milestone that introduces authentication and containerised deployment.
 
 ### Performance tests: benchmark, load, and stress
 
@@ -284,7 +284,7 @@ This is a test you cannot write against a real database. With 62 possible charac
 
 ### Verifying interactions
 
-A mock records every call, so a test can also check *how* a dependency was used. The `dispatch_inspection` test in [test_inspector_service.py](https://github.com/sasadangelo/fasturl/blob/main/tests/unit/test_inspector_service.py) does not care what the background scheduler returns. It cares that the inspection was scheduled with the right arguments:
+A mock records every call, so a test can also check *how* a dependency was used. The `dispatch_inspection` test in [test_inspector_service.py](https://github.com/sasadangelo/fasturl/blob/v0.1.0/tests/unit/test_inspector_service.py) does not care what the background scheduler returns. It cares that the inspection was scheduled with the right arguments:
 
 ```python
 mock_scheduler.add_task.assert_called_once()
@@ -303,7 +303,7 @@ The most useful assertion methods are:
 
 ### Faking a remote web page with `httpx.MockTransport`
 
-The inspector calls a real URL and parses the HTML it gets back. FastURL could mock the whole `httpx.AsyncClient`, but `httpx` offers something better: a real client whose network layer is replaced by a function you write. The integration test in [test_links_api.py](https://github.com/sasadangelo/fasturl/blob/main/tests/integration/test_links_api.py) uses it to simulate both a healthy page and a timeout:
+The inspector calls a real URL and parses the HTML it gets back. FastURL could mock the whole `httpx.AsyncClient`, but `httpx` offers something better: a real client whose network layer is replaced by a function you write. The integration test in [test_links_api.py](https://github.com/sasadangelo/fasturl/blob/v0.1.0/tests/integration/test_links_api.py) uses it to simulate both a healthy page and a timeout:
 
 ```python
 html_body = "<html><head><title>Example</title></head></html>"
@@ -336,7 +336,7 @@ with patch("fasturl.core.database.create_async_engine") as mock_create_engine:
     assert kwargs.get("pool_size") == 15
 ```
 
-This [test_database.py](https://github.com/sasadangelo/fasturl/blob/main/tests/unit/test_database.py) test verifies that PostgreSQL gets the right pool settings without starting PostgreSQL. Note the target string: you patch the name *where it is used* (`fasturl.core.database.create_async_engine`), not where it is defined (`sqlalchemy.ext.asyncio.create_async_engine`), because `database.py` has already imported its own reference.
+This [test_database.py](https://github.com/sasadangelo/fasturl/blob/v0.1.0/tests/unit/test_database.py) test verifies that PostgreSQL gets the right pool settings without starting PostgreSQL. Note the target string: you patch the name *where it is used* (`fasturl.core.database.create_async_engine`), not where it is defined (`sqlalchemy.ext.asyncio.create_async_engine`), because `database.py` has already imported its own reference.
 
 ### How much to mock
 
@@ -354,7 +354,7 @@ A **fixture** is the stage crew of a test. It prepares what the test needs (a mo
 
 ### From `setUp` to a fixture
 
-In `unittest`, preparation lives in a `setUp` method on the test class, and the test accesses it through `self`. In pytest, preparation lives in a function decorated with `@pytest.fixture`. Here is the simplest fixture in FastURL's [conftest.py](https://github.com/sasadangelo/fasturl/blob/main/tests/conftest.py):
+In `unittest`, preparation lives in a `setUp` method on the test class, and the test accesses it through `self`. In pytest, preparation lives in a function decorated with `@pytest.fixture`. Here is the simplest fixture in FastURL's [conftest.py](https://github.com/sasadangelo/fasturl/blob/v0.1.0/tests/conftest.py):
 
 ```python
 @pytest.fixture()
@@ -414,35 +414,45 @@ The fixture is `async def` and the tests are `async def` too, without any decora
 
 ### Fixtures that use other fixtures
 
-A fixture can request other fixtures, exactly like a test does. FastURL's `api_client` needs a database session, so it asks for `db_session`. It then swaps the production session for the test one through the same `get_db` dependency introduced in the [layered architecture article]({{ site.baseurl }}/layered-architecture-with-fastapi-routers-services-and-repositories/):
+A fixture can request other fixtures, exactly like a test does. FastURL's `api_client` needs a database session and an HTTP client for the background inspector, so it asks for `db_session` and `http_client`. It then swaps the production objects for the test ones through the `get_db` and `get_http_client` dependencies introduced in the [layered architecture article]({{ site.baseurl }}/layered-architecture-with-fastapi-routers-services-and-repositories/):
 
 ```python
+FAKE_PAGE: str = "<html><head><title>Example Domain</title></head></html>"
+
+def _fake_target(request: httpx.Request) -> httpx.Response:
+    """Answer every outbound request with a small HTML page."""
+    return httpx.Response(status_code=200, text=FAKE_PAGE)
+
 @pytest.fixture()
-async def api_client(db_session: AsyncSession) -> AsyncIterator[httpx.AsyncClient]:
+async def http_client() -> AsyncIterator[httpx.AsyncClient]:
+    async with httpx.AsyncClient(transport=httpx.MockTransport(handler=_fake_target)) as client:
+        yield client
+
+@pytest.fixture()
+async def api_client(db_session: AsyncSession, http_client: httpx.AsyncClient) -> AsyncIterator[httpx.AsyncClient]:
     async def _override_get_db() -> AsyncIterator[AsyncSession]:
         yield db_session
 
     app.dependency_overrides[get_db] = _override_get_db
-    app.state.http_client = httpx.AsyncClient()
+    app.dependency_overrides[get_http_client] = lambda: http_client
 
     transport: httpx.ASGITransport = httpx.ASGITransport(app=app)
     async with httpx.AsyncClient(transport=transport, base_url="http://test") as client:
         yield client
 
     app.dependency_overrides.clear()
-    await app.state.http_client.aclose()
 ```
 
 Breaking down what it prepares:
 
 - `app.dependency_overrides[get_db] = _override_get_db` — every request handled by the app gets the test session instead of a session from the production engine
-- `app.state.http_client = httpx.AsyncClient()` — the `lifespan` function normally creates the shared client, but it does not run in this setup, so the fixture creates it by hand
+- `app.dependency_overrides[get_http_client] = lambda: http_client` — the background inspector gets a client whose transport answers from memory with `FAKE_PAGE`, so no test ever reaches the real internet (the `MockTransport` technique is explained in the mocks section above)
 - `httpx.ASGITransport(app=app)` — requests go straight into the FastAPI app in memory; no server, no port, no network
-- the teardown — removes the override and closes the client, so the next test starts from an untouched app
+- the teardown — closes the ASGI client and removes the overrides, so the next test starts from an untouched app; `http_client` then closes its own client in its teardown
 
-When a test requests `api_client`, pytest resolves the chain: it creates `db_session` first, then `api_client`. Teardown runs in reverse order: `api_client` cleans up first, then `db_session` drops the tables.
+When a test requests `api_client`, pytest resolves the chain: it creates `db_session` and `http_client` first, then `api_client`. Teardown runs in reverse order: `api_client` cleans up first, then `http_client` closes its client and `db_session` drops the tables.
 
-![Fixture setup and teardown chain]({{ site.baseurl }}/assets/img/testing-python-applications-with-pytest-patterns-for-real-code-fixtures.svg){:width="760" height="400" .responsive_img}
+![Fixture setup and teardown chain]({{ site.baseurl }}/assets/img/testing-python-applications-with-pytest-patterns-for-real-code-fixtures.svg){:width="760" height="420" .responsive_img}
 
 There is one more detail that surprises people. Within a single test, each fixture is created **once** and shared. Look at this redirect test:
 
@@ -462,9 +472,9 @@ The test asks for both `api_client` and `db_session`, and `api_client` also asks
 
 ### `conftest.py`: fixtures without imports
 
-None of FastURL's test files import `db_session` or `mock_repository`. pytest finds them automatically in any file named `conftest.py`, and makes them available to every test in that directory and its subdirectories. FastURL has a single `tests/conftest.py` with all four fixtures.
+None of FastURL's test files import `db_session` or `mock_repository`. pytest finds them automatically in any file named `conftest.py`, and makes them available to every test in that directory and its subdirectories. FastURL has a single `tests/conftest.py` with all five fixtures.
 
-As a project grows, you can split it by layer: `tests/unit/conftest.py` for mocks, `tests/integration/conftest.py` for the database and the API client. Unit tests then cannot accidentally request a database, because the fixture is not visible from their folder.
+As a project grows, you can split it by layer: `tests/unit/conftest.py` for mocks, `tests/integration/conftest.py` for the database, the fake HTTP client, and the API client. Unit tests then cannot accidentally request a database, because the fixture is not visible from their folder.
 
 ### Factory fixtures: when each test needs different data
 
@@ -509,7 +519,7 @@ Compared to the helper function, the factory lives in `conftest.py`, so every te
 
 ### Fixture scope: per test, per module, per suite
 
-By default a fixture has `function` scope: it is created for each test and torn down after it. That is what FastURL uses everywhere, and it is the safest choice. Sometimes, though, setup is too expensive to repeat for every test: starting a PostgreSQL container takes several seconds, and you do not want to pay that 32 times.
+By default a fixture has `function` scope: it is created for each test and torn down after it. That is what FastURL uses everywhere, and it is the safest choice. Sometimes, though, setup is too expensive to repeat for every test: starting a PostgreSQL container takes several seconds, and you do not want to pay that 33 times.
 
 The `scope` argument controls how long a fixture lives:
 
@@ -585,7 +595,7 @@ The `code` column is unique, so if both tests shared a database, the second inse
 
 ### A real leak, and how a fixture fixes it
 
-Independence is easy to break by accident. Look at this test from FastURL's [test_database.py](https://github.com/sasadangelo/fasturl/blob/main/tests/unit/test_database.py):
+Independence is easy to break by accident. Look at this test from FastURL's [test_database.py](https://github.com/sasadangelo/fasturl/blob/v0.1.0/tests/unit/test_database.py):
 
 ```python
 @pytest.mark.asyncio
@@ -641,7 +651,7 @@ TEST_DATABASE_URL=postgresql+asyncpg://fasturl_user:<password>@127.0.0.1:5432/fa
 
 `conftest.py` reads the `TEST_DATABASE_URL` variable. Without it, the integration tests fall back to in-memory SQLite, which is fast but not identical to PostgreSQL (timezone handling and concurrency behave differently). The database must be dedicated to tests, since `db_session` drops every table after each test.
 
-FastURL's [CI workflow](https://github.com/sasadangelo/fasturl/blob/main/.github/workflows/ci.yml) currently runs the whole suite on every pull request, once on SQLite and once on a PostgreSQL 17 service container. With 79 tests that finish in two seconds, there is no reason to split them yet. The split described at the start of the article becomes worth it as the integration suite grows.
+FastURL's [CI workflow](https://github.com/sasadangelo/fasturl/blob/v0.1.0/.github/workflows/ci.yml) currently runs the whole suite on every pull request, once on SQLite and once on a PostgreSQL 17 service container. With 80 tests that finish in a third of a second, there is no reason to split them yet. The split described at the start of the article becomes worth it as the integration suite grows.
 
 During development, a few flags make the feedback loop much shorter:
 
@@ -653,7 +663,7 @@ Breaking down the options:
 
 - `-x` — stop at the first failure instead of running the whole suite
 - `--lf` — run only the tests that failed last time ("last failed"), then everything once they pass
-- `--durations=5` — list the five slowest tests, which is how I found the 150 ms integration tests mentioned earlier
+- `--durations=5` — list the five slowest tests, the first place to look when the suite starts to slow down
 
 Finally, `test-cov` measures which lines and branches the tests actually execute:
 
@@ -674,7 +684,7 @@ In this article we covered:
 - What a fixture is: a function that prepares what a test needs, injected by name, with `yield` for teardown that runs even when the test fails, composed into chains, turned into factories, and scoped from a single test up to the whole session.
 - Why test independence matters, how FastURL achieves it with a fresh database per test, and how `monkeypatch` fixes a real state leak in the repository.
 
-The [next article]({{ site.baseurl }}/testing-fastapi-in-practice/) applies these ideas to the problems specific to FastAPI: async tests with pytest-asyncio 1.x, the lifespan gap, isolating the network, choosing a test database, meaningful coverage, and a CI pipeline that splits fast and slow tests.
+The [next article]({{ site.baseurl }}/testing-fastapi-in-practice/) puts these ideas into practice: the core FastURL feature, tested first with unit tests and then with integration tests, main path first and then one test per rule, with what FastAPI adds at each step and why the integration suite doubles as the end-to-end suite.
 
 ---
 

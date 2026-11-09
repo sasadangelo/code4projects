@@ -25,7 +25,7 @@ tags:
 
 In the [previous article]({{ site.baseurl }}/designing-rest-apis-in-practice-a-kubernetes-case-study/) we established the theory: requirements produce domain entities, domain entities become REST resources, and HTTP methods map to the lifecycle operations of those resources. Kubernetes was the illustration — large enough to make the pattern clear, but too complex to implement in a blog post.
 
-This article moves from theory to practice. The project is **FastURL**, a URL shortener and link inspector built with [FastAPI](https://fastapi.tiangolo.com/). It is small enough to fit comfortably in a few articles, but real enough to demonstrate every concept that matters: domain modeling, Pydantic validation as a form of type-safe Value Objects, a standardized error envelope, and a resource hierarchy derived directly from the domain.
+This article moves from theory to practice. The project is **FastURL**, a URL shortener and link inspector built with [FastAPI](https://fastapi.tiangolo.com/). It is small enough to fit comfortably in a few articles, but real enough to demonstrate every concept that matters: domain modeling, Pydantic validation as a form of type-safe Value Objects, a standardized error envelope, and a resource hierarchy derived directly from the domain. The source code is on [GitHub](https://github.com/sasadangelo/fasturl), and every snippet in this article refers to [v0.1.0](https://github.com/sasadangelo/fasturl/tree/v0.1.0).
 
 You should read this article if:
 
@@ -45,11 +45,11 @@ Three actors interact with the system:
 | **Public Visitor** | Navigates to a short URL and gets redirected to the target |
 | **Background Inspector** | Asynchronously checks target URL health after creation |
 
-This actor breakdown comes directly from the [requirements document](https://github.com/sasadangelo/fasturl/blob/main/docs/requirements.md) — before any code was written. The nouns in the job stories (`Link`, `ShortCode`, `TargetUrl`, `Inspection`, `Metrics`) became the domain entities. The verbs (`shorten`, `resolve`, `inspect`, `delete`) became the operations.
+This actor breakdown comes directly from the [requirements document](https://github.com/sasadangelo/fasturl/blob/v0.1.0/docs/requirements.md) — before any code was written. The nouns in the job stories (`Link`, `ShortCode`, `TargetUrl`, `Inspection`, `Metrics`) became the domain entities. The verbs (`shorten`, `resolve`, `inspect`, `delete`) became the operations.
 
 ## From Requirements to Domain Entities
 
-Every requirement in FastURL can be traced to one of eight job stories documented in the [requirements document](https://github.com/sasadangelo/fasturl/blob/main/docs/requirements.md). Three of them are worth looking at closely because they drive the entire domain design.
+Every requirement in FastURL can be traced to one of eight job stories documented in the [requirements document](https://github.com/sasadangelo/fasturl/blob/v0.1.0/docs/requirements.md). Three of them are worth looking at closely because they drive the entire domain design.
 
 **JS-001** — *When I provide a valid target URL, I want a unique shortened URL with a random alphanumeric code.* This story introduces two domain concepts: a `Link` (the association between a short code and a target URL) and a `ShortCode` (a validated 7-character Base62 string). The story also establishes a business rule: the code must be unique and collision-resistant.
 
@@ -117,13 +117,17 @@ class LinkCreateRequest(BaseModel):
             raise ValueError("custom_code must contain only alphanumeric characters [a-zA-Z0-9]")
         return v
 
+    @field_validator("expires_at")
+    @classmethod
+    def normalize_expires_at_to_utc(cls, v: datetime | None) -> datetime | None:
+        if v is not None and v.tzinfo is not None:
+            return v.astimezone(UTC).replace(tzinfo=None)
+        return v
+
     @model_validator(mode="after")
     def validate_expires_at_future(self) -> LinkCreateRequest:
-        if self.expires_at is not None:
-            now = datetime.now(UTC).replace(tzinfo=None)
-            expires = self.expires_at.replace(tzinfo=None)
-            if expires <= now:
-                raise ValueError("expires_at -> Expiration date must be in the future")
+        if self.expires_at is not None and self.expires_at <= datetime.now(UTC).replace(tzinfo=None):
+            raise ValueError("expires_at -> Expiration date must be in the future")
         return self
 ```
 
@@ -131,6 +135,7 @@ Breaking down what each element enforces:
 
 - **`HttpUrl`** — Pydantic's built-in type rejects any URL that is not HTTP or HTTPS. No custom validator needed for the scheme.
 - **[`@field_validator`](https://docs.pydantic.dev/latest/concepts/validators/#field-validators)** — Enforces the Base62 alphabet rule: only `[a-zA-Z0-9]`. This is the `ShortCode` Value Object's constraint, expressed as a Pydantic field-level validator.
+- **`normalize_expires_at_to_utc`** — A second field validator that converts a timezone-aware `expires_at` to naive UTC, the convention used by every timestamp in the database. Without it, an offset such as `+02:00` would be dropped instead of converted, and PostgreSQL rejects aware datetimes for `TIMESTAMP WITHOUT TIME ZONE` columns.
 - **[`@model_validator(mode="after")`](https://docs.pydantic.dev/latest/concepts/validators/#model-validators)** — Runs after all fields are validated, so it can access `self.expires_at`. It rejects expiration dates in the past. This is a cross-field invariant that requires the full model context.
 
 ![Pydantic v2 Validation Workflow]({{ site.baseurl }}/assets/img/fasturl-pydantic-validation.png){:width="760" height="400" .responsive_img}
@@ -204,7 +209,7 @@ The `AppError` base class holds the `message`, `status_code`, and `details`. Sub
 
 ### Global Exception Handlers
 
-Three handlers registered in `main.py` [cover every failure path](https://fastapi.tiangolo.com/tutorial/handling-errors/):
+Three handlers, registered by `register_exception_handlers(app)` in `exceptions.py`, [cover every failure path](https://fastapi.tiangolo.com/tutorial/handling-errors/):
 
 ```python
 def register_exception_handlers(app: FastAPI) -> None:

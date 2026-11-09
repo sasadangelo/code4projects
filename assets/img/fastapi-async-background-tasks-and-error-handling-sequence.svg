@@ -55,34 +55,35 @@
 
   <!-- ── Step 1: POST /api/v1/links ── -->
   <line x1="80" y1="126" x2="232" y2="126" stroke="#1f2328" stroke-width="1.5" marker-end="url(#arr-dark)"/>
-  <rect x="88" y="112" width="136" height="18" rx="3" fill="#ffffff"/>
-  <text x="156" y="124" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" font-weight="700" fill="#1f2328">POST /api/v1/links</text>
+  <rect x="88" y="105" width="136" height="18" rx="3" fill="#ffffff"/>
+  <text x="156" y="117" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" font-weight="700" fill="#1f2328">POST /api/v1/links</text>
 
   <!-- ── Step 2: create_link() ── -->
   <line x1="240" y1="154" x2="392" y2="154" stroke="#0ea5e9" stroke-width="1.5" marker-end="url(#arr-teal)"/>
-  <rect x="248" y="140" width="136" height="18" rx="3" fill="#ffffff"/>
-  <text x="316" y="152" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#0ea5e9">await create_link()</text>
+  <rect x="248" y="133" width="136" height="18" rx="3" fill="#ffffff"/>
+  <text x="316" y="145" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#0ea5e9">await create_link()</text>
 
   <!-- ── Step 3: DB insert ── -->
   <rect x="392" y="168" width="16" height="36" rx="2" fill="#7c5cd8" opacity="0.3"/>
   <text x="418" y="182" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">INSERT INTO links</text>
   <text x="418" y="196" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">(async DB write)</text>
 
-  <!-- ── Step 4: LinkResponse returned ── -->
-  <line x1="392" y1="218" x2="248" y2="218" stroke="#7c5cd8" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-purple)"/>
-  <rect x="248" y="204" width="136" height="18" rx="3" fill="#ffffff"/>
-  <text x="316" y="216" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#7c5cd8">LinkResponse</text>
+  <!-- ── Step 4: InspectorService schedules the task ── -->
+  <line x1="408" y1="220" x2="540" y2="220" stroke="#3b82d4" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+  <rect x="408" y="199" width="132" height="18" rx="3" fill="#ffffff"/>
+  <text x="474" y="211" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#3b82d4">add_task(inspect_link)</text>
+  <text x="474" y="233" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="9" fill="#57606a">via InspectorService</text>
 
-  <!-- ── Step 5: add_task() ── -->
-  <line x1="240" y1="244" x2="540" y2="244" stroke="#3b82d4" stroke-width="1.5" marker-end="url(#arr-blue)"/>
-  <rect x="280" y="230" width="222" height="18" rx="3" fill="#ffffff"/>
-  <text x="391" y="242" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#3b82d4">background_tasks.add_task(inspect_link)</text>
+  <!-- ── Step 5: LinkResponse returned ── -->
+  <line x1="392" y1="258" x2="248" y2="258" stroke="#7c5cd8" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-purple)"/>
+  <rect x="248" y="237" width="136" height="18" rx="3" fill="#ffffff"/>
+  <text x="316" y="249" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#7c5cd8">LinkResponse</text>
 
   <!-- ── Step 6: 201 Created → Client ── -->
-  <rect x="220" y="258" width="40" height="46" rx="3" fill="#10b981" opacity="0.15"/>
-  <line x1="240" y1="280" x2="88" y2="280" stroke="#10b981" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arr-green)"/>
-  <rect x="88" y="266" width="148" height="18" rx="3" fill="#ffffff"/>
-  <text x="162" y="278" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" font-weight="700" fill="#10b981">201 Created  ← response sent</text>
+  <rect x="220" y="262" width="40" height="40" rx="3" fill="#10b981" opacity="0.15"/>
+  <line x1="240" y1="284" x2="88" y2="284" stroke="#10b981" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arr-green)"/>
+  <rect x="88" y="263" width="148" height="18" rx="3" fill="#ffffff"/>
+  <text x="162" y="275" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" font-weight="700" fill="#10b981">201 Created  ← response sent</text>
 
   <!-- divider: after response -->
   <line x1="30" y1="300" x2="730" y2="300" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
@@ -90,8 +91,8 @@
 
   <!-- ── Step 7: Starlette runs background task ── -->
   <line x1="548" y1="330" x2="675" y2="330" stroke="#3b82d4" stroke-width="1.5" marker-end="url(#arr-blue)"/>
-  <rect x="556" y="316" width="110" height="18" rx="3" fill="#ffffff"/>
-  <text x="611" y="328" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#3b82d4">await inspect_link()</text>
+  <rect x="556" y="309" width="110" height="18" rx="3" fill="#ffffff"/>
+  <text x="611" y="321" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#3b82d4">await inspect_link()</text>
 
   <!-- ── Step 8: inspect_link work ── -->
   <rect x="675" y="344" width="16" height="56" rx="2" fill="#10b981" opacity="0.3"/>

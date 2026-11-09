@@ -29,7 +29,7 @@ Three things have to work right in any production FastAPI application that does 
 - **Background tasks** must fire without delaying the HTTP response.
 - **Error handling** must produce a predictable, machine-readable envelope for every possible failure.
 
-This article covers all three, using FastURL as the concrete project.
+This article covers all three, using FastURL as the concrete project. All the code refers to FastURL [v0.1.0](https://github.com/sasadangelo/fasturl/tree/v0.1.0).
 
 You should read this article if:
 
@@ -75,29 +75,21 @@ In FastURL every route handler is `async def` because every one of them calls ei
 async def create_link(
     body: LinkCreateRequest,
     service: LinkServiceDep,
-    http_client: HTTPClientDep,
     background_tasks: BackgroundTasks,
 ) -> LinkResponse:
-    response: LinkResponse = await service.create_link(
+    return await service.create_link(
         target_url=str(body.target_url),
         custom_code=body.custom_code,
         expires_at=body.expires_at,
+        scheduler=background_tasks,
     )
-    background_tasks.add_task(
-        func=inspect_link,
-        code=response.code,
-        target_url=response.target_url,
-        http_client=http_client,
-        repository=service._repository,
-    )
-    return response
 ```
 
-`await service.create_link(...)` yields control to the event loop while the database insert is in flight. By the time the `return` statement executes, the link is persisted and the response is ready. The background inspection — which involves an outbound HTTP call to the target URL — is dispatched via `BackgroundTasks` and never blocks the response. More on that in the next section.
+`await service.create_link(...)` yields control to the event loop while the database insert is in flight. By the time the `return` statement executes, the link is persisted and the response is ready. The background inspection, which involves an outbound HTTP call to the target URL, is scheduled on `background_tasks` inside the service and never blocks the response. More on that in the next section.
 
 ### The shared `httpx.AsyncClient`
 
-The `http_client` parameter above comes from `app.state`. Creating a new `httpx.AsyncClient` per request is the most common mistake in async FastAPI code: each new client opens a fresh connection pool, establishes a TCP handshake, and discards both when the request ends. With any meaningful traffic, you get hundreds of redundant connections per second. The [httpx docs on connection pooling](https://www.python-httpx.org/advanced/connection-pools/) explain the mechanics in detail.
+The background inspection needs an HTTP client, and that client lives in `app.state`. Creating a new `httpx.AsyncClient` per request is the most common mistake in async FastAPI code: each new client opens a fresh connection pool, establishes a TCP handshake, and discards both when the request ends. With any meaningful traffic, you get hundreds of redundant connections per second. The [httpx docs on connection pooling](https://www.python-httpx.org/advanced/connection-pools/) explain the mechanics in detail.
 
 The right pattern is one shared client per application, created at startup and closed at shutdown. FastAPI's `lifespan` context manager is exactly the right place for it:
 
@@ -106,14 +98,15 @@ from contextlib import asynccontextmanager
 from collections.abc import AsyncIterator
 import httpx
 from fastapi import FastAPI
+from fasturl.core.config import settings
 
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     # --- Startup ---
     app.state.http_client = httpx.AsyncClient(
-        timeout=httpx.Timeout(10.0),
+        timeout=httpx.Timeout(settings.inspector.timeout_seconds),
         follow_redirects=True,
-        max_redirects=5,
+        max_redirects=settings.inspector.max_redirects,
         headers={"User-Agent": "FastURL-Inspector/0.1"},
     )
     yield
@@ -125,29 +118,35 @@ app = FastAPI(lifespan=lifespan)
 
 Breaking down the `httpx.AsyncClient` options:
 
-- `timeout=httpx.Timeout(10.0)` — caps the full request lifecycle (connect + read) at 10 seconds; without a timeout a hanging target URL would hold an open connection indefinitely
+- `timeout=httpx.Timeout(settings.inspector.timeout_seconds)` — caps every phase of the request (connect, read, write, pool) at 5 seconds by default, configurable in the `inspector` section of `config.yaml`; without a timeout a hanging target URL would hold an open connection indefinitely
 - `follow_redirects=True` — the inspector must reach the final destination to extract accurate metadata
-- `max_redirects=5` — prevents infinite redirect loops from consuming the client
+- `max_redirects=settings.inspector.max_redirects` — prevents redirect loops from consuming the client; the default is 3
 - `headers={"User-Agent": "..."}` — many servers return `403` for requests that look like anonymous bots; a descriptive `User-Agent` prevents that class of silent failure
 
-The client is retrieved inside a FastAPI dependency and injected into route handlers via `HTTPClientDep`:
+A FastAPI dependency retrieves the client, and the composition root injects it into the `InspectorService` that `LinkService` receives:
 
 ```python
-def _get_http_client(request: Request) -> httpx.AsyncClient:
+def get_http_client(request: Request) -> httpx.AsyncClient:
     return request.app.state.http_client
 
-HTTPClientDep: TypeAlias = Annotated[httpx.AsyncClient, Depends(_get_http_client)]
+HTTPClientDep: TypeAlias = Annotated[httpx.AsyncClient, Depends(dependency=get_http_client)]
+
+def _get_link_service(repository: LinkRepoDep, http_client: HTTPClientDep) -> LinkService:
+    inspector: InspectorService = InspectorService(http_client=http_client)
+    return LinkService(repository=repository, inspector=inspector)
 ```
+
+No router asks for the client. The [previous article]({{ site.baseurl }}/layered-architecture-with-fastapi-routers-services-and-repositories/) explains how FastAPI resolves this graph on every request.
 
 > One `httpx.AsyncClient` per application, opened in `lifespan`, closed on shutdown. Never create a client inside a route handler or a background task.
 
-The full implementation is in [main.py](https://github.com/sasadangelo/fasturl/blob/main/src/fasturl/main.py).
+The full implementation is in [main.py](https://github.com/sasadangelo/fasturl/blob/v0.1.0/src/fasturl/main.py).
 
 ### The shared database engine
 
-The same principle applies to the SQLAlchemy async engine. The engine owns the **connection pool** — the set of persistent database connections that are checked out per request and returned when the session closes. Creating a new engine per request would open a fresh pool, perform the SQLite handshake, and discard both at the end of the request, identical to the `httpx.AsyncClient` mistake. We first introduced SQLAlchemy's async session in the [database layer article]({{ site.baseurl }}/database-layer-with-sqlalchemy-in-a-layered-python-architecture/) — see that article for the full ORM setup. The [SQLAlchemy async docs](https://docs.sqlalchemy.org/en/20/orm/extensions/asyncio.html) cover engine and session lifecycle in depth.
+The same principle applies to the SQLAlchemy async engine. The engine owns the **connection pool** — the set of persistent database connections that are checked out per request and returned when the session closes. Creating a new engine per request would open a fresh pool, perform the database handshake, and discard both at the end of the request, identical to the `httpx.AsyncClient` mistake. We first introduced SQLAlchemy's async session in the [database layer article]({{ site.baseurl }}/database-layer-with-sqlalchemy-in-a-layered-python-architecture/) — see that article for the full ORM setup. The [SQLAlchemy async docs](https://docs.sqlalchemy.org/en/20/orm/extensions/asyncio.html) cover engine and session lifecycle in depth.
 
-The engine and session factory are created once at startup and disposed at shutdown inside two helpers, `init_db()` and `close_db()`, defined in [database.py](https://github.com/sasadangelo/fasturl/blob/main/src/fasturl/core/database.py):
+The engine and session factory are created once at startup and disposed at shutdown inside two helpers, `init_db()` and `close_db()`, defined in [database.py](https://github.com/sasadangelo/fasturl/blob/v0.1.0/src/fasturl/core/database.py):
 
 ```python
 # database.py
@@ -163,8 +162,28 @@ _session_factory: async_sessionmaker[AsyncSession] | None = None
 
 async def init_db() -> None:
     global _engine, _session_factory
-    _engine = create_async_engine(url=settings.database.url, echo=settings.database.echo)
+
+    engine_kwargs: dict[str, Any] = {"echo": settings.database.echo}
+
+    postgresql = settings.database.postgresql
+    sqlite = settings.database.sqlite
+    if postgresql is not None:
+        engine_kwargs.update(
+            {
+                "pool_size": postgresql.pool_size,
+                "max_overflow": postgresql.max_overflow,
+                "pool_timeout": postgresql.pool_timeout,
+                "pool_recycle": postgresql.pool_recycle,
+                "pool_pre_ping": True,
+            }
+        )
+    elif sqlite is not None:
+        Path(sqlite.path).parent.mkdir(parents=True, exist_ok=True)
+
+    _engine = create_async_engine(url=settings.database.url, **engine_kwargs)
     _session_factory = async_sessionmaker(bind=_engine, class_=AsyncSession, expire_on_commit=False)
+
+    # Create all tables if they do not exist yet (idempotent)
     async with _engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
 
@@ -175,7 +194,14 @@ async def close_db() -> None:
         _engine = None
 ```
 
-Both are called from the `lifespan` context manager in [main.py](https://github.com/sasadangelo/fasturl/blob/main/src/fasturl/main.py):
+FastURL runs on SQLite by default and on PostgreSQL when the `postgresql` section of `config.yaml` is set. Only PostgreSQL gets explicit pool settings:
+
+- `pool_size` and `max_overflow` — how many connections each worker keeps open, and how many extra ones it may open under load (10 and 0 by default)
+- `pool_timeout` — how many seconds a request waits for a free connection before failing (30)
+- `pool_recycle` — replaces connections older than 30 minutes, before the server or a firewall closes them silently
+- `pool_pre_ping=True` — tests each connection with a lightweight query before handing it out, so a dropped connection is replaced instead of failing the request
+
+Both functions are called from the `lifespan` context manager in [main.py](https://github.com/sasadangelo/fasturl/blob/v0.1.0/src/fasturl/main.py):
 
 ```python
 # main.py
@@ -188,9 +214,19 @@ The per-request session is a separate concern. A session is **not** safe to shar
 
 ```python
 async def get_db() -> AsyncIterator[AsyncSession]:
+    if _session_factory is None:
+        raise RuntimeError("Database not initialised — call init_db() at startup.")
     async with _session_factory() as session:
-        yield session
+        try:
+            yield session
+        except Exception:
+            await session.rollback()
+            raise
+        finally:
+            await session.close()
 ```
+
+If the request raises an exception, the session rolls back any uncommitted change before closing.
 
 Calling `_session_factory()` is cheap — it checks out a connection from the pool that already exists in the engine; it does not open a new one. The pool is reused; only the session object is fresh.
 
@@ -205,7 +241,7 @@ This creates an important asymmetry between the two shared resources:
 
 > One `AsyncEngine` per application, opened in `lifespan`, disposed on shutdown. One `AsyncSession` per request, opened by `get_db`, closed after the request. Never share a session across requests.
 
-The full implementation is in [database.py](https://github.com/sasadangelo/fasturl/blob/main/src/fasturl/core/database.py).
+The full implementation is in [database.py](https://github.com/sasadangelo/fasturl/blob/v0.1.0/src/fasturl/core/database.py).
 
 ![Application Lifespan — Shared Resource Lifecycle]({{ site.baseurl }}/assets/img/fastapi-async-background-tasks-and-error-handling-lifespan.svg){:width="760" height="420" .responsive_img}
 
@@ -215,26 +251,40 @@ When a new link is created, FastURL must immediately return a `201 Created` resp
 
 FastAPI's `BackgroundTasks` solves this without any external infrastructure. A `BackgroundTask` is a coroutine (or a plain function) that FastAPI runs after the response has been sent to the client. The route handler returns immediately; the background work executes in the same event loop, after Starlette finishes streaming the response bytes.
 
+In FastURL the task is scheduled by `InspectorService`, the collaborator that `LinkService` receives in its constructor. After persisting the link, `LinkService.create_link` calls `self._inspector.dispatch_inspection(scheduler=scheduler, ...)`, passing along the `BackgroundTasks` object it received from the router:
+
 ```python
-background_tasks.add_task(
-    func=inspect_link,
-    code=response.code,
-    target_url=response.target_url,
-    http_client=http_client,
-    repository=service._repository,
-)
+class InspectorService:
+    def __init__(self, http_client: httpx.AsyncClient) -> None:
+        self._http_client = http_client
+
+    def dispatch_inspection(
+        self,
+        scheduler: BackgroundTaskScheduler,
+        code: str,
+        target_url: str,
+        repository: LinkRepository,
+    ) -> None:
+        scheduler.add_task(
+            func=inspect_link,
+            code=code,
+            target_url=target_url,
+            http_client=self._http_client,
+            repository=repository,
+        )
 ```
 
 Breaking down the arguments:
 
+- `scheduler: BackgroundTaskScheduler` — a `Protocol` with a single `add_task(func, *args, **kwargs)` method. FastAPI's `BackgroundTasks` satisfies it, so the service layer schedules work without importing FastAPI
 - `func=inspect_link` — the coroutine function to run; FastAPI detects `async def` and awaits it automatically
-- `code` and `target_url` — positional arguments forwarded to `inspect_link`
-- `http_client` — the shared `httpx.AsyncClient` from `app.state`; the background task must reuse it, not create its own
-- `repository=service._repository` — the `LinkRepository` instance, already bound to the current database session via dependency injection
+- `code` and `target_url` — keyword arguments forwarded to `inspect_link`
+- `http_client=self._http_client` — the shared `httpx.AsyncClient` from `app.state`; the background task must reuse it, not create its own
+- `repository` — the `LinkRepository` that `LinkService` received, already bound to the current database session. FastAPI closes that session only after the background tasks have finished, so the task can still use it
 
 ### What `inspect_link` does
 
-`inspect_link` is a pure async function in [inspector_service.py](https://github.com/sasadangelo/fasturl/blob/main/src/fasturl/services/inspector_service.py). It has zero FastAPI imports — it knows nothing about HTTP requests, response models, or routing. This is the key constraint that keeps the service layer testable:
+`inspect_link` is a pure async function in [inspector_service.py](https://github.com/sasadangelo/fasturl/blob/v0.1.0/src/fasturl/services/inspector_service.py). It has zero FastAPI imports — it knows nothing about HTTP requests, response models, or routing. This is the key constraint that keeps the service layer testable:
 
 ```python
 async def inspect_link(
@@ -322,7 +372,7 @@ A client that calls a production API must be able to branch on the response with
 - `error` — a machine-readable short code; clients branch on this field
 - `details` — a list of human-readable, field-level explanations; used for logging and developer messages
 
-Three global handlers registered in `main.py` cover every failure path.
+Three global handlers cover every failure path. They are registered by `register_exception_handlers(app)` in `exceptions.py`, which `main.py` calls when it builds the application.
 
 ### Handler 1: Pydantic validation failures (400)
 
@@ -346,7 +396,7 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 
 ### Handler 2: Domain exceptions (4xx)
 
-Domain exceptions are pure Python classes with zero FastAPI imports. They carry the HTTP status code and error payload, but they know nothing about `JSONResponse` or routing. The full set of exceptions lives in [exceptions.py](https://github.com/sasadangelo/fasturl/blob/main/src/fasturl/core/exceptions.py):
+Domain exceptions are pure Python classes with zero FastAPI imports. They carry the HTTP status code and error payload, but they know nothing about `JSONResponse` or routing. The full set of exceptions lives in [exceptions.py](https://github.com/sasadangelo/fasturl/blob/v0.1.0/src/fasturl/core/exceptions.py):
 
 ```python
 class AppError(Exception):
@@ -415,7 +465,7 @@ The traceback goes to the server log — never to the client. Leaking stack trac
 | `AppError` | Domain rule violation | 404 / 409 / 410 |
 | `Exception` | Any unhandled error | 500 |
 
-The full registration of all three handlers is in [exceptions.py](https://github.com/sasadangelo/fasturl/blob/main/src/fasturl/core/exceptions.py).
+The full registration of all three handlers is in [exceptions.py](https://github.com/sasadangelo/fasturl/blob/v0.1.0/src/fasturl/core/exceptions.py).
 
 ## Conclusion
 
@@ -424,7 +474,7 @@ In this article we covered:
 - Why every I/O-bound route handler must be `async def` and why mixing `async def` with blocking libraries stalls the entire event loop.
 - How to create a single shared `httpx.AsyncClient` in the FastAPI `lifespan` context and inject it via a dependency — and why creating a client per request destroys connection pooling.
 - How the same principle applies to the SQLAlchemy `AsyncEngine`: one engine per application, opened in `lifespan`, disposed on shutdown — with a fresh `AsyncSession` per request opened by the `get_db` dependency.
-- How `BackgroundTasks` runs `inspect_link` after the `201 Created` response is sent, keeping the HTTP cycle fast while the background work happens asynchronously in the same process.
+- How `BackgroundTasks` runs `inspect_link` after the `201 Created` response is sent, keeping the HTTP cycle fast while the background work happens asynchronously in the same process, and how `InspectorService` schedules it through a `BackgroundTaskScheduler` protocol so the service layer never imports FastAPI.
 - When `BackgroundTasks` is the right tool and when an external broker is necessary — durability, retry policies, and scale are the deciding factors.
 - How three global exception handlers produce a single `{success, error, details}` envelope for Pydantic validation failures, domain exceptions, and unhandled errors — with no stack traces leaking to clients.
 
