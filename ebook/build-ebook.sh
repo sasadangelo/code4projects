@@ -94,7 +94,7 @@ strip_post() {
 import os, re, shutil, subprocess, sys, unicodedata
 
 src, dst, repo_root, img_dir = sys.argv[1:5]
-SITE_URL = 'https://www.code4projects.org'
+SITE_URL = 'https://code4projects.org'
 
 with open(src, encoding='utf-8') as f:
     txt = f.read()

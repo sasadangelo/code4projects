@@ -1253,8 +1253,8 @@
     instagram: false
     facebook: false
 - id: testing-fastapi-in-practice
-  title: "Testing FastAPI in Practice: Async Tests, Dependency Overrides, Coverage, and CI"
-  status: planned
+  title: "Testing FastAPI in Practice: Unit and Integration Tests for a Real Feature"
+  status: draft
   category: Programming
   series: modern-python-application
   slug: testing-fastapi-in-practice
