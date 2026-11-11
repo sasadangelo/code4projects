@@ -8,12 +8,15 @@ date: 2026-10-20
 author: sasadangelo
 slug: testing-fastapi-in-practice
 image: /assets/img/testing-fastapi-in-practice-hero.svg
-excerpt: "A practical walk-through of unit and integration tests for the core feature of a FastAPI app: happy path first, then one test per rule, with mocks, AsyncClient, dependency overrides, and a fake network."
+excerpt: "Unit and integration tests for a real FastAPI feature: main path first, then one test per rule, with AsyncMock, AsyncClient, and dependency overrides."
 categories:
   - "Programming"
 tags:
   - programming
   - python
+  - fastapi
+  - testing
+  - pytest
 ---
 
 ![Testing FastAPI in Practice: Unit and Integration Tests for a Real Feature]({{ site.baseurl }}/assets/img/testing-fastapi-in-practice-hero.svg){:width="760" height="400" .responsive_img}
@@ -40,7 +43,13 @@ curl -X POST http://localhost:8000/api/v1/links \
   -d '{"target_url": "https://example.com/article"}'
 ```
 
-The API answers `201 Created` with a seven-character code, for example `aB3x9zK`. From then on, anyone who opens `http://localhost:8000/aB3x9zK` receives a `307` redirect to the target URL, and FastURL counts the click in a background task. A second background task, scheduled at creation, downloads the target page and stores its title.
+Breaking down the flags:
+
+- `-X POST` — the HTTP method; creating a resource is a `POST` on the collection
+- `-H "Content-Type: application/json"` — tells FastAPI that the body is JSON
+- `-d '{...}'` — the request body, here with only the required `target_url`
+
+The API answers `201 Created` with a seven-character code, for example `aB3x9zK`. From then on, anyone who opens `http://localhost:8000/aB3x9zK` receives a `307` redirect to the target URL, and FastURL counts the click in a [background task]({{ site.baseurl }}/fastapi-async-background-tasks-and-error-handling/). A second background task, scheduled at creation, downloads the target page and stores its title.
 
 Both requests go through the same layers:
 
@@ -63,9 +72,11 @@ The rules that can make the requests fail are spread across those layers, and wh
 | An inactive or unknown link does not redirect | `LinkService` | `404 LINK_NOT_FOUND` |
 | An expired link does not redirect | `LinkService` | `410 LINK_EXPIRED` |
 
-The service never deals with HTTP. When a rule is violated it raises a domain exception, such as `AliasAlreadyTakenError`, which carries its status code, and the exception handler turns it into FastURL's standard error envelope.
+The service never deals with HTTP. When a request breaks a rule, the service raises a domain exception, such as `AliasAlreadyTakenError`, which carries its status code, and the exception handler turns it into FastURL's [standard error envelope]({{ site.baseurl }}/fastapi-async-background-tasks-and-error-handling/).
 
 This table is the test plan. The rules in the service can be tested in isolation, with unit tests. The rules in the schema exist only when a request goes through FastAPI, so only integration tests can see them. And the last column is the contract with the client, which only integration tests can check.
+
+![Where each rule lives decides where it can be tested]({{ site.baseurl }}/assets/img/testing-fastapi-in-practice-rules-by-layer.svg){:width="760" height="440" loading="lazy" .responsive_img}
 
 ## Unit Tests for the Service
 
@@ -210,7 +221,9 @@ Together with the tests for listing, deleting, and re-inspecting links, the serv
 uv run pytest tests/unit -q
 ```
 
-> 47 passed in 0.05s
+```text
+47 passed in 0.05s
+```
 
 What these tests do not prove is equally important. They do not prove that `POST /api/v1/links` calls the service, that the repository finds a link by its code in a real table, or that `LinkExpiredError` becomes a `410`. A mistake in the exception handler would leave every unit test green.
 
@@ -222,7 +235,7 @@ An integration test sends a real HTTP request to the real application and checks
 
 ### Talking to the app without a server
 
-FastAPI applications speak [ASGI](https://asgi.readthedocs.io/), the interface between a Python web application and the server that runs it. `httpx` can play the role of that server inside the test process, through `ASGITransport`. These three lines are the core of FastURL's `api_client` fixture, which we will see in full in a moment:
+FastAPI applications speak [ASGI](https://asgi.readthedocs.io/), the interface between a Python web application and the server that runs it. `httpx` can play the role of that server inside the test process, through [`ASGITransport`](https://www.python-httpx.org/advanced/transports/). These three lines are the core of FastURL's `api_client` fixture, which we will see in full in a moment:
 
 ```python
 transport: httpx.ASGITransport = httpx.ASGITransport(app=app)
@@ -232,7 +245,7 @@ async with httpx.AsyncClient(transport=transport, base_url="http://test") as cli
 
 `ASGITransport` replaces the network layer of the client: instead of opening a socket, it calls `app` directly, as a Python function. The fixture does not call any endpoint. It yields the client, and each test sends the request it needs, for example `await api_client.post(url="/api/v1/links", json=...)`.
 
-No port is opened and no socket is created. The request goes through the same middleware, validation, routers, dependencies, and exception handlers as in production, but the whole round trip is a function call. The `base_url` is a placeholder: the host name is never resolved.
+The client opens no port and creates no socket. The request goes through the same middleware, validation, routers, dependencies, and exception handlers as in production, but the whole round trip is a function call. The `base_url` is a placeholder: the host name is never resolved.
 
 FastAPI also offers `TestClient`, which does the same job with a synchronous interface. FastURL uses `AsyncClient` because its tests also `await` the database session directly, and an async test can do both on the same event loop. [pytest-asyncio](https://pytest-asyncio.readthedocs.io/) runs the `async def` tests, and one line in `pyproject.toml` enables it for every test without a decorator:
 
@@ -245,7 +258,7 @@ asyncio_mode = "auto"
 
 In production, every request receives a database session through `get_db`, a FastAPI dependency. In a test we want a different session: one bound to a fresh, empty database that the test can also use to insert data.
 
-FastAPI has a dedicated mechanism for this, the `app.dependency_overrides` dictionary. Before resolving a `Depends(...)`, FastAPI checks whether the dictionary maps that dependency to a replacement, and calls the replacement instead. FastURL wraps the override in a fixture, so it is set before the test and removed after it:
+FastAPI has a dedicated mechanism for this, the [`app.dependency_overrides`](https://fastapi.tiangolo.com/advanced/testing-dependencies/) dictionary. Before resolving a `Depends(...)`, FastAPI checks whether the dictionary maps that dependency to a replacement, and calls the replacement instead. FastURL wraps the override in a fixture, so it is set before the test and removed after it:
 
 ```python
 @pytest.fixture()
@@ -269,13 +282,15 @@ Three details are worth noticing:
 - The dictionary key is the original function object, `get_db`, not its name. FastAPI matches the function itself.
 - `app` is a module-level object shared by every test in the run. The `clear()` after `yield` runs even when the test fails, so an override never leaks into the next test.
 
+![The api_client fixture: ASGITransport and dependency overrides]({{ site.baseurl }}/assets/img/testing-fastapi-in-practice-integration-harness.svg){:width="760" height="450" loading="lazy" .responsive_img}
+
 ### A fake network for the inspector
 
 The second override, `get_http_client`, exists because of a mistake I made. When FastURL creates a link, it schedules the background inspection that downloads the target page. In the first version of `api_client`, that task received a plain `httpx.AsyncClient()`, with full network access. Every integration test that created a link was quietly calling `https://example.com`.
 
 The `--durations` flag gave it away: the slowest integration tests were all tests that create a link, at more than 100 ms each, while a redirect test took a few milliseconds. `ASGITransport` waits for background tasks before it returns the response, so each of those tests waited for a real round trip to a website outside the project. The suite was slower than it needed to be, it would fail on a machine without network access, and no test could check what the inspection stored, because the answer depended on someone else's web page.
 
-The fix is the `http_client` fixture shown in the [previous article]({{ site.baseurl }}/testing-python-applications-with-pytest-patterns-for-real-code/): a real `httpx.AsyncClient` whose `MockTransport` answers every request with a small HTML page, `FAKE_PAGE`. The inspector code did not change. It still receives a real `httpx.AsyncClient`, but the client's transport answers every request from memory. The difference in the numbers:
+The fix is the `http_client` fixture shown in the [previous article]({{ site.baseurl }}/testing-python-applications-with-pytest-patterns-for-real-code/): a real `httpx.AsyncClient` whose [`MockTransport`](https://www.python-httpx.org/advanced/transports/#mock-transports) answers every request with a small HTML page, `FAKE_PAGE`. The inspector code did not change. It still receives a real `httpx.AsyncClient`, but the client's transport answers every request from memory. The difference in the numbers:
 
 | | **Before** | **After** |
 |---|---|---|
@@ -431,7 +446,7 @@ For the feature in this article, that gives the following split:
 
 The previous article described a third level: end-to-end tests, which talk to a running application from the outside, exactly as a real client would. FastURL does not have them, and it is a deliberate choice.
 
-An integration test like `test_active_link_returns_307` already exercises an HTTP request, every middleware, request validation, routing, dependency injection, the service, the repository, real SQL, and the response a client receives. The only things between this test and a real client are the uvicorn server process and the network socket. For an API with no authentication, no frontend, and no other service to talk to, an end-to-end test would send the same requests, receive the same responses, and take ten times longer. In FastURL, the integration suite *is* the end-to-end suite.
+An integration test like `test_active_link_returns_307` already exercises an HTTP request, every middleware, request validation, routing, dependency injection, the service, the repository, real SQL, and the response a client receives. The only things between this test and a real client are the uvicorn server process and the network socket. For an API with no authentication, no frontend, and no other service to talk to, an end-to-end test would send the same requests, receive the same responses, and take longer, because each test would pay for a real server and a real socket. In FastURL, the integration suite *is* the end-to-end suite.
 
 What the in-process client skips is small but real, and the coverage report shows it:
 
@@ -461,7 +476,7 @@ In this article we covered:
 - Integration tests for the main path and for every error a client can receive, including the schema rules that unit tests cannot see.
 - Why FastURL's integration suite doubles as its end-to-end suite, what the in-process client does not see, and which changes would justify a separate end-to-end level.
 
-This article closes the FastURL implementation arc. The project now has a domain model, a layered architecture, async I/O, background inspection, a consistent error contract, and a test suite that runs offline in a third of a second, on two database engines, behind a coverage gate.
+This article closes the FastURL implementation arc. The project now has a domain model, a layered architecture, async I/O, background inspection, a consistent error contract, and a test suite that runs offline in a third of a second, on SQLite or PostgreSQL, behind the 85% [coverage gate]({{ site.baseurl }}/testing-python-applications-with-pytest-patterns-for-real-code/).
 
 The [next article]({{ site.baseurl }}/api-design-requests-and-responses/) returns to API design, with the decisions that the first FastURL version left open: when to use path, query, body, or header parameters, how to paginate a collection, and how to version an API without breaking its clients.
 

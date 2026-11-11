@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 Z" fill="#57606a"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="760" height="440" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="380" y="34" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="16" font-weight="700" fill="#1f2328">Where Each Rule Lives Decides Where It Can Be Tested</text>
+  <text x="380" y="54" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="12" fill="#57606a">The layers of POST /api/v1/links and GET /{code}, with the rules each one enforces</text>
+
+  <!-- Request direction -->
+  <line x1="24" y1="80" x2="24" y2="374" stroke="#57606a" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="18" y="228" text-anchor="middle" transform="rotate(-90 18 228)" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#57606a">request</text>
+
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif">
+    <!-- 1 Schema -->
+    <rect x="40" y="76" width="500" height="58" rx="8" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.2"/>
+    <text x="54" y="99" font-size="13" font-weight="700" fill="#1f2328">Schema</text>
+    <text x="54" y="117" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#0f766e">api/schemas/</text>
+    <text x="200" y="96" font-size="11" fill="#1f2328">• target URL is HTTP or HTTPS</text>
+    <text x="200" y="111" font-size="11" fill="#1f2328">• alias uses only letters, digits, <tspan font-family="ui-monospace,Menlo,monospace">_ -</tspan></text>
+    <text x="200" y="126" font-size="11" fill="#1f2328">• expiry date is in the future</text>
+    <rect x="430" y="94" width="98" height="20" rx="10" fill="#d97706"/>
+    <text x="479" y="108" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">400</text>
+
+    <!-- 2 Controller -->
+    <rect x="40" y="142" width="500" height="44" rx="8" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.2"/>
+    <text x="54" y="162" font-size="13" font-weight="700" fill="#1f2328">Controller</text>
+    <text x="54" y="178" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#57606a">api/routers/</text>
+    <text x="200" y="168" font-size="11" fill="#57606a">calls the service, chooses 201 / 307 — no business logic</text>
+
+    <!-- 3 Service -->
+    <rect x="40" y="194" width="500" height="88" rx="8" fill="#dbeafe" stroke="#3b82d4" stroke-width="1.6"/>
+    <text x="54" y="217" font-size="13" font-weight="700" fill="#1f2328">Service</text>
+    <text x="54" y="235" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#2563eb">LinkService</text>
+    <text x="200" y="213" font-size="11" fill="#1f2328">• target must not point back to FastURL</text>
+    <text x="200" y="229" font-size="11" fill="#1f2328">• custom alias must be unique</text>
+    <text x="200" y="245" font-size="11" fill="#1f2328">• colliding generated code is regenerated</text>
+    <text x="200" y="261" font-size="11" fill="#1f2328">• inactive or unknown link does not redirect</text>
+    <text x="200" y="277" font-size="11" fill="#1f2328">• expired link does not redirect</text>
+    <rect x="456" y="204" width="72" height="18" rx="9" fill="#d97706"/>
+    <text x="492" y="217" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">400</text>
+    <rect x="456" y="227" width="72" height="18" rx="9" fill="#ef4444"/>
+    <text x="492" y="240" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">409</text>
+    <rect x="456" y="252" width="72" height="18" rx="9" fill="#ef4444"/>
+    <text x="492" y="265" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">404 · 410</text>
+
+    <!-- 4 Repository -->
+    <rect x="40" y="290" width="500" height="40" rx="8" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.2"/>
+    <text x="54" y="309" font-size="13" font-weight="700" fill="#1f2328">Repository</text>
+    <text x="54" y="323" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#57606a">LinkRepository</text>
+    <text x="200" y="314" font-size="11" fill="#57606a">reads and writes the <tspan font-family="ui-monospace,Menlo,monospace">links</tspan> table</text>
+    <rect x="410" y="300" width="118" height="20" rx="10" fill="#ffffff" stroke="#7c5cd8" stroke-width="1.2" stroke-dasharray="4 3"/>
+    <text x="469" y="314" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" font-weight="700" fill="#6d28d9">AsyncMock in unit</text>
+
+    <!-- 5 Exception handler -->
+    <rect x="40" y="338" width="500" height="40" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.2"/>
+    <text x="54" y="357" font-size="13" font-weight="700" fill="#1f2328">Exception handler</text>
+    <text x="54" y="371" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#b45309">main.py</text>
+    <text x="200" y="362" font-size="11" fill="#57606a">domain exception → standard error envelope</text>
+
+    <!-- Unit bracket: Service only -->
+    <path d="M556 196 h8 v84 h-8" fill="none" stroke="#3b82d4" stroke-width="2"/>
+    <text x="574" y="228" font-size="13" font-weight="700" fill="#2563eb">Unit tests</text>
+    <text x="574" y="246" font-size="11" fill="#57606a">service in isolation</text>
+    <text x="574" y="262" font-size="11" fill="#57606a">47 tests · 0.05 s</text>
+
+    <!-- Integration bracket: every layer -->
+    <path d="M692 78 h8 v298 h-8" fill="none" stroke="#0d9488" stroke-width="2"/>
+    <text x="718" y="227" text-anchor="middle" transform="rotate(90 718 227)" font-size="13" font-weight="700" fill="#0f766e">Integration tests · 33 tests · 0.22 s</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="380" y="414" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="12" fill="#57606a">Schema rules exist only when a request goes through FastAPI — only integration tests can see them.</text>
+</svg>

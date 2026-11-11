@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1a44"/>
+      <stop offset="0.55" stop-color="#0d2f78"/>
+      <stop offset="1" stop-color="#0a1a44"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="core" cx="0.4" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="0.6" stop-color="#0d9488"/>
+      <stop offset="1" stop-color="#064e48"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16346f"/>
+      <stop offset="1" stop-color="#0c2154"/>
+    </linearGradient>
+    <linearGradient id="flowR" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="flowL" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="tip" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="760" height="400" fill="url(#bg)"/>
+  <rect width="760" height="400" fill="url(#halo)"/>
+
+  <!-- Circuit decoration -->
+  <g stroke="#3b82f6" stroke-opacity="0.18" stroke-width="1" fill="none">
+    <path d="M0 110 H40 L60 90 H130"/>
+    <path d="M760 110 H720 L700 90 H630"/>
+    <path d="M0 290 H30 L50 270 H90"/>
+    <path d="M760 290 H730 L710 270 H670"/>
+  </g>
+  <g fill="#60a5fa" fill-opacity="0.5">
+    <circle cx="130" cy="90" r="2"/><circle cx="630" cy="90" r="2"/>
+    <circle cx="90" cy="270" r="2"/><circle cx="670" cy="270" r="2"/>
+  </g>
+
+  <!-- Title -->
+  <text x="380" y="50" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="27" font-weight="800" fill="#ffffff" filter="url(#softglow)">Testing FastAPI in Practice</text>
+  <text x="380" y="78" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="15" fill="#bfd6ff">Unit and Integration Tests for a Real Feature</text>
+
+  <!-- ── Left: unit test ── -->
+  <rect x="36" y="112" width="208" height="132" rx="10" fill="none" stroke="#3b82f6" stroke-width="2" filter="url(#glow)"/>
+  <rect x="36" y="112" width="208" height="132" rx="10" fill="url(#panel)" stroke="#3b82f6" stroke-width="1.5"/>
+  <circle cx="50" cy="125" r="3.5" fill="#ef4444"/><circle cx="62" cy="125" r="3.5" fill="#f59e0b"/><circle cx="74" cy="125" r="3.5" fill="#10b981"/>
+  <text x="236" y="128" text-anchor="end" font-family="ui-monospace,Menlo,monospace" font-size="9" fill="#93c5fd">test_link_service.py</text>
+  <g font-family="ui-monospace,Menlo,monospace" font-size="10">
+    <text x="48" y="150" fill="#c4b5fd">mock_repository</text>
+    <text x="140" y="150" fill="#e0ecff">: AsyncMock</text>
+    <text x="48" y="168" fill="#e0ecff">repo.get_by_code.return_value</text>
+    <text x="66" y="182" fill="#e0ecff">= _make_link(...)</text>
+    <text x="48" y="200" fill="#e0ecff">link = await service.resolve(</text>
+    <text x="66" y="214" fill="#e0ecff">"abcdefg")</text>
+    <text x="48" y="232" fill="#86efac">assert link.is_active</text>
+  </g>
+
+  <!-- Arrow left → center -->
+  <line x1="246" y1="178" x2="306" y2="178" stroke="url(#flowR)" stroke-width="3" marker-end="url(#tip)" filter="url(#softglow)"/>
+  <rect x="248" y="148" width="58" height="20" rx="10" fill="#0c2154" stroke="#38bdf8" stroke-opacity="0.7"/>
+  <text x="277" y="162" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#bae6fd">service</text>
+
+  <!-- ── Center: FastURL app ── -->
+  <circle cx="380" cy="178" r="70" fill="#0d9488" fill-opacity="0.14"/>
+  <circle cx="380" cy="178" r="58" fill="none" stroke="#2dd4bf" stroke-width="1.5" stroke-dasharray="3 6" stroke-opacity="0.8"/>
+  <circle cx="380" cy="178" r="46" fill="url(#core)" stroke="#5eead4" stroke-width="2" filter="url(#glow)"/>
+  <path d="M384 146 L366 180 H380 L374 208 L396 170 H382 Z" fill="#ffffff" fill-opacity="0.95"/>
+  <text x="380" y="262" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#99f6e4">POST /api/v1/links · GET /{code}</text>
+
+  <!-- Arrow right → center -->
+  <line x1="514" y1="178" x2="454" y2="178" stroke="url(#flowL)" stroke-width="3" marker-end="url(#tip)" filter="url(#softglow)"/>
+  <rect x="454" y="148" width="58" height="20" rx="10" fill="#0c2154" stroke="#38bdf8" stroke-opacity="0.7"/>
+  <text x="483" y="162" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" fill="#bae6fd">HTTP</text>
+
+  <!-- ── Right: integration test ── -->
+  <rect x="516" y="112" width="208" height="132" rx="10" fill="none" stroke="#3b82f6" stroke-width="2" filter="url(#glow)"/>
+  <rect x="516" y="112" width="208" height="132" rx="10" fill="url(#panel)" stroke="#3b82f6" stroke-width="1.5"/>
+  <circle cx="530" cy="125" r="3.5" fill="#ef4444"/><circle cx="542" cy="125" r="3.5" fill="#f59e0b"/><circle cx="554" cy="125" r="3.5" fill="#10b981"/>
+  <text x="716" y="128" text-anchor="end" font-family="ui-monospace,Menlo,monospace" font-size="9" fill="#93c5fd">test_links_api.py</text>
+  <g font-family="ui-monospace,Menlo,monospace" font-size="10">
+    <text x="528" y="150" fill="#c4b5fd">api_client</text>
+    <text x="590" y="150" fill="#e0ecff">: AsyncClient</text>
+    <text x="528" y="168" fill="#e0ecff">r = await api_client.post(</text>
+    <text x="546" y="182" fill="#e0ecff">"/api/v1/links", json=...)</text>
+    <text x="528" y="200" fill="#86efac">assert r.status_code == 201</text>
+  </g>
+  <rect x="528" y="210" width="184" height="24" rx="5" fill="#14532d" fill-opacity="0.6" stroke="#22c55e" stroke-width="1.2" filter="url(#softglow)"/>
+  <text x="620" y="226" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="11" font-weight="700" fill="#4ade80">80 passed in 0.30s</text>
+
+  <!-- Step labels -->
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">
+    <text x="140" y="270">Unit Tests</text>
+    <text x="620" y="270">Integration Tests</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="60" y1="292" x2="700" y2="292" stroke="#3b82f6" stroke-opacity="0.35"/>
+  <line x1="285" y1="306" x2="285" y2="380" stroke="#3b82f6" stroke-opacity="0.3"/>
+  <line x1="475" y1="306" x2="475" y2="380" stroke="#3b82f6" stroke-opacity="0.3"/>
+
+  <!-- ── Bottom icons ── -->
+  <!-- AsyncMock: stand-in object -->
+  <g transform="translate(190 330)" filter="url(#softglow)">
+    <rect x="-18" y="-18" width="26" height="26" rx="4" fill="none" stroke="#c4b5fd" stroke-width="2.5" stroke-dasharray="4 3"/>
+    <rect x="-8" y="-8" width="26" height="26" rx="4" fill="#0c2154" stroke="#c4b5fd" stroke-width="3"/>
+    <path d="M-1 5 h12 M-1 11 h8" stroke="#c4b5fd" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <!-- dependency_overrides: swap arrows -->
+  <g transform="translate(380 330)" fill="none" stroke="#fbbf24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#softglow)">
+    <path d="M-20 -8 H16 M8 -16 L16 -8 L8 0"/>
+    <path d="M20 10 H-16 M-8 2 L-16 10 L-8 18"/>
+  </g>
+  <!-- MockTransport: globe with slash -->
+  <g transform="translate(570 330)" fill="none" stroke="#38bdf8" stroke-width="2.5" filter="url(#softglow)">
+    <circle cx="0" cy="0" r="18"/>
+    <ellipse cx="0" cy="0" rx="8" ry="18"/>
+    <line x1="-18" y1="0" x2="18" y2="0"/>
+    <line x1="-20" y1="20" x2="20" y2="-20" stroke="#f87171" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+
+  <g font-family="ui-monospace,Menlo,monospace" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">
+    <text x="190" y="378">AsyncMock</text>
+    <text x="380" y="378">dependency_overrides</text>
+    <text x="570" y="378">MockTransport</text>
+  </g>
+</svg>

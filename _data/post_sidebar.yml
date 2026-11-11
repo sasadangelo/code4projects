@@ -31,6 +31,8 @@
     link: /fastapi-async-background-tasks-and-error-handling/
   - name: "Part 15: Testing Python Applications with pytest: Patterns for Real Code"
     link: /testing-python-applications-with-pytest-patterns-for-real-code/
+  - name: "Part 16: Testing FastAPI in Practice: Unit and Integration Tests for a Real Feature"
+    link: /testing-fastapi-in-practice/
 
 - post_series_id: building-rest-apis
   post_series_title: "Building REST APIs: From Design to Production"
@@ -49,6 +51,8 @@
     link: /fastapi-async-background-tasks-and-error-handling/
   - name: "Part 7: Testing Python Applications with pytest: Patterns for Real Code"
     link: /testing-python-applications-with-pytest-patterns-for-real-code/
+  - name: "Part 8: Testing FastAPI in Practice: Unit and Integration Tests for a Real Feature"
+    link: /testing-fastapi-in-practice/
 
 - post_series_id: agentic-ai-protocols
   post_series_title: "Agentic AI: Protocols and Patterns"
