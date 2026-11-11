@@ -13,9 +13,6 @@ categories:
   - "Software Architecture"
 ---
 
-# From Requirements to Architecture: Lean Requirements with Personas and Scenarios
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![From Requirements to Architecture: Lean Requirements with Personas and Scenarios]({{ site.baseurl }}/assets/img/lean-requirements-personas-and-scenarios-hero.svg){:width="760" height="400" .responsive_img}
 
 ## Introduction

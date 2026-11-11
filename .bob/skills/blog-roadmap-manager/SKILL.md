@@ -37,6 +37,8 @@ Each entry in `roadmap.yml` has this shape:
 
 **Distribution flags** — set to `true` once a post has been pushed to that channel.
 
+**Paused channels:** `instagram` and `facebook` are currently paused. Keep their keys in every entry, but do not report them as gaps and do not ask about them. `roadmap.py` only checks `ACTIVE_CHANNELS`.
+
 ## Allowed categories
 
 Use only these values in `category:`:

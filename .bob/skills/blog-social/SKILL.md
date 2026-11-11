@@ -1,11 +1,13 @@
 ---
 name: blog-social
-description: Use when a blog post has been published and the user wants to generate social media content — produces ready-to-post text for a single Twitter/X promotional tweet, LinkedIn post, Instagram caption, Facebook post, and Substack newsletter intro.
+description: Use when a blog post has been published and the user wants to generate social media content — produces ready-to-post text for a single Twitter/X promotional tweet, LinkedIn post, and Substack newsletter intro.
 ---
 
 # Social Content Generator — Code4Projects
 
-This skill generates platform-specific content for distributing a published blog post. Each platform has a different format, tone, and audience expectation. One source post → five distinct outputs.
+This skill generates platform-specific content for distributing a published blog post. Each platform has a different format, tone, and audience expectation. One source post → three distinct outputs.
+
+**Active channels:** Twitter/X, LinkedIn, Substack. Instagram and Facebook are paused — do not generate content for them unless the user explicitly asks (their guidelines are kept under "Paused channels" at the end of this file).
 
 ## Step 1 — Load the source post
 
@@ -57,36 +59,6 @@ Rules:
 
 ---
 
-### Instagram Caption
-
-**Format:** 100–150 words + hashtag block.
-
-Rules:
-
-- Open with a 1-sentence hook strong enough to stop the scroll.
-- 3–4 short paragraphs (1–2 sentences each). White space is essential.
-- End with: "Link in bio 🔗"
-- Hashtag block (separate from caption with a line break): 15–20 hashtags mixing broad (`#docker`, `#programming`) and niche (`#containerization`, `#devops`).
-- No code snippets — describe the concept, don't show code.
-- Emojis: 1–2 per paragraph maximum, only if they add meaning.
-
----
-
-### Facebook Post
-
-**Format:** 80–150 words. Conversational.
-
-Rules:
-
-- Slightly warmer tone than LinkedIn — this is a community, not a professional network.
-- Open with a question or relatable problem statement.
-- 2–3 short paragraphs.
-- Direct link to the post (Facebook shows a preview card automatically).
-- End with a question to invite comments (e.g. "Have you tried this? What was your experience?").
-- 2–3 hashtags maximum.
-
----
-
 ### Substack Newsletter Intro
 
 **Format:** 150–250 words. Opening section of the newsletter issue, not a full summary.
@@ -112,21 +84,13 @@ Rules:
 
 ## Step 3 — Output format
 
-Present all five outputs in clearly labelled sections:
+Present all three outputs in clearly labelled sections:
 
 ```
 ## Twitter / X
 [tweet text]
 
 ## LinkedIn
-[full post text]
-
-## Instagram
-[caption]
-
-[hashtag block]
-
-## Facebook
 [full post text]
 
 ## Substack Newsletter Intro
@@ -138,7 +102,7 @@ Present all five outputs in clearly labelled sections:
 
 ## Step 4 — Update distribution flags
 
-Ask the user which channels were actually posted (do not assume all were), then update `distributed:` flags in `_data/roadmap.yml` using `apply_diff`.
+Ask the user which channels were actually posted (do not assume all were), then update `distributed:` flags in `_data/roadmap.yml` using `apply_diff`. Leave the `instagram` and `facebook` flags untouched while those channels are paused.
 
 ## Rules
 
@@ -146,3 +110,35 @@ Ask the user which channels were actually posted (do not assume all were), then 
 - Never start any post with "I wrote an article" or "Check out my new post".
 - The blog URL format is: `https://code4projects.org/<slug>/`
 - Substack: the newsletter is at `https://code4projects.substack.com`.
+
+## Paused channels
+
+Instagram and Facebook are paused. To reactivate one, move its section back into Step 2, add it to the Step 3 output format, and add it back to `ACTIVE_CHANNELS` in `.claude/skills/blog-roadmap-manager/roadmap.py`.
+
+### Instagram Caption (paused)
+
+**Format:** 100–150 words + hashtag block.
+
+Rules:
+
+- Open with a 1-sentence hook strong enough to stop the scroll.
+- 3–4 short paragraphs (1–2 sentences each). White space is essential.
+- End with: "Link in bio 🔗"
+- Hashtag block (separate from caption with a line break): 15–20 hashtags mixing broad (`#docker`, `#programming`) and niche (`#containerization`, `#devops`).
+- No code snippets — describe the concept, don't show code.
+- Emojis: 1–2 per paragraph maximum, only if they add meaning.
+
+---
+
+### Facebook Post (paused)
+
+**Format:** 80–150 words. Conversational.
+
+Rules:
+
+- Slightly warmer tone than LinkedIn — this is a community, not a professional network.
+- Open with a question or relatable problem statement.
+- 2–3 short paragraphs.
+- Direct link to the post (Facebook shows a preview card automatically).
+- End with a question to invite comments (e.g. "Have you tried this? What was your experience?").
+- 2–3 hashtags maximum.

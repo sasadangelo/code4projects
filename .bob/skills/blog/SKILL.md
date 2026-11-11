@@ -42,7 +42,7 @@ idea → planner → research → writer → illustrator → review → (roadmap
 | 5. Illustrate | `/blog illustrator <slug>` | hero `<slug>-hero.svg` + inline `<slug>-<concept>.svg` → `assets/img/` |
 | 6. Review | `/blog review <topic>` | prioritised fix list; apply fixes |
 | 7. Publish | `/blog roadmap-manager` | update roadmap status to `published` |
-| 8. Promote | `/blog social` | Twitter/X, LinkedIn, Instagram, Facebook, Substack copy |
+| 8. Promote | `/blog social` | Twitter/X, LinkedIn, Substack copy (Instagram, Facebook paused) |
 
 > **Illustrator note:** Step 5 is mandatory for every post. It generates at minimum a **hero image** (`<slug>-hero.svg`) and adds as many inline diagrams as are needed to replace prose the reader would otherwise have to imagine. The goal is ≥1 inline diagram per major concept.
 

@@ -12,7 +12,11 @@ import yaml
 from pathlib import Path
 
 ROADMAP_PATH = Path(__file__).parent.parent.parent.parent / "_data" / "roadmap.yml"
-CHANNELS = ["medium", "substack", "twitter", "linkedin", "instagram", "facebook"]
+# All channels tracked in roadmap.yml (every entry keeps all six keys).
+ALL_CHANNELS = ["medium", "substack", "twitter", "linkedin", "instagram", "facebook"]
+# Channels currently in use; instagram and facebook are paused.
+ACTIVE_CHANNELS = ["medium", "substack", "twitter", "linkedin"]
+CHANNELS = ACTIVE_CHANNELS
 STATUS_ORDER = ["idea", "planned", "draft", "published"]
 STATUS_EMOJI = {
     "idea": "💡",
