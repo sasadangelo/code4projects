@@ -251,3 +251,9 @@
     link: /understanding-mcp-the-protocol-for-agent-tool-communication/
   - name: "Part 6: Understanding A2A — The Protocol for Agent Collaboration"
     link: /understanding-a2a-the-protocol-for-agent-collaboration/
+
+- post_series_id: getting-started-with-git
+  post_series_title: "Getting Started with Git"
+  post_series:
+  - name: "Part 1: The Hidden Challenges of Git: Lessons from Working in Large Projects"
+    link: /hidden-challenges-of-git-lessons-from-large-projects/

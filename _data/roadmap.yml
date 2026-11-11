@@ -1571,11 +1571,13 @@
 
 - id: hidden-challenges-of-git-lessons-from-large-projects
   title: "The Hidden Challenges of Git: Lessons from Working in Large Projects"
-  status: planned
+  status: published
   category: Programming
   series: getting-started-with-git
+  scheduled: 2025-09-08
+  slug: hidden-challenges-of-git-lessons-from-large-projects
   distributed:
-    medium: false
+    medium: true
     substack: false
     twitter: false
     linkedin: false

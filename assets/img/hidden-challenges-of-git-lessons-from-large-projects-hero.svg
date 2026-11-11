@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1a44"/>
+      <stop offset="0.55" stop-color="#0d2f78"/>
+      <stop offset="1" stop-color="#0a1a44"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.55" r="0.6">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="tipB" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#38bdf8"/>
+    </marker>
+    <marker id="tipP" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#d946ef"/>
+    </marker>
+    <marker id="tipG" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#22c55e"/>
+    </marker>
+    <marker id="tipO" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#fb923c"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="760" height="400" fill="url(#bg)"/>
+  <rect width="760" height="400" fill="url(#halo)"/>
+
+  <!-- Circuit decoration -->
+  <g stroke="#3b82f6" stroke-opacity="0.18" stroke-width="1" fill="none">
+    <path d="M0 100 H40 L60 80 H130"/>
+    <path d="M760 100 H720 L700 80 H630"/>
+    <path d="M0 375 H30 L50 355 H90"/>
+    <path d="M760 375 H730 L710 355 H670"/>
+  </g>
+  <g fill="#60a5fa" fill-opacity="0.5">
+    <circle cx="130" cy="80" r="2"/><circle cx="630" cy="80" r="2"/>
+    <circle cx="90" cy="355" r="2"/><circle cx="670" cy="355" r="2"/>
+  </g>
+
+  <!-- Title -->
+  <text x="380" y="48" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="27" font-weight="800" fill="#ffffff" filter="url(#softglow)">The Hidden Challenges of Git</text>
+  <text x="380" y="76" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="15" fill="#bfd6ff">Lessons from Working in Large Projects</text>
+
+  <!-- Branch labels -->
+  <g font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700">
+    <rect x="28" y="110" width="150" height="28" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1.5"/>
+    <text x="103" y="128" text-anchor="middle" fill="#bbf7d0">main</text>
+    <rect x="28" y="178" width="150" height="28" rx="6" fill="#4a1d5c" stroke="#d946ef" stroke-width="1.5"/>
+    <text x="103" y="196" text-anchor="middle" fill="#f5d0fe">release-candidate</text>
+    <rect x="28" y="246" width="150" height="28" rx="6" fill="#0c3a5c" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="103" y="264" text-anchor="middle" fill="#bae6fd">development</text>
+  </g>
+
+  <!-- Branch lanes -->
+  <g stroke-width="3" fill="none" filter="url(#glow)">
+    <line x1="190" y1="124" x2="735" y2="124" stroke="#22c55e"/>
+    <line x1="190" y1="192" x2="735" y2="192" stroke="#d946ef"/>
+    <line x1="190" y1="260" x2="735" y2="260" stroke="#38bdf8"/>
+  </g>
+
+  <!-- Task branches off development -->
+  <g fill="none" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.85">
+    <path d="M215 260 Q230 318 260 318 H300 Q325 318 335 268" marker-end="url(#tipB)"/>
+    <path d="M300 260 Q312 340 340 340 H380 Q402 340 410 268" marker-end="url(#tipB)"/>
+  </g>
+  <g font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#93c5fd">
+    <text x="280" y="312" text-anchor="middle">task-1</text>
+    <text x="360" y="334" text-anchor="middle">task-2</text>
+  </g>
+
+  <!-- development → release-candidate (merge commit rc1) -->
+  <path d="M430 260 L462 200" stroke="#d946ef" stroke-width="2" fill="none" marker-end="url(#tipP)"/>
+
+  <!-- Hotfix off release-candidate -->
+  <path d="M490 192 Q500 150 530 150 H560 Q585 150 590 186" stroke="#fb923c" stroke-width="2" fill="none" marker-end="url(#tipO)"/>
+  <text x="545" y="143" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#fdba74">hotfix-1</text>
+
+  <!-- release-candidate → main (Release) -->
+  <path d="M630 192 L662 132" stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#tipG)"/>
+
+  <!-- Hotfix realigned into development -->
+  <path d="M610 192 Q620 230 650 254" stroke="#fb923c" stroke-width="2" stroke-dasharray="5 4" fill="none" marker-end="url(#tipO)"/>
+
+  <!-- Commits -->
+  <g stroke="#0a1a44" stroke-width="2">
+    <circle cx="215" cy="260" r="6" fill="#38bdf8"/>
+    <circle cx="300" cy="260" r="6" fill="#38bdf8"/>
+    <circle cx="340" cy="260" r="6" fill="#38bdf8"/>
+    <circle cx="415" cy="260" r="6" fill="#38bdf8"/>
+    <circle cx="430" cy="260" r="6" fill="#38bdf8"/>
+    <circle cx="655" cy="260" r="6" fill="#38bdf8"/>
+    <circle cx="465" cy="192" r="7" fill="#d946ef"/>
+    <circle cx="490" cy="192" r="6" fill="#d946ef"/>
+    <circle cx="595" cy="192" r="7" fill="#d946ef"/>
+    <circle cx="630" cy="192" r="6" fill="#d946ef"/>
+    <circle cx="665" cy="124" r="8" fill="#22c55e"/>
+  </g>
+
+  <!-- Commit labels -->
+  <g font-family="ui-monospace,Menlo,monospace" font-size="10" text-anchor="middle">
+    <text x="465" y="216" fill="#f5d0fe">rc1</text>
+    <text x="595" y="216" fill="#f5d0fe">rc2</text>
+    <text x="665" y="106" fill="#bbf7d0">Release 0.0.1</text>
+  </g>
+</svg>
