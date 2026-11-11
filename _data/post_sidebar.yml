@@ -257,3 +257,5 @@
   post_series:
   - name: "Part 1: The Hidden Challenges of Git: Lessons from Working in Large Projects"
     link: /hidden-challenges-of-git-lessons-from-large-projects/
+  - name: "Part 2: Beyond Push and Pull: Understanding Git's Core Concepts to Avoid Common Pitfalls"
+    link: /beyond-push-and-pull-understanding-git-core-concepts/

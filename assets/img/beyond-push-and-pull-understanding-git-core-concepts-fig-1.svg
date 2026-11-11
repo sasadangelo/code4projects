@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 580" width="760" height="580" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif">
+  <defs>
+    <marker id="end" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#1f2937"/>
+    </marker>
+    <marker id="start" markerWidth="10" markerHeight="10" refX="1" refY="4" orient="auto">
+      <path d="M9,0 L0,4 L9,8 Z" fill="#1f2937"/>
+    </marker>
+  </defs>
+
+  <rect width="760" height="580" fill="#ffffff"/>
+
+  <!-- Remotes -->
+  <g stroke-width="1.5">
+    <!-- Upstream cylinder -->
+    <path d="M60 32 V88 A50 12 0 0 0 160 88 V32" fill="#dcfce7" stroke="#22c55e"/>
+    <ellipse cx="110" cy="32" rx="50" ry="12" fill="#dcfce7" stroke="#22c55e"/>
+    <!-- Origin cylinder -->
+    <path d="M230 32 V88 A50 12 0 0 0 330 88 V32" fill="#ffedd5" stroke="#f59e0b"/>
+    <ellipse cx="280" cy="32" rx="50" ry="12" fill="#ffedd5" stroke="#f59e0b"/>
+  </g>
+  <g font-size="14" font-weight="600" fill="#1f2937" text-anchor="middle">
+    <text x="110" y="70">upstream</text>
+    <text x="280" y="70">origin</text>
+  </g>
+  <line x1="166" y1="60" x2="224" y2="60" stroke="#1f2937" stroke-width="1.5" marker-start="url(#start)" marker-end="url(#end)"/>
+  <text x="195" y="52" font-size="10" fill="#6b7280" text-anchor="middle">fork</text>
+
+  <!-- Local machine -->
+  <rect x="10" y="140" width="740" height="430" rx="28" fill="#f5f5f5" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="40" y="540" font-size="14" font-weight="600" fill="#1f2937">Local machine</text>
+
+  <!-- origin <-> .git -->
+  <line x1="280" y1="106" x2="280" y2="194" stroke="#1f2937" stroke-width="1.5" marker-start="url(#start)" marker-end="url(#end)"/>
+  <rect x="222" y="140" width="116" height="20" fill="#f5f5f5"/>
+  <text x="280" y="155" font-size="11" fill="#1f2937" text-anchor="middle">git fetch / git push</text>
+
+  <!-- Local Git (.git) -->
+  <path d="M230 210 V266 A50 12 0 0 0 330 266 V210" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <ellipse cx="280" cy="210" rx="50" ry="12" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="280" y="306" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">Local Git</text>
+  <text x="280" y="323" font-size="12" fill="#4b5563" text-anchor="middle" font-family="ui-monospace,Menlo,monospace">(.git)</text>
+
+  <!-- Zoom lines -->
+  <g stroke="#9ca3af" stroke-width="1" stroke-dasharray="4 4">
+    <line x1="332" y1="214" x2="380" y2="164"/>
+    <line x1="332" y1="266" x2="380" y2="550"/>
+  </g>
+
+  <!-- Inside .git -->
+  <rect x="380" y="160" width="355" height="395" rx="18" fill="#dbeafe" stroke="#60a5fa" stroke-width="1.5"/>
+
+  <!-- Remote refs -->
+  <rect x="402" y="176" width="312" height="62" rx="8" fill="#ede9fe" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="558" y="200" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">Remote refs (read-only)</text>
+  <text x="558" y="222" font-size="12" fill="#4b5563" text-anchor="middle" font-family="ui-monospace,Menlo,monospace">origin/main · upstream/main</text>
+
+  <line x1="520" y1="242" x2="520" y2="282" stroke="#1f2937" stroke-width="1.5" marker-start="url(#start)" marker-end="url(#end)"/>
+  <text x="530" y="266" font-size="11" fill="#1f2937">git fetch / git push</text>
+
+  <!-- Local repo cylinder -->
+  <path d="M458 296 V344 A62 11 0 0 0 582 344 V296" fill="#fecaca" stroke="#ef4444" stroke-width="1.5"/>
+  <ellipse cx="520" cy="296" rx="62" ry="11" fill="#fecaca" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="520" y="324" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">Local repo</text>
+  <text x="520" y="340" font-size="10" fill="#4b5563" text-anchor="middle" font-family="ui-monospace,Menlo,monospace">branches · commits</text>
+
+  <!-- Stash -->
+  <rect x="400" y="410" width="118" height="56" rx="8" fill="#7c3aed" stroke="#5b21b6" stroke-width="1.5"/>
+  <text x="459" y="443" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">Stash area</text>
+
+  <!-- Staging -->
+  <rect x="598" y="410" width="118" height="56" rx="8" fill="#d9f99d" stroke="#65a30d" stroke-width="1.5"/>
+  <text x="657" y="443" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">Staging area</text>
+
+  <!-- Workspace -->
+  <rect x="400" y="510" width="316" height="28" rx="4" fill="#9f1239" stroke="#881337" stroke-width="1.5"/>
+  <text x="558" y="529" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">Workspace (working directory)</text>
+
+  <!-- Arrows inside -->
+  <g stroke="#1f2937" stroke-width="1.5" fill="none">
+    <line x1="520" y1="356" x2="540" y2="504" marker-end="url(#end)"/>
+    <line x1="530" y1="508" x2="472" y2="472" marker-end="url(#end)"/>
+    <line x1="590" y1="508" x2="640" y2="472" marker-end="url(#end)"/>
+    <line x1="657" y1="406" x2="586" y2="340" marker-end="url(#end)"/>
+  </g>
+  <g font-size="11" fill="#1f2937">
+    <text x="538" y="398">git merge</text>
+    <text x="538" y="413">git rebase</text>
+    <text x="478" y="498" text-anchor="middle">git stash</text>
+    <text x="640" y="498" text-anchor="middle">git add</text>
+    <text x="628" y="364">git commit</text>
+  </g>
+</svg>

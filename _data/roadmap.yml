@@ -1558,11 +1558,13 @@
 
 - id: beyond-push-and-pull-understanding-git-core-concepts
   title: "Beyond Push and Pull: Understanding Git's Core Concepts to Avoid Common Pitfalls"
-  status: planned
+  status: published
   category: Programming
   series: getting-started-with-git
+  scheduled: 2025-09-13
+  slug: beyond-push-and-pull-understanding-git-core-concepts
   distributed:
-    medium: false
+    medium: true
     substack: false
     twitter: false
     linkedin: false

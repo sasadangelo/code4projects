@@ -140,7 +140,7 @@ In this article we covered:
 - the release candidate and hotfix cycle, tracked with named merge commits;
 - when a small team or a rarely updated repository can drop branches.
 
-In the next article of this series, I'll look more closely at one of the decisions behind this workflow: when to merge and when to rebase.
+In the next article of this series, [Beyond Push and Pull]({{ site.baseurl }}/beyond-push-and-pull-understanding-git-core-concepts/), I step back to the core concepts underneath this workflow: where your changes live and how each Git command moves them.
 
 ---
 
