@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 Z" fill="#57606a"/>
+    </marker>
+  </defs>
+
+  <rect width="760" height="300" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2328">The Requirements Pendulum</text>
+  <text x="380" y="50" text-anchor="middle" font-size="12" fill="#57606a">How much each era wrote down before writing code</text>
+
+  <!-- Y axis -->
+  <line x1="34" y1="252" x2="34" y2="74" stroke="#57606a" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="26" y="165" text-anchor="middle" transform="rotate(-90 26 165)" font-size="10" fill="#57606a">more documentation</text>
+
+  <!-- Time axis -->
+  <line x1="34" y1="262" x2="740" y2="262" stroke="#d0d7de" stroke-width="1"/>
+
+  <!-- Pendulum curve -->
+  <path d="M80 96 C140 96 160 104 200 106 S280 140 320 150 S410 214 440 216 S530 180 560 180 S650 166 690 166"
+        fill="none" stroke="#0969da" stroke-width="2.5" stroke-opacity="0.85"/>
+
+  <!-- Points -->
+  <g stroke="#ffffff" stroke-width="2">
+    <circle cx="80" cy="96" r="7" fill="#cf222e"/>
+    <circle cx="200" cy="106" r="7" fill="#cf222e"/>
+    <circle cx="320" cy="150" r="7" fill="#bf8700"/>
+    <circle cx="440" cy="216" r="7" fill="#1a7f37"/>
+    <circle cx="560" cy="180" r="7" fill="#8250df"/>
+    <circle cx="690" cy="166" r="9" fill="#0969da"/>
+  </g>
+
+  <!-- Labels -->
+  <g font-size="11" text-anchor="middle" fill="#1f2328">
+    <text x="80" y="78" font-weight="700">Waterfall</text>
+    <text x="80" y="64" font-size="10" fill="#57606a">SRS, IEEE 830</text>
+
+    <text x="200" y="88" font-weight="700">UML</text>
+    <text x="200" y="74" font-size="10" fill="#57606a">use cases, RUP</text>
+
+    <text x="320" y="132" font-weight="700">Personas</text>
+    <text x="320" y="118" font-size="10" fill="#57606a">Cockburn's scenarios</text>
+
+    <text x="440" y="238" font-weight="700">Agile</text>
+    <text x="440" y="252" font-size="10" fill="#57606a">user stories</text>
+
+    <text x="560" y="162" font-weight="700">DDD · BDD</text>
+    <text x="560" y="148" font-size="10" fill="#57606a">Given/When/Then, job stories</text>
+
+    <text x="690" y="148" font-weight="700" fill="#0969da">Lean requirements</text>
+    <text x="690" y="134" font-size="10" fill="#57606a">one file in the repo</text>
+  </g>
+
+  <!-- Years -->
+  <g font-size="10" fill="#57606a" text-anchor="middle" font-family="ui-monospace,Menlo,monospace">
+    <text x="80" y="280">1970</text>
+    <text x="200" y="280">1997</text>
+    <text x="320" y="280">1999–2000</text>
+    <text x="440" y="280">2001</text>
+    <text x="560" y="280">2003–2013</text>
+    <text x="690" y="280">today</text>
+  </g>
+</svg>

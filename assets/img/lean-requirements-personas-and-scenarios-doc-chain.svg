@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 Z" fill="#57606a"/>
+    </marker>
+  </defs>
+
+  <rect width="760" height="360" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2328">From Idea to Code: the FastURL Document Chain</text>
+  <text x="380" y="50" text-anchor="middle" font-size="12" fill="#57606a">Each design document is built from the documents before it</text>
+
+  <g font-family="ui-monospace,Menlo,monospace" font-size="12" text-anchor="middle">
+    <!-- Row 1 -->
+    <rect x="24" y="76" width="140" height="48" rx="8" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.2"/>
+    <text x="94" y="105" fill="#1f2328">idea.md</text>
+
+    <rect x="208" y="70" width="160" height="60" rx="8" fill="#ddf4ff" stroke="#0969da" stroke-width="2.2"/>
+    <text x="288" y="98" font-weight="700" fill="#0969da">requirements.md</text>
+    <text x="288" y="116" font-size="10" fill="#57606a" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif">actors · job stories · rules</text>
+
+    <rect x="412" y="76" width="150" height="48" rx="8" fill="#fbefff" stroke="#8250df" stroke-width="1.2"/>
+    <text x="487" y="105" fill="#1f2328">domain-design.md</text>
+
+    <rect x="596" y="76" width="140" height="48" rx="8" fill="#fbefff" stroke="#8250df" stroke-width="1.2"/>
+    <text x="666" y="105" fill="#1f2328">architecture.md</text>
+
+    <!-- Row 2 (right to left) -->
+    <rect x="596" y="170" width="140" height="48" rx="8" fill="#fbefff" stroke="#8250df" stroke-width="1.2"/>
+    <text x="666" y="199" fill="#1f2328">tech-stack.md</text>
+
+    <rect x="412" y="170" width="150" height="48" rx="8" fill="#fbefff" stroke="#8250df" stroke-width="1.2"/>
+    <text x="487" y="199" fill="#1f2328">db-design.md</text>
+
+    <rect x="218" y="170" width="150" height="48" rx="8" fill="#fbefff" stroke="#8250df" stroke-width="1.2"/>
+    <text x="293" y="199" fill="#1f2328">api-design.md</text>
+
+    <rect x="24" y="170" width="150" height="48" rx="8" fill="#dafbe1" stroke="#1a7f37" stroke-width="1.6"/>
+    <text x="99" y="199" font-weight="700" fill="#1a7f37">src/ (code)</text>
+
+    <!-- Row 3 -->
+    <rect x="208" y="276" width="160" height="48" rx="8" fill="#fbefff" stroke="#8250df" stroke-width="1.2"/>
+    <text x="288" y="305" fill="#1f2328">test-strategy.md</text>
+
+    <rect x="24" y="276" width="150" height="48" rx="8" fill="#dafbe1" stroke="#1a7f37" stroke-width="1.6"/>
+    <text x="99" y="305" font-weight="700" fill="#1a7f37">tests/</text>
+
+    <rect x="412" y="276" width="150" height="48" rx="8" fill="#fff8c5" stroke="#bf8700" stroke-width="1.2"/>
+    <text x="487" y="298" fill="#1f2328">backlog</text>
+    <text x="487" y="314" font-size="10" fill="#57606a">planning</text>
+
+    <rect x="596" y="276" width="140" height="48" rx="8" fill="#fff8c5" stroke="#bf8700" stroke-width="1.6"/>
+    <text x="666" y="305" font-weight="700" fill="#9a6700">GitHub issues</text>
+  </g>
+
+  <!-- Main chain arrows -->
+  <g stroke="#57606a" stroke-width="1.4" fill="none">
+    <line x1="166" y1="100" x2="202" y2="100" marker-end="url(#arrow)"/>
+    <line x1="370" y1="100" x2="406" y2="100" marker-end="url(#arrow)"/>
+    <line x1="564" y1="100" x2="590" y2="100" marker-end="url(#arrow)"/>
+    <line x1="666" y1="126" x2="666" y2="164" marker-end="url(#arrow)"/>
+    <line x1="594" y1="194" x2="568" y2="194" marker-end="url(#arrow)"/>
+    <line x1="410" y1="194" x2="374" y2="194" marker-end="url(#arrow)"/>
+    <line x1="216" y1="194" x2="180" y2="194" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- Requirements feeds tests and planner -->
+  <g stroke="#0969da" stroke-width="1.4" stroke-dasharray="5 4" fill="none">
+    <path d="M288 132 C288 150 196 150 196 160 V260 C196 270 260 270 280 272" marker-end="url(#arrow)"/>
+    <path d="M330 132 C330 150 390 150 390 160 V250 C390 262 440 262 470 272" marker-end="url(#arrow)"/>
+  </g>
+  <g stroke="#57606a" stroke-width="1.4" fill="none">
+    <line x1="206" y1="300" x2="180" y2="300" marker-end="url(#arrow)"/>
+    <line x1="564" y1="300" x2="590" y2="300" marker-end="url(#arrow)"/>
+  </g>
+  <text x="388" y="342" text-anchor="middle" font-size="11" fill="#0969da">dashed: requirements.md is read directly by the testing and planning steps</text>
+</svg>

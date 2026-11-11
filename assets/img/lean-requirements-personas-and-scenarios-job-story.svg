@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 Z" fill="#57606a"/>
+    </marker>
+  </defs>
+
+  <rect width="760" height="420" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2328">Anatomy of a Job Story</text>
+  <text x="380" y="50" text-anchor="middle" font-size="12" fill="#57606a">FastURL JS-001: one goal, one main scenario, three alternatives, one test each</text>
+
+  <!-- Story statement -->
+  <rect x="24" y="68" width="712" height="92" rx="8" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1.2"/>
+  <text x="40" y="92" font-size="13" font-weight="700" fill="#1f2328">JS-001 — Shorten Target URL with Automatic Code</text>
+  <g font-size="12">
+    <rect x="40" y="104" width="54" height="20" rx="4" fill="#ddf4ff"/>
+    <text x="67" y="118" text-anchor="middle" font-weight="700" fill="#0969da">When</text>
+    <text x="104" y="118" fill="#1f2328">I provide a valid target URL without a custom alias,</text>
+    <rect x="430" y="104" width="72" height="20" rx="4" fill="#fbefff"/>
+    <text x="466" y="118" text-anchor="middle" font-weight="700" fill="#8250df">I want to</text>
+    <text x="512" y="118" fill="#1f2328">generate a unique short URL,</text>
+    <rect x="40" y="130" width="62" height="20" rx="4" fill="#dafbe1"/>
+    <text x="71" y="144" text-anchor="middle" font-weight="700" fill="#1a7f37">so that</text>
+    <text x="112" y="144" fill="#1f2328">I can share a compact link with visitors immediately.</text>
+  </g>
+  <text x="560" y="144" font-size="10" fill="#57606a">situation · action · benefit</text>
+
+  <!-- Column headers -->
+  <g font-size="11" font-weight="700" fill="#57606a">
+    <text x="40" y="190">ACCEPTANCE CRITERIA (Given / When / Then)</text>
+    <text x="516" y="190">INTEGRATION TEST</text>
+  </g>
+
+  <!-- Main scenario -->
+  <g font-size="12">
+    <rect x="24" y="200" width="470" height="44" rx="8" fill="#dafbe1" stroke="#1a7f37" stroke-width="1.2"/>
+    <text x="38" y="218" font-size="10" font-weight="700" fill="#1a7f37">MAIN SCENARIO</text>
+    <text x="38" y="235" fill="#1f2328">Given a valid HTTP/HTTPS URL → Then <tspan font-weight="700">201 Created</tspan>, pending_analysis</text>
+
+    <rect x="24" y="254" width="470" height="44" rx="8" fill="#fff8c5" stroke="#bf8700" stroke-width="1.2"/>
+    <text x="38" y="272" font-size="10" font-weight="700" fill="#9a6700">ALTERNATIVE</text>
+    <text x="38" y="289" fill="#1f2328">Given an unsupported scheme → Then <tspan font-weight="700">400 Bad Request</tspan></text>
+
+    <rect x="24" y="308" width="470" height="44" rx="8" fill="#fff8c5" stroke="#bf8700" stroke-width="1.2"/>
+    <text x="38" y="326" font-size="10" font-weight="700" fill="#9a6700">ALTERNATIVE</text>
+    <text x="38" y="343" fill="#1f2328">Given expires_at in the past → Then <tspan font-weight="700">400 Bad Request</tspan></text>
+
+    <rect x="24" y="362" width="470" height="44" rx="8" fill="#fff8c5" stroke="#bf8700" stroke-width="1.2"/>
+    <text x="38" y="380" font-size="10" font-weight="700" fill="#9a6700">ALTERNATIVE</text>
+    <text x="38" y="397" fill="#1f2328">Given a URL pointing at FastURL itself → Then <tspan font-weight="700">400 Bad Request</tspan></text>
+  </g>
+
+  <!-- Arrows to tests -->
+  <g stroke="#57606a" stroke-width="1.2">
+    <line x1="498" y1="222" x2="510" y2="222" marker-end="url(#arrow)"/>
+    <line x1="498" y1="276" x2="510" y2="276" marker-end="url(#arrow)"/>
+    <line x1="498" y1="330" x2="510" y2="330" marker-end="url(#arrow)"/>
+    <line x1="498" y1="384" x2="510" y2="384" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- Tests -->
+  <g font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#1f2328">
+    <rect x="516" y="208" width="236" height="28" rx="6" fill="#f6f8fa" stroke="#d0d7de"/>
+    <text x="524" y="226">test_auto_code_returns_201</text>
+    <rect x="516" y="262" width="236" height="28" rx="6" fill="#f6f8fa" stroke="#d0d7de"/>
+    <text x="524" y="280">test_invalid_url_scheme_returns_400</text>
+    <rect x="516" y="316" width="236" height="28" rx="6" fill="#f6f8fa" stroke="#d0d7de"/>
+    <text x="524" y="334">test_past_expiry_returns_400</text>
+    <rect x="516" y="370" width="236" height="28" rx="6" fill="#f6f8fa" stroke="#d0d7de"/>
+    <text x="524" y="388">test_self_redirect_returns_400</text>
+  </g>
+</svg>

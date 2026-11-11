@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1a44"/>
+      <stop offset="0.55" stop-color="#0d2f78"/>
+      <stop offset="1" stop-color="#0a1a44"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.6" r="0.55">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16346f"/>
+      <stop offset="1" stop-color="#0c2154"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="tip" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="760" height="400" fill="url(#bg)"/>
+  <rect width="760" height="400" fill="url(#halo)"/>
+
+  <!-- Circuit decoration -->
+  <g stroke="#3b82f6" stroke-opacity="0.18" stroke-width="1" fill="none">
+    <path d="M0 110 H40 L60 90 H130"/>
+    <path d="M760 110 H720 L700 90 H630"/>
+    <path d="M0 370 H30 L50 350 H90"/>
+    <path d="M760 370 H730 L710 350 H670"/>
+  </g>
+  <g fill="#60a5fa" fill-opacity="0.5">
+    <circle cx="130" cy="90" r="2"/><circle cx="630" cy="90" r="2"/>
+    <circle cx="90" cy="350" r="2"/><circle cx="670" cy="350" r="2"/>
+  </g>
+
+  <!-- Title -->
+  <text x="380" y="48" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="27" font-weight="800" fill="#ffffff" filter="url(#softglow)">From Requirements to Architecture</text>
+  <text x="380" y="76" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="15" fill="#bfd6ff">Lean Requirements with Personas and Scenarios</text>
+
+  <!-- ── Left: personas ── -->
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" text-anchor="middle">
+    <g fill="#93c5fd">
+      <circle cx="90" cy="150" r="13"/><path d="M68 186 a22 18 0 0 1 44 0 z"/>
+      <circle cx="90" cy="232" r="13"/><path d="M68 268 a22 18 0 0 1 44 0 z"/>
+    </g>
+    <rect x="74" y="300" width="32" height="30" rx="5" fill="none" stroke="#93c5fd" stroke-width="2"/>
+    <path d="M82 312 h16 M82 320 h10" stroke="#93c5fd" stroke-width="2"/>
+    <text x="90" y="202" font-size="10" fill="#bfd6ff">API Client</text>
+    <text x="90" y="284" font-size="10" fill="#bfd6ff">Visitor</text>
+    <text x="90" y="346" font-size="10" fill="#bfd6ff">Inspector</text>
+  </g>
+
+  <path d="M126 230 H170" stroke="url(#flow)" stroke-width="3" fill="none" marker-end="url(#tip)"/>
+
+  <!-- ── Center: requirements.md ── -->
+  <rect x="178" y="112" width="250" height="236" rx="10" fill="none" stroke="#3b82f6" stroke-width="2" filter="url(#glow)"/>
+  <rect x="178" y="112" width="250" height="236" rx="10" fill="url(#panel)" stroke="#3b82f6" stroke-width="1.5"/>
+  <circle cx="192" cy="125" r="3.5" fill="#ef4444"/><circle cx="204" cy="125" r="3.5" fill="#f59e0b"/><circle cx="216" cy="125" r="3.5" fill="#10b981"/>
+  <text x="418" y="129" text-anchor="end" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#93c5fd">requirements.md</text>
+  <g font-family="ui-monospace,Menlo,monospace" font-size="11">
+    <text x="192" y="156" fill="#f0abfc">## Actors</text>
+    <text x="200" y="174" fill="#cbd5e1">API Client · Visitor · Inspector</text>
+    <text x="192" y="200" fill="#f0abfc">#### JS-001</text>
+    <text x="200" y="218" fill="#cbd5e1"><tspan fill="#5eead4">When</tspan> … <tspan fill="#5eead4">I want to</tspan> … <tspan fill="#5eead4">so that</tspan> …</text>
+    <text x="200" y="236" fill="#86efac">✓ main:  Given … Then 201</text>
+    <text x="200" y="254" fill="#fcd34d">↳ alt:   Given … Then 400</text>
+    <text x="200" y="272" fill="#fcd34d">↳ alt:   Given … Then 409</text>
+    <text x="192" y="298" fill="#f0abfc">## Constraints · NFRs</text>
+    <text x="192" y="322" fill="#f0abfc">## Out of Scope</text>
+  </g>
+
+  <path d="M436 230 H500" stroke="url(#flow)" stroke-width="3" fill="none" marker-end="url(#tip)"/>
+
+  <!-- ── Right: architecture layers ── -->
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+    <rect x="508" y="132" width="212" height="50" rx="8" fill="url(#panel)" stroke="#38bdf8" stroke-width="1.5" filter="url(#glow)"/>
+    <text x="614" y="162" fill="#bae6fd">Routers</text>
+    <rect x="508" y="198" width="212" height="50" rx="8" fill="url(#panel)" stroke="#a78bfa" stroke-width="1.5" filter="url(#glow)"/>
+    <text x="614" y="228" fill="#ddd6fe">Services</text>
+    <rect x="508" y="264" width="212" height="50" rx="8" fill="url(#panel)" stroke="#34d399" stroke-width="1.5" filter="url(#glow)"/>
+    <text x="614" y="294" fill="#a7f3d0">Repositories</text>
+  </g>
+  <text x="614" y="340" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#93c5fd">architecture</text>
+</svg>

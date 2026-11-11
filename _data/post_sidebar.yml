@@ -1,37 +1,39 @@
 - post_series_id: modern-python-application
   post_series_title: "How to Write Modern Python Applications"
   post_series:
-  - name: "Part 1: How to Set Up Your Next Python Project"
+  - name: "Part 1: From Requirements to Architecture: Lean Requirements with Personas and Scenarios"
+    link: /lean-requirements-personas-and-scenarios/
+  - name: "Part 2: How to Set Up Your Next Python Project"
     link: /how-to-set-up-your-next-python-project/
-  - name: "Part 2: Managing Application Configuration in Python with Pydantic Settings"
+  - name: "Part 3: Managing Application Configuration in Python with Pydantic Settings"
     link: /managing-application-configuration-in-python-with-pydantic-settings/
-  - name: "Part 3: Logging in a Flask Application with Loguru"
+  - name: "Part 4: Logging in a Flask Application with Loguru"
     link: /logging-in-a-flask-application-with-loguru/
-  - name: "Part 4: How to Create Cron Jobs in Python for Your Applications"
+  - name: "Part 5: How to Create Cron Jobs in Python for Your Applications"
     link: /how-to-create-cron-jobs-in-python/
-  - name: "Part 5: Building a Database Layer in Python with SQLAlchemy ORM"
+  - name: "Part 6: Building a Database Layer in Python with SQLAlchemy ORM"
     link: /database-layer-with-sqlalchemy-in-a-layered-python-architecture/
-  - name: "Part 6: Concurrency in Python: Threads, Processes, and the Event Loop"
+  - name: "Part 7: Concurrency in Python: Threads, Processes, and the Event Loop"
     link: /concurrency-in-python-threads-processes-and-the-event-loop/
-  - name: "Part 7: Async and the Event Loop in Python: asyncio in Practice"
+  - name: "Part 8: Async and the Event Loop in Python: asyncio in Practice"
     link: /async-and-event-loop-in-python-asyncio-in-practice/
-  - name: "Part 8: Building a Python CLI with the Command Pattern"
+  - name: "Part 9: Building a Python CLI with the Command Pattern"
     link: /building-a-python-cli-with-the-command-pattern/
-  - name: "Part 9: Building a Python CLI with Click"
+  - name: "Part 10: Building a Python CLI with Click"
     link: /building-a-python-cli-with-click-a-cleaner-approach-to-the-command-pattern/
-  - name: "Part 10: Building a Python CLI with Typer"
+  - name: "Part 11: Building a Python CLI with Typer"
     link: /building-a-python-cli-with-typer-the-modern-approach-to-the-command-pattern/
-  - name: "Part 11: Designing REST APIs in Practice: A Kubernetes Case Study"
+  - name: "Part 12: Designing REST APIs in Practice: A Kubernetes Case Study"
     link: /designing-rest-apis-in-practice-a-kubernetes-case-study/
-  - name: "Part 12: From Domain Design to REST API: Building FastURL with FastAPI"
+  - name: "Part 13: From Domain Design to REST API: Building FastURL with FastAPI"
     link: /from-domain-design-to-rest-api-building-fasturl-with-fastapi/
-  - name: "Part 13: Layered Architecture with FastAPI: Routers, Services, and Repositories"
+  - name: "Part 14: Layered Architecture with FastAPI: Routers, Services, and Repositories"
     link: /layered-architecture-with-fastapi-routers-services-and-repositories/
-  - name: "Part 14: Async, Background Tasks, and Error Handling in FastAPI"
+  - name: "Part 15: Async, Background Tasks, and Error Handling in FastAPI"
     link: /fastapi-async-background-tasks-and-error-handling/
-  - name: "Part 15: Testing Python Applications with pytest: Patterns for Real Code"
+  - name: "Part 16: Testing Python Applications with pytest: Patterns for Real Code"
     link: /testing-python-applications-with-pytest-patterns-for-real-code/
-  - name: "Part 16: Testing FastAPI in Practice: Unit and Integration Tests for a Real Feature"
+  - name: "Part 17: Testing FastAPI in Practice: Unit and Integration Tests for a Real Feature"
     link: /testing-fastapi-in-practice/
 
 - post_series_id: building-rest-apis
@@ -259,3 +261,9 @@
     link: /hidden-challenges-of-git-lessons-from-large-projects/
   - name: "Part 2: Beyond Push and Pull: Understanding Git's Core Concepts to Avoid Common Pitfalls"
     link: /beyond-push-and-pull-understanding-git-core-concepts/
+
+- post_series_id: software-architecture-patterns
+  post_series_title: "Software Architecture Patterns"
+  post_series:
+  - name: "Part 1: From Requirements to Architecture: Lean Requirements with Personas and Scenarios"
+    link: /lean-requirements-personas-and-scenarios/
