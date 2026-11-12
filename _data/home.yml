@@ -5,19 +5,39 @@ hero-area:
     everything I learn on software programming. For more details, read more <a href="about-me/">about me</a>.
   hero-background-image: /assets/img/code4projects-image-hero.webp
 icon-area:
-  - icon-image: assets/img/starthere-icon.webp
+  - icon-image: assets/img/starthere-icon.svg
     icon-title: New User?
     icon-subtitle: Start Here
     icon-link: start-here/
-  - icon-image: assets/img/projects-icon.webp
+  - icon-image: assets/img/projects-icon.svg
     icon-title: Projects
     icon-subtitle: Check out my side Projects
     icon-link: projects-2/
-  - icon-image: assets/img/resources-icon.webp
+  - icon-image: assets/img/resources-icon.svg
     icon-title: Resources
     icon-subtitle: Check out my favorite Resources
     icon-link: resources-for-developers/
 feature-area:
+  - feature-title: How to Write Modern Python Applications
+    feature-text: >
+      This is the <b>How to Write Modern Python Applications</b> article series. Here I will show you, step by step, how to build
+      production-grade Python applications, starting from lean requirements and architecture, then project setup, configuration,
+      scheduling, databases, concurrency, async, CLIs, REST APIs with FastAPI, and testing. Every article builds on real code you can reuse in your own projects.
+      <a href="lean-requirements-personas-and-scenarios/" aria-label="Check out the How to Write Modern Python Applications article series">Check out the Modern Python series here</a>.
+    feature-image: assets/img/modern-python-applications.svg
+    feature-image-width: 300
+    feature-image-height: 158
+    feature-link: lean-requirements-personas-and-scenarios/
+  - feature-title: Getting Started with Docker 2025
+    feature-text: >
+      This is the <b>Getting Started with Docker 2025</b> article series. Learn what Docker is, how to use it with Podman, and how to build,
+      network, persist, orchestrate, and secure containerized applications. The series covers everything from your first container to a
+      full multi-container setup with Docker Compose and security best practices.
+      <a href="getting-started-with-docker-2025/" aria-label="Check out the Getting Started with Docker 2025 article series">Check out the Docker series here</a>.
+    feature-image: assets/img/docker-getting-started.svg
+    feature-image-width: 300
+    feature-image-height: 158
+    feature-link: getting-started-with-docker-2025/
   - feature-title: Android Game Programming
     feature-text: >
       This is the <b>Android Game Programming</b> article series. Here I will show you, step by step, how to write your first Android
@@ -30,34 +50,31 @@ feature-area:
     feature-image-width: 300
     feature-image-height: 265
     feature-link: android-game-programming/
-  - feature-title: Getting Started with Docker
+  - feature-title: Getting Started with HTML & CSS
     feature-text: >
-      This is the <b>Getting Started with Docker</b> article series. Learn what Docker is, how to use it with Podman, and how to build,
-      network, persist, orchestrate, and secure containerized applications. The series covers everything from your first container to a
-      full multi-container setup with Docker Compose and security best practices.
-      <a href="getting-started-with-docker-2025/" aria-label="Check out the Getting Started with Docker article series">Check out the Docker series here</a>.
-    feature-image: assets/img/docker-getting-started.svg
+      This is the <b>Getting Started with HTML &amp; CSS</b> article series. It is a beginner-friendly path that takes you from a blank
+      page to a fully responsive website layout, covering HTML structure, CSS fundamentals, and modern layout techniques.
+      <a href="getting-started-with-html/" aria-label="Check out the Getting Started with HTML and CSS article series">Check out the HTML &amp; CSS series here</a>.
+    feature-image: assets/img/html.webp
     feature-image-width: 300
-    feature-image-height: 158
-    feature-link: getting-started-with-docker-2025/
-  - feature-title: Getting Started with Kubernetes
+    feature-image-height: 169
+    feature-link: getting-started-with-html/
+  - feature-title: Build Your Own LLM Chatbot with Python & LangChain
     feature-text: >
-      This is the <b>Getting started with Kubernetes</b> article series. In it I would like to give you a brief introduction to Kubernetes.
-      I will explain What Kubernetes is, its architecture, the concepts of Pod, Replication Controller, ReplicaSets, Deployment, ConfigMaps,
-      SecretMaps, etc. I will show you how to setup a Kubernetes cluster using Virtual Box and Vagrant and how to deploy an "Hello K8s!" dockerized
-      application in it. <a href="getting-started-with-kubernetes/" aria-label="Check out the Getting started with Kubernetes article series">Check out the Kubernetes series here</a>.
-    feature-image: wp-content/uploads/2019/06/Kubernetes.webp
-    feature-image-width: 206
-    feature-image-height: 200
-    feature-link: getting-started-with-kubernetes/
-  - feature-title: How to build a Raspberry Media Center
+      This is the <b>Build Your Own LLM Chatbot with Python &amp; LangChain</b> article series. In four articles I will show you how to
+      build a conversational AI chatbot from scratch: its architecture, conversation memory, Retrieval-Augmented Generation (RAG),
+      and a web UI with Streamlit.
+      <a href="build-your-own-llm-chatbot-with-python-and-langchain-part-1/" aria-label="Check out the Build Your Own LLM Chatbot article series">Check out the LLM Chatbot series here</a>.
+    feature-image: assets/img/llm-chatbot-part1.png
+    feature-image-width: 180
+    feature-image-height: 270
+    feature-link: build-your-own-llm-chatbot-with-python-and-langchain-part-1/
+  - feature-title: FastURL — A TinyURL Clone in Python
     feature-text: >
-      This is the <b>How to build a Raspberry Media Center</b> article series. Here I would like to show you how to build a Raspberry
-      Media Center with an HDD and enclosure. The series will show you the required hardaware to buy to build the Media Center and how
-      to configure it properly to watch Movie and TV Series, to play Retrogames, to use it as a Torrent machine, and to share files in
-      your network like a NAS. <a href="raspberry-media-center/" aria-label="Check out the How to build a Raspberry Media Center article series">Check out the Raspberry Media Center series here</a>.
-    feature-image: wp-content/uploads/2020/07/Hector_TV_Box-min-e1596192046917.webp
-    feature-image-width: 267
-    feature-image-height: 200
-    feature-link: raspberry-media-center/
-  
+      <b>FastURL</b> is a production-ready URL shortener built with FastAPI, SQLAlchemy, async workers, and a layered architecture.
+      It is a real project that walks you through REST API design, domain modelling, background tasks, error handling, and testing.
+      <a href="concurrency-in-python-threads-processes-and-the-event-loop/" aria-label="Check out the FastURL project">Check out the FastURL project here</a>.
+    feature-image: assets/img/from-domain-design-to-rest-api-building-fasturl-with-fastapi-hero.png
+    feature-image-width: 300
+    feature-image-height: 159
+    feature-link: concurrency-in-python-threads-processes-and-the-event-loop/
