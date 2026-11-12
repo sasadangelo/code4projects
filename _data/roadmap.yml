@@ -1267,7 +1267,7 @@
     instagram: false
     facebook: false
 - id: api-design-requests-and-responses
-  title: "API Design in Practice: Parameters, Headers, Pagination, and Versioning"
+  title: "API Design Beyond CRUD: Pagination, Versioning, Idempotency, Rate Limiting, Caching, and Long-Running Operations"
   status: idea
   category: Programming
   series: modern-python-application
@@ -1286,78 +1286,8 @@
     linkedin: false
     instagram: false
     facebook: false
-- id: api-reliability-timeouts-retries-and-idempotency
-  title: "Reliable APIs: Timeouts, Retries with Backoff, and Idempotency"
-  status: idea
-  category: Programming
-  series: modern-python-application
-  notes: >
-    Theory 2/4 (part a). Stateless APIs (never explained; tie to multiple Uvicorn workers);
-    timeouts beyond the client-side httpx.Timeout already shown (server-side, 504/408, deadline
-    budgets); retry with exponential backoff and jitter (FastURL inspector has none: natural
-    example); circuit breaker. Idempotency in depth: the REST design post already introduces
-    Idempotency-Key, so go into storage, TTL, concurrent duplicates, response replay.
-  distributed:
-    medium: false
-    substack: false
-    twitter: false
-    linkedin: false
-    instagram: false
-    facebook: false
-- id: api-rate-limiting-and-throttling
-  title: "Rate Limiting and Throttling: Algorithms and HTTP Headers"
-  status: idea
-  category: Programming
-  series: modern-python-application
-  notes: >
-    Theory 2/4 (part b). Rate limiting vs throttling; token bucket, leaky bucket, fixed and
-    sliding window; 429, Retry-After, RateLimit-* (check IETF draft status). Where to enforce
-    (proxy, gateway, app), with nuance: domain-aware limits need the app. Distributed limits with
-    Redis. Theory base for the reverse proxy and API gateway posts.
-  distributed:
-    medium: false
-    substack: false
-    twitter: false
-    linkedin: false
-    instagram: false
-    facebook: false
-- id: api-long-running-operations-streaming-and-webhooks
-  title: "Beyond Request-Response: Long-Running Operations, Streaming, and Webhooks"
-  status: idea
-  category: Programming
-  series: modern-python-application
-  notes: >
-    Theory 3/4. 202 + polling already shown for POST /inspect and BackgroundTasks already covered:
-    go further (status resource, Location header, durable jobs). Streaming: SSE is already
-    explained as a transport in the A2A and MCP posts, link them; focus on choosing SSE vs
-    WebSocket vs NDJSON. Webhooks are new: FastURL example = notify when an inspection completes
-    (HMAC signature, retries, receiver idempotency). Keep brokers/events for
-    event-driven-architecture-in-python.
-  distributed:
-    medium: false
-    substack: false
-    twitter: false
-    linkedin: false
-    instagram: false
-    facebook: false
-- id: api-caching-etags-and-optimistic-concurrency
-  title: "HTTP Caching and Optimistic Concurrency: ETags, Conditional Requests, and Lost Updates"
-  status: idea
-  category: Programming
-  series: modern-python-application
-  notes: >
-    Theory 4/4. Only prior coverage: 307 vs 301 browser caching in the layered architecture post.
-    Cache-Control, ETag, If-None-Match/304; optimistic concurrency If-Match/412. FastURL has no
-    PUT/PATCH endpoint today: the lost-update demo needs a new PATCH /api/v1/links/{code}.
-  distributed:
-    medium: false
-    substack: false
-    twitter: false
-    linkedin: false
-    instagram: false
-    facebook: false
 - id: api-authentication-and-authorization-with-fastapi
-  title: "Authentication and Authorization for APIs: API Keys, OAuth2, and JWT in FastAPI"
+  title: "Authentication and Authorization in Python Web Applications: Sessions, API Keys, OAuth2, and JWT"
   status: idea
   category: Programming
   series: modern-python-application
@@ -1415,19 +1345,6 @@
   series: software-architecture-patterns
   scheduled: 2026-11-11
   slug: lean-requirements-personas-and-scenarios
-  distributed:
-    medium: false
-    substack: false
-    twitter: false
-    linkedin: false
-    instagram: false
-    facebook: false
-- id: layered-architecture-in-python
-  title: "Layered Architecture in Practice: Package by Layer, Feature, and Component"
-  status: planned
-  category: Software Architecture
-  series: software-architecture-patterns
-  scheduled: 2026-10-16
   distributed:
     medium: false
     substack: false
@@ -1891,7 +1808,7 @@
     facebook: false
 
 - id: choosing-an-architectural-pattern
-  title: "Choosing an Architectural Pattern: A Decision Guide from Requirements to Code"
+  title: "Software Architecture Patterns Explained: Layered, Hexagonal, Clean, Event-Driven, and Hybrid"
   status: idea
   category: Software Architecture
   series: software-architecture-patterns

@@ -1,6 +1,6 @@
 # Code4Projects — Editorial Plan
 
-Last updated: 2026-10
+Last updated: 2026-11-12
 Author: Salvatore D'Angelo
 
 This document defines the strategic direction of the blog, the active series, and the week-by-week execution plan. It is the **why** and **what next** — `_data/roadmap.yml` is the **operational status** of each individual article.
@@ -40,10 +40,10 @@ Docker 2025 is the reference implementation. All new series follow this model.
 | `python-cli` | Python CLI (standalone mini-series) | ✅ Complete | 3 published |
 | `llm-chatbot-langchain` | Build Your Own LLM Chatbot with LangChain | ✅ Complete | 4 published |
 | `agentic-ai-protocols` | Agentic AI: Protocols and Patterns | 🔵 In progress | 2 published, 3 planned |
-| `modern-python-application` | Modern Python Application Development | 🔵 In progress | 10 published, 1 planned |
-| `software-architecture-patterns` | Software Architecture Patterns | 🔵 In progress | 0 published, 2 planned, 4 ideas |
-| `getting-started-with-html` | Getting Started with HTML & CSS | 🔵 In progress | 3 published, 1 planned |
-| `getting-started-with-git` | Getting Started with Git | 🔵 Planned | 0 published, 2 planned, 2 ideas |
+| `modern-python-application` | Modern Python Application Development | 🔵 In progress | 18 published, 4 ideas |
+| `software-architecture-patterns` | Software Architecture Patterns (sub-series of Modern Python Application) | 🔵 In progress | 1 published, 5 ideas |
+| `getting-started-with-html` | Getting Started with HTML & CSS | ✅ Complete | 4 published |
+| `getting-started-with-git` | Getting Started with Git | 🔵 In progress | 2 published, 2 ideas |
 | `getting-started-with-kubernetes-2026` | Getting Started with Kubernetes 2026 | 🔵 Planned | 0 published, 10 ideas |
 | `generative-and-agentic-ai` | Generative and Agentic AI | 🔵 Planned | 0 published, 5 ideas |
 | `android-game-programming` | Android Game Programming | ⚙️ Decision pending | 12 published, stopped mid-series |
@@ -84,22 +84,33 @@ Planned title: **"Modern Python Application Development"**
 
 **Philosophy**: Python is the vehicle, the principles are universal. Every article teaches a pattern applicable in any language.
 
-Current state:
+Current state (order as in `_data/post_sidebar.yml`):
 | # | Title | Status |
 |---|---|---|
-| 1 | How to Set Up Your Next Python Project | ✅ published (2025-11-08) |
-| 2 | Managing Application Configuration in Python with Pydantic Settings | ✅ published (2025-12-30) |
-| 3 | How to Create Cron Jobs in Python for Your Applications | ✅ published (2026-01-02) |
-| 4 | Building a Database Layer in Python with SQLAlchemy ORM | ✅ published (2026-08-24) |
-| 5 | Concurrency in Python: Threads, Processes, and the Event Loop | ✅ published (2026-09-06) |
-| 6 | Async and the Event Loop in Python: asyncio in Practice | ✅ published (2026-09-13) |
-| 7 | Designing REST APIs in Practice: A Kubernetes Case Study | ✅ published (2026-09-16) |
-| 8 | From Domain Design to REST API: Building FastURL with FastAPI | ✅ published (2026-10-03) |
-| 9 | Layered Architecture with FastAPI: Routers, Services, and Repositories | ✅ published (2026-10-06) |
-| 10 | Async, Background Tasks, and Error Handling in FastAPI | ✅ published (2026-10-06) |
-| 11 | Testing Python Applications with pytest: Patterns for Real Code | 🔵 planned (2026-10-13) |
+| 1 | From Requirements to Architecture: Lean Requirements with Personas and Scenarios | ✅ published (2026-11-11) |
+| 2 | How to Set Up Your Next Python Project | ✅ published (2025-11-08) |
+| 3 | Managing Application Configuration in Python with Pydantic Settings | ✅ published (2025-12-30) |
+| 4 | Logging in a Flask Application with Loguru | ✅ published (2025-12-31) |
+| 5 | How to Create Cron Jobs in Python for Your Applications | ✅ published (2026-01-02) |
+| 6 | Building a Database Layer in Python with SQLAlchemy ORM | ✅ published (2026-08-24) |
+| 7 | Concurrency in Python: Threads, Processes, and the Event Loop | ✅ published (2026-09-06) |
+| 8 | Async and the Event Loop in Python: asyncio in Practice | ✅ published (2026-09-13) |
+| 9 | Building a Python CLI with the Command Pattern | ✅ published (2025-11-09) |
+| 10 | Building a Python CLI with Click | ✅ published (2026-01-05) |
+| 11 | Building a Python CLI with Typer | ✅ published (2026-08-11) |
+| 12 | Designing REST APIs in Practice: A Kubernetes Case Study | ✅ published (2026-09-16) |
+| 13 | From Domain Design to REST API: Building FastURL with FastAPI | ✅ published (2026-10-03) |
+| 14 | Layered Architecture with FastAPI: Routers, Services, and Repositories | ✅ published (2026-10-04) |
+| 15 | Async, Background Tasks, and Error Handling in FastAPI | ✅ published (2026-10-06) |
+| 16 | Testing Python Applications with pytest: Patterns for Real Code | ✅ published (2026-10-18) |
+| 17 | Testing FastAPI in Practice: Unit and Integration Tests for a Real Feature | ✅ published (2026-10-20) |
+| 18 | Building a CRUD Web Application with Flask: Three-Tier Architecture with SQLAlchemy and Pydantic | ✅ published (2025-10-23) |
+| 19 | API Design Beyond CRUD: Pagination, Versioning, Idempotency, Rate Limiting, Caching, and Long-Running Operations | 💡 idea |
+| 20 | Authentication and Authorization in Python Web Applications: Sessions, API Keys, OAuth2, and JWT | 💡 idea |
+| 21 | Putting a Reverse Proxy in Front of FastAPI: TLS, Rate Limits, and Load Balancing | 💡 idea |
+| 22 | When You Need an API Gateway: API Keys, Quotas, and Centralized Auth Without a Cloud | 💡 idea |
 
-Next step: write and publish article 11 (pytest) → series complete → compile ebook.
+Next step: the API theory article, then authentication (shared by the FastAPI API and the Flask CRUD app), then the two production articles.
 
 ---
 
@@ -127,16 +138,16 @@ Planned title: **"Software Architecture Patterns"**
 Current state:
 | # | Title | Status |
 |---|---|---|
-| 1 | From Requirements to Architecture: A Decision Guide to Software Architectural Patterns | 🔵 planned (2026-10-19) |
-| 2 | Layered Architecture in Practice: Package by Layer, Feature, and Component | 🔵 planned (2026-10-16) |
-| 3 | Hexagonal Architecture (Ports and Adapters) | 💡 idea |
+| 1 | From Requirements to Architecture: Lean Requirements with Personas and Scenarios | ✅ published (2026-11-11) |
+| 2 | Software Architecture Patterns Explained: Layered, Hexagonal, Clean, Event-Driven, and Hybrid | 💡 idea (overview; layered links to the published FastAPI article) |
+| 3 | Hexagonal Architecture (Ports and Adapters): Isolating Domain from Infrastructure | 💡 idea |
 | 4 | Clean Architecture: Building Testable and Framework-Independent Systems | 💡 idea |
 | 5 | Event-Driven Architecture: Decoupling Systems with Events and Brokers | 💡 idea |
 | 6 | Pragmatic Hybrid Architectures: Combining Patterns for Real-World Systems | 💡 idea |
 
 ---
 
-### 🔵 IN PROGRESS — Getting Started with HTML & CSS
+### ✅ COMPLETE — Getting Started with HTML & CSS
 `post_series_id: getting-started-with-html`
 Planned title: **"Getting Started with HTML & CSS"**
 
@@ -146,7 +157,7 @@ Current state:
 | 1 | Getting Started with HTML: A Beginner's Guide | ✅ published (2023-01-23) |
 | 2 | Mastering the Basics of CSS: A Beginner's Guide | ✅ published (2023-02-13) |
 | 3 | Building a Professional Website Layout with CSS | ✅ published (2026-10-07) |
-| 4 | Building the Complete Website: Real Pages, HTML Forms, and a Photo Gallery | 🔵 planned (2026-10-10) |
+| 4 | Building the Complete Website: Real Pages, HTML Forms, and a Photo Gallery | ✅ published (2026-10-09) |
 
 ---
 
@@ -176,7 +187,7 @@ Priority: **Q4 2026 / Q1 2027**.
 
 ---
 
-### 🔵 PLANNED — Getting Started with Git
+### 🔵 IN PROGRESS — Getting Started with Git
 `post_series_id: getting-started-with-git`
 Planned title: **"Getting Started with Git"**
 
@@ -184,8 +195,8 @@ Planned sequence:
 | # | Title | Status |
 |---|---|---|
 | 1 | What is Git and Basic Commands | 💡 idea |
-| 2 | Beyond Push and Pull: Understanding Git's Core Concepts to Avoid Common Pitfalls | 🔵 planned (import from Medium) |
-| 3 | The Hidden Challenges of Git: Lessons from Working in Large Projects | 🔵 planned (import from Medium) |
+| 2 | The Hidden Challenges of Git: Lessons from Working in Large Projects | ✅ published (2025-09-08, imported from Medium) |
+| 3 | Beyond Push and Pull: Understanding Git's Core Concepts to Avoid Common Pitfalls | ✅ published (2025-09-13, imported from Medium) |
 | 4 | Git Merge vs Rebase: When to Use Which and Why It Matters | 💡 idea |
 
 Ebook: evaluate after completion (may combine with a broader DevOps ebook).
@@ -254,8 +265,8 @@ Status: **deferred to Q3 2027**.
 |---|---|---|
 | Getting Started with Docker 2025 | ✅ Published | — |
 | LangChain Chatbot | ⚠️ Formalise ebook | Q4 2026 |
-| Modern Python App Dev | 🔵 1 article remaining | Q4 2026 |
-| HTML & CSS | 🔵 1 article remaining | Q4 2026 |
+| Modern Python App Dev | 🔵 4 API ideas remaining | Q1 2027 |
+| HTML & CSS | ✅ Complete | — |
 | Software Architecture Patterns | 🔵 Series in progress | Q1 2027 |
 | Kubernetes 2026 | 🔵 Not started | Q2 2027 |
 | Getting Started with Git | 🔵 Not started | Q2 2027 |
@@ -291,22 +302,28 @@ The pace is **1 productive action per week** — not always 1 article per week. 
 - [x] Write "From Domain Design to REST API: Building FastURL with FastAPI"
 - [x] Write "Layered Architecture with FastAPI"
 - [x] Write "Async, Background Tasks, and Error Handling in FastAPI"
-- [ ] Write "Testing Python Applications with pytest" → **series complete → compile ebook**
+- [x] Write "Testing Python Applications with pytest"
+- [x] Write "Testing FastAPI in Practice"
+- [x] Write "From Requirements to Architecture: Lean Requirements" (now Part 1)
+- [x] Import "Building a CRUD Web Application with Flask" from Medium (Part 18)
+- [ ] Write "API Design Beyond CRUD"
+- [ ] Write "Authentication and Authorization in Python Web Applications"
+- [ ] Write "Putting a Reverse Proxy in Front of FastAPI" and "When You Need an API Gateway" → **series complete → compile ebook**
 
 ---
 
 ### Phase 3 — HTML & CSS series close-out
 
 - [x] Write "Building a Professional Website Layout with CSS" (Part 3)
-- [ ] Write "Building the Complete Website" (Part 4) → **series complete → compile ebook**
+- [x] Write "Building the Complete Website" (Part 4) → **series complete → compile ebook**
 
 ---
 
 ### Phase 4 — Software Architecture Patterns (Weeks current+1 to +4)
-*Goal: publish first 2 articles of the new series.*
+*Goal: requirements first, then a map of the patterns, then one article per pattern.*
 
-- [ ] Write "From Requirements to Architecture: A Decision Guide" (Part 1) — planned 2026-10-19
-- [ ] Write "Layered Architecture in Practice" (Part 2) — planned 2026-10-16
+- [x] Write "From Requirements to Architecture: Lean Requirements with Personas and Scenarios" (Part 1) — published 2026-11-11
+- [ ] Write "Software Architecture Patterns Explained" (Part 2, overview) — idea
 - [ ] Write "Hexagonal Architecture" (Part 3) — idea
 - [ ] Write "Clean Architecture" (Part 4) — idea
 - [ ] Write "Event-Driven Architecture" (Part 5) — idea
@@ -334,8 +351,8 @@ The pace is **1 productive action per week** — not always 1 article per week. 
 ### Phase 6 — Git Series + DevOps umbrella (Q1 2027)
 
 - [ ] Write Part 1: "What is Git and Basic Commands"
-- [ ] Import Part 2 from Medium: "Beyond Push and Pull"
-- [ ] Import Part 3 from Medium: "The Hidden Challenges of Git"
+- [x] Import from Medium: "The Hidden Challenges of Git" (published 2025-09-08)
+- [x] Import from Medium: "Beyond Push and Pull" (published 2025-09-13)
 - [ ] Write Part 4: "Git Merge vs Rebase"
 - [ ] Create DevOps landing page / sidebar group linking all 3 sub-series
 - [ ] Evaluate combined DevOps ebook
