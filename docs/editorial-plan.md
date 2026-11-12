@@ -41,7 +41,7 @@ Docker 2025 is the reference implementation. All new series follow this model.
 | `llm-chatbot-langchain` | Build Your Own LLM Chatbot with LangChain | ✅ Complete | 4 published |
 | `agentic-ai-protocols` | Agentic AI: Protocols and Patterns | 🔵 In progress | 2 published, 3 planned |
 | `modern-python-application` | Modern Python Application Development | 🔵 In progress | 18 published, 6 planned, 1 idea |
-| `software-architecture-patterns` | Software Architecture Patterns (sub-series of Modern Python Application) | 🔵 In progress | 1 published, 5 ideas |
+| `software-architecture-patterns` | Software Architecture Patterns (sub-series of Modern Python Application) | 🔵 In progress | 1 published, 7 planned |
 | `getting-started-with-html` | Getting Started with HTML & CSS | ✅ Complete | 4 published |
 | `getting-started-with-git` | Getting Started with Git | 🔵 In progress | 2 published, 2 ideas |
 | `getting-started-with-kubernetes-2026` | Getting Started with Kubernetes 2026 | 🔵 Planned | 0 published, 10 ideas |
@@ -142,12 +142,13 @@ Current state:
 | # | Title | Status |
 |---|---|---|
 | 1 | From Requirements to Architecture: Lean Requirements with Personas and Scenarios | ✅ published (2026-11-11) |
-| 2 | Software Architecture Patterns Explained: Layered, Hexagonal, Clean, Event-Driven, and Hybrid | 🔵 planned (2026-11-16) |
+| 2 | Software Architecture Patterns Explained: Layered, Hexagonal, Clean, Event-Driven, Microservices, and Hybrid | 🔵 planned (2026-11-16) — told as an evolution driven by complexity (script → layered → hexagonal/clean → modular monolith + events → microservices → hybrid); distinguishes internal organization from system structure |
 | 3 | Layered Architecture in Practice: Package by Layer, Feature, and Component | 🔵 planned (2026-11-18) — links "Layered Architecture with FastAPI" as the concrete implementation |
 | 4 | Hexagonal Architecture (Ports and Adapters): Isolating Domain from Infrastructure | 🔵 planned (2026-11-20) |
 | 5 | Clean Architecture: Building Testable and Framework-Independent Systems | 🔵 planned (2026-11-23) |
 | 6 | Event-Driven Architecture: Decoupling Systems with Events and Brokers | 🔵 planned (2026-11-25) |
-| 7 | Pragmatic Hybrid Architectures: Combining Patterns for Real-World Systems | 🔵 planned (2026-11-27) |
+| 7 | Microservices Architecture: When to Split a System and What It Really Costs | 🔵 planned (2026-11-27) |
+| 8 | Pragmatic Hybrid Architectures: Combining Patterns for Real-World Systems | 🔵 planned (2026-12-07) |
 
 ---
 
@@ -327,11 +328,13 @@ The pace is **1 productive action per week** — not always 1 article per week. 
 *Goal: requirements first, then a map of the patterns, then one article per pattern.*
 
 - [x] Write "From Requirements to Architecture: Lean Requirements with Personas and Scenarios" (Part 1) — published 2026-11-11
-- [ ] Write "Software Architecture Patterns Explained" (Part 2, overview) — idea
-- [ ] Write "Hexagonal Architecture" (Part 3) — idea
-- [ ] Write "Clean Architecture" (Part 4) — idea
-- [ ] Write "Event-Driven Architecture" (Part 5) — idea
-- [ ] Write "Pragmatic Hybrid Architectures" (Part 6) — idea → **series complete → compile ebook**
+- [ ] Write "Software Architecture Patterns Explained" (Part 2, overview) — planned 2026-11-16
+- [ ] Write "Layered Architecture in Practice" (Part 3) — planned 2026-11-18
+- [ ] Write "Hexagonal Architecture" (Part 4) — planned 2026-11-20
+- [ ] Write "Clean Architecture" (Part 5) — planned 2026-11-23
+- [ ] Write "Event-Driven Architecture" (Part 6) — planned 2026-11-25
+- [ ] Write "Microservices Architecture" (Part 7) — planned 2026-11-27
+- [ ] Write "Pragmatic Hybrid Architectures" (Part 8) — planned 2026-12-07 → **series complete → compile ebook**
 
 ---
 
@@ -389,7 +392,7 @@ The pace is **1 productive action per week** — not always 1 article per week. 
 | `llm-chatbot-langchain` | Build Your Own LLM Chatbot with LangChain | ✅ Complete |
 | `agentic-ai-protocols` | Agentic AI: Protocols and Patterns | 🔵 In progress (2 of 5) |
 | `modern-python-application` | Modern Python Application Development | 🔵 In progress (10 of 11) |
-| `software-architecture-patterns` | Software Architecture Patterns | 🔵 In progress (0 of 6) |
+| `software-architecture-patterns` | Software Architecture Patterns | 🔵 In progress (1 of 8) |
 | `getting-started-with-html` | Getting Started with HTML & CSS | 🔵 In progress (3 of 4) |
 | `getting-started-with-git` | Getting Started with Git | 🔵 Planned — DevOps sub-series |
 | `getting-started-with-kubernetes-2026` | Getting Started with Kubernetes 2026 | 🔵 Planned — DevOps sub-series |

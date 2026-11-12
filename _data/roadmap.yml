@@ -1414,12 +1414,31 @@
     linkedin: false
     instagram: false
     facebook: false
+- id: microservices-architecture-in-python
+  title: "Microservices Architecture: When to Split a System and What It Really Costs"
+  status: planned
+  category: Software Architecture
+  series: software-architecture-patterns
+  scheduled: 2026-11-27
+  notes: >
+    Microservices work on a different axis from layered/hexagonal/clean: they decide how the
+    system is split and deployed, not how code is organized inside one unit. Each service still
+    needs an internal pattern. Cover modular monolith as the usual intermediate step, service
+    boundaries, data ownership, and the real operational cost. CNCF/SlashData Nov 2025: 46% of
+    backend developers use microservices.
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
 - id: pragmatic-hybrid-architectures-in-python
   title: "Pragmatic Hybrid Architectures: Combining Patterns for Real-World Systems"
   status: planned
   category: Software Architecture
   series: software-architecture-patterns
-  scheduled: 2026-11-27
+  scheduled: 2026-12-07
   distributed:
     medium: false
     substack: false
@@ -1835,11 +1854,18 @@
     facebook: false
 
 - id: choosing-an-architectural-pattern
-  title: "Software Architecture Patterns Explained: Layered, Hexagonal, Clean, Event-Driven, and Hybrid"
-  status: planned
+  title: "Software Architecture Patterns Explained: Layered, Hexagonal, Clean, Event-Driven, Microservices, and Hybrid"
+  status: draft
+  slug: software-architecture-patterns-explained
   category: Software Architecture
   series: software-architecture-patterns
   scheduled: 2026-11-16
+  notes: >
+    Tell the overview as an evolution driven by growing complexity: script (no architecture) →
+    layered → dependency inversion → hexagonal/clean core → modular monolith + events →
+    microservices → hybrid as the real-world outcome. For each step: the signal that triggers it,
+    the folder tree, and when to stop. Not a mandatory ladder: hexagonal and clean are siblings,
+    and most apps should stop well before microservices.
   distributed:
     medium: false
     substack: false
