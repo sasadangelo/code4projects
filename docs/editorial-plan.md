@@ -40,7 +40,7 @@ Docker 2025 is the reference implementation. All new series follow this model.
 | `python-cli` | Python CLI (standalone mini-series) | ✅ Complete | 3 published |
 | `llm-chatbot-langchain` | Build Your Own LLM Chatbot with LangChain | ✅ Complete | 4 published |
 | `agentic-ai-protocols` | Agentic AI: Protocols and Patterns | 🔵 In progress | 2 published, 3 planned |
-| `modern-python-application` | Modern Python Application Development | 🔵 In progress | 18 published, 4 ideas |
+| `modern-python-application` | Modern Python Application Development | 🔵 In progress | 18 published, 6 planned, 1 idea |
 | `software-architecture-patterns` | Software Architecture Patterns (sub-series of Modern Python Application) | 🔵 In progress | 1 published, 5 ideas |
 | `getting-started-with-html` | Getting Started with HTML & CSS | ✅ Complete | 4 published |
 | `getting-started-with-git` | Getting Started with Git | 🔵 In progress | 2 published, 2 ideas |
@@ -105,12 +105,15 @@ Current state (order as in `_data/post_sidebar.yml`):
 | 16 | Testing Python Applications with pytest: Patterns for Real Code | ✅ published (2026-10-18) |
 | 17 | Testing FastAPI in Practice: Unit and Integration Tests for a Real Feature | ✅ published (2026-10-20) |
 | 18 | Building a CRUD Web Application with Flask: Three-Tier Architecture with SQLAlchemy and Pydantic | ✅ published (2025-10-23) |
-| 19 | API Design Beyond CRUD: Pagination, Versioning, Idempotency, Rate Limiting, Caching, and Long-Running Operations | 💡 idea |
-| 20 | Authentication and Authorization in Python Web Applications: Sessions, API Keys, OAuth2, and JWT | 💡 idea |
-| 21 | Putting a Reverse Proxy in Front of FastAPI: TLS, Rate Limits, and Load Balancing | 💡 idea |
-| 22 | When You Need an API Gateway: API Keys, Quotas, and Centralized Auth Without a Cloud | 💡 idea |
+| 19 | API Design Beyond CRUD: Pagination, Versioning, Idempotency, Rate Limiting, Caching, and Long-Running Operations | 🔵 planned (2026-11-30) |
+| 20 | Putting a Reverse Proxy in Front of FastAPI: TLS, Rate Limits, and Load Balancing | 🔵 planned (2026-12-02) |
+| 21 | When You Need an API Gateway: API Keys, Quotas, and Centralized Auth Without a Cloud | 🔵 planned (2026-12-04) |
+| 22 | From CRUD to Web Application: Modeling Users, Events, and Races in Flask | 🔵 planned (2026-12-11) — needs ~1 week of code changes in `sasadangelo/races` first |
+| 23 | Authentication and Authorization for APIs: API Keys, OAuth2, and JWT in FastAPI | 🔵 planned (2026-12-14) |
+| 24 | Authentication and Authorization for Web Applications: Sessions, Login, and Roles in Flask | 🔵 planned (2026-12-16) |
+| 25 | From Domain Model to User Interface: Designing the FastURL Web UI | 💡 idea (one or more articles) |
 
-Next step: the API theory article, then authentication (shared by the FastAPI API and the Flask CRUD app), then the two production articles.
+Goal: cover both kinds of Python application end to end — REST APIs (FastURL, FastAPI) and web applications (races, Flask) — from requirements to production, including authentication for each.
 
 ---
 
@@ -139,11 +142,12 @@ Current state:
 | # | Title | Status |
 |---|---|---|
 | 1 | From Requirements to Architecture: Lean Requirements with Personas and Scenarios | ✅ published (2026-11-11) |
-| 2 | Software Architecture Patterns Explained: Layered, Hexagonal, Clean, Event-Driven, and Hybrid | 💡 idea (overview; layered links to the published FastAPI article) |
-| 3 | Hexagonal Architecture (Ports and Adapters): Isolating Domain from Infrastructure | 💡 idea |
-| 4 | Clean Architecture: Building Testable and Framework-Independent Systems | 💡 idea |
-| 5 | Event-Driven Architecture: Decoupling Systems with Events and Brokers | 💡 idea |
-| 6 | Pragmatic Hybrid Architectures: Combining Patterns for Real-World Systems | 💡 idea |
+| 2 | Software Architecture Patterns Explained: Layered, Hexagonal, Clean, Event-Driven, and Hybrid | 🔵 planned (2026-11-16) |
+| 3 | Layered Architecture in Practice: Package by Layer, Feature, and Component | 🔵 planned (2026-11-18) — links "Layered Architecture with FastAPI" as the concrete implementation |
+| 4 | Hexagonal Architecture (Ports and Adapters): Isolating Domain from Infrastructure | 🔵 planned (2026-11-20) |
+| 5 | Clean Architecture: Building Testable and Framework-Independent Systems | 🔵 planned (2026-11-23) |
+| 6 | Event-Driven Architecture: Decoupling Systems with Events and Brokers | 🔵 planned (2026-11-25) |
+| 7 | Pragmatic Hybrid Architectures: Combining Patterns for Real-World Systems | 🔵 planned (2026-11-27) |
 
 ---
 
@@ -265,7 +269,7 @@ Status: **deferred to Q3 2027**.
 |---|---|---|
 | Getting Started with Docker 2025 | ✅ Published | — |
 | LangChain Chatbot | ⚠️ Formalise ebook | Q4 2026 |
-| Modern Python App Dev | 🔵 4 API ideas remaining | Q1 2027 |
+| Modern Python App Dev | 🔵 6 planned (Nov–Dec 2026) + UI idea | Q4 2026 / Q1 2027 |
 | HTML & CSS | ✅ Complete | — |
 | Software Architecture Patterns | 🔵 Series in progress | Q1 2027 |
 | Kubernetes 2026 | 🔵 Not started | Q2 2027 |

@@ -12,6 +12,7 @@ image: /assets/img/layered-architecture-with-fastapi-routers-services-and-reposi
 excerpt: "Learn how to structure a production-ready FastAPI project using a layered architecture: Routers, Services, Repositories, and Dependency Injection."
 categories:
   - "Programming"
+  - "Software Architecture"
 tags:
   - python
 ---

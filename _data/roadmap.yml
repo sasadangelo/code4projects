@@ -1268,9 +1268,10 @@
     facebook: false
 - id: api-design-requests-and-responses
   title: "API Design Beyond CRUD: Pagination, Versioning, Idempotency, Rate Limiting, Caching, and Long-Running Operations"
-  status: idea
+  status: planned
   category: Programming
   series: modern-python-application
+  scheduled: 2026-11-30
   notes: >
     Theory 1/4. Focus on decisions, not definitions (parameter types already defined in the
     REST design post). Path vs query vs body vs header and when to use which; standard headers
@@ -1287,10 +1288,11 @@
     instagram: false
     facebook: false
 - id: api-authentication-and-authorization-with-fastapi
-  title: "Authentication and Authorization in Python Web Applications: Sessions, API Keys, OAuth2, and JWT"
-  status: idea
+  title: "Authentication and Authorization for APIs: API Keys, OAuth2, and JWT in FastAPI"
+  status: planned
   category: Programming
   series: modern-python-application
+  scheduled: 2026-12-14
   notes: >
     FastURL auth milestone (requirements.md lists RBAC / API keys / OAuth2 as future work).
     401/403 and role concepts already exist in the REST design post: do not repeat them.
@@ -1306,9 +1308,10 @@
     facebook: false
 - id: reverse-proxy-in-front-of-fastapi
   title: "Putting a Reverse Proxy in Front of FastAPI: TLS, Rate Limits, and Load Balancing"
-  status: idea
+  status: planned
   category: Programming
   series: modern-python-application
+  scheduled: 2026-12-02
   notes: >
     NGINX/Caddy/Traefik in Docker Compose in front of FastURL: TLS, per-IP rate limiting (answers the
     open question in requirements.md), timeouts, max body size, slow-client buffering, load
@@ -1323,9 +1326,10 @@
     facebook: false
 - id: api-gateway-vs-reverse-proxy
   title: "When You Need an API Gateway: API Keys, Quotas, and Centralized Auth Without a Cloud"
-  status: idea
+  status: planned
   category: Programming
   series: modern-python-application
+  scheduled: 2026-12-04
   notes: >
     What a gateway adds over the reverse proxy post. Angle: external consumers (API keys, per-plan
     quotas, centralized JWT validation), which makes sense even with the single-service FastURL.
@@ -1352,11 +1356,31 @@
     linkedin: false
     instagram: false
     facebook: false
-- id: hexagonal-architecture-in-python
-  title: "Hexagonal Architecture (Ports and Adapters): Isolating Domain from Infrastructure"
-  status: idea
+- id: layered-architecture-in-python
+  title: "Layered Architecture in Practice: Package by Layer, Feature, and Component"
+  status: planned
   category: Software Architecture
   series: software-architecture-patterns
+  scheduled: 2026-11-18
+  notes: >
+    Dedicated layered-architecture article: layer rules and dependency direction, strict vs
+    relaxed layering, and the three packaging styles (by layer, by feature, by component) with
+    their trade-offs. Needs a multi-entity example (FastURL has a single aggregate, so by-feature
+    packaging would look identical to by-layer); link "Layered Architecture with FastAPI" as the
+    concrete implementation.
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: hexagonal-architecture-in-python
+  title: "Hexagonal Architecture (Ports and Adapters): Isolating Domain from Infrastructure"
+  status: planned
+  category: Software Architecture
+  series: software-architecture-patterns
+  scheduled: 2026-11-20
   distributed:
     medium: false
     substack: false
@@ -1366,9 +1390,10 @@
     facebook: false
 - id: clean-architecture-in-python
   title: "Clean Architecture: Building Testable and Framework-Independent Systems"
-  status: idea
+  status: planned
   category: Software Architecture
   series: software-architecture-patterns
+  scheduled: 2026-11-23
   distributed:
     medium: false
     substack: false
@@ -1378,9 +1403,10 @@
     facebook: false
 - id: event-driven-architecture-in-python
   title: "Event-Driven Architecture: Decoupling Systems with Events and Brokers"
-  status: idea
+  status: planned
   category: Software Architecture
   series: software-architecture-patterns
+  scheduled: 2026-11-25
   distributed:
     medium: false
     substack: false
@@ -1390,9 +1416,10 @@
     facebook: false
 - id: pragmatic-hybrid-architectures-in-python
   title: "Pragmatic Hybrid Architectures: Combining Patterns for Real-World Systems"
-  status: idea
+  status: planned
   category: Software Architecture
   series: software-architecture-patterns
+  scheduled: 2026-11-27
   distributed:
     medium: false
     substack: false
@@ -1809,9 +1836,10 @@
 
 - id: choosing-an-architectural-pattern
   title: "Software Architecture Patterns Explained: Layered, Hexagonal, Clean, Event-Driven, and Hybrid"
-  status: idea
+  status: planned
   category: Software Architecture
   series: software-architecture-patterns
+  scheduled: 2026-11-16
   distributed:
     medium: false
     substack: false
@@ -1829,6 +1857,58 @@
   slug: building-a-crud-web-application-with-flask
   distributed:
     medium: true
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: from-crud-to-web-application-with-flask
+  title: "From CRUD to Web Application: Modeling Users, Events, and Races in Flask"
+  status: planned
+  category: Programming
+  series: modern-python-application
+  scheduled: 2026-12-11
+  notes: >
+    Evolve the races project from a single-entity CRUD app to a real web application with a
+    richer domain (Users -> Events -> Races). Requires about one week of code changes in
+    sasadangelo/races before writing (new release after 0.0.2).
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: web-authentication-and-authorization-with-flask
+  title: "Authentication and Authorization for Web Applications: Sessions, Login, and Roles in Flask"
+  status: planned
+  category: Programming
+  series: modern-python-application
+  scheduled: 2026-12-16
+  notes: >
+    Web-application counterpart of the FastAPI auth article, on the races project: session-based
+    login, registration, profile, and role-based access (the Users entity comes from the
+    "From CRUD to Web Application" article).
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+
+- id: fasturl-ui-design-from-domain-model
+  title: "From Domain Model to User Interface: Designing the FastURL Web UI"
+  status: idea
+  category: Programming
+  series: modern-python-application
+  notes: >
+    One or more articles: derive the FastURL UI (screens, navigation, forms) from domain-design.md,
+    the same way the API was derived from it.
+  distributed:
+    medium: false
     substack: false
     twitter: false
     linkedin: false
