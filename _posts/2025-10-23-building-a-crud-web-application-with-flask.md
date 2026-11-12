@@ -2,7 +2,7 @@
 layout: post
 title: "Building a CRUD Web Application with Flask: Three-Tier Architecture with SQLAlchemy and Pydantic"
 post_series_id: modern-python-application
-date: 2026-11-12
+date: 2025-10-23
 author: sasadangelo
 slug: building-a-crud-web-application-with-flask
 image: /assets/img/building-a-crud-web-application-with-flask-hero.svg

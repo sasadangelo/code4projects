@@ -1908,7 +1908,7 @@
   status: published
   category: Programming
   series: modern-python-application
-  scheduled: 2026-11-12
+  scheduled: 2025-10-23
   slug: building-a-crud-web-application-with-flask
   distributed:
     medium: true
