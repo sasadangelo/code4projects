@@ -35,6 +35,8 @@
     link: /testing-python-applications-with-pytest-patterns-for-real-code/
   - name: "Part 17: Testing FastAPI in Practice: Unit and Integration Tests for a Real Feature"
     link: /testing-fastapi-in-practice/
+  - name: "Part 18: Building a CRUD Web Application with Flask: Three-Tier Architecture with SQLAlchemy and Pydantic"
+    link: /building-a-crud-web-application-with-flask/
 
 - post_series_id: building-rest-apis
   post_series_title: "Building REST APIs: From Design to Production"

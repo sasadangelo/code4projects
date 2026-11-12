@@ -20,7 +20,7 @@ Logging is a core component of any production-ready Python application. It provi
 
 In a Flask application, logging spans request handling, business logic, and integrations with external systems. A consistent logging strategy is essential to understand failures and execution flows over time.
 
-This article shows how to configure logging for an entire Flask application, following the same three-tier architecture described in [Building a Flask Application Using Three-Tier Architecture with Python and SQLAlchemy](https://medium.com/python-in-plain-english/building-a-flask-application-using-three-tier-architecture-with-python-and-sqlalchemy-649151a7866f).
+This article shows how to configure logging for an entire Flask application, following the same three-tier architecture described in [Building a CRUD Web Application with Flask]({{ site.baseurl }}/building-a-crud-web-application-with-flask/).
 
 The focus is on a centralized logging setup and on using logging where it actually adds value, rather than relying on scattered `print()` statements or ad-hoc debugging.
 

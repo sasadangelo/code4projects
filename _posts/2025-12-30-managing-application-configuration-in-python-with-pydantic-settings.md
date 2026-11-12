@@ -31,7 +31,7 @@ Configuration itself can be further divided into two categories:
 - **secrets** (passwords, tokens, API keys, secret keys)
 - **non-secret configuration parameters** (ports, hostnames, log levels, feature flags, file paths)
 
-This article builds a **reusable Python configuration module** that plugs into virtually any project. As a concrete example, we use the **Running Races** application introduced in [Building a Flask Application Using Three-Tier Architecture with Python and SQLAlchemy](https://medium.com/python-in-plain-english/building-a-flask-application-using-three-tier-architecture-with-python-and-sqlalchemy-649151a7866f).
+This article builds a **reusable Python configuration module** that plugs into virtually any project. As a concrete example, we use the **Running Races** application introduced in [Building a CRUD Web Application with Flask]({{ site.baseurl }}/building-a-crud-web-application-with-flask/).
 
 Although the reference project is a Flask application, the configuration approach is framework-agnostic and reusable as-is in other Python applications. The tool doing the heavy lifting is **pydantic-settings**, a library built on top of Pydantic specifically designed for managing application configuration.
 
@@ -240,7 +240,7 @@ From that point on, `settings` becomes the single source of truth for the entire
 
 In short, the `Settings` class provides a clean, declarative configuration layer where parsing, validation, and defaults are handled in one place, and the application either starts with a valid configuration or does not start at all.
 
-Check out the [running-races repository on GitHub](https://github.com/sasadangelo/running-races).
+Check out the [races repository on GitHub](https://github.com/sasadangelo/races).
 
 ## Configuration vs Logging: Dependency Direction
 

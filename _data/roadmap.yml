@@ -1902,3 +1902,18 @@
     linkedin: false
     instagram: false
     facebook: false
+
+- id: building-a-crud-web-application-with-flask
+  title: "Building a CRUD Web Application with Flask: Three-Tier Architecture with SQLAlchemy and Pydantic"
+  status: published
+  category: Programming
+  series: modern-python-application
+  scheduled: 2026-11-12
+  slug: building-a-crud-web-application-with-flask
+  distributed:
+    medium: true
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false

@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1a44"/>
+      <stop offset="0.55" stop-color="#0d2f78"/>
+      <stop offset="1" stop-color="#0a1a44"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.6" r="0.55">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16346f"/>
+      <stop offset="1" stop-color="#0c2154"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="tip" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="760" height="400" fill="url(#bg)"/>
+  <rect width="760" height="400" fill="url(#halo)"/>
+
+  <!-- Circuit decoration -->
+  <g stroke="#3b82f6" stroke-opacity="0.18" stroke-width="1" fill="none">
+    <path d="M0 110 H40 L60 90 H130"/>
+    <path d="M760 110 H720 L700 90 H630"/>
+    <path d="M0 375 H30 L50 355 H90"/>
+    <path d="M760 375 H730 L710 355 H670"/>
+  </g>
+  <g fill="#60a5fa" fill-opacity="0.5">
+    <circle cx="130" cy="90" r="2"/><circle cx="630" cy="90" r="2"/>
+    <circle cx="90" cy="355" r="2"/><circle cx="670" cy="355" r="2"/>
+  </g>
+
+  <!-- Title -->
+  <text x="380" y="48" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="27" font-weight="800" fill="#ffffff" filter="url(#softglow)">Building a CRUD Web Application with Flask</text>
+  <text x="380" y="76" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="15" fill="#bfd6ff">Three-Tier Architecture with SQLAlchemy and Pydantic</text>
+
+  <!-- Tier labels -->
+  <g font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#93c5fd" text-anchor="middle" letter-spacing="1">
+    <text x="133" y="110">PRESENTATION</text>
+    <text x="400" y="110">APPLICATION</text>
+    <text x="652" y="110">DATABASE</text>
+  </g>
+
+  <!-- ── Left: browser with the races page ── -->
+  <rect x="34" y="122" width="198" height="214" rx="10" fill="none" stroke="#3b82f6" stroke-width="2" filter="url(#glow)"/>
+  <rect x="34" y="122" width="198" height="214" rx="10" fill="url(#panel)" stroke="#3b82f6" stroke-width="1.5"/>
+  <circle cx="48" cy="135" r="3.5" fill="#ef4444"/><circle cx="60" cy="135" r="3.5" fill="#f59e0b"/><circle cx="72" cy="135" r="3.5" fill="#10b981"/>
+  <text x="222" y="139" text-anchor="end" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="#93c5fd">/races</text>
+  <!-- navbar -->
+  <rect x="44" y="150" width="178" height="22" rx="4" fill="#2563eb"/>
+  <text x="54" y="165" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#ffffff">🏃 Gare Podistiche</text>
+  <!-- table rows -->
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="9.5" fill="#cbd5e1">
+    <rect x="44" y="180" width="178" height="22" rx="3" fill="#ffffff" fill-opacity="0.06"/>
+    <text x="52" y="195">Roma · 21 km</text>
+    <rect x="44" y="206" width="178" height="22" rx="3" fill="#ffffff" fill-opacity="0.06"/>
+    <text x="52" y="221">Ostia · 10 km</text>
+    <rect x="44" y="232" width="178" height="22" rx="3" fill="#ffffff" fill-opacity="0.06"/>
+    <text x="52" y="247">Tivoli · 15 km</text>
+  </g>
+  <g fill="none" stroke-width="1.4">
+    <rect x="178" y="185" width="16" height="12" rx="2" stroke="#fbbf24"/>
+    <rect x="198" y="185" width="16" height="12" rx="2" stroke="#f87171"/>
+    <rect x="178" y="211" width="16" height="12" rx="2" stroke="#fbbf24"/>
+    <rect x="198" y="211" width="16" height="12" rx="2" stroke="#f87171"/>
+    <rect x="178" y="237" width="16" height="12" rx="2" stroke="#fbbf24"/>
+    <rect x="198" y="237" width="16" height="12" rx="2" stroke="#f87171"/>
+  </g>
+  <!-- create button -->
+  <rect x="44" y="266" width="86" height="22" rx="4" fill="#10b981"/>
+  <text x="87" y="281" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="10" font-weight="700" fill="#ffffff">+ Nuova gara</text>
+  <text x="133" y="320" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="#93c5fd">Jinja2 · Bootstrap 5</text>
+
+  <path d="M238 152 H284" stroke="#38bdf8" stroke-width="3" fill="none" marker-end="url(#tip)"/>
+
+  <!-- ── Center: application layers ── -->
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+    <rect x="292" y="126" width="176" height="52" rx="8" fill="url(#panel)" stroke="#38bdf8" stroke-width="1.5" filter="url(#glow)"/>
+    <text x="380" y="150" fill="#bae6fd">Controllers</text>
+    <text x="380" y="167" font-size="9.5" font-weight="400" fill="#7dd3fc" font-family="ui-monospace,Menlo,monospace">RaceController</text>
+
+    <rect x="292" y="202" width="176" height="52" rx="8" fill="url(#panel)" stroke="#a78bfa" stroke-width="1.5" filter="url(#glow)"/>
+    <text x="380" y="226" fill="#ddd6fe">Services</text>
+    <text x="380" y="243" font-size="9.5" font-weight="400" fill="#c4b5fd" font-family="ui-monospace,Menlo,monospace">RaceService</text>
+
+    <rect x="292" y="278" width="176" height="52" rx="8" fill="url(#panel)" stroke="#34d399" stroke-width="1.5" filter="url(#glow)"/>
+    <text x="380" y="302" fill="#a7f3d0">Models (DAO)</text>
+    <text x="380" y="319" font-size="9.5" font-weight="400" fill="#6ee7b7" font-family="ui-monospace,Menlo,monospace">RaceDAO</text>
+  </g>
+  <g stroke="#38bdf8" stroke-width="2" fill="none">
+    <line x1="380" y1="180" x2="380" y2="196" marker-end="url(#tip)"/>
+    <line x1="380" y1="256" x2="380" y2="272" marker-end="url(#tip)"/>
+  </g>
+
+  <!-- DTO badge crossing layers -->
+  <rect x="478" y="196" width="56" height="64" rx="8" fill="#f59e0b" fill-opacity="0.15" stroke="#fbbf24" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <text x="506" y="222" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="12" font-weight="700" fill="#fde68a">DTO</text>
+  <text x="506" y="238" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="#fcd34d">Race</text>
+  <text x="506" y="251" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="8.5" fill="#fcd34d">Pydantic</text>
+
+  <path d="M470 304 C540 304 560 270 596 262" stroke="#38bdf8" stroke-width="3" fill="none" marker-end="url(#tip)"/>
+
+  <!-- ── Right: SQLite database ── -->
+  <g filter="url(#glow)">
+    <path d="M604 168 V282 A48 14 0 0 0 700 282 V168" fill="url(#panel)" stroke="#38bdf8" stroke-width="1.8"/>
+    <ellipse cx="652" cy="168" rx="48" ry="14" fill="#1e3a8a" stroke="#38bdf8" stroke-width="1.8"/>
+  </g>
+  <path d="M604 206 A48 14 0 0 0 700 206 M604 244 A48 14 0 0 0 700 244" fill="none" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1.2"/>
+  <text x="652" y="232" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif" font-size="14" font-weight="700" fill="#bae6fd">SQLite</text>
+  <text x="652" y="320" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="#93c5fd">SQLAlchemy ORM</text>
+
+  <!-- CRUD chips -->
+  <g font-family="ui-monospace,Menlo,monospace" font-size="10.5" font-weight="700" text-anchor="middle">
+    <rect x="254" y="352" width="56" height="22" rx="11" fill="#10b981" fill-opacity="0.2" stroke="#34d399"/>
+    <text x="282" y="367" fill="#a7f3d0">Create</text>
+    <rect x="318" y="352" width="56" height="22" rx="11" fill="#38bdf8" fill-opacity="0.2" stroke="#38bdf8"/>
+    <text x="346" y="367" fill="#bae6fd">Read</text>
+    <rect x="382" y="352" width="60" height="22" rx="11" fill="#f59e0b" fill-opacity="0.2" stroke="#fbbf24"/>
+    <text x="412" y="367" fill="#fde68a">Update</text>
+    <rect x="450" y="352" width="60" height="22" rx="11" fill="#ef4444" fill-opacity="0.2" stroke="#f87171"/>
+    <text x="480" y="367" fill="#fecaca">Delete</text>
+  </g>
+</svg>
