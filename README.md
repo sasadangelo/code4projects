@@ -69,7 +69,7 @@ Each step is handled by a dedicated Bob skill:
 |-------|---------|
 | `blog-advisor` | Strategic review, gap analysis, content direction |
 | `idea-evaluator` | Evaluate a new idea (rubric + duplicate check) |
-| `roadmap-manager` | Manage `_data/roadmap.yml` — pipeline, scheduling, distribution tracking |
+| `calendar` | Manage `_data/roadmap.yml` — pipeline, scheduling, distribution tracking |
 | `post-planner` | Turn an approved idea into a full outline and front matter |
 | `post-writer` | Write the complete draft in `_drafts/` |
 | `post-reviewer` | Review a draft against the style guide |
@@ -87,9 +87,9 @@ Post ideas, drafts, and distribution status are tracked in [`_data/roadmap.yml`]
 View the pipeline from the terminal:
 
 ```bash
-python3 .bob/skills/roadmap-manager/roadmap.py show      # full pipeline by status
-python3 .bob/skills/roadmap-manager/roadmap.py calendar  # upcoming scheduled posts
-python3 .bob/skills/roadmap-manager/roadmap.py gaps      # published but not distributed
+python3 .bob/skills/blog-calendar/roadmap.py show      # full pipeline by status
+python3 .bob/skills/blog-calendar/roadmap.py calendar  # upcoming scheduled posts
+python3 .bob/skills/blog-calendar/roadmap.py gaps      # published but not distributed
 ```
 
 ---

@@ -1,14 +1,14 @@
 ---
 name: blog
-description: "Full-lifecycle blog engine with 11 sub-skills. Routes requests to the right sub-skill: blog-advisor, blog-idea, blog-illustrator, blog-medium-importer, blog-planner, blog-research, blog-review, blog-roadmap-manager, blog-social, blog-style, blog-writer."
+description: "Full-lifecycle blog engine with 11 sub-skills. Routes requests to the right sub-skill: blog-advisor, blog-idea, blog-illustrator, blog-medium-importer, blog-planner, blog-research, blog-review, blog-calendar, blog-social, blog-style, blog-writer."
 metadata:
   disable-model-invocation: true
-  argument-hint: [illustrate|write|idea|medium-importer|planner|research|reviewer|roadmap-manager|social|style|writer]
+  argument-hint: [illustrate|write|idea|medium-importer|planner|research|reviewer|calendar|social|style|writer]
 ---
 
 # Blog: Engine for Content Management
 
-Full-lifecycle blog management: idea, illustrator, medium-importer, planner, research, reviewer, roadmap-manager, social, style, writer.
+Full-lifecycle blog management: idea, illustrator, medium-importer, planner, research, reviewer, calendar, social, style, writer.
 
 ## Quick Reference
 
@@ -21,7 +21,7 @@ Full-lifecycle blog management: idea, illustrator, medium-importer, planner, res
 | /blog illustrator <topic>     | Generate the hero SVG + inline diagrams after writing |
 | /blog review <topic>          | Evaluate a new blog post before publish it          |
 | /blog medium-importer <topic> | Import an article from Medium.com                   |
-| /blog roadmap-manager         | Define a roadmap for blog content                   |
+| /blog calendar         | Manage the editorial calendar and distribution                   |
 | /blog social                  | Write social content to promote a blog post         |
 | /blog style                   | Define the style of blog post                       |
 
@@ -30,7 +30,7 @@ Full-lifecycle blog management: idea, illustrator, medium-importer, planner, res
 For every new post, follow this exact sequence:
 
 ```
-idea → planner → research → writer → illustrator → review → (roadmap-manager) → social
+idea → planner → research → writer → illustrator → review → (calendar) → social
 ```
 
 | Step | Command | Output |
@@ -41,7 +41,7 @@ idea → planner → research → writer → illustrator → review → (roadmap
 | 4. Write draft | `/blog write <topic>` | `_drafts/<slug>.md` |
 | 5. Illustrate | `/blog illustrator <slug>` | hero `<slug>-hero.svg` + inline `<slug>-<concept>.svg` → `assets/img/` |
 | 6. Review | `/blog review <topic>` | prioritised fix list; apply fixes |
-| 7. Publish | `/blog roadmap-manager` | update roadmap status to `published` |
+| 7. Publish | `/blog calendar` | update roadmap status to `published` |
 | 8. Promote | `/blog social` | Twitter/X, LinkedIn, Substack copy (Instagram, Facebook paused) |
 
 > **Illustrator note:** Step 5 is mandatory for every post. It generates at minimum a **hero image** (`<slug>-hero.svg`) and adds as many inline diagrams as are needed to replace prose the reader would otherwise have to imagine. The goal is ≥1 inline diagram per major concept.
@@ -60,7 +60,7 @@ idea → planner → research → writer → illustrator → review → (roadmap
    illustrate | illustrator -> blog-illustrator (Generate hero SVG and inline diagrams after writing)
    medium-importer → blog-medium-importer (Import an article from Medium.com)
    review → blog-review (Evaluate a new blog post before publish it)
-   roadmap-manager → blog-roadmap-manager (Define a roadmap for blog content)
+   calendar → blog-calendar (Manage the editorial calendar and distribution)
    social → blog-social (Write social content to promote a blog post)
    style → blog-style (Define the style of blog post)
 

@@ -24,7 +24,7 @@ Read these files before any analysis:
 1. `_data/roadmap.yml` — the full post corpus and pipeline
 2. `_config.yml` — blog identity, categories, author
 3. `docs/EDITORIAL_PLAN.md` — strategic direction, active series, week-by-week plan
-4. Run `python3 .bob/skills/roadmap-manager/roadmap.py show` to get the status overview
+4. Run `python3 .bob/skills/blog-calendar/roadmap.py show` to get the status overview
 
 From this, extract:
 - Total published posts by category

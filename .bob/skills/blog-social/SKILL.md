@@ -113,7 +113,7 @@ Ask the user which channels were actually posted (do not assume all were), then 
 
 ## Paused channels
 
-Instagram and Facebook are paused. To reactivate one, move its section back into Step 2, add it to the Step 3 output format, and add it back to `ACTIVE_CHANNELS` in `.claude/skills/blog-roadmap-manager/roadmap.py`.
+Instagram and Facebook are paused. To reactivate one, move its section back into Step 2, add it to the Step 3 output format, and add it back to `ACTIVE_CHANNELS` in `.claude/skills/blog-calendar/roadmap.py`.
 
 ### Instagram Caption (paused)
 

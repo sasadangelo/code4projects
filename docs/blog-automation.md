@@ -10,7 +10,7 @@ This document describes the full lifecycle of a blog post, from idea to social d
 ## Full Pipeline
 
 ```
-idea → planner → research → writer → illustrator → review → roadmap-manager → social
+idea → planner → research → writer → illustrator → review → calendar → social
 ```
 
 | Step | Command | Skill | Output |
@@ -21,7 +21,7 @@ idea → planner → research → writer → illustrator → review → roadmap-
 | 4 | `/blog write <topic>` | `blog-writer` | `_drafts/<slug>.md` |
 | 5 | `/blog illustrator <slug>` | `blog-illustrator` | `assets/img/<slug>-hero.svg` + inline `assets/img/<slug>-<concept>.svg` |
 | 6 | `/blog review <topic>` | `blog-review` | prioritised fix list; fixes applied inline |
-| 7 | `/blog roadmap-manager` | `blog-roadmap-manager` | roadmap entry updated to `published` |
+| 7 | `/blog calendar` | `blog-calendar` | roadmap entry updated to `published` |
 | 8 | `/blog social` | `blog-social` | Twitter/X, LinkedIn, Instagram, Facebook, Substack copy |
 
 ---
@@ -128,7 +128,7 @@ Checks:
 
 ---
 
-### Step 7 — Roadmap Manager (`blog-roadmap-manager`)
+### Step 7 — Blog Calendar (`blog-calendar`)
 
 Updates `_data/roadmap.yml` after the post is published:
 - `status: published`
@@ -158,7 +158,7 @@ Generates ready-to-post social copy for all active channels:
 For posts imported from Medium, replace steps 3–4 with the `blog-medium-importer` skill:
 
 ```
-idea → planner → medium-importer → illustrator → review → roadmap-manager → social
+idea → planner → medium-importer → illustrator → review → calendar → social
 ```
 
 The importer converts Medium HTML to Jekyll Markdown, downloads images, resolves internal links, and sets front matter. After import, run `blog-illustrator` to replace any downloaded raster images with native SVG diagrams where appropriate, then proceed to review.
@@ -175,5 +175,5 @@ The importer converts Medium HTML to Jekyll Markdown, downloads images, resolves
 | `blog-writer` | `/blog write` | plan, research notes | `_drafts/<slug>.md`, `_data/roadmap.yml` (status → draft) |
 | `blog-illustrator` | `/blog illustrator` | `_drafts/<slug>.md` | `assets/img/<slug>-*.svg`, updates draft |
 | `blog-review` | `/blog review` | `_drafts/<slug>.md` | fixes applied to draft |
-| `blog-roadmap-manager` | `/blog roadmap-manager` | — | `_data/roadmap.yml`, `docs/EDITORIAL_PLAN.md` |
+| `blog-calendar` | `/blog calendar` | — | `_data/roadmap.yml`, `docs/EDITORIAL_PLAN.md` |
 | `blog-social` | `/blog social` | published post | social copy (chat output only) |

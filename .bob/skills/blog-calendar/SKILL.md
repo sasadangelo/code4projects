@@ -1,9 +1,9 @@
 ---
-name: blog-roadmap-manager
-description: Use when the user wants to manage the blog roadmap — add ideas, change status, schedule posts, view the pipeline, check what is published but not yet distributed, or update distribution flags.
+name: blog-calendar
+description: Use when the user wants to manage the blog calendar — add ideas, change status, schedule posts, view the pipeline, check what is published but not yet distributed, or update distribution flags.
 ---
 
-# Roadmap Manager — Code4Projects
+# Blog Calendar — Code4Projects
 
 The roadmap lives in `_data/roadmap.yml`. Every idea, draft, and published post is tracked there as a single entry. This skill manages that file.
 
@@ -60,7 +60,7 @@ Use only these values in `category:`:
 
 When the user asks to see the roadmap, pipeline, calendar, or backlog:
 
-1. Run `python3 .bob/skills/blog-roadmap-manager/roadmap.py show` with `execute_command`.
+1. Run `python3 .bob/skills/blog-calendar/roadmap.py show` with `execute_command`.
 2. Present the output as a formatted table grouped by status.
 
 ### 2. Add an idea
@@ -85,7 +85,7 @@ When the user promotes an idea to planned/draft/published, or demotes it:
 When the user sets or changes a publication date:
 
 1. Use `apply_diff` to update `scheduled:` on the matching entry.
-2. Run `python3 .bob/skills/blog-roadmap-manager/roadmap.py calendar` to show the updated calendar.
+2. Run `python3 .bob/skills/blog-calendar/roadmap.py calendar` to show the updated calendar.
 
 ### 5. Mark as distributed
 
@@ -98,7 +98,7 @@ When the user says a post has been published on a channel:
 
 When the user asks what is published but not yet distributed:
 
-1. Run `python3 .bob/skills/blog-roadmap-manager/roadmap.py gaps` with `execute_command`.
+1. Run `python3 .bob/skills/blog-calendar/roadmap.py gaps` with `execute_command`.
 2. Show the output as a table: post title × channel, ❌ for missing, ✅ for done.
 
 ### 7. Remove an entry

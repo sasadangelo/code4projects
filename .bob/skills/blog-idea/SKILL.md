@@ -12,7 +12,7 @@ When this skill activates, evaluate a blog post idea rigorously before any writi
 Run the following command to get the full list of published and planned posts:
 
 ```
-python3 .bob/skills/blog-roadmap-manager/roadmap.py show
+python3 .bob/skills/blog-calendar/roadmap.py show
 ```
 
 Read `_data/roadmap.yml` with `read_file` to have the full data available.
