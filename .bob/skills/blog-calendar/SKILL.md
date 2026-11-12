@@ -53,6 +53,7 @@ Use only these values in `category:`:
 - `Project Management`
 - `Design Patterns`
 - `Software Architecture`
+- `DevOps`
 
 ## Operations
 

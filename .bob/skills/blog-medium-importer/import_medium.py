@@ -64,6 +64,7 @@ ALLOWED_CATEGORIES = [
     "Project Management",
     "Design Patterns",
     "Software Architecture",
+    "DevOps",
 ]
 
 CTA_BLOCK = (
