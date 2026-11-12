@@ -11,9 +11,6 @@ categories:
   - "Programming"
 ---
 
-# Building a CRUD Web Application with Flask: Three-Tier Architecture with SQLAlchemy and Pydantic
-_Posted on **{{ page.date | date_to_string }}**_
-
 ![Building a CRUD Web Application with Flask: Three-Tier Architecture with SQLAlchemy and Pydantic]({{ site.baseurl }}/assets/img/building-a-crud-web-application-with-flask-hero.svg){:width="760" height="400" .responsive_img}
 
 ## Introduction
