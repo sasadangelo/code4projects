@@ -11,6 +11,7 @@ image: /assets/img/lean-requirements-personas-and-scenarios-hero.svg
 excerpt: "Requirements without the paperwork: actors, main and alternative scenarios, and acceptance criteria in one Markdown file that stays in sync with the code."
 categories:
   - "Software Architecture"
+  - "Programming"
 ---
 
 ![From Requirements to Architecture: Lean Requirements with Personas and Scenarios]({{ site.baseurl }}/assets/img/lean-requirements-personas-and-scenarios-hero.svg){:width="760" height="400" .responsive_img}

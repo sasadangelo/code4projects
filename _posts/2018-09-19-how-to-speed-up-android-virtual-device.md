@@ -8,7 +8,6 @@ image: /wp-content/uploads/2018/09/android_virtual_device-mini.jpg
 excerpt: In this article, I will show you how to speed up Android Virtual Device in order to run your application simulation quickly.
 categories: Android
 tags:
-  - android
   - game-programming
 ---
 

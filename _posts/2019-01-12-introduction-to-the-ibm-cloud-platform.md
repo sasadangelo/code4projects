@@ -8,7 +8,6 @@ image: /wp-content/uploads/2019/01/IBM-Cloud.png
 excerpt: "In this article, I would like to go into the details of Cloud Computing analyzing one of the most important platforms on the market: IBM Cloud."
 categories: Cloud
 tags:
-  - cloud
   - ibm-cloud
 ---
 

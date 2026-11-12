@@ -9,7 +9,6 @@ image: /wp-content/uploads/Amazon-RDS.png
 excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
 categories: Cloud
 tags:
-  - cloud
   - aws
 ---
 

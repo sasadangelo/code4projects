@@ -11,9 +11,8 @@ excerpt: Learn how Docker networking works — bridge, host, overlay, and macvla
 categories:
   - Virtualization
   - Networking
+  - DevOps
 tags:
-  - virtualization
-  - networking
   - docker
 ---
 

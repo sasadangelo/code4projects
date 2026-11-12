@@ -9,7 +9,6 @@ excerpt: A practical guide to setting up a professional Python project with the 
 categories:
   - "Programming"
 tags:
-  - programming
   - python
 ---
 

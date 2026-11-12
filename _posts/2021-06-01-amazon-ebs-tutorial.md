@@ -8,7 +8,6 @@ image: /wp-content/uploads/2021/06/Amazon_EBS.png
 excerpt: In the previous article, I talked about Amazon Elastic Block Storage (EBS) service and this is a hands-on tutorial the will help you to learn how to use it.
 categories: Cloud
 tags:
-  - cloud
   - aws
 ---
 

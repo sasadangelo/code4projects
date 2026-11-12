@@ -9,6 +9,7 @@ image: /assets/img/hidden-challenges-of-git-lessons-from-large-projects-hero.svg
 excerpt: "Git lessons from large projects: a branching strategy, task branches, release candidates, hotfixes, and when small teams can simplify."
 categories:
   - "Programming"
+  - "DevOps"
 ---
 
 # The Hidden Challenges of Git: Lessons from Working in Large Projects

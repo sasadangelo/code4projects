@@ -10,7 +10,6 @@ excerpt: Discover how Agile methodology revolutionizes project management by emb
 categories:
   - "Project Management"
 tags:
-  - project-management
   - agile
 ---
 

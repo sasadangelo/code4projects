@@ -8,7 +8,6 @@ image: /wp-content/uploads/2017/03/youtube.png
 excerpt: In this article, I would like to show you how to install a Youtube add-on on Kodi. This allows you to watch Youtube videos on your TV.
 categories: Multimedia
 tags:
-  - multimedia
   - raspberry
   - kodi
 ---

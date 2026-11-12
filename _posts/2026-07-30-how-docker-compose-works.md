@@ -10,8 +10,8 @@ image: /assets/img/docker-compose.svg
 excerpt: Learn how Docker Compose v2 works — define, build, and run multi-container applications with a single YAML file and a single command.
 categories:
   - Virtualization
+  - DevOps
 tags:
-  - virtualization
   - docker
 ---
 

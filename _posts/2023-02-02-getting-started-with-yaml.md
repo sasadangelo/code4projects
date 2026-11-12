@@ -9,7 +9,6 @@ excerpt: YAML, short for Yet Another Markup Language, is a popular data serializ
 categories:
   - Programming
 tags:
-  - programming
   - yaml
 ---
 

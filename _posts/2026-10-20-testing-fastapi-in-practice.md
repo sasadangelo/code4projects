@@ -12,7 +12,6 @@ excerpt: "Unit and integration tests for a real FastAPI feature: main path first
 categories:
   - "Programming"
 tags:
-  - programming
   - python
   - fastapi
   - testing

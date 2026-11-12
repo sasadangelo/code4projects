@@ -10,7 +10,6 @@ excerpt: Learn how to build a clean, transactional database layer in Python usin
 categories:
   - "Programming"
 tags:
-  - programming
   - python
 ---
 

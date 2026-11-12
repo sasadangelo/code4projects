@@ -12,7 +12,6 @@ excerpt: "Learn how to design robust, domain-driven REST APIs using HTTP semanti
 categories:
   - "Programming"
 tags:
-  - programming
   - kubernetes
   - python
 ---

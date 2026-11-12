@@ -9,7 +9,6 @@ excerpt: Turn your plain HTML site into a professional layout — styled header,
 categories:
   - Programming
 tags:
-  - programming
   - html
   - css
 author: sasadangelo

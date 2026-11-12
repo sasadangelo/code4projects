@@ -8,7 +8,6 @@ image: /wp-content/uploads/2021/02/AWS-Pricing.jpg
 excerpt: In this article, I would like to give you a brief introduction to Kubernetes and how to deploy applications on it.
 categories: Cloud
 tags:
-  - cloud
   - aws
 ---
 

@@ -11,8 +11,6 @@ categories:
 - Networking
 - Virtualization
 tags:
-  - networking
-  - virtualization
   - docker
 ---
 

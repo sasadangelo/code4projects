@@ -12,7 +12,6 @@ excerpt: "Async I/O, fire-and-forget background tasks, a shared httpx client, an
 categories:
   - "Programming"
 tags:
-  - programming
   - python
 ---
 

@@ -11,8 +11,6 @@ categories:
 - Virtualization
 - Database
 tags:
-  - virtualization
-  - database
   - docker
 ---
 

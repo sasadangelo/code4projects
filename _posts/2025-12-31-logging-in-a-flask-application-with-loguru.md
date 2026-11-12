@@ -9,7 +9,6 @@ excerpt: Learn how to centralize logging in a Flask application with Loguru, inc
 categories:
   - "Programming"
 tags:
-  - programming
   - python
 ---
 

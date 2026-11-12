@@ -13,7 +13,6 @@ excerpt: "Build a real async news aggregator step by step — fetching RSS feeds
 categories:
   - "Programming"
 tags:
-  - programming
   - python
 ---
 

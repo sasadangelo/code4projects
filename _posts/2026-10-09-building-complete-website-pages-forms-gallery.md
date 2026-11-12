@@ -9,7 +9,6 @@ excerpt: Build the real inner pages of your site — About Me, Start Here, Resou
 categories:
   - Programming
 tags:
-  - programming
   - html
   - css
 author: sasadangelo

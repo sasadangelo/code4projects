@@ -9,7 +9,6 @@ image: /wp-content/uploads/2021/06/Elastic-Load-Balancer.png
 excerpt: In this article, I want to show you how to create your first AWS Elastic Load Balancer in the Amazon AWS platform.
 categories: Cloud
 tags:
-  - cloud
   - aws
 ---
 

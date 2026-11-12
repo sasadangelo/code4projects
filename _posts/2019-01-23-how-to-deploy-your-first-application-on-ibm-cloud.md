@@ -9,7 +9,6 @@ image: /wp-content/uploads/2019/01/Tetris_mini.png
 excerpt: In this article, I want to show how to deploy your first application on IBM Cloud.
 categories: Cloud
 tags:
-  - cloud
   - ibm-cloud
 ---
 

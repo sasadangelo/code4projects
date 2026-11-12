@@ -9,7 +9,6 @@ excerpt: In this article I want to explain basic video game programming principl
 categories:
 - Programming
 tags:
-  - programming
   - game-programming
 ---
 

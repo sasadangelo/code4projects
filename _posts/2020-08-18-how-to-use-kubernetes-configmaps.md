@@ -8,7 +8,6 @@ image: /wp-content/uploads/2020/08/kubernetes-configmap.jpg
 excerpt: In this article, I would like to explain how to manage application configuration in Kubernetes with ConfigMaps.
 categories: Virtualization
 tags:
-  - virtualization
   - kubernetes
 ---
 

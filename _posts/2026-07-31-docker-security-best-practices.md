@@ -8,8 +8,8 @@ image: /assets/img/docker-security.svg
 excerpt: Learn how to run Docker containers securely — non-root users, read-only filesystems, capability limits, secret management, and image vulnerability scanning.
 categories:
   - Virtualization
+  - DevOps
 tags:
-  - virtualization
   - docker
 ---
 

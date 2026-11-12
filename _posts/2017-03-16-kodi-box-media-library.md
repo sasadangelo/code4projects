@@ -8,7 +8,6 @@ image: /wp-content/uploads/2017/03/Kodi_Movies-Library-mini.png
 excerpt: In this article I would like to show you, step by step, how to transform your Kodi Box in a Netflix-like platform.
 categories: Multimedia
 tags:
-  - multimedia
   - raspberry
   - kodi
 ---

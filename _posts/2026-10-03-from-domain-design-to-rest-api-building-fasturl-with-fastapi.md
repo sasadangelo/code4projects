@@ -14,7 +14,6 @@ excerpt: "Learn how to turn requirements and a domain model into a clean REST AP
 categories:
   - "Programming"
 tags:
-  - programming
   - python
 ---
 

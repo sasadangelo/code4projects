@@ -10,8 +10,6 @@ categories:
   - Design Patterns
   - Programming
 tags:
-  - design-patterns
-  - programming
   - game-programming
 ---
 

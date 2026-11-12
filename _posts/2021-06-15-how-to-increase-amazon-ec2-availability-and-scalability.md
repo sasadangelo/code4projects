@@ -8,7 +8,6 @@ image: /wp-content/uploads/2021/06/load-balancer.png
 excerpt: In this article, I talk about EC2 Availability and Scalability and how to increase them using AWS services like Load Balancers, Autoscalers, and DNS.
 categories: Cloud
 tags:
-  - cloud
   - aws
 ---
 

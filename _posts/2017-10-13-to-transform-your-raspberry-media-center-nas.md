@@ -8,7 +8,6 @@ image: /wp-content/uploads/2017/10/Raspberry_Samba.jpg
 excerpt: In this article, I would like to show you how to transform your Raspberry Media Center in a Network Attached Server (NAS) and share your media files
 categories: Multimedia
 tags:
-  - multimedia
   - raspberry
   - kodi
 ---

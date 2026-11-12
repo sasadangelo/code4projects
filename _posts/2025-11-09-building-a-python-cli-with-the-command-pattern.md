@@ -13,7 +13,6 @@ excerpt: Learn how to design a clean, extensible Python CLI using argparse and t
 categories:
   - "Programming"
 tags:
-  - programming
   - python
 ---
 

@@ -13,7 +13,6 @@ excerpt: "Learn how the Click library simplifies Python CLI development — clea
 categories:
   - "Programming"
 tags:
-  - programming
   - python
 ---
 

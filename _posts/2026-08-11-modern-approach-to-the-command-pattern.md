@@ -15,7 +15,6 @@ excerpt: Typer brings Python type hints to CLI development — no decorators, no
 categories:
   - "Programming"
 tags:
-  - programming
   - python
 ---
 

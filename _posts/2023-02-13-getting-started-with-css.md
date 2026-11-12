@@ -10,7 +10,6 @@ excerpt: Master the core CSS concepts — selectors, the box model, layout, typo
 categories:
   - Programming
 tags:
-  - programming
   - css
 author: sasadangelo
 ---

@@ -14,7 +14,6 @@ excerpt: "Master Python concurrency: understand when to use threads, processes, 
 categories:
   - "Programming"
 tags:
-  - programming
   - python
 ---
 

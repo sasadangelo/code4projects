@@ -10,7 +10,6 @@ excerpt: Dive deeper into YAML with this comprehensive guide to advanced concept
 categories:
   - Programming
 tags:
-  - programming
   - yaml
 ---
 

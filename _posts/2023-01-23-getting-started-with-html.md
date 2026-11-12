@@ -10,7 +10,6 @@ excerpt: Learn HTML from scratch — build a real five-page website with heading
 categories:
   - Programming
 tags:
-  - programming
   - html
 author: sasadangelo
 ---

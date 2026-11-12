@@ -9,6 +9,7 @@ image: /assets/img/beyond-push-and-pull-understanding-git-core-concepts-hero.svg
 excerpt: "Git's core concepts explained: local vs remote, staging, stash, and HEAD, and how each command moves your changes between them."
 categories:
   - "Programming"
+  - "DevOps"
 ---
 
 # Beyond Push and Pull: Understanding Git's Core Concepts to Avoid Common Pitfalls

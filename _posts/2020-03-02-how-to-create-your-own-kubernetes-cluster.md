@@ -11,9 +11,6 @@ categories:
 - DevOps
 - Virtualization
 tags:
-  - cloud
-  - devops
-  - virtualization
   - kubernetes
 ---
 

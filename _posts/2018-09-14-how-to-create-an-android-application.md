@@ -10,8 +10,6 @@ categories:
 - Android
 - Programming
 tags:
-  - android
-  - programming
   - game-programming
 ---
 

@@ -8,7 +8,6 @@ image: /wp-content/uploads/auto-scaling-group-2.jpeg
 excerpt: In this article, I'll show you how to create an EC2 Auto Scaling Group to automate the availability and scalability of your EC2 instances.
 categories: Cloud
 tags:
-  - cloud
   - aws
 ---
 

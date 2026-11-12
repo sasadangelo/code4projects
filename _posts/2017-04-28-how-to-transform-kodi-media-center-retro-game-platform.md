@@ -8,7 +8,6 @@ image: /wp-content/uploads/2017/04/Mortal_Kombat.png
 excerpt: In this article, I would like to show you how to transform your Raspberry Kodi Media Center in a Retro Game platform.
 categories: Multimedia
 tags:
-  - multimedia
   - raspberry
   - kodi
 ---

@@ -11,7 +11,6 @@ excerpt: Learn how to build a context-aware LLM chatbot with Python and LangChai
 categories:
   - "Artificial Intelligence"
 tags:
-  - artificial-intelligence
   - python
 ---
 

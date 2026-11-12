@@ -8,7 +8,6 @@ image: /wp-content/uploads/2021/03/Amazon-EC2-1.png
 excerpt: The following article is an introduction to the Amazon Elastic Cloud Computing (EC2) service for beginners.
 categories: Cloud
 tags:
-  - cloud
   - aws
 ---
 

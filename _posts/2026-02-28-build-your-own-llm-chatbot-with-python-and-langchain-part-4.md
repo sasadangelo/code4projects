@@ -11,7 +11,6 @@ excerpt: Add a Streamlit-based web UI to your LLM chatbot — session management
 categories:
   - "Artificial Intelligence"
 tags:
-  - artificial-intelligence
   - python
 ---
 

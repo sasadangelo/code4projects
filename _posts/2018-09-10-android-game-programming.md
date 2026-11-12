@@ -10,8 +10,6 @@ categories:
 - Android
 - Programming
 tags:
-  - android
-  - programming
   - game-programming
 sitemap:
   lastmod: 2018-09-10

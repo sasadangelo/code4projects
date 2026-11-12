@@ -8,7 +8,6 @@ image: /wp-content/uploads/2018/09/android-studio.png
 excerpt: This is the second article of Android Game Development series. Here I explain, step by step, how to install and configure Android Studio.
 categories: Android
 tags:
-  - android
   - game-programming
 ---
 

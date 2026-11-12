@@ -8,7 +8,6 @@ image: /wp-content/uploads/2021/03/Identity-and-Access-Management.png
 excerpt: "After the AWS Introduction of the previous article, let's start exploring one of the main AWS components: AWS Identity and Access Management (IAM)."
 categories: Cloud
 tags:
-  - cloud
   - aws
 ---
 

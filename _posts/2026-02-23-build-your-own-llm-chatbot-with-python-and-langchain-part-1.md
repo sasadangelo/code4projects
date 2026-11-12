@@ -11,7 +11,6 @@ excerpt: Build a production-ready LLM chatbot with Python and LangChain. Step-by
 categories:
   - "Artificial Intelligence"
 tags:
-  - artificial-intelligence
   - python
 ---
 

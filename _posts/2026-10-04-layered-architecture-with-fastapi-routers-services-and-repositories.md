@@ -13,7 +13,6 @@ excerpt: "Learn how to structure a production-ready FastAPI project using a laye
 categories:
   - "Programming"
 tags:
-  - programming
   - python
 ---
 

@@ -12,7 +12,6 @@ excerpt: "Unit, integration, and end-to-end tests, why pytest beats unittest, an
 categories:
   - "Programming"
 tags:
-  - programming
   - python
 ---
 

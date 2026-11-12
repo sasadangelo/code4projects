@@ -11,7 +11,6 @@ excerpt: Add Retrieval-Augmented Generation (RAG) to your LLM chatbot — ingest
 categories:
   - "Artificial Intelligence"
 tags:
-  - artificial-intelligence
   - python
 ---
 

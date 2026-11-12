@@ -9,7 +9,6 @@ image: /wp-content/uploads/2021/03/Amazon-EC2-Tutorial.png
 excerpt: In this Amazon EC2 Tutorial, I will show you how to create an EC2 instance, attach an EBS volume to it, and secure it with Security Groups.
 categories: Cloud
 tags:
-  - cloud
   - aws
 ---
 

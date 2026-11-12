@@ -10,7 +10,6 @@ excerpt: Learn how to build a generic, configurable cron job class in Python wit
 categories:
   - "Programming"
 tags:
-  - programming
   - python
 ---
 

@@ -11,7 +11,6 @@ excerpt: Learn how to manage Python application configuration using pydantic-set
 categories:
   - "Programming"
 tags:
-  - programming
   - python
 date: 2025-12-30
 ---

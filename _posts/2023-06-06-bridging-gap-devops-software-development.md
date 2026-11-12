@@ -9,7 +9,6 @@ excerpt: Bridging the gap between development and operations, DevOps revolutioni
 categories:
   - "Project Management"
 tags:
-  - project-management
   - devops
 ---
 

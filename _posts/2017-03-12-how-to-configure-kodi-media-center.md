@@ -9,7 +9,6 @@ image: /wp-content/uploads/2017/03/Remote-Control-mini.jpg
 excerpt: In this article I would like to show you, step by step, how to configure your Kodi Media Center.
 categories: Multimedia
 tags:
-  - multimedia
   - raspberry
   - kodi
 ---
