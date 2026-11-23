@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0d1117"/><stop offset="100%" stop-color="#1a2332"/></linearGradient>
+    <marker id="arrowh" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 Z" fill="#3b4a5e"/></marker>
+  </defs>
+  <rect width="760" height="400" fill="url(#bg)" rx="12"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+  <text x="380" y="82" text-anchor="middle" font-size="40" fill="#ffffff" font-weight="700">Software Architecture</text>
+  <text x="380" y="132" text-anchor="middle" font-size="40" fill="#58a6ff" font-weight="700">Patterns Explained</text>
+  <text x="380" y="168" text-anchor="middle" font-size="17" fill="#8b949e">From a single script to microservices, one signal at a time</text>
+  <rect x="60" y="206" width="80" height="80" rx="14" fill="#161f2c" stroke="#8b949e" stroke-opacity="0.6" stroke-width="1.5"/>
+  <path d="M88 228h17l9 9v27h-26z" fill="none" stroke="#8b949e" stroke-width="2" stroke-linejoin="round"/><path d="M105 228v9h9" fill="none" stroke="#8b949e" stroke-width="2"/><path d="M93 246h16M93 252h16M93 258h10" stroke="#8b949e" stroke-width="2" stroke-linecap="round"/>
+  <text x="100" y="312" text-anchor="middle" font-size="13" fill="#e6edf3" font-weight="700">Script</text>
+  <line x1="144" y1="246" x2="176" y2="246" stroke="#3b4a5e" stroke-width="2" marker-end="url(#arrowh)"/>
+  <rect x="180" y="206" width="80" height="80" rx="14" fill="#161f2c" stroke="#2dd4bf" stroke-opacity="0.6" stroke-width="1.5"/>
+  <rect x="203" y="229" width="34" height="9" rx="2" fill="#2dd4bf" fill-opacity="0.9"/>
+  <rect x="203" y="241" width="34" height="9" rx="2" fill="#2dd4bf" fill-opacity="0.65"/>
+  <rect x="203" y="253" width="34" height="9" rx="2" fill="#2dd4bf" fill-opacity="0.4"/>
+  <text x="220" y="312" text-anchor="middle" font-size="13" fill="#e6edf3" font-weight="700">Layered</text>
+  <line x1="264" y1="246" x2="296" y2="246" stroke="#3b4a5e" stroke-width="2" marker-end="url(#arrowh)"/>
+  <rect x="300" y="206" width="80" height="80" rx="14" fill="#161f2c" stroke="#a78bfa" stroke-opacity="0.6" stroke-width="1.5"/>
+  <polygon points="355.6,255.0 340.0,264.0 324.4,255.0 324.4,237.0 340.0,228.0 355.6,237.0" fill="#a78bfa" fill-opacity="0.25" stroke="#a78bfa" stroke-width="2"/><circle cx="340" cy="246" r="6" fill="#a78bfa"/>
+  <text x="340" y="312" text-anchor="middle" font-size="13" fill="#e6edf3" font-weight="700">Hexagonal</text>
+  <line x1="384" y1="246" x2="416" y2="246" stroke="#3b4a5e" stroke-width="2" marker-end="url(#arrowh)"/>
+  <rect x="420" y="206" width="80" height="80" rx="14" fill="#161f2c" stroke="#58a6ff" stroke-opacity="0.6" stroke-width="1.5"/>
+  <rect x="441" y="227" width="38" height="38" rx="5" fill="none" stroke="#58a6ff" stroke-width="2"/>
+  <rect x="446" y="232" width="13" height="13" rx="2" fill="#58a6ff" fill-opacity="0.8"/>
+  <rect x="461" y="232" width="13" height="13" rx="2" fill="#58a6ff" fill-opacity="0.8"/>
+  <rect x="446" y="247" width="13" height="13" rx="2" fill="#58a6ff" fill-opacity="0.8"/>
+  <rect x="461" y="247" width="13" height="13" rx="2" fill="#58a6ff" fill-opacity="0.8"/>
+  <text x="460" y="312" text-anchor="middle" font-size="13" fill="#e6edf3" font-weight="700">Modular</text>
+  <line x1="504" y1="246" x2="536" y2="246" stroke="#3b4a5e" stroke-width="2" marker-end="url(#arrowh)"/>
+  <rect x="540" y="206" width="80" height="80" rx="14" fill="#161f2c" stroke="#fbbf24" stroke-opacity="0.6" stroke-width="1.5"/>
+  <line x1="560" y1="256" x2="600" y2="256" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="561" y="230" width="10" height="12" rx="2" fill="#fbbf24" fill-opacity="0.8"/><line x1="566" y1="242" x2="566" y2="256" stroke="#fbbf24" stroke-width="1.5"/>
+  <rect x="575" y="230" width="10" height="12" rx="2" fill="#fbbf24" fill-opacity="0.8"/><line x1="580" y1="242" x2="580" y2="256" stroke="#fbbf24" stroke-width="1.5"/>
+  <rect x="589" y="230" width="10" height="12" rx="2" fill="#fbbf24" fill-opacity="0.8"/><line x1="594" y1="242" x2="594" y2="256" stroke="#fbbf24" stroke-width="1.5"/>
+  <circle cx="572" cy="256" r="3" fill="#f59e0b"/><circle cx="588" cy="256" r="3" fill="#f59e0b"/>
+  <text x="580" y="312" text-anchor="middle" font-size="13" fill="#e6edf3" font-weight="700">Events</text>
+  <line x1="624" y1="246" x2="656" y2="246" stroke="#3b4a5e" stroke-width="2" marker-end="url(#arrowh)"/>
+  <rect x="660" y="206" width="80" height="80" rx="14" fill="#161f2c" stroke="#f472b6" stroke-opacity="0.6" stroke-width="1.5"/>
+  <line x1="700" y1="232" x2="686" y2="246" stroke="#f472b6" stroke-width="1.2" stroke-opacity="0.7"/>
+  <line x1="700" y1="232" x2="714" y2="246" stroke="#f472b6" stroke-width="1.2" stroke-opacity="0.7"/>
+  <line x1="686" y1="246" x2="692" y2="260" stroke="#f472b6" stroke-width="1.2" stroke-opacity="0.7"/>
+  <line x1="714" y1="246" x2="708" y2="260" stroke="#f472b6" stroke-width="1.2" stroke-opacity="0.7"/>
+  <line x1="692" y1="260" x2="708" y2="260" stroke="#f472b6" stroke-width="1.2" stroke-opacity="0.7"/>
+  <line x1="700" y1="232" x2="692" y2="260" stroke="#f472b6" stroke-width="1.2" stroke-opacity="0.7"/>
+  <rect x="695" y="227" width="10" height="10" rx="2" fill="#f472b6"/>
+  <rect x="681" y="241" width="10" height="10" rx="2" fill="#f472b6"/>
+  <rect x="709" y="241" width="10" height="10" rx="2" fill="#f472b6"/>
+  <rect x="687" y="255" width="10" height="10" rx="2" fill="#f472b6"/>
+  <rect x="703" y="255" width="10" height="10" rx="2" fill="#f472b6"/>
+  <text x="700" y="312" text-anchor="middle" font-size="13" fill="#e6edf3" font-weight="700">Microservices</text>
+  <line x1="60" y1="348" x2="700" y2="348" stroke="#58a6ff" stroke-width="2" opacity="0.4"/>
+  <text x="60" y="374" text-anchor="start" font-size="13" fill="#8b949e">Software Architecture Patterns Series · Part 2</text>
+  <text x="700" y="374" text-anchor="end" font-size="13" fill="#8b949e">FastURL as the running example</text>
+  </g>
+</svg>

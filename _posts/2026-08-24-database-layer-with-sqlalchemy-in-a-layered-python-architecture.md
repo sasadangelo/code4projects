@@ -39,7 +39,7 @@ Think of the database layer as a set of concentric rings. At the centre is the r
 src/runanalyze/
 │
 ├── core/
-│   ├── config.py              # Pydantic Settings (Part 3 of this series)
+│   ├── config.py              # Pydantic Settings (Part 4 of this series)
 │   └── database/
 │       └── database.py        # DatabaseSessionManager
 │

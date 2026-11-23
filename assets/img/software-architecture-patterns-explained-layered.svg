@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 486" width="760" height="486">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 Z" fill="#57606a"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L8,3.5 Z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="760" height="486" fill="#ffffff"/>
+
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif">
+    <!-- Title -->
+    <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2328">Layered Architecture</text>
+    <text x="380" y="50" text-anchor="middle" font-size="12" fill="#57606a">Each layer depends only on the layer below it; the domain data travels through all three</text>
+
+    <!-- Incoming request -->
+    <rect x="225" y="64" width="110" height="22" rx="11" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.2"/>
+    <text x="280" y="79" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="10" fill="#1f2328">HTTP request</text>
+    <line x1="280" y1="86" x2="280" y2="104" stroke="#57606a" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+    <!-- Presentation -->
+    <rect x="40" y="106" width="480" height="70" rx="8" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.2"/>
+    <text x="58" y="134" font-size="14" font-weight="700" fill="#1f2328">Presentation</text>
+    <text x="58" y="154" font-size="11" fill="#57606a">the API exposed over HTTP</text>
+    <text x="290" y="134" font-family="ui-monospace,Menlo,monospace" font-size="11" font-weight="700" fill="#0f766e">api/</text>
+    <text x="290" y="154" font-size="11" fill="#1f2328">routers, Pydantic schemas</text>
+
+    <!-- depends on -->
+    <line x1="280" y1="176" x2="280" y2="202" stroke="#57606a" stroke-width="1.4" marker-end="url(#arrow)"/>
+    <text x="290" y="193" font-size="10" fill="#57606a">depends on</text>
+
+    <!-- Business -->
+    <rect x="40" y="204" width="480" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.2"/>
+    <text x="58" y="232" font-size="14" font-weight="700" fill="#1f2328">Business logic</text>
+    <text x="58" y="252" font-size="11" fill="#57606a">the rules of the application</text>
+    <text x="290" y="232" font-family="ui-monospace,Menlo,monospace" font-size="11" font-weight="700" fill="#1d4ed8">services/</text>
+    <text x="290" y="252" font-size="11" fill="#1f2328">LinkService, InspectorService</text>
+
+    <!-- depends on -->
+    <line x1="280" y1="274" x2="280" y2="300" stroke="#57606a" stroke-width="1.4" marker-end="url(#arrow)"/>
+    <text x="290" y="291" font-size="10" fill="#57606a">depends on</text>
+
+    <!-- Data access -->
+    <rect x="40" y="302" width="480" height="70" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.2"/>
+    <text x="58" y="330" font-size="14" font-weight="700" fill="#1f2328">Data access</text>
+    <text x="58" y="350" font-size="11" fill="#57606a">reads and writes the database</text>
+    <text x="290" y="330" font-family="ui-monospace,Menlo,monospace" font-size="11" font-weight="700" fill="#b45309">repositories/ · models/</text>
+    <text x="290" y="350" font-size="11" fill="#1f2328">LinkRepository, SQLAlchemy models</text>
+
+    <!-- Database -->
+    <line x1="280" y1="372" x2="280" y2="392" stroke="#57606a" stroke-width="1.4" marker-end="url(#arrow)"/>
+    <path d="M240 402 v34 a40 9 0 0 0 80 0 v-34" fill="#f7f8fa" stroke="#57606a" stroke-width="1.2"/>
+    <ellipse cx="280" cy="402" rx="40" ry="9" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/>
+    <text x="280" y="432" text-anchor="middle" font-size="11" font-weight="600" fill="#1f2328">Database</text>
+
+    <!-- Domain data: vertical band across the three layers -->
+    <rect x="570" y="106" width="150" height="266" rx="8" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.2"/>
+    <text x="645" y="132" text-anchor="middle" font-size="14" font-weight="700" fill="#1f2328">Domain data</text>
+    <text x="645" y="150" text-anchor="middle" font-size="10.5" fill="#57606a">crosses every layer</text>
+
+    <rect x="595" y="222" width="100" height="34" rx="6" fill="#ffffff" stroke="#c4b5fd" stroke-width="1"/>
+    <text x="645" y="244" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#6d28d9">Link</text>
+    <text x="645" y="352" text-anchor="middle" font-size="10" fill="#57606a">passed up and down</text>
+
+    <!-- Connections: every layer uses the domain data -->
+    <line x1="522" y1="141" x2="566" y2="141" stroke="#7c3aed" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arrow-purple)"/>
+    <line x1="522" y1="239" x2="566" y2="239" stroke="#7c3aed" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arrow-purple)"/>
+    <line x1="522" y1="337" x2="566" y2="337" stroke="#7c3aed" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arrow-purple)"/>
+    <text x="544" y="134" text-anchor="middle" font-size="9" fill="#7c3aed">uses</text>
+    <text x="544" y="232" text-anchor="middle" font-size="9" fill="#7c3aed">uses</text>
+    <text x="544" y="330" text-anchor="middle" font-size="9" fill="#7c3aed">uses</text>
+
+    <!-- Caption -->
+    <text x="380" y="474" text-anchor="middle" font-size="11" fill="#57606a">Dependencies point down: the business layer imports the data layer, so the rules depend on the database.</text>
+  </g>
+</svg>

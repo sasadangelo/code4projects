@@ -1855,11 +1855,11 @@
 
 - id: choosing-an-architectural-pattern
   title: "Software Architecture Patterns Explained: Layered, Hexagonal, Clean, Event-Driven, Microservices, and Hybrid"
-  status: draft
+  status: published
   slug: software-architecture-patterns-explained
   category: Software Architecture
   series: software-architecture-patterns
-  scheduled: 2026-11-16
+  scheduled: 2026-11-23
   notes: >
     Tell the overview as an evolution driven by growing complexity: script (no architecture) →
     layered → dependency inversion → hexagonal/clean core → modular monolith + events →

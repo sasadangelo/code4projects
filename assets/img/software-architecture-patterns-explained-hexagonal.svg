@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 Z" fill="#57606a"/></marker>
+    <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 Z" fill="#7c3aed"/></marker>
+  </defs>
+  <rect width="760" height="470" fill="#ffffff"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif">
+  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2328">Hexagonal Architecture: FastURL</text>
+  <text x="380" y="50" text-anchor="middle" font-size="12" fill="#57606a">The core defines the ports; adapters outside plug into them</text>
+  <polygon points="501.2,325.0 380.0,395.0 258.8,325.0 258.8,185.0 380.0,115.0 501.2,185.0" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.6"/>
+  <text x="380" y="150" text-anchor="middle" font-size="13" font-weight="700" fill="#6d28d9">Application core</text>
+  <rect x="308" y="180" width="118" height="44" rx="8" fill="#ffffff" stroke="#c4b5fd" stroke-width="1.2"/>
+  <text x="367.0" y="200.0" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#6d28d9">LinkService</text>
+  <text x="367.0" y="215.0" text-anchor="middle" font-size="10" fill="#57606a">use cases</text>
+  <line x1="367" y1="224" x2="367" y2="252" stroke="#57606a" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <rect x="322" y="254" width="90" height="34" rx="8" fill="#ffffff" stroke="#c4b5fd" stroke-width="1.2"/>
+  <text x="367.0" y="275.0" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#6d28d9">Link</text>
+  <text x="380" y="320" text-anchor="middle" font-size="10" font-style="italic" fill="#6d28d9">no imports from outside</text>
+  <rect x="210.75644347017857" y="233" width="96" height="40" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="258.75644347017857" y="251.0" text-anchor="middle" font-size="12" font-weight="700" fill="#1f2328">create · resolve</text>
+  <text x="258.75644347017857" y="266.0" text-anchor="middle" font-size="10" fill="#57606a">driving port</text>
+  <rect x="443.24355652982143" y="190" width="116" height="40" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="501.24355652982143" y="208.0" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#6d28d9">LinkRepository</text>
+  <text x="501.24355652982143" y="223.0" text-anchor="middle" font-size="10" fill="#57606a">driven port</text>
+  <rect x="443.24355652982143" y="280" width="116" height="40" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.2"/>
+  <text x="501.24355652982143" y="298.0" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="12" font-weight="700" fill="#6d28d9">UrlInspector</text>
+  <text x="501.24355652982143" y="313.0" text-anchor="middle" font-size="10" fill="#57606a">driven port</text>
+  <text x="95" y="150" text-anchor="middle" font-size="10" font-weight="700" fill="#0f766e">DRIVING ADAPTERS</text>
+  <rect x="25" y="165" width="140" height="42" rx="8" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.2"/>
+  <text x="95.0" y="184.0" text-anchor="middle" font-size="12" font-weight="700" fill="#1f2328">FastAPI routers</text>
+  <text x="95.0" y="199.0" text-anchor="middle" font-size="10" fill="#57606a">REST API</text>
+  <rect x="25" y="232" width="140" height="42" rx="8" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.2"/>
+  <text x="95.0" y="251.0" text-anchor="middle" font-size="12" font-weight="700" fill="#1f2328">pytest tests</text>
+  <text x="95.0" y="266.0" text-anchor="middle" font-size="10" fill="#57606a">no HTTP server needed</text>
+  <rect x="25" y="299" width="140" height="42" rx="8" fill="#ffffff" stroke="#0d9488" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <text x="95.0" y="318.0" text-anchor="middle" font-size="12" font-weight="700" fill="#1f2328">CLI</text>
+  <text x="95.0" y="333.0" text-anchor="middle" font-size="10" fill="#57606a">could be added</text>
+  <line x1="165" y1="186" x2="208.75644347017857" y2="253" stroke="#57606a" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <line x1="165" y1="253" x2="208.75644347017857" y2="253" stroke="#57606a" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <line x1="165" y1="320" x2="208.75644347017857" y2="253" stroke="#57606a" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <text x="185" y="236" text-anchor="middle" font-size="9" fill="#57606a">call</text>
+  <text x="665" y="160" text-anchor="middle" font-size="10" font-weight="700" fill="#b45309">DRIVEN ADAPTERS</text>
+  <rect x="595" y="175" width="145" height="48" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.2"/>
+  <text x="667.5" y="197.0" text-anchor="middle" font-size="12" font-weight="700" fill="#1f2328">SQLAlchemy repo</text>
+  <text x="667.5" y="212.0" text-anchor="middle" font-size="10" fill="#57606a">→ SQLite / PostgreSQL</text>
+  <rect x="595" y="265" width="145" height="48" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.2"/>
+  <text x="667.5" y="287.0" text-anchor="middle" font-size="12" font-weight="700" fill="#1f2328">httpx inspector</text>
+  <text x="667.5" y="302.0" text-anchor="middle" font-size="10" fill="#57606a">→ fetches the target URL</text>
+  <line x1="595" y1="200" x2="561.2435565298215" y2="210" stroke="#7c3aed" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arrow-purple)"/>
+  <line x1="595" y1="290" x2="561.2435565298215" y2="300" stroke="#7c3aed" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arrow-purple)"/>
+  <text x="578" y="189" text-anchor="middle" font-size="9" fill="#7c3aed">implements</text>
+  <text x="578" y="279" text-anchor="middle" font-size="9" fill="#7c3aed">implements</text>
+  <text x="380" y="428" text-anchor="middle" font-size="11" fill="#1f2328">Compared with layered: LinkRepository moves into the core as an interface,</text>
+  <text x="380" y="446" text-anchor="middle" font-size="11" fill="#1f2328">so the database adapter depends on the core, not the core on the database.</text>
+  </g>
+</svg>
