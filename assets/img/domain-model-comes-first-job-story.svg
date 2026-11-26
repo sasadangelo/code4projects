@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 Z" fill="#57606a"/></marker>
+  </defs>
+  <rect width="760" height="420" fill="#ffffff"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+  <text x="380" y="30" text-anchor="middle" font-size="16" fill="#1f2328" font-weight="700">Reading the Model out of a Job Story</text>
+  <text x="380" y="50" text-anchor="middle" font-size="12" fill="#57606a">FastURL JS-001: the grammar of the sentence gives you the model</text>
+  <rect x="24" y="68" width="712" height="74" rx="8" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.2"/>
+  <text x="42" y="90" text-anchor="start" font-size="10.5" fill="#57606a" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-weight="700">JS-001</text>
+  <text x="42" y="120" font-size="14" fill="#1f2328" xml:space="preserve"><tspan>When I provide a </tspan><tspan fill="#b45309" font-weight="700">valid</tspan><tspan> </tspan><tspan fill="#1d4ed8" font-weight="700">target URL</tspan><tspan>, I want a </tspan><tspan fill="#b45309" font-weight="700">unique</tspan><tspan> </tspan><tspan fill="#15803d" font-weight="700">shortened</tspan><tspan> </tspan><tspan fill="#1d4ed8" font-weight="700">URL</tspan><tspan> with a </tspan><tspan fill="#b45309" font-weight="700">random alphanumeric</tspan><tspan> </tspan><tspan fill="#1d4ed8" font-weight="700">code</tspan><tspan>.</tspan></text>
+  <line x1="136.0" y1="146" x2="136.0" y2="168" stroke="#57606a" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <rect x="24" y="172" width="224" height="150" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="40" y="196" text-anchor="start" font-size="11" fill="#1d4ed8" font-weight="700" letter-spacing="0.6">NOUNS</text>
+  <text x="40" y="213" text-anchor="start" font-size="10.5" fill="#57606a">become entities and value objects</text>
+  <rect x="40" y="226" width="192" height="24" rx="6" fill="#ffffff" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="136.0" y="242" text-anchor="middle" font-size="11" fill="#1d4ed8" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-weight="700">Link</text>
+  <rect x="40" y="256" width="192" height="24" rx="6" fill="#ffffff" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="136.0" y="272" text-anchor="middle" font-size="11" fill="#1d4ed8" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-weight="700">TargetUrl</text>
+  <rect x="40" y="286" width="192" height="24" rx="6" fill="#ffffff" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="136.0" y="302" text-anchor="middle" font-size="11" fill="#1d4ed8" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-weight="700">ShortCode</text>
+  <line x1="380.0" y1="146" x2="380.0" y2="168" stroke="#57606a" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <rect x="268" y="172" width="224" height="150" rx="8" fill="#dcfce7" stroke="#15803d" stroke-width="1.2"/>
+  <text x="284" y="196" text-anchor="start" font-size="11" fill="#15803d" font-weight="700" letter-spacing="0.6">VERBS</text>
+  <text x="284" y="213" text-anchor="start" font-size="10.5" fill="#57606a">become operations</text>
+  <rect x="284" y="226" width="192" height="24" rx="6" fill="#ffffff" stroke="#15803d" stroke-width="1"/>
+  <text x="380.0" y="242" text-anchor="middle" font-size="11" fill="#15803d" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-weight="700">shorten</text>
+  <line x1="624.0" y1="146" x2="624.0" y2="168" stroke="#57606a" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <rect x="512" y="172" width="224" height="150" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="1.2"/>
+  <text x="528" y="196" text-anchor="start" font-size="11" fill="#b45309" font-weight="700" letter-spacing="0.6">CONDITIONS</text>
+  <text x="528" y="213" text-anchor="start" font-size="10.5" fill="#57606a">become rules</text>
+  <rect x="528" y="226" width="192" height="24" rx="6" fill="#ffffff" stroke="#b45309" stroke-width="1"/>
+  <text x="624.0" y="242" text-anchor="middle" font-size="11" fill="#b45309" font-weight="700">URL is HTTP or HTTPS</text>
+  <rect x="528" y="256" width="192" height="24" rx="6" fill="#ffffff" stroke="#b45309" stroke-width="1"/>
+  <text x="624.0" y="272" text-anchor="middle" font-size="11" fill="#b45309" font-weight="700">code is unique</text>
+  <rect x="528" y="286" width="192" height="24" rx="6" fill="#ffffff" stroke="#b45309" stroke-width="1"/>
+  <text x="624.0" y="302" text-anchor="middle" font-size="11" fill="#b45309" font-weight="700">code is Base62</text>
+  <text x="24" y="352" text-anchor="start" font-size="10" fill="#57606a" font-weight="700" letter-spacing="0.6">THE FIVE STEPS</text>
+  <rect x="24" y="362" width="130" height="32" rx="16" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.2"/>
+  <circle cx="42" cy="378" r="10" fill="#7c5cd8"/>
+  <text x="42" y="382" text-anchor="middle" font-size="10" fill="#ffffff" font-weight="700">1</text>
+  <text x="98" y="382" text-anchor="middle" font-size="11" fill="#1f2328" font-weight="700">Nouns</text>
+  <line x1="155" y1="378" x2="166" y2="378" stroke="#57606a" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <rect x="168" y="362" width="130" height="32" rx="16" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.2"/>
+  <circle cx="186" cy="378" r="10" fill="#7c5cd8"/>
+  <text x="186" y="382" text-anchor="middle" font-size="10" fill="#ffffff" font-weight="700">2</text>
+  <text x="242" y="382" text-anchor="middle" font-size="11" fill="#1f2328" font-weight="700">Identity</text>
+  <line x1="299" y1="378" x2="310" y2="378" stroke="#57606a" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <rect x="312" y="362" width="130" height="32" rx="16" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.2"/>
+  <circle cx="330" cy="378" r="10" fill="#7c5cd8"/>
+  <text x="330" y="382" text-anchor="middle" font-size="10" fill="#ffffff" font-weight="700">3</text>
+  <text x="386" y="382" text-anchor="middle" font-size="11" fill="#1f2328" font-weight="700">Ownership</text>
+  <line x1="443" y1="378" x2="454" y2="378" stroke="#57606a" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <rect x="456" y="362" width="130" height="32" rx="16" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.2"/>
+  <circle cx="474" cy="378" r="10" fill="#7c5cd8"/>
+  <text x="474" y="382" text-anchor="middle" font-size="10" fill="#ffffff" font-weight="700">4</text>
+  <text x="530" y="382" text-anchor="middle" font-size="11" fill="#1f2328" font-weight="700">Verbs</text>
+  <line x1="587" y1="378" x2="598" y2="378" stroke="#57606a" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <rect x="600" y="362" width="130" height="32" rx="16" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.2"/>
+  <circle cx="618" cy="378" r="10" fill="#7c5cd8"/>
+  <text x="618" y="382" text-anchor="middle" font-size="10" fill="#ffffff" font-weight="700">5</text>
+  <text x="674" y="382" text-anchor="middle" font-size="11" fill="#1f2328" font-weight="700">Conditions</text>
+  </g>
+</svg>

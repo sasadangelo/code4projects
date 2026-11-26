@@ -1267,19 +1267,26 @@
     instagram: false
     facebook: false
 - id: api-design-requests-and-responses
-  title: "API Design Beyond CRUD: Pagination, Versioning, Idempotency, Rate Limiting, Caching, and Long-Running Operations"
+  title: "Designing REST APIs Beyond CRUD: Pagination, Versioning, Idempotency, Caching, and Long-Running Operations"
   status: planned
+  slug: designing-rest-apis-beyond-crud
   category: Programming
   series: modern-python-application
   scheduled: 2026-11-30
   notes: >
-    Theory 1/4. Focus on decisions, not definitions (parameter types already defined in the
-    REST design post). Path vs query vs body vs header and when to use which; standard headers
-    (FastURL CorrelationIdMiddleware as header example, never covered); content negotiation
-    406/415; pagination offset vs cursor (FastURL list endpoint has filter + sort but NO
-    pagination, while requirements.md asks for page/limit: add it here); versioning and
-    deprecation (build on the /api/v1 vs unversioned /{code} choice); RFC 9457 Problem Details
-    only as a short comparison with the {success, error, details} envelope already covered twice.
+    Theory, second half of "Designing REST APIs in Practice: A Kubernetes Case Study": covers
+    the concepts that article left out. Kubernetes API as the case study again, no FastURL code.
+    Topics: pagination, filtering, sorting (offset vs cursor; Kubernetes limit/continue);
+    versioning and deprecation (v1, v1beta1, Kubernetes deprecation policy); idempotency (safe
+    and idempotent methods, Idempotency-Key for POST); caching and concurrency (ETag,
+    Cache-Control, 304, If-Match/412, Kubernetes resourceVersion and 409); long-running
+    operations (202 + status resource, polling vs webhooks, Kubernetes watch); content
+    negotiation (406/415) and standard headers (correlation ID); RFC 9457 Problem Details vs
+    the existing error envelope; RateLimit-* headers beyond the bare 429.
+    Series position: Part 15 in the sidebar, right after "Designing REST APIs in Practice"
+    (renumber the following parts on publish).
+    On publish, link it from "The Domain Model Comes First" (section "Where the Projections
+    Diverge", the sentence "They deserve an article of their own...").
   distributed:
     medium: false
     substack: false
@@ -1308,10 +1315,9 @@
     facebook: false
 - id: reverse-proxy-in-front-of-fastapi
   title: "Putting a Reverse Proxy in Front of FastAPI: TLS, Rate Limits, and Load Balancing"
-  status: planned
+  status: idea
   category: Programming
   series: modern-python-application
-  scheduled: 2026-12-02
   notes: >
     NGINX/Caddy/Traefik in Docker Compose in front of FastURL: TLS, per-IP rate limiting (answers the
     open question in requirements.md), timeouts, max body size, slow-client buffering, load
@@ -1326,10 +1332,9 @@
     facebook: false
 - id: api-gateway-vs-reverse-proxy
   title: "When You Need an API Gateway: API Keys, Quotas, and Centralized Auth Without a Cloud"
-  status: planned
+  status: idea
   category: Programming
   series: modern-python-application
-  scheduled: 2026-12-04
   notes: >
     What a gateway adds over the reverse proxy post. Angle: external consumers (API keys, per-plan
     quotas, centralized JWT validation), which makes sense even with the single-service FastURL.
@@ -1358,10 +1363,9 @@
     facebook: false
 - id: layered-architecture-in-python
   title: "Layered Architecture in Practice: Package by Layer, Feature, and Component"
-  status: planned
+  status: idea
   category: Software Architecture
   series: software-architecture-patterns
-  scheduled: 2026-11-18
   notes: >
     Dedicated layered-architecture article: layer rules and dependency direction, strict vs
     relaxed layering, and the three packaging styles (by layer, by feature, by component) with
@@ -1377,10 +1381,9 @@
     facebook: false
 - id: hexagonal-architecture-in-python
   title: "Hexagonal Architecture (Ports and Adapters): Isolating Domain from Infrastructure"
-  status: planned
+  status: idea
   category: Software Architecture
   series: software-architecture-patterns
-  scheduled: 2026-11-20
   distributed:
     medium: false
     substack: false
@@ -1390,10 +1393,9 @@
     facebook: false
 - id: clean-architecture-in-python
   title: "Clean Architecture: Building Testable and Framework-Independent Systems"
-  status: planned
+  status: idea
   category: Software Architecture
   series: software-architecture-patterns
-  scheduled: 2026-11-23
   distributed:
     medium: false
     substack: false
@@ -1403,10 +1405,9 @@
     facebook: false
 - id: event-driven-architecture-in-python
   title: "Event-Driven Architecture: Decoupling Systems with Events and Brokers"
-  status: planned
+  status: idea
   category: Software Architecture
   series: software-architecture-patterns
-  scheduled: 2026-11-25
   distributed:
     medium: false
     substack: false
@@ -1416,10 +1417,9 @@
     facebook: false
 - id: microservices-architecture-in-python
   title: "Microservices Architecture: When to Split a System and What It Really Costs"
-  status: planned
+  status: idea
   category: Software Architecture
   series: software-architecture-patterns
-  scheduled: 2026-11-27
   notes: >
     Microservices work on a different axis from layered/hexagonal/clean: they decide how the
     system is split and deployed, not how code is organized inside one unit. Each service still
@@ -1435,10 +1435,9 @@
     facebook: false
 - id: pragmatic-hybrid-architectures-in-python
   title: "Pragmatic Hybrid Architectures: Combining Patterns for Real-World Systems"
-  status: planned
+  status: idea
   category: Software Architecture
   series: software-architecture-patterns
-  scheduled: 2026-12-07
   distributed:
     medium: false
     substack: false
@@ -1933,6 +1932,54 @@
   notes: >
     One or more articles: derive the FastURL UI (screens, navigation, forms) from domain-design.md,
     the same way the API was derived from it.
+  distributed:
+    medium: false
+    substack: false
+    twitter: false
+    linkedin: false
+    instagram: false
+    facebook: false
+- id: domain-model-before-architecture
+  title: "The Domain Model Comes First: One Model for Your API, CLI, UI, and Database Schema"
+  status: published
+  slug: domain-model-comes-first
+  category: Software Architecture
+  series: software-architecture-patterns
+  scheduled: 2026-11-26
+  notes: >
+    Theory. Belongs to both software-architecture-patterns and modern-python-application.
+    Thesis (use this wording): "The domain model is the single source of the names, the entities,
+    and the relationships. Each interface is a projection of it, a design step with its own
+    constraints, not an automatic translation." It sits between requirements and architecture,
+    and must exist before the architecture is chosen (in hexagonal, onion, and clean it is the center).
+    Projections: database schema (the domain is the logical schema), REST API (entities become
+    resources, operations become HTTP verbs), CLI (entities become command groups, operations become
+    list/get/create/set/delete verbs, kubectl style), UI (entities become screens, operations become
+    list, detail, and form views).
+    Precedents (verify before citing): ANSI/SPARC conceptual-logical-physical schemas; Chen's ER
+    model (1976); Google AIP-121 resource-oriented design (resources + standard methods); Kubernetes
+    API and kubectl, gh (noun + verb CLIs); Rails scaffolding; Naked Objects (Richard Pawson, 2002);
+    Evans' ubiquitous language (2003).
+    Where the projections diverge (the "own constraints"): UI designed around user tasks, not one
+    screen per entity (task-based UI vs CRUD UI); physical schema denormalized and with non-domain
+    tables (FastURL click analytics); domain operations that are not CRUD (deactivate a link,
+    re-run the inspection) and how to map them in HTTP (field update, sub-resource, action) vs the
+    CLI (a free verb); versioning, idempotency, pagination: mention and hand off to "Designing REST
+    APIs Beyond CRUD".
+    The model is not only data: the information part (entities, attributes, relationships)
+    projects onto every interface, the rules and invariants (an expired link does not redirect)
+    stay in the core and project nowhere. Avoid presenting an anemic nouns + CRUD model.
+    Light DDD only: ubiquitous language, entity vs value object, aggregate; bounded contexts in one
+    line; no tactical-pattern catalogue. FastURL as the example (Link, ShortCode, TargetUrl).
+    Mention API-first honestly: some teams make the API contract the source of truth, but the
+    contract still comes from the resources.
+    Avoid repeating: the Lean Requirements post already has a short "One Domain Model, Many
+    Projections" section with its diagram, and "From Domain Design to REST API" already derives
+    the FastURL API. This post is the full version: how to build the model from job stories, and
+    the four projections side by side.
+    Series position: right after Lean Requirements and before Software Architecture Patterns
+    Explained in both sidebars (renumber on publish, and update the "previous article" link in the
+    architecture post).
   distributed:
     medium: false
     substack: false

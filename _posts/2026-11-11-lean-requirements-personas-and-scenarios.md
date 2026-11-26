@@ -363,7 +363,7 @@ In this article we covered:
 - how one domain model, derived from the requirements, projects onto the database, the API, a CLI, and a UI;
 - how to keep requirements alive, and how non-functional requirements lead to an architecture.
 
-From here, the two series take different paths. In the Modern Python Application series, the next step is turning requirements into a working codebase, starting with [How to Set Up Your Next Python Project]({{ site.baseurl }}/how-to-set-up-your-next-python-project/). In the Software Architecture Patterns series, the next article, *Software Architecture Patterns Explained*, maps the main patterns — layered, hexagonal, clean, event-driven, and hybrid — and the requirements that point to each of them.
+Both series continue with the same two steps. The [next article]({{ site.baseurl }}/domain-model-comes-first/) turns the job stories into a domain model, the single source of names for the database, the API, the CLI, and the user interface. Then [Software Architecture Patterns Explained]({{ site.baseurl }}/software-architecture-patterns-explained/) maps the main patterns, from layered to hexagonal, clean, event-driven, and hybrid, and the requirements that point to each of them. After that, the Modern Python Application series turns everything into a working codebase, starting with [How to Set Up Your Next Python Project]({{ site.baseurl }}/how-to-set-up-your-next-python-project/).
 
 ---
 

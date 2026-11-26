@@ -105,9 +105,9 @@ Current state (order as in `_data/post_sidebar.yml`):
 | 16 | Testing Python Applications with pytest: Patterns for Real Code | ✅ published (2026-10-18) |
 | 17 | Testing FastAPI in Practice: Unit and Integration Tests for a Real Feature | ✅ published (2026-10-20) |
 | 18 | Building a CRUD Web Application with Flask: Three-Tier Architecture with SQLAlchemy and Pydantic | ✅ published (2025-10-23) |
-| 19 | API Design Beyond CRUD: Pagination, Versioning, Idempotency, Rate Limiting, Caching, and Long-Running Operations | 🔵 planned (2026-11-30) |
-| 20 | Putting a Reverse Proxy in Front of FastAPI: TLS, Rate Limits, and Load Balancing | 🔵 planned (2026-12-02) |
-| 21 | When You Need an API Gateway: API Keys, Quotas, and Centralized Auth Without a Cloud | 🔵 planned (2026-12-04) |
+| 19 | Designing REST APIs Beyond CRUD: Pagination, Versioning, Idempotency, Caching, and Long-Running Operations | 🔵 planned (2026-11-30) |
+| 20 | Putting a Reverse Proxy in Front of FastAPI: TLS, Rate Limits, and Load Balancing | 💡 idea (removed from the plan) |
+| 21 | When You Need an API Gateway: API Keys, Quotas, and Centralized Auth Without a Cloud | 💡 idea (removed from the plan) |
 | 22 | From CRUD to Web Application: Modeling Users, Events, and Races in Flask | 🔵 planned (2026-12-11) — needs ~1 week of code changes in `sasadangelo/races` first |
 | 23 | Authentication and Authorization for APIs: API Keys, OAuth2, and JWT in FastAPI | 🔵 planned (2026-12-14) |
 | 24 | Authentication and Authorization for Web Applications: Sessions, Login, and Roles in Flask | 🔵 planned (2026-12-16) |
@@ -142,13 +142,13 @@ Current state:
 | # | Title | Status |
 |---|---|---|
 | 1 | From Requirements to Architecture: Lean Requirements with Personas and Scenarios | ✅ published (2026-11-11) |
-| 2 | Software Architecture Patterns Explained: Layered, Hexagonal, Clean, Event-Driven, Microservices, and Hybrid | 🔵 planned (2026-11-16) — told as an evolution driven by complexity (script → layered → hexagonal/clean → modular monolith + events → microservices → hybrid); distinguishes internal organization from system structure |
-| 3 | Layered Architecture in Practice: Package by Layer, Feature, and Component | 🔵 planned (2026-11-18) — links "Layered Architecture with FastAPI" as the concrete implementation |
-| 4 | Hexagonal Architecture (Ports and Adapters): Isolating Domain from Infrastructure | 🔵 planned (2026-11-20) |
-| 5 | Clean Architecture: Building Testable and Framework-Independent Systems | 🔵 planned (2026-11-23) |
-| 6 | Event-Driven Architecture: Decoupling Systems with Events and Brokers | 🔵 planned (2026-11-25) |
-| 7 | Microservices Architecture: When to Split a System and What It Really Costs | 🔵 planned (2026-11-27) |
-| 8 | Pragmatic Hybrid Architectures: Combining Patterns for Real-World Systems | 🔵 planned (2026-12-07) |
+| 2 | Software Architecture Patterns Explained: Layered, Hexagonal, Clean, Event-Driven, Microservices, and Hybrid | ✅ published (2026-11-23) — told as an evolution driven by complexity (script → layered → hexagonal/clean → modular monolith + events → microservices → hybrid); distinguishes internal organization from system structure |
+| 3 | Layered Architecture in Practice: Package by Layer, Feature, and Component | 💡 idea (removed from the plan) — links "Layered Architecture with FastAPI" as the concrete implementation |
+| 4 | Hexagonal Architecture (Ports and Adapters): Isolating Domain from Infrastructure | 💡 idea (removed from the plan) |
+| 5 | Clean Architecture: Building Testable and Framework-Independent Systems | 💡 idea (removed from the plan) |
+| 6 | Event-Driven Architecture: Decoupling Systems with Events and Brokers | 💡 idea (removed from the plan) |
+| 7 | Microservices Architecture: When to Split a System and What It Really Costs | 💡 idea (removed from the plan) |
+| 8 | Pragmatic Hybrid Architectures: Combining Patterns for Real-World Systems | 💡 idea (removed from the plan) |
 
 ---
 
@@ -311,9 +311,9 @@ The pace is **1 productive action per week** — not always 1 article per week. 
 - [x] Write "Testing FastAPI in Practice"
 - [x] Write "From Requirements to Architecture: Lean Requirements" (now Part 1)
 - [x] Import "Building a CRUD Web Application with Flask" from Medium (Part 18)
-- [ ] Write "API Design Beyond CRUD"
+- [ ] Write "Designing REST APIs Beyond CRUD"
 - [ ] Write "Authentication and Authorization in Python Web Applications"
-- [ ] Write "Putting a Reverse Proxy in Front of FastAPI" and "When You Need an API Gateway" → **series complete → compile ebook**
+- [ ] ~~Write "Putting a Reverse Proxy in Front of FastAPI" and "When You Need an API Gateway"~~ (back to idea)
 
 ---
 
@@ -334,7 +334,7 @@ The pace is **1 productive action per week** — not always 1 article per week. 
 - [ ] Write "Clean Architecture" (Part 5) — planned 2026-11-23
 - [ ] Write "Event-Driven Architecture" (Part 6) — planned 2026-11-25
 - [ ] Write "Microservices Architecture" (Part 7) — planned 2026-11-27
-- [ ] Write "Pragmatic Hybrid Architectures" (Part 8) — planned 2026-12-07 → **series complete → compile ebook**
+- [ ] ~~Write "Pragmatic Hybrid Architectures" (Part 8)~~ (back to idea)
 
 ---
 

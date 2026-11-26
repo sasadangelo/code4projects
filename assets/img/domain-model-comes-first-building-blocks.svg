@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 Z" fill="#57606a"/></marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 Z" fill="#059669"/></marker>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 Z" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="760" height="440" fill="#ffffff"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+  <text x="380" y="30" text-anchor="middle" font-size="16" fill="#1f2328" font-weight="700">Entities, Value Objects, and Aggregates</text>
+  <text x="380" y="50" text-anchor="middle" font-size="12" fill="#57606a">An aggregate is a group that changes together; its root is the only door in</text>
+  <text x="198" y="82" text-anchor="middle" font-size="10.5" fill="#57606a" font-weight="700" letter-spacing="0.6">AN ONLINE SHOP</text>
+  <rect x="24" y="92" width="348" height="232" rx="8" fill="#fafaff" stroke="#7c5cd8" stroke-width="1.4" stroke-dasharray="6 4"/>
+  <text x="38" y="112" text-anchor="start" font-size="11" fill="#6d28d9" font-weight="700" font-style="italic">Order aggregate</text>
+  <rect x="118" y="126" width="160" height="30" rx="6" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+  <text x="198.0" y="145" text-anchor="middle" font-size="11.5" fill="#6d28d9" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-weight="700">Order</text>
+  <rect x="234" y="117" width="40" height="16" rx="8" fill="#6d28d9" stroke="#6d28d9" stroke-width="1"/>
+  <text x="254" y="129" text-anchor="middle" font-size="9" fill="#ffffff" font-weight="700">root</text>
+  <line x1="198" y1="156" x2="104" y2="196" stroke="#57606a" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <rect x="44" y="198" width="120" height="30" rx="6" fill="#ede9fe" stroke="#6d28d9" stroke-width="1.2"/>
+  <text x="104.0" y="217" text-anchor="middle" font-size="11.5" fill="#6d28d9" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-weight="700">OrderLine</text>
+  <line x1="198" y1="156" x2="268" y2="196" stroke="#57606a" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <rect x="208" y="198" width="120" height="30" rx="6" fill="#ede9fe" stroke="#6d28d9" stroke-width="1.2"/>
+  <text x="268.0" y="217" text-anchor="middle" font-size="11.5" fill="#6d28d9" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-weight="700">OrderLine</text>
+  <rect x="124" y="262" width="148" height="26" rx="13" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.2"/>
+  <text x="198.0" y="279" text-anchor="middle" font-size="10.5" fill="#0f766e" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-weight="700">ShippingAddress</text>
+  <line x1="198" y1="156" x2="198" y2="260" stroke="#57606a" stroke-width="1.2" stroke-dasharray="2 2"/>
+  <text x="198" y="306" text-anchor="middle" font-size="10.5" fill="#1f2328" font-style="italic">rule: total within the credit limit</text>
+  <line x1="40" y1="356" x2="100" y2="228" stroke="#dc2626" stroke-width="1.4" marker-end="url(#arrow-red)"/>
+  <circle cx="68" cy="296" r="9" fill="#ffffff" stroke="#dc2626" stroke-width="1.4"/><path d="M63 291 l10 10 M73 291 l-10 10" stroke="#dc2626" stroke-width="1.6"/>
+  <text x="30" y="372" text-anchor="start" font-size="10.5" fill="#b91c1c">no direct access to an OrderLine from outside</text>
+  <path d="M352 378 V141 H282" fill="none" stroke="#059669" stroke-width="1.4" marker-end="url(#arrow-green)"/>
+  <text x="344" y="388" text-anchor="end" font-size="10.5" fill="#047857">every change goes through Order</text>
+  <text x="578" y="82" text-anchor="middle" font-size="10.5" fill="#57606a" font-weight="700" letter-spacing="0.6">FASTURL</text>
+  <rect x="400" y="92" width="356" height="232" rx="8" fill="#fafaff" stroke="#7c5cd8" stroke-width="1.4" stroke-dasharray="6 4"/>
+  <text x="414" y="112" text-anchor="start" font-size="11" fill="#6d28d9" font-weight="700" font-style="italic">Link aggregate</text>
+  <rect x="498" y="126" width="160" height="30" rx="6" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+  <text x="578.0" y="145" text-anchor="middle" font-size="11.5" fill="#6d28d9" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-weight="700">Link</text>
+  <rect x="614" y="117" width="40" height="16" rx="8" fill="#6d28d9" stroke="#6d28d9" stroke-width="1"/>
+  <text x="634" y="129" text-anchor="middle" font-size="9" fill="#ffffff" font-weight="700">root</text>
+  <rect x="414" y="184" width="158" height="26" rx="13" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.2"/>
+  <text x="493.0" y="201" text-anchor="middle" font-size="10.5" fill="#0f766e" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-weight="700">ShortCode</text>
+  <rect x="584" y="184" width="158" height="26" rx="13" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.2"/>
+  <text x="663.0" y="201" text-anchor="middle" font-size="10.5" fill="#0f766e" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-weight="700">TargetUrl</text>
+  <rect x="414" y="224" width="158" height="26" rx="13" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.2"/>
+  <text x="493.0" y="241" text-anchor="middle" font-size="10.5" fill="#0f766e" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-weight="700">LinkInspection</text>
+  <rect x="584" y="224" width="158" height="26" rx="13" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.2"/>
+  <text x="663.0" y="241" text-anchor="middle" font-size="10.5" fill="#0f766e" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace" font-weight="700">LinkMetrics</text>
+  <rect x="414" y="264" width="158" height="26" rx="4" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.2"/>
+  <text x="493.0" y="281" text-anchor="middle" font-size="10.5" fill="#57606a" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace">is_active</text>
+  <rect x="584" y="264" width="158" height="26" rx="4" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.2"/>
+  <text x="663.0" y="281" text-anchor="middle" font-size="10.5" fill="#57606a" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace">expires_at</text>
+  <text x="578" y="312" text-anchor="middle" font-size="10.5" fill="#1f2328" font-style="italic">one entity only: Link is the entity and the root</text>
+  <text x="578" y="372" text-anchor="middle" font-size="10.5" fill="#57606a">In FastURL the aggregate and the entity coincide.</text>
+  <text x="578" y="388" text-anchor="middle" font-size="10.5" fill="#57606a">The difference matters when a root owns other entities.</text>
+  <rect x="150" y="402" width="26" height="16" rx="4" fill="#ede9fe" stroke="#6d28d9" stroke-width="1.2"/>
+  <text x="182" y="414" text-anchor="start" font-size="10.5" fill="#1f2328">entity: has its own identity</text>
+  <rect x="350" y="402" width="26" height="16" rx="8" fill="#ccfbf1" stroke="#0f766e" stroke-width="1.2"/>
+  <text x="382" y="414" text-anchor="start" font-size="10.5" fill="#1f2328">value object: defined by its value</text>
+  <rect x="570" y="402" width="26" height="16" rx="3" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.2"/>
+  <text x="602" y="414" text-anchor="start" font-size="10.5" fill="#1f2328">plain attribute</text>
+  </g>
+</svg>

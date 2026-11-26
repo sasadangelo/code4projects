@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0d1117"/><stop offset="100%" stop-color="#1a2332"/></linearGradient>
+  </defs>
+  <rect width="760" height="400" fill="url(#bg)" rx="12"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+  <text x="380" y="70" text-anchor="middle" font-size="38" fill="#ffffff" font-weight="700">The Domain Model</text>
+  <text x="380" y="116" text-anchor="middle" font-size="38" fill="#a78bfa" font-weight="700">Comes First</text>
+  <text x="380" y="150" text-anchor="middle" font-size="16" fill="#8b949e">One model for your API, CLI, SDK, UI, and database schema</text>
+  <line x1="380" y1="262" x2="140" y2="212" stroke="#fbbf24" stroke-width="1.6" stroke-opacity="0.55" stroke-dasharray="4 4"/>
+  <line x1="380" y1="262" x2="150" y2="302" stroke="#2dd4bf" stroke-width="1.6" stroke-opacity="0.55" stroke-dasharray="4 4"/>
+  <line x1="380" y1="262" x2="620" y2="212" stroke="#58a6ff" stroke-width="1.6" stroke-opacity="0.55" stroke-dasharray="4 4"/>
+  <line x1="380" y1="262" x2="610" y2="302" stroke="#38bdf8" stroke-width="1.6" stroke-opacity="0.55" stroke-dasharray="4 4"/>
+  <line x1="380" y1="262" x2="380" y2="350" stroke="#f472b6" stroke-width="1.6" stroke-opacity="0.55" stroke-dasharray="4 4"/>
+  <rect x="82" y="195" width="116" height="34" rx="17" fill="#161f2c" stroke="#fbbf24" stroke-width="1.6"/>
+  <text x="140" y="217" text-anchor="middle" font-size="13" fill="#fbbf24" font-weight="700">Database</text>
+  <rect x="92" y="285" width="116" height="34" rx="17" fill="#161f2c" stroke="#2dd4bf" stroke-width="1.6"/>
+  <text x="150" y="307" text-anchor="middle" font-size="13" fill="#2dd4bf" font-weight="700">REST API</text>
+  <rect x="562" y="195" width="116" height="34" rx="17" fill="#161f2c" stroke="#58a6ff" stroke-width="1.6"/>
+  <text x="620" y="217" text-anchor="middle" font-size="13" fill="#58a6ff" font-weight="700">CLI</text>
+  <rect x="552" y="285" width="116" height="34" rx="17" fill="#161f2c" stroke="#38bdf8" stroke-width="1.6"/>
+  <text x="610" y="307" text-anchor="middle" font-size="13" fill="#38bdf8" font-weight="700">SDK</text>
+  <rect x="322" y="333" width="116" height="34" rx="17" fill="#161f2c" stroke="#f472b6" stroke-width="1.6"/>
+  <text x="380" y="355" text-anchor="middle" font-size="13" fill="#f472b6" font-weight="700">UI</text>
+  <rect x="268" y="218" width="224" height="82" rx="12" fill="#1e1638" stroke="#a78bfa" stroke-width="2"/>
+  <text x="380" y="252" text-anchor="middle" font-size="20" fill="#e9d5ff" font-weight="700">Domain Model</text>
+  <text x="380" y="276" text-anchor="middle" font-size="12" fill="#c4b5fd">names · entities · relationships</text>
+  <text x="380" y="291" text-anchor="middle" font-size="10" fill="#8b949e" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace">Link · ShortCode · TargetUrl</text>
+  </g>
+</svg>
